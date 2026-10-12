@@ -68,7 +68,7 @@ export const combo = {
 };
 
 // Vitta Resveratrol, conferido na página oficial em 11/10/2026.
-// Kits: nomes e códigos tirados da página; preços aparecem só em imagem (preencher `total` e `installments` com o print).
+// Kits: nomes e códigos tirados da página; preços conferidos no print de 11/10/2026 (1 pote = 1 mês).
 export const resveratrol = {
   name: 'Vitta Resveratrol',
   distributor: 'Natturabio Produtos Naturais',
@@ -78,10 +78,10 @@ export const resveratrol = {
   link: 'https://collagennatturabio.com.br/resveratrol/?mcr=ACA24896422',
   ingredients: ['Trans-resveratrol', 'Colágeno hidrolisado', 'Ácido hialurônico', 'Silício orgânico', 'Vitamina K2', 'Vitamina C', 'Vitamina E', 'Retinol (vitamina A)'],
   kits: [
-    { name: 'Compre 1, leve 2', qty: '2 potes', months: 2, total: 0, installments: '', plan: 'DRE294254' },
-    { name: 'Compre 2, leve 3', qty: '3 potes', months: 3, total: 0, installments: '', plan: 'DJF294255' },
-    { name: 'Compre 3, leve 4', qty: '4 potes', months: 4, total: 0, installments: '', plan: 'DPC294256' },
-    { name: 'Compre 5, leve 6', qty: '6 potes', months: 6, total: 0, installments: '', plan: 'DXB294257' },
+    { name: 'Compre 1, leve 2', qty: '2 potes · 2 meses', months: 2, total: 157, installments: '12x de R$ 15,76', plan: 'DRE294254' },
+    { name: 'Compre 2, leve 3', qty: '3 potes · 3 meses', months: 3, total: 197, installments: '12x de R$ 19,78', plan: 'DJF294255' },
+    { name: 'Compre 3, leve 4', qty: '4 potes · 4 meses', months: 4, total: 257, installments: '12x de R$ 25,80', plan: 'DPC294256' },
+    { name: 'Compre 5, leve 6', qty: '6 potes · 6 meses', months: 6, total: 377, installments: '12x de R$ 37,85', plan: 'DXB294257' },
   ],
 };
 
