@@ -1,22 +1,32 @@
 ---
 // Um cartão por kit, cada um com o link de checkout de afiliado do próprio kit.
+// Se `total` for 0 (preço ainda não conferido), o cartão mostra só o nome e o botão.
 import { checkoutUrl } from '../data/site';
+interface Kit { name: string; months: number; total: number; installments: string; plan: string; qty?: string }
 interface Props {
-  kits: { name: string; months: number; total: number; installments: string; plan: string }[];
+  kits: Kit[];
   unit?: string;
+  mcr?: string;
 }
-const { kits, unit = 'pote' } = Astro.props;
+const { kits, unit = 'pote', mcr } = Astro.props;
 const brl = (n: number) => n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+const hasPrices = kits.every((k) => k.total > 0);
 ---
 <div class="kit-cards">
   {kits.map((k) => (
     <div class="kit-card">
       <strong>{k.name}</strong>
-      <span class="small">{k.months} {k.months === 1 ? 'mês' : 'meses'} de uso</span>
-      <span class="price">{brl(k.total)}</span>
-      <p class="small">ou {k.installments} · {brl(k.total / k.months)} por {unit}</p>
-      <a class="btn btn-sm" href={checkoutUrl(k.plan)} target="_blank" rel="sponsored nofollow noopener">Comprar este kit</a>
+      <span class="small">{k.qty ?? `${k.months} ${k.months === 1 ? 'mês' : 'meses'} de uso`}</span>
+      {k.total > 0 ? (
+        <>
+          <span class="price">{brl(k.total)}</span>
+          <p class="small">ou {k.installments} · {brl(k.total / k.months)} por {unit}</p>
+        </>
+      ) : (
+        <p class="small">Preço atualizado no site oficial</p>
+      )}
+      <a class="btn btn-sm" href={checkoutUrl(k.plan, mcr)} target="_blank" rel="sponsored nofollow noopener">{k.total > 0 ? 'Comprar este kit' : 'Ver preço e comprar'}</a>
     </div>
   ))}
 </div>
-<p class="small">Preços consultados no site oficial. Confira o valor final no checkout. Links de afiliado: podemos receber comissão, sem custo extra para você.</p>
+<p class="small">{hasPrices ? 'Preços consultados no site oficial. Confira o valor final no checkout.' : 'Confira o valor final no checkout.'} Links de afiliado: podemos receber comissão, sem custo extra para você.</p>

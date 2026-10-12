@@ -11,7 +11,8 @@ export const site = {
 
 // Código de afiliado na Monetizze (parâmetro mcr) e montagem do link de checkout de cada kit.
 export const affiliate = { monetizze: 'AXA22582261' };
-export const checkoutUrl = (plan: string) => `https://pay.monetizze.com.br/${plan}?mcr=${affiliate.monetizze}`;
+// O código `mcr` muda por produto: passe o do produto (padrão = ReduPhine).
+export const checkoutUrl = (plan: string, mcr: string = affiliate.monetizze) => `https://pay.monetizze.com.br/${plan}?mcr=${mcr}`;
 
 export type Product = {
   slug: string;
@@ -65,6 +66,31 @@ export const combo = {
     { name: 'Pague 3, leve 4', months: 3, total: 159.9, installments: '12x de R$ 16,05', plan: 'DSM360709' },
   ],
 };
+
+// Vitta Resveratrol, conferido na página oficial em 11/10/2026.
+// Kits: nomes e códigos tirados da página; preços aparecem só em imagem (preencher `total` e `installments` com o print).
+export const resveratrol = {
+  name: 'Vitta Resveratrol',
+  distributor: 'Natturabio Produtos Naturais',
+  cnpj: '37.971.418/0001-56',
+  sac: 'sac@natturabio.com.br',
+  mcr: 'ACA24896422',
+  link: 'https://collagennatturabio.com.br/resveratrol/?mcr=ACA24896422',
+  ingredients: ['Trans-resveratrol', 'Colágeno hidrolisado', 'Ácido hialurônico', 'Silício orgânico', 'Vitamina K2', 'Vitamina C', 'Vitamina E', 'Retinol (vitamina A)'],
+  kits: [
+    { name: 'Compre 1, leve 2', qty: '2 potes', months: 2, total: 0, installments: '', plan: 'DRE294254' },
+    { name: 'Compre 2, leve 3', qty: '3 potes', months: 3, total: 0, installments: '', plan: 'DJF294255' },
+    { name: 'Compre 3, leve 4', qty: '4 potes', months: 4, total: 0, installments: '', plan: 'DPC294256' },
+    { name: 'Compre 5, leve 6', qty: '6 potes', months: 6, total: 0, installments: '', plan: 'DXB294257' },
+  ],
+};
+
+export const resveratrolPages = [
+  { href: '/vitta-resveratrol/', title: 'Vitta Resveratrol: ficha completa, composição e preço', short: 'Ficha completa' },
+  { href: '/vitta-resveratrol/funciona/', title: 'Vitta Resveratrol funciona? O que a ciência diz de cada ingrediente', short: 'Funciona?' },
+  { href: '/vitta-resveratrol/como-tomar/', title: 'Como tomar Vitta Resveratrol, efeitos colaterais e quem não deve usar', short: 'Como tomar e cuidados' },
+  { href: '/vitta-resveratrol/onde-comprar/', title: 'Onde comprar Vitta Resveratrol original e como funciona a garantia', short: 'Onde comprar e garantia' },
+];
 
 export const reduphinePages = [
   { href: '/reduphine-caps/', title: 'ReduPhine Caps: ficha completa, composição e preço', short: 'Ficha completa' },

@@ -1,0 +1,95 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import { resveratrol as p, resveratrolPages } from '../../data/site';
+
+const box = {
+  href: p.link,
+  title: 'Vitta Resveratrol no site oficial',
+  text: 'Kits a partir de 2 potes, com frete grátis e envio em até 24 horas úteis. Veja os preços atualizados na página do fabricante.',
+  cta: 'Ver kits e preços',
+};
+const faq = [
+  { q: 'O que é o Vitta Resveratrol?', a: 'É um suplemento alimentar em cápsulas voltado para a pele, distribuído pela Natturabio Produtos Naturais. A fórmula junta resveratrol, colágeno hidrolisado, ácido hialurônico, silício orgânico e as vitaminas A (retinol), C, E e K2.' },
+  { q: 'Vitta Resveratrol é aprovado pela Anvisa?', a: 'A página oficial informa que, por ser suplemento alimentar, o produto é dispensado de registro (RDC 240/2018). Isso é diferente de ser "aprovado": suplementos dispensados não passam por análise prévia de eficácia na Anvisa.' },
+  { q: 'Vitta Resveratrol tira rugas?', a: 'O ingrediente com melhor evidência na fórmula, o colágeno hidrolisado, melhora a elasticidade e a hidratação da pele em estudos, mas uma grande revisão publicada em 2026 não encontrou efeito significativo sobre rugas já estabelecidas.' },
+  { q: 'Quanto tempo leva para ver resultado?', a: 'O fabricante recomenda 3 meses seguidos. Nos estudos com colágeno, os efeitos na elasticidade e na hidratação costumam ser medidos depois de 8 a 12 semanas de uso.' },
+];
+---
+<Article
+  title="Vitta Resveratrol: ficha completa, composição, preço e o que esperar"
+  seoTitle="Vitta Resveratrol: composição, preço e se vale a pena"
+  description="Ficha do Vitta Resveratrol: ingredientes, para que serve, como tomar, kits, garantia, prós e contras. Análise independente do suplemento para a pele."
+  kicker="Ficha de produto"
+  lead="O Vitta Resveratrol é um suplemento para a pele que junta colágeno, ácido hialurônico, resveratrol e vitaminas. Reunimos o que a fórmula tem, o que esperar de verdade e os pontos de atenção antes de comprar."
+  crumbs={[{ name: 'Vitta Resveratrol', href: '/vitta-resveratrol/' }]}
+  faq={faq}
+  related={resveratrolPages}
+  sources={[{ label: 'Página oficial do Vitta Resveratrol (consultada em 11/10/2026)', url: 'https://collagennatturabio.com.br/resveratrol/' }]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Suplemento em cápsulas para a pele, com colágeno hidrolisado, ácido hialurônico, resveratrol e vitaminas A, C, E e K2. O colágeno tem boa evidência para elasticidade e hidratação da pele, mas não para apagar rugas. O fabricante não informa a dose de cada ingrediente. Quem toma anticoagulante ou está grávida deve conversar com o médico antes.</p>
+  </div>
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>{p.name}</td></tr>
+        <tr><th>Distribuidor</th><td>{p.distributor}, CNPJ {p.cnpj}</td></tr>
+        <tr><th>Tipo</th><td>Suplemento alimentar em cápsulas</td></tr>
+        <tr><th>Ingredientes informados</th><td>{p.ingredients.join(', ')}</td></tr>
+        <tr><th>Dose de cada ingrediente</th><td>Não informada na página oficial</td></tr>
+        <tr><th>Modo de uso</th><td>2 cápsulas por dia, segundo o rótulo informado na página</td></tr>
+        <tr><th>Duração sugerida</th><td>3 meses seguidos</td></tr>
+        <tr><th>Registro</th><td>Informado como dispensado de registro (RDC 240/2018)</td></tr>
+        <tr><th>Atendimento (SAC)</th><td>{p.sac}</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>O que cada ingrediente faz</h2>
+  <ul>
+    <li><strong>Colágeno hidrolisado:</strong> o ingrediente mais estudado da fórmula. Melhora a elasticidade e a hidratação da pele em ensaios clínicos.</li>
+    <li><strong>Ácido hialurônico:</strong> molécula que retém água na pele. Por via oral, há estudos menores com resultados positivos para hidratação.</li>
+    <li><strong>Resveratrol:</strong> antioxidante presente na uva. Muito estudado em laboratório, mas o corpo absorve pouco por via oral, e os resultados em pessoas ainda são limitados.</li>
+    <li><strong>Vitamina C:</strong> necessária para o corpo produzir colágeno.</li>
+    <li><strong>Vitaminas A (retinol) e E:</strong> nutrientes importantes para a pele. O efeito do retinol em cremes não é o mesmo do retinol em cápsula.</li>
+    <li><strong>Vitamina K2 e silício:</strong> participam do metabolismo de ossos e tecidos. A vitamina K exige cuidado de quem toma anticoagulante.</li>
+  </ul>
+  <p>Os estudos de cada um estão em <a href="/vitta-resveratrol/funciona/">Vitta Resveratrol funciona?</a></p>
+
+  <h2>Kits</h2>
+  <p>Todos os kits trazem pelo menos 2 potes, com frete grátis e parcelamento em até 12x.</p>
+  <KitCards kits={p.kits} mcr={p.mcr} />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Tem colágeno, o ingrediente com melhor evidência para a pele</li>
+        <li>Distribuidor identificado com CNPJ e SAC por e-mail e telefone</li>
+        <li>Frete grátis e envio em até 24 horas úteis</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Não informa a dose de cada ingrediente</li>
+        <li>Promete efeitos que os estudos não mostram, como apagar rugas e "queimar calorias em repouso"</li>
+        <li>Diz "sem nenhuma contraindicação", mas tem vitamina A e K2, que exigem cuidado em alguns casos</li>
+        <li>Garantia depende de selfies datadas e devolução dos potes</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>Para quem quer cuidar da pele por dentro, a base do produto faz sentido: colágeno com vitamina C e ácido hialurônico é uma combinação estudada para elasticidade e hidratação. O nome do produto destaca o resveratrol, que é o ingrediente com evidência mais fraca em pessoas. Espere uma pele mais hidratada e firme depois de alguns meses, não o fim das rugas, das estrias ou da acne, como a página de vendas sugere.</p>
+  </div>
+  <p>Antes de começar, leia <a href="/vitta-resveratrol/como-tomar/">como tomar e quem não deve usar</a>.</p>
+
+  <BuyBox compact {...box} />
+</Article>

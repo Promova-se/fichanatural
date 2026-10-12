@@ -1,0 +1,68 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { resveratrol as p, resveratrolPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Colágeno em cápsula funciona para a pele?', a: 'Sim, para elasticidade e hidratação. Uma revisão de 2026 que reuniu 16 meta-análises, com 113 ensaios clínicos e quase 8 mil participantes, encontrou melhora significativa nesses dois pontos. Para rugas já estabelecidas, o efeito não foi significativo.' },
+  { q: 'Resveratrol em cápsula rejuvenesce a pele?', a: 'Não há evidência sólida disso em pessoas. O resveratrol é absorvido e eliminado muito rápido pelo corpo, e a maior parte dos benefícios foi vista em laboratório ou em animais.' },
+  { q: 'Vitta Resveratrol emagrece?', a: 'Não há estudo que mostre isso. A página de vendas fala em "queimar calorias em repouso", mas nenhum dos ingredientes tem evidência consistente de emagrecimento em pessoas.' },
+];
+---
+<Article
+  title="Vitta Resveratrol funciona? O que a ciência diz de cada ingrediente"
+  seoTitle="Vitta Resveratrol funciona? O que diz a ciência"
+  description="Analisamos os ingredientes do Vitta Resveratrol: o que os estudos mostram sobre colágeno, ácido hialurônico e resveratrol para a pele, e o que é exagero."
+  kicker="Funciona?"
+  lead="Funciona em parte. O colágeno da fórmula tem boa evidência para elasticidade e hidratação da pele. Já o resveratrol, que dá nome ao produto, tem pouca evidência em pessoas."
+  crumbs={[{ name: 'Vitta Resveratrol', href: '/vitta-resveratrol/' }, { name: 'Funciona?', href: '/vitta-resveratrol/funciona/' }]}
+  faq={faq}
+  related={resveratrolPages}
+  sources={[
+    { label: 'Band: revisão de 16 meta-análises sobre colágeno e pele (Aesthetic Surgery Journal Open Forum, 2026)', url: 'https://www.band.com.br/saude/noticias/colageno-melhora-elasticidade-da-pele-mas-nao-reduz-rugas-aponta-estudo-202602271448' },
+    { label: 'Shaito A et al. Potential Adverse Effects of Resveratrol: A Literature Review. Int J Mol Sci, 2020', url: 'https://pubmed.ncbi.nlm.nih.gov/32197410/' },
+    { label: 'EBSCO Research Starters: Resveratrol', url: 'https://www.ebsco.com/research-starters/health-and-medicine/resveratrol/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>O colágeno hidrolisado melhora elasticidade e hidratação da pele, com boa evidência. Não reduz rugas já formadas. O resveratrol é pouco absorvido por via oral e tem resultados limitados em pessoas. Como o fabricante não informa as doses, não dá para saber se o produto chega às quantidades usadas nos estudos.</p>
+  </div>
+
+  <h2>O que dá para afirmar</h2>
+  <p>O Vitta Resveratrol não tem estudo clínico próprio publicado, e a página oficial não informa quanto de cada ingrediente vem nas cápsulas. Por isso, a análise abaixo olha para o que se sabe de cada ingrediente.</p>
+
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Ingrediente</th><th>O que os estudos mostram</th><th>Força da evidência</th></tr></thead>
+      <tbody>
+        <tr><td>Colágeno hidrolisado</td><td>Mais elasticidade e hidratação da pele. Sem efeito significativo em rugas já formadas</td><td>Boa para elasticidade e hidratação</td></tr>
+        <tr><td>Ácido hialurônico oral</td><td>Melhora de hidratação em estudos pequenos</td><td>Moderada a fraca</td></tr>
+        <tr><td>Vitamina C</td><td>Necessária para a produção de colágeno</td><td>Bem estabelecida como nutriente</td></tr>
+        <tr><td>Resveratrol oral</td><td>Efeitos em laboratório e animais; em pessoas, resultados limitados e baixa absorção</td><td>Fraca para a pele</td></tr>
+        <tr><td>Retinol, vitamina E, K2 e silício</td><td>Nutrientes importantes, mas sem estudo da combinação para a pele</td><td>Fraca para o efeito anunciado</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Colágeno hidrolisado</h3>
+  <p>É o ponto forte da fórmula. Uma revisão publicada em 2026 reuniu 16 meta-análises, somando 113 ensaios clínicos e quase 8 mil participantes. O colágeno por via oral melhorou de forma significativa a <strong>elasticidade</strong> e a <strong>hidratação</strong> da pele. Em contrapartida, não houve efeito significativo sobre a rugosidade, que é o indicador usado para rugas. Os autores ressalvam que boa parte das meta-análises tinha qualidade metodológica baixa.</p>
+
+  <h3>Resveratrol</h3>
+  <p>O resveratrol é um antioxidante encontrado na casca da uva e no vinho tinto. Ficou famoso por estudos em laboratório e em animais. Em pessoas, o problema é a <strong>baixa biodisponibilidade</strong>: o corpo absorve e elimina a substância muito rápido, e os níveis no sangue ficam abaixo dos usados nos experimentos. Até hoje não há dose recomendada estabelecida, e os benefícios em humanos seguem incertos.</p>
+
+  <h3>Ácido hialurônico e vitaminas</h3>
+  <p>O ácido hialurônico oral tem alguns estudos pequenos com melhora da hidratação. A vitamina C é essencial para o corpo fabricar colágeno, o que torna a combinação coerente. Retinol e vitamina E são nutrientes da pele, mas o efeito do retinol em cápsula não se compara ao do retinol em creme, que é o mais estudado contra rugas.</p>
+
+  <h2>O que é exagero na página de vendas</h2>
+  <ul>
+    <li><strong>"Elimina rugas" e "combate pé de galinha e bigode chinês":</strong> a revisão de 2026 não encontrou efeito do colágeno em rugas já formadas.</li>
+    <li><strong>"Queima calorias em repouso":</strong> nenhum ingrediente da fórmula tem evidência disso.</li>
+    <li><strong>Reduzir risco de Alzheimer, Parkinson e doenças cardíacas:</strong> suplemento não previne nem trata doenças, e esses efeitos do resveratrol não foram comprovados em pessoas.</li>
+    <li><strong>"Sem nenhuma contraindicação":</strong> vitamina A e vitamina K2 exigem cuidado em alguns casos. Veja <a href="/vitta-resveratrol/como-tomar/">quem não deve usar</a>.</li>
+  </ul>
+
+  <h2>Para quem pode fazer sentido</h2>
+  <p>Para quem quer melhorar a hidratação e a firmeza da pele com um suplemento de colágeno e aceita esperar alguns meses. Para quem quer tratar rugas profundas, manchas ou acne, um dermatologista e tratamentos tópicos têm resultado mais comprovado.</p>
+
+  <BuyBox compact href={p.link} title="Vitta Resveratrol no site oficial" cta="Ver kits e preços" />
+</Article>

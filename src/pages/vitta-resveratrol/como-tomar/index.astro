@@ -1,0 +1,62 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { resveratrol as p, resveratrolPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Quantas cápsulas de Vitta Resveratrol por dia?', a: 'O modo de uso informado na página é de 2 cápsulas por dia. A seção de perguntas da mesma página fala em uma cápsula de manhã ou à noite. Siga o que estiver no rótulo do pote que você receber.' },
+  { q: 'Quem toma varfarina pode usar Vitta Resveratrol?', a: 'Só com orientação médica. A fórmula tem vitamina K2, que pode diminuir o efeito da varfarina, e o resveratrol pode aumentar o risco de sangramento em quem usa anticoagulantes.' },
+  { q: 'Grávida pode tomar Vitta Resveratrol?', a: 'Não sem orientação médica. A fórmula tem retinol (vitamina A), que em excesso pode causar malformações no bebê, e a própria página indica uso por gestantes apenas com prescrição.' },
+];
+---
+<Article
+  title="Como tomar Vitta Resveratrol, efeitos colaterais e quem não deve usar"
+  seoTitle="Como tomar Vitta Resveratrol e contraindicações"
+  description="Veja como tomar o Vitta Resveratrol, por quanto tempo usar, possíveis efeitos colaterais e quem deve evitar: anticoagulantes, gestantes e excesso de vitamina A."
+  kicker="Modo de uso e segurança"
+  lead="São 2 cápsulas por dia, por pelo menos 3 meses, segundo o fabricante. A página diz que não há contraindicação, mas a fórmula tem vitamina A e K2, que pedem cuidado em alguns casos."
+  crumbs={[{ name: 'Vitta Resveratrol', href: '/vitta-resveratrol/' }, { name: 'Como tomar e cuidados', href: '/vitta-resveratrol/como-tomar/' }]}
+  faq={faq}
+  related={resveratrolPages}
+  sources={[
+    { label: 'Página oficial do Vitta Resveratrol (consultada em 11/10/2026)', url: 'https://collagennatturabio.com.br/resveratrol/' },
+    { label: 'Shaito A et al. Potential Adverse Effects of Resveratrol: A Literature Review. Int J Mol Sci, 2020', url: 'https://pubmed.ncbi.nlm.nih.gov/32197410/' },
+    { label: 'EBSCO Research Starters: Resveratrol', url: 'https://www.ebsco.com/research-starters/health-and-medicine/resveratrol/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Tome 2 cápsulas por dia, com água, de preferência junto a uma refeição, por 3 meses seguidos. Não use sem orientação médica se estiver grávida, tomar anticoagulante (como a varfarina), já usar outro suplemento com vitamina A ou tiver histórico de câncer sensível a estrogênio.</p>
+  </div>
+
+  <h2>Modo de uso</h2>
+  <ol>
+    <li><strong>Dose:</strong> 2 cápsulas por dia, segundo o modo de uso da página oficial. A seção de perguntas da mesma página fala em 1 cápsula, então confira o rótulo do pote.</li>
+    <li><strong>Horário:</strong> pode ser de manhã ou à noite. Tomar junto a uma refeição ajuda na absorção das vitaminas A, E e K2, que dependem de gordura.</li>
+    <li><strong>Duração:</strong> o fabricante recomenda 3 meses seguidos. Nos estudos com colágeno, os efeitos aparecem em geral depois de 8 a 12 semanas.</li>
+    <li><strong>Não dobre a dose:</strong> tomar mais cápsulas não acelera o resultado e aumenta a quantidade de vitamina A ingerida.</li>
+  </ol>
+
+  <h2>Possíveis efeitos colaterais</h2>
+  <ul>
+    <li><strong>Desconforto gastrointestinal:</strong> náusea, gases ou diarreia, mais associados a doses altas de resveratrol.</li>
+    <li><strong>Sensação de estômago cheio:</strong> comum com suplementos de colágeno em algumas pessoas.</li>
+    <li><strong>Reação alérgica:</strong> rara, mas possível a qualquer componente da cápsula.</li>
+  </ul>
+  <p>Se tiver manchas na pele, inchaço, falta de ar ou sangramentos fora do normal, pare o uso e procure atendimento.</p>
+
+  <h2>Quem não deve usar sem orientação médica</h2>
+  <ul>
+    <li><strong>Gestantes e quem pretende engravidar:</strong> excesso de vitamina A (retinol) pode causar malformações no bebê.</li>
+    <li><strong>Lactantes:</strong> a página só libera após o 6º mês de amamentação. Converse com o médico.</li>
+    <li><strong>Quem usa anticoagulantes ou antiagregantes</strong> (varfarina, AAS em uso contínuo e outros): a vitamina K2 pode reduzir o efeito da varfarina, e o resveratrol pode aumentar o risco de sangramento.</li>
+    <li><strong>Quem já toma outro suplemento com vitamina A</strong> ou usa isotretinoína (remédio para acne).</li>
+    <li><strong>Quem tem histórico de câncer sensível a estrogênio:</strong> o resveratrol tem estrutura parecida com a do estrogênio.</li>
+    <li><strong>Quem vai fazer cirurgia:</strong> suspenda e avise o médico, pelo risco de sangramento.</li>
+  </ul>
+
+  <h2>Por que a página diz que não tem contraindicação</h2>
+  <p>Páginas de vendas tendem a simplificar. Os ingredientes são seguros para a maioria dos adultos saudáveis, mas "sem nenhuma contraindicação" não vale para uma fórmula com vitamina A e vitamina K2. A própria página faz ressalvas para gestantes e lactantes nas perguntas frequentes.</p>
+  <p>Ainda em dúvida se vale a pena? Leia <a href="/vitta-resveratrol/funciona/">Vitta Resveratrol funciona?</a></p>
+
+  <BuyBox compact href={p.link} title="Vitta Resveratrol no site oficial" cta="Ver kits e preços" />
+</Article>

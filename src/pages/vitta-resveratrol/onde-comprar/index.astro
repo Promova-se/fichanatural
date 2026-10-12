@@ -1,0 +1,52 @@
+---
+import Article from '../../../layouts/Article.astro';
+import KitCards from '../../../components/KitCards.astro';
+import { resveratrol as p, resveratrolPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Vitta Resveratrol vende em farmácia?', a: 'O canal indicado pelo distribuidor é o site oficial, com pagamento pela Monetizze. Comprar fora dele aumenta o risco de produto falsificado e tira a garantia.' },
+  { q: 'Qual o prazo de entrega do Vitta Resveratrol?', a: 'A página informa postagem em até 24 horas úteis e frete grátis para todo o Brasil. O prazo total depende da região e é mostrado no rastreio depois da compra.' },
+  { q: 'Como pedir reembolso do Vitta Resveratrol?', a: 'Pelas regras publicadas, é preciso tirar selfies datadas no início e ao fim de 30 dias de uso e, sem resultado visível, devolver os potes vazios. O valor do tratamento de 30 dias é devolvido depois que os potes chegam à fábrica. Fale antes com o SAC, sac@natturabio.com.br.' },
+];
+---
+<Article
+  title="Onde comprar Vitta Resveratrol original e como funciona a garantia"
+  seoTitle="Onde comprar Vitta Resveratrol original"
+  description="Onde comprar o Vitta Resveratrol original, kits disponíveis, frete, formas de pagamento e as regras da garantia de 30 dias explicadas passo a passo."
+  kicker="Compra segura"
+  lead="O Vitta Resveratrol original é vendido pelo site oficial, com pagamento pela Monetizze e frete grátis. A garantia exige selfies datadas e a devolução dos potes, então vale entender as regras antes."
+  crumbs={[{ name: 'Vitta Resveratrol', href: '/vitta-resveratrol/' }, { name: 'Onde comprar', href: '/vitta-resveratrol/onde-comprar/' }]}
+  faq={faq}
+  related={resveratrolPages}
+  sources={[
+    { label: 'Página oficial do Vitta Resveratrol (consultada em 11/10/2026)', url: 'https://collagennatturabio.com.br/resveratrol/' },
+    { label: 'Código de Defesa do Consumidor, art. 49 (direito de arrependimento)', url: 'https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Compre pelo site oficial, que tem frete grátis, envio em até 24 horas úteis e parcelamento em até 12x. Os kits começam em 2 potes. A garantia de 30 dias exige selfies datadas e devolução dos potes; além dela, toda compra on-line tem 7 dias de direito de arrependimento.</p>
+  </div>
+
+  <h2>Escolha o kit</h2>
+  <KitCards kits={p.kits} mcr={p.mcr} />
+
+  <h2>Por que comprar no site oficial</h2>
+  <ul>
+    <li><strong>Produto original:</strong> distribuído por {p.distributor}, CNPJ {p.cnpj}.</li>
+    <li><strong>Pagamento intermediado:</strong> cartão, Pix ou boleto pela Monetizze.</li>
+    <li><strong>Garantia:</strong> só vale para compras no canal oficial.</li>
+  </ul>
+
+  <h2>A garantia, explicada</h2>
+  <ol>
+    <li>Antes de começar, tire uma <strong>selfie nítida com data</strong>.</li>
+    <li>Use o produto por 30 dias e tire outra selfie com data no fim.</li>
+    <li>Se não houver resultado visível, <strong>devolva os potes vazios</strong> para a empresa.</li>
+    <li>Quando os potes chegam à fábrica, o valor do tratamento de 30 dias é devolvido.</li>
+  </ol>
+  <p>Dois pontos de atenção: a garantia cobre o valor de <strong>30 dias de tratamento</strong>, não necessariamente o kit inteiro, e "resultado visível" é um critério subjetivo. Antes de comprar um kit grande, confirme as condições com o SAC ({p.sac}). Independentemente disso, o Código de Defesa do Consumidor garante 7 dias de arrependimento em compras feitas pela internet.</p>
+
+  <h2>Atendimento</h2>
+  <p>E-mail: <strong>{p.sac}</strong>. A página também mostra telefone e WhatsApp de suporte. Guarde o e-mail de confirmação e o comprovante de pagamento.</p>
+  <p>Antes de decidir, veja <a href="/vitta-resveratrol/funciona/">se o Vitta Resveratrol funciona</a> e <a href="/vitta-resveratrol/como-tomar/">quem não deve usar</a>.</p>
+</Article>
