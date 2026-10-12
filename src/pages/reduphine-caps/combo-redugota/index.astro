@@ -1,0 +1,113 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { combo, reduphinePages, study } from '../../../data/site';
+
+const brl = (n: number) => n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+const comboBox = {
+  href: combo.link,
+  title: 'Combo ReduPhine + ReduGota no site oficial',
+  text: 'Cápsulas e gotas no mesmo pedido, com frete grátis. Veja os kits e preços atualizados na página do fabricante.',
+  cta: 'Ver kits do combo',
+};
+const faq = [
+  { q: 'O que é o ReduGota?', a: 'É um suplemento em gotas da mesma marca do ReduPhine Caps, a VittaBalance. Vem em frasco de 30 ml e é tomado embaixo da língua, 12 gotas uma vez ao dia, segundo o fabricante.' },
+  { q: 'O ReduGota tem laranja moro?', a: 'A página oficial cita extrato de laranja moro, café verde e chlorella entre os ingredientes do combo, mas não separa o que vai nas gotas e o que vai nas cápsulas, nem informa as quantidades.' },
+  { q: 'Preciso comprar o combo ou só o ReduPhine resolve?', a: 'Não há estudo comparando os dois. O combo soma ingredientes, mas sem saber as doses não dá para afirmar que funciona melhor. Se você é sensível a cafeína, o ReduPhine sozinho evita o café verde.' },
+  { q: 'Como tomar o ReduPhine e o ReduGota juntos?', a: 'Pelo modo de uso do fabricante: 1 cápsula de ReduPhine 30 minutos antes do almoço e 1 antes do jantar, e 12 gotas de ReduGota embaixo da língua uma vez ao dia, no horário que preferir.' },
+];
+---
+<Article
+  title="Combo ReduPhine + ReduGota: o que muda com as gotas e vale a pena?"
+  description="Ficha do combo ReduPhine Caps + ReduGota: o que vem nas gotas, como tomar os dois juntos, o que a ciência diz sobre laranja moro e café verde, e quem deve evitar."
+  kicker="Ficha de produto"
+  lead="O combo junta as cápsulas do ReduPhine com o ReduGota, um suplemento em gotas que acrescenta laranja moro, café verde e chlorella à fórmula. Veja o que isso muda na prática."
+  crumbs={[{ name: 'ReduPhine Caps', href: '/reduphine-caps/' }, { name: 'Combo com ReduGota', href: '/reduphine-caps/combo-redugota/' }]}
+  faq={faq}
+  related={reduphinePages}
+  sources={[
+    { label: 'Página oficial do combo ReduPhine + ReduGota (consultada em 11/10/2026)', url: 'https://reduphinecaps.com.br/' },
+    { label: `${study.cite}: estudo com extrato de laranja moro`, url: study.url },
+    { label: 'NIH Office of Dietary Supplements: Dietary Supplements for Weight Loss', url: 'https://ods.od.nih.gov/factsheets/WeightLoss-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>O combo soma ao ReduPhine Caps as gotas ReduGota (30 ml, 12 gotas por dia embaixo da língua). Os ingredientes novos são laranja moro, café verde e chlorella, mas o fabricante não informa as quantidades. É uma opção para quem quer incluir laranja moro na rotina, com a ressalva de que o café verde traz cafeína.</p>
+  </div>
+
+  <h2>O que vem no combo</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th></th><th>ReduPhine Caps</th><th>ReduGota</th></tr></thead>
+      <tbody>
+        <tr><th>Formato</th><td>Cápsulas, 60 por pote</td><td>Gotas, frasco de 30 ml</td></tr>
+        <tr><th>Modo de uso</th><td>1 cápsula antes do almoço e 1 antes do jantar</td><td>12 gotas embaixo da língua, 1 vez ao dia</td></tr>
+        <tr><th>Fabricante</th><td colspan="2">VittaBalance (marca registrada das duas)</td></tr>
+        <tr><th>Ingredientes do combo</th><td colspan="2">{combo.ingredients.join(', ')}</td></tr>
+        <tr><th>Dose de cada ingrediente</th><td colspan="2">Não informada na página oficial, que também não separa o que vai em cada produto</td></tr>
+        <tr><th>Alergênicos</th><td colspan="2">Pode conter derivados de crustáceos, peixes, soja, leite e pinus</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  {combo.kits.length > 0 && (
+    <>
+      <h2>Preço e kits do combo</h2>
+      <div class="table-scroll">
+        <table class="data">
+          <thead><tr><th>Kit</th><th>Duração</th><th>À vista</th><th>Parcelado</th></tr></thead>
+          <tbody>
+            {combo.kits.map((k) => (
+              <tr><td>{k.name}</td><td>{k.months} {k.months === 1 ? 'mês' : 'meses'}</td><td>{brl(k.total)}</td><td>{k.installments}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  )}
+
+  <BuyBox {...comboBox} />
+
+  <h2>O que as gotas acrescentam</h2>
+  <h3>Laranja moro</h3>
+  <p>É o ingrediente com a melhor evidência entre os novos. Um ensaio clínico de 6 meses encontrou perda de peso de 4,2% com 400 mg diários de extrato padronizado, contra 2,2% do placebo, com os dois grupos fazendo dieta e caminhada. Como o fabricante não informa quanto de laranja moro vem nas gotas, não dá para saber se a dose chega perto da estudada. Entenda os números em <a href="/laranja-moro/emagrece/">laranja moro emagrece mesmo?</a></p>
+
+  <h3>Café verde</h3>
+  <p>É o grão de café antes da torra, rico em ácido clorogênico. Os estudos sobre emagrecimento são poucos e de baixa qualidade, com efeito pequeno quando aparece. O ponto de atenção é a <strong>cafeína</strong>: quem tem pressão alta, ansiedade, insônia ou é sensível a café deve considerar isso, principalmente se tomar as gotas à noite.</p>
+
+  <h3>Chlorella</h3>
+  <p>Microalga parecida com a spirulina, rica em proteína e clorofila. Não há evidência consistente de efeito sobre o peso. Pode causar desconforto intestinal e mudar a cor das fezes no início.</p>
+
+  <h2>Combo ou só o ReduPhine?</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>O combo faz mais sentido se</h3>
+      <ul>
+        <li>você quer incluir laranja moro, o ingrediente mais estudado para peso</li>
+        <li>não tem problema com cafeína</li>
+        <li>prefere uma rotina com cápsulas e gotas</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Só o ReduPhine faz mais sentido se</h3>
+      <ul>
+        <li>você é sensível a cafeína ou tem pressão alta</li>
+        <li>quer gastar menos para testar a tolerância às fibras</li>
+        <li>prefere uma fórmula sem estimulantes</li>
+      </ul>
+    </div>
+  </div>
+  <p>Em qualquer caso, o resultado depende de dieta e atividade física. Nenhum dos ingredientes, sozinho ou combinado, entrega as perdas rápidas anunciadas na página de vendas.</p>
+
+  <h2>Cuidados e contraindicações</h2>
+  <ul>
+    <li>Não use se tiver alergia a crustáceos ou peixe (quitosana e alergênicos informados).</li>
+    <li>Evite ou converse com um médico se tiver pressão alta, arritmia, ansiedade ou insônia, por causa da cafeína do café verde.</li>
+    <li>Gestantes, lactantes e menores de idade não devem usar sem orientação.</li>
+    <li>Quem tem fenilcetonúria não deve usar, por causa da spirulina.</li>
+    <li>Separe por 2 horas dos remédios, por causa das fibras.</li>
+  </ul>
+  <p>Mais detalhes em <a href="/reduphine-caps/efeitos-colaterais/">efeitos colaterais do ReduPhine</a> e <a href="/laranja-moro/efeitos-colaterais/">efeitos colaterais da laranja moro</a>. A garantia segue as mesmas regras explicadas em <a href="/reduphine-caps/onde-comprar/">onde comprar ReduPhine</a>.</p>
+
+  <BuyBox compact {...comboBox} />
+</Article>

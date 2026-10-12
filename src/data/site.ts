@@ -46,12 +46,22 @@ export const reduphine = {
   ],
 };
 
+// Combo ReduPhine Caps + ReduGota, conferido na página oficial em 11/10/2026.
+// Preços dos kits aparecem só em imagem na página do produtor: preencher `kits` quando houver print.
+export const combo = {
+  name: 'ReduPhine Caps + ReduGota',
+  link: 'https://reduphinecaps.com.br/combo-promo-phinegota-monetizze/?mcr=AXA22582261',
+  ingredients: ['Spirulina', 'Quitosana', 'Psyllium', 'Cromo', 'Café verde', 'Extrato de laranja moro', 'Chlorella'],
+  kits: [] as { name: string; months: number; total: number; installments: string }[],
+};
+
 export const reduphinePages = [
   { href: '/reduphine-caps/', title: 'ReduPhine Caps: ficha completa, composição e preço', short: 'Ficha completa' },
   { href: '/reduphine-caps/funciona/', title: 'ReduPhine funciona? O que diz a ciência sobre cada ingrediente', short: 'Funciona?' },
   { href: '/reduphine-caps/como-tomar/', title: 'Como tomar ReduPhine Caps: horário e cuidados', short: 'Como tomar' },
   { href: '/reduphine-caps/efeitos-colaterais/', title: 'ReduPhine Caps: efeitos colaterais e contraindicações', short: 'Efeitos colaterais' },
   { href: '/reduphine-caps/onde-comprar/', title: 'Onde comprar ReduPhine Caps original e como funciona a garantia', short: 'Onde comprar e garantia' },
+  { href: '/reduphine-caps/combo-redugota/', title: 'Combo ReduPhine + ReduGota: o que muda com as gotas de laranja moro', short: 'Combo com ReduGota' },
 ];
 
 // Guias publicados (usados no menu, na home e nos "leia também").

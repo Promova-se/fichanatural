@@ -1,14 +1,26 @@
 ---
 // Caixa de compra: sempre aponta para o site oficial via link de afiliado.
 import { reduphine } from '../data/site';
-interface Props { compact?: boolean }
-const { compact = false } = Astro.props;
+interface Props {
+  compact?: boolean;
+  href?: string;
+  title?: string;
+  text?: string;
+  cta?: string;
+}
+const {
+  compact = false,
+  href = reduphine.link,
+  title = 'Comprar no site oficial',
+  text = 'A partir de R$ 147 (1 pote). Kits maiores saem mais baratos por pote. Frete grátis, pagamento em até 12x.',
+  cta = 'Ver kits e preços',
+} = Astro.props;
 ---
 <aside class:list={['buybox', { compact }]} aria-label="Onde comprar">
   <div>
-    <p class="buybox-title">Comprar no site oficial</p>
-    {!compact && <p class="buybox-text">A partir de R$ 147 (1 pote). Kits maiores saem mais baratos por pote. Frete grátis, pagamento em até 12x.</p>}
+    <p class="buybox-title">{title}</p>
+    {!compact && <p class="buybox-text">{text}</p>}
   </div>
-  <a class="btn" href={reduphine.link} target="_blank" rel="sponsored nofollow noopener">Ver kits e preços</a>
+  <a class="btn" href={href} target="_blank" rel="sponsored nofollow noopener">{cta}</a>
   <p class="buybox-note">Link de afiliado: podemos receber comissão, sem custo extra para você. <a href="/aviso-de-afiliado/">Saiba mais</a>.</p>
 </aside>
