@@ -1,0 +1,45 @@
+---
+import Article from '../../../layouts/Article.astro';
+import { study } from '../../../data/site';
+
+const faq = [
+  { q: 'Picolinato de cromo emagrece?', a: 'As revisões de estudos encontraram, no máximo, um efeito pequeno sobre o peso, de relevância clínica incerta. Ele não deve ser visto como emagrecedor.' },
+  { q: 'Quem tem diabetes pode tomar laranja moro com cromo?', a: 'Só com orientação médica. O cromo participa da ação da insulina e pode interferir no controle da glicose de quem usa medicamentos para diabetes.' },
+];
+---
+<Article
+  title="Laranja moro com picolinato de cromo: vale a pena a combinação?"
+  description="Muitos suplementos juntam laranja moro e picolinato de cromo. Entenda o que é o cromo, o que a evidência diz e quem precisa de cuidado com essa combinação."
+  kicker="Fórmulas"
+  lead="O picolinato de cromo aparece em boa parte dos suplementos de laranja moro. A evidência para emagrecimento é fraca, e o estudo de referência da laranja moro testou o extrato sozinho."
+  crumbs={[{ name: 'Laranja moro', href: '/laranja-moro/' }, { name: 'Com picolinato de cromo', href: '/laranja-moro/picolinato-de-cromo/' }]}
+  faq={faq}
+  sources={[
+    { label: 'NIH Office of Dietary Supplements: Chromium, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/Chromium-HealthProfessional/' },
+    { label: `${study.cite}`, url: study.url },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>A combinação não é perigosa para a maioria dos adultos saudáveis, mas também não tem prova de que funcione melhor. O estudo que mostrou resultado com laranja moro usou o extrato sozinho, e o efeito do cromo no peso, segundo revisões, é pequeno.</p>
+  </div>
+
+  <h2>O que é o picolinato de cromo</h2>
+  <p>O cromo é um mineral que o corpo usa em pequenas quantidades e que participa da ação da insulina, o hormônio que controla o açúcar no sangue. O picolinato de cromo é uma das formas mais usadas em suplementos, por ser bem absorvido.</p>
+
+  <h2>Por que os fabricantes juntam os dois</h2>
+  <p>A ideia de marketing é somar "controle do apetite e da glicose" (cromo) com "redução de gordura" (laranja moro). Na prática, não há estudo clínico publicado testando essa combinação específica contra o extrato de laranja moro sozinho.</p>
+
+  <h2>O que a evidência diz sobre o cromo</h2>
+  <p>Revisões que reuniram vários estudos encontraram, no máximo, um efeito pequeno do cromo sobre o peso, de relevância clínica incerta. Ou seja: se o produto funciona, provavelmente o mérito maior não é do cromo.</p>
+
+  <h2>Quem deve ter cuidado</h2>
+  <ul>
+    <li>Pessoas com diabetes que usam insulina ou outros medicamentos para glicose.</li>
+    <li>Pessoas com doença nos rins ou no fígado.</li>
+    <li>Gestantes, lactantes e menores de idade.</li>
+  </ul>
+
+  <h2>Como comparar produtos com e sem cromo</h2>
+  <p>O cromo também aparece em fórmulas sem laranja moro, junto com fibras. Um exemplo é o <a href="/reduphine-caps/">ReduPhine Caps</a>, que analisamos em detalhe.</p>
+  <p>Nos produtos de laranja moro, o que mais importa é a <strong>quantidade de extrato de laranja moro por dia</strong>. Um produto com cromo e pouca laranja moro pode ser pior do que um com laranja moro na dose estudada e sem cromo. Veja a dose de referência em <a href="/laranja-moro/como-tomar/">como tomar laranja moro</a>.</p>
+</Article>

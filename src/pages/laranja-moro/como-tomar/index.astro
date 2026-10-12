@@ -1,0 +1,50 @@
+---
+import Article from '../../../layouts/Article.astro';
+import { study } from '../../../data/site';
+
+const faq = [
+  { q: 'Qual o melhor horário para tomar laranja moro?', a: 'No estudo clínico, as cápsulas eram tomadas com água após o café da manhã. Muitos rótulos recomendam tomar junto às refeições. Siga sempre a orientação do produto que você comprou.' },
+  { q: 'Posso tomar laranja moro em jejum?', a: 'Não há estudo comparando jejum com tomar após a refeição. Como o estudo usou o extrato depois do café da manhã e alguns rótulos pedem que seja junto às refeições, essa é a forma mais segura.' },
+  { q: 'Posso tomar mais cápsulas para ter mais resultado?', a: 'Não. Não há evidência de que doses maiores tragam mais resultado, e exceder a dose recomendada no rótulo aumenta o risco de efeitos indesejados.' },
+  { q: 'Por quanto tempo devo tomar laranja moro?', a: 'O estudo durou 6 meses. Ainda não há dados sobre uso por períodos mais longos, então faça acompanhamento com um profissional se pretende usar por muito tempo.' },
+];
+---
+<Article
+  title="Como tomar laranja moro: dose, horário e por quanto tempo"
+  description="Veja a dose de laranja moro usada no estudo clínico, o melhor horário para tomar, por quanto tempo usar e por que os rótulos variam tanto."
+  kicker="Modo de uso"
+  lead="O estudo que mostrou resultado usou 400 mg de extrato por dia, depois do café da manhã, por 6 meses. Os rótulos variam bastante, por isso vale entender a diferença antes de começar."
+  crumbs={[{ name: 'Laranja moro', href: '/laranja-moro/' }, { name: 'Como tomar', href: '/laranja-moro/como-tomar/' }]}
+  faq={faq}
+  sources={[{ label: `${study.cite}`, url: study.url }]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Siga a dose indicada no rótulo do seu produto e não ultrapasse. Como referência, o estudo clínico usou 400 mg de extrato de laranja moro por dia, uma vez ao dia, após o café da manhã, durante 6 meses.</p>
+  </div>
+
+  <h2>A dose usada no estudo</h2>
+  <p>A principal pesquisa sobre laranja moro usou <strong>400 mg de extrato padronizado por dia</strong>, em uma cápsula, tomada com água depois do café da manhã. Essa é a única dose com resultado em humanos publicado em estudo randomizado.</p>
+
+  <h2>Por que os rótulos são tão diferentes</h2>
+  <p>Nas farmácias e lojas online há produtos com recomendações bem variadas: de uma cápsula por dia até duas cápsulas três vezes ao dia. Isso acontece porque:</p>
+  <ul>
+    <li><strong>A concentração muda.</strong> Uma cápsula de "500 mg" pode ter 500 mg de extrato ou 500 mg de uma mistura com outros ingredientes.</li>
+    <li><strong>A fórmula muda.</strong> Muitos produtos combinam a laranja moro com psyllium, picolinato de cromo, vitamina C, colágeno ou cafeína.</li>
+    <li><strong>O tipo de matéria-prima muda.</strong> Extrato padronizado e laranja desidratada em pó não são a mesma coisa.</li>
+  </ul>
+  <p>Para comparar, procure no rótulo <strong>quantos miligramas de extrato de laranja moro você vai tomar por dia</strong>, somando todas as cápsulas da dose diária.</p>
+
+  <h2>Passo a passo para usar</h2>
+  <ol>
+    <li>Converse com médico ou nutricionista, principalmente se você toma remédios ou tem alguma doença.</li>
+    <li>Leia o rótulo e anote a dose diária recomendada pelo fabricante.</li>
+    <li>Tome no horário indicado, de preferência junto ou logo após uma refeição.</li>
+    <li>Combine com alimentação equilibrada e atividade física. Foi assim no estudo.</li>
+    <li>Avalie o resultado depois de alguns meses, não de alguns dias.</li>
+    <li>Pare e procure orientação se tiver qualquer reação incomum.</li>
+  </ol>
+
+  <h2>Quanto tempo leva para ver resultado</h2>
+  <p>No estudo, os resultados foram medidos depois de 6 meses. Quem promete resultado em uma ou duas semanas está prometendo algo que a pesquisa não mostrou. Veja os números em <a href="/laranja-moro/emagrece/">laranja moro emagrece mesmo?</a></p>
+  <p>Antes de começar, confira também <a href="/laranja-moro/efeitos-colaterais/">os efeitos colaterais e quem não deve usar</a>.</p>
+</Article>

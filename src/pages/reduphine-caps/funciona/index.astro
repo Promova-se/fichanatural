@@ -1,0 +1,69 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { reduphinePages } from '../../../data/site';
+
+const faq = [
+  { q: 'ReduPhine emagrece quantos quilos por mês?', a: 'Não há estudo com o ReduPhine Caps em si. Os estudos com os ingredientes da fórmula mostram perdas pequenas, em geral de menos de 1 a 2 kg a mais que o placebo ao longo de semanas ou meses. A promessa de 4 kg no primeiro mês não tem respaldo nesses estudos.' },
+  { q: 'ReduPhine Caps é comprovado cientificamente?', a: 'Os ingredientes já foram estudados separadamente, mas o produto não tem estudo clínico publicado. Além disso, o fabricante não informa a dose de cada ingrediente, então não dá para comparar com as doses usadas nas pesquisas.' },
+  { q: 'Dá para tomar ReduPhine sem fazer dieta?', a: 'Pode tomar, mas a chance de resultado é bem menor. Nos estudos com fibras como psyllium e quitosana, os melhores resultados aparecem junto com alimentação controlada.' },
+];
+---
+<Article
+  title="ReduPhine funciona? O que a ciência diz sobre cada ingrediente"
+  description="Analisamos os 4 ingredientes do ReduPhine Caps (psyllium, quitosana, spirulina e cromo) e o que os estudos mostram de verdade sobre emagrecimento."
+  kicker="Funciona?"
+  lead="O ReduPhine Caps não tem estudo clínico próprio, mas os quatro ingredientes da fórmula já foram pesquisados. O efeito existe, mas é pequeno, e depende de dieta."
+  crumbs={[{ name: 'ReduPhine Caps', href: '/reduphine-caps/' }, { name: 'Funciona?', href: '/reduphine-caps/funciona/' }]}
+  faq={faq}
+  related={reduphinePages}
+  sources={[
+    { label: 'NIH Office of Dietary Supplements: Dietary Supplements for Weight Loss (inclui a revisão Cochrane sobre quitosana)', url: 'https://ods.od.nih.gov/factsheets/WeightLoss-HealthProfessional/' },
+    { label: 'NIH Office of Dietary Supplements: Chromium', url: 'https://ods.od.nih.gov/factsheets/Chromium-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Funciona como apoio, não como emagrecedor. Psyllium e quitosana são fibras que ajudam na saciedade e têm efeito pequeno sobre o peso; spirulina e cromo têm evidência ainda mais fraca. Quem combina com dieta tem mais chance de perceber diferença.</p>
+  </div>
+
+  <h2>O que dá para afirmar e o que não dá</h2>
+  <p>O ReduPhine Caps <strong>não tem estudo clínico publicado</strong> com a fórmula pronta. E a página oficial <strong>não informa quanto de cada ingrediente</strong> vem nas cápsulas. Por isso, a análise abaixo olha para o que se sabe de cada ingrediente, sem garantir que o produto tenha as mesmas doses usadas nas pesquisas.</p>
+
+  <h2>Ingrediente por ingrediente</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Ingrediente</th><th>O que faz</th><th>Força da evidência para emagrecer</th></tr></thead>
+      <tbody>
+        <tr><td>Psyllium</td><td>Fibra solúvel que forma gel, aumenta a saciedade e regula o intestino</td><td>Moderada para saciedade e intestino; pequena para peso</td></tr>
+        <tr><td>Quitosana</td><td>Fibra que se liga a parte da gordura da refeição</td><td>Fraca: nos estudos de melhor qualidade, efeito mínimo</td></tr>
+        <tr><td>Spirulina</td><td>Microalga rica em proteína e antioxidantes</td><td>Fraca: estudos pequenos, efeito modesto</td></tr>
+        <tr><td>Cromo</td><td>Mineral que participa da ação da insulina</td><td>Fraca: efeito pequeno, de relevância incerta</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Psyllium</h3>
+  <p>É a fibra com melhor reputação da fórmula. Ao absorver água, forma um gel que deixa a digestão mais lenta e aumenta a sensação de estômago cheio. Ajuda o intestino e tem efeito reconhecido sobre o colesterol. Sobre o peso, o efeito é pequeno e aparece principalmente junto com dieta. Por isso o modo de uso pede para tomar antes das refeições.</p>
+
+  <h3>Quitosana</h3>
+  <p>Extraída da casca de crustáceos, a quitosana é vendida há anos como "bloqueador de gordura". Uma revisão da Cochrane, que reuniu os ensaios clínicos disponíveis, concluiu que os estudos de melhor qualidade mostram efeito mínimo sobre o peso, provavelmente sem importância clínica. Ela pode, porém, reduzir a absorção de vitaminas que dependem de gordura, como A, D, E e K.</p>
+
+  <h3>Spirulina</h3>
+  <p>A microalga é rica em proteína, ferro e antioxidantes. Alguns estudos pequenos sugerem ajuda modesta no peso e no colesterol, mas as pesquisas são limitadas. Atenção: a spirulina contém fenilalanina e não deve ser usada por quem tem fenilcetonúria.</p>
+
+  <h3>Cromo</h3>
+  <p>Mineral que participa da ação da insulina. Revisões de estudos encontraram, no máximo, uma perda de peso pequena. Explicamos em detalhe no <a href="/laranja-moro/picolinato-de-cromo/">guia sobre picolinato de cromo</a>.</p>
+
+  <h2>E as promessas da página de vendas?</h2>
+  <p>A página oficial fala em "pelo menos 4 kg eliminados" no primeiro mês, queima de gordura localizada e desintoxicação. <strong>Nenhum estudo com esses ingredientes mostra esses resultados.</strong> Não existe suplemento que queime gordura de uma região específica, e "desintoxicar" não é um efeito medido nessas pesquisas.</p>
+  <p>Isso não quer dizer que o produto não sirva para nada. Quer dizer que a expectativa certa é de um apoio para controlar a fome e regular o intestino, com perda de peso gradual e dependente de dieta.</p>
+
+  <h2>Para quem pode fazer sentido</h2>
+  <ul>
+    <li>Quem já está mudando a alimentação e sente muita fome entre as refeições.</li>
+    <li>Quem tem intestino preso e quer uma fonte extra de fibra.</li>
+  </ul>
+  <p>Para quem espera resultado rápido sem mudar hábitos, a chance de frustração é alta.</p>
+
+  <BuyBox compact />
+</Article>

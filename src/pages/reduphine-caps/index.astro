@@ -1,0 +1,104 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import { reduphine, reduphinePages } from '../../data/site';
+
+const brl = (n: number) => n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+const faq = [
+  { q: 'O que é o ReduPhine Caps?', a: 'É um suplemento alimentar em cápsulas da marca VittaBalance, vendido para apoio ao emagrecimento. A fórmula tem spirulina, psyllium, quitosana e cromo.' },
+  { q: 'Quanto custa o ReduPhine Caps?', a: 'Na consulta de 10/10/2026, o pote avulso custava R$ 147 e os kits iam de R$ 197 (3 potes) a R$ 377 (8 potes), com frete grátis e parcelamento em até 12x. Confira o preço atualizado no site oficial.' },
+  { q: 'ReduPhine Caps é aprovado pela Anvisa?', a: 'O fabricante informa que o produto é dispensado de registro, nos termos da RDC 240/2018, regra que vale para muitos suplementos alimentares. Isso é diferente de um medicamento aprovado pela Anvisa.' },
+  { q: 'ReduPhine Caps vende em farmácia?', a: 'O canal indicado pelo fabricante é o site oficial, com pagamento pela plataforma Monetizze. Comprar fora desse canal aumenta o risco de produto falsificado e dificulta a garantia.' },
+];
+---
+<Article
+  title="ReduPhine Caps: ficha completa, composição, preço e o que esperar"
+  description="Ficha do ReduPhine Caps: o que é, ingredientes, como tomar, preço de cada kit, garantia, prós e contras. Análise independente, sem promessa milagrosa."
+  kicker="Ficha de produto"
+  lead="O ReduPhine Caps é um suplemento com quatro ingredientes ligados ao controle de peso. Reunimos o que a fórmula tem, quanto custa, o que a ciência diz e os pontos que você precisa saber antes de comprar."
+  crumbs={[{ name: 'ReduPhine Caps', href: '/reduphine-caps/' }]}
+  faq={faq}
+  related={reduphinePages}
+  sources={[{ label: 'Página oficial do ReduPhine Caps (consultada em 10/10/2026)', url: 'https://reduphinecaps.com.br/' }]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Suplemento em cápsulas com spirulina, psyllium, quitosana e cromo. São 2 cápsulas por dia, antes do almoço e do jantar. Os ingredientes têm efeito real, mas modesto, sobre o peso. Funciona como apoio a dieta e exercício, não como emagrecedor milagroso. Preço a partir de R$ 147 o pote.</p>
+  </div>
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>{reduphine.name}</td></tr>
+        <tr><th>Fabricante</th><td>{reduphine.brand}, CNPJ {reduphine.cnpj}</td></tr>
+        <tr><th>Tipo</th><td>Suplemento alimentar em cápsulas</td></tr>
+        <tr><th>Ingredientes informados</th><td>{reduphine.ingredients.join(', ')}</td></tr>
+        <tr><th>Dose de cada ingrediente</th><td>Não informada na página oficial</td></tr>
+        <tr><th>Conteúdo</th><td>60 cápsulas por pote (1 mês de uso)</td></tr>
+        <tr><th>Modo de uso</th><td>2 cápsulas por dia: 1 cerca de 30 minutos antes do almoço e 1 antes do jantar</td></tr>
+        <tr><th>Glúten</th><td>Não contém</td></tr>
+        <tr><th>Não indicado para</th><td>Alérgicos a peixe ou crustáceos e menores de 16 anos</td></tr>
+        <tr><th>Registro</th><td>Informado como dispensado de registro (RDC 240/2018)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>O que cada ingrediente faz</h2>
+  <ul>
+    <li><strong>Psyllium:</strong> fibra solúvel que forma um gel no estômago, aumenta a saciedade e ajuda o intestino.</li>
+    <li><strong>Quitosana:</strong> fibra extraída da casca de crustáceos, estudada por se ligar a parte da gordura da alimentação.</li>
+    <li><strong>Spirulina:</strong> microalga rica em proteína e antioxidantes.</li>
+    <li><strong>Cromo:</strong> mineral que participa da ação da insulina. Veja nosso <a href="/laranja-moro/picolinato-de-cromo/">guia sobre picolinato de cromo</a>.</li>
+  </ul>
+  <p>O que os estudos mostram de cada um está em <a href="/reduphine-caps/funciona/">ReduPhine funciona?</a></p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores consultados no site oficial em 10/10/2026. Todos os kits têm frete grátis.</p>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Kit</th><th>Duração</th><th>À vista</th><th>Parcelado</th><th>Por pote</th></tr></thead>
+      <tbody>
+        {reduphine.kits.map((k) => (
+          <tr>
+            <td>{k.name}</td>
+            <td>{k.months} {k.months === 1 ? 'mês' : 'meses'}</td>
+            <td>{brl(k.total)}</td>
+            <td>{k.installments}</td>
+            <td><strong>{brl(k.total / k.months)}</strong></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p>O pote avulso custa três vezes mais por mês que o kit de 8. Ainda assim, só vale levar um kit grande se você já sabe que vai usar por vários meses. Antes, leia como funciona <a href="/reduphine-caps/onde-comprar/">a garantia</a>, que tem regras restritivas.</p>
+
+  <BuyBox />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Ingredientes conhecidos e estudados</li>
+        <li>Sem estimulantes como cafeína na lista informada</li>
+        <li>Fabricante identificado com CNPJ</li>
+        <li>Frete grátis e parcelamento</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>A página não informa a dose de cada ingrediente</li>
+        <li>Promessas de resultado maiores do que os estudos mostram</li>
+        <li>Garantia com regras contraditórias</li>
+        <li>Sem telefone ou e-mail de atendimento divulgado</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>O ReduPhine Caps reúne fibras e nutrientes com evidência de efeito pequeno sobre peso e saciedade. Pode ajudar quem já está ajustando alimentação e rotina e quer um apoio para controlar a fome. Não espere os resultados anunciados na página de vendas, como 4 kg no primeiro mês: nenhum estudo com esses ingredientes mostra isso.</p>
+  </div>
+  <p>Antes de começar, veja <a href="/reduphine-caps/como-tomar/">como tomar</a> e <a href="/reduphine-caps/efeitos-colaterais/">quem não deve usar</a>.</p>
+</Article>

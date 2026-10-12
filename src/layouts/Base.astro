@@ -1,0 +1,97 @@
+---
+import { site, guides, reduphinePages } from '../data/site';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  schema?: object[];
+  noindex?: boolean;
+}
+const { title, description, schema = [], noindex = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, site.url).href;
+const fullTitle = Astro.url.pathname === '/' ? `${site.name}: guias de suplementos sem promessa milagrosa` : `${title} | ${site.name}`;
+const org = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: site.name,
+  url: site.url,
+  email: site.email,
+};
+const path = Astro.url.pathname;
+---
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{fullTitle}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta name="msvalidate.01" content="10717A8CEBD17F6B2ABDCF8AEE600123" />
+  <meta name="google-site-verification" content="2v1CHF_hGRzBNB10ecwa-RP3ePkx-QjTigo-42DCTOg" />
+  {noindex && <meta name="robots" content="noindex, follow" />}
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content={site.name} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="sitemap" href="/sitemap-index.xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json" set:html={JSON.stringify(org)} />
+  {schema.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
+</head>
+<body>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="/" class="logo" aria-label="Ficha Natural, início">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span>Ficha<strong>Natural</strong></span>
+      </a>
+      <nav aria-label="Principal">
+        <a href="/reduphine-caps/" aria-current={path.startsWith('/reduphine-caps') ? 'page' : undefined}>ReduPhine</a>
+        <a href="/laranja-moro/" aria-current={path.startsWith('/laranja-moro') ? 'page' : undefined}>Laranja moro</a>
+        <a href="/sobre/" aria-current={path.startsWith('/sobre') ? 'page' : undefined}>Sobre</a>
+      </nav>
+    </div>
+  </header>
+  <main id="conteudo">
+    <slot />
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="logo footer-logo"><span class="logo-mark" aria-hidden="true"></span><span>Ficha<strong>Natural</strong></span></p>
+        <p>{site.tagline}</p>
+        <p class="small">O conteúdo deste site é informativo e não substitui a orientação de médico ou nutricionista.</p>
+      </div>
+      <div>
+        <p class="footer-title">Fichas de produtos</p>
+        <ul>{reduphinePages.map((g) => <li><a href={g.href}>ReduPhine: {g.short}</a></li>)}</ul>
+      </div>
+      <div>
+        <p class="footer-title">Guias</p>
+        <ul>{guides.map((g) => <li><a href={g.href}>{g.short}</a></li>)}</ul>
+      </div>
+      <div>
+        <p class="footer-title">Institucional</p>
+        <ul>
+          <li><a href="/sobre/">Sobre e política editorial</a></li>
+          <li><a href="/aviso-de-afiliado/">Aviso de afiliado</a></li>
+          <li><a href="/privacidade/">Privacidade</a></li>
+          <li><a href="/contato/">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap small footer-legal">
+      <p>Somos afiliados: quando você compra por um link nosso, podemos receber comissão, sem custo extra para você. Não vendemos nem entregamos produtos. Mantido por {site.company}, CNPJ {site.cnpj}.</p>
+    </div>
+  </footer>
+</body>
+</html>

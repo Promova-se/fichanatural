@@ -1,0 +1,53 @@
+---
+import Article from '../../../layouts/Article.astro';
+import { reduphinePages } from '../../../data/site';
+
+const faq = [
+  { q: 'ReduPhine Caps tem efeito colateral?', a: 'A página oficial diz que não, mas os ingredientes podem causar gases, inchaço, desconforto abdominal e alteração do intestino, principalmente no início ou com pouca água. Quem tem alergia a frutos do mar pode ter reação à quitosana.' },
+  { q: 'Quem tem alergia a camarão pode tomar ReduPhine?', a: 'Não. A quitosana é extraída da casca de crustáceos, e o próprio fabricante contraindica o produto para alérgicos a peixe ou crustáceos.' },
+  { q: 'ReduPhine Caps dá insônia ou acelera o coração?', a: 'A lista de ingredientes informada não tem estimulantes como cafeína, então esse tipo de efeito não é esperado. Se sentir algo assim, pare o uso e procure orientação.' },
+];
+---
+<Article
+  title="ReduPhine Caps: efeitos colaterais e contraindicações"
+  description="Efeitos colaterais possíveis do ReduPhine Caps, quem não deve tomar (alergia a crustáceos, fenilcetonúria, gestantes) e cuidados com remédios."
+  kicker="Segurança"
+  lead="A página de vendas diz que não existe efeito colateral, mas os ingredientes da fórmula têm efeitos e contraindicações conhecidos. Veja quais são."
+  crumbs={[{ name: 'ReduPhine Caps', href: '/reduphine-caps/' }, { name: 'Efeitos colaterais', href: '/reduphine-caps/efeitos-colaterais/' }]}
+  faq={faq}
+  related={reduphinePages}
+  sources={[
+    { label: 'Página oficial do ReduPhine Caps (consultada em 10/10/2026)', url: 'https://reduphinecaps.com.br/' },
+    { label: 'NIH Office of Dietary Supplements: Dietary Supplements for Weight Loss', url: 'https://ods.od.nih.gov/factsheets/WeightLoss-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Os efeitos mais comuns de fórmulas com fibras são gases, inchaço e mudança no intestino. Não use se tiver alergia a peixe ou crustáceos, fenilcetonúria, se estiver grávida ou amamentando ou se tiver menos de 16 anos. Quem toma remédios deve conversar com o médico.</p>
+  </div>
+
+  <h2>Efeitos colaterais possíveis</h2>
+  <ul>
+    <li><strong>Gases, inchaço e cólica:</strong> comuns com fibras como psyllium e quitosana, principalmente nos primeiros dias.</li>
+    <li><strong>Intestino preso ou solto:</strong> o psyllium regula o intestino, mas com pouca água pode prender.</li>
+    <li><strong>Náusea ou desconforto no estômago:</strong> relatados com spirulina e quitosana.</li>
+    <li><strong>Reação alérgica:</strong> em pessoas sensíveis a crustáceos, por causa da quitosana.</li>
+  </ul>
+  <p>Se tiver dor abdominal forte, dificuldade para engolir, falta de ar ou manchas na pele, pare o uso e procure atendimento.</p>
+
+  <h2>Quem não deve tomar</h2>
+  <ul>
+    <li>Alérgicos a peixe, camarão ou outros crustáceos (contraindicação do próprio fabricante).</li>
+    <li>Menores de 16 anos (contraindicação do fabricante).</li>
+    <li>Pessoas com fenilcetonúria, porque a spirulina contém fenilalanina.</li>
+    <li>Gestantes e lactantes, sem orientação médica.</li>
+    <li>Pessoas com dificuldade para engolir ou estreitamento no esôfago ou intestino, por causa das fibras.</li>
+    <li>Pessoas com diabetes em uso de medicação, sem acompanhamento, por causa do cromo.</li>
+    <li>Pessoas com doença autoimune, sem orientação, por causa da spirulina.</li>
+  </ul>
+
+  <h2>Interação com remédios e vitaminas</h2>
+  <p>As fibras da fórmula podem diminuir a absorção de medicamentos tomados ao mesmo tempo. A quitosana também pode reduzir a absorção das vitaminas A, D, E e K. Deixe pelo menos 2 horas de intervalo e avise seu médico se usa anticoncepcional, remédio para tireoide, pressão, diabetes ou anticoagulante.</p>
+
+  <h2>Por que a página de vendas diz que não tem efeito colateral</h2>
+  <p>Páginas de venda tendem a destacar só o lado positivo. Os ingredientes são considerados seguros para a maioria dos adultos saudáveis, mas "nenhum efeito colateral" é uma afirmação que nenhum suplemento pode fazer. Saber disso antes evita sustos e ajuda a usar do jeito certo. Veja <a href="/reduphine-caps/como-tomar/">como tomar ReduPhine Caps</a>.</p>
+</Article>

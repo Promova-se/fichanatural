@@ -1,0 +1,64 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { reduphine, reduphinePages } from '../../../data/site';
+
+const faq = [
+  { q: 'ReduPhine Caps tem no Mercado Livre ou na Shopee?', a: 'O canal indicado pelo fabricante é o site oficial, com pagamento pela Monetizze. Anúncios em outros sites podem ser de revendedores sem garantia ou de produto falsificado.' },
+  { q: 'Qual o prazo de entrega do ReduPhine?', a: 'Segundo a página oficial, a entrega leva em média de 7 a 15 dias úteis, podendo chegar a 20 dias úteis em algumas regiões, contados a partir da confirmação do pagamento.' },
+  { q: 'Como pedir reembolso do ReduPhine Caps?', a: 'Pelas regras publicadas, é preciso devolver o produto lacrado em até 7 dias após o recebimento, com frete por conta do cliente. Guarde o comprovante de compra e registre o pedido pelo suporte indicado no e-mail de confirmação.' },
+];
+---
+<Article
+  title="Onde comprar ReduPhine Caps original e como funciona a garantia"
+  description="Onde comprar o ReduPhine Caps original, preço de cada kit, prazo de entrega e as regras da garantia explicadas, incluindo os pontos que se contradizem."
+  kicker="Compra segura"
+  lead="O ReduPhine Caps original é vendido pelo site oficial, com pagamento pela Monetizze. Antes de comprar, entenda a garantia: as regras publicadas se contradizem."
+  crumbs={[{ name: 'ReduPhine Caps', href: '/reduphine-caps/' }, { name: 'Onde comprar', href: '/reduphine-caps/onde-comprar/' }]}
+  faq={faq}
+  related={reduphinePages}
+  sources={[
+    { label: 'Página oficial do ReduPhine Caps (consultada em 10/10/2026)', url: 'https://reduphinecaps.com.br/' },
+    { label: 'Código de Defesa do Consumidor, art. 49 (direito de arrependimento)', url: 'https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Compre pelo site oficial, que tem frete grátis e parcelamento em até 12x. O pote avulso sai por R$ 147. A garantia publicada exige o produto lacrado e devolução em até 7 dias após receber, então decida com calma antes de levar um kit grande.</p>
+  </div>
+
+  <BuyBox />
+
+  <h2>Por que comprar no site oficial</h2>
+  <ul>
+    <li><strong>Produto original:</strong> o fabricante ({reduphine.brand}, CNPJ {reduphine.cnpj}) vende por esse canal.</li>
+    <li><strong>Pagamento intermediado:</strong> a compra passa pela Monetizze, plataforma conhecida de pagamentos online.</li>
+    <li><strong>Garantia:</strong> só vale para compras no canal oficial.</li>
+  </ul>
+  <p>Desconfie de anúncios com preço muito abaixo do oficial em marketplaces e redes sociais.</p>
+
+  <h2>Prazo de entrega</h2>
+  <p>Frete grátis para todo o Brasil. O prazo médio informado é de 7 a 15 dias úteis, podendo chegar a 20 dias úteis em algumas regiões. A contagem começa depois que o pagamento é aprovado. No boleto, isso pode levar alguns dias a mais.</p>
+
+  <h2>A garantia, explicada</h2>
+  <p>A página oficial anuncia "garantia total ou seu dinheiro de volta", mas traz <strong>três versões diferentes</strong> das regras:</p>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Onde aparece</th><th>O que diz</th></tr></thead>
+      <tbody>
+        <tr><td>Seção de garantia</td><td>Reembolso só com o produto lacrado e sem uso, devolvido em até 7 dias após o recebimento, com frete por conta do cliente. Dinheiro devolvido em até 10 dias.</td></tr>
+        <tr><td>Selo na área de compra</td><td>"Garantia de 30 dias"</td></tr>
+        <tr><td>Perguntas frequentes</td><td>Para ter a garantia, é preciso participar de um "desafio de 30 dias" e enviar fotos datadas com o peso na balança, antes e depois.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Na prática, considere que <strong>a garantia segura é a de 7 dias com o produto lacrado</strong>. Ela coincide com o direito de arrependimento do Código de Defesa do Consumidor, que vale para qualquer compra feita pela internet. Ou seja: a garantia não cobre o caso de "tomei e não gostei do resultado".</p>
+
+  <h2>Dicas antes de fechar a compra</h2>
+  <ol>
+    <li>Leia as condições que aparecem no checkout, que valem mais do que os textos da página.</li>
+    <li>Se é sua primeira vez, considere um kit menor para testar a tolerância às fibras.</li>
+    <li>Guarde o e-mail de confirmação e o comprovante de pagamento.</li>
+    <li>Ao receber, confira o lacre antes de abrir, caso queira exercer o arrependimento.</li>
+  </ol>
+  <p>Ainda em dúvida se vale a pena? Leia <a href="/reduphine-caps/funciona/">ReduPhine funciona?</a></p>
+</Article>

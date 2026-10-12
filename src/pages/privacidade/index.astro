@@ -1,0 +1,14 @@
+---
+import Page from '../../layouts/Page.astro';
+import { site } from '../../data/site';
+---
+<Page title="Política de privacidade" description="Como a Ficha Natural trata dados de visitantes, conforme a LGPD.">
+  <p>Esta política explica como a {site.name} trata informações de quem visita o site, de acordo com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</p>
+  <h2>Quais dados coletamos</h2>
+  <p>Não pedimos cadastro nem coletamos dados pessoais diretamente. Podemos usar ferramentas de estatística de acesso que registram informações técnicas, como páginas visitadas, tipo de dispositivo e cidade aproximada, de forma agregada.</p>
+  <h2>Links de afiliado e cookies de terceiros</h2>
+  <p>Ao clicar em um link de afiliado, você é levado ao site do fabricante ou da plataforma de pagamento, que pode usar cookies para registrar que a visita veio daqui. O tratamento de dados nesses sites segue a política de privacidade de cada um.</p>
+  <h2>Seus direitos</h2>
+  <p>Você pode pedir informações, correção ou exclusão de dados escrevendo para <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
+  <p class="small">Responsável: {site.company}, CNPJ {site.cnpj}.</p>
+</Page>

@@ -1,0 +1,70 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, guides } from '../data/site';
+
+const schema = [{
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: site.name,
+  url: site.url,
+  inLanguage: 'pt-BR',
+  description: site.tagline,
+}];
+const descs: Record<string, string> = {
+  '/laranja-moro/': 'O que é, de onde vem e por que virou suplemento para controle de peso.',
+  '/laranja-moro/emagrece/': 'Os números do estudo clínico de 6 meses, explicados sem exagero.',
+  '/laranja-moro/como-tomar/': 'A dose usada na pesquisa, o melhor horário e por quanto tempo usar.',
+  '/laranja-moro/efeitos-colaterais/': 'O que o estudo mostrou sobre segurança e quem deve evitar.',
+  '/laranja-moro/picolinato-de-cromo/': 'Por que tantas fórmulas juntam os dois e o que a evidência diz.',
+};
+---
+<Base
+  title={site.name}
+  description="Guias independentes sobre suplementos e produtos naturais: o que são, o que a ciência diz, como usar e onde comprar com segurança."
+  schema={schema}
+>
+  <section class="hero wrap">
+    <span class="pill">Guias sobre produtos naturais</span>
+    <h1>Antes de comprar um suplemento, leia a ficha.</h1>
+    <p>Explicamos o que tem em cada produto, o que os estudos mostram de verdade, como usar e quem deve evitar. Sem promessa milagrosa.</p>
+  </section>
+
+  <section class="section wrap" aria-labelledby="fichas">
+    <h2 id="fichas">Fichas de produtos</h2>
+    <div class="grid">
+      <a class="tile" href="/reduphine-caps/">
+        <span class="pill">Emagrecimento</span>
+        <h3>ReduPhine Caps</h3>
+        <p>Spirulina, psyllium, quitosana e cromo. Composição, preço dos kits, o que esperar e a garantia explicada.</p>
+        <span class="go">Ver ficha →</span>
+      </a>
+      <a class="tile" href="/reduphine-caps/funciona/">
+        <h3>ReduPhine funciona?</h3>
+        <p>O que os estudos dizem sobre cada ingrediente da fórmula, sem exagero.</p>
+        <span class="go">Ler análise →</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section wrap" aria-labelledby="em-destaque">
+    <h2 id="em-destaque">Guia: laranja moro</h2>
+    <div class="grid">
+      {guides.map((g) => (
+        <a class="tile" href={g.href}>
+          <h3>{g.short}</h3>
+          <p>{descs[g.href]}</p>
+          <span class="go">Ler guia →</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section wrap" aria-labelledby="como">
+    <h2 id="como">Como fazemos as fichas</h2>
+    <div class="promise">
+      <div><strong>Fonte primeiro</strong><p>Usamos estudos publicados e o rótulo oficial do fabricante, e citamos as fontes no fim de cada guia.</p></div>
+      <div><strong>Sem exagero</strong><p>Se o efeito é pequeno, dizemos que é pequeno. Se não há estudo, dizemos que não há.</p></div>
+      <div><strong>Transparência</strong><p>Somos afiliados de alguns produtos e deixamos isso claro. <a href="/aviso-de-afiliado/">Entenda como funciona</a>.</p></div>
+    </div>
+  </section>
+</Base>

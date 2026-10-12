@@ -1,0 +1,26 @@
+---
+import Page from '../../layouts/Page.astro';
+import { site } from '../../data/site';
+---
+<Page title="Sobre a Ficha Natural e nossa política editorial" description="Quem somos, como produzimos os guias da Ficha Natural e como nos mantemos.">
+  <p>A {site.name} nasceu para responder, de forma direta, as perguntas que as pessoas fazem antes de comprar um suplemento ou produto natural: o que tem dentro, se funciona, como usar, quem deve evitar e onde comprar com segurança.</p>
+
+  <h2>Como produzimos o conteúdo</h2>
+  <ul>
+    <li><strong>Fontes verificáveis.</strong> Baseamos os guias em estudos publicados, em informações oficiais dos fabricantes e em órgãos de saúde. As fontes ficam listadas no fim de cada página.</li>
+    <li><strong>Nada de promessa.</strong> Não publicamos depoimentos inventados, notas ou estrelas sem avaliação real por trás, nem resultados que os estudos não mostraram.</li>
+    <li><strong>Atualização.</strong> Cada página mostra a data da última revisão. Quando um estudo novo ou uma mudança no produto aparecem, atualizamos o conteúdo.</li>
+    <li><strong>Correções.</strong> Encontrou um erro? Escreva para <a href={`mailto:${site.email}`}>{site.email}</a> e corrigimos.</li>
+  </ul>
+
+  <h2>Não somos uma farmácia nem uma loja</h2>
+  <p>Não vendemos, armazenamos nem entregamos produtos. Quando indicamos um produto, o link leva ao site oficial ou à plataforma de pagamento do fabricante, onde a compra, a entrega e a garantia acontecem.</p>
+
+  <h2>Como nos mantemos</h2>
+  <p>Somos afiliados de alguns produtos. Quando você compra por um dos nossos links, podemos receber uma comissão, sem custo extra para você. Isso não muda o que escrevemos sobre o produto. Veja o <a href="/aviso-de-afiliado/">aviso de afiliado</a>.</p>
+
+  <h2>Responsável</h2>
+  <p>A {site.name} é mantida por {site.company}, CNPJ {site.cnpj}. Contato: <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
+
+  <p class="small">O conteúdo deste site é informativo e não substitui consulta com médico, nutricionista ou farmacêutico.</p>
+</Page>

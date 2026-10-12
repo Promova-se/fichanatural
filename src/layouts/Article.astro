@@ -1,0 +1,104 @@
+---
+import Base from './Base.astro';
+import { site, guides } from '../data/site';
+
+interface Props {
+  title: string;        // H1 e título SEO
+  description: string;  // meta description
+  kicker?: string;      // pequeno rótulo acima do título
+  lead: string;         // resumo em 1-2 frases logo abaixo do H1
+  crumbs: { name: string; href: string }[];
+  faq?: { q: string; a: string }[];
+  sources?: { label: string; url: string }[];
+  related?: { href: string; title: string }[];
+}
+const { title, description, kicker, lead, crumbs, faq = [], sources = [], related: relatedProp } = Astro.props;
+const url = new URL(Astro.url.pathname, site.url).href;
+const updatedBr = site.updated.split('-').reverse().join('/');
+
+const schema: object[] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    dateModified: site.updated,
+    datePublished: site.updated,
+    author: { '@type': 'Organization', name: `Equipe ${site.name}`, url: `${site.url}/sobre/` },
+    publisher: { '@type': 'Organization', name: site.name, url: site.url },
+    mainEntityOfPage: url,
+    inLanguage: 'pt-BR',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [{ name: 'Início', href: '/' }, ...crumbs].map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: c.name,
+      item: new URL(c.href, site.url).href,
+    })),
+  },
+];
+if (faq.length) {
+  schema.push({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  });
+}
+const related = (relatedProp ?? guides).filter((g) => g.href !== Astro.url.pathname);
+---
+<Base title={title} description={description} schema={schema}>
+  <article class="wrap article">
+    <nav class="crumbs" aria-label="Você está em">
+      <a href="/">Início</a>
+      {crumbs.map((c, i) => (
+        <>
+          <span aria-hidden="true">/</span>
+          {i === crumbs.length - 1 ? <span aria-current="page">{c.name}</span> : <a href={c.href}>{c.name}</a>}
+        </>
+      ))}
+    </nav>
+    <header class="article-head">
+      {kicker && <p class="kicker">{kicker}</p>}
+      <h1>{title}</h1>
+      <p class="lead">{lead}</p>
+      <p class="meta">Por <a href="/sobre/">Equipe {site.name}</a> · Atualizado em <time datetime={site.updated}>{updatedBr}</time></p>
+    </header>
+
+    <div class="prose">
+      <slot />
+
+      {faq.length > 0 && (
+        <section class="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Perguntas frequentes</h2>
+          {faq.map((f) => (
+            <details>
+              <summary>{f.q}</summary>
+              <p>{f.a}</p>
+            </details>
+          ))}
+        </section>
+      )}
+
+      <aside class="notice" role="note">
+        <strong>Importante:</strong> este conteúdo é informativo e não substitui consulta com médico ou nutricionista. Suplementos não são medicamentos e não curam doenças. Gestantes, lactantes, menores de idade e pessoas em tratamento devem buscar orientação antes de usar qualquer suplemento.
+      </aside>
+
+      {sources.length > 0 && (
+        <section class="sources" aria-labelledby="fontes">
+          <h2 id="fontes">Fontes</h2>
+          <ol>{sources.map((s) => <li><a href={s.url} rel="noopener" target="_blank">{s.label}</a></li>)}</ol>
+        </section>
+      )}
+    </div>
+
+    <section class="related" aria-labelledby="leia">
+      <h2 id="leia">Leia também</h2>
+      <ul class="card-list">
+        {related.map((g) => <li><a class="card" href={g.href}><span>{g.title}</span><span class="arrow" aria-hidden="true">→</span></a></li>)}
+      </ul>
+    </section>
+  </article>
+</Base>

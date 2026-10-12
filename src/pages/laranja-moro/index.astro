@@ -1,0 +1,60 @@
+---
+import Article from '../../layouts/Article.astro';
+import { study } from '../../data/site';
+
+const faq = [
+  { q: 'Laranja moro é a mesma coisa que Morosil?', a: 'Morosil é o nome comercial muito usado para o extrato padronizado de laranja moro. Na prática, quando um rótulo fala em Morosil, ele está se referindo a um extrato seco dessa laranja. O que muda entre produtos é a quantidade de extrato por cápsula e o que mais vem na fórmula.' },
+  { q: 'Posso comer a laranja moro em vez de tomar cápsula?', a: 'A fruta fresca é cultivada na Sicília e praticamente não chega ao Brasil. Além disso, o estudo clínico mais citado usou um extrato padronizado em cápsula, não a fruta, então não dá para garantir o mesmo efeito comendo laranjas comuns.' },
+  { q: 'Laranja moro precisa de receita?', a: 'Não. No Brasil, os produtos de laranja moro são vendidos como suplemento alimentar, sem receita. Mesmo assim, vale conversar com um profissional de saúde antes de usar, principalmente se você toma algum medicamento.' },
+  { q: 'Em quanto tempo a laranja moro faz efeito?', a: 'No principal estudo, os resultados foram medidos depois de 6 meses de uso diário, junto com dieta e caminhada. Não há evidência de resultado rápido, em poucos dias ou semanas.' },
+];
+---
+<Article
+  title="Laranja moro: o que é, para que serve e o que a ciência diz"
+  description="Entenda o que é a laranja moro, por que ela virou suplemento para emagrecer, o que o estudo clínico realmente mostrou e como escolher um produto."
+  kicker="Guia completo"
+  lead="A laranja moro é uma laranja vermelha da Sicília cujo extrato virou um dos suplementos mais procurados para controle de peso. Aqui está o que ela é, o que a pesquisa mostra de verdade e como não cair em promessa exagerada."
+  crumbs={[{ name: 'Laranja moro', href: '/laranja-moro/' }]}
+  faq={faq}
+  sources={[
+    { label: `${study.cite}: estudo randomizado com extrato de laranja moro`, url: study.url },
+    { label: 'Nutritotal PRO: Qual a relação entre a laranja moro e o emagrecimento?', url: 'https://nutritotal.com.br/pro/qual-a-relacao-entre-a-laranja-moro-e-o-emagrecimento/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Laranja moro é uma variedade de laranja vermelha (<em>Citrus sinensis</em>) rica em antocianinas. O extrato dela é vendido como suplemento para ajudar no controle de peso. Um estudo clínico de 6 meses encontrou perda de peso maior que o placebo, mas pequena e sempre junto com dieta e exercício.</p>
+  </div>
+
+  <h2>O que é a laranja moro</h2>
+  <p>A laranja moro é uma variedade de laranja-doce (<em>Citrus sinensis</em>) cultivada no leste da Sicília, na Itália, na região do vulcão Etna. Ela faz parte do grupo das chamadas laranjas sanguíneas: por dentro, a polpa é vermelho-escura.</p>
+  <p>Essa cor vem das <strong>antocianinas</strong>, os mesmos pigmentos que dão cor a frutas como amora e uva roxa. O clima da região, com dias quentes e noites frias, favorece a produção desses pigmentos. Além delas, a fruta tem vitamina C, flavonoides (como hesperidina e naringenina) e ácidos hidroxicinâmicos.</p>
+  <p>Como a fruta fresca praticamente não é vendida no Brasil, o que se encontra aqui é o <strong>extrato seco</strong> em cápsulas, muitas vezes chamado pelo nome comercial Morosil.</p>
+
+  <h2>Para que serve a laranja moro</h2>
+  <p>O principal motivo da fama é o <strong>controle de peso</strong>. A hipótese, estudada principalmente em laboratório e em animais, é que o conjunto de compostos do extrato reduza o acúmulo de gordura nas células e tenha ação antioxidante e anti-inflamatória.</p>
+  <p>Em pessoas, a evidência mais forte é um ensaio clínico randomizado, duplo-cego e controlado por placebo, publicado em 2022. Nele, quem tomou o extrato perdeu mais peso que o grupo placebo, mas os dois grupos também seguiram dieta e caminhada. Detalhamos os números em <a href="/laranja-moro/emagrece/">laranja moro emagrece mesmo?</a></p>
+  <p>Fora o emagrecimento, rótulos costumam citar benefícios para colesterol, imunidade e pele. Esses usos têm menos evidência em humanos, então trate essas promessas com cautela.</p>
+
+  <h2>O que esperar, sendo realista</h2>
+  <ul>
+    <li><strong>Não é emagrecedor milagroso.</strong> No estudo, a diferença em relação ao placebo foi de cerca de 2 pontos percentuais do peso corporal em 6 meses.</li>
+    <li><strong>Funciona como apoio.</strong> Todos os participantes tinham orientação de dieta e atividade física.</li>
+    <li><strong>Leva tempo.</strong> O resultado foi medido depois de meses de uso diário, não de semanas.</li>
+  </ul>
+
+  <h2>Como escolher um suplemento de laranja moro</h2>
+  <p>Os produtos variam muito em dose, fórmula e preço. Antes de comprar, confira:</p>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>O que olhar</th><th>Por quê</th></tr></thead>
+      <tbody>
+        <tr><td>Quantidade de extrato por dose diária</td><td>O estudo usou 400 mg de extrato por dia. Doses muito diferentes não têm o mesmo respaldo.</td></tr>
+        <tr><td>Se o extrato é padronizado</td><td>Extrato padronizado garante uma quantidade mínima de compostos ativos. Pó de fruta comum não é a mesma coisa.</td></tr>
+        <tr><td>Outros ingredientes</td><td>Muitas fórmulas somam picolinato de cromo, psyllium, colágeno ou cafeína. Cafeína pode não combinar com quem tem pressão alta ou insônia.</td></tr>
+        <tr><td>Fabricante, CNPJ e SAC</td><td>Um fabricante identificado e com canal de atendimento facilita trocas e reclamações.</td></tr>
+        <tr><td>Política de garantia</td><td>Leia as regras de reembolso antes de comprar kits grandes.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Para saber a dose certa e o melhor horário, veja <a href="/laranja-moro/como-tomar/">como tomar laranja moro</a>. Para entender os riscos, veja <a href="/laranja-moro/efeitos-colaterais/">efeitos colaterais e contraindicações</a>.</p>
+</Article>

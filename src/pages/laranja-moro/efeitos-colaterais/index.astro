@@ -1,0 +1,54 @@
+---
+import Article from '../../../layouts/Article.astro';
+import { study } from '../../../data/site';
+
+const faq = [
+  { q: 'Laranja moro faz mal para o fígado?', a: 'No estudo clínico de 6 meses, os marcadores de função do fígado ficaram dentro da faixa normal nos participantes que tomaram o extrato. Ainda assim, quem tem doença hepática deve usar só com orientação médica.' },
+  { q: 'Laranja moro aumenta a pressão?', a: 'O extrato de laranja moro em si não contém estimulantes. Alguns produtos, porém, combinam a laranja moro com cafeína ou guaraná, que podem aumentar a pressão e causar insônia. Leia a lista de ingredientes.' },
+  { q: 'Grávida pode tomar laranja moro?', a: 'Não sem orientação médica. Não há estudos de segurança em gestantes e lactantes, e os próprios rótulos costumam desaconselhar o uso nesses casos.' },
+];
+---
+<Article
+  title="Laranja moro: efeitos colaterais e quem não deve usar"
+  description="Veja os efeitos colaterais relatados com o extrato de laranja moro, o que o estudo clínico mostrou sobre segurança e quem deve evitar o suplemento."
+  kicker="Segurança"
+  lead="No estudo clínico, o extrato foi bem tolerado e não alterou os exames do fígado. Mas segurança também depende da fórmula do produto e de quem está tomando."
+  crumbs={[{ name: 'Laranja moro', href: '/laranja-moro/' }, { name: 'Efeitos colaterais', href: '/laranja-moro/efeitos-colaterais/' }]}
+  faq={faq}
+  sources={[{ label: `${study.cite}`, url: study.url }]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>No estudo de 6 meses, o extrato de laranja moro foi seguro: exames do fígado normais e poucas queixas gastrointestinais (1 pessoa no grupo do extrato, contra 5 no placebo). Gestantes, lactantes, menores de idade e pessoas em tratamento devem usar só com orientação.</p>
+  </div>
+
+  <h2>O que o estudo mostrou sobre segurança</h2>
+  <p>No ensaio clínico com 98 adultos, quem tomou 400 mg de extrato por dia durante 6 meses não teve alteração nos marcadores de toxicidade do fígado. Sintomas gastrointestinais apareceram em pouquíssimas pessoas, e foram até menos frequentes no grupo do extrato do que no grupo placebo.</p>
+  <p>Isso é uma boa notícia, mas tem limites: foi um grupo pequeno, de pessoas saudáveis, por 6 meses. Efeitos raros ou de longo prazo podem não aparecer em um estudo desse tamanho.</p>
+
+  <h2>Possíveis efeitos indesejados</h2>
+  <ul>
+    <li><strong>Desconforto gastrointestinal</strong>, como gases, náusea ou alteração do intestino. Tomar junto às refeições costuma ajudar.</li>
+    <li><strong>Efeitos de outros ingredientes da fórmula.</strong> Cafeína e guaraná podem causar insônia, ansiedade e aumento da pressão. Psyllium pode causar gases e precisa de bastante água.</li>
+    <li><strong>Alergia</strong> em pessoas sensíveis a frutas cítricas ou a algum componente da cápsula.</li>
+  </ul>
+
+  <h2>Quem não deve usar sem orientação</h2>
+  <ul>
+    <li>Gestantes e mulheres que estão amamentando.</li>
+    <li>Menores de 19 anos (muitos rótulos indicam o uso apenas para adultos).</li>
+    <li>Pessoas que tomam medicamentos de uso contínuo, como para diabetes, pressão, colesterol ou anticoagulantes.</li>
+    <li>Pessoas com doença no fígado, nos rins ou no coração.</li>
+    <li>Pessoas com histórico de transtorno alimentar.</li>
+    <li>Quem tem alergia a cítricos.</li>
+  </ul>
+
+  <h2>Sinais de alerta em produtos e anúncios</h2>
+  <p>Mais do que o ingrediente em si, o risco costuma estar no produto. Desconfie quando:</p>
+  <ul>
+    <li>o anúncio promete perder muitos quilos em poucos dias;</li>
+    <li>o rótulo não informa o fabricante, o CNPJ ou a quantidade de cada ingrediente;</li>
+    <li>o produto diz curar ou tratar doenças (suplemento não é remédio);</li>
+    <li>a venda depende de "últimas unidades" e contagem regressiva para pressionar a compra.</li>
+  </ul>
+  <p>Para usar da forma correta, veja <a href="/laranja-moro/como-tomar/">como tomar laranja moro</a>.</p>
+</Article>

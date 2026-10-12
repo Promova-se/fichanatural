@@ -1,0 +1,46 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { reduphinePages } from '../../../data/site';
+
+const faq = [
+  { q: 'Posso tomar as duas cápsulas de ReduPhine de uma vez?', a: 'O fabricante indica dividir em duas tomadas, antes do almoço e antes do jantar. Como as fibras agem na saciedade da refeição seguinte, tomar tudo de uma vez tende a reduzir o efeito.' },
+  { q: 'Posso tomar ReduPhine com outros remédios?', a: 'Fibras como psyllium e quitosana podem atrapalhar a absorção de medicamentos e vitaminas. Tome os remédios pelo menos 2 horas antes ou depois das cápsulas e converse com seu médico.' },
+  { q: 'Por quanto tempo tomar ReduPhine?', a: 'O fabricante recomenda de 3 a 5 meses. Não há estudo com o produto que defina a duração ideal, então avalie com um profissional se faz sentido continuar.' },
+];
+---
+<Article
+  title="Como tomar ReduPhine Caps: horário, dose e cuidados"
+  description="Veja como tomar o ReduPhine Caps segundo o fabricante, por que tomar antes das refeições, quanto de água beber e como evitar interação com remédios."
+  kicker="Modo de uso"
+  lead="São 2 cápsulas por dia: uma cerca de 30 minutos antes do almoço e outra antes do jantar, sempre com bastante água."
+  crumbs={[{ name: 'ReduPhine Caps', href: '/reduphine-caps/' }, { name: 'Como tomar', href: '/reduphine-caps/como-tomar/' }]}
+  faq={faq}
+  related={reduphinePages}
+  sources={[{ label: 'Página oficial do ReduPhine Caps (consultada em 10/10/2026)', url: 'https://reduphinecaps.com.br/' }]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Tome 1 cápsula cerca de 30 minutos antes do almoço e 1 cerca de 30 minutos antes do jantar, com um copo cheio de água. Um pote de 60 cápsulas dura um mês. Não ultrapasse 2 cápsulas por dia.</p>
+  </div>
+
+  <h2>Modo de uso indicado pelo fabricante</h2>
+  <ol>
+    <li><strong>Antes do almoço:</strong> 1 cápsula, cerca de 30 minutos antes.</li>
+    <li><strong>Antes do jantar:</strong> 1 cápsula, cerca de 30 minutos antes. O FAQ da página também aceita antes do lanche da tarde.</li>
+  </ol>
+  <p>O intervalo de 30 minutos tem motivo: as fibras precisam de tempo para absorver água e formar o gel que aumenta a saciedade na refeição.</p>
+
+  <h2>Cuidados para usar bem</h2>
+  <ul>
+    <li><strong>Beba bastante água.</strong> Fibras como o psyllium precisam de água para funcionar. Pouca água pode causar desconforto e intestino preso.</li>
+    <li><strong>Separe dos remédios.</strong> Deixe pelo menos 2 horas de intervalo entre as cápsulas e medicamentos ou outros suplementos.</li>
+    <li><strong>Atenção às vitaminas.</strong> A quitosana pode reduzir a absorção das vitaminas A, D, E e K. Se você toma alguma delas, tome em outro horário.</li>
+    <li><strong>Mantenha a alimentação ajustada.</strong> O efeito das fibras é maior quando acompanha refeições equilibradas.</li>
+  </ul>
+
+  <h2>Por quanto tempo usar</h2>
+  <p>O fabricante recomenda kits de 3 a 5 meses. Avalie o resultado mês a mês, pela fome, pelo intestino e pelas medidas, e não só pela balança. Se em dois meses você não notar nenhuma diferença, vale repensar antes de comprar mais.</p>
+  <p>Confira também <a href="/reduphine-caps/efeitos-colaterais/">os efeitos colaterais e quem não deve usar</a>.</p>
+
+  <BuyBox compact />
+</Article>

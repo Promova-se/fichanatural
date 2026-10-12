@@ -1,0 +1,69 @@
+---
+import Article from '../../../layouts/Article.astro';
+import { study } from '../../../data/site';
+
+const faq = [
+  { q: 'Quantos quilos dá para perder com laranja moro?', a: 'No estudo, o grupo que tomou o extrato perdeu em média 4,2% do peso em 6 meses, contra 2,2% do placebo. Para uma pessoa de 80 kg, isso equivale a cerca de 3,4 kg contra 1,8 kg, ou seja, uma diferença de aproximadamente 1,6 kg atribuível ao extrato.' },
+  { q: 'Laranja moro emagrece sem dieta?', a: 'Não há evidência disso. No estudo, todos os participantes receberam orientação de dieta com controle de calorias e de caminhada três vezes por semana.' },
+  { q: 'Laranja moro tira gordura da barriga?', a: 'O estudo registrou redução de circunferência da cintura e de gordura visceral no grupo que tomou o extrato. Não existe, porém, suplemento que queime gordura de uma região específica do corpo.' },
+];
+---
+<Article
+  title="Laranja moro emagrece mesmo? O que o estudo mostrou"
+  description="Analisamos o estudo clínico de 6 meses com extrato de laranja moro: quanto peso as pessoas perderam, comparado ao placebo, e o que isso significa na prática."
+  kicker="Evidência"
+  lead="Sim, mas pouco, e não sozinha. O principal estudo encontrou perda de peso maior que o placebo em 6 meses, com os participantes também fazendo dieta e caminhada."
+  crumbs={[{ name: 'Laranja moro', href: '/laranja-moro/' }, { name: 'Emagrece mesmo?', href: '/laranja-moro/emagrece/' }]}
+  faq={faq}
+  sources={[
+    { label: `${study.cite}: Effectiveness of "Moro" Blood Orange standardized extract on weight loss`, url: study.url },
+    { label: 'Nutritotal PRO: resumo do estudo em português', url: 'https://nutritotal.com.br/pro/qual-a-relacao-entre-a-laranja-moro-e-o-emagrecimento/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Em 6 meses, quem tomou 400 mg de extrato de laranja moro por dia perdeu em média 4,2% do peso corporal. O grupo placebo perdeu 2,2%. Os dois grupos seguiram dieta e caminhada. O efeito existe, mas é modesto.</p>
+  </div>
+
+  <h2>Como foi o estudo</h2>
+  <p>O estudo mais citado sobre laranja moro foi publicado em 2022 na revista científica <em>Nutrients</em>. Foi um ensaio clínico randomizado, duplo-cego e controlado por placebo, o tipo de estudo considerado mais confiável para testar se algo funciona.</p>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Participantes</th><td>98 adultos australianos com sobrepeso, mas saudáveis</td></tr>
+        <tr><th>Grupos</th><td>45 tomaram extrato de laranja moro; 53 tomaram placebo (maltodextrina)</td></tr>
+        <tr><th>Dose</th><td>400 mg de extrato por dia, em cápsula, após o café da manhã</td></tr>
+        <tr><th>Duração</th><td>6 meses</td></tr>
+        <tr><th>Orientação a todos</th><td>Dieta com controle de calorias e 30 minutos de caminhada, 3 vezes por semana</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Os resultados em números</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Resultado em 6 meses</th><th>Laranja moro</th><th>Placebo</th></tr></thead>
+      <tbody>
+        <tr><td>Perda média de peso</td><td><strong>4,2%</strong></td><td>2,2%</td></tr>
+        <tr><td>Pessoas que perderam mais de 5% do peso</td><td><strong>36%</strong></td><td>22,5%</td></tr>
+        <tr><td>Queixas gastrointestinais</td><td>1 pessoa</td><td>5 pessoas</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>O grupo do extrato também teve redução de massa de gordura, circunferência da cintura e do quadril, IMC e gordura visceral. Os exames de função do fígado ficaram normais.</p>
+
+  <h2>O que isso significa na prática</h2>
+  <p>Para uma pessoa de 80 kg, 4,2% equivale a cerca de 3,4 kg em seis meses. O placebo com dieta e caminhada chegou a cerca de 1,8 kg. A diferença atribuível ao extrato fica em torno de <strong>1,6 kg em 6 meses</strong>.</p>
+  <p>É um resultado real e estatisticamente melhor que o placebo, mas bem distante das promessas de "secar 10 kg em 30 dias" que aparecem em alguns anúncios.</p>
+
+  <h2>Limites do estudo</h2>
+  <ul>
+    <li><strong>É um estudo só</strong>, com menos de 100 pessoas. Os próprios autores dizem que são necessários novos ensaios para confirmar o efeito.</li>
+    <li><strong>Foi financiado por uma empresa de produtos naturais.</strong> Os pesquisadores declararam que o financiador não interferiu no desenho do estudo.</li>
+    <li><strong>A adesão à dieta foi baixa nos dois grupos</strong>, o que ajuda a explicar por que a perda de peso foi pequena no geral.</li>
+    <li><strong>O resultado vale para o extrato testado, na dose testada.</strong> Produtos com outra dose ou outra fórmula não foram avaliados.</li>
+  </ul>
+
+  <h2>Por que a laranja moro ajudaria a emagrecer</h2>
+  <p>A explicação proposta vem principalmente de estudos em laboratório e em animais. O conjunto de antocianinas, naringenina e hesperetina parece reduzir a ação de enzimas ligadas à formação e ao armazenamento de gordura e influenciar hormônios como adiponectina e leptina. Esses mecanismos ainda não foram totalmente confirmados em humanos.</p>
+  <p>Se for usar, veja <a href="/laranja-moro/como-tomar/">como tomar laranja moro</a> e confira <a href="/laranja-moro/efeitos-colaterais/">quem não deve usar</a>.</p>
+</Article>

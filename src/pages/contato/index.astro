@@ -1,0 +1,9 @@
+---
+import Page from '../../layouts/Page.astro';
+import { site } from '../../data/site';
+---
+<Page title="Contato" description="Fale com a equipe da Ficha Natural.">
+  <p>Dúvidas sobre o conteúdo, sugestões de produtos para analisarmos ou correções: escreva para <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
+  <h2>Problemas com um pedido?</h2>
+  <p>Não vendemos nem entregamos produtos. Para questões sobre pedido, entrega, troca ou reembolso, fale diretamente com o fabricante ou com a plataforma onde a compra foi feita. Os dados de contato aparecem no e-mail de confirmação da compra.</p>
+</Page>
