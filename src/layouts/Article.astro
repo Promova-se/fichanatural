@@ -3,7 +3,8 @@ import Base from './Base.astro';
 import { site, guides } from '../data/site';
 
 interface Props {
-  title: string;        // H1 e título SEO
+  title: string;        // H1
+  seoTitle?: string;    // <title> curto (até ~60 caracteres); usa o H1 se omitido
   description: string;  // meta description
   kicker?: string;      // pequeno rótulo acima do título
   lead: string;         // resumo em 1-2 frases logo abaixo do H1
@@ -12,7 +13,7 @@ interface Props {
   sources?: { label: string; url: string }[];
   related?: { href: string; title: string }[];
 }
-const { title, description, kicker, lead, crumbs, faq = [], sources = [], related: relatedProp } = Astro.props;
+const { title, seoTitle, description, kicker, lead, crumbs, faq = [], sources = [], related: relatedProp } = Astro.props;
 const url = new URL(Astro.url.pathname, site.url).href;
 const updatedBr = site.updated.split('-').reverse().join('/');
 
@@ -49,7 +50,7 @@ if (faq.length) {
 }
 const related = (relatedProp ?? guides).filter((g) => g.href !== Astro.url.pathname);
 ---
-<Base title={title} description={description} schema={schema}>
+<Base title={seoTitle ?? title} description={description} schema={schema}>
   <article class="wrap article">
     <nav class="crumbs" aria-label="Você está em">
       <a href="/">Início</a>

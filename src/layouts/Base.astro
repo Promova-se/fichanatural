@@ -10,7 +10,7 @@ interface Props {
 }
 const { title, description, schema = [], noindex = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, site.url).href;
-const fullTitle = Astro.url.pathname === '/' ? `${site.name}: guias de suplementos sem promessa milagrosa` : `${title} | ${site.name}`;
+const fullTitle = Astro.url.pathname === '/' ? `${site.name}: guias de suplementos sem promessa milagrosa` : (title.length + site.name.length + 3 <= 60 ? `${title} | ${site.name}` : title);
 const org = {
   '@context': 'https://schema.org',
   '@type': 'Organization',

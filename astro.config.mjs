@@ -5,5 +5,5 @@ export default defineConfig({
   site: 'https://fichanatural.com.br',
   trailingSlash: 'always',
   build: { format: 'directory' },
-  integrations: [sitemap()],
+  integrations: [sitemap({ lastmod: new Date() })],
 });
