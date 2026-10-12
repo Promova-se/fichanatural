@@ -7,6 +7,7 @@ export const site = {
   company: 'Promova-se',
   cnpj: '43.315.814/0001-28',
   updated: '2026-10-11',
+  ga4: 'G-L47PVELQQ4',
 };
 
 // Código de afiliado na Monetizze (parâmetro mcr) e montagem do link de checkout de cada kit.

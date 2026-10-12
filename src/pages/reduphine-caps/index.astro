@@ -67,7 +67,7 @@ const faq = [
             <td>{brl(k.total)}</td>
             <td>{k.installments}</td>
             <td><strong>{brl(k.total / k.months)}</strong></td>
-            <td><a class="btn btn-sm" href={checkoutUrl(k.plan)} target="_blank" rel="sponsored nofollow noopener">Comprar</a></td>
+            <td><a class="btn btn-sm" data-produto="ReduPhine Caps" data-kit={k.name} data-posicao="tabela-kits" href={checkoutUrl(k.plan)} target="_blank" rel="sponsored nofollow noopener">Comprar</a></td>
           </tr>
         ))}
       </tbody>

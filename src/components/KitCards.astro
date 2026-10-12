@@ -7,8 +7,9 @@ interface Props {
   kits: Kit[];
   unit?: string;
   mcr?: string;
+  produto?: string;
 }
-const { kits, unit = 'pote', mcr } = Astro.props;
+const { kits, unit = 'pote', mcr, produto = '' } = Astro.props;
 const brl = (n: number) => n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 const hasPrices = kits.every((k) => k.total > 0);
 ---
@@ -25,7 +26,7 @@ const hasPrices = kits.every((k) => k.total > 0);
       ) : (
         <p class="small">Preço atualizado no site oficial</p>
       )}
-      <a class="btn btn-sm" href={checkoutUrl(k.plan, mcr)} target="_blank" rel="sponsored nofollow noopener">{k.total > 0 ? 'Comprar este kit' : 'Ver preço e comprar'}</a>
+      <a class="btn btn-sm" data-produto={produto} data-kit={k.name} data-posicao="cartao-kit" href={checkoutUrl(k.plan, mcr)} target="_blank" rel="sponsored nofollow noopener">{k.total > 0 ? 'Comprar este kit' : 'Ver preço e comprar'}</a>
     </div>
   ))}
 </div>

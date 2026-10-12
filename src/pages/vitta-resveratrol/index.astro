@@ -63,7 +63,7 @@ const faq = [
 
   <h2>Kits</h2>
   <p>Todos os kits trazem pelo menos 2 potes (cada pote rende 1 mês), com frete grátis e parcelamento em até 12x. Quanto maior o kit, menor o preço por pote: de R$ 78,50 no kit de 2 até R$ 62,83 no kit de 6. Como o fabricante recomenda 3 meses de uso, o kit de 3 potes cobre o tratamento sugerido.</p>
-  <KitCards kits={p.kits} mcr={p.mcr} />
+  <KitCards kits={p.kits} mcr={p.mcr} produto="Vitta Resveratrol" />
 
   <h2>Prós e contras</h2>
   <div class="pros-cons">
@@ -92,5 +92,5 @@ const faq = [
   </div>
   <p>Antes de começar, leia <a href="/vitta-resveratrol/como-tomar/">como tomar e quem não deve usar</a>.</p>
 
-  <BuyBox compact {...box} />
+  <BuyBox compact {...box} produto="Vitta Resveratrol" />
 </Article>

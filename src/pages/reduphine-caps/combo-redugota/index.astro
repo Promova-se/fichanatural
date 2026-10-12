@@ -54,9 +54,9 @@ const faq = [
 
   <h2>Preço e kits do combo</h2>
   <p>Cada kit traz de 1 a 3 potes de ReduPhine Caps (60 cápsulas, 1 mês cada) e <strong>1 frasco de ReduGota</strong>, com frete grátis. O "pague 1, leve 2" conta o frasco de gotas como um dos produtos. Na consulta de 11/10/2026, o kit de entrada (1 ReduPhine + 1 ReduGota, R$ 119,90) custava menos que 1 pote avulso de ReduPhine (R$ 147). O parcelamento tem acréscimo de 2,99% ao mês: à vista sai mais barato.</p>
-  <KitCards kits={combo.kits} unit="pote de ReduPhine" />
+  <KitCards kits={combo.kits} unit="pote de ReduPhine" produto="Combo ReduPhine + ReduGota" />
 
-  <BuyBox {...comboBox} />
+  <BuyBox {...comboBox} produto="Combo ReduPhine + ReduGota" />
 
   <h2>O que as gotas acrescentam</h2>
   <h3>Laranja moro</h3>
@@ -99,5 +99,5 @@ const faq = [
   </ul>
   <p>Mais detalhes em <a href="/reduphine-caps/efeitos-colaterais/">efeitos colaterais do ReduPhine</a> e <a href="/laranja-moro/efeitos-colaterais/">efeitos colaterais da laranja moro</a>. A garantia segue as mesmas regras explicadas em <a href="/reduphine-caps/onde-comprar/">onde comprar ReduPhine</a>.</p>
 
-  <BuyBox compact {...comboBox} />
+  <BuyBox compact {...comboBox} produto="Combo ReduPhine + ReduGota" />
 </Article>

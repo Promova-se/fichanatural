@@ -7,6 +7,7 @@ interface Props {
   title?: string;
   text?: string;
   cta?: string;
+  produto?: string;
 }
 const {
   compact = false,
@@ -14,6 +15,7 @@ const {
   title = 'Comprar no site oficial',
   text = 'A partir de R$ 147 (1 pote). Kits maiores saem mais baratos por pote. Frete grátis, pagamento em até 12x.',
   cta = 'Ver kits e preços',
+  produto = 'ReduPhine Caps',
 } = Astro.props;
 ---
 <aside class:list={['buybox', { compact }]} aria-label="Onde comprar">
@@ -21,6 +23,6 @@ const {
     <p class="buybox-title">{title}</p>
     {!compact && <p class="buybox-text">{text}</p>}
   </div>
-  <a class="btn" href={href} target="_blank" rel="sponsored nofollow noopener">{cta}</a>
+  <a class="btn" data-produto={produto} data-kit="geral" data-posicao={compact ? "caixa-compra-final" : "caixa-compra"} href={href} target="_blank" rel="sponsored nofollow noopener">{cta}</a>
   <p class="buybox-note">Link de afiliado: podemos receber comissão, sem custo extra para você. <a href="/aviso-de-afiliado/">Saiba mais</a>.</p>
 </aside>
