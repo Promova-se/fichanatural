@@ -40,6 +40,7 @@ export const reduphine = {
   name: 'ReduPhine Caps',
   brand: 'VittaBalance',
   cnpj: '40.249.792/0001-57',
+  sac: 'sac@vittabalance.com.br',
   link: 'https://app.monetizze.com.br/r/AXA22582261',
   ingredients: ['Spirulina', 'Psyllium', 'Quitosana', 'Cromo'],
   // `plan` = código do checkout na Monetizze. Link do kit = checkoutUrl(plan).
@@ -52,15 +53,16 @@ export const reduphine = {
 };
 
 // Combo ReduPhine Caps + ReduGota, conferido na página oficial em 11/10/2026.
-// Preços conferidos no print da página do produtor em 11/10/2026. Cada kit inclui 1 ReduGota.
+// Preços conferidos no print da página e no checkout em 11/10/2026. Cada kit = N potes de ReduPhine + 1 ReduGota.
+// SAC informado no checkout: sac@vittabalance.com.br. Parcelas com acréscimo de 2,99% a.m.
 export const combo = {
   name: 'ReduPhine Caps + ReduGota',
   link: 'https://reduphinecaps.com.br/combo-promo-phinegota-monetizze/?mcr=AXA22582261',
   ingredients: ['Spirulina', 'Quitosana', 'Psyllium', 'Cromo', 'Café verde', 'Extrato de laranja moro', 'Chlorella'],
   kits: [
-    { name: 'Pague 1, leve 2', months: 2, total: 119.9, installments: '12x de R$ 12,04', plan: 'DKZ360706' },
-    { name: 'Pague 2, leve 3', months: 3, total: 139.9, installments: '12x de R$ 14,05', plan: 'DMV360707' },
-    { name: 'Pague 3, leve 4', months: 4, total: 159.9, installments: '12x de R$ 16,05', plan: 'DSM360709' },
+    { name: 'Pague 1, leve 2', months: 1, total: 119.9, installments: '12x de R$ 12,04', plan: 'DKZ360706' },
+    { name: 'Pague 2, leve 3', months: 2, total: 139.9, installments: '12x de R$ 14,05', plan: 'DMV360707' },
+    { name: 'Pague 3, leve 4', months: 3, total: 159.9, installments: '12x de R$ 16,05', plan: 'DSM360709' },
   ],
 };
 

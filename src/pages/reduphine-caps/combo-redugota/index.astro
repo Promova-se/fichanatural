@@ -14,7 +14,7 @@ const faq = [
   { q: 'O que é o ReduGota?', a: 'É um suplemento em gotas da mesma marca do ReduPhine Caps, a VittaBalance. Vem em frasco de 30 ml e é tomado embaixo da língua, 12 gotas uma vez ao dia, segundo o fabricante.' },
   { q: 'O ReduGota tem laranja moro?', a: 'A página oficial cita extrato de laranja moro, café verde e chlorella entre os ingredientes do combo, mas não separa o que vai nas gotas e o que vai nas cápsulas, nem informa as quantidades.' },
   { q: 'Preciso comprar o combo ou só o ReduPhine resolve?', a: 'Não há estudo comparando os dois. O combo soma ingredientes, mas sem saber as doses não dá para afirmar que funciona melhor. Se você é sensível a cafeína, o ReduPhine sozinho evita o café verde.' },
-  { q: 'Quanto custa o combo ReduPhine + ReduGota?', a: 'Na consulta de 11/10/2026, os kits custavam R$ 119,90 (2 potes de ReduPhine + 1 ReduGota), R$ 139,90 (3 potes + 1 ReduGota) e R$ 159,90 (4 potes + 1 ReduGota), com frete grátis e parcelamento em até 12x. Confira o valor no checkout.' },
+  { q: 'Quanto custa o combo ReduPhine + ReduGota?', a: 'Na consulta de 11/10/2026, os kits custavam R$ 119,90 (1 pote de ReduPhine + 1 ReduGota), R$ 139,90 (2 potes + 1 ReduGota) e R$ 159,90 (3 potes + 1 ReduGota), com frete grátis. O parcelamento em até 12x tem acréscimo de 2,99% ao mês. Confira o valor no checkout.' },
   { q: 'Como tomar o ReduPhine e o ReduGota juntos?', a: 'Pelo modo de uso do fabricante: 1 cápsula de ReduPhine 30 minutos antes do almoço e 1 antes do jantar, e 12 gotas de ReduGota embaixo da língua uma vez ao dia, no horário que preferir.' },
 ];
 ---
@@ -52,7 +52,7 @@ const faq = [
   </div>
 
   <h2>Preço e kits do combo</h2>
-  <p>Cada kit traz potes de ReduPhine Caps (60 cápsulas, 1 mês cada) e <strong>1 frasco de ReduGota</strong>, com frete grátis. Na consulta de 11/10/2026, o combo saía mais barato por pote que o ReduPhine vendido sozinho, que custa R$ 147 o pote avulso.</p>
+  <p>Cada kit traz de 1 a 3 potes de ReduPhine Caps (60 cápsulas, 1 mês cada) e <strong>1 frasco de ReduGota</strong>, com frete grátis. O "pague 1, leve 2" conta o frasco de gotas como um dos produtos. Na consulta de 11/10/2026, o kit de entrada (1 ReduPhine + 1 ReduGota, R$ 119,90) custava menos que 1 pote avulso de ReduPhine (R$ 147). O parcelamento tem acréscimo de 2,99% ao mês: à vista sai mais barato.</p>
   <KitCards kits={combo.kits} unit="pote de ReduPhine" />
 
   <BuyBox {...comboBox} />
@@ -75,7 +75,7 @@ const faq = [
         <li>você quer incluir laranja moro, o ingrediente mais estudado para peso</li>
         <li>não tem problema com cafeína</li>
         <li>prefere uma rotina com cápsulas e gotas</li>
-        <li>quer o menor preço por pote: o kit de entrada do combo custa menos que 1 pote avulso de ReduPhine</li>
+        <li>quer começar gastando menos: o kit de entrada (1 ReduPhine + 1 ReduGota) custa menos que 1 pote avulso de ReduPhine</li>
       </ul>
     </div>
     <div class="cons">
