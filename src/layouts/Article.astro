@@ -12,8 +12,10 @@ interface Props {
   faq?: { q: string; a: string }[];
   sources?: { label: string; url: string }[];
   related?: { href: string; title: string }[];
+  image?: { src: string; alt: string; width: number; height: number };
+  ogImage?: string;
 }
-const { title, seoTitle, description, kicker, lead, crumbs, faq = [], sources = [], related: relatedProp } = Astro.props;
+const { title, seoTitle, image, ogImage, description, kicker, lead, crumbs, faq = [], sources = [], related: relatedProp } = Astro.props;
 const url = new URL(Astro.url.pathname, site.url).href;
 const updatedBr = site.updated.split('-').reverse().join('/');
 
@@ -28,6 +30,7 @@ const schema: object[] = [
     author: { '@type': 'Organization', name: `Equipe ${site.name}`, url: `${site.url}/sobre/` },
     publisher: { '@type': 'Organization', name: site.name, url: site.url },
     mainEntityOfPage: url,
+    ...(image || ogImage ? { image: new URL((ogImage ?? image!.src), site.url).href } : {}),
     inLanguage: 'pt-BR',
   },
   {
@@ -50,7 +53,7 @@ if (faq.length) {
 }
 const related = (relatedProp ?? guides).filter((g) => g.href !== Astro.url.pathname);
 ---
-<Base title={seoTitle ?? title} description={description} schema={schema}>
+<Base title={seoTitle ?? title} description={description} schema={schema} ogImage={ogImage}>
   <article class="wrap article">
     <nav class="crumbs" aria-label="Você está em">
       <a href="/">Início</a>
@@ -61,11 +64,18 @@ const related = (relatedProp ?? guides).filter((g) => g.href !== Astro.url.pathn
         </>
       ))}
     </nav>
-    <header class="article-head">
+    <header class:list={['article-head', { 'has-image': image }]}>
+      <div class="article-head-text">
       {kicker && <p class="kicker">{kicker}</p>}
       <h1>{title}</h1>
       <p class="lead">{lead}</p>
       <p class="meta">Por <a href="/sobre/">Equipe {site.name}</a> · Atualizado em <time datetime={site.updated}>{updatedBr}</time></p>
+      </div>
+      {image && (
+        <figure class="article-head-image">
+          <img src={image.src} alt={image.alt} width={image.width} height={image.height} fetchpriority="high" decoding="async" />
+        </figure>
+      )}
     </header>
 
     <div class="prose">

@@ -127,3 +127,16 @@ h3 { font-size: 1.2rem; margin: 1.6em 0 .4em; }
 .kit-card .price { font-size: 1.3rem; font-weight: 600; color: var(--ink); }
 .kit-card .small { margin: 0; }
 .kit-card .btn { margin-top: 8px; justify-self: start; align-self: flex-start; }
+
+/* Foto do produto no topo da ficha */
+.article-head.has-image { max-width: 980px; display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 32px; align-items: center; }
+.article-head-image { margin: 0; background: radial-gradient(circle at 50% 60%, #efe7da 0, var(--bg) 70%); border-radius: var(--radius); padding: 16px; text-align: center; }
+.article-head-image img { width: 100%; max-width: 220px; height: auto; display: inline-block; }
+.product-photo { margin: 8px 0 0; width: 160px; }
+.product-photo img { width: 100%; height: auto; }
+@media (max-width: 720px) {
+  .article-head.has-image { grid-template-columns: 1fr; gap: 8px; }
+  .article-head-image { order: -1; padding: 8px; }
+  .article-head-image img { max-width: 150px; }
+  .product-photo { margin: 8px auto 0; width: 140px; }
+}
