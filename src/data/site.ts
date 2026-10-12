@@ -9,6 +9,10 @@ export const site = {
   updated: '2026-10-10',
 };
 
+// Código de afiliado na Monetizze (parâmetro mcr) e montagem do link de checkout de cada kit.
+export const affiliate = { monetizze: 'AXA22582261' };
+export const checkoutUrl = (plan: string) => `https://pay.monetizze.com.br/${plan}?mcr=${affiliate.monetizze}`;
+
 export type Product = {
   slug: string;
   name: string;
@@ -38,11 +42,12 @@ export const reduphine = {
   cnpj: '40.249.792/0001-57',
   link: 'https://app.monetizze.com.br/r/AXA22582261',
   ingredients: ['Spirulina', 'Psyllium', 'Quitosana', 'Cromo'],
+  // `plan` = código do checkout na Monetizze. Link do kit = checkoutUrl(plan).
   kits: [
-    { name: '1 pote', months: 1, total: 147, installments: '12x de R$ 14,76' },
-    { name: 'Compre 2, leve 3', months: 3, total: 197, installments: '12x de R$ 19,78' },
-    { name: 'Compre 3, leve 5', months: 5, total: 247, installments: '12x de R$ 24,80' },
-    { name: 'Compre 5, leve 8', months: 8, total: 377, installments: '12x de R$ 37,85' },
+    { name: '1 pote', months: 1, total: 147, installments: '12x de R$ 14,76', plan: 'DKM307454' },
+    { name: 'Compre 2, leve 3', months: 3, total: 197, installments: '12x de R$ 19,78', plan: 'DUG229618' },
+    { name: 'Compre 3, leve 5', months: 5, total: 247, installments: '12x de R$ 24,80', plan: 'DLT200331' },
+    { name: 'Compre 5, leve 8', months: 8, total: 377, installments: '12x de R$ 37,85', plan: 'DBS298416' },
   ],
 };
 

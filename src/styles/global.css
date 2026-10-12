@@ -117,3 +117,11 @@ h3 { font-size: 1.2rem; margin: 1.6em 0 .4em; }
 .cons h3 { color: var(--accent); }
 .verdict { border-left: 4px solid var(--accent); background: var(--accent-soft); padding: 16px 20px; border-radius: 0 var(--radius) var(--radius) 0; }
 @media (max-width: 720px) { .pros-cons { grid-template-columns: 1fr; } }
+.btn-sm { padding: 7px 14px; font-size: .875rem; border-radius: 8px; white-space: nowrap; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.kit-cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin: 16px 0; }
+.kit-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; display: flex; flex-direction: column; gap: 4px; }
+.kit-card strong { font-family: var(--serif); font-size: 1.05rem; }
+.kit-card .price { font-size: 1.3rem; font-weight: 600; color: var(--ink); }
+.kit-card .small { margin: 0; }
+.kit-card .btn { margin-top: 8px; justify-self: start; align-self: flex-start; }

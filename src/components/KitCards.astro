@@ -1,0 +1,22 @@
+---
+// Um cartão por kit, cada um com o link de checkout de afiliado do próprio kit.
+import { checkoutUrl } from '../data/site';
+interface Props {
+  kits: { name: string; months: number; total: number; installments: string; plan: string }[];
+  unit?: string;
+}
+const { kits, unit = 'pote' } = Astro.props;
+const brl = (n: number) => n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+---
+<div class="kit-cards">
+  {kits.map((k) => (
+    <div class="kit-card">
+      <strong>{k.name}</strong>
+      <span class="small">{k.months} {k.months === 1 ? 'mês' : 'meses'} de uso</span>
+      <span class="price">{brl(k.total)}</span>
+      <p class="small">ou {k.installments} · {brl(k.total / k.months)} por {unit}</p>
+      <a class="btn btn-sm" href={checkoutUrl(k.plan)} target="_blank" rel="sponsored nofollow noopener">Comprar este kit</a>
+    </div>
+  ))}
+</div>
+<p class="small">Preços consultados no site oficial. Confira o valor final no checkout. Links de afiliado: podemos receber comissão, sem custo extra para você.</p>
