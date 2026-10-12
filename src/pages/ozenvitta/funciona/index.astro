@@ -1,0 +1,70 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { ozenvitta as p, ozenvittaPages, study } from '../../../data/site';
+
+const faq = [
+  { q: 'OzenVitta emagrece quantos quilos?', a: 'Não há estudo com o OzenVitta em si. Os estudos com os ingredientes mostram perdas pequenas: cerca de 2 pontos percentuais de peso a mais que o placebo em 6 meses com laranja moro, e por volta de 1 kg a mais com L-carnitina, sempre junto com dieta.' },
+  { q: 'L-carnitina queima gordura?', a: 'Ela participa do uso da gordura como energia, mas o corpo já produz L-carnitina. Revisões de estudos encontraram perda de peso pequena com o suplemento, com efeito que diminui com o tempo.' },
+  { q: 'OzenVitta acelera o metabolismo em repouso?', a: 'Nenhum dos ingredientes citados tem evidência de aumentar de forma relevante o gasto de energia em repouso. Essa é uma promessa da página de vendas, não um resultado de estudo.' },
+];
+---
+<Article
+  ogImage="/img/ozenvitta/og-ozenvitta.jpg"
+  title="OzenVitta funciona? O que a ciência diz de cada ingrediente"
+  seoTitle="OzenVitta funciona? O que diz a ciência"
+  description="OzenVitta funciona? Analisamos psyllium, inulina, L-carnitina, laranja moro, spirulina e cromo e o que os estudos mostram sobre emagrecimento."
+  kicker="Funciona?"
+  lead="O OzenVitta não tem estudo próprio, mas os ingredientes citados já foram pesquisados. O efeito existe, é pequeno e depende de dieta."
+  crumbs={[{ name: 'OzenVitta', href: '/ozenvitta/' }, { name: 'Funciona?', href: '/ozenvitta/funciona/' }]}
+  faq={faq}
+  related={ozenvittaPages}
+  sources={[
+    { label: `${study.cite}: estudo com extrato de laranja moro`, url: study.url },
+    { label: 'Pooyandjoo M et al. The effect of (L-)carnitine on weight loss in adults: a systematic review and meta-analysis. Obesity Reviews, 2016', url: 'https://pubmed.ncbi.nlm.nih.gov/27335245/' },
+    { label: 'NIH Office of Dietary Supplements: Dietary Supplements for Weight Loss', url: 'https://ods.od.nih.gov/factsheets/WeightLoss-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Funciona como apoio, não como emagrecedor. Laranja moro e L-carnitina têm estudos com perda de peso pequena, a mais que o placebo. As fibras (psyllium e inulina) ajudam na saciedade e no intestino. Como a página não informa as doses, não dá para saber se o produto chega às quantidades estudadas.</p>
+  </div>
+
+  <h2>Ingrediente por ingrediente</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Ingrediente</th><th>O que os estudos mostram</th><th>Força da evidência para peso</th></tr></thead>
+      <tbody>
+        <tr><td>Laranja moro</td><td>4,2% de perda de peso em 6 meses, contra 2,2% do placebo, com 400 mg/dia de extrato</td><td>Moderada (um bom estudo)</td></tr>
+        <tr><td>L-carnitina</td><td>Perda de cerca de 1 kg a mais que o placebo em revisões de estudos</td><td>Pequena</td></tr>
+        <tr><td>Psyllium</td><td>Mais saciedade e melhora do intestino e do colesterol</td><td>Pequena para peso</td></tr>
+        <tr><td>Inulina</td><td>Fibra prebiótica, ajuda o intestino e a saciedade</td><td>Pequena para peso</td></tr>
+        <tr><td>Picolinato de cromo</td><td>Efeito pequeno, de relevância incerta</td><td>Fraca</td></tr>
+        <tr><td>Spirulina</td><td>Estudos pequenos, efeito modesto</td><td>Fraca</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Laranja moro</h3>
+  <p>É o ingrediente com o estudo mais sólido. Num ensaio clínico de 6 meses, quem tomou 400 mg diários de extrato padronizado perdeu 4,2% do peso, contra 2,2% do placebo, com os dois grupos fazendo dieta e caminhada. Detalhes em <a href="/laranja-moro/emagrece/">laranja moro emagrece mesmo?</a></p>
+
+  <h3>L-carnitina</h3>
+  <p>A L-carnitina leva a gordura para dentro das mitocôndrias, onde ela vira energia. Uma revisão de 2016 que reuniu ensaios clínicos encontrou perda de cerca de 1,3 kg a mais que o placebo, com o efeito diminuindo com o tempo. Como o corpo já produz L-carnitina, o suplemento tende a fazer pouca diferença em quem tem alimentação adequada.</p>
+
+  <h3>Psyllium e inulina</h3>
+  <p>São fibras solúveis. Absorvem água, deixam a digestão mais lenta e aumentam a sensação de estômago cheio. Por isso o modo de uso pede para tomar antes das refeições. Ajudam o intestino, mas o efeito sobre o peso, sozinhas, é pequeno.</p>
+
+  <h3>Cromo e spirulina</h3>
+  <p>Os dois têm evidência fraca para emagrecimento. O cromo é explicado no <a href="/laranja-moro/picolinato-de-cromo/">guia sobre picolinato de cromo</a>, e a spirulina também aparece na <a href="/reduphine-caps/funciona/">análise do ReduPhine</a>.</p>
+
+  <h2>O que é exagero na página de vendas</h2>
+  <ul>
+    <li><strong>"Queima gordura" e "aumenta o metabolismo em repouso":</strong> nenhum dos ingredientes citados tem esse efeito comprovado em pessoas.</li>
+    <li><strong>"Resultados rápidos e duradouros":</strong> os estudos mostram perdas pequenas, ao longo de meses.</li>
+    <li><strong>"Sem efeitos colaterais significativos":</strong> fibras costumam causar gases e desconforto no início, como a própria página reconhece.</li>
+  </ul>
+
+  <h2>OzenVitta ou ReduPhine?</h2>
+  <p>As fórmulas são parecidas e os preços dos kits são iguais. A diferença é que o OzenVitta acrescenta laranja moro e L-carnitina, e o <a href="/reduphine-caps/">ReduPhine</a> tem quitosana. Para quem quer laranja moro na fórmula, o OzenVitta faz mais sentido. Nenhum dos dois informa as doses.</p>
+
+  <BuyBox compact produto="OzenVitta" href={p.link} title="OzenVitta no site oficial" cta="Ver kits e preços" />
+</Article>

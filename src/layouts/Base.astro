@@ -1,5 +1,5 @@
 ---
-import { site, guides, reduphinePages, resveratrolPages } from '../data/site';
+import { site, guides, reduphinePages, resveratrolPages, ozenvittaPages } from '../data/site';
 import '../styles/global.css';
 
 interface Props {
@@ -81,6 +81,7 @@ const path = Astro.url.pathname;
       </a>
       <nav aria-label="Principal">
         <a href="/reduphine-caps/" aria-current={path.startsWith('/reduphine-caps') ? 'page' : undefined}>ReduPhine</a>
+        <a href="/ozenvitta/" aria-current={path.startsWith('/ozenvitta') ? 'page' : undefined}>OzenVitta</a>
         <a href="/vitta-resveratrol/" aria-current={path.startsWith('/vitta-resveratrol') ? 'page' : undefined}>Resveratrol</a>
         <a href="/laranja-moro/" aria-current={path.startsWith('/laranja-moro') ? 'page' : undefined}>Laranja moro</a>
         <a href="/sobre/" aria-current={path.startsWith('/sobre') ? 'page' : undefined}>Sobre</a>
@@ -101,6 +102,7 @@ const path = Astro.url.pathname;
         <p class="footer-title">Fichas de produtos</p>
         <ul>
           {reduphinePages.map((g) => <li><a href={g.href}>ReduPhine: {g.short}</a></li>)}
+          {ozenvittaPages.map((g) => <li><a href={g.href}>OzenVitta: {g.short}</a></li>)}
           {resveratrolPages.map((g) => <li><a href={g.href}>Vitta Resveratrol: {g.short}</a></li>)}
         </ul>
       </div>

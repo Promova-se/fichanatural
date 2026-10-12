@@ -1,0 +1,96 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import { ozenvitta as p, ozenvittaPages } from '../../data/site';
+
+const box = {
+  href: p.link,
+  title: 'OzenVitta no site oficial',
+  text: 'A partir de R$ 147 (1 pote para 30 dias). Kits maiores saem mais baratos por pote. Frete grátis.',
+  cta: 'Ver kits e preços',
+};
+const faq = [
+  { q: 'O que é o OzenVitta?', a: 'É um suplemento alimentar em cápsulas vendido para apoio ao emagrecimento. A página oficial cita psyllium, inulina, L-carnitina, spirulina, laranja moro e picolinato de cromo, numa fórmula que diz ter 13 nutrientes.' },
+  { q: 'Quanto custa o OzenVitta?', a: 'Na consulta de 12/10/2026, o pote único custava R$ 147, e os kits iam de R$ 197 (3 potes) a R$ 377 (8 potes), com frete grátis e parcelamento em até 12x. Confira o valor no checkout.' },
+  { q: 'OzenVitta é aprovado pela Anvisa?', a: 'A página informa que, por ser suplemento alimentar, o produto é dispensado de registro. Isso não é o mesmo que ser aprovado: suplementos dispensados não passam por análise prévia de eficácia.' },
+  { q: 'Quem fabrica o OzenVitta?', a: 'A página de vendas, os termos e a política de privacidade não informam razão social nem CNPJ. Antes de comprar, confira os dados do vendedor no checkout e guarde o comprovante.' },
+];
+---
+<Article
+  ogImage="/img/ozenvitta/og-ozenvitta.jpg"
+  title="OzenVitta: ficha completa, composição, preço e o que esperar"
+  seoTitle="OzenVitta: composição, preço e se vale a pena"
+  description="Ficha do OzenVitta: ingredientes, como tomar, preço de cada kit, garantia, prós e contras. Análise independente, sem promessa milagrosa."
+  kicker="Ficha de produto"
+  lead="O OzenVitta é um suplemento para controle de peso com fibras, L-carnitina, laranja moro e cromo. Reunimos o que a fórmula tem, quanto custa, o que a ciência diz e os pontos de atenção antes de comprar."
+  crumbs={[{ name: 'OzenVitta', href: '/ozenvitta/' }]}
+  faq={faq}
+  related={ozenvittaPages}
+  sources={[{ label: 'Página oficial do OzenVitta (consultada em 12/10/2026)', url: 'https://ozenvitta.com/pvmon/' }]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Suplemento em cápsulas com psyllium, inulina, L-carnitina, spirulina, laranja moro e picolinato de cromo. São 2 cápsulas por dia, antes do café da manhã e do jantar. Os ingredientes têm efeito real, mas modesto, sobre o peso, e funcionam como apoio a dieta e exercício. A página não informa a dose de cada ingrediente nem a empresa responsável. Preço a partir de R$ 147 o pote.</p>
+  </div>
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>{p.name}</td></tr>
+        <tr><th>Empresa responsável</th><td>Não informada na página de vendas, nos termos nem na política de privacidade</td></tr>
+        <tr><th>Tipo</th><td>Suplemento alimentar em cápsulas</td></tr>
+        <tr><th>Ingredientes citados</th><td>{p.ingredients.join(', ')}. A página fala em 13 nutrientes, mas não lista todos</td></tr>
+        <tr><th>Dose de cada ingrediente</th><td>Não informada</td></tr>
+        <tr><th>Rendimento</th><td>1 pote para 30 dias</td></tr>
+        <tr><th>Modo de uso</th><td>2 cápsulas por dia: 1 antes do café da manhã e 1 antes do jantar</td></tr>
+        <tr><th>Não indicado para</th><td>Menores de idade e alérgicos a crustáceos</td></tr>
+        <tr><th>Registro</th><td>Informado como dispensado de registro (suplemento alimentar)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>O que cada ingrediente faz</h2>
+  <ul>
+    <li><strong>Psyllium e inulina:</strong> fibras que aumentam a saciedade e ajudam o intestino. A inulina também alimenta as bactérias boas do intestino.</li>
+    <li><strong>L-carnitina:</strong> participa do transporte de gordura para dentro das células, onde ela é usada como energia.</li>
+    <li><strong>Laranja moro:</strong> o extrato mais estudado da fórmula para controle de peso. Veja <a href="/laranja-moro/emagrece/">o que o estudo mostrou</a>.</li>
+    <li><strong>Spirulina:</strong> microalga rica em proteína e antioxidantes.</li>
+    <li><strong>Picolinato de cromo:</strong> mineral ligado à ação da insulina. Veja o <a href="/laranja-moro/picolinato-de-cromo/">guia sobre cromo</a>.</li>
+  </ul>
+  <p>O que os estudos dizem de cada um está em <a href="/ozenvitta/funciona/">OzenVitta funciona?</a></p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores consultados na página oficial em 12/10/2026. Todos com frete grátis.</p>
+  <KitCards kits={p.kits} mcr={p.mcr} produto="OzenVitta" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Junta fibras com laranja moro, o ingrediente com melhor estudo para peso</li>
+        <li>Sem estimulantes como cafeína entre os ingredientes citados</li>
+        <li>Garantia de 30 dias para quem não ficar satisfeito</li>
+        <li>Frete grátis e kits com bom desconto por pote</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Não informa empresa, CNPJ nem a dose de cada ingrediente</li>
+        <li>Fala em 13 nutrientes, mas só cita 6</li>
+        <li>Promete queimar gordura em repouso e resultados rápidos, o que os estudos não mostram</li>
+        <li>Diz que é sem efeitos colaterais, mas a própria página alerta para desconforto digestivo</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>A fórmula é coerente: fibras para saciedade, laranja moro e L-carnitina, todos com algum estudo sobre peso. É parecida com a do <a href="/reduphine-caps/">ReduPhine Caps</a>, com o acréscimo de laranja moro e L-carnitina. O ponto fraco é a transparência: sem doses e sem a empresa identificada, não dá para saber se as quantidades chegam perto das usadas nos estudos. Espere um apoio para controlar a fome, não uma perda rápida de peso.</p>
+  </div>
+  <p>Antes de começar, veja <a href="/ozenvitta/como-tomar/">como tomar e quem não deve usar</a>.</p>
+
+  <BuyBox compact {...box} produto="OzenVitta" />
+</Article>

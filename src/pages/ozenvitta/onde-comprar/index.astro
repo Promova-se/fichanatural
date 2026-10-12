@@ -1,0 +1,53 @@
+---
+import Article from '../../../layouts/Article.astro';
+import KitCards from '../../../components/KitCards.astro';
+import { ozenvitta as p, ozenvittaPages } from '../../../data/site';
+
+const faq = [
+  { q: 'OzenVitta vende no Mercado Livre?', a: 'Segundo a página oficial, não. O produto é vendido só pelo site oficial, e a empresa diz não se responsabilizar por compras em outros sites.' },
+  { q: 'Como funciona a garantia do OzenVitta?', a: 'Pelos termos publicados, quem não ficar satisfeito pode pedir o reembolso total por e-mail em até 30 dias após receber o produto. A garantia não vale quando o produto não foi usado por orientação médica ou outros motivos pessoais.' },
+  { q: 'Qual o prazo de entrega do OzenVitta?', a: 'A página anuncia frete grátis, mas não informa prazo oficial de entrega. O prazo aparece no rastreio depois da compra.' },
+];
+---
+<Article
+  ogImage="/img/ozenvitta/og-ozenvitta.jpg"
+  title="Onde comprar OzenVitta original e como funciona a garantia"
+  seoTitle="Onde comprar OzenVitta original e preço"
+  description="Onde comprar o OzenVitta original, preço de cada kit, frete e as regras da garantia de 30 dias, com os pontos de atenção antes de fechar a compra."
+  kicker="Compra segura"
+  lead="O OzenVitta original é vendido só pelo site oficial, com pagamento pela Monetizze. A garantia de 30 dias é uma das mais simples entre os produtos que analisamos, mas a página não identifica a empresa."
+  crumbs={[{ name: 'OzenVitta', href: '/ozenvitta/' }, { name: 'Onde comprar', href: '/ozenvitta/onde-comprar/' }]}
+  faq={faq}
+  related={ozenvittaPages}
+  sources={[
+    { label: 'Página oficial do OzenVitta (consultada em 12/10/2026)', url: 'https://ozenvitta.com/pvmon/' },
+    { label: 'Termos e condições do OzenVitta', url: 'https://ozenvitta.com/termos-e-condicoes/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Compre pelo site oficial, a partir de R$ 147 o pote, com frete grátis. Quem não ficar satisfeito pode pedir o reembolso total por e-mail em até 30 dias após receber. Como a página não informa CNPJ, confira os dados do vendedor no checkout antes de pagar.</p>
+  </div>
+
+  <h2>Escolha o kit</h2>
+  <p>Quanto maior o kit, menor o preço por pote: de R$ 147 no pote único até R$ 47,13 no kit de 8. Se é a primeira vez, o kit de 3 potes já cobre 90 dias e custa R$ 65,67 por pote.</p>
+  <KitCards kits={p.kits} mcr={p.mcr} produto="OzenVitta" />
+
+  <h2>Por que comprar no site oficial</h2>
+  <ul>
+    <li><strong>Garantia:</strong> só vale para compras no site oficial.</li>
+    <li><strong>Pagamento intermediado:</strong> a compra passa pela Monetizze.</li>
+    <li><strong>Falsificações:</strong> a própria empresa diz que o produto não é vendido no Mercado Livre.</li>
+  </ul>
+
+  <h2>A garantia, explicada</h2>
+  <ol>
+    <li>O prazo é de <strong>30 dias corridos após o recebimento</strong>.</li>
+    <li>Se não ficar satisfeito com o efeito, usando como indicado, peça o <strong>reembolso total</strong> por e-mail, descrevendo sua experiência.</li>
+    <li>A garantia <strong>não vale</strong> se você não usou o produto por orientação médica, restrição de saúde ou outros motivos pessoais.</li>
+  </ol>
+  <p>Diferente de outros produtos, os termos não exigem devolver os potes nem enviar fotos. Mesmo assim, guarde o e-mail de confirmação e o comprovante. Independentemente da garantia, toda compra on-line tem 7 dias de direito de arrependimento.</p>
+
+  <h2>Antes de pagar</h2>
+  <p>A página de vendas, os termos e a política de privacidade não mostram a razão social nem o CNPJ da empresa, e o e-mail de contato fica escondido. No checkout, confira o nome do vendedor e o e-mail de atendimento e guarde essas informações.</p>
+  <p>Ainda decidindo? Compare com o <a href="/reduphine-caps/onde-comprar/">ReduPhine Caps</a>, que tem os mesmos preços, ou leia <a href="/ozenvitta/funciona/">se o OzenVitta funciona</a>.</p>
+</Article>

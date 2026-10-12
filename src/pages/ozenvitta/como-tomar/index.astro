@@ -1,0 +1,59 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { ozenvitta as p, ozenvittaPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Qual o melhor horário para tomar OzenVitta?', a: 'Segundo a página oficial, 1 cápsula antes do café da manhã e 1 antes do jantar. Tomar antes das refeições ajuda as fibras a aumentar a saciedade.' },
+  { q: 'OzenVitta tem efeito colateral?', a: 'O mais comum é desconforto digestivo no início, como gases e inchaço, por causa das fibras. A própria página reconhece isso. Beber bastante água ajuda.' },
+  { q: 'Quem tem alergia a camarão pode tomar OzenVitta?', a: 'Não. A página oficial contraindica o produto para alérgicos a crustáceos.' },
+];
+---
+<Article
+  ogImage="/img/ozenvitta/og-ozenvitta.jpg"
+  title="Como tomar OzenVitta, efeitos colaterais e quem não deve usar"
+  seoTitle="Como tomar OzenVitta e contraindicações"
+  description="Veja como tomar o OzenVitta, por quanto tempo usar, efeitos colaterais possíveis e quem deve evitar: alérgicos a crustáceos, gestantes e quem toma remédios."
+  kicker="Modo de uso e segurança"
+  lead="São 2 cápsulas por dia, uma antes do café da manhã e outra antes do jantar, com bastante água. As fibras da fórmula podem causar desconforto no início e atrapalhar a absorção de remédios."
+  crumbs={[{ name: 'OzenVitta', href: '/ozenvitta/' }, { name: 'Como tomar e cuidados', href: '/ozenvitta/como-tomar/' }]}
+  faq={faq}
+  related={ozenvittaPages}
+  sources={[{ label: 'Página oficial do OzenVitta (consultada em 12/10/2026)', url: 'https://ozenvitta.com/pvmon/' }]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Tome 1 cápsula antes do café da manhã e 1 antes do jantar, com um copo cheio de água. Um pote dura 30 dias. Não use se for menor de idade ou alérgico a crustáceos. Gestantes, lactantes e quem toma remédios devem conversar com o médico antes.</p>
+  </div>
+
+  <h2>Modo de uso</h2>
+  <ol>
+    <li><strong>Manhã:</strong> 1 cápsula antes do café da manhã.</li>
+    <li><strong>Noite:</strong> 1 cápsula antes do jantar.</li>
+    <li><strong>Água:</strong> tome com um copo cheio. Fibras como o psyllium precisam de água para funcionar e para não prender o intestino.</li>
+    <li><strong>Duração:</strong> avalie mês a mês. Os estudos com os ingredientes medem resultados ao longo de meses, não de semanas.</li>
+  </ol>
+
+  <h2>Possíveis efeitos colaterais</h2>
+  <ul>
+    <li><strong>Gases, inchaço e cólica:</strong> comuns com fibras, principalmente nos primeiros dias.</li>
+    <li><strong>Intestino preso ou solto:</strong> o psyllium regula o intestino, mas com pouca água pode prender.</li>
+    <li><strong>Náusea ou mal-estar no estômago:</strong> relatados com L-carnitina e spirulina.</li>
+    <li><strong>Reação alérgica:</strong> em pessoas sensíveis a crustáceos ou a algum componente.</li>
+  </ul>
+  <p>Se tiver dor abdominal forte, dificuldade para engolir, falta de ar ou manchas na pele, pare o uso e procure atendimento.</p>
+
+  <h2>Quem não deve usar sem orientação médica</h2>
+  <ul>
+    <li>Menores de idade e alérgicos a crustáceos (contraindicações da própria página).</li>
+    <li>Gestantes e mulheres amamentando bebês com menos de 6 meses.</li>
+    <li>Pessoas com fenilcetonúria, por causa da spirulina.</li>
+    <li>Quem toma remédio para tireoide (levotiroxina), anticoagulantes, remédios para diabetes ou para pressão.</li>
+    <li>Quem tem doença nos rins, no fígado ou dificuldade para engolir.</li>
+  </ul>
+
+  <h2>Interação com remédios</h2>
+  <p>As fibras podem diminuir a absorção de remédios tomados ao mesmo tempo. Deixe pelo menos 2 horas de intervalo. A L-carnitina pode interagir com a levotiroxina e com a varfarina, e o cromo pode somar efeito a remédios para diabetes.</p>
+  <p>Ainda em dúvida se vale a pena? Leia <a href="/ozenvitta/funciona/">OzenVitta funciona?</a></p>
+
+  <BuyBox compact produto="OzenVitta" href={p.link} title="OzenVitta no site oficial" cta="Ver kits e preços" />
+</Article>
