@@ -52,12 +52,16 @@ export const reduphine = {
 };
 
 // Combo ReduPhine Caps + ReduGota, conferido na página oficial em 11/10/2026.
-// Preços dos kits aparecem só em imagem na página do produtor: preencher `kits` quando houver print.
+// Preços conferidos no print da página do produtor em 11/10/2026. Cada kit inclui 1 ReduGota.
 export const combo = {
   name: 'ReduPhine Caps + ReduGota',
   link: 'https://reduphinecaps.com.br/combo-promo-phinegota-monetizze/?mcr=AXA22582261',
   ingredients: ['Spirulina', 'Quitosana', 'Psyllium', 'Cromo', 'Café verde', 'Extrato de laranja moro', 'Chlorella'],
-  kits: [] as { name: string; months: number; total: number; installments: string }[],
+  kits: [
+    { name: 'Pague 1, leve 2', months: 2, total: 119.9, installments: '12x de R$ 12,04', plan: 'DKZ360706' },
+    { name: 'Pague 2, leve 3', months: 3, total: 139.9, installments: '12x de R$ 14,05', plan: 'DMV360707' },
+    { name: 'Pague 3, leve 4', months: 4, total: 159.9, installments: '12x de R$ 16,05', plan: 'DSM360709' },
+  ],
 };
 
 export const reduphinePages = [
