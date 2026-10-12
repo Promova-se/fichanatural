@@ -6,7 +6,7 @@ export const site = {
   email: 'loja@promovase.net',
   company: 'Promova-se',
   cnpj: '43.315.814/0001-28',
-  updated: '2026-10-11',
+  updated: '2026-10-12',
   ga4: 'G-L47PVELQQ4',
 };
 
@@ -93,9 +93,13 @@ export const resveratrolPages = [
   { href: '/vitta-resveratrol/onde-comprar/', title: 'Onde comprar Vitta Resveratrol original e como funciona a garantia', short: 'Onde comprar e garantia' },
 ];
 
-// OzenVitta, conferido na página oficial em 12/10/2026. A página não informa empresa nem CNPJ.
+// OzenVitta, conferido na página oficial, no rótulo e no checkout em 12/10/2026.
+// Marca no rótulo: OzenPharma. Vendedor no checkout: OZENVITTA. Nenhum dos três mostra CNPJ.
+// Parcelas com acréscimo de 2,99% a.m. (o total à vista vale para o Pix).
 export const ozenvitta = {
   name: 'OzenVitta',
+  brand: 'OzenPharma',
+  sac: 'sac@ozenpharma.com',
   mcr: 'ATX24835707',
   link: 'https://ozenvitta.com/pvmon/?mcr=ATX24835707',
   ingredients: ['Psyllium', 'Inulina', 'L-carnitina', 'Spirulina', 'Laranja moro', 'Picolinato de cromo'],
