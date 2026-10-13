@@ -37,16 +37,17 @@ h3 { font-size: 1.2rem; margin: 1.6em 0 .4em; }
 .site-header nav a[aria-current='page'], .site-header nav a:hover { color: var(--green); }
 
 /* Home */
-.hero { padding: 56px 0 8px; }
+.hero { padding-block: 56px 8px; }
 .hero h1 { max-width: 760px; }
 .hero p { max-width: 640px; font-size: 1.15rem; color: var(--muted); }
 .pill { display: inline-block; background: var(--green-soft); color: var(--green); font-size: .8rem; font-weight: 600; padding: 4px 12px; border-radius: 99px; letter-spacing: .02em; }
-.section { padding: 24px 0 48px; }
+.section { padding-block: 24px 48px; }
 .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
 .tile { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; text-decoration: none; color: var(--ink); display: flex; flex-direction: column; gap: 6px; transition: border-color .15s, transform .15s; }
 .tile:hover { border-color: var(--green); transform: translateY(-2px); color: var(--ink); }
 .tile h3 { margin: 0; font-size: 1.15rem; }
 .tile p { margin: 0; color: var(--muted); font-size: .95rem; }
+.tile .pill { align-self: flex-start; }
 .tile .go { margin-top: auto; padding-top: 8px; color: var(--green); font-weight: 600; font-size: .9rem; }
 .promise { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 .promise div { border-top: 3px solid var(--accent); padding-top: 12px; }
@@ -99,9 +100,10 @@ h3 { font-size: 1.2rem; margin: 1.6em 0 .4em; }
   body { font-size: 16px; }
   .footer-grid { grid-template-columns: 1fr; }
   .header-inner { flex-wrap: wrap; row-gap: 4px; padding: 10px 16px 8px; min-height: 0; }
-  .site-header nav { width: 100%; display: flex; gap: 18px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .site-header nav a { margin-left: 0; white-space: nowrap; padding: 4px 0; }
-  .hero { padding: 36px 0 24px; }
+  .site-header nav { width: 100%; display: flex; flex-wrap: wrap; gap: 2px 16px; }
+  .site-header nav a { margin-left: 0; white-space: nowrap; padding: 6px 0; font-size: .92rem; }
+  .hero { padding-block: 32px 8px; }
+  .section { padding-block: 16px 32px; }
 }
 
 /* Caixa de compra e prós/contras */
