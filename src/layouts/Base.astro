@@ -1,5 +1,5 @@
 ---
-import { site, guides, reduphinePages, resveratrolPages, ozenvittaPages, comparePages, ingredientGuides, tg30Pages } from '../data/site';
+import { site, catalog } from '../data/site';
 import '../styles/global.css';
 
 interface Props {
@@ -21,6 +21,8 @@ const org = {
   email: site.email,
 };
 const path = Astro.url.pathname;
+const isProduct = path.startsWith('/produtos') || catalog.some((c) => path.startsWith(c.href));
+const isGuide = !isProduct && ['/guias', '/laranja-moro', '/psyllium', '/resveratrol', '/ozenvitta-ou-reduphine'].some((g) => path.startsWith(g));
 ---
 <!doctype html>
 <html lang="pt-BR">
@@ -80,10 +82,8 @@ const path = Astro.url.pathname;
         <span>Ficha<strong>Natural</strong></span>
       </a>
       <nav aria-label="Principal">
-        <a href="/reduphine-caps/" aria-current={path.startsWith('/reduphine-caps') ? 'page' : undefined}>ReduPhine</a>
-        <a href="/ozenvitta/" aria-current={path.startsWith('/ozenvitta') ? 'page' : undefined}>OzenVitta</a>
-        <a href="/vitta-resveratrol/" aria-current={path.startsWith('/vitta-resveratrol') ? 'page' : undefined}>Resveratrol</a>
-        <a href="/laranja-moro/" aria-current={path.startsWith('/laranja-moro') ? 'page' : undefined}>Laranja moro</a>
+        <a href="/produtos/" aria-current={isProduct ? 'page' : undefined}>Produtos</a>
+        <a href="/guias/" aria-current={isGuide ? 'page' : undefined}>Guias</a>
         <a href="/sobre/" aria-current={path.startsWith('/sobre') ? 'page' : undefined}>Sobre</a>
       </nav>
     </div>
@@ -99,20 +99,20 @@ const path = Astro.url.pathname;
         <p class="small">O conteúdo deste site é informativo e não substitui a orientação de médico ou nutricionista.</p>
       </div>
       <div>
-        <p class="footer-title">Fichas de produtos</p>
+        <p class="footer-title">Produtos</p>
         <ul>
-          {reduphinePages.map((g) => <li><a href={g.href}>ReduPhine: {g.short}</a></li>)}
-          {ozenvittaPages.map((g) => <li><a href={g.href}>OzenVitta: {g.short}</a></li>)}
-          {resveratrolPages.map((g) => <li><a href={g.href}>Vitta Resveratrol: {g.short}</a></li>)}
-          {tg30Pages.map((g) => <li><a href={g.href}>TG30: {g.short}</a></li>)}
+          {catalog.map((c) => <li><a href={c.href}>{c.name}</a></li>)}
+          <li><a href="/produtos/">Todas as fichas</a></li>
         </ul>
       </div>
       <div>
         <p class="footer-title">Guias</p>
         <ul>
-          {comparePages.map((g) => <li><a href={g.href}>{g.short}</a></li>)}
-          {ingredientGuides.map((g) => <li><a href={g.href}>{g.short}</a></li>)}
-          {guides.map((g) => <li><a href={g.href}>Laranja moro: {g.short}</a></li>)}
+          <li><a href="/ozenvitta-ou-reduphine/">OzenVitta ou ReduPhine</a></li>
+          <li><a href="/laranja-moro/">Laranja moro</a></li>
+          <li><a href="/psyllium/">Psyllium</a></li>
+          <li><a href="/resveratrol/">Resveratrol</a></li>
+          <li><a href="/guias/">Todos os guias</a></li>
         </ul>
       </div>
       <div>

@@ -197,3 +197,18 @@ export const study = {
   cite: 'Briskey D, Malfa GA, Rao A. Nutrients, 2022;14(3):427',
   url: 'https://pubmed.ncbi.nlm.nih.gov/35276783/',
 };
+
+// Catálogo usado no menu, no rodapé e nas páginas-índice /produtos/ e /guias/.
+// Para um produto novo: crie as páginas, a lista xxxPages e adicione um item aqui.
+export const catalog = [
+  { name: 'OzenVitta', href: '/ozenvitta/', pill: 'Emagrecimento', summary: 'Fibras, L-carnitina, laranja moro e cromo em cápsulas.', pages: ozenvittaPages },
+  { name: 'ReduPhine Caps', href: '/reduphine-caps/', pill: 'Emagrecimento', summary: 'Spirulina, psyllium, quitosana e cromo, com opção de combo com gotas.', pages: reduphinePages },
+  { name: 'TG30 Crisfit', href: '/tg30/', pill: 'Gotas', summary: 'Café verde, cúrcuma e vitaminas D3 e B12 em gotas.', pages: tg30Pages },
+  { name: 'Vitta Resveratrol', href: '/vitta-resveratrol/', pill: 'Pele', summary: 'Colágeno, ácido hialurônico, resveratrol e vitaminas.', pages: resveratrolPages },
+];
+
+export const guideHubs = [
+  { name: 'Comparações', pages: comparePages },
+  { name: 'Ingredientes', pages: ingredientGuides },
+  { name: 'Laranja moro', pages: guides },
+];

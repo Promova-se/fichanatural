@@ -1,0 +1,35 @@
+---
+import Base from '../../layouts/Base.astro';
+import { site, guideHubs } from '../../data/site';
+
+const schema = [{
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Guias e comparações',
+  url: `${site.url}/guias/`,
+  inLanguage: 'pt-BR',
+}];
+---
+<Base
+  title="Guias de ingredientes e comparações"
+  description="Guias do Ficha Natural sobre ingredientes como laranja moro, psyllium e resveratrol, e comparações entre suplementos, com o que a ciência diz de verdade."
+  schema={schema}
+>
+  <section class="hero wrap">
+    <span class="pill">Guias</span>
+    <h1>Guias e comparações</h1>
+    <p>Explicamos os ingredientes que aparecem nos suplementos e comparamos produtos parecidos, sempre com as fontes.</p>
+  </section>
+  <section class="section wrap">
+    <div class="hub-grid">
+      {guideHubs.map((h) => (
+        <div class="hub-card">
+          <h2>{h.name}</h2>
+          <ul>
+            {h.pages.map((pg) => <li><a href={pg.href}>{pg.title}</a></li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </section>
+</Base>

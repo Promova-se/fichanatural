@@ -98,7 +98,8 @@ h3 { font-size: 1.2rem; margin: 1.6em 0 .4em; }
 
 @media (max-width: 720px) {
   body { font-size: 16px; }
-  .footer-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid > div:first-child, .footer-grid > div:last-child { grid-column: 1 / -1; }
   .header-inner { flex-wrap: wrap; row-gap: 4px; padding: 10px 16px 8px; min-height: 0; }
   .site-header nav { width: 100%; display: flex; flex-wrap: wrap; gap: 2px 16px; }
   .site-header nav a { margin-left: 0; white-space: nowrap; padding: 6px 0; font-size: .92rem; }
@@ -145,3 +146,16 @@ h3 { font-size: 1.2rem; margin: 1.6em 0 .4em; }
 
 .compare-table { min-width: 600px; }
 .compare-table th:first-child { width: 150px; }
+
+/* Páginas-índice */
+.hub-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); margin: 16px 0 8px; }
+.hub-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; display: flex; flex-direction: column; gap: 8px; }
+.hub-card h2, .hub-card h3 { margin: 0; font-size: 1.2rem; }
+.hub-card h2 a, .hub-card h3 a { color: var(--ink); text-decoration: none; }
+.hub-card h2 a:hover, .hub-card h3 a:hover { color: var(--green); }
+.hub-card p { margin: 0; color: var(--muted); font-size: .95rem; }
+.hub-card ul { list-style: none; padding: 0; margin: 4px 0 0; border-top: 1px solid var(--line); }
+.hub-card li { border-bottom: 1px solid var(--line); }
+.hub-card li a { display: block; padding: 9px 0; text-decoration: none; color: var(--green); font-weight: 500; font-size: .95rem; }
+.hub-card li a:hover { text-decoration: underline; }
+.hub-card .pill { align-self: flex-start; }

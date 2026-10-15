@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+import { site, catalog } from '../../data/site';
+
+const schema = [{
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Fichas de produtos',
+  url: `${site.url}/produtos/`,
+  inLanguage: 'pt-BR',
+  hasPart: catalog.map((c) => ({ '@type': 'WebPage', name: c.name, url: `${site.url}${c.href}` })),
+}];
+---
+<Base
+  title="Fichas de produtos naturais e suplementos"
+  description="Todas as fichas do Ficha Natural: composição, preço dos kits, se funciona, como tomar e a reputação de cada suplemento, em análises independentes."
+  schema={schema}
+>
+  <section class="hero wrap">
+    <span class="pill">Fichas de produtos</span>
+    <h1>Fichas de produtos</h1>
+    <p>Cada ficha reúne o que o produto tem, quanto custa, o que os estudos dizem e a reputação da empresa. Escolha um produto para ver todas as análises.</p>
+  </section>
+  <section class="section wrap">
+    <div class="hub-grid">
+      {catalog.map((c) => (
+        <div class="hub-card">
+          <span class="pill">{c.pill}</span>
+          <h2><a href={c.href}>{c.name}</a></h2>
+          <p>{c.summary}</p>
+          <ul>
+            {c.pages.map((pg) => <li><a href={pg.href}>{pg.short}</a></li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
+    <p class="small">Quer comparar? Veja <a href="/ozenvitta-ou-reduphine/">OzenVitta ou ReduPhine</a>.</p>
+  </section>
+</Base>
