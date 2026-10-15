@@ -1,0 +1,59 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { dtxblack as p, dtxblackPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Quantas cápsulas de DTX Black por dia?', a: 'A página indica 2 cápsulas por dia, de preferência com líquido. Um pote dura 30 dias.' },
+  { q: 'DTX Black tira o sono?', a: 'Pode tirar, porque tem cafeína. Para evitar, tome as cápsulas de manhã ou no início da tarde e diminua o café do dia.' },
+  { q: 'DTX Black tem efeito colateral?', a: 'A página diz que não, mas fibras costumam causar gases e inchaço no começo, e a cafeína pode causar agitação, insônia e taquicardia em pessoas sensíveis.' },
+];
+---
+<Article
+  ogImage="/img/dtx-black/og-dtx-black.jpg"
+  title="Como tomar DTX Black: cafeína, efeitos colaterais e quem não deve usar"
+  seoTitle="Como tomar DTX Black e efeitos colaterais"
+  description="Como tomar o DTX Black: quantas cápsulas, melhor horário por causa da cafeína, efeitos colaterais possíveis e quem não deve usar sem falar com o médico."
+  kicker="Modo de uso e segurança"
+  lead="São 2 cápsulas por dia, com bastante água. Ao contrário do que diz a página, o DTX Black pode ter efeitos colaterais: as fibras mexem com o intestino e a cafeína pode tirar o sono."
+  crumbs={[{ name: 'DTX Black', href: '/dtx-black/' }, { name: 'Como tomar', href: '/dtx-black/como-tomar/' }]}
+  faq={faq}
+  related={dtxblackPages}
+  sources={[
+    { label: 'Página oficial do DTX Black (consultada em 15/10/2026)', url: 'https://dtxblack.com.br/' },
+    { label: 'NIH Office of Dietary Supplements: Dietary Supplements for Weight Loss (seção sobre cafeína)', url: 'https://ods.od.nih.gov/factsheets/WeightLoss-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Tome 2 cápsulas por dia, com um copo cheio de água, de preferência pela manhã ou antes do almoço. Evite tomar à noite, por causa da cafeína. Gestantes, lactantes, idosos, pessoas com pressão alta, ansiedade ou que tomam remédios contínuos devem falar com o médico antes.</p>
+  </div>
+
+  <h2>Modo de uso</h2>
+  <ol>
+    <li><strong>Quanto:</strong> 2 cápsulas por dia. Pode tomar as duas juntas ou uma antes do café da manhã e outra antes do almoço.</li>
+    <li><strong>Com o quê:</strong> um copo cheio de água. As fibras precisam de líquido para não prender o intestino.</li>
+    <li><strong>Quando evitar:</strong> à noite, por causa da cafeína.</li>
+    <li><strong>Remédios:</strong> deixe pelo menos 2 horas de intervalo, porque as fibras atrapalham a absorção.</li>
+  </ol>
+
+  <h2>Possíveis efeitos colaterais</h2>
+  <ul>
+    <li><strong>Gases, inchaço e cólica:</strong> comuns com fibras nos primeiros dias.</li>
+    <li><strong>Intestino preso:</strong> se beber pouca água.</li>
+    <li><strong>Insônia, agitação e coração acelerado:</strong> pela cafeína, principalmente em quem já toma café ou energéticos.</li>
+    <li><strong>Dor de cabeça:</strong> pode aparecer ao começar ou parar a cafeína.</li>
+  </ul>
+
+  <h2>Quem não deve usar sem orientação médica</h2>
+  <ul>
+    <li>Gestantes, lactantes e idosos (a própria página pede consulta médica).</li>
+    <li>Pessoas com pressão alta, arritmia, ansiedade ou insônia, por causa da cafeína.</li>
+    <li>Quem toma remédio para diabetes (o cromo pode baixar a glicose), tireoide ou anticoagulantes.</li>
+    <li>Quem tem dificuldade para engolir ou doença intestinal.</li>
+    <li>Menores de idade.</li>
+  </ul>
+  <p>A página diz que o produto é "indicado para qualquer pessoa" e "não provoca efeitos colaterais", mas, na mesma seção, pede consulta médica para vários grupos. Fique com a orientação mais cuidadosa.</p>
+  <p>Ainda em dúvida se vale a pena? Leia <a href="/dtx-black/funciona/">DTX Black funciona?</a></p>
+
+  <BuyBox compact produto="DTX Black" href={p.link} title="DTX Black no site oficial" text="A partir de R$ 157 (1 pote para 30 dias), com frete grátis." cta="Ver kits e preços" />
+</Article>

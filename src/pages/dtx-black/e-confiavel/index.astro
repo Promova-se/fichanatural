@@ -1,0 +1,65 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { dtxblack as p, dtxblackPages } from '../../../data/site';
+
+const faq = [
+  { q: 'DTX Black é golpe?', a: 'Não há sinais de golpe no sentido de não entregar: a venda passa pela Monetizze e há rastreio. Mas a página faz promessas sem prova, afirma algo falso sobre a Anvisa, não informa CNPJ e só aceita devolução do produto lacrado.' },
+  { q: 'DTX Black é aprovado pela Anvisa?', a: 'A página diz que o produto "foi aprovado e considerado eficaz pela Anvisa", mas não mostra número de registro. Suplementos alimentares, em geral, são dispensados de registro e a Anvisa não avalia se funcionam.' },
+  { q: 'DTX Black tem Reclame Aqui?', a: 'Na consulta de 15/10/2026, não encontramos página do DTX Black ou da New Skin Suplementos no Reclame Aqui.' },
+];
+---
+<Article
+  ogImage="/img/dtx-black/og-dtx-black.jpg"
+  title="DTX Black é confiável? Empresa, Anvisa e Reclame Aqui"
+  seoTitle="DTX Black é confiável? Anvisa e Reclame Aqui"
+  description="DTX Black é confiável ou golpe? Veja quem vende, o que a página diz sobre a Anvisa, se tem Reclame Aqui, como funciona o reembolso e como comprar com segurança."
+  kicker="Reputação"
+  lead="O DTX Black é vendido pela New Skin Suplementos, sem CNPJ informado. A página afirma ter aprovação de eficácia da Anvisa, o que não existe para suplementos, e não há histórico da marca no Reclame Aqui."
+  crumbs={[{ name: 'DTX Black', href: '/dtx-black/' }, { name: 'É confiável?', href: '/dtx-black/e-confiavel/' }]}
+  faq={faq}
+  related={dtxblackPages}
+  sources={[
+    { label: 'Página oficial do DTX Black (consultada em 15/10/2026)', url: 'https://dtxblack.com.br/' },
+    { label: 'Termos de uso do DTX Black', url: 'https://dtxblack.com.br/termos/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Comprado no site oficial, o DTX Black não tem cara de golpe: o pagamento passa pela Monetizze e há rastreio do pedido. Mas a confiança fica abalada por três motivos: promessas sem prova, uma afirmação falsa sobre a Anvisa e a falta de CNPJ. Se comprar, pague no cartão e comece por um kit pequeno.</p>
+  </div>
+
+  <h2>Quem vende</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Empresa</th><td>{p.brand}</td></tr>
+        <tr><th>CNPJ</th><td>Não informado</td></tr>
+        <tr><th>Atendimento</th><td>WhatsApp em horário comercial e {p.sac}</td></tr>
+        <tr><th>Pagamento</th><td>Monetizze</td></tr>
+        <tr><th>Reclame Aqui</th><td>Sem página da marca ou da empresa (consulta em 15/10/2026)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Atenção ao nome: a New Skin Suplementos, dona do DTX Black, não tem relação com o New Skin da Divinitè, suplemento para pele vendido em farmácias.</p>
+
+  <h2>A questão da Anvisa</h2>
+  <p>A página diz que o DTX Black "foi aprovado e considerado eficaz pela Anvisa". Isso não confere com a forma como a Anvisa trata suplementos: a maioria é dispensada de registro e vendida sem análise de eficácia. A página também não mostra nenhum número de registro. Uma afirmação assim é um sinal de alerta sobre a forma de venda, e não uma garantia de qualidade.</p>
+
+  <h2>Pontos de atenção</h2>
+  <ul>
+    <li><strong>Promessas:</strong> "até 4 kg em 30 dias", "6x mais potente" e "nº 1 do Brasil", sem fonte. Veja <a href="/dtx-black/funciona/">DTX Black funciona?</a></li>
+    <li><strong>"Sem efeitos colaterais":</strong> fibras e cafeína podem causar desconforto. Veja <a href="/dtx-black/como-tomar/">como tomar e cuidados</a>.</li>
+    <li><strong>Garantia:</strong> o selo da página não corresponde aos termos, que só aceitam devolução do pote lacrado.</li>
+    <li><strong>Prazo:</strong> a entrega leva de 15 a 25 dias úteis.</li>
+  </ul>
+
+  <h2>Como comprar com segurança</h2>
+  <ol>
+    <li>Compre só pelo site oficial. A empresa diz que não vende em marketplaces.</li>
+    <li>Prefira o cartão de crédito, que permite contestar a compra se o pedido não chegar.</li>
+    <li>Comece pelo pote único ou pelo kit de 2.</li>
+    <li>Ao receber, decida antes de abrir: depois de aberto, não há reembolso.</li>
+  </ol>
+
+  <BuyBox compact produto="DTX Black" href={p.link} title="DTX Black no site oficial" text="A partir de R$ 157 (1 pote para 30 dias), com frete grátis." cta="Ver kits e preços" />
+</Article>

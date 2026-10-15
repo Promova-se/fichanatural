@@ -1,0 +1,93 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import { dtxblack as p, dtxblackPages } from '../../data/site';
+
+const faq = [
+  { q: 'O que é o DTX Black?', a: 'É um suplemento em cápsulas vendido para emagrecimento e "detox". A página cita psyllium, cromo, cafeína, spirulina, inulina e farinha de linhaça, sem informar a dose de cada um. São 2 cápsulas por dia.' },
+  { q: 'Quanto custa o DTX Black?', a: 'Na consulta de 15/10/2026, 1 pote custava R$ 157, e os kits iam de R$ 198 (2 potes) a R$ 398 (5 potes), com frete grátis. No cartão parcelado há juros de 2,99% ao mês.' },
+  { q: 'DTX Black é da mesma New Skin vendida em farmácias?', a: 'Não. O DTX Black é da New Skin Suplementos, empresa que vende pela internet. O New Skin das farmácias é um suplemento para pele da marca Divinitè, sem relação com o DTX Black.' },
+  { q: 'DTX Black tem cafeína?', a: 'Sim. A cafeína aparece entre os ingredientes, mas a página não informa a quantidade. Quem é sensível a cafeína, tem pressão alta ou toma muito café deve ter cuidado.' },
+];
+---
+<Article
+  ogImage="/img/dtx-black/og-dtx-black.jpg"
+  title="DTX Black: ficha completa, composição, preço e o que esperar"
+  seoTitle="DTX Black: composição, preço e se vale a pena"
+  description="Ficha do DTX Black: ingredientes, como tomar, preço dos kits, regras de reembolso, prós e contras e o que esperar da promessa de eliminar 4 kg em 30 dias."
+  kicker="Ficha de produto"
+  lead="O DTX Black é um suplemento em cápsulas com fibras, cafeína, cromo e spirulina. A página promete até 4 kg a menos em 30 dias, mas não informa as doses nem o CNPJ, e só aceita devolução do produto lacrado."
+  crumbs={[{ name: 'DTX Black', href: '/dtx-black/' }]}
+  faq={faq}
+  related={dtxblackPages}
+  sources={[
+    { label: 'Página oficial do DTX Black (consultada em 15/10/2026)', url: 'https://dtxblack.com.br/' },
+    { label: 'Termos de uso do DTX Black', url: 'https://dtxblack.com.br/termos/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Cápsulas com psyllium, inulina e farinha de linhaça (fibras), cafeína, cromo e spirulina. São 2 cápsulas por dia. A fórmula é parecida com a de outros suplementos de fibras, com cafeína a mais. A página não informa doses nem CNPJ, promete resultados que os estudos não mostram e só devolve o dinheiro com o produto lacrado. A partir de R$ 157 o pote.</p>
+  </div>
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>{p.name}</td></tr>
+        <tr><th>Empresa</th><td>{p.brand} (não é a New Skin da Divinitè, vendida em farmácias)</td></tr>
+        <tr><th>CNPJ</th><td>Não informado na página, nos termos nem no checkout</td></tr>
+        <tr><th>Atendimento</th><td>WhatsApp, de segunda a sexta, das 9h às 18h, e {p.sac}</td></tr>
+        <tr><th>Tipo</th><td>Suplemento em cápsulas</td></tr>
+        <tr><th>Ingredientes citados</th><td>{p.ingredients.join(', ')}</td></tr>
+        <tr><th>Dose de cada ingrediente</th><td>Não informada</td></tr>
+        <tr><th>Modo de uso</th><td>2 cápsulas por dia, com líquido</td></tr>
+        <tr><th>Rendimento</th><td>1 pote para 30 dias</td></tr>
+        <tr><th>Entrega</th><td>15 a 25 dias úteis após a postagem</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>O que cada ingrediente faz</h2>
+  <ul>
+    <li><strong>Psyllium, inulina e farinha de linhaça:</strong> fibras que dão saciedade e ajudam o intestino. Veja o guia <a href="/psyllium/">psyllium emagrece?</a></li>
+    <li><strong>Cafeína:</strong> estimulante que aumenta um pouco o gasto de energia e a disposição.</li>
+    <li><strong>Cromo:</strong> mineral ligado à ação da insulina. A página o descreve como uma fibra que forma gel no estômago, o que não está certo; essa descrição é a do psyllium.</li>
+    <li><strong>Spirulina:</strong> microalga rica em proteína e antioxidantes.</li>
+  </ul>
+  <p>O que os estudos dizem sobre peso está em <a href="/dtx-black/funciona/">DTX Black funciona?</a></p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores consultados na página oficial em 15/10/2026, com frete grátis. Repare que o kit de 3 potes sai mais caro por pote (R$ 99,33) do que o de 2 potes (R$ 99). O melhor preço por pote é o kit de 5, a R$ 79,60. No cartão parcelado, os juros são de 2,99% ao mês.</p>
+  <KitCards kits={p.kits} mcr={p.mcr} produto="DTX Black" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Base de fibras, que ajudam na saciedade e no intestino</li>
+        <li>Kit de 2 potes com bom preço para testar</li>
+        <li>Pagamento intermediado pela Monetizze</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Promete "até 4 kg em 30 dias", "6x mais potente" e "nº 1 do Brasil" sem nenhuma prova</li>
+        <li>Diz que foi "aprovado e considerado eficaz pela Anvisa", o que não acontece com suplementos</li>
+        <li>Não informa doses, quantidade de cafeína nem CNPJ</li>
+        <li>Só devolve o dinheiro com o produto lacrado, em até 7 dias</li>
+        <li>Entrega demorada: 15 a 25 dias úteis</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>A fórmula é comum: fibras com cafeína, parecida com a de vários suplementos de emagrecimento. O que pesa contra o DTX Black é a forma de venda: promessas que nenhum estudo sustenta, uma afirmação falsa sobre a Anvisa e uma "garantia" que, na prática, só vale para quem não abriu o pote. Se a ideia é um suplemento de fibras, o <a href="/ozenvitta/">OzenVitta</a> tem preço parecido, inclui laranja moro e devolve o dinheiro por e-mail em até 30 dias, mesmo com o produto aberto.</p>
+  </div>
+  <p>Antes de comprar, leia <a href="/dtx-black/e-confiavel/">se o DTX Black é confiável</a>.</p>
+
+  <BuyBox compact produto="DTX Black" href={p.link} title="DTX Black no site oficial" text="A partir de R$ 157 (1 pote para 30 dias), com frete grátis." cta="Ver kits e preços" />
+</Article>

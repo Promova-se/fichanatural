@@ -167,6 +167,31 @@ export const mounjaxPages = [
   { href: '/mounjax/e-confiavel/', title: 'Mounjax é confiável? Reclame Aqui e a empresa por trás', short: 'É confiável?' },
 ];
 
+// DTX Black, da New Skin Suplementos (não é a New Skin da Divinitè), conferido na página e no checkout em 15/10/2026.
+// Sem CNPJ, sem doses; "aprovado e eficaz pela Anvisa" na página; reembolso só com produto lacrado em 7 dias.
+export const dtxblack = {
+  name: 'DTX Black',
+  brand: 'New Skin Suplementos',
+  sac: 'suporte@portalnewskin.com.br',
+  mcr: 'ANJ25846234',
+  link: 'https://app.monetizze.com.br/r/ANJ25846234',
+  ingredients: ['Psyllium', 'Cromo', 'Cafeína', 'Spirulina', 'Inulina', 'Farinha de linhaça'],
+  kits: [
+    { name: 'Experimente', qty: '1 pote · 30 dias', months: 1, total: 157, installments: '12x de R$ 15,76', plan: 'DHP376474' },
+    { name: 'Pague 1, leve 2', qty: '2 potes · 60 dias', months: 2, total: 198, installments: '12x de R$ 19,88', plan: 'DPH376475' },
+    { name: 'Pague 2, leve 3', qty: '3 potes · 90 dias', months: 3, total: 298, installments: '12x de R$ 29,92', plan: 'DAT376476' },
+    { name: 'Pague 3, leve 5', qty: '5 potes · 150 dias', months: 5, total: 398, installments: '12x de R$ 39,96', plan: 'DJM376477' },
+  ],
+};
+
+export const dtxblackPages = [
+  { href: '/dtx-black/', title: 'DTX Black: ficha completa, composição e preço', short: 'Ficha completa' },
+  { href: '/dtx-black/funciona/', title: 'DTX Black funciona? A promessa de 4 kg em 30 dias', short: 'Funciona?' },
+  { href: '/dtx-black/como-tomar/', title: 'Como tomar DTX Black: cafeína, efeitos colaterais e quem não deve usar', short: 'Como tomar e cuidados' },
+  { href: '/dtx-black/onde-comprar/', title: 'Onde comprar DTX Black original: preço, entrega e reembolso', short: 'Onde comprar e reembolso' },
+  { href: '/dtx-black/e-confiavel/', title: 'DTX Black é confiável? Empresa, Anvisa e Reclame Aqui', short: 'É confiável?' },
+];
+
 export const ozenvittaPages = [
   { href: '/ozenvitta/', title: 'OzenVitta: ficha completa, composição e preço', short: 'Ficha completa' },
   { href: '/ozenvitta/funciona/', title: 'OzenVitta funciona? O que a ciência diz de cada ingrediente', short: 'Funciona?' },
@@ -233,6 +258,7 @@ export const study = {
 export const catalog = [
   { name: 'OzenVitta', href: '/ozenvitta/', pill: 'Emagrecimento', summary: 'Fibras, L-carnitina, laranja moro e cromo em cápsulas.', pages: ozenvittaPages },
   { name: 'ReduPhine Caps', href: '/reduphine-caps/', pill: 'Emagrecimento', summary: 'Spirulina, psyllium, quitosana e cromo, com opção de combo com gotas.', pages: reduphinePages },
+  { name: 'DTX Black', href: '/dtx-black/', pill: 'Emagrecimento', summary: 'Psyllium, cafeína, cromo, spirulina, inulina e linhaça em cápsulas.', pages: dtxblackPages },
   { name: 'Mounjax', href: '/mounjax/', pill: 'Gotas', summary: 'Gotas da Ozenpharma com café verde, cúrcuma, cromo e vitaminas. Não é Mounjaro.', pages: mounjaxPages },
   { name: 'TG30 Crisfit', href: '/tg30/', pill: 'Gotas', summary: 'Café verde, cúrcuma e vitaminas D3 e B12 em gotas.', pages: tg30Pages },
   { name: 'Vitta Resveratrol', href: '/vitta-resveratrol/', pill: 'Pele', summary: 'Colágeno, ácido hialurônico, resveratrol e vitaminas.', pages: resveratrolPages },

@@ -1,0 +1,58 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { dtxblack as p, dtxblackPages, ozenvitta } from '../../../data/site';
+
+const faq = [
+  { q: 'DTX Black emagrece 4 kg em 30 dias?', a: 'Não há estudo com o DTX Black que mostre isso. Com os ingredientes da fórmula, os estudos mostram perdas pequenas, de no máximo 1 a 2 kg em vários meses, e sempre junto com dieta.' },
+  { q: 'DTX Black faz detox?', a: 'O corpo elimina toxinas pelo fígado e pelos rins. As fibras da fórmula ajudam o intestino a funcionar, mas não existe estudo mostrando que um suplemento "elimina toxinas" de forma relevante.' },
+  { q: 'DTX Black tira a retenção de líquido?', a: 'A cafeína tem um leve efeito diurético. A perda de líquido pode aparecer na balança nos primeiros dias, mas não é perda de gordura e volta quando o uso para.' },
+];
+---
+<Article
+  ogImage="/img/dtx-black/og-dtx-black.jpg"
+  title="DTX Black funciona? A promessa de 4 kg em 30 dias"
+  seoTitle="DTX Black funciona? A promessa de 4 kg"
+  description="DTX Black funciona? Analisamos psyllium, cafeína, cromo, spirulina, inulina e linhaça e comparamos o que os estudos mostram com a promessa de 4 kg em 30 dias."
+  kicker="Funciona?"
+  lead="O DTX Black promete eliminar até 4 kg em 30 dias. Os ingredientes têm efeito real sobre saciedade e intestino, mas nenhum estudo com eles mostra uma perda de peso desse tamanho."
+  crumbs={[{ name: 'DTX Black', href: '/dtx-black/' }, { name: 'Funciona?', href: '/dtx-black/funciona/' }]}
+  faq={faq}
+  related={dtxblackPages}
+  sources={[
+    { label: 'Página oficial do DTX Black (consultada em 15/10/2026)', url: 'https://dtxblack.com.br/' },
+    { label: 'Darooghegi Mofrad M et al. Meta-análise de 22 ensaios clínicos sobre psyllium e peso corporal. Crit Rev Food Sci Nutr, 2020', url: 'https://pubmed.ncbi.nlm.nih.gov/30880409/' },
+    { label: 'NIH Office of Dietary Supplements: Dietary Supplements for Weight Loss (cafeína, cromo e outros)', url: 'https://ods.od.nih.gov/factsheets/WeightLoss-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Funciona como apoio, não como emagrecedor. As fibras ajudam na saciedade e no intestino, e a cafeína dá um pequeno empurrão no gasto de energia. Mas os estudos com esses ingredientes mostram perdas pequenas ao longo de meses, longe dos "4 kg em 30 dias". A balança pode cair um pouco no começo por perda de líquido, não de gordura.</p>
+  </div>
+
+  <h2>Ingrediente por ingrediente</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Ingrediente</th><th>O que os estudos mostram</th><th>Força da evidência</th></tr></thead>
+      <tbody>
+        <tr><td>Psyllium</td><td>Sem diferença significativa no peso em 22 ensaios (−0,28 kg em média); ajuda na saciedade e no colesterol</td><td>Fraca para peso</td></tr>
+        <tr><td>Inulina e linhaça</td><td>Fibras que ajudam o intestino e a saciedade, com efeito pequeno no peso</td><td>Fraca para peso</td></tr>
+        <tr><td>Cafeína</td><td>Aumenta um pouco o gasto de energia; o corpo se acostuma com o tempo</td><td>Fraca a moderada, efeito pequeno</td></tr>
+        <tr><td>Cromo</td><td>Efeito pequeno no peso, de relevância incerta</td><td>Fraca</td></tr>
+        <tr><td>Spirulina</td><td>Estudos pequenos, efeito modesto</td><td>Fraca</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Como a página não informa a dose de nenhum ingrediente, não dá para saber se o DTX Black chega perto das quantidades estudadas. Em 2 cápsulas cabe pouca fibra: os estudos com psyllium usam de 5 a 15 gramas por dia.</p>
+
+  <h2>E os 4 kg em 30 dias?</h2>
+  <p>Perder 4 kg em um mês é possível com dieta, mas não por causa de um suplemento como esse. Nos primeiros dias, a cafeína e as fibras podem fazer o peso cair um pouco por perda de líquido e intestino mais solto. Isso não é gordura e volta quando o uso para. Outras promessas da página, como "6x mais potente" e "nº 1 do Brasil", não têm nenhuma fonte.</p>
+
+  <h2>"Aprovado e eficaz pela Anvisa"?</h2>
+  <p>A Anvisa não avalia a eficácia de suplementos alimentares. A maioria é dispensada de registro e não passa por análise antes de ser vendida. Dizer que um suplemento foi "considerado eficaz pela Anvisa" não corresponde à forma como a agência funciona. Mais detalhes em <a href="/dtx-black/e-confiavel/">DTX Black é confiável?</a></p>
+
+  <h2>Para quem pode fazer sentido</h2>
+  <p>Para quem quer um suplemento de fibras com cafeína e entende que o efeito é pequeno. Para quem busca uma fórmula de fibras com garantia de satisfação, o <a href="/ozenvitta/">OzenVitta</a> tem preço parecido, inclui laranja moro e devolve o dinheiro mesmo com o pote aberto. Compare também com o <a href="/reduphine-caps/">ReduPhine</a> em <a href="/ozenvitta-ou-reduphine/">OzenVitta ou ReduPhine</a>.</p>
+
+  <BuyBox compact produto="OzenVitta" href={ozenvitta.link} title="Alternativa: OzenVitta" text="Fibras, laranja moro e L-carnitina, a partir de R$ 147 o pote, com garantia de 30 dias." cta="Ver kits do OzenVitta" />
+  <p class="small">Se preferir o DTX Black, os kits estão na <a href="/dtx-black/">ficha completa</a>.</p>
+</Article>

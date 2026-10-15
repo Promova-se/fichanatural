@@ -1,0 +1,57 @@
+---
+import Article from '../../../layouts/Article.astro';
+import KitCards from '../../../components/KitCards.astro';
+import { dtxblack as p, dtxblackPages } from '../../../data/site';
+
+const faq = [
+  { q: 'DTX Black vende em farmácia ou no Mercado Livre?', a: 'Segundo a página oficial, não. A empresa diz que o DTX Black original só é vendido pelo site oficial e que vendas em marketplaces não são autorizadas.' },
+  { q: 'Qual o prazo de entrega do DTX Black?', a: 'De 15 a 25 dias úteis após a postagem, que só acontece depois que o pagamento é confirmado. O rastreio é feito no site da New Skin Suplementos.' },
+  { q: 'DTX Black tem garantia?', a: 'A página mostra um selo de garantia, mas os termos só permitem reembolso do produto lacrado e sem uso, devolvido em até 7 dias após o recebimento, com frete por conta do cliente. Não há garantia de satisfação depois de usar.' },
+];
+---
+<Article
+  ogImage="/img/dtx-black/og-dtx-black.jpg"
+  title="Onde comprar DTX Black original: preço, entrega e reembolso"
+  seoTitle="Onde comprar DTX Black original e preço"
+  description="Onde comprar o DTX Black original, preço de cada kit, prazo de entrega de 15 a 25 dias úteis e as regras de reembolso, que só valem com o produto lacrado."
+  kicker="Compra segura"
+  lead="O DTX Black é vendido pelo site oficial, com pagamento pela Monetizze. Antes de comprar, saiba duas coisas: a entrega leva até 25 dias úteis, e o reembolso só vale com o pote lacrado."
+  crumbs={[{ name: 'DTX Black', href: '/dtx-black/' }, { name: 'Onde comprar', href: '/dtx-black/onde-comprar/' }]}
+  faq={faq}
+  related={dtxblackPages}
+  sources={[
+    { label: 'Página oficial do DTX Black (consultada em 15/10/2026)', url: 'https://dtxblack.com.br/' },
+    { label: 'Termos de uso do DTX Black', url: 'https://dtxblack.com.br/termos/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Compre só pelo site oficial, a partir de R$ 157 o pote, com frete grátis. A entrega leva de 15 a 25 dias úteis. Se quiser desistir, devolva o pote lacrado em até 7 dias após receber, pagando o frete. Depois de aberto, não há reembolso.</p>
+  </div>
+
+  <h2>Escolha o kit</h2>
+  <p>O melhor preço por pote é o kit de 5 (R$ 79,60). O kit de 3 potes sai mais caro por pote (R$ 99,33) do que o de 2 (R$ 99). Para testar, o kit de 2 potes tem melhor custo que o pote único.</p>
+  <KitCards kits={p.kits} mcr={p.mcr} produto="DTX Black" />
+
+  <h2>Pagamento e entrega</h2>
+  <ul>
+    <li><strong>Formas de pagamento:</strong> Pix, boleto e cartão. No cartão parcelado, os juros são de 2,99% ao mês.</li>
+    <li><strong>Prazo:</strong> de 15 a 25 dias úteis após a postagem, que acontece depois da confirmação do pagamento.</li>
+    <li><strong>Reenvio:</strong> se o pedido precisar ser reenviado a pedido do cliente, os termos cobram R$ 35,90.</li>
+    <li><strong>Atendimento:</strong> WhatsApp, de segunda a sexta, das 9h às 18h, e {p.sac}.</li>
+  </ul>
+
+  <h2>O reembolso, explicado</h2>
+  <ol>
+    <li>Só vale para produto <strong>lacrado e sem uso</strong>.</li>
+    <li>O pote precisa ser devolvido em até <strong>7 dias após o recebimento</strong>, com frete pago pelo cliente.</li>
+    <li>O dinheiro volta em até 10 dias. No cartão, o crédito pode levar até 30 dias úteis para aparecer na fatura.</li>
+    <li>Produto com defeito ou avariado deve ser informado em até 7 dias, com CPF, número do pedido e fotos.</li>
+  </ol>
+  <p>Na prática, isso é o direito de arrependimento que o Código de Defesa do Consumidor já garante. Não existe garantia de "não gostei do resultado", apesar do selo de garantia na página.</p>
+
+  <h2>Antes de pagar</h2>
+  <ul>
+    <li>Leia <a href="/dtx-black/funciona/">o que dá para esperar do produto</a>.</li>
+    <li>Se quer garantia de satisfação, o <a href="/ozenvitta/">OzenVitta</a> devolve o dinheiro por e-mail em até 30 dias, mesmo aberto.</li>
+  </ul>
+</Article>
