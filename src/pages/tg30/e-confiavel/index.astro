@@ -1,0 +1,69 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { tg30 as p, tg30Pages } from '../../../data/site';
+
+const faq = [
+  { q: 'TG30 é golpe?', a: `Não há sinais de golpe: o fabricante, a ${p.maker}, é uma empresa ativa com CNPJ ${p.cnpj}, e a venda passa pela Monetizze. Os problemas são outros: promessas exageradas, doses baixas e atendimento informado por Gmail e WhatsApp.` },
+  { q: 'TG30 tem Reclame Aqui?', a: 'Na consulta de 14/10/2026, não encontramos página da marca TG30, da Crisfit ou da Lemoncaps no Reclame Aqui. É um produto novo, ainda sem histórico de reclamações.' },
+  { q: 'Como pedir reembolso do TG30?', a: `A garantia é de 30 dias a partir do recebimento. O checkout indica o e-mail ${p.sacCheckout} e um WhatsApp; o rótulo indica ${p.sacLabel}. Escreva para os dois e guarde o comprovante.` },
+];
+---
+<Article
+  ogImage="/img/tg30/og-tg30.jpg"
+  title="TG30 é confiável? Empresa, garantia e pontos de atenção"
+  seoTitle="TG30 é confiável? Empresa, garantia e Reclame Aqui"
+  description="TG30 Crisfit é confiável ou golpe? Veja quem fabrica, o que diz a garantia, se tem Reclame Aqui e os pontos de atenção antes de comprar o suplemento em gotas."
+  kicker="Reputação"
+  lead="O TG30 é fabricado por uma indústria regular de Cuiabá, com CNPJ e farmacêutico responsável. Os pontos fracos estão na venda: atendimento por Gmail, páginas de políticas fora do ar e promessas exageradas."
+  crumbs={[{ name: 'TG30', href: '/tg30/' }, { name: 'É confiável?', href: '/tg30/e-confiavel/' }]}
+  faq={faq}
+  related={tg30Pages}
+  sources={[
+    { label: 'Página oficial do TG30 (consultada em 14/10/2026)', url: 'https://tg30-crisfit.vercel.app/' },
+    { label: 'Serasa Experian: Lemoncaps Indústria e Comércio LTDA', url: 'https://empresas.serasaexperian.com.br/consulta-gratis/LEMONCAPS-INDUSTRIA-E-COMERCIO-LTDA-55836075000107' },
+    { label: 'Tangará Online: a fábrica Lemon Caps, em Cuiabá (2025)', url: 'https://www.tangaraonline.com.br/geral/lemon-caps-consolida-primeira-industria-de-suplementacao-natural-do-centro-oeste-e-amplia-presenca-nacional/253577' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>O TG30 não parece golpe: o fabricante existe, é licenciado e a compra passa pela Monetizze. Mas é um produto novo, sem histórico no Reclame Aqui, com atendimento por Gmail e WhatsApp e links de troca e privacidade que não abrem. Se comprar, pague no cartão e guarde tudo.</p>
+  </div>
+
+  <h2>Quem fabrica e quem vende</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Fabricante</th><td>{p.maker}, Cuiabá/MT</td></tr>
+        <tr><th>CNPJ</th><td>{p.cnpj}, ativo, aberto em julho de 2024</td></tr>
+        <tr><th>Farmacêutico responsável</th><td>Informado no rótulo (CRF/MT 5526)</td></tr>
+        <tr><th>Marca</th><td>Crisfit, ligada à influenciadora @cris_secavc</td></tr>
+        <tr><th>Atendimento no checkout</th><td>{p.sacCheckout} e WhatsApp</td></tr>
+        <tr><th>Atendimento no rótulo</th><td>{p.sacLabel}</td></tr>
+        <tr><th>Pagamento</th><td>Monetizze</td></tr>
+        <tr><th>Reclame Aqui</th><td>Sem página da marca ou do fabricante (consulta em 14/10/2026)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>A Lemoncaps é uma fábrica de suplementos inaugurada em 2025, que produz marcas próprias e também marcas de terceiros, como influenciadores. É o caso do TG30.</p>
+
+  <h2>A garantia</h2>
+  <p>A página oferece 30 dias, a partir do recebimento, com devolução de 100% do valor, "sem perguntas". Nas perguntas frequentes, a regra aparece como "se não sentir diferença na sua disposição". Os links de "Troca e devolução" e "Política de privacidade" do site davam erro na consulta, então não há um texto formal com as regras. Guarde prints da página no dia da compra.</p>
+
+  <h2>Pontos de atenção</h2>
+  <ul>
+    <li><strong>Atendimento informal:</strong> o checkout indica um Gmail e um WhatsApp, e não um canal da empresa.</li>
+    <li><strong>Políticas fora do ar:</strong> as páginas de troca e de privacidade não abriam.</li>
+    <li><strong>Promessas:</strong> "ative a queima de gordura", "resultados comprovados" e "peptídeos naturais" não se sustentam pela fórmula. Veja <a href="/tg30/funciona/">TG30 funciona?</a></li>
+    <li><strong>Produto novo:</strong> sem histórico público de entregas e reembolsos.</li>
+  </ul>
+
+  <h2>Como comprar com segurança</h2>
+  <ol>
+    <li>Prefira o cartão de crédito, que permite contestar a compra no banco se algo der errado.</li>
+    <li>Comece por 1 frasco. Kits grandes só valem se você já sabe que se adaptou.</li>
+    <li>Guarde o comprovante, o e-mail do pedido e um print da garantia.</li>
+    <li>Para pedir reembolso, escreva para os dois e-mails dentro dos 30 dias e anote a data.</li>
+  </ol>
+
+  <BuyBox compact produto="TG30" href={p.link} title="TG30 no site oficial" text="A partir de R$ 149,90 (1 frasco para 30 dias), com frete grátis e garantia de 30 dias." cta="Ver kits e preços" />
+</Article>

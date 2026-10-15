@@ -1,0 +1,64 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { tg30 as p, tg30Pages, ozenvitta } from '../../../data/site';
+
+const faq = [
+  { q: 'TG30 emagrece?', a: 'É pouco provável que faça diferença no peso. Os extratos ligados a emagrecimento, como café verde e cúrcuma, aparecem em cerca de 33 mg por dose, muito abaixo das quantidades testadas em estudos, que já mostram efeitos pequenos.' },
+  { q: 'TG30 dá energia?', a: 'Pode ajudar quem tem falta de vitamina D ou B12, porque essas vitaminas vêm em doses altas. Quem não tem deficiência tende a não sentir diferença. Um exame de sangue mostra se é o seu caso.' },
+  { q: 'Posso tomar TG30 com vitamina D?', a: 'Com cuidado. O TG30 já tem 2.000 UI de vitamina D3 por dia. Somar com outro suplemento pode passar do limite seguro de 4.000 UI por dia para adultos. Converse com um profissional antes.' },
+];
+---
+<Article
+  ogImage="/img/tg30/og-tg30.jpg"
+  title="TG30 funciona? As doses do rótulo e o que a ciência diz"
+  seoTitle="TG30 funciona? As doses e o que diz a ciência"
+  description="TG30 funciona para emagrecer? Comparamos as doses do rótulo de cada ingrediente com as usadas em estudos e explicamos o que dá para esperar do suplemento."
+  kicker="Funciona?"
+  lead="O TG30 lista 8 ativos, mas a dose de cada um importa. Comparando o rótulo com os estudos, só as vitaminas D3 e B12 aparecem em quantidade relevante."
+  crumbs={[{ name: 'TG30', href: '/tg30/' }, { name: 'Funciona?', href: '/tg30/funciona/' }]}
+  faq={faq}
+  related={tg30Pages}
+  sources={[
+    { label: 'Página oficial do TG30 e imagem do rótulo (consultadas em 14/10/2026)', url: 'https://tg30-crisfit.vercel.app/' },
+    { label: 'NIH Office of Dietary Supplements: Dietary Supplements for Weight Loss (café verde, cromo e outros)', url: 'https://ods.od.nih.gov/factsheets/WeightLoss-HealthProfessional/' },
+    { label: 'NIH Office of Dietary Supplements: Vitamin D', url: 'https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/' },
+    { label: 'NIH Office of Dietary Supplements: Vitamin B12', url: 'https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Para emagrecer, dificilmente. Os extratos de café verde, cúrcuma e feno-grego e a inulina estão em doses dezenas ou centenas de vezes menores que as estudadas. O que pode fazer efeito são as vitaminas D3 (2.000 UI) e B12, e só em quem tem falta delas.</p>
+  </div>
+
+  <h2>Dose do rótulo contra dose dos estudos</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Ingrediente</th><th>No TG30</th><th>O que dá para esperar</th></tr></thead>
+      <tbody>
+        <tr><td>Café verde</td><td>33,3 mg</td><td>Os estudos usaram centenas de miligramas e mostraram perda pequena, em estudos de baixa qualidade. Nesta dose, efeito improvável</td></tr>
+        <tr><td>Cúrcuma</td><td>33,3 mg</td><td>Estudos sobre peso e inflamação usam em geral 500 mg ou mais de curcumina, que ainda é mal absorvida. Efeito improvável</td></tr>
+        <tr><td>Inulina</td><td>21,7 mg</td><td>Fibra prebiótica que age com 5 a 10 gramas por dia. Nesta dose, sem efeito no intestino ou na saciedade</td></tr>
+        <tr><td>Feno-grego</td><td>0,033 mL de extrato</td><td>Estudos de saciedade e glicose usam gramas da semente. Efeito improvável</td></tr>
+        <tr><td>Cromo</td><td>85% do valor diário</td><td>Dose comum. Efeito pequeno sobre o peso, de relevância incerta</td></tr>
+        <tr><td>Vitamina D3</td><td>2.000 UI</td><td>Corrige a falta de vitamina D. Não emagrece quem tem níveis normais</td></tr>
+        <tr><td>Vitamina B12</td><td>9,94 mcg</td><td>Melhora o cansaço de quem tem deficiência, comum em vegetarianos, idosos e quem usa metformina</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Atenção: o rótulo diz que 1 mL equivale a 30 gotas, e a página de vendas manda tomar 12 gotas. Se você seguir a página, toma menos da metade das quantidades acima.</p>
+
+  <h2>O que é exagero na página de vendas</h2>
+  <ul>
+    <li><strong>"Ative a queima de gordura":</strong> nenhum ingrediente, nessas doses, tem esse efeito comprovado.</li>
+    <li><strong>"Resultados comprovados":</strong> não há estudo publicado com o TG30.</li>
+    <li><strong>"Peptídeos naturais":</strong> o termo, que lembra as canetas de emagrecimento, aparece no frasco, mas a fórmula não tem peptídeos.</li>
+    <li><strong>Prints de antes e depois:</strong> não mostram quanto do resultado veio de dieta, exercício ou outros produtos.</li>
+  </ul>
+
+  <h2>Para quem pode fazer sentido</h2>
+  <p>Para quem quer um suplemento prático de vitamina D e B12 e não se importa em pagar mais por isso. Mesmo nesse caso, vale fazer exame de sangue antes, porque vitamina D em excesso faz mal.</p>
+  <p>Para quem quer ajuda para controlar a fome, existem fórmulas com fibras e laranja moro em doses mais relevantes, como o <a href="/ozenvitta/">OzenVitta</a>, que custa a partir de R$ 47 por mês nos kits maiores. Veja a <a href="/ozenvitta-ou-reduphine/">comparação dos suplementos de fibras</a>.</p>
+
+  <BuyBox compact produto="OzenVitta" href={ozenvitta.link} title="Alternativa: OzenVitta" text="Fibras, laranja moro e L-carnitina, a partir de R$ 147 o pote, com garantia de 30 dias." cta="Ver kits do OzenVitta" />
+  <p class="small">Se ainda assim preferir o TG30, os kits estão na <a href="/tg30/">ficha completa</a>.</p>
+</Article>

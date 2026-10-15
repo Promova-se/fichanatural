@@ -112,6 +112,31 @@ export const ozenvitta = {
   ],
 };
 
+// TG30 (Crisfit), conferido na página oficial, no rótulo e no checkout em 14/10/2026.
+// Fabricante: Lemoncaps (Cuiabá/MT). SAC no checkout: Gmail + WhatsApp. Páginas de troca e privacidade dão 404.
+export const tg30 = {
+  name: 'TG30 Crisfit',
+  maker: 'Lemoncaps Indústria e Comércio LTDA',
+  cnpj: '55.836.075/0001-07',
+  sacLabel: 'sac@lemoncaps.com.br',
+  sacCheckout: 'emagrecedortg30@gmail.com',
+  mcr: 'AEB25846147',
+  link: 'https://tg30-crisfit.vercel.app/?mcr=AEB25846147',
+  ingredients: ['Extrato de cúrcuma', 'Extrato de café verde', 'Bitartarato de colina', 'Inulina', 'Extrato de feno-grego', 'Picolinato de cromo', 'Vitamina D3', 'Vitamina B12'],
+  kits: [
+    { name: '1 frasco', qty: '1 frasco · 30 dias', months: 1, total: 149.9, installments: '12x de R$ 15,05', plan: 'DKB385163' },
+    { name: '2 frascos', qty: '2 frascos · 60 dias', months: 2, total: 249.9, installments: '12x de R$ 25,09', plan: 'DUM385164' },
+    { name: '3 frascos', qty: '3 frascos · 90 dias', months: 3, total: 349.9, installments: '12x de R$ 35,13', plan: 'DMK385165' },
+    { name: '6 frascos', qty: '6 frascos · 180 dias', months: 6, total: 649.9, installments: '12x de R$ 65,25', plan: 'DXR385766' },
+  ],
+};
+
+export const tg30Pages = [
+  { href: '/tg30/', title: 'TG30 Crisfit: ficha completa, composição e preço', short: 'Ficha completa' },
+  { href: '/tg30/funciona/', title: 'TG30 funciona? As doses do rótulo e o que a ciência diz', short: 'Funciona?' },
+  { href: '/tg30/e-confiavel/', title: 'TG30 é confiável? Empresa, garantia e pontos de atenção', short: 'É confiável?' },
+];
+
 export const ozenvittaPages = [
   { href: '/ozenvitta/', title: 'OzenVitta: ficha completa, composição e preço', short: 'Ficha completa' },
   { href: '/ozenvitta/funciona/', title: 'OzenVitta funciona? O que a ciência diz de cada ingrediente', short: 'Funciona?' },

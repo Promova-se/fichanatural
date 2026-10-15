@@ -1,0 +1,101 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import { tg30 as p, tg30Pages } from '../../data/site';
+
+const faq = [
+  { q: 'O que é o TG30?', a: 'É um suplemento alimentar em gotas da marca Crisfit, fabricado pela Lemoncaps, em Cuiabá. Tem extratos de cúrcuma, café verde e feno-grego, colina, inulina, cromo e vitaminas D3 e B12. Cada frasco de 30 mL dura 30 dias.' },
+  { q: 'Quanto custa o TG30?', a: 'Na consulta de 14/10/2026, 1 frasco custava R$ 149,90, e os kits iam até R$ 649,90 por 6 frascos. O parcelamento em 12x tem juros de 2,99% ao mês.' },
+  { q: 'TG30 tem peptídeos?', a: 'Não, pela lista de ingredientes. A frente de uma das versões do frasco diz "suplemento com peptídeos naturais", mas nenhum peptídeo aparece na composição publicada.' },
+  { q: 'Quantas gotas do TG30 por dia?', a: 'A página de vendas fala em 12 gotas por dia, que seriam 1 mL. O rótulo indica 1 mL por dia, mas diz que 1 mL tem 30 gotas. Na dúvida, siga o rótulo: 1 mL por dia, medido no conta-gotas.' },
+];
+---
+<Article
+  ogImage="/img/tg30/og-tg30.jpg"
+  image={{ src: '/img/tg30/tg30-frasco.webp', alt: 'Frasco do TG30 Crisfit, suplemento alimentar em gotas de 30 mL', width: 178, height: 520 }}
+  title="TG30 Crisfit: ficha completa, composição, preço e o que esperar"
+  seoTitle="TG30 Crisfit: composição, preço e se vale a pena"
+  description="Ficha do TG30 Crisfit: ingredientes e doses do rótulo, como tomar, preço dos kits, garantia, prós e contras. Análise independente do suplemento em gotas."
+  kicker="Ficha de produto"
+  lead="O TG30 é um suplemento em gotas vendido para metabolismo, disposição e controle do apetite. Lemos o rótulo: os extratos vêm em doses muito pequenas, e o que pesa na fórmula são as vitaminas D3 e B12."
+  crumbs={[{ name: 'TG30', href: '/tg30/' }]}
+  faq={faq}
+  related={tg30Pages}
+  sources={[
+    { label: 'Página oficial do TG30 e imagem do rótulo (consultadas em 14/10/2026)', url: 'https://tg30-crisfit.vercel.app/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Suplemento em gotas com 8 ativos. Por dose, tem 33 mg de extrato de café verde, 33 mg de cúrcuma e 22 mg de inulina, quantidades muito abaixo das usadas em estudos. As doses relevantes são de vitamina D3 (2.000 UI) e B12. Custa de R$ 108 a R$ 150 por mês. Pode ajudar quem tem falta dessas vitaminas, mas não é um "queimador de gordura".</p>
+  </div>
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>{p.name}</td></tr>
+        <tr><th>Fabricante</th><td>{p.maker}, CNPJ {p.cnpj}, Cuiabá/MT</td></tr>
+        <tr><th>Marca</th><td>Crisfit, ligada à influenciadora @cris_secavc</td></tr>
+        <tr><th>Tipo</th><td>Suplemento alimentar líquido, em gotas</td></tr>
+        <tr><th>Apresentação</th><td>Frasco de 30 mL, 30 doses de 1 mL</td></tr>
+        <tr><th>Modo de uso</th><td>1 mL por dia (o rótulo diz 30 gotas; a página de vendas diz 12)</td></tr>
+        <tr><th>Não indicado para</th><td>Gestantes, lactantes e menores de 19 anos. Pode conter derivados de peixe</td></tr>
+        <tr><th>Rótulo</th><td>Sem açúcar, sem glúten e sem lactose</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Composição por dose (1 mL)</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Ingrediente</th><th>Quantidade</th><th>Comparação</th></tr></thead>
+      <tbody>
+        <tr><td>Extrato de café verde</td><td>33,3 mg</td><td>Estudos usam centenas de miligramas</td></tr>
+        <tr><td>Extrato de cúrcuma</td><td>33,3 mg</td><td>Estudos usam 500 mg ou mais</td></tr>
+        <tr><td>Inulina</td><td>21,7 mg</td><td>Efeito prebiótico com 5 a 10 gramas</td></tr>
+        <tr><td>Extrato fluido de feno-grego</td><td>0,033 mL</td><td>Estudos usam gramas da semente</td></tr>
+        <tr><td>Bitartarato de colina</td><td>Pequena quantidade</td><td>Não informada em % do valor diário</td></tr>
+        <tr><td>Cromo</td><td>85% do valor diário</td><td>Dose comum de suplemento</td></tr>
+        <tr><td>Vitamina D3</td><td>50 mcg (2.000 UI), 333% do valor diário</td><td>Dose alta, dentro do limite seguro para adultos</td></tr>
+        <tr><td>Vitamina B12</td><td>9,94 mcg, 414% do valor diário</td><td>Dose alta, considerada segura</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Valores lidos na imagem do rótulo publicada pelo fabricante. A análise de cada ingrediente está em <a href="/tg30/funciona/">TG30 funciona?</a></p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores consultados na página oficial em 14/10/2026, com frete grátis. No cartão parcelado, o checkout cobra juros de 2,99% ao mês.</p>
+  <KitCards kits={p.kits} mcr={p.mcr} produto="TG30" unit="frasco" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Fabricante identificado, com CNPJ e farmacêutico responsável</li>
+        <li>Lista os ingredientes e as quantidades no rótulo</li>
+        <li>Garantia de 30 dias com devolução do valor</li>
+        <li>Gotas são práticas para quem não gosta de cápsulas</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Extratos em doses muito abaixo das usadas em estudos</li>
+        <li>Caro: de R$ 108 a R$ 150 por mês</li>
+        <li>Promete "ativar a queima de gordura" e "resultados comprovados", sem estudo do produto</li>
+        <li>Fala em "peptídeos naturais" no frasco, mas a fórmula não tem peptídeos</li>
+        <li>Diferença entre rótulo e página sobre o número de gotas por dose</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>O TG30 é, na prática, um suplemento de vitamina D3 e B12 com pequenas quantidades de extratos populares. Para quem tem falta dessas vitaminas, pode melhorar o cansaço, mas um exame de sangue e uma vitamina D de farmácia resolvem isso por bem menos. Como ajuda para emagrecer, a fórmula é fraca. Se o objetivo é controlar a fome, o <a href="/ozenvitta/">OzenVitta</a> tem fórmula mais robusta e custa menos por mês.</p>
+  </div>
+  <p>Antes de comprar, veja também <a href="/tg30/e-confiavel/">se o TG30 é confiável</a>.</p>
+
+  <BuyBox compact produto="TG30" href={p.link} title="TG30 no site oficial" text="A partir de R$ 149,90 (1 frasco para 30 dias), com frete grátis e garantia de 30 dias." cta="Ver kits e preços" />
+</Article>
