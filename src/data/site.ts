@@ -13,7 +13,9 @@ export const site = {
 // Código de afiliado na Monetizze (parâmetro mcr) e montagem do link de checkout de cada kit.
 export const affiliate = { monetizze: 'AXA22582261' };
 // O código `mcr` muda por produto: passe o do produto (padrão = ReduPhine).
-export const checkoutUrl = (plan: string, mcr: string = affiliate.monetizze) => `https://pay.monetizze.com.br/${plan}?mcr=${mcr}`;
+// Link oficial de afiliado da Monetizze ("Pegar link de venda"): /r/{mcr}?u=c&pl={código do checkout sem o D inicial}.
+// Passa pelo rastreio da Monetizze e redireciona para o checkout com ?mcr=. Testado nos 23 kits em 15/10/2026.
+export const checkoutUrl = (plan: string, mcr: string = affiliate.monetizze) => `https://app.monetizze.com.br/r/${mcr}?u=c&pl=${plan.replace(/^D/, '')}`;
 
 export type Product = {
   slug: string;
@@ -76,7 +78,7 @@ export const resveratrol = {
   cnpj: '37.971.418/0001-56',
   sac: 'sac@natturabio.com.br',
   mcr: 'ACA24896422',
-  link: 'https://collagennatturabio.com.br/resveratrol/?mcr=ACA24896422',
+  link: 'https://app.monetizze.com.br/r/ACA24896422',
   ingredients: ['Trans-resveratrol', 'Colágeno hidrolisado', 'Ácido hialurônico', 'Silício orgânico', 'Vitamina K2', 'Vitamina C', 'Vitamina E', 'Retinol (vitamina A)'],
   kits: [
     { name: 'Compre 1, leve 2', qty: '2 potes · 2 meses', months: 2, total: 157, installments: '12x de R$ 15,76', plan: 'DRE294254' },
@@ -102,7 +104,7 @@ export const ozenvitta = {
   brand: 'OzenPharma',
   sac: 'sac@ozenpharma.com',
   mcr: 'ATX24835707',
-  link: 'https://ozenvitta.com/pvmon/?mcr=ATX24835707',
+  link: 'https://app.monetizze.com.br/r/ATX24835707',
   ingredients: ['Psyllium', 'Inulina', 'L-carnitina', 'Spirulina', 'Laranja moro', 'Picolinato de cromo'],
   kits: [
     { name: 'Pote único', qty: '1 pote · 30 dias', months: 1, total: 147, installments: '12x de R$ 14,76', plan: 'DHV290570' },
@@ -121,7 +123,7 @@ export const tg30 = {
   sacLabel: 'sac@lemoncaps.com.br',
   sacCheckout: 'emagrecedortg30@gmail.com',
   mcr: 'AEB25846147',
-  link: 'https://tg30-crisfit.vercel.app/?mcr=AEB25846147',
+  link: 'https://app.monetizze.com.br/r/AEB25846147',
   ingredients: ['Extrato de cúrcuma', 'Extrato de café verde', 'Bitartarato de colina', 'Inulina', 'Extrato de feno-grego', 'Picolinato de cromo', 'Vitamina D3', 'Vitamina B12'],
   kits: [
     { name: '1 frasco', qty: '1 frasco · 30 dias', months: 1, total: 149.9, installments: '12x de R$ 15,05', plan: 'DKB385163' },
@@ -146,7 +148,7 @@ export const mounjax = {
   brand: 'Ozenpharma',
   sac: 'sac@ozenpharma.com',
   mcr: 'ARZ25846150',
-  link: 'https://mounjax.com/pvmonob/?mcr=ARZ25846150',
+  link: 'https://app.monetizze.com.br/r/ARZ25846150',
   ingredients: ['Café verde', 'Dihidrocapsiato', 'Cúrcuma', 'Colina', 'Inulina', 'Feno-grego', 'Cromo', 'Vitamina D3', 'Vitamina B12'],
   kits: [
     { name: 'Frasco único', qty: '1 frasco · 30 dias', months: 1, total: 147, installments: '12x de R$ 14,76', plan: 'DQH336826' },
