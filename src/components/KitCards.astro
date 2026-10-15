@@ -2,7 +2,7 @@
 // Um cartão por kit, cada um com o link de checkout de afiliado do próprio kit.
 // Se `total` for 0 (preço ainda não conferido), o cartão mostra só o nome e o botão.
 import { checkoutUrl } from '../data/site';
-interface Kit { name: string; months: number; total: number; installments: string; plan: string; qty?: string }
+interface Kit { name: string; months: number; total: number; installments: string; plan: string; qty?: string; warn?: string }
 interface Props {
   kits: Kit[];
   unit?: string;
@@ -26,6 +26,7 @@ const hasPrices = kits.every((k) => k.total > 0);
       ) : (
         <p class="small">Preço atualizado no site oficial</p>
       )}
+      {k.warn && <p class="kit-warn">{k.warn}</p>}
       <a class="btn btn-sm" data-produto={produto} data-kit={k.name} data-posicao="cartao-kit" href={checkoutUrl(k.plan, mcr)} target="_blank" rel="sponsored nofollow noopener">{k.total > 0 ? 'Comprar este kit' : 'Ver preço e comprar'}</a>
     </div>
   ))}

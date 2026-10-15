@@ -1,0 +1,75 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { iarmonize as p, iarmonizePages } from '../../../data/site';
+
+const faq = [
+  { q: 'Como tomar o Kit IArmonize?', a: 'Pela página oficial: Hair, 2 cápsulas por dia; Energy, 1 cápsula pela manhã; Sleep, 1 cápsula cerca de 1 hora antes de dormir; Vital, 8 gotas por dia. O uso indicado é contínuo por 90 dias.' },
+  { q: 'Posso tomar o IArmonize Sleep com antidepressivo?', a: 'Não sem orientação médica. O Sleep tem 5-HTP, que aumenta a serotonina. Combinado com antidepressivos, pode causar síndrome serotoninérgica, uma reação que pode ser grave.' },
+  { q: 'Quem toma anticoagulante pode usar o IArmonize?', a: 'Precisa falar com o médico antes. A vitamina K2 do Vital e a coenzima Q10 do Energy podem interferir no efeito da varfarina, e a melatonina também exige cuidado com anticoagulantes.' },
+  { q: 'Grávidas podem tomar IArmonize?', a: 'Não sem orientação médica. O Vital tem vitamina A, que em excesso faz mal ao bebê, e não há estudos de segurança da melatonina e do 5-HTP na gravidez e na amamentação.' },
+];
+---
+<Article
+  ogImage="/img/iarmonize/og-iarmonize.jpg"
+  title="Como tomar o kit IArmonize: horários, interações e quem não deve usar"
+  seoTitle="Como tomar IArmonize: horários e cuidados"
+  description="Como tomar o Hair, o Sleep, o Energy e o Vital do kit IArmonize, os horários de cada um, as interações com remédios e quem não deve usar sem orientação."
+  kicker="Modo de uso e segurança"
+  lead="Cada produto do kit tem um horário. Os cuidados mais importantes estão no Sleep, que tem melatonina em dose de remédio e 5-HTP, e no Vital, que tem vitamina K2 e vitamina A."
+  crumbs={[{ name: 'IArmonize', href: '/iarmonize/' }, { name: 'Como tomar', href: '/iarmonize/como-tomar/' }]}
+  faq={faq}
+  related={iarmonizePages}
+  sources={[
+    { label: 'Página oficial do IArmonize (consultada em 15/10/2026)', url: 'https://integrapharmabrasil.com.br/' },
+    { label: 'NCCIH: Melatonin, What You Need To Know', url: 'https://www.nccih.nih.gov/health/melatonin-what-you-need-to-know' },
+    { label: 'NCCIH: Coenzyme Q10', url: 'https://www.nccih.nih.gov/health/coenzyme-q10' },
+    { label: 'NIH Office of Dietary Supplements: Biotin (interferência em exames)', url: 'https://ods.od.nih.gov/factsheets/Biotin-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Hair: 2 cápsulas por dia. Energy: 1 cápsula de manhã. Sleep: 1 cápsula 1 hora antes de dormir. Vital: 8 gotas por dia. Quem toma antidepressivo, anticoagulante ou remédio para dormir, e grávidas ou lactantes, deve falar com o médico antes, principalmente sobre o Sleep.</p>
+  </div>
+
+  <h2>Horários de cada produto</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Produto</th><th>Dose</th><th>Quando</th><th>Duração do frasco</th></tr></thead>
+      <tbody>
+        <tr><td>Hair</td><td>2 cápsulas</td><td>Com uma refeição (o ferro pode enjoar em jejum)</td><td>45 dias</td></tr>
+        <tr><td>Energy</td><td>1 cápsula</td><td>Pela manhã, com o café da manhã</td><td>90 dias</td></tr>
+        <tr><td>Sleep</td><td>1 cápsula</td><td>Cerca de 1 hora antes de dormir</td><td>90 dias</td></tr>
+        <tr><td>Vital</td><td>8 gotas</td><td>Embaixo da língua, uma vez por dia</td><td>Cerca de 1 mês</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Modo de uso informado na página oficial. Confira no rótulo ao receber e não aumente as doses por conta própria.</p>
+
+  <h2>Cuidados com o IArmonize Sleep</h2>
+  <ul>
+    <li><strong>Dose alta de melatonina:</strong> 5 mg, contra o limite de 0,21 mg por dia para suplementos. Pode deixar sonolência no dia seguinte: não dirija nem opere máquinas até saber como você reage.</li>
+    <li><strong>5-HTP e antidepressivos:</strong> a combinação pode causar síndrome serotoninérgica (agitação, tremores, febre, coração acelerado). Também evite com outros remédios que mexem na serotonina, como alguns para enxaqueca.</li>
+    <li><strong>Outros remédios para dormir e álcool:</strong> somam o efeito sedativo.</li>
+    <li><strong>Epilepsia e anticoagulantes:</strong> a melatonina exige acompanhamento médico nesses casos.</li>
+  </ul>
+
+  <h2>Outros cuidados do kit</h2>
+  <ul>
+    <li><strong>Vital e anticoagulantes:</strong> a vitamina K2 pode reduzir o efeito da varfarina.</li>
+    <li><strong>Energy e anticoagulantes:</strong> a coenzima Q10 também pode interferir na varfarina.</li>
+    <li><strong>Hair e exames de sangue:</strong> a biotina pode alterar o resultado de alguns exames, como os de tireoide. Avise o laboratório ou pare alguns dias antes, com orientação.</li>
+    <li><strong>Ferro do Hair:</strong> não use junto com outro suplemento de ferro sem orientação, e mantenha longe de crianças.</li>
+    <li><strong>Vitamina A do Vital:</strong> em excesso, faz mal ao fígado e ao bebê na gravidez. Não some com outros polivitamínicos sem orientação.</li>
+  </ul>
+
+  <h2>Quem não deve usar sem orientação médica</h2>
+  <ul>
+    <li>Gestantes, lactantes e menores de 19 anos.</li>
+    <li>Quem toma antidepressivo, ansiolítico, remédio para dormir ou anticoagulante.</li>
+    <li>Quem tem epilepsia, doença no fígado ou nos rins.</li>
+    <li>Quem vai fazer exames de sangue em breve (por causa da biotina).</li>
+  </ul>
+  <p>Ainda em dúvida se vale a pena? Leia <a href="/iarmonize/funciona/">IArmonize funciona?</a></p>
+
+  <BuyBox compact produto="IArmonize" href={p.link} title="IArmonize no site oficial" text="Produtos avulsos a partir de R$ 97. O kit completo inclui o Sleep." cta="Ver produtos e preços" />
+</Article>

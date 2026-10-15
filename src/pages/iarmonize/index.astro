@@ -1,0 +1,101 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import { iarmonize as p, iarmonizePages } from '../../data/site';
+
+const faq = [
+  { q: 'O que é o IArmonize?', a: 'É uma linha de quatro suplementos da Integra Pharma: Hair (cabelo e unhas), Sleep (sono), Energy (disposição) e Vital (gotas de vitaminas). Eles são vendidos separados ou juntos, no Kit IArmonize, com uma necessaire.' },
+  { q: 'Quanto custa o Kit IArmonize?', a: 'Na consulta de 15/10/2026, o kit completo custava R$ 1.256, em até 10x sem juros ou com 5% de desconto no Pix. Os produtos avulsos vão de R$ 97 (1 frasco do Vital) a R$ 444 (2 frascos do Hair).' },
+  { q: 'Quem fabrica o IArmonize?', a: `No checkout, o produtor aparece como ${p.maker}, uma farmácia de manipulação. A página de vendas informa endereço em Belo Horizonte (MG), telefone e e-mail, mas não mostra o CNPJ.` },
+  { q: 'O IArmonize Sleep tem melatonina?', a: 'Sim, 5 mg por cápsula. A Anvisa permite até 0,21 mg por dia em suplementos alimentares. Por isso, só recomendamos usar o Sleep com orientação médica.' },
+];
+---
+<Article
+  ogImage="/img/iarmonize/og-iarmonize.jpg"
+  image={{ src: '/img/iarmonize/kit-iarmonize.webp', alt: 'Kit IArmonize com dois frascos de Hair, um de Sleep, um de Energy, três de Vital e necessaire da Integra Pharma', width: 760, height: 441 }}
+  title="IArmonize: ficha do kit da Integra Pharma, composição e preço"
+  seoTitle="IArmonize (Integra Pharma): composição e preço"
+  description="Ficha do IArmonize, da Integra Pharma: o que tem no Hair, no Sleep, no Energy e no Vital, preço de cada kit, quem fabrica e o alerta sobre a melatonina."
+  kicker="Ficha de produto"
+  lead="O IArmonize é um kit de quatro suplementos para cabelo, sono, energia e imunidade. Dois deles mostram as doses e dois não. O Sleep merece atenção: tem 5 mg de melatonina, muito acima do limite da Anvisa para suplementos."
+  crumbs={[{ name: 'IArmonize', href: '/iarmonize/' }]}
+  faq={faq}
+  related={iarmonizePages}
+  sources={[
+    { label: 'Página oficial do IArmonize, da Integra Pharma (consultada em 15/10/2026)', url: 'https://integrapharmabrasil.com.br/' },
+    { label: 'Canaltech: o que mudou com a liberação da melatonina como suplemento pela Anvisa', url: 'https://canaltech.com.br/saude/melatonina-anvisa-o-que-mudou-198989/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Quatro fórmulas vendidas juntas ou separadas. O Energy (coenzima Q10, magnésio e zinco) e o Sleep (melatonina, L-teanina, 5-HTP e magnésio) mostram as doses. O Hair e o Vital listam os ingredientes sem dizer quanto tem de cada um. O kit completo custa R$ 1.256 por 3 meses. O produtor é uma farmácia de manipulação de Belo Horizonte.</p>
+  </div>
+
+  <div class="alert">
+    <p><strong>Atenção ao IArmonize Sleep</strong>Cada cápsula tem 5 mg de melatonina. Em suplementos alimentares, a Anvisa permite no máximo 0,21 mg por dia: o Sleep tem cerca de 24 vezes isso. A fórmula também leva 5-HTP, que não deve ser combinado com antidepressivos. Use o Sleep só com orientação médica. Ele vem no kit completo.</p>
+  </div>
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Marca</th><td>{p.brand}</td></tr>
+        <tr><th>Produtor (no checkout)</th><td>{p.maker}</td></tr>
+        <tr><th>Endereço</th><td>{p.address}</td></tr>
+        <tr><th>Atendimento</th><td>WhatsApp, telefone {p.phone} e {p.sac}</td></tr>
+        <tr><th>Pagamento</th><td>Braip (Pix, boleto e cartão)</td></tr>
+        <tr><th>Produtos</th><td>Hair (90 cápsulas), Sleep (90 cápsulas), Energy (90 cápsulas) e Vital (gotas, 30 ml)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Composição de cada produto</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Produto</th><th>Ingredientes</th><th>Modo de uso</th></tr></thead>
+      <tbody>
+        <tr><td>IArmonize Hair</td><td>Queratina, biotina, complexo B, silício orgânico, ferro, metionina, L-cisteína, PABA, levedura e MSM. <em>Doses não informadas.</em></td><td>2 cápsulas por dia (o frasco dura 45 dias)</td></tr>
+        <tr><td>IArmonize Sleep</td><td>Melatonina 5 mg, L-teanina 200 mg, 5-HTP 50 mg e treonato de magnésio 150 mg</td><td>1 cápsula 1 hora antes de dormir</td></tr>
+        <tr><td>IArmonize Energy</td><td>Coenzima Q10 150 mg, dimalato de magnésio 200 mg e zinco 7 mg</td><td>1 cápsula pela manhã</td></tr>
+        <tr><td>IArmonize Vital</td><td>Vitaminas D, A, K2 (MK-7), E, B9 (ácido fólico) e B12, em gotas sublinguais. <em>Doses não informadas.</em></td><td>8 gotas por dia</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Composição e modo de uso publicados na página oficial. Como o Hair e o Vital não mostram as doses, não dá para comparar com os estudos. Confira no rótulo ao receber. A análise de cada fórmula está em <a href="/iarmonize/funciona/">IArmonize funciona?</a></p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores consultados no site oficial em 15/10/2026. Os avulsos saem em até 3x sem juros, e o kit completo em até 10x sem juros ou com 5% de desconto no Pix.</p>
+  <KitCards kits={p.kits} unit="mês" produto="IArmonize" />
+  <p class="small">O Sleep avulso (R$ 167) e o combo Sleep + Energy (R$ 297) também estão à venda no site oficial. Não colocamos link para eles por causa da dose de melatonina.</p>
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Energy e Sleep mostram a dose de cada ingrediente</li>
+        <li>Coenzima Q10 e L-teanina em doses parecidas com as dos estudos</li>
+        <li>Produtor, endereço e telefone informados</li>
+        <li>Promessas mais contidas que a média do mercado</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Sleep com 5 mg de melatonina, acima do limite para suplementos</li>
+        <li>Hair e Vital sem doses na página</li>
+        <li>Página não mostra o CNPJ nem a política de garantia</li>
+        <li>Kit caro: R$ 1.256 por 3 meses</li>
+        <li>Marca nova, sem histórico no Reclame Aqui</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>O IArmonize é mais transparente que a maioria dos kits vendidos por afiliados: mostra quem produz e as doses de duas das quatro fórmulas. O Energy é o mais coerente com a ciência. O Hair só tende a ajudar quem tem deficiência de algum nutriente. O Sleep funciona como um remédio para dormir em dose de prescrição, e por isso não deveria ser tomado sem orientação. Se você quer o kit completo, converse com o médico sobre o Sleep antes. Se quer só uma parte, dá para comprar os produtos separados.</p>
+  </div>
+  <p>Antes de comprar, leia <a href="/iarmonize/como-tomar/">como tomar e quem não deve usar</a> e <a href="/iarmonize/e-confiavel/">quem está por trás da marca</a>.</p>
+
+  <BuyBox compact produto="IArmonize" href={p.link} title="IArmonize no site oficial" text="Avulsos a partir de R$ 97 e kit completo por R$ 1.256 em até 10x sem juros." cta="Ver produtos e preços" />
+</Article>

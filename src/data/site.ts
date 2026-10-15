@@ -6,7 +6,7 @@ export const site = {
   email: 'loja@promovase.net',
   company: 'Promova-se',
   cnpj: '43.315.814/0001-28',
-  updated: '2026-10-14',
+  updated: '2026-10-15',
   ga4: 'G-L47PVELQQ4',
 };
 
@@ -17,8 +17,11 @@ export const affiliate = { monetizze: 'AXA22582261' };
 // Passa pelo rastreio da Monetizze e redireciona para o checkout com ?mcr=. Testado nos 23 kits em 15/10/2026.
 // Exceção: checkouts cujo código não começa com D (ex.: Inibe One, KHG273901) não funcionam no /r/ e vão
 // direto para app.monetizze.com.br/checkout/{código}?mcr=..., o mesmo destino do redirecionamento oficial.
+// Produtos da Braip passam o link completo do checkout em `plan` (começa com https://) e ele é usado como está.
 export const checkoutUrl = (plan: string, mcr: string = affiliate.monetizze) =>
-  plan.startsWith('D')
+  plan.startsWith('https://')
+    ? plan
+    : plan.startsWith('D')
     ? `https://app.monetizze.com.br/r/${mcr}?u=c&pl=${plan.slice(1)}`
     : `https://app.monetizze.com.br/checkout/${plan}?mcr=${mcr}`;
 
@@ -226,6 +229,46 @@ export const inibeonePages = [
   { href: '/inibe-one/e-confiavel/', title: 'Inibe One é confiável? Reclame Aqui e a empresa por trás', short: 'É confiável?' },
 ];
 
+// IArmonize (Integra Pharma), vendido pela Braip. No checkout, o produtor aparece como
+// IRIS D'AGUA FARMACIA HOMEOPATIA E MANIPULACAO LTDA. Dados conferidos em 15/10/2026.
+// Links: https://ev.braip.com/checkout/{plano}/cheq89gn?af={código}. O checkout mostra "REF.: afizj2v9e6".
+// O Sleep (melatonina 5 mg, acima do limite de 0,21 mg/dia para suplemento, e 5-HTP) fica sem botão de compra.
+// O kit completo inclui o Sleep: tem link, com aviso visível (decisão do dono do site em 15/10/2026).
+const braipIarmonize = (plan: string) => `https://ev.braip.com/checkout/${plan}/cheq89gn?af=afizj2v9e6`;
+export const iarmonize = {
+  name: 'IArmonize',
+  brand: 'Integra Pharma',
+  maker: "Iris D'Água Farmácia Homeopatia e Manipulação Ltda.",
+  address: 'Rua Augusto dos Anjos, 437 B, Rio Branco, Belo Horizonte (MG)',
+  phone: '(31) 7137-2823',
+  sac: 'contato@integrapharma.com.br',
+  link: 'https://integrapharmabrasil.com.br/?pv=provwmw5&af=afizj2v9e6',
+  kitLink: braipIarmonize('plav449r'),
+  sleepWarning: 'O kit inclui o IArmonize Sleep, com 5 mg de melatonina por cápsula: cerca de 24 vezes o limite de 0,21 mg por dia que a Anvisa permite em suplementos. Dose desse tamanho só deveria ser usada com orientação médica.',
+  kits: [
+    { name: 'Kit IArmonize completo', qty: '2 Hair, 1 Sleep, 1 Energy, 3 Vital e necessaire · 3 meses', months: 3, total: 1256, installments: '10x de R$ 125,60 sem juros', plan: braipIarmonize('plav449r'), warn: 'Inclui o Sleep, com melatonina em dose acima do limite para suplementos. Leia o aviso antes de comprar.' },
+    { name: 'Hair · 1 frasco', qty: '90 cápsulas · 45 dias', months: 1.5, total: 267, installments: '3x de R$ 89 sem juros', plan: braipIarmonize('plae68kd') },
+    { name: 'Hair · 2 frascos', qty: '180 cápsulas · 3 meses', months: 3, total: 444, installments: '3x de R$ 148 sem juros', plan: braipIarmonize('plaq4x90') },
+    { name: 'Energy · 1 frasco', qty: '90 cápsulas · 3 meses', months: 3, total: 167, installments: '3x de R$ 55,67 sem juros', plan: braipIarmonize('plamnyky') },
+    { name: 'Vital · 1 frasco', qty: '30 ml · 1 mês', months: 1, total: 97, installments: '3x de R$ 32,33 sem juros', plan: braipIarmonize('plazr8km') },
+    { name: 'Vital · 2 frascos', qty: '60 ml · 2 meses', months: 2, total: 167, installments: '3x de R$ 55,67 sem juros', plan: braipIarmonize('pla2vxod') },
+    { name: 'Vital · 3 frascos', qty: '90 ml · 3 meses', months: 3, total: 227, installments: '3x de R$ 75,67 sem juros', plan: braipIarmonize('plagmq4v') },
+  ],
+  // Sem botão de compra no site (ver aviso acima). Planos na Braip: Sleep pla1l2o6, Sleep + Energy pla89por.
+  noLink: [
+    { name: 'Sleep · 1 frasco', qty: '90 cápsulas · 3 meses', total: 167 },
+    { name: 'Sleep + Energy', qty: '2 frascos · 3 meses', total: 297 },
+  ],
+};
+
+export const iarmonizePages = [
+  { href: '/iarmonize/', title: 'IArmonize: ficha do kit da Integra Pharma, composição e preço', short: 'Ficha completa' },
+  { href: '/iarmonize/funciona/', title: 'IArmonize funciona? Hair, Sleep, Energy e Vital, um por um', short: 'Funciona?' },
+  { href: '/iarmonize/como-tomar/', title: 'Como tomar o kit IArmonize: horários, interações e quem não deve usar', short: 'Como tomar e cuidados' },
+  { href: '/iarmonize/onde-comprar/', title: 'Onde comprar IArmonize original: preços dos kits e devolução', short: 'Onde comprar' },
+  { href: '/iarmonize/e-confiavel/', title: 'IArmonize e Integra Pharma são confiáveis? Quem fabrica e Reclame Aqui', short: 'É confiável?' },
+];
+
 export const ozenvittaPages = [
   { href: '/ozenvitta/', title: 'OzenVitta: ficha completa, composição e preço', short: 'Ficha completa' },
   { href: '/ozenvitta/funciona/', title: 'OzenVitta funciona? O que a ciência diz de cada ingrediente', short: 'Funciona?' },
@@ -296,6 +339,7 @@ export const catalog = [
   { name: 'DTX Black', href: '/dtx-black/', pill: 'Emagrecimento', summary: 'Psyllium, cafeína, cromo, spirulina, inulina e linhaça em cápsulas.', pages: dtxblackPages },
   { name: 'Mounjax', href: '/mounjax/', pill: 'Gotas', summary: 'Gotas da Ozenpharma com café verde, cúrcuma, cromo e vitaminas. Não é Mounjaro.', pages: mounjaxPages },
   { name: 'TG30 Crisfit', href: '/tg30/', pill: 'Gotas', summary: 'Café verde, cúrcuma e vitaminas D3 e B12 em gotas.', pages: tg30Pages },
+  { name: 'IArmonize', href: '/iarmonize/', pill: 'Cabelo, sono e energia', summary: 'Kit da Integra Pharma com quatro fórmulas: Hair, Sleep, Energy e Vital.', pages: iarmonizePages },
   { name: 'Vitta Resveratrol', href: '/vitta-resveratrol/', pill: 'Pele', summary: 'Colágeno, ácido hialurônico, resveratrol e vitaminas.', pages: resveratrolPages },
 ];
 

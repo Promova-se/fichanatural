@@ -1,0 +1,65 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { iarmonize as p, iarmonizePages } from '../../../data/site';
+
+const faq = [
+  { q: 'IArmonize Hair faz o cabelo crescer?', a: 'Só tende a ajudar se a queda vier da falta de algum nutriente, como ferro ou biotina. Em quem não tem deficiência, os estudos não mostram efeito. Queda forte ou repentina deve ser avaliada por um dermatologista.' },
+  { q: 'IArmonize Sleep funciona para dormir?', a: 'A melatonina ajuda a pegar no sono um pouco mais rápido, mas a dose do Sleep (5 mg) é de remédio, não de suplemento. Doses menores costumam ter efeito parecido. Use só com orientação médica.' },
+  { q: 'IArmonize Energy dá energia como café?', a: 'Não. Não tem cafeína nem estimulantes. A coenzima Q10 e o magnésio participam da produção de energia nas células, e o efeito sobre o cansaço, quando aparece, é discreto e leva semanas.' },
+  { q: 'O IArmonize Vital aumenta a imunidade?', a: 'As vitaminas D, A e B12 são importantes para a imunidade, mas suplementar só faz diferença em quem tem falta delas. A página não informa as doses, então não dá para avaliar.' },
+];
+---
+<Article
+  ogImage="/img/iarmonize/og-iarmonize.jpg"
+  title="IArmonize funciona? Hair, Sleep, Energy e Vital, um por um"
+  seoTitle="IArmonize funciona? Análise das 4 fórmulas"
+  description="O IArmonize funciona? Analisamos o Hair, o Sleep, o Energy e o Vital, comparando as doses com as dos estudos, e mostramos o que é exagero na página."
+  kicker="Funciona?"
+  lead="O kit reúne quatro fórmulas com propostas diferentes, e o resultado depende de cada uma. O Energy tem doses coerentes com os estudos, o Sleep tem dose de remédio, e o Hair e o Vital não mostram as quantidades."
+  crumbs={[{ name: 'IArmonize', href: '/iarmonize/' }, { name: 'Funciona?', href: '/iarmonize/funciona/' }]}
+  faq={faq}
+  related={iarmonizePages}
+  sources={[
+    { label: 'Página oficial do IArmonize (consultada em 15/10/2026)', url: 'https://integrapharmabrasil.com.br/' },
+    { label: 'NIH Office of Dietary Supplements: Biotin, Health Professional Fact Sheet', url: 'https://ods.od.nih.gov/factsheets/Biotin-HealthProfessional/' },
+    { label: 'NCCIH: Melatonin, What You Need To Know', url: 'https://www.nccih.nih.gov/health/melatonin-what-you-need-to-know' },
+    { label: 'NCCIH: Coenzyme Q10', url: 'https://www.nccih.nih.gov/health/coenzyme-q10' },
+    { label: 'Canaltech: o que mudou com a liberação da melatonina como suplemento pela Anvisa', url: 'https://canaltech.com.br/saude/melatonina-anvisa-o-que-mudou-198989/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Em parte. O Energy é o mais bem montado, mas o efeito sobre o cansaço costuma ser discreto. O Hair e o Vital só fazem diferença em quem tem deficiência de algum nutriente, e as doses não são informadas. O Sleep provavelmente ajuda a dormir, mas com 5 mg de melatonina, dose que deveria ter orientação médica.</p>
+  </div>
+
+  <h2>Fórmula por fórmula</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Produto</th><th>O que tem</th><th>O que dá para esperar</th></tr></thead>
+      <tbody>
+        <tr><td>Energy</td><td>Coenzima Q10 150 mg, dimalato de magnésio 200 mg, zinco 7 mg</td><td>Doses parecidas com as dos estudos de coenzima Q10 (100 a 300 mg). As evidências sobre cansaço são fracas e o efeito, quando aparece, é pequeno. Não tem estimulantes</td></tr>
+        <tr><td>Sleep</td><td>Melatonina 5 mg, L-teanina 200 mg, 5-HTP 50 mg, treonato de magnésio 150 mg</td><td>A melatonina encurta um pouco o tempo para pegar no sono. A L-teanina está na dose estudada para relaxamento. Mas 5 mg de melatonina é cerca de 24 vezes o limite da Anvisa para suplementos</td></tr>
+        <tr><td>Hair</td><td>Queratina, biotina, complexo B, silício, ferro, metionina, L-cisteína, PABA, levedura e MSM</td><td>Biotina e ferro ajudam quem tem deficiência. Em quem não tem, os estudos não mostram efeito no cabelo. Doses não informadas</td></tr>
+        <tr><td>Vital</td><td>Vitaminas D, A, K2, E, ácido fólico e B12, em gotas</td><td>Úteis para quem tem falta delas, como a vitamina D, que é comum. Doses não informadas, então não dá para dizer se cobrem uma deficiência</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>O magnésio dos dois produtos vem em sais (dimalato e treonato) em que boa parte do peso não é magnésio. A quantidade de magnésio de fato é bem menor que os 200 mg e 150 mg do rótulo.</p>
+
+  <h2>O que é exagero na página de vendas</h2>
+  <ul>
+    <li><strong>"Resultado perceptível já nas primeiras semanas":</strong> vale para o sono, por causa da melatonina. Para cabelo e unhas, qualquer mudança leva meses, porque eles crescem devagar.</li>
+    <li><strong>"Reduz a queda capilar" e "estimula o crescimento":</strong> só faz sentido se a queda vier de deficiência nutricional. Queda por fatores hormonais ou genéticos não responde a vitaminas.</li>
+    <li><strong>"Fortalece a imunidade":</strong> sem as doses, não dá para avaliar. Vitaminas não reforçam a imunidade de quem já está bem nutrido.</li>
+    <li><strong>"100% natural":</strong> a melatonina e o 5-HTP de suplementos são produzidos em laboratório, e a dose do Sleep é de uso farmacológico.</li>
+    <li><strong>Depoimentos:</strong> trazem só nome e cidade, sem como conferir. Um deles fala de dor nas articulações, que nenhuma das fórmulas promete tratar.</li>
+  </ul>
+
+  <h2>Por que a melatonina do Sleep preocupa</h2>
+  <p>Desde 2021, a Anvisa permite melatonina em suplementos alimentares para adultos, com limite de 0,21 mg por dia. Doses maiores são consideradas de uso como medicamento. O Sleep tem 5 mg por cápsula. Para quem usa, os efeitos mais comuns são sonolência no dia seguinte, dor de cabeça e tontura. A fórmula também tem 5-HTP, que aumenta a serotonina e não deve ser combinado com antidepressivos. Mais detalhes em <a href="/iarmonize/como-tomar/">como tomar e cuidados</a>.</p>
+
+  <h2>Para quem pode fazer sentido</h2>
+  <p>O Energy pode fazer sentido para quem quer coenzima Q10 sem estimulantes. O Hair e o Vital podem ajudar quem tem deficiência confirmada por exame: nesse caso, vale perguntar ao médico se a dose do rótulo é suficiente. Se a ideia é dormir melhor, converse com o médico antes de usar o Sleep, que vem no kit completo.</p>
+
+  <BuyBox compact produto="IArmonize" href={p.link} title="IArmonize no site oficial" text="Produtos avulsos a partir de R$ 97. O kit completo inclui o Sleep." cta="Ver produtos e preços" />
+</Article>

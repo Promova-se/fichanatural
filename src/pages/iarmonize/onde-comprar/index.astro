@@ -1,0 +1,51 @@
+---
+import Article from '../../../layouts/Article.astro';
+import KitCards from '../../../components/KitCards.astro';
+import { iarmonize as p, iarmonizePages } from '../../../data/site';
+
+const faq = [
+  { q: 'Onde comprar o IArmonize original?', a: 'No site oficial da Integra Pharma, com pagamento pela Braip. Na consulta de 15/10/2026, não encontramos o IArmonize em farmácias ou marketplaces.' },
+  { q: 'O IArmonize tem garantia?', a: 'A página de vendas não informa garantia de satisfação. Vale o direito de arrependimento do Código de Defesa do Consumidor: 7 dias a partir do recebimento, para compras pela internet.' },
+  { q: 'Dá para comprar só um produto do kit?', a: 'Sim. Hair, Energy, Vital e Sleep são vendidos separados, e há um combo Sleep + Energy. O kit completo junta os quatro com uma necessaire.' },
+];
+---
+<Article
+  ogImage="/img/iarmonize/og-iarmonize.jpg"
+  title="Onde comprar IArmonize original: preços dos kits e devolução"
+  seoTitle="Onde comprar IArmonize original e preço"
+  description="Onde comprar o IArmonize original, o preço de cada produto e do kit completo, formas de pagamento e como devolver, já que a página não informa garantia."
+  kicker="Compra segura"
+  lead="O IArmonize é vendido pelo site oficial da Integra Pharma, com pagamento pela Braip. Dá para comprar o kit completo ou cada produto separado. A página não informa garantia própria."
+  crumbs={[{ name: 'IArmonize', href: '/iarmonize/' }, { name: 'Onde comprar', href: '/iarmonize/onde-comprar/' }]}
+  faq={faq}
+  related={iarmonizePages}
+  sources={[
+    { label: 'Página oficial do IArmonize e checkout da Braip (consultados em 15/10/2026)', url: 'https://integrapharmabrasil.com.br/' },
+    { label: 'Código de Defesa do Consumidor, art. 49 (direito de arrependimento)', url: 'https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Compre pelo site oficial. Os avulsos custam de R$ 97 a R$ 444, em até 3x sem juros. O kit completo custa R$ 1.256, em até 10x sem juros ou com 5% de desconto no Pix. Se não precisa das quatro fórmulas, comprar separado sai mais barato, e você evita o Sleep, que tem melatonina em dose alta.</p>
+  </div>
+
+  <h2>Escolha o produto ou o kit</h2>
+  <KitCards kits={p.kits} unit="mês" produto="IArmonize" />
+
+  <div class="alert">
+    <p><strong>Antes de comprar o kit completo</strong>{p.sleepWarning} A fórmula também tem 5-HTP, que não deve ser combinado com antidepressivos. Se você toma algum remédio de uso contínuo, fale com o médico antes. Veja <a href="/iarmonize/como-tomar/">todos os cuidados</a>.</p>
+  </div>
+  <p class="small">O Sleep avulso (R$ 167) e o combo Sleep + Energy (R$ 297) também estão à venda no site oficial. Não colocamos link para eles pelo mesmo motivo.</p>
+
+  <h2>Quanto sai por mês</h2>
+  <p>O kit completo dura 3 meses e sai por cerca de R$ 419 por mês. Comprando só o Energy e o Vital para 3 meses, o gasto cai para R$ 394 no total, ou cerca de R$ 131 por mês. O Hair é o item mais caro: o frasco dura 45 dias e custa R$ 267.</p>
+
+  <h2>Garantia e devolução</h2>
+  <ol>
+    <li><strong>Sem garantia de satisfação informada:</strong> a página de vendas não fala em devolução do dinheiro por falta de resultado.</li>
+    <li><strong>Direito de arrependimento:</strong> 7 dias a partir do recebimento, garantido pelo Código de Defesa do Consumidor em compras pela internet.</li>
+    <li><strong>Como pedir:</strong> pelo WhatsApp da página, pelo telefone {p.phone} ou pelo e-mail {p.sac}. Guarde o número do pedido e registre o pedido por escrito.</li>
+  </ol>
+
+  <h2>Pagamento</h2>
+  <p>Pix, boleto e cartão, processados pela Braip. Nos avulsos, até 3x sem juros. No kit completo, até 10x sem juros ou 5% de desconto no Pix. Os valores podem mudar: confira o preço final no checkout.</p>
+</Article>

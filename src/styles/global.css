@@ -129,6 +129,10 @@ h3 { font-size: 1.2rem; margin: 1.6em 0 .4em; }
 .kit-card strong { font-family: var(--serif); font-size: 1.05rem; }
 .kit-card .price { font-size: 1.3rem; font-weight: 600; color: var(--ink); }
 .kit-card .small { margin: 0; }
+.kit-warn { margin: 6px 0 0; padding: 8px 10px; font-size: .85rem; line-height: 1.4; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0; }
+.alert { border-left: 4px solid var(--accent); background: var(--accent-soft); padding: 16px 20px; border-radius: 0 var(--radius) var(--radius) 0; margin: 24px 0; }
+.alert p { margin: 0; }
+.alert strong:first-child { display: block; font-family: var(--serif); font-size: 1.05rem; margin-bottom: 4px; }
 .kit-card .btn { margin-top: 8px; justify-self: start; align-self: flex-start; }
 
 /* Foto do produto no topo da ficha */

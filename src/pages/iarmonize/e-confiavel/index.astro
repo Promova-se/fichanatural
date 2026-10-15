@@ -1,0 +1,72 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { iarmonize as p, iarmonizePages } from '../../../data/site';
+
+const faq = [
+  { q: 'IArmonize é golpe?', a: `Não encontramos sinais de golpe. O produtor aparece no checkout como ${p.maker}, a venda passa pela Braip e a página informa endereço, telefone e e-mail. Os pontos de atenção são a falta de CNPJ e de garantia na página e a dose de melatonina do Sleep.` },
+  { q: 'Qual a nota da Integra Pharma no Reclame Aqui?', a: 'Na consulta de 15/10/2026, não havia reputação calculada. Existe uma página "Integra Pharma" sem reclamações, mas ligada a outro site, e a farmácia Iris D\'Água também não tinha reclamações no período. A marca IArmonize é nova.' },
+  { q: 'O IArmonize é aprovado pela Anvisa?', a: 'A página não mostra número de registro. Suplementos alimentares, em geral, são dispensados de registro, e a Anvisa não avalia se funcionam. A melatonina do Sleep está acima do limite que a Anvisa permite em suplementos.' },
+];
+---
+<Article
+  ogImage="/img/iarmonize/og-iarmonize.jpg"
+  title="IArmonize e Integra Pharma são confiáveis? Quem fabrica e Reclame Aqui"
+  seoTitle="IArmonize é confiável? Integra Pharma e Reclame Aqui"
+  description="IArmonize é confiável ou golpe? Veja quem fabrica o kit da Integra Pharma, o que diz o Reclame Aqui, o que falta na página e como comprar com segurança."
+  kicker="Reputação"
+  lead="O IArmonize não tem cara de golpe: o produtor é uma farmácia de manipulação identificada no checkout, e a venda passa pela Braip. Mas a marca é nova, sem histórico de reclamações, e a página não mostra CNPJ nem garantia."
+  crumbs={[{ name: 'IArmonize', href: '/iarmonize/' }, { name: 'É confiável?', href: '/iarmonize/e-confiavel/' }]}
+  faq={faq}
+  related={iarmonizePages}
+  sources={[
+    { label: 'Página oficial do IArmonize e checkout da Braip (consultados em 15/10/2026)', url: 'https://integrapharmabrasil.com.br/' },
+    { label: 'Reclame Aqui: Integra Pharma, consultado em 15/10/2026', url: 'https://www.reclameaqui.com.br/empresa/integra-pharma/' },
+    { label: "Reclame Aqui: Iris D'Água, consultado em 15/10/2026", url: 'https://www.reclameaqui.com.br/empresa/iris-dagua/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Em parte. Há sinais de empresa real: produtor identificado, endereço, telefone e pagamento pela Braip. Faltam o CNPJ e uma política de garantia na página, e a marca ainda não tem histórico no Reclame Aqui. O maior problema não é de confiança, e sim de segurança: o Sleep tem melatonina em dose acima do limite para suplementos.</p>
+  </div>
+
+  <h2>Quem vende</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Marca</th><td>{p.brand}</td></tr>
+        <tr><th>Produtor (no checkout)</th><td>{p.maker}</td></tr>
+        <tr><th>Endereço</th><td>{p.address}</td></tr>
+        <tr><th>Atendimento</th><td>WhatsApp, {p.phone} e {p.sac}</td></tr>
+        <tr><th>CNPJ</th><td>Não informado na página</td></tr>
+        <tr><th>Pagamento</th><td>Braip</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Ser uma farmácia de manipulação é um ponto a favor: esse tipo de empresa precisa de licença sanitária e de farmacêutico responsável. Mas a página não informa o número da licença nem o farmacêutico.</p>
+
+  <h2>O que diz o Reclame Aqui</h2>
+  <ul>
+    <li><strong>Integra Pharma:</strong> existe uma página com esse nome, sem reputação calculada e sem reclamações entre abril e setembro de 2026. Ela está ligada a outro site, e não dá para afirmar que é a mesma empresa do IArmonize.</li>
+    <li><strong>Iris D'Água:</strong> está no Reclame Aqui há 9 anos, sem reclamações entre abril e setembro de 2026.</li>
+    <li><strong>IArmonize:</strong> não encontramos página da marca.</li>
+  </ul>
+  <p>Ausência de reclamações, num produto recém-lançado, não quer dizer que o atendimento seja bom: quer dizer que ainda não há dados. Vamos atualizar esta página quando surgirem avaliações.</p>
+
+  <h2>Sinais de alerta na página de vendas</h2>
+  <ul>
+    <li><strong>Sem garantia informada:</strong> só vale o direito de arrependimento de 7 dias.</li>
+    <li><strong>Melatonina acima do limite:</strong> 5 mg por cápsula no Sleep, contra 0,21 mg por dia permitidos em suplementos.</li>
+    <li><strong>Depoimentos sem como conferir:</strong> só nome e cidade.</li>
+    <li><strong>Duas fórmulas sem doses:</strong> Hair e Vital.</li>
+  </ul>
+
+  <h2>Como comprar com segurança</h2>
+  <ol>
+    <li>Compre só pelo site oficial, com pagamento pela Braip.</li>
+    <li>Prefira o cartão de crédito, que facilita contestar uma cobrança.</li>
+    <li>Se não quer o Sleep, compre os produtos separados em vez do kit.</li>
+    <li>Confira o rótulo ao receber e, se quiser devolver, peça dentro de 7 dias e por escrito. Veja <a href="/iarmonize/onde-comprar/">como funciona</a>.</li>
+  </ol>
+
+  <BuyBox compact produto="IArmonize" href={p.link} title="IArmonize no site oficial" text="Produtos avulsos a partir de R$ 97 e kit completo por R$ 1.256." cta="Ver produtos e preços" />
+</Article>
