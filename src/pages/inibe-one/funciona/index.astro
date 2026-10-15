@@ -1,0 +1,61 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { inibeone as p, inibeonePages, ozenvitta } from '../../../data/site';
+
+const faq = [
+  { q: 'Inibe One emagrece?', a: 'Pode ajudar um pouco na saciedade, mas as doses de fibras são pequenas. Os estudos com psyllium e quitosana usam quantidades dezenas de vezes maiores e, mesmo assim, mostram perdas pequenas.' },
+  { q: 'Inibe One tem efeito de cirurgia bariátrica?', a: 'Não. A cirurgia bariátrica reduz o estômago e leva a perdas grandes de peso. Fibras em cápsula dão um pouco de saciedade, um efeito muito menor e de outra natureza.' },
+  { q: 'Inibe One elimina gordura localizada?', a: 'Nenhum suplemento elimina gordura de um lugar específico do corpo. A gordura diminui de forma geral quando há déficit de calorias.' },
+];
+---
+<Article
+  ogImage="/img/inibe-one/og-inibe-one.jpg"
+  title="Inibe One funciona? As doses do rótulo e o 'efeito bariátrica'"
+  seoTitle="Inibe One funciona? O que dizem as doses"
+  description="Inibe One funciona? Comparamos a dose de cada ingrediente da tabela oficial com a usada em estudos e explicamos o que esperar do suplemento."
+  kicker="Funciona?"
+  lead="O Inibe One mostra a dose de cada ingrediente, e isso permite comparar com os estudos. As fibras e a quitosana aparecem em quantidades muito menores que as pesquisadas."
+  crumbs={[{ name: 'Inibe One', href: '/inibe-one/' }, { name: 'Funciona?', href: '/inibe-one/funciona/' }]}
+  faq={faq}
+  related={inibeonePages}
+  sources={[
+    { label: 'Página oficial do Inibe One e tabela nutricional (consultadas em 15/10/2026)', url: 'https://inibeoneoriginal.com/' },
+    { label: 'Darooghegi Mofrad M et al. Meta-análise de 22 ensaios clínicos sobre psyllium e peso corporal. Crit Rev Food Sci Nutr, 2020', url: 'https://pubmed.ncbi.nlm.nih.gov/30880409/' },
+    { label: 'NIH Office of Dietary Supplements: Dietary Supplements for Weight Loss (quitosana, cromo e outros)', url: 'https://ods.od.nih.gov/factsheets/WeightLoss-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Pouco. As fibras dão alguma saciedade, mas a cápsula tem cerca de 350 mg delas, enquanto os estudos usam de 5 a 15 gramas por dia. A quitosana vem com 50 mg, contra 1 a 3 gramas nas pesquisas, que já mostram efeito mínimo. "Efeito bariátrica" e "eliminar gordura localizada" não têm base.</p>
+  </div>
+
+  <h2>Dose do rótulo contra dose dos estudos</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Ingrediente</th><th>Por cápsula</th><th>O que dá para esperar</th></tr></thead>
+      <tbody>
+        <tr><td>Psyllium</td><td>100 mg</td><td>Estudos usam 5 a 15 g por dia e, mesmo assim, não acharam diferença significativa no peso. Nesta dose, efeito mínimo</td></tr>
+        <tr><td>FOS, inulina, chia e ágar-ágar</td><td>250 mg somados</td><td>Fibras que ajudam o intestino em doses de gramas. Nesta dose, efeito pequeno</td></tr>
+        <tr><td>Quitosana</td><td>50 mg</td><td>Revisão da Cochrane achou efeito mínimo com 1 a 3 g por dia. Nesta dose, sem efeito esperado</td></tr>
+        <tr><td>Espirulina</td><td>75 mg</td><td>Estudos usam gramas. Nesta dose, sem efeito esperado</td></tr>
+        <tr><td>Cromo</td><td>125 mcg</td><td>Dose comum de suplemento. Efeito pequeno no peso, de relevância incerta</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Mesmo tomando mais de uma cápsula por dia, as fibras continuariam muito abaixo das quantidades estudadas.</p>
+
+  <h2>O que é exagero na página de vendas</h2>
+  <ul>
+    <li><strong>"Efeito bariátrica" e "reduz drasticamente a gordura abdominal":</strong> sem estudo e sem relação com o que fibras fazem.</li>
+    <li><strong>"Único emagrecedor capaz de penetrar o tecido adiposo":</strong> nenhum dos ingredientes age assim.</li>
+    <li><strong>"Emagrece sem precisar de exercícios":</strong> o cromo não tem esse efeito.</li>
+    <li><strong>"Combate estrias e celulite":</strong> nenhum ingrediente tem evidência para isso.</li>
+    <li><strong>"Emagrecimento comprovado":</strong> a página não cita nenhum estudo.</li>
+  </ul>
+
+  <h2>Para quem pode fazer sentido</h2>
+  <p>Para quem quer um suplemento de fibras sem estimulantes e entende que o efeito é pequeno. Pelo mesmo objetivo, o <a href="/ozenvitta/">OzenVitta</a> custa menos por mês, inclui laranja moro e tem garantia de 30 dias sem fotos de balança. Se a ideia é só a fibra, o <a href="/psyllium/">psyllium em pó</a> sai bem mais barato e permite a dose dos estudos.</p>
+
+  <BuyBox compact produto="OzenVitta" href={ozenvitta.link} title="Alternativa: OzenVitta" text="Fibras, laranja moro e L-carnitina, a partir de R$ 147 o pote, com garantia de 30 dias." cta="Ver kits do OzenVitta" />
+  <p class="small">Se preferir o Inibe One, os kits estão na <a href="/inibe-one/">ficha completa</a>.</p>
+</Article>

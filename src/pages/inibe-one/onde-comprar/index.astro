@@ -1,0 +1,50 @@
+---
+import Article from '../../../layouts/Article.astro';
+import KitCards from '../../../components/KitCards.astro';
+import { inibeone as p, inibeonePages } from '../../../data/site';
+
+const faq = [
+  { q: 'Inibe One vende no Mercado Livre?', a: 'Há anúncios e produtos com nomes parecidos em outros sites, e há reclamação no Reclame Aqui sobre um "Inibe One" comprado de outra empresa. Para ter a garantia, compre pelo site oficial, com pagamento pela Monetizze.' },
+  { q: 'Como funciona a garantia do Inibe One?', a: 'São 30 dias a partir da entrega, só na primeira compra. É preciso enviar fotos da balança com data no início, com 7 dias e com 15 dias de uso, e devolver os potes extras lacrados.' },
+  { q: 'O que é o Inibe One Black que aparece no checkout?', a: 'É uma oferta extra, de outro produto, anunciado como "2x mais potente". A composição não está na página. Você pode finalizar a compra sem ele.' },
+];
+---
+<Article
+  ogImage="/img/inibe-one/og-inibe-one.jpg"
+  title="Onde comprar Inibe One original: preço e as regras da garantia"
+  seoTitle="Onde comprar Inibe One original e garantia"
+  description="Onde comprar o Inibe One original, preço de cada kit, ofertas extras do checkout e as regras da garantia de 30 dias, que exige fotos da balança."
+  kicker="Compra segura"
+  lead="O Inibe One original é vendido pelo site oficial, com pagamento pela Monetizze. A garantia de 30 dias existe, mas tem condições: fotos datadas da balança e só para a primeira compra."
+  crumbs={[{ name: 'Inibe One', href: '/inibe-one/' }, { name: 'Onde comprar', href: '/inibe-one/onde-comprar/' }]}
+  faq={faq}
+  related={inibeonePages}
+  sources={[
+    { label: 'Página oficial do Inibe One (consultada em 15/10/2026)', url: 'https://inibeoneoriginal.com/' },
+    { label: 'Termos de garantia do Inibe One', url: 'https://inibeoneoriginal.com/termos-de-garantia' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Compre pelo site oficial, a partir de R$ 187 o pote, com frete grátis. Para usar a garantia de 30 dias, tire fotos da balança com data no primeiro dia, no 7º e no 15º, e use só um pote. No checkout, as ofertas extras são opcionais.</p>
+  </div>
+
+  <h2>Escolha o kit</h2>
+  <p>O preço por pote cai de R$ 187 (1 pote) para R$ 145,67 (3 potes). Mesmo no kit maior, sai mais caro por mês que fórmulas parecidas, como o <a href="/ozenvitta/">OzenVitta</a>, a partir de R$ 47 por pote no kit de 8.</p>
+  <KitCards kits={p.kits} mcr={p.mcr} produto="Inibe One" />
+
+  <h2>Ofertas extras no checkout</h2>
+  <p>Ao finalizar, o checkout oferece o "Inibe One Black, 2x mais potente", por R$ 137, e um material digital sobre metabolismo, por R$ 19,90. São opcionais. A composição do Inibe One Black não está publicada na página.</p>
+
+  <h2>A garantia, explicada</h2>
+  <ol>
+    <li><strong>Prazo:</strong> 30 dias corridos a partir da entrega.</li>
+    <li><strong>Só na primeira compra</strong> do cliente.</li>
+    <li><strong>Fotos obrigatórias:</strong> balança com data visível no início, com 7 dias e com 15 dias de uso.</li>
+    <li><strong>Só um pote pode ser aberto:</strong> os outros precisam voltar lacrados.</li>
+    <li><strong>Devolução:</strong> com código dos Correios, sem custo para o cliente. O dinheiro volta em até 10 dias úteis.</li>
+  </ol>
+  <p>A página chama a garantia de "incondicional", mas as condições acima valem. Se pensa em usar a garantia, comece as fotos no primeiro dia. Além dela, toda compra on-line tem 7 dias de direito de arrependimento.</p>
+
+  <h2>Pagamento</h2>
+  <p>Pix, boleto e cartão. No cartão parcelado, os juros são de 2,99% ao mês: o kit de 3 potes sai por 12x de R$ 42,88, cerca de R$ 515 no total, contra R$ 437 à vista. Atendimento: WhatsApp em horário comercial e {p.sac}.</p>
+</Article>

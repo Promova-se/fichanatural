@@ -15,7 +15,12 @@ export const affiliate = { monetizze: 'AXA22582261' };
 // O código `mcr` muda por produto: passe o do produto (padrão = ReduPhine).
 // Link oficial de afiliado da Monetizze ("Pegar link de venda"): /r/{mcr}?u=c&pl={código do checkout sem o D inicial}.
 // Passa pelo rastreio da Monetizze e redireciona para o checkout com ?mcr=. Testado nos 23 kits em 15/10/2026.
-export const checkoutUrl = (plan: string, mcr: string = affiliate.monetizze) => `https://app.monetizze.com.br/r/${mcr}?u=c&pl=${plan.replace(/^D/, '')}`;
+// Exceção: checkouts cujo código não começa com D (ex.: Inibe One, KHG273901) não funcionam no /r/ e vão
+// direto para app.monetizze.com.br/checkout/{código}?mcr=..., o mesmo destino do redirecionamento oficial.
+export const checkoutUrl = (plan: string, mcr: string = affiliate.monetizze) =>
+  plan.startsWith('D')
+    ? `https://app.monetizze.com.br/r/${mcr}?u=c&pl=${plan.slice(1)}`
+    : `https://app.monetizze.com.br/checkout/${plan}?mcr=${mcr}`;
 
 export type Product = {
   slug: string;
@@ -192,6 +197,35 @@ export const dtxblackPages = [
   { href: '/dtx-black/e-confiavel/', title: 'DTX Black é confiável? Empresa, Anvisa e Reclame Aqui', short: 'É confiável?' },
 ];
 
+// Inibe One, da Nutracaps Digital LTDA (CNPJ 29.822.523/0001-03, Belo Horizonte), conferido em 15/10/2026.
+// Doses por cápsula (tabela da página): psyllium 100 mg, espirulina 75, FOS 75, inulina 50, chia 75, ágar 50, quitosana 50, cromo 125 mcg.
+export const inibeone = {
+  name: 'Inibe One',
+  company: 'Nutracaps Digital LTDA',
+  cnpj: '29.822.523/0001-03',
+  sac: 'inibeone@gmail.com',
+  mcr: 'AYZ25846371',
+  link: 'https://app.monetizze.com.br/r/AYZ25846371',
+  ingredients: ['Psyllium', 'Espirulina', 'Frutooligossacarídeos (FOS)', 'Inulina', 'Farinha de chia', 'Ágar-ágar', 'Quitosana', 'Cromo'],
+  dose: [
+    ['Psyllium', '100 mg'], ['Espirulina', '75 mg'], ['Frutooligossacarídeos (FOS)', '75 mg'], ['Farinha de chia', '75 mg'],
+    ['Inulina', '50 mg'], ['Ágar-ágar', '50 mg'], ['Quitosana', '50 mg'], ['Cromo', '125 mcg (357% do valor diário)'],
+  ],
+  kits: [
+    { name: '1 pote', qty: '1 pote · 1 mês', months: 1, total: 187, installments: '12x de R$ 18,78', plan: 'KHG273901' },
+    { name: '2 potes', qty: '2 potes · 2 meses', months: 2, total: 337, installments: '12x de R$ 33,84', plan: 'KNR273906' },
+    { name: '3 potes', qty: '3 potes · 3 meses', months: 3, total: 437, installments: '12x de R$ 42,88', plan: 'KFM273911' },
+  ],
+};
+
+export const inibeonePages = [
+  { href: '/inibe-one/', title: 'Inibe One: ficha completa, composição e preço', short: 'Ficha completa' },
+  { href: '/inibe-one/funciona/', title: 'Inibe One funciona? As doses do rótulo e o "efeito bariátrica"', short: 'Funciona?' },
+  { href: '/inibe-one/como-tomar/', title: 'Como tomar Inibe One: efeitos colaterais e contraindicações', short: 'Como tomar e cuidados' },
+  { href: '/inibe-one/onde-comprar/', title: 'Onde comprar Inibe One original: preço e as regras da garantia', short: 'Onde comprar e garantia' },
+  { href: '/inibe-one/e-confiavel/', title: 'Inibe One é confiável? Reclame Aqui e a empresa por trás', short: 'É confiável?' },
+];
+
 export const ozenvittaPages = [
   { href: '/ozenvitta/', title: 'OzenVitta: ficha completa, composição e preço', short: 'Ficha completa' },
   { href: '/ozenvitta/funciona/', title: 'OzenVitta funciona? O que a ciência diz de cada ingrediente', short: 'Funciona?' },
@@ -258,6 +292,7 @@ export const study = {
 export const catalog = [
   { name: 'OzenVitta', href: '/ozenvitta/', pill: 'Emagrecimento', summary: 'Fibras, L-carnitina, laranja moro e cromo em cápsulas.', pages: ozenvittaPages },
   { name: 'ReduPhine Caps', href: '/reduphine-caps/', pill: 'Emagrecimento', summary: 'Spirulina, psyllium, quitosana e cromo, com opção de combo com gotas.', pages: reduphinePages },
+  { name: 'Inibe One', href: '/inibe-one/', pill: 'Emagrecimento', summary: 'Psyllium, quitosana, espirulina, chia, ágar e cromo em cápsulas.', pages: inibeonePages },
   { name: 'DTX Black', href: '/dtx-black/', pill: 'Emagrecimento', summary: 'Psyllium, cafeína, cromo, spirulina, inulina e linhaça em cápsulas.', pages: dtxblackPages },
   { name: 'Mounjax', href: '/mounjax/', pill: 'Gotas', summary: 'Gotas da Ozenpharma com café verde, cúrcuma, cromo e vitaminas. Não é Mounjaro.', pages: mounjaxPages },
   { name: 'TG30 Crisfit', href: '/tg30/', pill: 'Gotas', summary: 'Café verde, cúrcuma e vitaminas D3 e B12 em gotas.', pages: tg30Pages },

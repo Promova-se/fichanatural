@@ -1,0 +1,77 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { inibeone as p, inibeonePages } from '../../../data/site';
+
+const faq = [
+  { q: 'Inibe One é golpe?', a: `Não. O produto é vendido por uma empresa identificada, a ${p.company} (CNPJ ${p.cnpj}), com pagamento pela Monetizze, e tem reputação "Boa" no Reclame Aqui. Os pontos de atenção são as promessas exageradas e reclamações recentes ainda sem resposta.` },
+  { q: 'Qual a nota do Inibe One no Reclame Aqui?', a: 'Na consulta de 15/10/2026, o Inibe One tinha reputação "Boa", nota 7,6, com 89% das reclamações respondidas e 86% resolvidas nos últimos 12 meses.' },
+  { q: 'Inibe One é aprovado pela Anvisa?', a: 'A página não mostra número de registro ou notificação. Suplementos alimentares, em geral, são dispensados de registro e a Anvisa não avalia se funcionam.' },
+];
+---
+<Article
+  ogImage="/img/inibe-one/og-inibe-one.jpg"
+  title="Inibe One é confiável? Reclame Aqui e a empresa por trás"
+  seoTitle="Inibe One é confiável? Reclame Aqui e golpe"
+  description="Inibe One é confiável ou golpe? Veja a nota no Reclame Aqui, quem é a empresa, as reclamações recentes e como comprar com segurança."
+  kicker="Reputação"
+  lead="O Inibe One é da Nutracaps Digital, com CNPJ e endereço informados, e tem reputação 'Boa' no Reclame Aqui. Mas as reclamações mais recentes, inclusive de mal-estar, estavam sem resposta na nossa consulta."
+  crumbs={[{ name: 'Inibe One', href: '/inibe-one/' }, { name: 'É confiável?', href: '/inibe-one/e-confiavel/' }]}
+  faq={faq}
+  related={inibeonePages}
+  sources={[
+    { label: 'Reclame Aqui: Inibe One, consultado em 15/10/2026', url: 'https://www.reclameaqui.com.br/empresa/inibe-one/' },
+    { label: 'Página oficial do Inibe One (consultada em 15/10/2026)', url: 'https://inibeoneoriginal.com/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Sim, no sentido de não ser golpe: a empresa é identificada, a venda passa pela Monetizze e a reputação no Reclame Aqui é "Boa" (nota 7,6). Mas a qualidade do atendimento caiu nos últimos meses, há relatos de reações adversas e a página promete muito mais do que a fórmula entrega.</p>
+  </div>
+
+  <h2>A nota no Reclame Aqui</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Reputação</th><td>Boa (nota 7,6 de 10)</td></tr>
+        <tr><th>Reclamações</th><td>65 em 12 meses (103 no histórico)</td></tr>
+        <tr><th>Respondidas</th><td>89,2%</td></tr>
+        <tr><th>Resolvidas</th><td>86,2%</td></tr>
+        <tr><th>Voltariam a fazer negócio</th><td>65,5%</td></tr>
+        <tr><th>Tempo médio de resposta</th><td>8 dias e 10 horas</td></tr>
+        <tr><th>Período</th><td>setembro de 2025 a agosto de 2026</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">Dados do painel da empresa no Reclame Aqui, consultado em 15/10/2026. A reputação mensal foi "Ótima" em março e abril de 2026, "Boa" em maio e ficou sem índice de junho a agosto.</p>
+
+  <h2>Do que as pessoas reclamam</h2>
+  <ul>
+    <li><strong>Reações adversas:</strong> em setembro de 2026 apareceram reclamações de clientes que dizem ter passado mal. Na consulta, estavam sem resposta.</li>
+    <li><strong>Falta de resultado:</strong> relatos de que as cápsulas não fizeram efeito.</li>
+    <li><strong>Reembolso e pagamento:</strong> estorno é o problema mais citado, e há caso de cobrança de pedido em duplicidade.</li>
+    <li><strong>Produtos de terceiros:</strong> há reclamação contra outra empresa que vendia um "Inibe One" fora do site oficial.</li>
+  </ul>
+
+  <h2>Quem vende</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Empresa</th><td>{p.company}</td></tr>
+        <tr><th>CNPJ</th><td>{p.cnpj}</td></tr>
+        <tr><th>Endereço</th><td>Rua Curitiba, 778, sala 302, Centro, Belo Horizonte (MG)</td></tr>
+        <tr><th>Atendimento</th><td>WhatsApp de segunda a sexta, das 9h às 18h, e {p.sac}</td></tr>
+        <tr><th>Pagamento</th><td>Monetizze</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Como comprar com segurança</h2>
+  <ol>
+    <li>Compre só pelo site oficial, para ter a garantia.</li>
+    <li>Prefira o cartão de crédito e comece por 1 pote.</li>
+    <li>Se pensa em usar a garantia, tire as fotos da balança desde o primeiro dia. Veja <a href="/inibe-one/onde-comprar/">as regras</a>.</li>
+    <li>Se passar mal, pare o uso e registre o caso com a empresa por escrito.</li>
+  </ol>
+
+  <BuyBox compact produto="Inibe One" href={p.link} title="Inibe One no site oficial" text="A partir de R$ 187 (1 pote para 1 mês), com frete grátis." cta="Ver kits e preços" />
+</Article>

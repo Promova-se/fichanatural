@@ -1,0 +1,93 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import { inibeone as p, inibeonePages } from '../../data/site';
+
+const faq = [
+  { q: 'O que é o Inibe One?', a: 'É um suplemento em cápsulas vendido para emagrecimento. Cada cápsula de 500 mg tem psyllium, espirulina, FOS, farinha de chia, inulina, ágar-ágar, quitosana e cromo, segundo a tabela publicada na página oficial.' },
+  { q: 'Quanto custa o Inibe One?', a: 'Na consulta de 15/10/2026, 1 pote custava R$ 187, 2 potes R$ 337 e 3 potes R$ 437, com frete grátis. No cartão parcelado há juros de 2,99% ao mês.' },
+  { q: 'Quem fabrica o Inibe One?', a: `A página informa a empresa ${p.company}, CNPJ ${p.cnpj}, com endereço em Belo Horizonte (MG). O atendimento é pelo WhatsApp e pelo e-mail ${p.sac}.` },
+  { q: 'O Inibe One tem cafeína?', a: 'O Inibe One tradicional não tem cafeína na tabela publicada. No checkout aparece a oferta de outro produto, o "Inibe One Black, 2x mais potente", cuja composição não está na página.' },
+];
+---
+<Article
+  ogImage="/img/inibe-one/og-inibe-one.jpg"
+  title="Inibe One: ficha completa, composição, preço e o que esperar"
+  seoTitle="Inibe One: composição, preço e se vale a pena"
+  description="Ficha do Inibe One: doses de cada ingrediente pela tabela oficial, preço dos kits, regras da garantia, prós e contras e o que esperar do suplemento."
+  kicker="Ficha de produto"
+  lead="O Inibe One é um suplemento de fibras com quitosana e cromo. A tabela oficial mostra doses pequenas: 100 mg de psyllium e 50 mg de quitosana por cápsula. A página promete 'efeito bariátrica', o que nenhum ingrediente faz."
+  crumbs={[{ name: 'Inibe One', href: '/inibe-one/' }]}
+  faq={faq}
+  related={inibeonePages}
+  sources={[
+    { label: 'Página oficial do Inibe One e tabela nutricional (consultadas em 15/10/2026)', url: 'https://inibeoneoriginal.com/' },
+    { label: 'Termos de garantia do Inibe One', url: 'https://inibeoneoriginal.com/termos-de-garantia' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Cápsulas com fibras (psyllium, FOS, inulina, chia e ágar-ágar), espirulina, quitosana e cromo. A empresa e o CNPJ são informados, e a tabela mostra as doses. O problema é que elas são pequenas: as fibras somam cerca de 350 mg por cápsula, quando os estudos usam gramas por dia. A garantia exige fotos da balança. Custa a partir de R$ 187 o pote.</p>
+  </div>
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>{p.name}</td></tr>
+        <tr><th>Empresa</th><td>{p.company}, CNPJ {p.cnpj}, Belo Horizonte (MG)</td></tr>
+        <tr><th>Atendimento</th><td>WhatsApp, de segunda a sexta, das 9h às 18h, e {p.sac}</td></tr>
+        <tr><th>Tipo</th><td>Suplemento em cápsulas de 500 mg</td></tr>
+        <tr><th>Porção da tabela</th><td>1 cápsula</td></tr>
+        <tr><th>Modo de uso</th><td>Não informado no texto da página; confira no rótulo ao receber</td></tr>
+        <tr><th>Rendimento</th><td>1 pote para 1 mês, segundo a página</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Composição por cápsula</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Ingrediente</th><th>Quantidade</th></tr></thead>
+      <tbody>
+        {p.dose.map(([n, q]) => <tr><td>{n}</td><td>{q}</td></tr>)}
+      </tbody>
+    </table>
+  </div>
+  <p>Valores da tabela nutricional publicada na página oficial. Para comparar: os estudos com psyllium usam de 5 a 15 gramas por dia, e os com quitosana, de 1 a 3 gramas. Detalhes em <a href="/inibe-one/funciona/">Inibe One funciona?</a></p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores consultados na página oficial em 15/10/2026, com frete grátis. No checkout aparecem ofertas extras, como o "Inibe One Black" e um material digital sobre metabolismo, que você não precisa aceitar. No cartão parcelado, os juros são de 2,99% ao mês.</p>
+  <KitCards kits={p.kits} mcr={p.mcr} produto="Inibe One" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Empresa, CNPJ e endereço informados</li>
+        <li>Tabela com a dose de cada ingrediente</li>
+        <li>Sem estimulantes na fórmula tradicional</li>
+        <li>Reputação "Boa" no Reclame Aqui nos últimos 12 meses</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Doses de fibras e quitosana muito abaixo das estudadas</li>
+        <li>Promete "efeito bariátrica", "eliminar toda a gordura" e emagrecer sem exercício</li>
+        <li>Garantia exige fotos da balança e só vale na primeira compra</li>
+        <li>Mais caro por mês que fórmulas parecidas</li>
+        <li>Reclamações recentes de mal-estar ainda sem resposta</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>O Inibe One tem um ponto que muitos concorrentes não têm: mostra as doses. E é justamente isso que revela a fraqueza da fórmula: cerca de 350 mg de fibras por cápsula, uma fração do que os estudos usam. A promessa de "efeito bariátrica" não tem base. A fórmula é parecida com a do <a href="/reduphine-caps/">ReduPhine</a> e com a do <a href="/ozenvitta/">OzenVitta</a>, que custa menos por mês e tem uma garantia mais simples, sem fotos de balança.</p>
+  </div>
+  <p>Antes de comprar, leia <a href="/inibe-one/e-confiavel/">se o Inibe One é confiável</a> e <a href="/inibe-one/onde-comprar/">as regras da garantia</a>.</p>
+
+  <BuyBox compact produto="Inibe One" href={p.link} title="Inibe One no site oficial" text="A partir de R$ 187 (1 pote para 1 mês), com frete grátis." cta="Ver kits e preços" />
+</Article>

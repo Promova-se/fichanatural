@@ -1,0 +1,58 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { inibeone as p, inibeonePages } from '../../../data/site';
+
+const faq = [
+  { q: 'Como tomar Inibe One?', a: 'A página de vendas não informa o modo de uso, e a tabela considera 1 cápsula como porção. Siga a recomendação impressa no rótulo, sempre com um copo cheio de água, e não passe da dose indicada.' },
+  { q: 'Inibe One faz mal?', a: 'Fibras costumam causar gases e inchaço no começo. Há reclamações recentes de clientes que passaram mal. Se tiver dor abdominal forte, vômito, falta de ar ou manchas na pele, pare e procure atendimento.' },
+  { q: 'Quem tem alergia a camarão pode tomar Inibe One?', a: 'Não sem orientação médica. A quitosana é feita da casca de crustáceos e pode causar reação em quem tem alergia.' },
+];
+---
+<Article
+  ogImage="/img/inibe-one/og-inibe-one.jpg"
+  title="Como tomar Inibe One: efeitos colaterais e contraindicações"
+  seoTitle="Como tomar Inibe One e efeitos colaterais"
+  description="Como tomar o Inibe One com segurança, efeitos colaterais possíveis, quem não deve usar (alérgicos a crustáceos, gestantes) e o cuidado com remédios."
+  kicker="Modo de uso e segurança"
+  lead="A página do Inibe One não informa o modo de uso nem contraindicações. Pelos ingredientes, há cuidados importantes: a quitosana vem de crustáceos, e as fibras atrapalham a absorção de remédios."
+  crumbs={[{ name: 'Inibe One', href: '/inibe-one/' }, { name: 'Como tomar', href: '/inibe-one/como-tomar/' }]}
+  faq={faq}
+  related={inibeonePages}
+  sources={[
+    { label: 'Página oficial do Inibe One e tabela nutricional (consultadas em 15/10/2026)', url: 'https://inibeoneoriginal.com/' },
+    { label: 'NIH Office of Dietary Supplements: Dietary Supplements for Weight Loss (quitosana)', url: 'https://ods.od.nih.gov/factsheets/WeightLoss-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Siga a dose do rótulo, com um copo cheio de água, de preferência antes das refeições. Deixe 2 horas de intervalo de qualquer remédio. Não use se tiver alergia a crustáceos, estiver grávida ou amamentando, sem falar com o médico.</p>
+  </div>
+
+  <h2>Modo de uso</h2>
+  <ol>
+    <li><strong>Dose:</strong> a página não informa. Siga o rótulo do pote e não aumente por conta própria.</li>
+    <li><strong>Água:</strong> sempre com um copo cheio. Fibras com pouca água podem prender o intestino.</li>
+    <li><strong>Horário:</strong> cerca de 30 minutos antes das refeições, para aproveitar a saciedade.</li>
+    <li><strong>Remédios:</strong> pelo menos 2 horas de intervalo.</li>
+  </ol>
+
+  <h2>Possíveis efeitos colaterais</h2>
+  <ul>
+    <li><strong>Gases, inchaço e cólica:</strong> comuns com fibras nos primeiros dias.</li>
+    <li><strong>Intestino preso ou solto.</strong></li>
+    <li><strong>Reação alérgica:</strong> em pessoas sensíveis a crustáceos, por causa da quitosana.</li>
+    <li><strong>Menor absorção de vitaminas A, D, E e K:</strong> efeito conhecido da quitosana em uso prolongado.</li>
+  </ul>
+  <p>No Reclame Aqui há reclamações recentes de clientes que dizem ter passado mal com o produto. Se tiver sintomas fortes, pare o uso e procure atendimento.</p>
+
+  <h2>Quem não deve usar sem orientação médica</h2>
+  <ul>
+    <li>Alérgicos a crustáceos ou frutos do mar.</li>
+    <li>Gestantes, lactantes e menores de idade.</li>
+    <li>Quem toma remédio para diabetes (o cromo pode baixar a glicose), tireoide ou anticoagulantes.</li>
+    <li>Quem tem dificuldade para engolir, doença intestinal ou já usa suplementos de vitaminas A, D, E e K.</li>
+  </ul>
+  <p>Ainda em dúvida se vale a pena? Leia <a href="/inibe-one/funciona/">Inibe One funciona?</a></p>
+
+  <BuyBox compact produto="Inibe One" href={p.link} title="Inibe One no site oficial" text="A partir de R$ 187 (1 pote para 1 mês), com frete grátis." cta="Ver kits e preços" />
+</Article>
