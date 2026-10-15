@@ -1,0 +1,87 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import { hotmen as p, hotmenPages } from '../../data/site';
+
+const faq = [
+  { q: 'O que é o Hot Men Caps?', a: 'É um suplemento em cápsulas vendido pela internet para desempenho sexual masculino. O pote tem 60 cápsulas de 500 mg, e a dose indicada é de 2 cápsulas por dia. A página oficial não informa os ingredientes.' },
+  { q: 'Quanto custa o Hot Men Caps?', a: 'Na consulta de 15/10/2026, 1 pote custava R$ 227, o kit de 3 potes R$ 327 e o de 5 potes R$ 427, com frete grátis. No cartão parcelado há juros de 2,99% ao mês.' },
+  { q: 'Qual a composição do Hot Men Caps?', a: 'A página oficial não lista ingredientes nem doses. Sites de afiliados citam maca peruana, L-arginina, zinco e magnésio, mas não conseguimos confirmar essa lista em um rótulo legível.' },
+  { q: 'Hot Men Caps aumenta o pênis?', a: 'Não há evidência de que algum suplemento aumente o tamanho do pênis. A promessa de "até 9 cm" é do fabricante e não vem acompanhada de estudo.' },
+];
+---
+<Article
+  ogImage="/img/hot-men-caps/og-hot-men-caps.jpg"
+  title="Hot Men Caps: ficha completa, composição, preço e o que esperar"
+  seoTitle="Hot Men Caps: composição, preço e se vale a pena"
+  description="Ficha do Hot Men Caps: o que a página oficial informa e o que ela não informa, preço dos kits, garantia, prós e contras e o que esperar do suplemento."
+  kicker="Ficha de produto"
+  lead="O Hot Men Caps é vendido como suplemento para desempenho sexual masculino. A página oficial não informa os ingredientes nem a empresa responsável, e promete um aumento do pênis que nenhum suplemento comprovou."
+  crumbs={[{ name: 'Hot Men Caps', href: '/hot-men-caps/' }]}
+  faq={faq}
+  related={hotmenPages}
+  sources={[
+    { label: 'Página oficial do Hot Men Caps e checkout da Monetizze (consultados em 15/10/2026)', url: 'https://hotmencaps.com.br/' },
+    { label: 'Termos de uso do Hot Men Caps', url: 'https://hotmencaps.com.br/termos-de-uso.html' },
+    { label: 'Mayo Clinic: Penis-enlargement products, do they work?', url: 'https://www.mayoclinic.org/healthy-lifestyle/sexual-health/in-depth/penis/art-20045363' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Cápsulas de 500 mg, 2 por dia, vendidas em potes de 60. A página oficial não informa ingredientes, doses, empresa nem CNPJ. As promessas de aumentar o pênis em até 9 cm e de ereções "por horas" são do fabricante e não têm estudo por trás. Custa a partir de R$ 227 o pote, e o kit de 5 potes sai por cerca de R$ 85 por mês.</p>
+  </div>
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>{p.name} (a página também usa "Hot Men Caps Pro")</td></tr>
+        <tr><th>Empresa</th><td>Não informada. Os termos de uso citam só "Hotman Caps"</td></tr>
+        <tr><th>CNPJ</th><td>Não informado</td></tr>
+        <tr><th>Atendimento</th><td>WhatsApp da página e {p.sacCheckout} (e-mail do checkout)</td></tr>
+        <tr><th>Tipo</th><td>Suplemento alimentar em cápsulas, segundo o rótulo da foto</td></tr>
+        <tr><th>Apresentação</th><td>Pote com 60 cápsulas de 500 mg (30 g)</td></tr>
+        <tr><th>Uso indicado</th><td>2 cápsulas por dia, uma antes do almoço e outra antes do jantar. O pote dura 1 mês</td></tr>
+        <tr><th>Pagamento</th><td>Monetizze: cartão, Pix e boleto</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Composição</h2>
+  <p>A página oficial não mostra a lista de ingredientes nem a tabela nutricional, e a foto do pote não deixa ler o rótulo. Outros sites que vendem o produto citam <strong>{p.reported.join(', ').replace(/, ([^,]*)$/, ' e $1')}</strong>, sem doses. Não conseguimos confirmar essa lista. Se você comprar, confira o rótulo ao receber.</p>
+  <p>Se esses forem mesmo os ingredientes, o que se sabe de cada um está em <a href="/hot-men-caps/funciona/">Hot Men Caps funciona?</a></p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores conferidos nos checkouts em 15/10/2026, com frete grátis. No checkout aparece uma oferta extra de 2 potes por R$ 99, que você não precisa aceitar. No cartão parcelado, os juros são de 2,99% ao mês.</p>
+  <KitCards kits={p.kits} mcr={p.mcr} unit="mês" produto="Hot Men Caps" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Pagamento pela Monetizze, com rastreio do pedido</li>
+        <li>Garantia de 30 dias anunciada na página</li>
+        <li>Kit de 5 potes com custo mensal bem menor que o do pote avulso</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Sem ingredientes, doses, empresa ou CNPJ na página</li>
+        <li>Promete aumento do pênis de até 9 cm, sem estudo</li>
+        <li>Diz que "combate a impotência sexual", o que suplemento não pode prometer</li>
+        <li>Afirma não ter nenhum efeito colateral, nem para hipertensos e diabéticos</li>
+        <li>Os termos de uso falam em 7 dias para desistir, e não nos 30 dias da página</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>O Hot Men Caps é vendido com promessas maiores do que qualquer suplemento consegue cumprir, e sem as informações básicas para avaliar a fórmula. Se os ingredientes forem os citados por outros sites, o máximo que dá para esperar é um efeito pequeno na disposição e na libido. Dificuldade de ereção frequente merece uma consulta, porque pode ser sinal de pressão alta, diabetes ou problema no coração, e existem remédios com eficácia comprovada.</p>
+  </div>
+  <p>Antes de comprar, leia <a href="/hot-men-caps/e-confiavel/">se o Hot Men Caps é confiável</a> e <a href="/hot-men-caps/como-tomar/">quem não deve usar</a>.</p>
+
+  <BuyBox compact produto="Hot Men Caps" href={p.link} title="Hot Men Caps no site oficial" text="A partir de R$ 227 (1 pote para 1 mês), com frete grátis." cta="Ver kits e preços" />
+</Article>

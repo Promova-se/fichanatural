@@ -1,0 +1,61 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { hotmen as p, hotmenPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Hot Men Caps aumenta o pênis de verdade?', a: 'Não há estudo que mostre aumento do pênis com suplemento, com nenhum ingrediente. A Mayo Clinic resume que nenhum desses produtos provou funcionar. A tabela da página de vendas, com centímetros por semana, é uma "simulação" sem fonte.' },
+  { q: 'Hot Men Caps funciona para impotência?', a: 'Suplemento não trata disfunção erétil. A L-arginina, citada por sites de afiliados, teve algum efeito em casos leves, mas em doses de 1,5 a 5 gramas por dia, acima do que cabe em 2 cápsulas de 500 mg.' },
+  { q: 'Em quanto tempo o Hot Men Caps faz efeito?', a: 'A página promete mudanças "logo na primeira semana". Os estudos com maca e arginina duraram de 6 a 12 semanas e mostraram efeitos pequenos. Um efeito forte e imediato não combina com esses ingredientes.' },
+];
+---
+<Article
+  ogImage="/img/hot-men-caps/og-hot-men-caps.jpg"
+  title="Hot Men Caps funciona? Aumento do pênis, ereção e o que a ciência diz"
+  seoTitle="Hot Men Caps funciona? O que a ciência diz"
+  description="Hot Men Caps funciona? Veja o que a ciência diz sobre aumento do pênis com suplementos, o que se sabe da maca e da arginina e o que esperar de verdade."
+  kicker="Funciona?"
+  lead="Como a página oficial não informa a fórmula, não dá para avaliar o Hot Men Caps dose por dose. Dá para dizer o que a ciência sabe sobre as promessas e sobre os ingredientes que outros sites citam."
+  crumbs={[{ name: 'Hot Men Caps', href: '/hot-men-caps/' }, { name: 'Funciona?', href: '/hot-men-caps/funciona/' }]}
+  faq={faq}
+  related={hotmenPages}
+  sources={[
+    { label: 'Página oficial do Hot Men Caps (consultada em 15/10/2026)', url: 'https://hotmencaps.com.br/' },
+    { label: 'Mayo Clinic: Penis-enlargement products, do they work?', url: 'https://www.mayoclinic.org/healthy-lifestyle/sexual-health/in-depth/penis/art-20045363' },
+    { label: 'Rhim HC et al. The potential role of arginine supplements on erectile dysfunction: a systemic review and meta-analysis. J Sex Med, 2019', url: 'https://pubmed.ncbi.nlm.nih.gov/30770070/' },
+    { label: 'Shin BC et al. Maca (L. meyenii) for improving sexual function: a systematic review. BMC Complement Altern Med, 2010', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC2928177/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Para aumentar o pênis, não: nenhum suplemento tem esse efeito comprovado. Para libido e disposição, pode haver um efeito pequeno, se a fórmula tiver mesmo maca e arginina nas doses certas, o que a página não informa. Ereção fraca com frequência pede consulta, porque há tratamentos que funcionam e a causa pode ser outra doença.</p>
+  </div>
+
+  <h2>As promessas, uma por uma</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Promessa da página</th><th>O que se sabe</th></tr></thead>
+      <tbody>
+        <tr><td>Aumento do pênis de até 9 cm</td><td>Sem evidência para nenhum suplemento. Tamanho do pênis não muda com cápsulas</td></tr>
+        <tr><td>"Combate a impotência sexual"</td><td>Suplemento não trata disfunção erétil. O tratamento é médico</td></tr>
+        <tr><td>Ereções "por horas"</td><td>Ereção que dura mais de 4 horas é emergência médica (priapismo), não um benefício</td></tr>
+        <tr><td>Resultado na primeira semana</td><td>Os estudos com maca e arginina duraram semanas e acharam efeitos pequenos</td></tr>
+        <tr><td>Tabela de "simulação" em 6 semanas</td><td>Sem fonte. Inclui itens sem sentido para o produto, como "panturrilha" e "gordura"</td></tr>
+        <tr><td>"Resultado definitivo" em 5 meses</td><td>Nenhum dos ingredientes citados tem efeito que permaneça depois de parar o uso</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Os ingredientes citados por outros sites</h2>
+  <p>A página oficial não confirma a fórmula. Sites de afiliados citam {p.reported.join(', ').replace(/, ([^,]*)$/, ' e $1')}. Se for isso:</p>
+  <ul>
+    <li><strong>Maca peruana:</strong> uma revisão de estudos encontrou sinais de melhora na libido, mas com poucos estudos, pequenos e de qualidade limitada.</li>
+    <li><strong>L-arginina:</strong> em homens com disfunção erétil leve a moderada, uma meta-análise viu melhora com 1,5 a 5 gramas por dia. Duas cápsulas de 500 mg somam no máximo 1 grama de pó, com todos os ingredientes juntos.</li>
+    <li><strong>Zinco:</strong> ajuda a produção de testosterona de quem tem deficiência. Em quem não tem, não há ganho.</li>
+    <li><strong>Magnésio:</strong> não tem efeito conhecido na ereção.</li>
+  </ul>
+
+  <h2>Quando procurar um médico</h2>
+  <p>Dificuldade de ereção que se repete pode ser o primeiro sinal de pressão alta, diabetes, colesterol alto ou doença no coração. Um urologista ou clínico geral pode investigar a causa e indicar remédios com eficácia comprovada, que hoje existem em versão genérica e custam menos por mês que o kit de suplemento.</p>
+
+  <BuyBox compact produto="Hot Men Caps" href={p.link} title="Hot Men Caps no site oficial" text="A partir de R$ 227 o pote, com garantia de 30 dias anunciada." cta="Ver kits e preços" />
+</Article>

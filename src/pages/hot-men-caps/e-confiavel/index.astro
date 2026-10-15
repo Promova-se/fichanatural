@@ -1,0 +1,68 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { hotmen as p, hotmenPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Hot Men Caps é golpe?', a: 'O pagamento passa pela Monetizze, que é uma plataforma conhecida, e o pedido tem rastreio. Mas a página não informa empresa nem CNPJ, não mostra a fórmula e faz promessas sem prova. Compre sabendo disso e prefira o cartão de crédito.' },
+  { q: 'Hot Men Caps é aprovado pela Anvisa?', a: 'A página diz que sim, mas não mostra número de registro. Suplementos alimentares, em geral, são dispensados de registro, e a Anvisa não avalia se funcionam. "Aprovado pela Anvisa" não é garantia de eficácia.' },
+  { q: 'Hot Men Caps tem Reclame Aqui?', a: 'Na consulta de 15/10/2026, não encontramos página do Hot Men Caps ou da empresa por trás dele no Reclame Aqui.' },
+];
+---
+<Article
+  ogImage="/img/hot-men-caps/og-hot-men-caps.jpg"
+  title="Hot Men Caps é confiável? Empresa, Anvisa e Reclame Aqui"
+  seoTitle="Hot Men Caps é confiável? Anvisa e Reclame Aqui"
+  description="Hot Men Caps é confiável ou golpe? Veja quem vende, o que a página diz sobre a Anvisa, se tem Reclame Aqui, os sinais de alerta e como comprar com segurança."
+  kicker="Reputação"
+  lead="O Hot Men Caps é vendido pela Monetizze, mas a página não identifica a empresa responsável, não informa CNPJ nem ingredientes, e não há histórico da marca no Reclame Aqui."
+  crumbs={[{ name: 'Hot Men Caps', href: '/hot-men-caps/' }, { name: 'É confiável?', href: '/hot-men-caps/e-confiavel/' }]}
+  faq={faq}
+  related={hotmenPages}
+  sources={[
+    { label: 'Página oficial do Hot Men Caps e checkout da Monetizze (consultados em 15/10/2026)', url: 'https://hotmencaps.com.br/' },
+    { label: 'Termos de uso do Hot Men Caps', url: 'https://hotmencaps.com.br/termos-de-uso.html' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Em parte. O pagamento e o rastreio passam pela Monetizze, o que dá alguma segurança na entrega. Mas faltam o básico: nome da empresa, CNPJ, endereço e lista de ingredientes. Se o pedido der problema, o contato é só por WhatsApp e e-mail do Gmail. Se for comprar, use o cartão e comece pelo pote avulso.</p>
+  </div>
+
+  <h2>Quem vende</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Marca</th><td>{p.name} ("Hotman Caps" nos termos de uso)</td></tr>
+        <tr><th>Empresa e CNPJ</th><td>Não informados</td></tr>
+        <tr><th>Endereço</th><td>Não informado</td></tr>
+        <tr><th>Atendimento</th><td>WhatsApp da página e {p.sacCheckout}</td></tr>
+        <tr><th>Pagamento</th><td>Monetizze</td></tr>
+        <tr><th>Reclame Aqui</th><td>Sem página da marca (consulta em 15/10/2026)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>A questão da Anvisa</h2>
+  <p>A página afirma que o Hot Men Caps "é aprovado pela Anvisa e totalmente seguro", sem mostrar número de registro. A maioria dos suplementos é dispensada de registro e vendida sem análise de eficácia pela Anvisa. Além disso, um suplemento não pode ser vendido com a promessa de tratar impotência, como a página faz.</p>
+
+  <h2>Sinais de alerta na página de vendas</h2>
+  <ul>
+    <li><strong>Sem fórmula:</strong> não há lista de ingredientes nem tabela nutricional.</li>
+    <li><strong>Promessas sem prova:</strong> aumento do pênis de até 9 cm e ereções "por horas". Veja <a href="/hot-men-caps/funciona/">o que a ciência diz</a>.</li>
+    <li><strong>"Nenhum efeito colateral":</strong> inclusive para hipertensos e diabéticos, sem a fórmula para conferir.</li>
+    <li><strong>Pressa artificial:</strong> a oferta "termina hoje" na data em que você abre a página, e avisos de compra aparecem a cada poucos segundos.</li>
+    <li><strong>Descontos que não batem:</strong> as porcentagens não correspondem aos preços de tabela.</li>
+    <li><strong>Garantia diferente nos termos:</strong> a página fala em 30 dias, e os termos, em 7.</li>
+  </ul>
+
+  <h2>Como comprar com segurança</h2>
+  <ol>
+    <li>Compre só pelo site oficial, com pagamento pela Monetizze.</li>
+    <li>Pague no cartão de crédito, que permite contestar a cobrança.</li>
+    <li>Comece pelo pote avulso.</li>
+    <li>Salve prints da garantia de 30 dias no dia da compra. Veja <a href="/hot-men-caps/onde-comprar/">como pedir a devolução</a>.</li>
+    <li>Se tiver pressão alta, problema no coração ou usar remédio de uso contínuo, fale com o médico antes.</li>
+  </ol>
+
+  <BuyBox compact produto="Hot Men Caps" href={p.link} title="Hot Men Caps no site oficial" text="A partir de R$ 227 o pote, com frete grátis." cta="Ver kits e preços" />
+</Article>

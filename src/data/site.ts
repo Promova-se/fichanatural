@@ -269,6 +269,32 @@ export const iarmonizePages = [
   { href: '/iarmonize/e-confiavel/', title: 'IArmonize e Integra Pharma são confiáveis? Quem fabrica e Reclame Aqui', short: 'É confiável?' },
 ];
 
+// Hot Men Caps, conferido na página oficial e nos checkouts em 15/10/2026.
+// Sem empresa, CNPJ nem ingredientes na página. Termos citam "Hotman Caps"; checkout mostra busuplementos@gmail.com.
+// Pote: 60 cápsulas de 500 mg (30 g), 2 por dia. Publicado por decisão do dono do site (já vendeu o produto),
+// com as promessas tratadas como promessas do fabricante. Links testados: o checkout mostra "REF: APU24890749".
+export const hotmen = {
+  name: 'Hot Men Caps',
+  sacCheckout: 'busuplementos@gmail.com',
+  mcr: 'APU24890749',
+  link: 'https://hotmencaps.com.br/?mcr=APU24890749',
+  // Citados por sites de afiliados, não pela página oficial nem por rótulo legível.
+  reported: ['Maca peruana', 'L-arginina', 'Zinco', 'Magnésio'],
+  kits: [
+    { name: '1 pote', qty: '60 cápsulas · 1 mês', months: 1, total: 227, installments: '12x de R$ 22,79', plan: 'DXD58400' },
+    { name: 'Compre 2, receba 3', qty: '3 potes · 3 meses', months: 3, total: 327, installments: '12x de R$ 32,83', plan: 'DQP58401' },
+    { name: 'Compre 3, receba 5', qty: '5 potes · 5 meses', months: 5, total: 427, installments: '12x de R$ 42,87', plan: 'DQE58402' },
+  ],
+};
+
+export const hotmenPages = [
+  { href: '/hot-men-caps/', title: 'Hot Men Caps: ficha completa, composição e preço', short: 'Ficha completa' },
+  { href: '/hot-men-caps/funciona/', title: 'Hot Men Caps funciona? Aumento do pênis, ereção e o que a ciência diz', short: 'Funciona?' },
+  { href: '/hot-men-caps/como-tomar/', title: 'Como tomar Hot Men Caps: dose, efeitos colaterais e quem não deve usar', short: 'Como tomar e cuidados' },
+  { href: '/hot-men-caps/onde-comprar/', title: 'Onde comprar Hot Men Caps original: preço dos kits e garantia', short: 'Onde comprar e garantia' },
+  { href: '/hot-men-caps/e-confiavel/', title: 'Hot Men Caps é confiável? Empresa, Anvisa e Reclame Aqui', short: 'É confiável?' },
+];
+
 export const ozenvittaPages = [
   { href: '/ozenvitta/', title: 'OzenVitta: ficha completa, composição e preço', short: 'Ficha completa' },
   { href: '/ozenvitta/funciona/', title: 'OzenVitta funciona? O que a ciência diz de cada ingrediente', short: 'Funciona?' },
@@ -340,6 +366,7 @@ export const catalog = [
   { name: 'Mounjax', href: '/mounjax/', pill: 'Gotas', summary: 'Gotas da Ozenpharma com café verde, cúrcuma, cromo e vitaminas. Não é Mounjaro.', pages: mounjaxPages },
   { name: 'TG30 Crisfit', href: '/tg30/', pill: 'Gotas', summary: 'Café verde, cúrcuma e vitaminas D3 e B12 em gotas.', pages: tg30Pages },
   { name: 'IArmonize', href: '/iarmonize/', pill: 'Cabelo, sono e energia', summary: 'Kit da Integra Pharma com quatro fórmulas: Hair, Sleep, Energy e Vital.', pages: iarmonizePages },
+  { name: 'Hot Men Caps', href: '/hot-men-caps/', pill: 'Saúde masculina', summary: 'Cápsulas vendidas para desempenho sexual masculino, sem ingredientes na página oficial.', pages: hotmenPages },
   { name: 'Vitta Resveratrol', href: '/vitta-resveratrol/', pill: 'Pele', summary: 'Colágeno, ácido hialurônico, resveratrol e vitaminas.', pages: resveratrolPages },
 ];
 

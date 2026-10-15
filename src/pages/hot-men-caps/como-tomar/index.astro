@@ -1,0 +1,65 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { hotmen as p, hotmenPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Como tomar Hot Men Caps?', a: 'A página indica 2 cápsulas por dia: uma 30 minutos antes do almoço e outra 30 minutos antes do jantar, com água. Cada pote de 60 cápsulas dura 1 mês.' },
+  { q: 'Hot Men Caps tem efeito colateral?', a: 'A página diz que não, mas sem a lista de ingredientes não há como garantir isso. Se a fórmula tiver arginina, ela pode baixar a pressão e causar desconforto no estômago em algumas pessoas.' },
+  { q: 'Quem tem pressão alta pode tomar Hot Men Caps?', a: 'Só com orientação médica. A página diz que hipertensos podem usar "com segurança", mas não informa os ingredientes. A arginina, citada por outros sites, pode somar efeito com remédios de pressão.' },
+  { q: 'Posso tomar Hot Men Caps com Viagra ou Cialis?', a: 'Fale com o médico antes. A arginina e esses remédios aumentam o fluxo de sangue e podem baixar a pressão juntos. Quem usa nitrato para o coração não deve combinar nenhum dos dois sem orientação.' },
+];
+---
+<Article
+  ogImage="/img/hot-men-caps/og-hot-men-caps.jpg"
+  title="Como tomar Hot Men Caps: dose, efeitos colaterais e quem não deve usar"
+  seoTitle="Como tomar Hot Men Caps e efeitos colaterais"
+  description="Como tomar Hot Men Caps, por quanto tempo, possíveis efeitos colaterais e quem precisa de orientação médica antes, como quem tem pressão alta ou usa remédio para o coração."
+  kicker="Modo de uso e segurança"
+  lead="A dose indicada é de 2 cápsulas por dia. Como a página não informa a fórmula, os cuidados abaixo valem para os ingredientes que costumam aparecer nesse tipo de produto."
+  crumbs={[{ name: 'Hot Men Caps', href: '/hot-men-caps/' }, { name: 'Como tomar', href: '/hot-men-caps/como-tomar/' }]}
+  faq={faq}
+  related={hotmenPages}
+  sources={[
+    { label: 'Página oficial do Hot Men Caps (consultada em 15/10/2026)', url: 'https://hotmencaps.com.br/' },
+    { label: 'Rhim HC et al. Arginine supplements and erectile dysfunction: systematic review and meta-analysis. J Sex Med, 2019', url: 'https://pubmed.ncbi.nlm.nih.gov/30770070/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>2 cápsulas por dia, uma antes do almoço e outra antes do jantar. Quem tem pressão alta, doença no coração ou nos rins, usa remédio para ereção ou nitrato deve falar com o médico antes. A página diz que não há efeito colateral nenhum, mas não mostra a fórmula para que isso possa ser conferido.</p>
+  </div>
+
+  <h2>Modo de uso indicado</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Dose</th><td>2 cápsulas de 500 mg por dia</td></tr>
+        <tr><th>Horário</th><td>1 cápsula 30 minutos antes do almoço e 1 antes do jantar, com água</td></tr>
+        <tr><th>Duração do pote</th><td>60 cápsulas, 1 mês</td></tr>
+        <tr><th>Tempo indicado pela página</th><td>No mínimo 5 meses</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Modo de uso informado na página oficial. Confira no rótulo ao receber e não aumente a dose por conta própria.</p>
+
+  <h2>Possíveis efeitos colaterais</h2>
+  <p>Sem a lista de ingredientes, não dá para dizer quais efeitos esperar. Se a fórmula tiver os ingredientes citados por outros sites:</p>
+  <ul>
+    <li><strong>L-arginina:</strong> enjoo, diarreia, inchaço na barriga e queda de pressão.</li>
+    <li><strong>Maca peruana:</strong> costuma ser bem tolerada. Pode causar desconforto no estômago e alteração no sono.</li>
+    <li><strong>Zinco:</strong> enjoo, principalmente em jejum.</li>
+    <li><strong>Magnésio:</strong> intestino solto.</li>
+  </ul>
+  <p>Se sentir tontura, palpitação, dor no peito ou ereção que dure mais de 4 horas, pare o uso e procure atendimento.</p>
+
+  <h2>Quem não deve usar sem orientação médica</h2>
+  <ul>
+    <li>Quem tem pressão alta ou baixa, doença no coração, nos rins ou no fígado.</li>
+    <li>Quem usa remédio para ereção (sildenafila, tadalafila), nitrato para o coração ou remédio para pressão.</li>
+    <li>Quem já teve herpes recorrente: a arginina pode favorecer novas crises.</li>
+    <li>Menores de 18 anos.</li>
+  </ul>
+  <p>A página de vendas diz que hipertensos, diabéticos e quem passou por cirurgia podem usar "com segurança". Sem a fórmula, essa afirmação não tem como ser conferida.</p>
+
+  <BuyBox compact produto="Hot Men Caps" href={p.link} title="Hot Men Caps no site oficial" text="A partir de R$ 227 o pote, com frete grátis." cta="Ver kits e preços" />
+</Article>
