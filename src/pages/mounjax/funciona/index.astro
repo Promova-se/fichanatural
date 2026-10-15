@@ -1,0 +1,66 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { mounjax as p, mounjaxPages, ozenvitta } from '../../../data/site';
+
+const faq = [
+  { q: 'Mounjax emagrece?', a: 'Não há estudo com o Mounjax. Os ingredientes, nas doses usadas em pesquisas, têm efeito pequeno sobre o peso. Como a página não informa as doses do produto, não dá para saber se ele chega perto disso.' },
+  { q: 'Mounjax tem o mesmo efeito do Mounjaro?', a: 'Não. O Mounjaro age por hormônios intestinais (GLP-1 e GIP) e leva a perdas de peso grandes em estudos clínicos. Nenhum ingrediente do Mounjax tem esse mecanismo ou esse efeito.' },
+  { q: 'Em quanto tempo o Mounjax faz efeito?', a: 'A página fala em mudanças nas primeiras quatro semanas, mas não há estudo que mostre isso. Qualquer resultado depende principalmente de dieta e atividade física.' },
+];
+---
+<Article
+  ogImage="/img/mounjax/og-mounjax.jpg"
+  title="Mounjax funciona? O que a fórmula pode e não pode fazer"
+  seoTitle="Mounjax funciona? O que diz a ciência"
+  description="Mounjax funciona para emagrecer? Analisamos cada ingrediente das gotas, o que os estudos mostram e por que o efeito não se compara ao do Mounjaro."
+  kicker="Funciona?"
+  lead="O Mounjax não tem estudo próprio. Os ingredientes já foram pesquisados, mas em doses que gotas dificilmente alcançam, e nenhum deles age como o Mounjaro."
+  crumbs={[{ name: 'Mounjax', href: '/mounjax/' }, { name: 'Funciona?', href: '/mounjax/funciona/' }]}
+  faq={faq}
+  related={mounjaxPages}
+  sources={[
+    { label: 'Página oficial do Mounjax (consultada em 14/10/2026)', url: 'https://mounjax.com/pvmonob/' },
+    { label: 'NIH Office of Dietary Supplements: Dietary Supplements for Weight Loss', url: 'https://ods.od.nih.gov/factsheets/WeightLoss-HealthProfessional/' },
+    { label: 'NIH Office of Dietary Supplements: Vitamin D', url: 'https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Dificilmente faz diferença no peso. Os ingredientes têm efeito pequeno mesmo nas doses dos estudos, e a página não informa quanto há de cada um. Um produto de fórmula quase igual, o <a href="/tg30/">TG30</a>, informa as doses: 33 mg de café verde e de cúrcuma por dose, muito abaixo do que se estuda. O efeito não tem nada a ver com o do Mounjaro.</p>
+  </div>
+
+  <h2>Ingrediente por ingrediente</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Ingrediente</th><th>O que os estudos mostram</th><th>Força da evidência</th></tr></thead>
+      <tbody>
+        <tr><td>Café verde</td><td>Perda pequena de peso, em estudos de baixa qualidade, com centenas de miligramas por dia</td><td>Fraca</td></tr>
+        <tr><td>Dihidrocapsiato</td><td>Aumento discreto do gasto de energia em estudos pequenos, parecido com o da pimenta</td><td>Fraca</td></tr>
+        <tr><td>Cúrcuma</td><td>Efeito pequeno no peso com 500 mg ou mais de curcumina, que o corpo absorve mal</td><td>Fraca</td></tr>
+        <tr><td>Inulina</td><td>Ajuda o intestino e a saciedade com 5 a 10 gramas por dia</td><td>Moderada, mas só em dose alta</td></tr>
+        <tr><td>Feno-grego</td><td>Saciedade e glicose, em estudos com gramas da semente</td><td>Fraca</td></tr>
+        <tr><td>Cromo</td><td>Efeito pequeno no peso, de relevância incerta</td><td>Fraca</td></tr>
+        <tr><td>Colina, D3 e B12</td><td>Nutrientes importantes, mas só ajudam quem tem falta deles. Não emagrecem</td><td>Não se aplica</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Por que a dose importa tanto</h2>
+  <p>Um frasco de gotas tem pouco volume. Para caber em 12 gotas por dia, cada extrato vem em poucos miligramas. O TG30, outro suplemento em gotas com quase os mesmos ingredientes, mostra no rótulo 33 mg de café verde e 22 mg de inulina por dose, quantidades dezenas a centenas de vezes menores que as estudadas. O Mounjax não informa as doses, e por isso não dá para afirmar que seja diferente. Detalhes em <a href="/tg30/funciona/">TG30 funciona?</a></p>
+
+  <h2>Mounjax não é Mounjaro</h2>
+  <p>O Mounjaro (tirzepatida) é um remédio injetável que imita hormônios do intestino, reduz muito o apetite e, em estudos clínicos, levou a perdas de 15% a 20% do peso. Ele exige receita. O Mounjax é um suplemento com extratos e vitaminas, sem nenhum desses mecanismos. Mais em <a href="/mounjax/anvisa/">Mounjax e Anvisa</a>.</p>
+
+  <h2>O que é exagero na página de vendas</h2>
+  <ul>
+    <li><strong>"Combate inflamação e acelera o metabolismo":</strong> sem estudo do produto e sem doses informadas.</li>
+    <li><strong>"Resultados nas primeiras quatro semanas":</strong> não há dados que sustentem isso.</li>
+    <li><strong>"Sem efeitos colaterais significativos":</strong> a própria página reconhece desconforto digestivo no início.</li>
+  </ul>
+
+  <h2>Para quem pode fazer sentido</h2>
+  <p>Para quem quer um suplemento prático e aceita um efeito pequeno ou nenhum. Para quem busca ajuda real para controlar a fome, a mesma empresa vende o <a href="/ozenvitta/">OzenVitta</a>, pelo mesmo preço, com fibras e laranja moro em cápsulas.</p>
+
+  <BuyBox compact produto="OzenVitta" href={ozenvitta.link} title="Alternativa da mesma empresa: OzenVitta" text="Fibras, laranja moro e L-carnitina, pelo mesmo preço do Mounjax, com garantia de 30 dias." cta="Ver kits do OzenVitta" />
+  <p class="small">Se preferir o Mounjax, os kits estão na <a href="/mounjax/">ficha completa</a> e no <a href={p.link} rel="sponsored nofollow noopener" target="_blank" data-produto="Mounjax" data-kit="site-oficial" data-posicao="texto">site oficial</a>.</p>
+</Article>

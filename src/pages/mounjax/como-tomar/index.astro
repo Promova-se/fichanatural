@@ -1,0 +1,59 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { mounjax as p, mounjaxPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Quantas gotas de Mounjax por dia?', a: 'A página oficial indica 12 gotas por dia, antes do café da manhã, de preferência sempre no mesmo horário.' },
+  { q: 'Posso tomar mais gotas para ter mais efeito?', a: 'Não. Aumentar a dose por conta própria soma mais vitamina D, cromo e café verde, o que pode causar efeitos indesejados, sem garantia de resultado melhor.' },
+  { q: 'Mounjax pode ser usado junto com Mounjaro ou Ozempic?', a: 'Só com orientação médica. Quem usa esses remédios já tem acompanhamento, e o médico precisa saber de qualquer suplemento, principalmente pelos efeitos na glicose do cromo e do feno-grego.' },
+];
+---
+<Article
+  ogImage="/img/mounjax/og-mounjax.jpg"
+  title="Como tomar Mounjax: quantas gotas, efeitos colaterais e contraindicações"
+  seoTitle="Como tomar Mounjax e contraindicações"
+  description="Como tomar o Mounjax: quantas gotas por dia, melhor horário, efeitos colaterais possíveis, quem não deve usar e cuidados com remédios para diabetes e tireoide."
+  kicker="Modo de uso e segurança"
+  lead="São 12 gotas por dia, antes do café da manhã. Os ingredientes costumam ser bem tolerados, mas há cuidados para quem toma remédios para diabetes, anticoagulantes ou outros suplementos de vitamina D."
+  crumbs={[{ name: 'Mounjax', href: '/mounjax/' }, { name: 'Como tomar', href: '/mounjax/como-tomar/' }]}
+  faq={faq}
+  related={mounjaxPages}
+  sources={[
+    { label: 'Página oficial do Mounjax (consultada em 14/10/2026)', url: 'https://mounjax.com/pvmonob/' },
+    { label: 'NIH Office of Dietary Supplements: Vitamin D', url: 'https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/' },
+    { label: 'NIH Office of Dietary Supplements: Chromium', url: 'https://ods.od.nih.gov/factsheets/Chromium-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Pingue 12 gotas por dia, antes do café da manhã, sempre no mesmo horário. Agite o frasco antes. Menores de idade e alérgicos a crustáceos não devem usar. Gestantes, lactantes e quem toma remédios contínuos precisam falar com o médico antes.</p>
+  </div>
+
+  <h2>Modo de uso</h2>
+  <ol>
+    <li><strong>Quando:</strong> antes do café da manhã, todos os dias no mesmo horário.</li>
+    <li><strong>Quanto:</strong> 12 gotas, com o conta-gotas do frasco. Pode pingar direto na boca ou num pouco de água.</li>
+    <li><strong>Duração:</strong> um frasco dura 30 dias. Avalie mês a mês se vale continuar.</li>
+    <li><strong>Junto com:</strong> alimentação equilibrada e boa hidratação, como a própria página recomenda.</li>
+  </ol>
+
+  <h2>Possíveis efeitos colaterais</h2>
+  <ul>
+    <li><strong>Desconforto digestivo:</strong> gases, enjoo ou intestino solto no início, como a página reconhece.</li>
+    <li><strong>Sensação de calor ou agitação:</strong> possível com o dihidrocapsiato e o café verde em pessoas sensíveis.</li>
+    <li><strong>Queda de glicose:</strong> o cromo e o feno-grego podem somar efeito a remédios para diabetes.</li>
+    <li><strong>Reação alérgica:</strong> rara, em pessoas sensíveis a algum componente.</li>
+  </ul>
+
+  <h2>Quem não deve usar sem orientação médica</h2>
+  <ul>
+    <li>Menores de idade e alérgicos a crustáceos (contraindicações da página).</li>
+    <li>Gestantes e mulheres amamentando bebês com menos de 6 meses.</li>
+    <li>Quem toma remédio para diabetes, tireoide, pressão ou anticoagulantes.</li>
+    <li>Quem já toma vitamina D ou B12 em outro suplemento, para não exagerar na dose somada.</li>
+    <li>Quem tem doença nos rins, no fígado ou problemas de vesícula (a cúrcuma pode agravar).</li>
+  </ul>
+  <p>Ainda em dúvida se vale a pena? Leia <a href="/mounjax/funciona/">Mounjax funciona?</a></p>
+
+  <BuyBox compact produto="Mounjax" href={p.link} title="Mounjax no site oficial" text="A partir de R$ 147 (1 frasco para 30 dias), com frete grátis e garantia de 30 dias." cta="Ver kits e preços" />
+</Article>

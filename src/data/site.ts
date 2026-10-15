@@ -134,7 +134,35 @@ export const tg30 = {
 export const tg30Pages = [
   { href: '/tg30/', title: 'TG30 Crisfit: ficha completa, composição e preço', short: 'Ficha completa' },
   { href: '/tg30/funciona/', title: 'TG30 funciona? As doses do rótulo e o que a ciência diz', short: 'Funciona?' },
+  { href: '/tg30/como-tomar/', title: 'Como tomar TG30: quantas gotas, efeitos colaterais e quem não deve usar', short: 'Como tomar e cuidados' },
+  { href: '/tg30/onde-comprar/', title: 'Onde comprar TG30 original: site oficial, preço e garantia', short: 'Onde comprar e garantia' },
   { href: '/tg30/e-confiavel/', title: 'TG30 é confiável? Empresa, garantia e pontos de atenção', short: 'É confiável?' },
+];
+
+// Mounjax (gotas), da Ozenpharma, conferido na página oficial e no checkout em 14/10/2026.
+// Nome lembra o Mounjaro (tirzepatida). Existe outro "Mounjax" em cápsulas (mounjax.com.br, Sigofarma, Braip): não é o mesmo produto.
+export const mounjax = {
+  name: 'Mounjax',
+  brand: 'Ozenpharma',
+  sac: 'sac@ozenpharma.com',
+  mcr: 'ARZ25846150',
+  link: 'https://mounjax.com/pvmonob/?mcr=ARZ25846150',
+  ingredients: ['Café verde', 'Dihidrocapsiato', 'Cúrcuma', 'Colina', 'Inulina', 'Feno-grego', 'Cromo', 'Vitamina D3', 'Vitamina B12'],
+  kits: [
+    { name: 'Frasco único', qty: '1 frasco · 30 dias', months: 1, total: 147, installments: '12x de R$ 14,76', plan: 'DQH336826' },
+    { name: 'Leve 3, pague 2', qty: '3 frascos · 90 dias', months: 3, total: 197, installments: '12x de R$ 19,78', plan: 'DAJ338770' },
+    { name: 'Leve 5, pague 3', qty: '5 frascos · 150 dias', months: 5, total: 247, installments: '12x de R$ 24,80', plan: 'DMU338771' },
+    { name: 'Leve 8, pague 5', qty: '8 frascos · 240 dias', months: 8, total: 377, installments: '12x de R$ 37,85', plan: 'DUX338772' },
+  ],
+};
+
+export const mounjaxPages = [
+  { href: '/mounjax/', title: 'Mounjax: ficha completa, composição e preço', short: 'Ficha completa' },
+  { href: '/mounjax/funciona/', title: 'Mounjax funciona? O que a fórmula pode e não pode fazer', short: 'Funciona?' },
+  { href: '/mounjax/como-tomar/', title: 'Como tomar Mounjax: quantas gotas, efeitos colaterais e contraindicações', short: 'Como tomar e cuidados' },
+  { href: '/mounjax/onde-comprar/', title: 'Onde comprar Mounjax original: site oficial e cuidado com outro produto de mesmo nome', short: 'Onde comprar e site oficial' },
+  { href: '/mounjax/anvisa/', title: 'Mounjax tem aprovação da Anvisa? E é o mesmo que Mounjaro?', short: 'Anvisa e Mounjaro' },
+  { href: '/mounjax/e-confiavel/', title: 'Mounjax é confiável? Reclame Aqui e a empresa por trás', short: 'É confiável?' },
 ];
 
 export const ozenvittaPages = [
@@ -203,6 +231,7 @@ export const study = {
 export const catalog = [
   { name: 'OzenVitta', href: '/ozenvitta/', pill: 'Emagrecimento', summary: 'Fibras, L-carnitina, laranja moro e cromo em cápsulas.', pages: ozenvittaPages },
   { name: 'ReduPhine Caps', href: '/reduphine-caps/', pill: 'Emagrecimento', summary: 'Spirulina, psyllium, quitosana e cromo, com opção de combo com gotas.', pages: reduphinePages },
+  { name: 'Mounjax', href: '/mounjax/', pill: 'Gotas', summary: 'Gotas da Ozenpharma com café verde, cúrcuma, cromo e vitaminas. Não é Mounjaro.', pages: mounjaxPages },
   { name: 'TG30 Crisfit', href: '/tg30/', pill: 'Gotas', summary: 'Café verde, cúrcuma e vitaminas D3 e B12 em gotas.', pages: tg30Pages },
   { name: 'Vitta Resveratrol', href: '/vitta-resveratrol/', pill: 'Pele', summary: 'Colágeno, ácido hialurônico, resveratrol e vitaminas.', pages: resveratrolPages },
 ];

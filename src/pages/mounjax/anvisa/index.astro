@@ -1,0 +1,61 @@
+---
+import Article from '../../../layouts/Article.astro';
+import { mounjaxPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Mounjax é aprovado pela Anvisa?', a: 'A página diz que o Mounjax é um suplemento alimentar dispensado de registro. Isso significa que ele pode ser vendido sem análise prévia da Anvisa, desde que siga as regras para suplementos. Não é o mesmo que ter sido aprovado.' },
+  { q: 'A Anvisa proibiu o Mounjax?', a: 'Na consulta de 14/10/2026, não encontramos o Mounjax nas listas de produtos proibidos. Em agosto de 2026, a Anvisa proibiu outros produtos com nomes como "Mounjaro Natumix" e "Ozempic Natural", que não tinham registro e eram de fabricantes sem autorização.' },
+  { q: 'Mounjax tem tirzepatida?', a: 'Não. A lista de ingredientes tem só extratos vegetais, cromo e vitaminas. A tirzepatida é o princípio ativo do Mounjaro, um remédio injetável vendido com receita.' },
+];
+---
+<Article
+  ogImage="/img/mounjax/og-mounjax.jpg"
+  title="Mounjax tem aprovação da Anvisa? E é o mesmo que Mounjaro?"
+  seoTitle="Mounjax Anvisa: é aprovado? É Mounjaro?"
+  description="Mounjax é aprovado pela Anvisa? Entenda o que é ser suplemento dispensado de registro, por que ele não é Mounjaro e o que a Anvisa fez com produtos parecidos."
+  kicker="Regulação"
+  lead="O Mounjax é vendido como suplemento dispensado de registro, o que não é o mesmo que aprovado. E apesar do nome, não tem relação com o Mounjaro, o remédio injetável com tirzepatida."
+  crumbs={[{ name: 'Mounjax', href: '/mounjax/' }, { name: 'Anvisa e Mounjaro', href: '/mounjax/anvisa/' }]}
+  faq={faq}
+  related={mounjaxPages}
+  sources={[
+    { label: 'Página oficial do Mounjax (consultada em 14/10/2026)', url: 'https://mounjax.com/pvmonob/' },
+    { label: 'Folha Vitória: Anvisa proíbe "Ozempic natural" e manda retirar suplementos (06/08/2026)', url: 'https://www.folhavitoria.com.br/saude/anvisa-proibe-ozempic-natural-e-manda-retirar-suplementos-do-mercado-veja-a-lista/' },
+    { label: 'Seu Dinheiro: Anvisa proíbe produtos com promessa semelhante ao Mounjaro (14/08/2026)', url: 'https://www.seudinheiro.com/2026/economia/anvisa-proibe-cha-medicamento-emagrecedor-mounjaro-mlem/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>O Mounjax não tem "aprovação" da Anvisa: como suplemento alimentar, ele é dispensado de registro e não passa por análise de eficácia antes de ser vendido. Também não é Mounjaro: não tem tirzepatida nem nenhum remédio. Na nossa consulta, ele não aparecia nas listas de produtos proibidos.</p>
+  </div>
+
+  <h2>O que significa "dispensado de registro"</h2>
+  <p>A maioria dos suplementos alimentares no Brasil não precisa de registro na Anvisa. O fabricante só precisa seguir as regras: usar ingredientes permitidos, respeitar limites de dose e não fazer promessas de remédio, como emagrecer, tratar ou curar doenças. A Anvisa fiscaliza depois que o produto está à venda. Por isso, "dispensado de registro" quer dizer que <strong>ninguém avaliou se o produto funciona</strong>.</p>
+
+  <h2>Mounjax e Mounjaro: as diferenças</h2>
+  <div class="table-scroll">
+    <table class="data compare-table">
+      <thead><tr><th></th><th>Mounjax</th><th>Mounjaro</th></tr></thead>
+      <tbody>
+        <tr><th>O que é</th><td>Suplemento alimentar</td><td>Remédio</td></tr>
+        <tr><th>Princípio ativo</th><td>Nenhum; extratos vegetais e vitaminas</td><td>Tirzepatida</td></tr>
+        <tr><th>Forma</th><td>Gotas por via oral</td><td>Injeção semanal</td></tr>
+        <tr><th>Receita</th><td>Não precisa</td><td>Precisa</td></tr>
+        <tr><th>Estudos</th><td>Nenhum com o produto</td><td>Grandes ensaios clínicos</td></tr>
+        <tr><th>Fabricante</th><td>Ozenpharma</td><td>Eli Lilly</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>A semelhança é só no nome. Quem procura o efeito do Mounjaro precisa de avaliação médica, e não de um suplemento.</p>
+
+  <h2>O que a Anvisa fez com produtos parecidos</h2>
+  <p>Em agosto de 2026, a Anvisa proibiu a venda de vários produtos que usavam os nomes Mounjaro ou Ozempic, como "Mounjaro Natumix", "Ozempic Natural Natumix" e a linha "Milagroso Ervas Mounjaro". Os motivos citados foram a falta de registro, fabricantes sem autorização para funcionar e nomes que sugerem ligação com remédios de receita.</p>
+  <p>O Mounjax não estava nessas listas. Mas o nome segue o mesmo caminho de marketing, e vale acompanhar: produtos assim podem ser alvo de fiscalização no futuro.</p>
+
+  <h2>O que isso significa para quem quer comprar</h2>
+  <ul>
+    <li>O Mounjax pode ser vendido como suplemento, mas não tem prova de que emagreça.</li>
+    <li>Não espere nada parecido com o efeito das canetas de emagrecimento.</li>
+    <li>Compre só pelo site oficial e guarde o comprovante. Veja <a href="/mounjax/onde-comprar/">onde comprar</a>.</li>
+  </ul>
+  <p>Para entender o que cada ingrediente faz, leia <a href="/mounjax/funciona/">Mounjax funciona?</a></p>
+</Article>

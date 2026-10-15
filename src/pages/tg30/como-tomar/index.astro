@@ -1,0 +1,60 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { tg30 as p, tg30Pages } from '../../../data/site';
+
+const faq = [
+  { q: 'Quantas gotas de TG30 por dia?', a: 'A página de vendas fala em 12 gotas por dia. O rótulo manda tomar 1 mL por dia e diz que 1 mL tem 30 gotas. Na dúvida, siga o rótulo: 1 mL por dia, medido no conta-gotas.' },
+  { q: 'Qual o melhor horário para tomar TG30?', a: 'O fabricante não define um horário, só pede para manter o mesmo todos os dias. Como tem café verde, prefira a manhã se você for sensível a estimulantes.' },
+  { q: 'Depois de aberto, quanto tempo o TG30 dura?', a: 'O rótulo pede para consumir em até 60 dias depois de aberto, guardado entre 15 °C e 30 °C, longe da luz e do calor.' },
+];
+---
+<Article
+  ogImage="/img/tg30/og-tg30.jpg"
+  title="Como tomar TG30: quantas gotas, efeitos colaterais e quem não deve usar"
+  seoTitle="Como tomar TG30: gotas, efeitos e cuidados"
+  description="Como tomar o TG30 Crisfit: quantas gotas por dia (12 ou 30?), horário, efeitos colaterais, quem não deve usar e o cuidado com a dose alta de vitamina D."
+  kicker="Modo de uso e segurança"
+  lead="O rótulo do TG30 indica 1 mL por dia, mas a página de vendas e o rótulo divergem sobre quantas gotas isso dá. O principal cuidado é com a vitamina D, que já vem em dose alta."
+  crumbs={[{ name: 'TG30', href: '/tg30/' }, { name: 'Como tomar', href: '/tg30/como-tomar/' }]}
+  faq={faq}
+  related={tg30Pages}
+  sources={[
+    { label: 'Página oficial do TG30 e imagem do rótulo (consultadas em 14/10/2026)', url: 'https://tg30-crisfit.vercel.app/' },
+    { label: 'NIH Office of Dietary Supplements: Vitamin D', url: 'https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Agite o frasco e tome 1 mL por dia, sempre no mesmo horário. O rótulo diz que isso dá 30 gotas; a página de vendas fala em 12. Não use se estiver grávida, amamentando ou tiver menos de 19 anos, e não some com outro suplemento de vitamina D sem orientação.</p>
+  </div>
+
+  <h2>Modo de uso</h2>
+  <ol>
+    <li><strong>Agite o frasco</strong> antes de cada uso.</li>
+    <li><strong>Meça 1 mL</strong> com o conta-gotas. O rótulo diz que equivale a 30 gotas.</li>
+    <li><strong>Tome uma vez por dia</strong>, no mesmo horário. De manhã é melhor para quem é sensível ao café verde.</li>
+    <li><strong>Guarde</strong> entre 15 °C e 30 °C, longe da luz, e use em até 60 dias depois de aberto.</li>
+  </ol>
+
+  <h2>12 ou 30 gotas?</h2>
+  <p>A página de vendas diz que 12 gotas equivalem a 1 mL. O rótulo diz que 1 mL tem 30 gotas. Se você seguir a página, toma menos da metade da dose do rótulo, inclusive das vitaminas. Se seguir o rótulo, um frasco de 30 mL dura exatamente 30 dias, o que bate com a embalagem. Por isso, a dose do rótulo é a mais coerente.</p>
+
+  <h2>Possíveis efeitos colaterais</h2>
+  <ul>
+    <li><strong>Desconforto digestivo:</strong> enjoo ou intestino solto, mais comum no início.</li>
+    <li><strong>Agitação ou insônia:</strong> raro, em pessoas sensíveis ao café verde.</li>
+    <li><strong>Excesso de vitamina D:</strong> só se somar com outros suplementos. O limite seguro para adultos é de 4.000 UI por dia, e o TG30 já tem 2.000 UI.</li>
+    <li><strong>Alergia:</strong> o rótulo avisa que pode conter derivados de peixe.</li>
+  </ul>
+
+  <h2>Quem não deve usar sem orientação médica</h2>
+  <ul>
+    <li>Gestantes, lactantes e menores de 19 anos (contraindicação do rótulo).</li>
+    <li>Quem toma remédio para diabetes: o cromo e o feno-grego podem baixar a glicose.</li>
+    <li>Quem usa anticoagulantes: a cúrcuma e o feno-grego podem aumentar o risco de sangramento.</li>
+    <li>Quem tem pedra nos rins, cálculo na vesícula ou já toma vitamina D.</li>
+  </ul>
+  <p>Ainda em dúvida se vale a pena? Leia <a href="/tg30/funciona/">TG30 funciona?</a></p>
+
+  <BuyBox compact produto="TG30" href={p.link} title="TG30 no site oficial" text="A partir de R$ 149,90 (1 frasco para 30 dias), com frete grátis e garantia de 30 dias." cta="Ver kits e preços" />
+</Article>

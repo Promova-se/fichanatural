@@ -1,0 +1,87 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import { mounjax as p, mounjaxPages } from '../../data/site';
+
+const faq = [
+  { q: 'O que é o Mounjax?', a: 'É um suplemento alimentar em gotas da Ozenpharma, vendido para controle de peso. A página cita café verde, dihidrocapsiato, cúrcuma, colina, inulina, feno-grego, cromo e vitaminas D3 e B12. Não tem relação com o Mounjaro, o remédio injetável.' },
+  { q: 'Quanto custa o Mounjax?', a: 'Na consulta de 14/10/2026, 1 frasco custava R$ 147, e os kits iam de R$ 197 (3 frascos) a R$ 377 (8 frascos), com frete grátis. Esses são os valores à vista; no cartão parcelado há juros de 2,99% ao mês.' },
+  { q: 'Mounjax é a mesma coisa que Mounjaro?', a: 'Não. O Mounjaro é um remédio injetável com tirzepatida, vendido com receita. O Mounjax é um suplemento em gotas com ingredientes naturais e vitaminas, sem nenhum princípio ativo de remédio.' },
+  { q: 'Quem fabrica o Mounjax?', a: `A marca é da Ozenpharma, a mesma do OzenVitta. O checkout indica o SAC ${p.sac}. A página e os termos não informam CNPJ.` },
+];
+---
+<Article
+  ogImage="/img/mounjax/og-mounjax.jpg"
+  title="Mounjax: ficha completa, composição, preço e o que esperar"
+  seoTitle="Mounjax: composição, preço e se vale a pena"
+  description="Ficha do Mounjax em gotas: ingredientes, como tomar, preço dos kits, garantia, prós e contras, e por que ele não tem nada a ver com o Mounjaro."
+  kicker="Ficha de produto"
+  lead="O Mounjax é um suplemento em gotas da Ozenpharma com extratos vegetais, cromo e vitaminas. O nome lembra o Mounjaro, mas ele não tem nenhum remédio na fórmula, e a página não informa a dose de cada ingrediente."
+  crumbs={[{ name: 'Mounjax', href: '/mounjax/' }]}
+  faq={faq}
+  related={mounjaxPages}
+  sources={[
+    { label: 'Página oficial do Mounjax (consultada em 14/10/2026)', url: 'https://mounjax.com/pvmonob/' },
+    { label: 'Termos e condições do Mounjax', url: 'https://mounjax.com/termos-e-condicoes-de-uso/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Suplemento em gotas com 9 ingredientes: café verde, dihidrocapsiato, cúrcuma, colina, inulina, feno-grego, cromo e vitaminas D3 e B12. São 12 gotas por dia, antes do café da manhã. A página não informa as doses, e fórmulas parecidas em gotas trazem quantidades muito pequenas dos extratos. Custa a partir de R$ 147 o frasco. Não é Mounjaro.</p>
+  </div>
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>{p.name} (gotas)</td></tr>
+        <tr><th>Marca</th><td>{p.brand}, a mesma do OzenVitta</td></tr>
+        <tr><th>CNPJ</th><td>Não informado na página, nos termos nem no checkout</td></tr>
+        <tr><th>Atendimento</th><td>{p.sac}</td></tr>
+        <tr><th>Tipo</th><td>Suplemento alimentar líquido</td></tr>
+        <tr><th>Ingredientes citados</th><td>{p.ingredients.join(', ')}</td></tr>
+        <tr><th>Dose de cada ingrediente</th><td>Não informada</td></tr>
+        <tr><th>Modo de uso</th><td>12 gotas por dia, antes do café da manhã</td></tr>
+        <tr><th>Rendimento</th><td>1 frasco para 30 dias</td></tr>
+        <tr><th>Não indicado para</th><td>Menores de idade e alérgicos a crustáceos</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>O que a página promete</h2>
+  <p>A página divide os ingredientes em três grupos: "ignição metabólica" (café verde e dihidrocapsiato), "limpeza interna" (cúrcuma, colina e inulina) e "controle de desejos" (feno-grego, cromo, D3 e B12). Promete combater inflamação, acelerar o metabolismo e reduzir a vontade de doce, com resultados nas primeiras quatro semanas. O que os estudos dizem de cada ingrediente está em <a href="/mounjax/funciona/">Mounjax funciona?</a></p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores consultados na página oficial em 14/10/2026, com frete grátis e e-book de bônus. No checkout aparece ainda uma oferta de mais 2 frascos por R$ 50. No cartão parcelado, os juros são de 2,99% ao mês.</p>
+  <KitCards kits={p.kits} mcr={p.mcr} produto="Mounjax" unit="frasco" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Garantia de 30 dias, com reembolso por e-mail</li>
+        <li>A empresa responde as reclamações no Reclame Aqui</li>
+        <li>Gotas são práticas para quem não gosta de cápsulas</li>
+        <li>Kits grandes saem por R$ 47 o frasco</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Nome que lembra o Mounjaro, um remédio sem relação com o produto</li>
+        <li>Não informa a dose de nenhum ingrediente nem o CNPJ</li>
+        <li>Promete resultados em quatro semanas sem estudo do produto</li>
+        <li>Existe outro "Mounjax", de outra empresa, o que confunde na compra</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>O Mounjax é um suplemento comum em gotas que se vende com um nome parecido com o de um remédio famoso. A combinação de ingredientes faz sentido no papel, mas sem as doses não dá para saber se há quantidade suficiente para qualquer efeito, e fórmulas parecidas em gotas trazem miligramas dos extratos. Pelo mesmo preço, a mesma empresa vende o <a href="/ozenvitta/">OzenVitta</a>, em cápsulas, com fibras e laranja moro, que têm mais evidência para controle de apetite.</p>
+  </div>
+  <p>Antes de comprar, leia <a href="/mounjax/anvisa/">se o Mounjax tem aprovação da Anvisa</a> e <a href="/mounjax/onde-comprar/">como reconhecer o site oficial</a>.</p>
+
+  <BuyBox compact produto="Mounjax" href={p.link} title="Mounjax no site oficial" text="A partir de R$ 147 (1 frasco para 30 dias), com frete grátis e garantia de 30 dias." cta="Ver kits e preços" />
+</Article>

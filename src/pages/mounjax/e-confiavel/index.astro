@@ -1,0 +1,70 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { mounjax as p, mounjaxPages, reputation } from '../../../data/site';
+
+const r = reputation.ozenpharma;
+const faq = [
+  { q: 'Mounjax é golpe?', a: `O Mounjax das gotas é vendido pela Ozenpharma, que entrega e responde as reclamações no Reclame Aqui, com reputação "${r.label}". O risco maior é comprar em um site com o mesmo nome que não seja o oficial.` },
+  { q: 'Mounjax tem Reclame Aqui?', a: `As reclamações sobre o Mounjax ficam na página da Ozenpharma no Reclame Aqui, que tinha nota ${r.score} e ${r.answered} de respostas no período de ${r.period}.` },
+  { q: 'Como pedir reembolso do Mounjax?', a: `Pelo e-mail ${p.sac}, em até 30 dias após receber o produto, descrevendo sua experiência.` },
+];
+---
+<Article
+  ogImage="/img/mounjax/og-mounjax.jpg"
+  title="Mounjax é confiável? Reclame Aqui e a empresa por trás"
+  seoTitle="Mounjax é confiável? Reclame Aqui e golpe"
+  description="Mounjax é confiável ou golpe? Veja quem vende as gotas, a reputação da Ozenpharma no Reclame Aqui, como funciona a garantia e como evitar sites falsos."
+  kicker="Reputação"
+  lead="O Mounjax em gotas é da Ozenpharma, a mesma empresa do OzenVitta, que responde as reclamações no Reclame Aqui. Os riscos estão nas promessas, no nome e nos vários sites que usam a mesma marca."
+  crumbs={[{ name: 'Mounjax', href: '/mounjax/' }, { name: 'É confiável?', href: '/mounjax/e-confiavel/' }]}
+  faq={faq}
+  related={mounjaxPages}
+  sources={[
+    { label: `Reclame Aqui: Ozenpharma, consultado em ${reputation.checked}`, url: r.url },
+    { label: 'Página oficial do Mounjax (consultada em 14/10/2026)', url: 'https://mounjax.com/pvmonob/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Comprado no site oficial, o Mounjax não tem cara de golpe: a venda passa pela Monetizze e a Ozenpharma responde {r.answered} das reclamações, com reputação "{r.label}" (nota {r.score}). Mas há reclamações de clientes que não viram resultado, a empresa não informa CNPJ e existem outros sites vendendo produtos com o mesmo nome.</p>
+  </div>
+
+  <h2>A empresa no Reclame Aqui</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Empresa</th><td>Ozenpharma (Mounjax e OzenVitta)</td></tr>
+        <tr><th>Reputação</th><td>{r.label} (nota {r.score} de 10)</td></tr>
+        <tr><th>Respondidas</th><td>{r.answered}</td></tr>
+        <tr><th>Resolvidas</th><td>{r.resolved}</td></tr>
+        <tr><th>Voltariam a fazer negócio</th><td>{r.again}</td></tr>
+        <tr><th>Período</th><td>{r.period}</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">Dados do painel da empresa no Reclame Aqui, consultado em {reputation.checked}. Os números incluem todos os produtos da Ozenpharma.</p>
+
+  <h2>Do que as pessoas reclamam</h2>
+  <ul>
+    <li><strong>Resultado:</strong> há reclamação de cliente que diz que o Mounjax não emagreceu e pediu reembolso.</li>
+    <li><strong>Reembolso:</strong> é o problema mais citado contra a empresa, em cerca de 22% das reclamações.</li>
+    <li><strong>Entrega:</strong> casos de pedido sem rastreio, que em geral aparecem como resolvidos.</li>
+  </ul>
+
+  <h2>Pontos de atenção</h2>
+  <ul>
+    <li><strong>Nome:</strong> lembra o Mounjaro e pode levar a expectativas que um suplemento não cumpre. Veja <a href="/mounjax/anvisa/">Mounjax e Anvisa</a>.</li>
+    <li><strong>Outros sites:</strong> existe outro "Mounjax", em cápsulas e de outra empresa. Veja <a href="/mounjax/onde-comprar/">como reconhecer o site oficial</a>.</li>
+    <li><strong>Transparência:</strong> sem CNPJ e sem as doses dos ingredientes.</li>
+  </ul>
+
+  <h2>Como comprar com segurança</h2>
+  <ol>
+    <li>Compre só em mounjax.com e confira no checkout o e-mail {p.sac}.</li>
+    <li>Comece pelo frasco único.</li>
+    <li>Guarde o comprovante e o e-mail do pedido.</li>
+    <li>Se não ficar satisfeito, peça o reembolso por e-mail dentro de 30 dias e anote a data.</li>
+  </ol>
+
+  <BuyBox compact produto="Mounjax" href={p.link} title="Mounjax no site oficial" text="A partir de R$ 147 (1 frasco para 30 dias), com frete grátis e garantia de 30 dias." cta="Ver kits e preços" />
+</Article>

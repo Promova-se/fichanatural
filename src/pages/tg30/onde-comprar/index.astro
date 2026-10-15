@@ -1,0 +1,50 @@
+---
+import Article from '../../../layouts/Article.astro';
+import KitCards from '../../../components/KitCards.astro';
+import { tg30 as p, tg30Pages } from '../../../data/site';
+
+const faq = [
+  { q: 'TG30 vende em farmácia ou no Mercado Livre?', a: 'O canal indicado é o site oficial, com pagamento pela Monetizze. Comprar em outros lugares tira a garantia e aumenta o risco de produto falsificado.' },
+  { q: 'Qual o prazo de entrega do TG30?', a: 'A página diz que o prazo é calculado pelo CEP no checkout e que o código de rastreio é enviado quando o pedido é despachado. O frete é grátis.' },
+  { q: 'Como funciona a garantia do TG30?', a: `São 30 dias a partir do recebimento, com devolução de 100% do valor. Para pedir, escreva para ${p.sacCheckout} e ${p.sacLabel} e guarde o comprovante.` },
+];
+---
+<Article
+  ogImage="/img/tg30/og-tg30.jpg"
+  title="Onde comprar TG30 original: site oficial, preço e garantia"
+  seoTitle="Onde comprar TG30 original e preço"
+  description="Onde comprar o TG30 Crisfit original, preço de cada kit, formas de pagamento, juros no cartão, frete e como funciona a garantia de 30 dias."
+  kicker="Compra segura"
+  lead="O TG30 é vendido pelo site oficial da Crisfit, com pagamento pela Monetizze e frete grátis. Os kits vão de R$ 149,90 a R$ 649,90, e no cartão parcelado há juros."
+  crumbs={[{ name: 'TG30', href: '/tg30/' }, { name: 'Onde comprar', href: '/tg30/onde-comprar/' }]}
+  faq={faq}
+  related={tg30Pages}
+  sources={[
+    { label: 'Página oficial do TG30 (consultada em 14/10/2026)', url: 'https://tg30-crisfit.vercel.app/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Compre pelo site oficial, a partir de R$ 149,90 o frasco, com frete grátis. Prefira Pix ou à vista: o parcelamento no cartão tem juros de 2,99% ao mês. Comece pelo frasco único e guarde o comprovante para a garantia de 30 dias.</p>
+  </div>
+
+  <h2>Escolha o kit</h2>
+  <p>O preço por frasco cai de R$ 149,90 no frasco único para R$ 108,32 no kit de 6. Ainda assim, o TG30 é bem mais caro por mês que outros suplementos que analisamos.</p>
+  <KitCards kits={p.kits} mcr={p.mcr} produto="TG30" unit="frasco" />
+
+  <h2>Pix, boleto ou cartão?</h2>
+  <p>O checkout aceita cartão de crédito e débito, Pix e boleto. O preço anunciado é o valor à vista. No cartão parcelado, os juros são de 2,99% ao mês: o kit de 6 frascos, por exemplo, sai por 12x de R$ 65,25, cerca de R$ 783 no total, contra R$ 649,90 à vista.</p>
+
+  <h2>A garantia</h2>
+  <ol>
+    <li>O prazo é de <strong>30 dias a partir do recebimento</strong>.</li>
+    <li>A página promete devolver 100% do valor, "sem perguntas", se você não ficar satisfeito.</li>
+    <li>Para pedir, escreva para {p.sacCheckout} (indicado no checkout) e {p.sacLabel} (indicado no rótulo).</li>
+  </ol>
+  <p>Na nossa consulta, os links de "Troca e devolução" e "Política de privacidade" do site não abriam. Por isso, tire um print da garantia no dia da compra. Mais detalhes em <a href="/tg30/e-confiavel/">TG30 é confiável?</a></p>
+
+  <h2>Antes de pagar</h2>
+  <ul>
+    <li>Leia a <a href="/tg30/funciona/">análise das doses do rótulo</a>, para saber o que esperar.</li>
+    <li>Se o objetivo é controlar a fome, compare com o <a href="/ozenvitta/">OzenVitta</a>, que custa menos por mês.</li>
+  </ul>
+</Article>

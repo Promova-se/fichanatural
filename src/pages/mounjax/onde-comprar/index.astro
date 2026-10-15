@@ -1,0 +1,59 @@
+---
+import Article from '../../../layouts/Article.astro';
+import KitCards from '../../../components/KitCards.astro';
+import { mounjax as p, mounjaxPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Qual o site oficial do Mounjax?', a: 'O Mounjax em gotas da Ozenpharma é vendido pelo site mounjax.com, com pagamento pela Monetizze e atendimento pelo e-mail sac@ozenpharma.com.' },
+  { q: 'Mounjax vende no Mercado Livre ou em farmácia?', a: 'Segundo a página oficial, não. A empresa diz que não vende no Mercado Livre e não se responsabiliza por compras em outros sites.' },
+  { q: 'Existe Mounjax em cápsulas?', a: 'Existe outro produto chamado Mounjax, em cápsulas, vendido por outra empresa em outro site e com outros preços. Não é o mesmo produto das gotas da Ozenpharma. Confira sempre o nome do vendedor no checkout.' },
+];
+---
+<Article
+  ogImage="/img/mounjax/og-mounjax.jpg"
+  title="Onde comprar Mounjax original: site oficial e cuidado com outro produto de mesmo nome"
+  seoTitle="Onde comprar Mounjax original e site oficial"
+  description="Onde comprar o Mounjax original, qual é o site oficial, preço dos kits e garantia. E atenção: existe outro Mounjax, de outra empresa, que não é o mesmo produto."
+  kicker="Compra segura"
+  lead="O Mounjax em gotas da Ozenpharma é vendido só pelo site oficial, mounjax.com. Na internet aparecem vários sites com o mesmo nome, inclusive outro produto em cápsulas, de outra empresa."
+  crumbs={[{ name: 'Mounjax', href: '/mounjax/' }, { name: 'Onde comprar', href: '/mounjax/onde-comprar/' }]}
+  faq={faq}
+  related={mounjaxPages}
+  sources={[
+    { label: 'Página oficial do Mounjax (consultada em 14/10/2026)', url: 'https://mounjax.com/pvmonob/' },
+    { label: 'Termos e condições do Mounjax', url: 'https://mounjax.com/termos-e-condicoes-de-uso/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Compre pelo site oficial, mounjax.com. No checkout, confira se o produto aparece como MOUNJAX, o pagamento é pela Monetizze e o SAC é sac@ozenpharma.com. Preço a partir de R$ 147, com frete grátis e garantia de 30 dias.</p>
+  </div>
+
+  <h2>Como reconhecer o site oficial</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Endereço</th><td>mounjax.com</td></tr>
+        <tr><th>Formato</th><td>Gotas, 12 por dia</td></tr>
+        <tr><th>Pagamento</th><td>Monetizze (pay.monetizze.com.br)</td></tr>
+        <tr><th>Atendimento</th><td>{p.sac}</td></tr>
+        <tr><th>Preços</th><td>R$ 147, 197, 247 e 377</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Atenção: existe outro "Mounjax"</h2>
+  <p>Na busca aparecem outros sites com o nome Mounjax. Pelo menos um deles vende um produto <strong>em cápsulas</strong>, de outra empresa, por outra plataforma de pagamento e com outros preços. Não é o mesmo produto das gotas da Ozenpharma, e a garantia de um não vale para o outro. Há também blogs e páginas de afiliados, como esta, que levam ao site oficial.</p>
+  <p>Antes de pagar, confira no checkout o nome do produto, a plataforma e o e-mail de atendimento.</p>
+
+  <h2>Escolha o kit</h2>
+  <p>Quanto maior o kit, menor o preço por frasco: de R$ 147 no frasco único até R$ 47,13 no kit de 8. Para testar, o frasco único é suficiente.</p>
+  <KitCards kits={p.kits} mcr={p.mcr} produto="Mounjax" unit="frasco" />
+
+  <h2>A garantia</h2>
+  <ol>
+    <li>O prazo é de <strong>30 dias corridos após o recebimento</strong>.</li>
+    <li>Se não ficar satisfeito usando como indicado, peça o reembolso por e-mail, descrevendo sua experiência.</li>
+    <li>A garantia <strong>não vale</strong> se você não usou o produto por orientação médica, restrição de saúde ou outro motivo pessoal.</li>
+  </ol>
+  <p>Prefira o Pix ou à vista: no cartão parcelado, os juros são de 2,99% ao mês. Guarde o comprovante e o e-mail do pedido.</p>
+</Article>
