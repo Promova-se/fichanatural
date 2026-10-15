@@ -142,3 +142,6 @@ h3 { font-size: 1.2rem; margin: 1.6em 0 .4em; }
   .article-head-image img { max-width: 150px; }
   .product-photo { margin: 8px auto 0; width: 140px; }
 }
+
+.compare-table { min-width: 600px; }
+.compare-table th:first-child { width: 150px; }

@@ -1,0 +1,67 @@
+---
+import Article from '../../layouts/Article.astro';
+import { ingredientGuides, resveratrolPages } from '../../data/site';
+
+const faq = [
+  { q: 'Para que serve o resveratrol?', a: 'É um antioxidante estudado para envelhecimento, coração, glicose e pele. Em laboratório e em animais os resultados são promissores, mas em pessoas os estudos são pequenos e os resultados, inconsistentes. Não há benefício comprovado para nenhuma doença.' },
+  { q: 'Resveratrol é bom para a pele?', a: 'Há estudos com resveratrol aplicado na pele, em cremes, com melhora modesta de linhas finas e manchas. Tomado por via oral, a evidência para a pele é fraca, porque o corpo absorve pouco e transforma rápido a substância.' },
+  { q: 'Resveratrol tem efeito colateral?', a: 'Em doses comuns de suplemento, costuma ser bem tolerado. Doses altas, acima de 1 grama por dia, podem causar náusea, diarreia e dor abdominal. Ele pode aumentar o efeito de anticoagulantes.' },
+  { q: 'Vinho tinto tem resveratrol suficiente?', a: 'Não. Uma taça tem pouquíssimo resveratrol, muito menos do que as doses usadas nos estudos. Beber para obter resveratrol não faz sentido.' },
+];
+const related = [...ingredientGuides, ...resveratrolPages];
+---
+<Article
+  title="Resveratrol: o que é, para que serve e o que a ciência diz"
+  seoTitle="Resveratrol: o que é e para que serve"
+  description="O que é resveratrol, para que serve, se faz bem para a pele, a dose usada nos estudos, efeitos colaterais e quem deve evitar. Explicado sem exagero."
+  kicker="Guia de ingrediente"
+  lead="O resveratrol é um antioxidante da casca da uva que ficou famoso como molécula antienvelhecimento. Em pessoas, os resultados são bem mais modestos do que a fama sugere."
+  crumbs={[{ name: 'Resveratrol', href: '/resveratrol/' }]}
+  faq={faq}
+  related={related}
+  sources={[
+    { label: 'Resveratrol bioavailability and toxicity in humans (revisão). Mol Nutr Food Res, 2010', url: 'https://pubmed.ncbi.nlm.nih.gov/20013887/' },
+    { label: 'Enhancing the delivery of resveratrol in humans: if low bioavailability is the problem, what is the solution? (revisão)', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6270951/' },
+    { label: 'Shaito A et al. Potential Adverse Effects of Resveratrol: A Literature Review. Int J Mol Sci, 2020', url: 'https://pubmed.ncbi.nlm.nih.gov/32197410/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Resveratrol é um antioxidante natural da uva, do amendoim e de algumas plantas. Ele é bem estudado em laboratório, mas em pessoas os resultados para coração, glicose, peso e pele são pequenos ou inconsistentes, em parte porque o corpo absorve e elimina a substância muito rápido. É seguro nas doses comuns, mas não é um antienvelhecimento comprovado.</p>
+  </div>
+
+  <h2>O que é resveratrol</h2>
+  <p>É um polifenol, uma substância que algumas plantas produzem para se defender de fungos e radiação. Está na casca da uva roxa, no vinho tinto, no amendoim, nas amoras e numa planta chamada <em>Polygonum cuspidatum</em>, que é a principal fonte usada em suplementos. A forma ativa é chamada de trans-resveratrol.</p>
+
+  <h2>Para que serve: o que os estudos mostram</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Uso popular</th><th>O que dá para afirmar</th></tr></thead>
+      <tbody>
+        <tr><td>Antioxidante</td><td>Forte em laboratório; em pessoas, o efeito é difícil de medir</td></tr>
+        <tr><td>Coração e pressão</td><td>Estudos pequenos, com resultados inconsistentes</td></tr>
+        <tr><td>Glicose e diabetes</td><td>Alguns estudos mostram pequena melhora; não substitui tratamento</td></tr>
+        <tr><td>Emagrecimento</td><td>Sem efeito relevante sobre o peso</td></tr>
+        <tr><td>Pele (em cápsula)</td><td>Evidência fraca; os melhores resultados são com cremes</td></tr>
+        <tr><td>Longevidade</td><td>Efeito visto em leveduras e animais, não comprovado em humanos</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Por que os resultados em pessoas decepcionam</h2>
+  <p>O corpo absorve bem o resveratrol, mas o fígado e o intestino o transformam quase todo em outras substâncias em poucos minutos. Por isso sobra muito pouco resveratrol "livre" no sangue. Os pesquisadores ainda discutem se essas substâncias transformadas também têm efeito. Enquanto isso não se resolve, os resultados promissores do laboratório não se repetem com clareza nas pessoas.</p>
+
+  <h2>Dose usada nos estudos</h2>
+  <p>A maioria dos estudos em pessoas usou de 150 a 500 mg por dia, e alguns chegaram a 1 grama ou mais. Suplementos combinados, como os de pele, costumam ter bem menos que isso e muitas vezes não informam a dose. Antes de comprar, procure no rótulo a quantidade de trans-resveratrol por cápsula.</p>
+
+  <h2>Efeitos colaterais e quem deve evitar</h2>
+  <ul>
+    <li><strong>Doses altas:</strong> acima de 1 grama por dia podem causar náusea, diarreia e dor de barriga.</li>
+    <li><strong>Anticoagulantes:</strong> o resveratrol pode aumentar o risco de sangramento com varfarina, AAS e similares.</li>
+    <li><strong>Outros remédios:</strong> ele interfere em enzimas do fígado que processam vários medicamentos.</li>
+    <li><strong>Gestantes, lactantes e pessoas com câncer sensível a hormônios:</strong> só com orientação médica, por falta de dados de segurança.</li>
+    <li><strong>Cirurgias:</strong> suspenda pelo menos 2 semanas antes, pelo efeito no sangramento.</li>
+  </ul>
+
+  <h2>E nos suplementos para a pele?</h2>
+  <p>Muitos produtos de beleza juntam resveratrol com colágeno e ácido hialurônico. Nesses casos, o colágeno costuma ser o ingrediente com melhor evidência, e o resveratrol entra mais como apelo. Analisamos um exemplo em <a href="/vitta-resveratrol/funciona/">Vitta Resveratrol funciona?</a></p>
+</Article>

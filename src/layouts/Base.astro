@@ -1,5 +1,5 @@
 ---
-import { site, guides, reduphinePages, resveratrolPages, ozenvittaPages } from '../data/site';
+import { site, guides, reduphinePages, resveratrolPages, ozenvittaPages, comparePages, ingredientGuides } from '../data/site';
 import '../styles/global.css';
 
 interface Props {
@@ -108,7 +108,11 @@ const path = Astro.url.pathname;
       </div>
       <div>
         <p class="footer-title">Guias</p>
-        <ul>{guides.map((g) => <li><a href={g.href}>{g.short}</a></li>)}</ul>
+        <ul>
+          {comparePages.map((g) => <li><a href={g.href}>{g.short}</a></li>)}
+          {ingredientGuides.map((g) => <li><a href={g.href}>{g.short}</a></li>)}
+          {guides.map((g) => <li><a href={g.href}>Laranja moro: {g.short}</a></li>)}
+        </ul>
       </div>
       <div>
         <p class="footer-title">Institucional</p>

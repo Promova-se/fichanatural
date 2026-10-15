@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { site, guides } from '../data/site';
+import { site, guides, comparePages, ingredientGuides } from '../data/site';
 
 const schema = [{
   '@context': 'https://schema.org',
@@ -55,6 +55,30 @@ const descs: Record<string, string> = {
         <h3>OzenVitta</h3>
         <p>Psyllium, inulina, L-carnitina, laranja moro e cromo. Preço dos kits, o que esperar e os pontos de atenção.</p>
         <span class="go">Ver ficha →</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section wrap" aria-labelledby="compare">
+    <h2 id="compare">Comparações e ingredientes</h2>
+    <div class="grid">
+      <a class="tile" href={comparePages[0].href}>
+        <span class="pill">Comparação</span>
+        <h3>OzenVitta ou ReduPhine?</h3>
+        <p>Fórmula, preço, garantia e a reputação de cada empresa no Reclame Aqui, lado a lado.</p>
+        <span class="go">Comparar →</span>
+      </a>
+      <a class="tile" href={ingredientGuides[0].href}>
+        <span class="pill">Ingrediente</span>
+        <h3>Psyllium emagrece?</h3>
+        <p>A fibra mais usada nos suplementos para emagrecer: o que faz, o que não faz e como tomar.</p>
+        <span class="go">Ler guia →</span>
+      </a>
+      <a class="tile" href={ingredientGuides[1].href}>
+        <span class="pill">Ingrediente</span>
+        <h3>Resveratrol: o que é</h3>
+        <p>O antioxidante da uva que virou moda. O que os estudos em pessoas mostram de verdade.</p>
+        <span class="go">Ler guia →</span>
       </a>
     </div>
   </section>

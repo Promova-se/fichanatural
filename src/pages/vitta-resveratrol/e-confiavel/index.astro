@@ -1,0 +1,68 @@
+---
+import Article from '../../../layouts/Article.astro';
+import { resveratrol, resveratrolPages, reputation } from '../../../data/site';
+
+const r = reputation.natturabio;
+const faq = [
+  { q: 'Vitta Resveratrol é golpe?', a: `O produto é distribuído por uma empresa identificada, a ${resveratrol.distributor}, CNPJ ${resveratrol.cnpj}, com pagamento pela Monetizze. As reclamações públicas são poucas, mas nenhuma das recentes foi respondida.` },
+  { q: 'A Natturabio tem nota no Reclame Aqui?', a: `Não. O Reclame Aqui só calcula a reputação depois de 10 reclamações avaliadas, e a Natturabio não chegou a esse número. Ela tem cerca de ${r.total} reclamações no histórico, a maioria sobre atraso na entrega.` },
+  { q: 'Tem reclamação sobre o Vitta Resveratrol?', a: 'Entre as reclamações visíveis na consulta, nenhuma cita o Vitta Resveratrol. Elas falam do colágeno da mesma empresa e de atrasos na entrega.' },
+];
+---
+<Article
+  ogImage="/img/vitta-resveratrol/og-vitta-resveratrol.jpg"
+  title="Vitta Resveratrol é confiável? Reclame Aqui e a Natturabio"
+  seoTitle="Vitta Resveratrol é confiável? Reclame Aqui"
+  description="Vitta Resveratrol é confiável? Veja quem é a Natturabio, o que aparece no Reclame Aqui, o que as reclamações dizem e como comprar com mais segurança."
+  kicker="Reputação"
+  lead="A Natturabio, distribuidora do Vitta Resveratrol, informa CNPJ e tem poucas reclamações públicas. O ponto fraco é que as reclamações recentes ficaram sem resposta."
+  crumbs={[{ name: 'Vitta Resveratrol', href: '/vitta-resveratrol/' }, { name: 'É confiável?', href: '/vitta-resveratrol/e-confiavel/' }]}
+  faq={faq}
+  related={resveratrolPages}
+  sources={[
+    { label: `Reclame Aqui: Natturabio, consultado em ${reputation.checked}`, url: r.url },
+    { label: 'Página oficial do Vitta Resveratrol', url: 'https://collagennatturabio.com.br/resveratrol/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Não há sinais de golpe: a distribuidora é identificada, a venda passa pela Monetizze e as reclamações públicas são poucas. Mas a Natturabio não tem nota no Reclame Aqui e não respondeu as reclamações recentes, quase todas sobre atraso na entrega. Pague no cartão e guarde os comprovantes.</p>
+  </div>
+
+  <h2>O que aparece no Reclame Aqui</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Reputação</th><td>{r.label}</td></tr>
+        <tr><th>Reclamações no período</th><td>{r.complaints} (cerca de {r.total} no histórico)</td></tr>
+        <tr><th>Respondidas</th><td>{r.answered}</td></tr>
+        <tr><th>Período avaliado</th><td>{r.period}</td></tr>
+        <tr><th>Empresa</th><td>{resveratrol.distributor}, CNPJ {resveratrol.cnpj}</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">Dados do painel da empresa no Reclame Aqui, consultado em {reputation.checked}.</p>
+
+  <h2>Do que as pessoas reclamam</h2>
+  <ul>
+    <li><strong>Atraso na entrega:</strong> o problema mais citado, cerca de 27% das reclamações.</li>
+    <li><strong>Falta de retorno:</strong> clientes relatam que não conseguiram resposta nos canais de atendimento.</li>
+    <li><strong>Produto diferente:</strong> um caso de colágeno com cor e sabor alterados.</li>
+  </ul>
+  <p>Nenhuma das reclamações visíveis cita o Vitta Resveratrol. Elas falam principalmente do colágeno da mesma empresa.</p>
+
+  <h2>O que pesa a favor</h2>
+  <ul>
+    <li>Distribuidora identificada, com CNPJ informado na página.</li>
+    <li>Pagamento intermediado pela Monetizze.</li>
+    <li>Poucas reclamações públicas em relação a outras marcas do mesmo tipo.</li>
+  </ul>
+
+  <h2>Como comprar com mais segurança</h2>
+  <ol>
+    <li>Prefira o cartão de crédito, que permite contestar a compra no banco se o produto não chegar.</li>
+    <li>Guarde o e-mail do pedido e o comprovante.</li>
+    <li>Se a garantia for necessária, leia as regras antes: ela exige selfies datadas e a devolução dos potes. Veja <a href="/vitta-resveratrol/onde-comprar/">onde comprar e a garantia</a>.</li>
+    <li>Atraso ou falta de resposta? Escreva para {resveratrol.sac}, procure a Monetizze e registre no Reclame Aqui.</li>
+  </ol>
+  <p>Quer saber se o produto vale a pena antes? Leia <a href="/vitta-resveratrol/funciona/">Vitta Resveratrol funciona?</a> e o guia <a href="/resveratrol/">resveratrol: o que é e para que serve</a>.</p>
+</Article>

@@ -1,0 +1,76 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import { ozenvitta, reduphine, reputation, comparePages, ingredientGuides } from '../../data/site';
+
+const oz = reputation.ozenpharma;
+const vb = reputation.vittabalance;
+const faq = [
+  { q: 'Qual é melhor, OzenVitta ou ReduPhine?', a: 'As fórmulas são parecidas e os preços dos kits são iguais. O OzenVitta tem laranja moro e L-carnitina, e a empresa responde as reclamações. O ReduPhine tem quitosana e informa o CNPJ, mas o atendimento tem nota baixa. Para a maioria das pessoas, o OzenVitta é a escolha com menos risco.' },
+  { q: 'Posso tomar OzenVitta e ReduPhine juntos?', a: 'Não é recomendado. Os dois têm psyllium e cromo, e somar as doses aumenta o desconforto intestinal e a interferência na absorção de remédios, sem prova de que o resultado melhore.' },
+  { q: 'Qual emagrece mais?', a: 'Nenhum dos dois foi testado em estudo próprio. Os ingredientes têm efeito pequeno sobre o peso e funcionam como apoio a dieta e exercício.' },
+];
+const related = [...comparePages, { href: '/ozenvitta/', title: 'OzenVitta: ficha completa' }, { href: '/reduphine-caps/', title: 'ReduPhine Caps: ficha completa' }, ...ingredientGuides];
+---
+<Article
+  title="OzenVitta ou ReduPhine: qual escolher? Comparação completa"
+  seoTitle="OzenVitta ou ReduPhine: qual escolher?"
+  description="OzenVitta ou ReduPhine Caps? Comparamos fórmula, preço dos kits, modo de uso, garantia e a reputação de cada empresa no Reclame Aqui para ajudar na escolha."
+  kicker="Comparação"
+  lead="São dois suplementos de fibras para controle de peso, com o mesmo preço. A diferença está em dois ingredientes, na garantia e, principalmente, no atendimento de cada empresa."
+  crumbs={[{ name: 'OzenVitta ou ReduPhine', href: '/ozenvitta-ou-reduphine/' }]}
+  faq={faq}
+  related={related}
+  sources={[
+    { label: 'Página oficial do OzenVitta', url: 'https://ozenvitta.com/pvmon/' },
+    { label: 'Página oficial do ReduPhine Caps', url: 'https://reduphinecaps.com.br/ofertamonetizze/' },
+    { label: `Reclame Aqui: Ozenpharma, consultado em ${reputation.checked}`, url: oz.url },
+    { label: `Reclame Aqui: VittaBalance, consultado em ${reputation.checked}`, url: vb.url },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Na fórmula e no preço, empatam. O OzenVitta leva vantagem em dois pontos: tem laranja moro, o ingrediente com melhor estudo para peso, e sua empresa responde todas as reclamações, enquanto a do ReduPhine está como Não recomendada no Reclame Aqui. O ReduPhine ganha em transparência, porque informa o CNPJ.</p>
+  </div>
+
+  <h2>Lado a lado</h2>
+  <p class="small">No celular, deslize a tabela para o lado.</p>
+  <div class="table-scroll">
+    <table class="data compare-table">
+      <thead><tr><th></th><th>OzenVitta</th><th>ReduPhine Caps</th></tr></thead>
+      <tbody>
+        <tr><th>Ingredientes citados</th><td>{ozenvitta.ingredients.join(', ')}</td><td>{reduphine.ingredients.join(', ')}</td></tr>
+        <tr><th>Em comum</th><td colspan="2">Psyllium, spirulina e cromo</td></tr>
+        <tr><th>Só neste</th><td>Laranja moro, L-carnitina, inulina</td><td>Quitosana</td></tr>
+        <tr><th>Doses de cada ingrediente</th><td>Não informadas</td><td>Não informadas</td></tr>
+        <tr><th>Modo de uso</th><td>2 cápsulas: antes do café da manhã e do jantar</td><td>2 cápsulas: antes do almoço e do jantar</td></tr>
+        <tr><th>Pote</th><td>60 cápsulas, 30 dias</td><td>60 cápsulas, 30 dias</td></tr>
+        <tr><th>Preço</th><td>R$ 147 (1 pote) a R$ 377 (8 potes)</td><td>R$ 147 (1 pote) a R$ 377 (8 potes)</td></tr>
+        <tr><th>Garantia</th><td>30 dias, reembolso por e-mail</td><td>Regras confusas; na prática, 7 dias com o produto lacrado</td></tr>
+        <tr><th>Empresa</th><td>OzenPharma, sem CNPJ informado</td><td>VittaBalance, CNPJ {reduphine.cnpj}</td></tr>
+        <tr><th>Reclame Aqui</th><td>{oz.label}, nota {oz.score}, {oz.answered} respondidas</td><td>{vb.label}, nota {vb.score}, {vb.answered} respondidas</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Fórmula: onde estão as diferenças</h2>
+  <p>Os dois apostam em fibras (psyllium) para dar saciedade, com spirulina e cromo. A partir daí, cada um segue um caminho:</p>
+  <ul>
+    <li><strong>OzenVitta:</strong> soma laranja moro, que tem um ensaio clínico com perda de peso pequena mas real, e L-carnitina, com efeito pequeno em revisões de estudos. Também tem inulina, outra fibra.</li>
+    <li><strong>ReduPhine:</strong> usa quitosana, uma fibra de crustáceos que promete "segurar" gordura. As revisões encontraram efeito muito pequeno.</li>
+  </ul>
+  <p>No papel, a fórmula do OzenVitta é um pouco mais completa. Mas, como nenhum dos dois informa as doses, não dá para saber se as quantidades chegam perto das usadas nos estudos. Detalhes em <a href="/ozenvitta/funciona/">OzenVitta funciona?</a> e <a href="/reduphine-caps/funciona/">ReduPhine funciona?</a>.</p>
+
+  <h2>Garantia e atendimento</h2>
+  <p>Aqui está a maior diferença. A garantia do OzenVitta é simples: reembolso por e-mail em até 30 dias, sem devolver os potes. A do ReduPhine aparece de três jeitos na página, e a regra segura é a de 7 dias com o produto lacrado.</p>
+  <p>No Reclame Aqui, a empresa do OzenVitta respondeu {oz.answered} das reclamações e resolveu {oz.resolved}. A do ReduPhine não respondeu as do período, com relatos de pedidos que não chegaram. Veja os detalhes em <a href="/ozenvitta/e-confiavel/">OzenVitta é confiável?</a> e <a href="/reduphine-caps/e-confiavel/">ReduPhine é confiável?</a></p>
+
+  <h2>Qual escolher</h2>
+  <ul>
+    <li><strong>Escolha o OzenVitta</strong> se quer laranja moro na fórmula e um atendimento que responde. É a opção com menos risco para a maioria.</li>
+    <li><strong>O ReduPhine faz sentido</strong> se você faz questão de comprar de empresa com CNPJ informado. Nesse caso, pague no cartão e comece pelo kit menor.</li>
+    <li><strong>Não use nenhum dos dois</strong> se for alérgico a crustáceos (o ReduPhine tem quitosana, feita de crustáceos, e o OzenVitta é contraindicado para alérgicos), estiver grávida ou amamentando, ou tomar remédios para tireoide, diabetes ou anticoagulantes sem falar com o médico.</li>
+  </ul>
+  <p>Os dois têm psyllium como base. Entenda o que essa fibra faz e não faz no guia <a href="/psyllium/">psyllium emagrece?</a></p>
+
+  <BuyBox compact produto="OzenVitta" href={ozenvitta.link} title="OzenVitta no site oficial" text="A partir de R$ 147 (1 pote para 30 dias), com frete grátis e garantia de 30 dias." cta="Ver kits do OzenVitta" />
+</Article>

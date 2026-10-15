@@ -1,0 +1,68 @@
+---
+import Article from '../../layouts/Article.astro';
+import { ingredientGuides, comparePages } from '../../data/site';
+
+const faq = [
+  { q: 'Psyllium emagrece?', a: 'Sozinho, pouco. Uma meta-análise com 22 ensaios clínicos não encontrou diferença significativa no peso em relação ao placebo. Ele ajuda na saciedade, no intestino e no colesterol, o que pode apoiar uma dieta, mas não substitui a dieta.' },
+  { q: 'Qual a melhor hora para tomar psyllium?', a: 'Para saciedade, cerca de 30 minutos antes das refeições principais, sempre com um copo cheio de água. Deixe pelo menos 2 horas de intervalo de qualquer remédio.' },
+  { q: 'Psyllium pode fazer mal?', a: 'Os efeitos mais comuns são gases e inchaço no começo. Tomado com pouca água, pode causar engasgo ou obstrução no esôfago ou no intestino. Quem tem dificuldade para engolir ou estreitamento no intestino não deve usar.' },
+  { q: 'Psyllium é a mesma coisa que fibra de trigo ou aveia?', a: 'Não. O psyllium vem da casca da semente da Plantago ovata e é uma fibra solúvel que forma um gel com a água. Por isso ele age mais na saciedade e no colesterol do que fibras insolúveis, como o farelo de trigo.' },
+];
+const related = [...ingredientGuides, ...comparePages, { href: '/ozenvitta/', title: 'OzenVitta: ficha completa' }, { href: '/reduphine-caps/', title: 'ReduPhine Caps: ficha completa' }];
+---
+<Article
+  title="Psyllium emagrece? O que é, como tomar e cuidados"
+  seoTitle="Psyllium emagrece? Como tomar e cuidados"
+  description="Psyllium emagrece mesmo? Veja o que os estudos mostram sobre peso, saciedade, intestino e colesterol, como tomar do jeito certo e quem não deve usar."
+  kicker="Guia de ingrediente"
+  lead="O psyllium é a fibra mais comum nos suplementos para emagrecer. Ele ajuda na saciedade, no intestino e no colesterol, mas os estudos mostram efeito muito pequeno sobre o peso."
+  crumbs={[{ name: 'Psyllium', href: '/psyllium/' }]}
+  faq={faq}
+  related={related}
+  sources={[
+    { label: 'Darooghegi Mofrad M et al. Meta-análise de 22 ensaios clínicos sobre psyllium e peso corporal. Crit Rev Food Sci Nutr, 2020', url: 'https://pubmed.ncbi.nlm.nih.gov/30880409/' },
+    { label: 'Xiao Z et al. Meta-análise sobre psyllium, peso e metabolismo em pessoas com diabetes. Phytother Res, 2020', url: 'https://pubmed.ncbi.nlm.nih.gov/31919936/' },
+    { label: 'NIH Office of Dietary Supplements: Dietary Supplements for Weight Loss', url: 'https://ods.od.nih.gov/factsheets/WeightLoss-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>O psyllium não é emagrecedor. Uma revisão de 22 ensaios clínicos encontrou diferença média de só 0,28 kg em relação ao placebo, sem significância. O que ele faz bem é aumentar a saciedade, regular o intestino e baixar o colesterol LDL. Tome sempre com bastante água e longe de remédios.</p>
+  </div>
+
+  <h2>O que é psyllium</h2>
+  <p>É a casca da semente da <em>Plantago ovata</em>, uma planta da Índia. Em contato com a água, a fibra forma um gel. Esse gel deixa a digestão mais lenta, dá sensação de estômago cheio e ajuda a formar as fezes. Ele aparece em pó, em cápsulas e em fórmulas para emagrecer, como o <a href="/ozenvitta/">OzenVitta</a> e o <a href="/reduphine-caps/">ReduPhine</a>.</p>
+
+  <h2>Psyllium emagrece? O que os estudos mostram</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Efeito</th><th>O que a pesquisa mostra</th></tr></thead>
+      <tbody>
+        <tr><td>Peso em adultos em geral</td><td>Sem diferença significativa contra o placebo (−0,28 kg na média de 22 ensaios)</td></tr>
+        <tr><td>Peso em pessoas com diabetes</td><td>Pequena melhora de peso, glicose e colesterol em uma meta-análise de 2020</td></tr>
+        <tr><td>Saciedade</td><td>Aumenta a sensação de estômago cheio quando tomado antes da refeição</td></tr>
+        <tr><td>Colesterol LDL</td><td>Redução moderada, um dos efeitos mais bem estabelecidos das fibras solúveis</td></tr>
+        <tr><td>Intestino</td><td>Ajuda tanto no intestino preso quanto no solto, desde que com água suficiente</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Na prática, o psyllium pode ajudar quem está fazendo dieta a sentir menos fome, mas não faz perder peso por conta própria. Por isso, desconfie de produtos que prometem "secar barriga" só com fibras.</p>
+
+  <h2>Como tomar</h2>
+  <ol>
+    <li><strong>Dose:</strong> os estudos costumam usar de 5 a 15 gramas por dia, divididos em 2 ou 3 tomadas. Em cápsulas de suplementos, a quantidade costuma ser bem menor.</li>
+    <li><strong>Horário:</strong> cerca de 30 minutos antes das refeições principais, para ajudar na saciedade.</li>
+    <li><strong>Água:</strong> pelo menos um copo cheio (cerca de 240 ml) a cada dose. Esse é o cuidado mais importante.</li>
+    <li><strong>Comece devagar:</strong> uma dose menor na primeira semana diminui os gases e o inchaço.</li>
+  </ol>
+
+  <h2>Efeitos colaterais e quem não deve usar</h2>
+  <ul>
+    <li><strong>Comuns:</strong> gases, inchaço e cólica nos primeiros dias.</li>
+    <li><strong>Raros, mas sérios:</strong> engasgo ou obstrução quando tomado com pouca água. Reação alérgica em pessoas sensíveis.</li>
+    <li><strong>Não use sem orientação médica:</strong> quem tem dificuldade para engolir, estreitamento ou obstrução intestinal, doença inflamatória intestinal ativa, ou toma remédios para diabetes, tireoide ou anticoagulantes.</li>
+    <li><strong>Remédios:</strong> o psyllium pode diminuir a absorção. Deixe pelo menos 2 horas de intervalo.</li>
+  </ul>
+
+  <h2>Vale a pena em suplemento para emagrecer?</h2>
+  <p>Como apoio para controlar a fome, sim. Como emagrecedor, não. Se a ideia é só ter as fibras, o psyllium em pó, vendido em farmácias, costuma sair mais barato e permite doses maiores. Os suplementos combinados juntam outros ingredientes, como laranja moro, que têm evidência própria. Compare em <a href="/ozenvitta-ou-reduphine/">OzenVitta ou ReduPhine</a>.</p>
+</Article>

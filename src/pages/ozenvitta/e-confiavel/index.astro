@@ -1,0 +1,81 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { ozenvitta as p, ozenvittaPages, reputation } from '../../../data/site';
+
+const r = reputation.ozenpharma;
+const faq = [
+  { q: 'OzenVitta é golpe?', a: `Não há sinal de golpe no sentido de cobrar e não entregar. A empresa responde ${r.answered} das reclamações no Reclame Aqui e resolve ${r.resolved}. Os pontos fracos são outros: a página não informa CNPJ e promete mais do que os estudos mostram.` },
+  { q: 'Qual a nota do OzenVitta no Reclame Aqui?', a: `A Ozenpharma, empresa do OzenVitta, tinha reputação "${r.label}", com nota ${r.score} de 10, no período de ${r.period} (consulta em ${reputation.checked}).` },
+  { q: 'Como pedir reembolso do OzenVitta?', a: `Pelo e-mail ${p.sac}, em até 30 dias após receber o produto, explicando sua experiência. Guarde o comprovante e o e-mail de confirmação do pedido.` },
+  { q: 'Os sites que dizem que o OzenVitta é confiável são independentes?', a: 'Muitos são de afiliados, que ganham comissão pela venda. Este site também é afiliado, por isso mostramos os números do Reclame Aqui e os pontos negativos junto com os positivos.' },
+];
+---
+<Article
+  ogImage="/img/ozenvitta/og-ozenvitta.jpg"
+  title="OzenVitta é confiável? Reclame Aqui, empresa e garantia"
+  seoTitle="OzenVitta é confiável? Reclame Aqui e garantia"
+  description="OzenVitta é confiável ou golpe? Veja a nota da Ozenpharma no Reclame Aqui, o que dizem as reclamações, como funciona a garantia e os cuidados antes de comprar."
+  kicker="Reputação"
+  lead="A empresa por trás do OzenVitta responde todas as reclamações no Reclame Aqui e resolve a maioria. Os pontos de atenção são a falta de CNPJ e as promessas exageradas."
+  crumbs={[{ name: 'OzenVitta', href: '/ozenvitta/' }, { name: 'É confiável?', href: '/ozenvitta/e-confiavel/' }]}
+  faq={faq}
+  related={ozenvittaPages}
+  sources={[
+    { label: `Reclame Aqui: Ozenpharma (OzenVitta), consultado em ${reputation.checked}`, url: r.url },
+    { label: 'Página oficial do OzenVitta', url: 'https://ozenvitta.com/pvmon/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>O OzenVitta não tem cara de golpe: a venda passa pela Monetizze, o produto é entregue e a empresa responde {r.answered} das reclamações, com reputação "{r.label}" (nota {r.score}) no Reclame Aqui. Mas só {r.again} dos clientes que reclamaram voltariam a comprar, e a marca não informa CNPJ. Compre esperando um apoio modesto, não milagre.</p>
+  </div>
+
+  <h2>A nota no Reclame Aqui</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Reputação</th><td>{r.label} (nota {r.score} de 10)</td></tr>
+        <tr><th>Reclamações no período</th><td>{r.complaints}</td></tr>
+        <tr><th>Respondidas</th><td>{r.answered}</td></tr>
+        <tr><th>Resolvidas</th><td>{r.resolved}</td></tr>
+        <tr><th>Voltariam a fazer negócio</th><td>{r.again}</td></tr>
+        <tr><th>Tempo médio de resposta</th><td>{r.time}</td></tr>
+        <tr><th>Período avaliado</th><td>{r.period}</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">Dados do painel da empresa no Reclame Aqui, consultado em {reputation.checked}. A nota muda todo mês.</p>
+
+  <h2>Do que as pessoas reclamam</h2>
+  <ul>
+    <li><strong>Reembolso:</strong> é o problema mais citado, em cerca de 22% das reclamações.</li>
+    <li><strong>Resultado:</strong> parte dos clientes diz que o produto não fez efeito ou acusa propaganda enganosa sobre a perda de peso.</li>
+    <li><strong>Entrega:</strong> há relatos de pedido sem código de rastreio ou sem e-mail de confirmação, que em geral aparecem como resolvidos.</li>
+  </ul>
+  <p>A empresa também vende outros suplementos de emagrecimento, e parte das reclamações é sobre eles. O padrão é parecido: a entrega costuma ser resolvida, e a insatisfação maior é com o resultado.</p>
+
+  <h2>Pontos a favor</h2>
+  <ul>
+    <li>Responde todas as reclamações, em cerca de 4 dias.</li>
+    <li>Pagamento intermediado pela Monetizze, uma plataforma conhecida.</li>
+    <li>Garantia de 30 dias por e-mail ({p.sac}), sem exigir devolução dos potes ou fotos.</li>
+  </ul>
+
+  <h2>Pontos de atenção</h2>
+  <ul>
+    <li>Nem a página de vendas, nem o rótulo, nem o checkout informam razão social ou CNPJ.</li>
+    <li>A página promete queimar gordura e acelerar o metabolismo, o que os estudos com os ingredientes não mostram. Veja <a href="/ozenvitta/funciona/">OzenVitta funciona?</a></li>
+    <li>Menos da metade de quem reclamou voltaria a comprar.</li>
+  </ul>
+
+  <h2>Como comprar com segurança</h2>
+  <ol>
+    <li>Compre só pelo site oficial. Fora dele não vale a garantia.</li>
+    <li>Guarde o e-mail de confirmação e o comprovante.</li>
+    <li>Se não ficar satisfeito, peça o reembolso por e-mail dentro dos 30 dias e anote a data.</li>
+    <li>Sem resposta, registre a reclamação no Reclame Aqui. A empresa costuma responder por lá.</li>
+  </ol>
+  <p>Comparando com outros produtos parecidos? Veja <a href="/ozenvitta-ou-reduphine/">OzenVitta ou ReduPhine</a>, com a reputação das duas empresas lado a lado.</p>
+
+  <BuyBox compact produto="OzenVitta" href={p.link} title="OzenVitta no site oficial" cta="Ver kits e preços" />
+</Article>

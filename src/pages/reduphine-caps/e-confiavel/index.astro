@@ -1,0 +1,71 @@
+---
+import Article from '../../../layouts/Article.astro';
+import { reduphine, reduphinePages, reputation } from '../../../data/site';
+
+const r = reputation.vittabalance;
+const faq = [
+  { q: 'ReduPhine é golpe?', a: `A empresa existe e é identificada: VittaBalance, CNPJ ${reduphine.cnpj}. Mas a reputação no Reclame Aqui é "${r.label}", com nota ${r.score}, e nenhuma das reclamações do período foi respondida. Isso não é golpe, mas é um risco real de ficar sem atendimento se algo der errado.` },
+  { q: 'Qual a nota do ReduPhine no Reclame Aqui?', a: `A VittaBalance, empresa do ReduPhine, estava como "${r.label}", nota ${r.score} de 10, no período de ${r.period} (consulta em ${reputation.checked}).` },
+  { q: 'Meu ReduPhine não chegou. O que fazer?', a: `Escreva para ${reduphine.sac} com o número do pedido. Sem resposta, procure o atendimento da Monetizze, que processou o pagamento, registre no Reclame Aqui e, se pagou no cartão, peça a contestação da compra ao banco.` },
+];
+---
+<Article
+  ogImage="/img/reduphine-caps/og-reduphine-caps.jpg"
+  title="ReduPhine é confiável? Reclame Aqui e o atendimento da VittaBalance"
+  seoTitle="ReduPhine é confiável? Reclame Aqui e atendimento"
+  description="ReduPhine Caps é confiável? Veja a nota da VittaBalance no Reclame Aqui, do que os clientes reclamam e como se proteger se o pedido atrasar ou não chegar."
+  kicker="Reputação"
+  lead="A VittaBalance, fabricante do ReduPhine, informa CNPJ, mas está como Não recomendada no Reclame Aqui e não respondeu as reclamações recentes. Isso pesa na decisão."
+  crumbs={[{ name: 'ReduPhine Caps', href: '/reduphine-caps/' }, { name: 'É confiável?', href: '/reduphine-caps/e-confiavel/' }]}
+  faq={faq}
+  related={reduphinePages}
+  sources={[
+    { label: `Reclame Aqui: VittaBalance, consultado em ${reputation.checked}`, url: r.url },
+    { label: 'Página oficial do ReduPhine Caps', url: 'https://reduphinecaps.com.br/ofertamonetizze/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>O ReduPhine é vendido por uma empresa identificada, com pagamento pela Monetizze, então não é golpe. Mas o atendimento é o ponto fraco: no Reclame Aqui, a VittaBalance tem nota {r.score}, reputação "{r.label}" e {r.answered} de reclamações respondidas no período. Se decidir comprar, pague no cartão e guarde tudo.</p>
+  </div>
+
+  <h2>A nota no Reclame Aqui</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Reputação</th><td>{r.label} (nota {r.score} de 10)</td></tr>
+        <tr><th>Reclamações no período</th><td>{r.complaints} (cerca de {r.total} no histórico)</td></tr>
+        <tr><th>Respondidas</th><td>{r.answered}</td></tr>
+        <tr><th>Período avaliado</th><td>{r.period}</td></tr>
+        <tr><th>Empresa</th><td>VittaBalance, CNPJ {reduphine.cnpj}</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">Dados do painel da empresa no Reclame Aqui, consultado em {reputation.checked}. A nota muda todo mês.</p>
+
+  <h2>Do que as pessoas reclamam</h2>
+  <ul>
+    <li><strong>Pedido não entregue:</strong> relatos de compras que não chegaram depois de 15 a 30 dias, às vezes com código de rastreio inválido.</li>
+    <li><strong>Pedido incompleto:</strong> há caso de cliente que recebeu só parte do kit de ReduPhine com as gotas.</li>
+    <li><strong>Reembolso:</strong> é o problema mais citado, em cerca de 25% das reclamações.</li>
+    <li><strong>Sem resposta:</strong> clientes relatam que o SAC não responde.</li>
+  </ul>
+  <p>Parte das reclamações é sobre outros produtos da mesma empresa, mas o problema de atendimento é o mesmo.</p>
+
+  <h2>O que pesa a favor</h2>
+  <ul>
+    <li>A empresa informa razão social e CNPJ, o que nem todo concorrente faz.</li>
+    <li>A compra passa pela Monetizze, que pode ser acionada se o vendedor não responder.</li>
+    <li>O direito de arrependimento de 7 dias vale para qualquer compra on-line.</li>
+  </ul>
+
+  <h2>Como se proteger se decidir comprar</h2>
+  <ol>
+    <li><strong>Prefira o cartão de crédito.</strong> Se o produto não chegar, você pode pedir a contestação da compra ao banco. No Pix e no boleto isso é bem mais difícil.</li>
+    <li><strong>Comece pelo kit menor.</strong> Assim o risco fica menor caso a entrega atrase.</li>
+    <li><strong>Guarde o comprovante e o e-mail do pedido.</strong></li>
+    <li><strong>Atraso passou de 20 dias úteis?</strong> Escreva para {reduphine.sac}, procure a Monetizze e registre no Reclame Aqui.</li>
+  </ol>
+
+  <h2>Existe opção parecida com melhor atendimento?</h2>
+  <p>O <a href="/ozenvitta/">OzenVitta</a> tem fórmula parecida, com fibras, e acrescenta laranja moro e L-carnitina. Os preços dos kits são iguais, e a empresa responde todas as reclamações no Reclame Aqui. A comparação completa está em <a href="/ozenvitta-ou-reduphine/">OzenVitta ou ReduPhine</a>.</p>
+</Article>

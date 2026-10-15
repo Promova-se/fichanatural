@@ -6,7 +6,7 @@ export const site = {
   email: 'loja@promovase.net',
   company: 'Promova-se',
   cnpj: '43.315.814/0001-28',
-  updated: '2026-10-12',
+  updated: '2026-10-14',
   ga4: 'G-L47PVELQQ4',
 };
 
@@ -91,6 +91,7 @@ export const resveratrolPages = [
   { href: '/vitta-resveratrol/funciona/', title: 'Vitta Resveratrol funciona? O que a ciência diz de cada ingrediente', short: 'Funciona?' },
   { href: '/vitta-resveratrol/como-tomar/', title: 'Como tomar Vitta Resveratrol, efeitos colaterais e quem não deve usar', short: 'Como tomar e cuidados' },
   { href: '/vitta-resveratrol/onde-comprar/', title: 'Onde comprar Vitta Resveratrol original e como funciona a garantia', short: 'Onde comprar e garantia' },
+  { href: '/vitta-resveratrol/e-confiavel/', title: 'Vitta Resveratrol é confiável? Reclame Aqui e a Natturabio', short: 'É confiável? Reclame Aqui' },
 ];
 
 // OzenVitta, conferido na página oficial, no rótulo e no checkout em 12/10/2026.
@@ -116,6 +117,7 @@ export const ozenvittaPages = [
   { href: '/ozenvitta/funciona/', title: 'OzenVitta funciona? O que a ciência diz de cada ingrediente', short: 'Funciona?' },
   { href: '/ozenvitta/como-tomar/', title: 'Como tomar OzenVitta, efeitos colaterais e quem não deve usar', short: 'Como tomar e cuidados' },
   { href: '/ozenvitta/onde-comprar/', title: 'Onde comprar OzenVitta original e como funciona a garantia', short: 'Onde comprar e garantia' },
+  { href: '/ozenvitta/e-confiavel/', title: 'OzenVitta é confiável? Reclame Aqui, empresa e garantia', short: 'É confiável? Reclame Aqui' },
 ];
 
 export const reduphinePages = [
@@ -125,7 +127,37 @@ export const reduphinePages = [
   { href: '/reduphine-caps/efeitos-colaterais/', title: 'ReduPhine Caps: efeitos colaterais e contraindicações', short: 'Efeitos colaterais' },
   { href: '/reduphine-caps/onde-comprar/', title: 'Onde comprar ReduPhine Caps original e como funciona a garantia', short: 'Onde comprar e garantia' },
   { href: '/reduphine-caps/combo-redugota/', title: 'Combo ReduPhine + ReduGota: o que muda com as gotas de laranja moro', short: 'Combo com ReduGota' },
+  { href: '/reduphine-caps/e-confiavel/', title: 'ReduPhine é confiável? Reclame Aqui e o atendimento da VittaBalance', short: 'É confiável? Reclame Aqui' },
 ];
+
+// Comparações e guias de ingredientes (fora dos produtos).
+export const comparePages = [
+  { href: '/ozenvitta-ou-reduphine/', title: 'OzenVitta ou ReduPhine: qual escolher? Comparação completa', short: 'OzenVitta ou ReduPhine?' },
+];
+export const ingredientGuides = [
+  { href: '/psyllium/', title: 'Psyllium emagrece? O que é, como tomar e cuidados', short: 'Psyllium emagrece?' },
+  { href: '/resveratrol/', title: 'Resveratrol: o que é, para que serve e o que a ciência diz', short: 'Resveratrol: o que é' },
+];
+
+// Reputação no Reclame Aqui, consultada em 14/10/2026 (painel dos últimos 6 meses de cada empresa).
+export const reputation = {
+  checked: '14/10/2026',
+  ozenpharma: {
+    name: 'Ozenpharma (OzenVitta)', url: 'https://www.reclameaqui.com.br/empresa/ozenvitta-da-ozenpharma/',
+    label: 'Regular', score: '6,4', complaints: '132', answered: '100%', resolved: '71,4%', again: '40,8%',
+    time: '4 dias e 2 horas', period: 'fevereiro a julho de 2026',
+  },
+  vittabalance: {
+    name: 'VittaBalance (ReduPhine)', url: 'https://www.reclameaqui.com.br/empresa/vittabalance/',
+    label: 'Não recomendada', score: '2,3', complaints: '10', answered: '0%', resolved: 'não informado', again: 'não informado',
+    time: 'sem respostas', period: 'abril a setembro de 2026', total: '116',
+  },
+  natturabio: {
+    name: 'Natturabio (Vitta Resveratrol)', url: 'https://www.reclameaqui.com.br/empresa/nattura-bio/',
+    label: 'Sem índice (poucas avaliações)', score: 'sem nota', complaints: '1', answered: '0%', resolved: 'não informado', again: 'não informado',
+    time: 'sem respostas', period: 'abril a setembro de 2026', total: '23',
+  },
+};
 
 // Guias publicados (usados no menu, na home e nos "leia também").
 export const guides = [
