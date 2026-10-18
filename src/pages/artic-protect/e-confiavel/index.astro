@@ -1,0 +1,66 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { artic as p, articPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Artic Protect é confiável?', a: 'É uma marca vendida na Droga Raia, na Drogasil e na Netshoes, e o pagamento do site oficial passa pela Monetizze. Isso indica um produto real e com distribuição séria. Os pontos fracos estão nas promessas e na falta de algumas informações na página.' },
+  { q: 'Artic Protect é aprovado pela Anvisa?', a: 'A página diz que o produto é dispensado de registro, o que é o normal para suplementos alimentares. Dispensa de registro não significa que a Anvisa avaliou a eficácia.' },
+  { q: 'Artic Protect tem Reclame Aqui?', a: 'Na consulta de 17/10/2026, a Extra Fórmulas, vendedora do produto, tinha página no Reclame Aqui sem nenhuma reclamação. Não havia página da Up Sports Nutrition com reclamações.' },
+];
+---
+<Article
+  ogImage="/img/artic-protect/og-artic-protect.jpg"
+  title="Artic Protect é confiável? Quem vende, Anvisa e Reclame Aqui"
+  seoTitle="Artic Protect é confiável? Anvisa e Reclame Aqui"
+  description="Artic Protect é confiável? Veja quem fabrica e quem vende, o que a página diz sobre a Anvisa, o Reclame Aqui e os pontos de atenção antes de comprar."
+  kicker="Reputação"
+  lead="O Artic Protect é um produto real, vendido em grandes redes de farmácia. A página de vendas, porém, mistura informação correta com promessas que vão além dos estudos."
+  crumbs={[{ name: 'Artic Protect', href: '/artic-protect/' }, { name: 'É confiável?', href: '/artic-protect/e-confiavel/' }]}
+  faq={faq}
+  related={articPages}
+  sources={[
+    { label: 'Página oficial do Artic Protect e checkout da Monetizze (consultados em 17/10/2026)', url: 'http://articprotect.com.br/' },
+    { label: 'Droga Raia: Artic Protect', url: 'https://www.drogaraia.com.br/artic-protect-colageno-tipo-2-ct-ii-40mg-com-30-capsulas-632899.html' },
+    { label: 'Reclame Aqui: Extra Fórmulas (consultado em 17/10/2026)', url: 'https://www.reclameaqui.com.br/empresa/extra-formulas/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Sim, como empresa. A marca Up Sports Nutrition está na Droga Raia, na Drogasil e na Netshoes, e o vendedor, a Extra Fórmulas, não tem reclamações no Reclame Aqui. A ressalva é a página de vendas, que promete regenerar cartilagem e trata a artrose como doença autoimune, o que não é correto.</p>
+  </div>
+
+  <h2>Quem fabrica e quem vende</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Marca</th><td>{p.brand}</td></tr>
+        <tr><th>Vendedor</th><td>{p.seller} ({p.sac})</td></tr>
+        <tr><th>CNPJ</th><td>Não informado na página de vendas</td></tr>
+        <tr><th>Canais de venda</th><td>Site oficial (Monetizze), Droga Raia, Drogasil, Netshoes e Mercado Livre</td></tr>
+        <tr><th>Reclame Aqui</th><td>Extra Fórmulas: nenhuma reclamação (consulta em 17/10/2026)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Estar à venda em redes como a Droga Raia e a Drogasil é um bom sinal: as farmácias exigem documentação do fabricante e da notificação do produto.</p>
+
+  <h2>A questão da Anvisa</h2>
+  <p>A página diz que o Artic Protect é "liberado pela Anvisa" e dispensado de registro. A maioria dos suplementos alimentares de fato não precisa de registro, mas precisa seguir as regras de composição e de rotulagem. A Anvisa não avalia se o produto funciona. Além disso, o rótulo diz "usado na prevenção e regeneração das articulações", e suplementos não podem prometer prevenir ou tratar doenças.</p>
+
+  <h2>Pontos de atenção</h2>
+  <ul>
+    <li><strong>Promessas acima da evidência:</strong> regenerar cartilagem e "acabar com a dor agora". Veja <a href="/artic-protect/funciona/">o que dizem os estudos</a>.</li>
+    <li><strong>Informação errada:</strong> a página diz que a osteoartrite é autoimune. Não é.</li>
+    <li><strong>Faltam dados:</strong> não informa se o colágeno é não desnaturado nem as doses de magnésio e vitamina D3.</li>
+    <li><strong>Logos da imprensa:</strong> G1, IstoÉ e Veja aparecem ao lado de citações sobre o colágeno tipo 2 em geral, não sobre o produto.</li>
+    <li><strong>Sem garantia própria:</strong> só vale o direito de arrependimento de 7 dias.</li>
+  </ul>
+
+  <h2>Como comprar com segurança</h2>
+  <ol>
+    <li>Compre no site oficial ou em farmácia conhecida.</li>
+    <li>Compare o preço no dia: na última consulta, o site oficial era mais barato.</li>
+    <li>Ao receber, confira no rótulo a tabela nutricional e se o colágeno é não desnaturado.</li>
+  </ol>
+
+  <BuyBox compact produto="Artic Protect" href={p.link} title="Artic Protect no site oficial" text="A partir de R$ 119 o pote." cta="Ver kits e preços" />
+</Article>

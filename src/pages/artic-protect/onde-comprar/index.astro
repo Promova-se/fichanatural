@@ -1,0 +1,57 @@
+---
+import Article from '../../../layouts/Article.astro';
+import KitCards from '../../../components/KitCards.astro';
+import { artic as p, articPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Onde comprar Artic Protect original?', a: 'No site oficial, com pagamento pela Monetizze. O produto também é vendido na Droga Raia, na Drogasil, na Netshoes e no Mercado Livre. Na Droga Raia, o vendedor é o mesmo do site oficial, a Extra Fórmulas.' },
+  { q: 'Artic Protect é mais barato na farmácia?', a: 'Não, na consulta de 17/10/2026. O pote custava R$ 119 no site oficial e R$ 167,90 na Droga Raia. Os preços mudam, então vale comparar no dia.' },
+  { q: 'Artic Protect tem garantia?', a: 'A página não fala em garantia de satisfação. Vale o direito de arrependimento do Código de Defesa do Consumidor: 7 dias a partir do recebimento, em compras pela internet.' },
+];
+---
+<Article
+  ogImage="/img/artic-protect/og-artic-protect.jpg"
+  title="Onde comprar Artic Protect original: site oficial, farmácia e preço"
+  seoTitle="Onde comprar Artic Protect original e preço"
+  description="Onde comprar o Artic Protect original, preço no site oficial e na farmácia, quanto sai por mês em cada kit, prazo de entrega e como funciona a devolução."
+  kicker="Compra segura"
+  lead="O Artic Protect é vendido no site oficial e também em grandes redes de farmácia. Na consulta de 17/10/2026, o site oficial era o mais barato."
+  crumbs={[{ name: 'Artic Protect', href: '/artic-protect/' }, { name: 'Onde comprar', href: '/artic-protect/onde-comprar/' }]}
+  faq={faq}
+  related={articPages}
+  sources={[
+    { label: 'Página oficial do Artic Protect e checkouts da Monetizze (consultados em 17/10/2026)', url: 'http://articprotect.com.br/' },
+    { label: 'Droga Raia: Artic Protect (consultada em 17/10/2026)', url: 'https://www.drogaraia.com.br/artic-protect-colageno-tipo-2-ct-ii-40mg-com-30-capsulas-632899.html' },
+    { label: 'Código de Defesa do Consumidor, art. 49 (direito de arrependimento)', url: 'https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>No site oficial: R$ 119 o pote, R$ 318 por 3 potes e R$ 570 por 6 potes. Na Droga Raia, o pote saía por R$ 167,90. O kit de 6 potes fica em R$ 95 por mês. Não há garantia de satisfação, só os 7 dias do direito de arrependimento.</p>
+  </div>
+
+  <h2>Escolha o kit</h2>
+  <KitCards kits={p.kits} unit="mês" produto="Artic Protect" />
+
+  <h2>Comparação de preço</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Onde</th><th>1 pote</th><th>Por mês no maior kit</th></tr></thead>
+      <tbody>
+        <tr><td>Site oficial</td><td>R$ 119</td><td>R$ 95 (6 potes por R$ 570)</td></tr>
+        <tr><td>Droga Raia (vendido pela Extra Fórmulas)</td><td>R$ 167,90</td><td>-</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Preços consultados em 17/10/2026. Netshoes e Mercado Livre também vendem, com preços e disponibilidade que variam bastante.</p>
+
+  <h2>Devolução</h2>
+  <ol>
+    <li><strong>Sem garantia de satisfação:</strong> a página oficial não oferece devolução por falta de resultado.</li>
+    <li><strong>Direito de arrependimento:</strong> 7 dias a partir do recebimento, pelo Código de Defesa do Consumidor.</li>
+    <li><strong>Como pedir:</strong> pelo e-mail do vendedor, {p.sac}. Guarde o número do pedido.</li>
+  </ol>
+  <p>Como o efeito leva meses, quem quer testar com menos risco pode começar pelo pote avulso.</p>
+
+  <h2>Entrega e pagamento</h2>
+  <p>Envio depois da confirmação do pagamento, com prazo de 10 a 15 dias úteis pelos Correios. Cartão (com juros no parcelado), Pix e boleto, pela Monetizze. Boleto não pode ser parcelado.</p>
+</Article>

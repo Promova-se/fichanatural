@@ -1,0 +1,62 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { artic as p, articPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Como tomar Artic Protect?', a: '1 cápsula por dia, em qualquer horário, de preferência longe das refeições grandes. Não passe de 1 cápsula por dia.' },
+  { q: 'Artic Protect tem efeito colateral?', a: 'Costuma ser bem tolerado. Nos estudos com colágeno tipo 2, os efeitos foram raros e leves, como desconforto no estômago. Quem tem alergia a frango deve evitar.' },
+  { q: 'Posso tomar Artic Protect com outros remédios?', a: 'Não há interações importantes conhecidas com o colágeno tipo 2. Se você já toma vitamina D ou magnésio por conta própria, mostre o rótulo ao médico para não somar doses.' },
+  { q: 'Quem tem doença autoimune pode tomar Artic Protect?', a: 'Só com orientação médica. O colágeno tipo 2 age no sistema de defesa do corpo, e quem tem artrite reumatoide ou outra doença autoimune deve conversar com o reumatologista antes.' },
+];
+---
+<Article
+  ogImage="/img/artic-protect/og-artic-protect.jpg"
+  title="Como tomar Artic Protect: horário, efeitos colaterais e quem não deve usar"
+  seoTitle="Como tomar Artic Protect e efeitos colaterais"
+  description="Como tomar Artic Protect, melhor horário, por quanto tempo usar, possíveis efeitos colaterais e quem precisa de orientação médica antes, como quem tem alergia a frango."
+  kicker="Modo de uso e segurança"
+  lead="A dose é de 1 cápsula por dia, longe das refeições grandes. O produto costuma ser bem tolerado, mas há grupos que devem conversar com o médico antes."
+  crumbs={[{ name: 'Artic Protect', href: '/artic-protect/' }, { name: 'Como tomar', href: '/artic-protect/como-tomar/' }]}
+  faq={faq}
+  related={articPages}
+  sources={[
+    { label: 'Página oficial do Artic Protect (consultada em 17/10/2026)', url: 'http://articprotect.com.br/' },
+    { label: 'Droga Raia: advertências do Artic Protect', url: 'https://www.drogaraia.com.br/artic-protect-colageno-tipo-2-ct-ii-40mg-com-30-capsulas-632899.html' },
+    { label: 'Lugo JP et al. Undenatured type II collagen in knee osteoarthritis. Nutr J, 2016', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4731911/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>1 cápsula por dia, em qualquer horário, longe das refeições grandes. Use por pelo menos 3 meses antes de avaliar o resultado. Evite se tiver alergia a frango. Gestantes, lactantes, menores de 18 anos e quem tem doença autoimune devem falar com o médico antes.</p>
+  </div>
+
+  <h2>Modo de uso</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Dose</th><td>1 cápsula por dia. Não passe disso</td></tr>
+        <tr><th>Horário</th><td>Qualquer um, longe das refeições grandes</td></tr>
+        <tr><th>Duração do pote</th><td>30 cápsulas, 1 mês</td></tr>
+        <tr><th>Tempo para avaliar</th><td>Pelo menos 3 meses. Nos estudos, o efeito ficou mais claro em 6 meses</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Possíveis efeitos colaterais</h2>
+  <p>Nos estudos com colágeno tipo 2 não desnaturado, os efeitos colaterais foram poucos e parecidos com os do placebo: desconforto no estômago, enjoo e dor de cabeça leves. Se aparecer coceira, inchaço ou falta de ar, pare e procure atendimento, porque pode ser alergia.</p>
+
+  <h2>Quem deve ter cuidado</h2>
+  <ul>
+    <li><strong>Alergia a frango ou ovo:</strong> o colágeno vem de cartilagem de frango. Evite.</li>
+    <li><strong>Doença autoimune</strong> (artrite reumatoide, lúpus): converse com o reumatologista antes.</li>
+    <li><strong>Gestantes, lactantes e menores de 18 anos:</strong> só com orientação médica.</li>
+    <li><strong>Doença nos rins:</strong> o magnésio exige cuidado. Fale com o médico.</li>
+    <li><strong>Quem já toma vitamina D:</strong> some as doses e mostre ao médico, porque a página não informa quanto o Artic Protect tem.</li>
+  </ul>
+  <p>A página de vendas diz que não há contraindicações nem efeitos colaterais. A própria página da farmácia que vende o produto traz advertências mais completas.</p>
+
+  <h2>Quando procurar um médico</h2>
+  <p>Dor articular com inchaço, calor, vermelhidão, febre ou rigidez de manhã que dura mais de 30 minutos precisa de avaliação. Esses sinais podem indicar artrite inflamatória ou infecção, que suplemento nenhum trata.</p>
+
+  <BuyBox compact produto="Artic Protect" href={p.link} title="Artic Protect no site oficial" text="A partir de R$ 119 o pote para 1 mês." cta="Ver kits e preços" />
+</Article>

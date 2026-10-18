@@ -1,0 +1,60 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { artic as p, articPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Colágeno tipo 2 funciona para dor no joelho?', a: 'Há estudos que indicam que sim, de forma moderada. No principal deles, 40 mg por dia de colágeno tipo 2 não desnaturado reduziu dor e rigidez no joelho mais que o placebo depois de 6 meses. O estudo foi financiado pelo fabricante do ingrediente.' },
+  { q: 'Qual a diferença entre colágeno tipo 2 e colágeno hidrolisado?', a: 'O colágeno hidrolisado (em geral tipo 1, para pele) é quebrado em pedaços pequenos e usado em gramas. O colágeno tipo 2 não desnaturado é usado em miligramas e age de outro jeito, treinando o sistema de defesa do intestino a não atacar a cartilagem. São produtos diferentes.' },
+  { q: 'Em quanto tempo o Artic Protect faz efeito?', a: 'Nos estudos, as diferenças apareceram a partir de 1 a 3 meses e ficaram mais claras em 6 meses. A promessa de "acabar com a dor agora" não combina com o que os estudos mostram.' },
+  { q: 'Artic Protect substitui remédio para artrose?', a: 'Não. Ele pode complementar o tratamento, mas exercício orientado, controle de peso e acompanhamento médico continuam sendo a base.' },
+];
+---
+<Article
+  ogImage="/img/artic-protect/og-artic-protect.jpg"
+  title="Artic Protect funciona? O que os estudos dizem do colágeno tipo 2"
+  seoTitle="Artic Protect funciona? O que dizem os estudos"
+  description="Artic Protect funciona? Veja o que os estudos mostram sobre colágeno tipo 2 de 40 mg na dor do joelho, o papel do magnésio e da vitamina D e o que é exagero na página."
+  kicker="Funciona?"
+  lead="O colágeno tipo 2 é um dos poucos ingredientes de suplemento para articulações com estudos clínicos controlados. O efeito é moderado e depende da forma do colágeno, algo que a página do Artic Protect não informa."
+  crumbs={[{ name: 'Artic Protect', href: '/artic-protect/' }, { name: 'Funciona?', href: '/artic-protect/funciona/' }]}
+  faq={faq}
+  related={articPages}
+  sources={[
+    { label: 'Página oficial do Artic Protect (consultada em 17/10/2026)', url: 'http://articprotect.com.br/' },
+    { label: 'Lugo JP et al. Efficacy and tolerability of an undenatured type II collagen supplement in modulating knee osteoarthritis symptoms. Nutr J, 2016', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4731911/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Pode ajudar, de forma moderada. Num estudo com 191 pessoas com artrose no joelho, 40 mg por dia de colágeno tipo 2 não desnaturado reduziu dor, rigidez e dificuldade de movimento mais que o placebo em 6 meses. O Artic Protect tem 40 mg, mas não diz se o colágeno é não desnaturado. Regenerar cartilagem e acabar com a dor de imediato não têm base.</p>
+  </div>
+
+  <h2>O que dizem os estudos</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Ingrediente</th><th>No Artic Protect</th><th>O que se sabe</th></tr></thead>
+      <tbody>
+        <tr><td>Colágeno tipo 2</td><td>40 mg</td><td>Com a forma não desnaturada, 40 mg por dia melhoraram os sintomas da artrose de joelho mais que o placebo e que a glucosamina com condroitina. O estudo foi financiado pelo fabricante do ingrediente, e o efeito foi moderado</td></tr>
+        <tr><td>Vitamina D3</td><td>Não informada</td><td>Corrigir a deficiência é bom para ossos e músculos. Em quem não tem deficiência, os estudos não mostraram melhora da dor de artrose</td></tr>
+        <tr><td>Magnésio</td><td>Não informada</td><td>Importante para músculos e ossos. Não há estudos de qualidade sobre dor articular</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Por que a forma do colágeno importa</h2>
+  <p>O colágeno tipo 2 não desnaturado é processado em baixa temperatura para manter a estrutura original. A hipótese é que, em pequenas quantidades, ele "ensine" o sistema de defesa do intestino a tolerar a cartilagem, reduzindo a inflamação na articulação. Se o colágeno for hidrolisado ou desnaturado, esse mecanismo não se aplica, e 40 mg seriam uma quantidade pequena demais para qualquer outro efeito. Por isso vale perguntar ao vendedor qual forma é usada.</p>
+
+  <h2>O que é exagero na página de vendas</h2>
+  <ul>
+    <li><strong>"Regeneração e reconstrução da cartilagem":</strong> os estudos mediram dor e movimento, não reconstrução da cartilagem.</li>
+    <li><strong>"Osteoartrite e osteoartrose são autoimunes":</strong> errado. A artrose é desgaste da articulação. Autoimune é a artrite reumatoide, que precisa de tratamento médico específico.</li>
+    <li><strong>"Acabar com a dor agora":</strong> nos estudos, o efeito levou meses para aparecer.</li>
+    <li><strong>"Sem efeitos colaterais, inclusive para diabéticos e hipertensos":</strong> costuma ser bem tolerado, mas quem tem alergia a frango deve evitar.</li>
+    <li><strong>Logos de G1, IstoÉ e Veja:</strong> as citações falam do colágeno tipo 2 em geral, não do Artic Protect.</li>
+  </ul>
+
+  <h2>Para quem faz sentido</h2>
+  <p>Para quem tem dor leve a moderada nos joelhos ou em outras articulações por desgaste ou esforço repetitivo, e quer um complemento ao exercício e ao tratamento médico. Use por pelo menos 3 meses antes de avaliar. Dor com inchaço, vermelhidão ou rigidez de manhã que dura mais de 30 minutos pode ser artrite inflamatória e precisa de avaliação médica.</p>
+
+  <BuyBox compact produto="Artic Protect" href={p.link} title="Artic Protect no site oficial" text="A partir de R$ 119 o pote para 1 mês." cta="Ver kits e preços" />
+</Article>

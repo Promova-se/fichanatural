@@ -1,0 +1,98 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import { artic as p, articPages } from '../../data/site';
+
+const faq = [
+  { q: 'O que é o Artic Protect?', a: 'É um suplemento em cápsulas da Up Sports Nutrition com colágeno tipo 2 (40 mg), magnésio e vitamina D3, vendido para a saúde das articulações. O pote tem 30 cápsulas, e a dose é de 1 cápsula por dia.' },
+  { q: 'Quanto custa o Artic Protect?', a: 'No site oficial, em 17/10/2026, 1 pote custava R$ 119, 3 potes R$ 318 e 6 potes R$ 570. Na Droga Raia, o mesmo pote aparecia por R$ 167,90.' },
+  { q: 'O colágeno do Artic Protect é não desnaturado (UC-II)?', a: 'A página não diz. Ela informa colágeno tipo 2 de cartilagem de frango, 40 mg, sem dizer se é a forma não desnaturada, que é a usada nos principais estudos com essa dose.' },
+  { q: 'Artic Protect regenera cartilagem?', a: 'Não há estudo que mostre isso. Os estudos com colágeno tipo 2 não desnaturado mostraram melhora moderada de dor e rigidez no joelho, não reconstrução da cartilagem.' },
+];
+---
+<Article
+  ogImage="/img/artic-protect/og-artic-protect.jpg"
+  image={{ src: '/img/artic-protect/artic-protect-pote.webp', alt: 'Pote de Artic Protect, colágeno tipo 2 com magnésio e vitamina D3, 30 cápsulas', width: 420, height: 349 }}
+  title="Artic Protect: ficha completa, colágeno tipo 2 40 mg, preço e o que esperar"
+  seoTitle="Artic Protect: composição, preço e se vale a pena"
+  description="Ficha do Artic Protect: colágeno tipo 2 de 40 mg, magnésio e vitamina D3, preço dos kits, onde mais é vendido, prós e contras e o que esperar para as articulações."
+  kicker="Ficha de produto"
+  lead="O Artic Protect tem 40 mg de colágeno tipo 2 por cápsula, a mesma quantidade dos estudos com a versão não desnaturada, que mostraram melhora moderada da dor no joelho. Mas a página não diz qual forma usa e promete regenerar cartilagem, o que nenhum estudo mostrou."
+  crumbs={[{ name: 'Artic Protect', href: '/artic-protect/' }]}
+  faq={faq}
+  related={articPages}
+  sources={[
+    { label: 'Página oficial do Artic Protect e checkouts da Monetizze (consultados em 17/10/2026)', url: 'http://articprotect.com.br/' },
+    { label: 'Droga Raia: Artic Protect Colágeno Tipo 2 40 mg (consultada em 17/10/2026)', url: 'https://www.drogaraia.com.br/artic-protect-colageno-tipo-2-ct-ii-40mg-com-30-capsulas-632899.html' },
+    { label: 'Lugo JP et al. Undenatured type II collagen in knee osteoarthritis: randomized, double-blind, placebo-controlled study. Nutr J, 2016', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4731911/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Uma cápsula por dia com 40 mg de colágeno tipo 2, magnésio e vitamina D3. A marca é vendida em grandes redes de farmácia, e o site oficial sai mais barato que a farmácia. O colágeno tipo 2 tem estudos sérios de alívio moderado da dor no joelho, mas a página não informa se é a forma não desnaturada nem as doses de magnésio e vitamina D. Promessas de "regenerar cartilagem" e "acabar com a dor agora" são exagero. Não há garantia própria.</p>
+  </div>
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>{p.name} Colágeno Tipo 2 (CT-II) 40 mg</td></tr>
+        <tr><th>Marca</th><td>{p.brand}</td></tr>
+        <tr><th>Vendedor no checkout</th><td>{p.seller} ({p.sac})</td></tr>
+        <tr><th>Tipo</th><td>Suplemento alimentar em cápsulas softgel</td></tr>
+        <tr><th>Apresentação</th><td>Pote com 30 cápsulas, 1 mês de uso</td></tr>
+        <tr><th>Dose</th><td>1 cápsula por dia, longe das refeições grandes</td></tr>
+        <tr><th>Onde mais é vendido</th><td>Droga Raia, Drogasil, Netshoes e Mercado Livre</td></tr>
+        <tr><th>Garantia</th><td>Não informada. Vale o direito de arrependimento de 7 dias</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Composição</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Ingrediente</th><th>Quantidade</th><th>Comentário</th></tr></thead>
+      <tbody>
+        <tr><td>Colágeno tipo 2 (de cartilagem de frango)</td><td>40 mg</td><td>Mesma quantidade dos estudos com colágeno não desnaturado. A página não diz qual forma usa</td></tr>
+        <tr><td>Magnésio</td><td>Não informada</td><td>Importante para ossos e músculos. Sem evidência para dor articular</td></tr>
+        <tr><td>Vitamina D3</td><td>Não informada</td><td>Importante para ossos, principalmente em quem tem deficiência</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Nem a página oficial nem a da farmácia mostram a tabela nutricional. Confira o rótulo ao receber. O que os estudos dizem está em <a href="/artic-protect/funciona/">Artic Protect funciona?</a></p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores conferidos nos checkouts em 17/10/2026. A entrega leva de 10 a 15 dias úteis. No cartão parcelado há juros.</p>
+  <KitCards kits={p.kits} unit="mês" produto="Artic Protect" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Colágeno tipo 2 em 40 mg, quantidade com estudos clínicos</li>
+        <li>Marca vendida em grandes redes de farmácia</li>
+        <li>Site oficial mais barato que a farmácia</li>
+        <li>Apenas 1 cápsula por dia</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Não informa se o colágeno é não desnaturado</li>
+        <li>Sem as doses de magnésio e vitamina D3</li>
+        <li>Promete prevenir e regenerar cartilagem, sem estudo</li>
+        <li>Diz, de forma errada, que a artrose é autoimune</li>
+        <li>Sem garantia própria</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>Entre os produtos que analisamos, o Artic Protect é dos poucos com um ingrediente na dose dos estudos. Se o colágeno for mesmo do tipo não desnaturado, dá para esperar alívio moderado de dor e rigidez nas articulações depois de alguns meses, como um complemento ao exercício e ao tratamento médico. A página exagera ao falar em regenerar cartilagem e em acabar com a dor de imediato. O preço é razoável: R$ 95 por mês no kit de 6 potes.</p>
+  </div>
+  <p>Antes de comprar, veja <a href="/artic-protect/como-tomar/">quem não deve usar</a> e <a href="/artic-protect/onde-comprar/">onde sai mais barato</a>.</p>
+
+  <BuyBox compact produto="Artic Protect" href={p.link} title="Artic Protect no site oficial" text="A partir de R$ 119 (1 pote para 1 mês)." cta="Ver kits e preços" />
+</Article>

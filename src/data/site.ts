@@ -322,6 +322,33 @@ export const kitsosPages = [
   { href: '/kit-sos-crescimento/e-confiavel/', title: 'Lizz Anté é confiável? Reclame Aqui e o Kit S.O.S Crescimento', short: 'É confiável? Reclame Aqui' },
 ];
 
+// Artic Protect (Up Sports Nutrition), colágeno tipo 2 40 mg + magnésio + vitamina D3, conferido em 17/10/2026.
+// Vendedor no checkout: Extra Fórmulas (bruno@extraformulas.com.br), o mesmo que vende na Droga Raia (R$ 167,90).
+// O /r/ com pl não leva ao checkout deste produto: os links vão direto para /checkout/{código}?mcr= (testados, REF aparece).
+// Página não diz se o colágeno é não desnaturado nem as doses de magnésio e D3. Sem garantia própria.
+const articCheckout = (plan: string) => `https://app.monetizze.com.br/checkout/${plan}?mcr=AWQ25862505`;
+export const artic = {
+  name: 'Artic Protect',
+  brand: 'Up Sports Nutrition',
+  seller: 'Extra Fórmulas',
+  sac: 'bruno@extraformulas.com.br',
+  mcr: 'AWQ25862505',
+  link: 'https://app.monetizze.com.br/r/AWQ25862505',
+  kits: [
+    { name: '1 pote', qty: '30 cápsulas · 1 mês', months: 1, total: 119, installments: '12x de R$ 11,95', plan: articCheckout('DLY95882') },
+    { name: '3 potes', qty: '90 cápsulas · 3 meses', months: 3, total: 318, installments: 'até 12x no cartão', plan: articCheckout('DSU95884') },
+    { name: '6 potes', qty: '180 cápsulas · 6 meses', months: 6, total: 570, installments: '12x de R$ 57,23', plan: articCheckout('DFJ95885') },
+  ],
+};
+
+export const articPages = [
+  { href: '/artic-protect/', title: 'Artic Protect: ficha completa, colágeno tipo 2 40 mg e preço', short: 'Ficha completa' },
+  { href: '/artic-protect/funciona/', title: 'Artic Protect funciona? O que os estudos dizem do colágeno tipo 2', short: 'Funciona?' },
+  { href: '/artic-protect/como-tomar/', title: 'Como tomar Artic Protect: horário, efeitos colaterais e quem não deve usar', short: 'Como tomar e cuidados' },
+  { href: '/artic-protect/onde-comprar/', title: 'Onde comprar Artic Protect original: site oficial, farmácia e preço', short: 'Onde comprar' },
+  { href: '/artic-protect/e-confiavel/', title: 'Artic Protect é confiável? Quem vende, Anvisa e Reclame Aqui', short: 'É confiável?' },
+];
+
 export const ozenvittaPages = [
   { href: '/ozenvitta/', title: 'OzenVitta: ficha completa, composição e preço', short: 'Ficha completa' },
   { href: '/ozenvitta/funciona/', title: 'OzenVitta funciona? O que a ciência diz de cada ingrediente', short: 'Funciona?' },
@@ -393,6 +420,7 @@ export const catalog = [
   { name: 'Mounjax', href: '/mounjax/', pill: 'Gotas', summary: 'Gotas da Ozenpharma com café verde, cúrcuma, cromo e vitaminas. Não é Mounjaro.', pages: mounjaxPages },
   { name: 'TG30 Crisfit', href: '/tg30/', pill: 'Gotas', summary: 'Café verde, cúrcuma e vitaminas D3 e B12 em gotas.', pages: tg30Pages },
   { name: 'IArmonize', href: '/iarmonize/', pill: 'Cabelo, sono e energia', summary: 'Kit da Integra Pharma com quatro fórmulas: Hair, Sleep, Energy e Vital.', pages: iarmonizePages },
+  { name: 'Artic Protect', href: '/artic-protect/', pill: 'Articulações', summary: 'Colágeno tipo 2 de 40 mg com magnésio e vitamina D3, da Up Sports Nutrition.', pages: articPages },
   { name: 'Kit S.O.S Crescimento', href: '/kit-sos-crescimento/', pill: 'Cabelo', summary: 'Shampoo, máscara e tônico da Lizz Anté para queda e crescimento capilar.', pages: kitsosPages },
   { name: 'Hot Men Caps', href: '/hot-men-caps/', pill: 'Saúde masculina', summary: 'Cápsulas vendidas para desempenho sexual masculino, sem ingredientes na página oficial.', pages: hotmenPages },
   { name: 'Vitta Resveratrol', href: '/vitta-resveratrol/', pill: 'Pele', summary: 'Colágeno, ácido hialurônico, resveratrol e vitaminas.', pages: resveratrolPages },
