@@ -1,0 +1,65 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { kitsos as p, kitsosPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Lizz Anté é confiável?', a: 'Sim, pelos sinais disponíveis. A marca tem reputação "Ótima" no Reclame Aqui, com nota 8,4 e 93,3% das reclamações resolvidas, vende na Beleza na Web e tem loja própria. Os exageros estão nas promessas de resultado, não na entrega.' },
+  { q: 'Kit S.O.S Crescimento é golpe?', a: 'Não. O kit é de uma marca de cosméticos conhecida, com pagamento pela Monetizze, rastreio e garantia de 60 dias. A ressalva é sobre a promessa de crescimento 7 vezes mais rápido, que não tem estudo publicado.' },
+  { q: 'O Kit S.O.S Crescimento é aprovado pela Anvisa?', a: 'A página diz que os produtos são aprovados pela Anvisa, mas não mostra o número de registro ou notificação. Cosméticos com ação contra a queda são de grau 2, com mais exigências da Anvisa. Ao receber, confira no rótulo o número de registro ou de notificação.' },
+];
+---
+<Article
+  ogImage="/img/kit-sos-crescimento/og-kit-sos-crescimento.jpg"
+  title="Lizz Anté é confiável? Reclame Aqui e o Kit S.O.S Crescimento"
+  seoTitle="Lizz Anté é confiável? Reclame Aqui e Kit S.O.S"
+  description="A Lizz Anté é confiável? Veja a nota no Reclame Aqui, onde a marca vende, o que a página diz sobre a Anvisa e os pontos de atenção do Kit S.O.S Crescimento."
+  kicker="Reputação"
+  lead="A Lizz Anté é uma das marcas mais bem avaliadas que já analisamos: reputação 'Ótima' no Reclame Aqui, venda na Beleza na Web e garantia de 60 dias. Os pontos de atenção estão nas promessas da página de vendas."
+  crumbs={[{ name: 'Kit S.O.S Crescimento', href: '/kit-sos-crescimento/' }, { name: 'É confiável?', href: '/kit-sos-crescimento/e-confiavel/' }]}
+  faq={faq}
+  related={kitsosPages}
+  sources={[
+    { label: 'Reclame Aqui: Lizz Anté (consultado em 17/10/2026)', url: 'https://www.reclameaqui.com.br/empresa/lizz-ante/' },
+    { label: 'Página oficial do Kit S.O.S Crescimento (consultada em 17/10/2026)', url: 'https://soscrescimento.com.br/' },
+    { label: 'Beleza na Web: Lizz Anté S.O.S Crescimento', url: 'https://www.belezanaweb.com.br/kit-lizz-ante-professional-sos-crescimento-6-produtos/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Sim. A Lizz Anté tem nota 8,4 e selo "Ótima" no Reclame Aqui, resolve 93% das reclamações e é vendida na Beleza na Web. O pagamento do kit passa pela Monetizze, com rastreio e garantia de 60 dias. A ressalva é sobre o que o kit promete, e não sobre a empresa.</p>
+  </div>
+
+  <h2>Quem vende</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Marca</th><td>{p.brand}</td></tr>
+        <tr><th>CNPJ</th><td>Não informado na página de vendas nem na loja da marca</td></tr>
+        <tr><th>Atendimento</th><td>WhatsApp {p.whatsapp} e {p.sac}</td></tr>
+        <tr><th>Canais de venda</th><td>Site do kit (Monetizze), loja própria e Beleza na Web</td></tr>
+        <tr><th>Reclame Aqui</th><td>Ótima, nota 8,4, 93,3% das reclamações resolvidas (consulta em 17/10/2026)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Estar à venda na Beleza na Web é um bom sinal: grandes lojas de beleza exigem documentação do fornecedor para cadastrar uma marca.</p>
+
+  <h2>A questão da Anvisa</h2>
+  <p>A página diz que os produtos são "aprovados pela Anvisa", sem mostrar o número. Cosméticos com ação contra a queda são classificados como grau 2, com mais exigências da Anvisa, e o número de registro ou de notificação deve estar no rótulo. Ao receber, confira. Não encontramos nenhuma medida da Anvisa contra a Lizz Anté.</p>
+
+  <h2>Pontos de atenção</h2>
+  <ul>
+    <li><strong>Promessas acima da evidência:</strong> "paralisa até 95% da queda" e "crescimento até 7x mais rápido". Veja <a href="/kit-sos-crescimento/funciona/">o que a ciência diz</a>.</li>
+    <li><strong>"Mais de 350 mil clientes, nota 4,8":</strong> números da própria marca, sem como conferir.</li>
+    <li><strong>"Sem contraindicações":</strong> qualquer cosmético pode causar alergia. Faça o teste antes.</li>
+    <li><strong>Urgência:</strong> a página fala em "últimas unidades", algo comum em páginas de venda e que não deve apressar a decisão.</li>
+  </ul>
+
+  <h2>Como comprar com segurança</h2>
+  <ol>
+    <li>Compre no site oficial, na loja da marca ou na Beleza na Web.</li>
+    <li>Guarde o número do pedido e tire fotos do cabelo no primeiro dia, para usar a garantia de 60 dias se precisar.</li>
+    <li>Recuse os produtos extras do checkout se não quiser.</li>
+  </ol>
+
+  <BuyBox compact produto="Kit S.O.S Crescimento" href={p.link} title="Kit S.O.S no site oficial" text="A partir de R$ 179, com garantia de 60 dias." cta="Ver kits e preços" />
+</Article>

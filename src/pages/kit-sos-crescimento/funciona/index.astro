@@ -1,0 +1,61 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { kitsos as p, kitsosPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Kit S.O.S Crescimento faz o cabelo crescer mais rápido?', a: 'Não há estudo com o kit. O cabelo cresce cerca de 1 cm por mês, e nenhum ativo da fórmula tem evidência de multiplicar essa velocidade por 7. O que o kit pode fazer é reduzir a quebra, o que faz o comprimento render mais.' },
+  { q: 'Kit S.O.S Crescimento para a queda de cabelo?', a: 'Para queda leve e quebra, pode ajudar a deixar os fios mais resistentes. A cafeína do tônico tem algum estudo na queda de origem hormonal. Para queda intensa ou que dura mais de 3 meses, o certo é procurar um dermatologista.' },
+  { q: 'Biotina no shampoo funciona?', a: 'Biotina ajuda quem tem deficiência dela, e isso é raro. Mesmo em cápsula, não há evidência de efeito em quem não tem deficiência. Aplicada no cabelo e enxaguada, o efeito esperado é ainda menor.' },
+  { q: 'Em quanto tempo o Kit S.O.S faz efeito?', a: 'A sensação de fios mais macios e menos quebradiços aparece nas primeiras semanas. Qualquer mudança na queda leva pelo menos 2 a 3 meses, porque é o tempo do ciclo do fio.' },
+];
+---
+<Article
+  ogImage="/img/kit-sos-crescimento/og-kit-sos-crescimento.jpg"
+  title="Kit S.O.S Crescimento funciona? Queda, crescimento e o que a ciência diz"
+  seoTitle="Kit S.O.S Crescimento funciona? O que esperar"
+  description="Kit S.O.S Crescimento funciona? Veja o que a ciência diz sobre cafeína, biotina, óleo de rícino e queratina no cabelo, e o que é exagero nas promessas."
+  kicker="Funciona?"
+  lead="O Kit S.O.S trata bem o fio e tem um ativo com algum estudo contra a queda: a cafeína do tônico. As promessas de parar 95% da queda e crescer 7 vezes mais rápido vão além do que se sabe."
+  crumbs={[{ name: 'Kit S.O.S Crescimento', href: '/kit-sos-crescimento/' }, { name: 'Funciona?', href: '/kit-sos-crescimento/funciona/' }]}
+  faq={faq}
+  related={kitsosPages}
+  sources={[
+    { label: 'Página oficial do Kit S.O.S Crescimento (consultada em 17/10/2026)', url: 'https://soscrescimento.com.br/' },
+    { label: 'Dhurat R et al. Caffeine-based topical liquid 0.2% versus minoxidil 5% in male androgenetic alopecia. Skin Pharmacol Physiol, 2017', url: 'https://karger.com/spp/article/30/6/298/295917/An-Open-Label-Randomized-Multicenter-Study' },
+    { label: 'Patel DP, Swink SM, Castelo-Soccio L. A Review of the Use of Biotin for Hair Loss. Skin Appendage Disord, 2017', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC5582478/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Funciona como tratamento cosmético: deixa os fios mais macios, hidratados e menos quebradiços, o que ajuda o comprimento a render. Contra a queda, o ativo mais promissor é a cafeína do tônico, que tem estudos em queda de origem hormonal, mas a marca não informa a concentração. Crescimento "7 vezes mais rápido" e "parar 95% da queda" não têm estudo publicado.</p>
+  </div>
+
+  <h2>Ativo por ativo</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Ativo</th><th>O que se sabe</th></tr></thead>
+      <tbody>
+        <tr><td>Cafeína (extrato de café, no tônico)</td><td>O ativo com mais evidência da fórmula. Num estudo com homens com calvície de origem hormonal, um tônico de cafeína a 0,2% teve resultado parecido com o do minoxidil 5% em 6 meses. O estudo foi financiado pelo fabricante e não tinha grupo placebo</td></tr>
+        <tr><td>Biotina</td><td>Só ajuda quem tem deficiência, o que é raro. Em shampoo e máscara, que são enxaguados, o efeito esperado é mínimo</td></tr>
+        <tr><td>Pantenol (vitamina B5)</td><td>Hidrata e dá maciez e brilho. Efeito cosmético, não muda o crescimento</td></tr>
+        <tr><td>Queratina hidrolisada</td><td>Preenche falhas na superfície do fio e reduz a quebra. Efeito cosmético</td></tr>
+        <tr><td>Óleo de rícino</td><td>Popular para "fazer crescer", mas sem estudos que mostrem isso. Hidrata e dá brilho</td></tr>
+        <tr><td>Extratos de bambu e bardana</td><td>Sem estudos de qualidade sobre queda ou crescimento</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>O que é exagero na página de vendas</h2>
+  <ul>
+    <li><strong>"Paralisa até 95% da queda":</strong> a página cita um "estudo clínico", mas não diz onde foi publicado, com quantas pessoas nem como foi medido.</li>
+    <li><strong>"Crescimento até 7x mais rápido", de 2 a 4 cm por mês:</strong> o cabelo cresce cerca de 1 cm por mês, e nenhum cosmético muda esse ritmo dessa forma.</li>
+    <li><strong>"Desde a primeira aplicação":</strong> na primeira aplicação dá para sentir o fio mais macio, mas mudança na queda leva meses.</li>
+    <li><strong>"Sem contraindicações":</strong> qualquer cosmético pode causar alergia ou irritação. Faça um teste numa pequena área antes.</li>
+  </ul>
+
+  <h2>Para quem faz sentido</h2>
+  <p>Para quem tem cabelo quebradiço, ressecado ou com queda leve depois de química, estresse ou pós-parto, e quer um tratamento completo de uma marca confiável. A garantia de 60 dias reduz o risco de testar.</p>
+  <p>Para quem tem falhas visíveis, entradas que avançam ou queda que dura mais de 3 meses, o kit não substitui o dermatologista. Essas quedas costumam ter causa hormonal, deficiência de ferro ou problema de tireoide, e existem tratamentos com eficácia comprovada.</p>
+
+  <BuyBox compact produto="Kit S.O.S Crescimento" href={p.link} title="Kit S.O.S no site oficial" text="A partir de R$ 179, com garantia de 60 dias e estorno total." cta="Ver kits e preços" />
+</Article>

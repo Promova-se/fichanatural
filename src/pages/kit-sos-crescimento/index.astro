@@ -1,0 +1,96 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import { kitsos as p, kitsosPages } from '../../data/site';
+
+const faq = [
+  { q: 'O que vem no Kit S.O.S Crescimento?', a: 'Um shampoo de 300 ml, uma máscara de 300 g e um tônico capilar de 100 ml, da marca Lizz Anté Professional. Os kits maiores vêm com produtos extras de brinde.' },
+  { q: 'Quanto custa o Kit S.O.S Crescimento?', a: 'Na consulta de 17/10/2026, 1 kit custava R$ 179, 2 kits R$ 279, 3 kits R$ 379 e 4 kits R$ 479, com frete grátis. No cartão parcelado há juros de 2,99% ao mês.' },
+  { q: 'O Kit S.O.S Crescimento é suplemento?', a: 'Não. É um conjunto de cosméticos de uso no cabelo e no couro cabeludo: shampoo, máscara e tônico. Nada é ingerido.' },
+  { q: 'Kit S.O.S Crescimento tem garantia?', a: 'A página oficial oferece garantia de 60 dias: se não houver resultado usando o kit pelo menos 3 vezes por semana, dá para pedir o estorno total.' },
+];
+---
+<Article
+  ogImage="/img/kit-sos-crescimento/og-kit-sos-crescimento.jpg"
+  title="Kit S.O.S Crescimento Lizz Anté: ficha completa, composição, preço e o que esperar"
+  seoTitle="Kit S.O.S Crescimento: composição, preço e se vale"
+  description="Ficha do Kit S.O.S Crescimento da Lizz Anté: o que vem no kit, ativos de cada produto, preço, garantia de 60 dias, prós e contras e o que esperar de verdade."
+  kicker="Ficha de produto"
+  lead="O Kit S.O.S Crescimento é um trio de cosméticos da Lizz Anté para cabelo com queda e crescimento lento: shampoo, máscara e tônico. A marca é conhecida e bem avaliada, mas a promessa de crescimento '7 vezes mais rápido' vai além do que esses ativos mostram em estudos."
+  crumbs={[{ name: 'Kit S.O.S Crescimento', href: '/kit-sos-crescimento/' }]}
+  faq={faq}
+  related={kitsosPages}
+  sources={[
+    { label: 'Página oficial do Kit S.O.S Crescimento e checkouts da Monetizze (consultados em 17/10/2026)', url: 'https://soscrescimento.com.br/' },
+    { label: 'Loja oficial Lizz Anté: composição dos produtos S.O.S', url: 'https://www.lojalizzante.com.br/products/kit-sos-crescimento' },
+    { label: 'Reclame Aqui: Lizz Anté (consultado em 17/10/2026)', url: 'https://www.reclameaqui.com.br/empresa/lizz-ante/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Shampoo, máscara e tônico com biotina, pantenol, queratina, óleo de rícino, bambu, bardana e cafeína. É cosmético, não suplemento. A Lizz Anté tem reputação "Ótima" no Reclame Aqui e oferece garantia de 60 dias com estorno total. O kit deixa o cabelo mais tratado e menos quebradiço, mas não há estudo que mostre crescimento "7 vezes mais rápido". Custa R$ 179 o kit, e fica mais barato por kit nos combos.</p>
+  </div>
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>{p.name}</td></tr>
+        <tr><th>Marca</th><td>{p.brand}</td></tr>
+        <tr><th>Tipo</th><td>Cosmético capilar (uso externo)</td></tr>
+        <tr><th>O que vem no kit</th><td>Shampoo 300 ml, máscara 300 g e tônico capilar 100 ml</td></tr>
+        <tr><th>Uso indicado</th><td>Tônico todos os dias no couro cabeludo. Shampoo e máscara pelo menos 3 vezes por semana</td></tr>
+        <tr><th>Atendimento</th><td>WhatsApp {p.whatsapp}, de segunda a sexta, das 9h às 18h, e {p.sac}</td></tr>
+        <tr><th>Garantia</th><td>60 dias, com estorno total se não houver resultado</td></tr>
+        <tr><th>Onde mais é vendido</th><td>Loja da própria marca e Beleza na Web</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Ativos de cada produto</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Produto</th><th>Ativos informados pela marca</th></tr></thead>
+      <tbody>
+        <tr><td>Shampoo</td><td>Biotina, pantenol, extrato de bambu, óleo de rícino e queratina</td></tr>
+        <tr><td>Máscara</td><td>Biotina, pantenol, extrato de bambu, óleo de rícino e queratina</td></tr>
+        <tr><td>Tônico</td><td>Os mesmos, mais extrato de bardana e extrato de café (cafeína)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>A marca não divulga a concentração de cada ativo nem a lista completa de ingredientes (INCI). O que se sabe de cada um está em <a href="/kit-sos-crescimento/funciona/">Kit S.O.S funciona?</a></p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores conferidos nos checkouts em 17/10/2026, com frete grátis. No checkout aparecem produtos extras por R$ 45 cada (condicionador, óleo de argan e unidades avulsas), que você não precisa aceitar. No cartão parcelado, os juros são de 2,99% ao mês.</p>
+  <KitCards kits={p.kits} mcr={p.mcr} unit="kit" produto="Kit S.O.S Crescimento" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Marca conhecida, vendida também na Beleza na Web</li>
+        <li>Reputação "Ótima" no Reclame Aqui, com 93% das reclamações resolvidas</li>
+        <li>Garantia de 60 dias com estorno total</li>
+        <li>Tônico com cafeína, o ativo com mais estudo da fórmula</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Promete parar "até 95% da queda" e crescimento "até 7x mais rápido", sem estudo publicado</li>
+        <li>Não informa a concentração dos ativos</li>
+        <li>Diz não ter nenhuma contraindicação, nem para crianças</li>
+        <li>Mais caro que shampoos e tônicos de farmácia com ativos parecidos</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>O Kit S.O.S é um bom tratamento cosmético de uma empresa séria, com garantia longa. Ele deve deixar os fios mais fortes ao toque, com menos quebra e mais brilho. A promessa de parar a queda e acelerar o crescimento em 7 vezes é exagero: cabelo cresce cerca de 1 cm por mês, e nenhum ativo da fórmula muda isso tanto. Queda forte que dura mais de 3 meses merece consulta com dermatologista, porque pode ter causa hormonal, deficiência de ferro ou problema de tireoide.</p>
+  </div>
+  <p>Antes de comprar, veja <a href="/kit-sos-crescimento/como-usar/">como usar o kit</a> e <a href="/kit-sos-crescimento/onde-comprar/">como funciona a garantia</a>.</p>
+
+  <BuyBox compact produto="Kit S.O.S Crescimento" href={p.link} title="Kit S.O.S no site oficial" text="A partir de R$ 179 (1 kit), com frete grátis e garantia de 60 dias." cta="Ver kits e preços" />
+</Article>

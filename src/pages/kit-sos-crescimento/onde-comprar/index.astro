@@ -1,0 +1,59 @@
+---
+import Article from '../../../layouts/Article.astro';
+import KitCards from '../../../components/KitCards.astro';
+import { kitsos as p, kitsosPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Onde comprar o Kit S.O.S Crescimento original?', a: 'No site oficial do kit, com pagamento pela Monetizze, na loja da própria Lizz Anté e na Beleza na Web. Fora desses canais, não há garantia de que o produto seja original.' },
+  { q: 'Como funciona a garantia do Kit S.O.S?', a: 'São 60 dias a partir da compra. Se não houver resultado usando o kit pelo menos 3 vezes por semana, a marca devolve 100% do valor. O pedido é feito pelo WhatsApp do suporte.' },
+  { q: 'Qual o prazo de entrega do Kit S.O.S Crescimento?', a: 'O código de rastreio chega em 4 a 6 dias úteis. Pelo PAC, a entrega leva de 7 a 10 dias úteis no Sul e Sudeste, de 7 a 12 no Centro-Oeste e de 7 a 14 no Norte e Nordeste.' },
+];
+---
+<Article
+  ogImage="/img/kit-sos-crescimento/og-kit-sos-crescimento.jpg"
+  title="Onde comprar Kit S.O.S Crescimento original: preço e garantia de 60 dias"
+  seoTitle="Onde comprar Kit S.O.S Crescimento original e preço"
+  description="Onde comprar o Kit S.O.S Crescimento original da Lizz Anté, preço de cada combo, quanto sai por kit, prazo de entrega e como pedir a garantia de 60 dias."
+  kicker="Compra segura"
+  lead="O Kit S.O.S Crescimento é vendido no site oficial, com pagamento pela Monetizze, na loja da Lizz Anté e na Beleza na Web. No site oficial há quatro combos, com frete grátis e garantia de 60 dias."
+  crumbs={[{ name: 'Kit S.O.S Crescimento', href: '/kit-sos-crescimento/' }, { name: 'Onde comprar', href: '/kit-sos-crescimento/onde-comprar/' }]}
+  faq={faq}
+  related={kitsosPages}
+  sources={[
+    { label: 'Página oficial do Kit S.O.S Crescimento e checkouts da Monetizze (consultados em 17/10/2026)', url: 'https://soscrescimento.com.br/' },
+    { label: 'Loja oficial Lizz Anté (consultada em 17/10/2026)', url: 'https://www.lojalizzante.com.br/products/kit-sos-crescimento' },
+    { label: 'Beleza na Web: Kit Lizz Anté S.O.S Crescimento', url: 'https://www.belezanaweb.com.br/kit-lizz-ante-professional-sos-crescimento-6-produtos/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>1 kit custa R$ 179, o mesmo preço da loja da marca. Os combos de 2, 3 e 4 kits saem por R$ 279, R$ 379 e R$ 479, com produtos de brinde. A garantia de 60 dias com estorno total é a mais longa entre os produtos que analisamos.</p>
+  </div>
+
+  <h2>Escolha o kit</h2>
+  <KitCards kits={p.kits} mcr={p.mcr} unit="kit" produto="Kit S.O.S Crescimento" />
+
+  <h2>Quanto sai cada kit</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Combo</th><th>Total</th><th>Por kit</th><th>Brindes</th></tr></thead>
+      <tbody>
+        <tr><td>1 kit</td><td>R$ 179</td><td>R$ 179</td><td>-</td></tr>
+        <tr><td>2 kits</td><td>R$ 279</td><td>R$ 139,50</td><td>1 tônico</td></tr>
+        <tr><td>3 kits</td><td>R$ 379</td><td>R$ 126,33</td><td>1 tônico e 1 shampoo</td></tr>
+        <tr><td>4 kits</td><td>R$ 479</td><td>R$ 119,75</td><td>1 tônico, 1 shampoo e 1 máscara</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Como o tônico é de uso diário e acaba antes, os combos com tônico de brinde fazem diferença. Na Beleza na Web, o kit com 2 unidades de cada produto às vezes aparece com desconto, mas nem sempre está disponível para todos os CEPs. Vale comparar no dia da compra.</p>
+
+  <h2>Garantia de 60 dias</h2>
+  <ol>
+    <li><strong>O que cobre:</strong> se não houver resultado em 60 dias, a marca devolve 100% do valor.</li>
+    <li><strong>A condição:</strong> usar o kit conforme indicado, com shampoo e máscara pelo menos 3 vezes por semana e o tônico todos os dias.</li>
+    <li><strong>Como pedir:</strong> pelo WhatsApp do suporte, {p.whatsapp}, ou pelo e-mail {p.sac}. Guarde o número do pedido e fotos do antes e depois.</li>
+    <li><strong>Direito de arrependimento:</strong> nos primeiros 7 dias após o recebimento, você pode desistir por qualquer motivo, pelo Código de Defesa do Consumidor.</li>
+  </ol>
+
+  <h2>Entrega e pagamento</h2>
+  <p>Frete grátis para todo o Brasil. O rastreio chega por e-mail e WhatsApp em 4 a 6 dias úteis, e a entrega pelo PAC leva de 7 a 14 dias úteis, conforme a região. Cartão em até 12x (com juros de 2,99% ao mês), Pix e boleto, pela Monetizze.</p>
+</Article>

@@ -6,7 +6,7 @@ export const site = {
   email: 'loja@promovase.net',
   company: 'Promova-se',
   cnpj: '43.315.814/0001-28',
-  updated: '2026-10-15',
+  updated: '2026-10-17',
   ga4: 'G-L47PVELQQ4',
 };
 
@@ -295,6 +295,33 @@ export const hotmenPages = [
   { href: '/hot-men-caps/e-confiavel/', title: 'Hot Men Caps é confiável? Empresa, Anvisa e Reclame Aqui', short: 'É confiável?' },
 ];
 
+// Kit S.O.S Crescimento (Lizz Anté Professional), cosmético capilar, conferido na página, nos checkouts e na loja
+// da marca em 17/10/2026. Checkout: comercial@lizzante.com.br. Os 4 kits mostram "REF: ARP25846591".
+// Códigos K (não começam com D): checkoutUrl usa /checkout/{código}?mcr=. Reclame Aqui: Ótima, 8,4.
+export const kitsos = {
+  name: 'Kit S.O.S Crescimento',
+  brand: 'Lizz Anté Professional',
+  sac: 'comercial@lizzante.com.br',
+  whatsapp: '(19) 98164-7456',
+  mcr: 'ARP25846591',
+  link: 'https://app.monetizze.com.br/r/ARP25846591',
+  actives: ['Biotina', 'Pantenol (vitamina B5)', 'Extrato de bambu', 'Óleo de rícino', 'Queratina hidrolisada', 'Extrato de bardana', 'Extrato de café (cafeína)'],
+  kits: [
+    { name: '1 kit', qty: 'Shampoo 300 ml, máscara 300 g e tônico 100 ml', months: 1, total: 179, installments: '12x de R$ 17,97', plan: 'KZX212457' },
+    { name: '2 kits', qty: '2 kits + 1 tônico de brinde', months: 2, total: 279, installments: '12x de R$ 28,01', plan: 'KQZ212458' },
+    { name: '3 kits', qty: '3 kits + 1 tônico e 1 shampoo de brinde', months: 3, total: 379, installments: '12x de R$ 38,05', plan: 'KEB212459' },
+    { name: '4 kits', qty: '4 kits + tônico, shampoo e máscara de brinde', months: 4, total: 479, installments: '12x de R$ 48,09', plan: 'KJA354382' },
+  ],
+};
+
+export const kitsosPages = [
+  { href: '/kit-sos-crescimento/', title: 'Kit S.O.S Crescimento Lizz Anté: ficha completa, composição e preço', short: 'Ficha completa' },
+  { href: '/kit-sos-crescimento/funciona/', title: 'Kit S.O.S Crescimento funciona? Queda, crescimento e o que a ciência diz', short: 'Funciona?' },
+  { href: '/kit-sos-crescimento/como-usar/', title: 'Como usar o Kit S.O.S Crescimento: passo a passo e cuidados', short: 'Como usar' },
+  { href: '/kit-sos-crescimento/onde-comprar/', title: 'Onde comprar Kit S.O.S Crescimento original: preço e garantia de 60 dias', short: 'Onde comprar e garantia' },
+  { href: '/kit-sos-crescimento/e-confiavel/', title: 'Lizz Anté é confiável? Reclame Aqui e o Kit S.O.S Crescimento', short: 'É confiável? Reclame Aqui' },
+];
+
 export const ozenvittaPages = [
   { href: '/ozenvitta/', title: 'OzenVitta: ficha completa, composição e preço', short: 'Ficha completa' },
   { href: '/ozenvitta/funciona/', title: 'OzenVitta funciona? O que a ciência diz de cada ingrediente', short: 'Funciona?' },
@@ -366,6 +393,7 @@ export const catalog = [
   { name: 'Mounjax', href: '/mounjax/', pill: 'Gotas', summary: 'Gotas da Ozenpharma com café verde, cúrcuma, cromo e vitaminas. Não é Mounjaro.', pages: mounjaxPages },
   { name: 'TG30 Crisfit', href: '/tg30/', pill: 'Gotas', summary: 'Café verde, cúrcuma e vitaminas D3 e B12 em gotas.', pages: tg30Pages },
   { name: 'IArmonize', href: '/iarmonize/', pill: 'Cabelo, sono e energia', summary: 'Kit da Integra Pharma com quatro fórmulas: Hair, Sleep, Energy e Vital.', pages: iarmonizePages },
+  { name: 'Kit S.O.S Crescimento', href: '/kit-sos-crescimento/', pill: 'Cabelo', summary: 'Shampoo, máscara e tônico da Lizz Anté para queda e crescimento capilar.', pages: kitsosPages },
   { name: 'Hot Men Caps', href: '/hot-men-caps/', pill: 'Saúde masculina', summary: 'Cápsulas vendidas para desempenho sexual masculino, sem ingredientes na página oficial.', pages: hotmenPages },
   { name: 'Vitta Resveratrol', href: '/vitta-resveratrol/', pill: 'Pele', summary: 'Colágeno, ácido hialurônico, resveratrol e vitaminas.', pages: resveratrolPages },
 ];

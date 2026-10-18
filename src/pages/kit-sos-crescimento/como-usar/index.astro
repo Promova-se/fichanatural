@@ -1,0 +1,57 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { kitsos as p, kitsosPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Como usar o tônico S.O.S Crescimento?', a: 'Todos os dias, com o cabelo limpo e úmido: borrife no couro cabeludo, massageie e penteie. Não use secador logo em seguida. Se precisar de calor, espere 20 minutos.' },
+  { q: 'Quantas vezes por semana usar o Kit S.O.S?', a: 'A marca indica o kit completo (shampoo e máscara) pelo menos 3 vezes por semana, e o tônico todos os dias. A garantia de 60 dias exige esse uso mínimo.' },
+  { q: 'Grávidas podem usar o Kit S.O.S Crescimento?', a: 'A marca diz que sim. Os ativos informados não costumam ser contraindicados na gravidez, mas como a lista completa de ingredientes não é divulgada, vale mostrar o rótulo ao obstetra.' },
+  { q: 'Quanto tempo dura o Kit S.O.S?', a: 'A marca não informa. Com uso 3 vezes por semana, shampoo de 300 ml e máscara de 300 g costumam durar de 1 a 2 meses, dependendo do comprimento do cabelo. O tônico de 100 ml, de uso diário, tende a acabar antes.' },
+];
+---
+<Article
+  ogImage="/img/kit-sos-crescimento/og-kit-sos-crescimento.jpg"
+  title="Como usar o Kit S.O.S Crescimento: passo a passo e cuidados"
+  seoTitle="Como usar o Kit S.O.S Crescimento: passo a passo"
+  description="Como usar o shampoo, a máscara e o tônico do Kit S.O.S Crescimento, quantas vezes por semana, quanto tempo dura, cuidados e quando procurar um dermatologista."
+  kicker="Modo de uso"
+  lead="O tônico é de uso diário, e o shampoo e a máscara, pelo menos 3 vezes por semana. Seguir esse ritmo também é condição da garantia de 60 dias."
+  crumbs={[{ name: 'Kit S.O.S Crescimento', href: '/kit-sos-crescimento/' }, { name: 'Como usar', href: '/kit-sos-crescimento/como-usar/' }]}
+  faq={faq}
+  related={kitsosPages}
+  sources={[
+    { label: 'Página oficial do Kit S.O.S Crescimento (consultada em 17/10/2026)', url: 'https://soscrescimento.com.br/' },
+    { label: 'Loja oficial Lizz Anté', url: 'https://www.lojalizzante.com.br/products/kit-sos-crescimento' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>1. Shampoo no couro cabeludo molhado, massageie e enxágue. 2. Máscara no comprimento, deixe agir 5 minutos e enxágue. 3. Tônico no couro cabeludo úmido, com massagem, sem enxaguar e sem secador logo depois. Shampoo e máscara pelo menos 3 vezes por semana. Tônico todos os dias.</p>
+  </div>
+
+  <h2>Passo a passo</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Produto</th><th>Como usar</th><th>Frequência</th></tr></thead>
+      <tbody>
+        <tr><td>Shampoo 300 ml</td><td>No cabelo molhado, massageando o couro cabeludo até fazer espuma. Leve a espuma às pontas e enxágue bem</td><td>Pelo menos 3x por semana</td></tr>
+        <tr><td>Máscara 300 g</td><td>No cabelo úmido, em todo o comprimento. Penteie para espalhar, deixe 5 minutos e enxágue</td><td>Pelo menos 3x por semana</td></tr>
+        <tr><td>Tônico 100 ml</td><td>No couro cabeludo limpo e úmido. Borrife, massageie e penteie da raiz às pontas. Não enxágue</td><td>Todos os dias</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Depois do tônico, evite secador ou chapinha por 20 minutos. Finalizadores e reparadores podem ser usados normalmente, segundo a marca.</p>
+
+  <h2>Cuidados</h2>
+  <ul>
+    <li><strong>Teste de alergia:</strong> antes do primeiro uso, aplique um pouco do tônico atrás da orelha e espere 24 horas. Se coçar, arder ou ficar vermelho, não use.</li>
+    <li><strong>Olhos:</strong> se cair nos olhos, lave com bastante água.</li>
+    <li><strong>Crianças:</strong> a marca diz que pode usar, mas como a lista completa de ingredientes não é divulgada, prefira consultar o pediatra.</li>
+    <li><strong>Queda forte:</strong> se você perde muitos fios por dia há mais de 3 meses, tem falhas ou entradas avançando, procure um dermatologista. Pode ser queda hormonal, deficiência de ferro ou problema de tireoide.</li>
+  </ul>
+
+  <h2>Quanto tempo esperar</h2>
+  <p>A maciez e o brilho aparecem nas primeiras lavagens. Para avaliar a queda, use por pelo menos 2 a 3 meses, que é o tempo do ciclo do fio. Como a garantia é de 60 dias, tire fotos do couro cabeludo e do comprimento no primeiro dia e a cada 2 semanas. Assim você tem como comparar e, se precisar, pedir o estorno com base no que viu. Veja <a href="/kit-sos-crescimento/onde-comprar/">como pedir a garantia</a>.</p>
+
+  <BuyBox compact produto="Kit S.O.S Crescimento" href={p.link} title="Kit S.O.S no site oficial" text="A partir de R$ 179, com frete grátis." cta="Ver kits e preços" />
+</Article>
