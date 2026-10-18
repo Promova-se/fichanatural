@@ -1,0 +1,59 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { creatina as p, creatinaPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Creatina funciona mesmo?', a: 'Sim. É o suplemento esportivo com mais estudos. Somada ao treino de força, aumenta força, potência e ganho de massa magra, principalmente em exercícios curtos e intensos, como musculação e tiros de corrida.' },
+  { q: 'Creatina engorda ou incha?', a: 'Pode aumentar de 1 a 2 kg no começo, porque o músculo guarda mais água. Não é gordura e não é retenção embaixo da pele. Com o tempo, parte do ganho vem de massa muscular.' },
+  { q: 'Creatina faz mal para os rins?', a: 'Em pessoas saudáveis, os estudos com doses de 3 a 5 g por dia, por anos, não mostraram dano aos rins. Ela pode elevar o exame de creatinina sem que isso seja doença. Quem já tem problema renal deve conversar com o médico.' },
+  { q: "A creatina da Nature's Prime é melhor que as outras?", a: 'Não há motivo para achar que seja. Creatina monohidratada pura é a mesma substância em qualquer marca séria. O que pode mudar é a pureza, e a marca não informa teste de terceiros.' },
+];
+---
+<Article
+  ogImage="/img/creatina-natures-prime/og-creatina-natures-prime.jpg"
+  title="Creatina Nature's Prime funciona? O que a ciência diz sobre creatina"
+  seoTitle="Creatina Nature's Prime funciona? O que a ciência diz"
+  description="Creatina Nature's Prime funciona? Veja o que os estudos mostram sobre creatina: força, massa muscular, rins, retenção de água e quem se beneficia."
+  kicker="Funciona?"
+  lead="Creatina é o suplemento esportivo com mais evidência que existe. A da Nature's Prime é monohidratada pura, então vale para ela o que vale para a creatina em geral."
+  crumbs={[{ name: "Creatina Nature's Prime", href: '/creatina-natures-prime/' }, { name: 'Funciona?', href: '/creatina-natures-prime/funciona/' }]}
+  faq={faq}
+  related={creatinaPages}
+  sources={[
+    { label: 'Kreider RB et al. ISSN position stand: safety and efficacy of creatine supplementation in exercise, sport, and medicine. J Int Soc Sports Nutr, 2017', url: 'https://pmc.ncbi.nlm.nih.gov/articles/5469049/' },
+    { label: "Página oficial da Creatina Nature's Prime (consultada em 17/10/2026)", url: 'https://naturesprime.ind.br/creatina/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Sim. Junto com treino de força, a creatina aumenta força e potência e ajuda no ganho de massa magra. O efeito é maior em exercícios curtos e intensos. Ela não faz milagre sem treino e não queima gordura. Como a Nature's Prime é creatina monohidratada pura, deve funcionar como qualquer outra creatina pura.</p>
+  </div>
+
+  <h2>O que a creatina faz e o que não faz</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Efeito</th><th>O que dizem os estudos</th></tr></thead>
+      <tbody>
+        <tr><td>Força e potência</td><td>Aumento consistente em treinos de musculação e esportes de explosão. É o efeito mais comprovado</td></tr>
+        <tr><td>Massa magra</td><td>Ganho maior do que só com treino, em semanas a meses. Parte do ganho inicial é água dentro do músculo</td></tr>
+        <tr><td>Recuperação</td><td>Alguns estudos mostram menos fadiga entre séries e treinos</td></tr>
+        <tr><td>Exercício longo (maratona, ciclismo longo)</td><td>Pouco ou nenhum efeito no desempenho</td></tr>
+        <tr><td>Emagrecimento</td><td>Não queima gordura. Pode até subir o número na balança por causa da água no músculo</td></tr>
+        <tr><td>Cérebro e memória</td><td>Há estudos promissores, principalmente em quem dorme pouco ou come pouca carne, mas ainda não é conclusivo</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Quem mais se beneficia</h2>
+  <ul>
+    <li>Quem faz musculação, crossfit, lutas ou esportes com tiros curtos.</li>
+    <li>Vegetarianos e veganos, que têm menos creatina estocada no músculo.</li>
+    <li>Pessoas acima dos 50 anos que treinam força, para ajudar a manter a massa muscular.</li>
+  </ul>
+  <p>Quem não treina tende a ver pouca diferença.</p>
+
+  <h2>A página de vendas exagera?</h2>
+  <p>Pouco. As promessas de força, desempenho, recuperação e massa magra batem com os estudos. "Aumento rápido" depende de fazer a fase de carga. A frase sobre "proteção contra doenças neurodegenerativas" vai além do que se sabe hoje. Fora isso, a página cita as contraindicações e manda consultar um profissional, o que é raro em páginas de suplemento.</p>
+
+  <BuyBox compact produto="Creatina Nature's Prime" href={p.link} title="Creatina Nature's Prime no site oficial" text="R$ 169,90 o pote de 300 g, com garantia de 30 dias." cta="Ver kits e preços" />
+</Article>

@@ -1,0 +1,62 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { creatina as p, creatinaPages } from '../../../data/site';
+
+const faq = [
+  { q: "Nature's Prime é confiável?", a: "Os sinais são bons. A marca pertence à Natures Farma Indústria e Comércio, com CNPJ informado, e não tinha reclamações no Reclame Aqui na consulta de 17/10/2026. A página de vendas é honesta e tem garantia de 30 dias." },
+  { q: "A Creatina Nature's Prime é aprovada pela Anvisa?", a: 'Creatina é um ingrediente permitido em suplementos alimentares, que em geral não precisam de registro. A frase do rótulo é a alegação aprovada pela Anvisa para creatina. A Anvisa não testa cada lote.' },
+  { q: "Creatina Nature's Prime é golpe?", a: 'Não há sinais de golpe: fabricante identificado, pagamento pela Braip, rastreio e garantia de 30 dias. A ressalva é o preço, bem acima do de outras creatinas.' },
+];
+---
+<Article
+  ogImage="/img/creatina-natures-prime/og-creatina-natures-prime.jpg"
+  title="Creatina Nature's Prime é confiável? Fabricante, Anvisa e Reclame Aqui"
+  seoTitle="Creatina Nature's Prime é confiável? Reclame Aqui"
+  description="A Creatina Nature's Prime é confiável? Veja quem fabrica, o CNPJ, o que diz o Reclame Aqui, a questão da Anvisa e como comprar com segurança."
+  kicker="Reputação"
+  lead="A Nature's Prime é a marca de uma indústria de suplementos com CNPJ e sem reclamações registradas. A página de vendas é uma das mais honestas que analisamos."
+  crumbs={[{ name: "Creatina Nature's Prime", href: '/creatina-natures-prime/' }, { name: 'É confiável?', href: '/creatina-natures-prime/e-confiavel/' }]}
+  faq={faq}
+  related={creatinaPages}
+  sources={[
+    { label: "Página oficial da Creatina Nature's Prime (consultada em 17/10/2026)", url: 'https://naturesprime.ind.br/creatina/' },
+    { label: 'Reclame Aqui: Natures Farma Indústria e Comércio (consultado em 17/10/2026)', url: 'https://www.reclameaqui.com.br/empresa/natures-farma-industria-e-comercio-ltda/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Sim. O fabricante é identificado (Natures Farma Indústria e Comércio, CNPJ 28.209.818/0001-38), não há reclamações no Reclame Aqui, o pagamento passa pela Braip e há garantia de 30 dias. A página cita contraindicações e não faz promessas absurdas. O único ponto contra é o preço.</p>
+  </div>
+
+  <h2>Quem fabrica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Marca</th><td>Nature's Prime</td></tr>
+        <tr><th>Fabricante</th><td>{p.maker}</td></tr>
+        <tr><th>CNPJ</th><td>{p.cnpj}</td></tr>
+        <tr><th>Atendimento</th><td>{p.sac}, comercial3@naturesprime.ind.br e {p.phone}</td></tr>
+        <tr><th>Pagamento</th><td>Braip</td></tr>
+        <tr><th>Reclame Aqui</th><td>Nenhuma reclamação (consulta em 17/10/2026)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>A mesma empresa vende outros suplementos com a marca Nature's Prime, como ômega 3, magnésio e colágeno.</p>
+
+  <h2>O que a página faz bem</h2>
+  <ul>
+    <li>Lista contraindicações: menores de 18 anos, gestantes, lactantes e quem tem problema nos rins ou no fígado.</li>
+    <li>Recomenda consultar um profissional de saúde antes de começar.</li>
+    <li>As promessas principais (força, desempenho, recuperação) batem com os estudos.</li>
+  </ul>
+
+  <h2>Pontos de atenção</h2>
+  <ul>
+    <li><strong>Preço:</strong> várias vezes maior que o de creatinas de marcas conhecidas. Veja <a href="/creatina-natures-prime/onde-comprar/">a comparação</a>.</li>
+    <li><strong>Pureza:</strong> não informa teste de terceiros nem a origem da matéria-prima.</li>
+    <li><strong>Depoimentos:</strong> só nome, sem como conferir.</li>
+    <li><strong>Contador de tempo:</strong> a página mostra uma "promoção por tempo limitado" com relógio. Não é motivo para decidir com pressa.</li>
+  </ul>
+
+  <BuyBox compact produto="Creatina Nature's Prime" href={p.link} title="Creatina Nature's Prime no site oficial" text="R$ 169,90 o pote, com garantia de 30 dias." cta="Ver kits e preços" />
+</Article>

@@ -349,6 +349,34 @@ export const articPages = [
   { href: '/artic-protect/e-confiavel/', title: 'Artic Protect é confiável? Quem vende, Anvisa e Reclame Aqui', short: 'É confiável?' },
 ];
 
+// Creatina 300g Nature's Prime (Braip), conferida na página, no rótulo e nos checkouts em 17/10/2026.
+// Fabricante: Natures Farma Indústria e Comércio Ltda, CNPJ 28.209.818/0001-38 (Braip e Reclame Aqui, 0 reclamações).
+// Links oficiais do painel: ev.braip.com/ref?pl={plano}&ck=chen80rq&af=afi8j06qdd. Os 4 mostram "REF.: afi8j06qdd".
+// Parcelamento com juros de 3,49% a.m. Garantia de 30 dias. Preço bem acima de creatinas de marcas de mercado.
+const creatinaRef = (plan: string) => `https://ev.braip.com/ref?pl=${plan}&ck=chen80rq&af=afi8j06qdd`;
+export const creatina = {
+  name: "Creatina Nature's Prime",
+  maker: 'Natures Farma Indústria e Comércio Ltda',
+  cnpj: '28.209.818/0001-38',
+  sac: 'sac@naturesprime.ind.br',
+  phone: '(62) 9374-2145',
+  link: 'https://ev.braip.com/ref?pv=pro62wzm&af=afi8j06qdd',
+  kits: [
+    { name: '1 pote', qty: '300 g · 60 doses de 5 g', months: 2, total: 169.9, installments: '12x de R$ 17,57', plan: creatinaRef('pla1x6xn') },
+    { name: '2 potes', qty: '600 g · 120 doses de 5 g', months: 4, total: 299.9, installments: '12x de R$ 31,02', plan: creatinaRef('plap0x48') },
+    { name: '3 potes', qty: '900 g · 180 doses de 5 g', months: 6, total: 449.9, installments: '12x de R$ 46,53', plan: creatinaRef('pla08qql') },
+    { name: '4 potes', qty: '1,2 kg · 240 doses de 5 g', months: 8, total: 549.9, installments: '12x de R$ 56,87', plan: creatinaRef('playgqqx') },
+  ],
+};
+
+export const creatinaPages = [
+  { href: '/creatina-natures-prime/', title: "Creatina Nature's Prime: ficha completa, composição e preço", short: 'Ficha completa' },
+  { href: '/creatina-natures-prime/funciona/', title: "Creatina Nature's Prime funciona? O que a ciência diz sobre creatina", short: 'Funciona?' },
+  { href: '/creatina-natures-prime/como-tomar/', title: 'Como tomar creatina: dose, fase de carga, horário e cuidados', short: 'Como tomar' },
+  { href: '/creatina-natures-prime/onde-comprar/', title: "Onde comprar Creatina Nature's Prime: preço, comparação e garantia", short: 'Onde comprar e preço' },
+  { href: '/creatina-natures-prime/e-confiavel/', title: "Creatina Nature's Prime é confiável? Fabricante, Anvisa e Reclame Aqui", short: 'É confiável?' },
+];
+
 export const ozenvittaPages = [
   { href: '/ozenvitta/', title: 'OzenVitta: ficha completa, composição e preço', short: 'Ficha completa' },
   { href: '/ozenvitta/funciona/', title: 'OzenVitta funciona? O que a ciência diz de cada ingrediente', short: 'Funciona?' },
@@ -420,6 +448,7 @@ export const catalog = [
   { name: 'Mounjax', href: '/mounjax/', pill: 'Gotas', summary: 'Gotas da Ozenpharma com café verde, cúrcuma, cromo e vitaminas. Não é Mounjaro.', pages: mounjaxPages },
   { name: 'TG30 Crisfit', href: '/tg30/', pill: 'Gotas', summary: 'Café verde, cúrcuma e vitaminas D3 e B12 em gotas.', pages: tg30Pages },
   { name: 'IArmonize', href: '/iarmonize/', pill: 'Cabelo, sono e energia', summary: 'Kit da Integra Pharma com quatro fórmulas: Hair, Sleep, Energy e Vital.', pages: iarmonizePages },
+  { name: "Creatina Nature's Prime", href: '/creatina-natures-prime/', pill: 'Treino', summary: 'Creatina monohidratada pura em pó, 300 g, da Natures Farma.', pages: creatinaPages },
   { name: 'Artic Protect', href: '/artic-protect/', pill: 'Articulações', summary: 'Colágeno tipo 2 de 40 mg com magnésio e vitamina D3, da Up Sports Nutrition.', pages: articPages },
   { name: 'Kit S.O.S Crescimento', href: '/kit-sos-crescimento/', pill: 'Cabelo', summary: 'Shampoo, máscara e tônico da Lizz Anté para queda e crescimento capilar.', pages: kitsosPages },
   { name: 'Hot Men Caps', href: '/hot-men-caps/', pill: 'Saúde masculina', summary: 'Cápsulas vendidas para desempenho sexual masculino, sem ingredientes na página oficial.', pages: hotmenPages },

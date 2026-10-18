@@ -1,0 +1,68 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { creatina as p, creatinaPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Qual a dose certa de creatina?', a: 'De 3 a 5 g por dia, todos os dias, inclusive nos dias sem treino. Pessoas mais pesadas podem usar até 0,1 g por quilo de peso por dia.' },
+  { q: 'Precisa fazer fase de carga de creatina?', a: 'Não é obrigatório. Com 20 g por dia (em 4 doses de 5 g) por 5 a 7 dias, o músculo satura em uma semana. Com 3 a 5 g por dia, satura em cerca de 3 a 4 semanas. O resultado final é o mesmo.' },
+  { q: 'Qual o melhor horário para tomar creatina?', a: 'Tanto faz. O importante é tomar todo dia. Tomar perto do treino ou com uma refeição é prático e pode ajudar um pouco na absorção.' },
+  { q: 'Precisa parar de tomar creatina de tempos em tempos?', a: 'Não. Os estudos não mostram necessidade de ciclos. Se parar, o estoque no músculo volta ao normal em cerca de 4 a 6 semanas.' },
+];
+---
+<Article
+  ogImage="/img/creatina-natures-prime/og-creatina-natures-prime.jpg"
+  title="Como tomar creatina: dose, fase de carga, horário e cuidados"
+  seoTitle="Como tomar creatina: dose, horário e fase de carga"
+  description="Como tomar a Creatina Nature's Prime e qualquer creatina: dose diária, se precisa de fase de carga, melhor horário, com o que misturar, efeitos colaterais e quem deve evitar."
+  kicker="Modo de uso e segurança"
+  lead="A creatina é simples de usar: 3 a 5 g por dia, todos os dias. A fase de carga é opcional e só acelera o resultado."
+  crumbs={[{ name: "Creatina Nature's Prime", href: '/creatina-natures-prime/' }, { name: 'Como tomar', href: '/creatina-natures-prime/como-tomar/' }]}
+  faq={faq}
+  related={creatinaPages}
+  sources={[
+    { label: 'Kreider RB et al. ISSN position stand: safety and efficacy of creatine supplementation. J Int Soc Sports Nutr, 2017', url: 'https://pmc.ncbi.nlm.nih.gov/articles/5469049/' },
+    { label: "Página oficial da Creatina Nature's Prime (consultada em 17/10/2026)", url: 'https://naturesprime.ind.br/creatina/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>3 a 5 g por dia (uma colher medida), misturados em água, suco ou shake, todos os dias, no horário que preferir. Fase de carga opcional: 20 g por dia, em 4 doses de 5 g, por 5 a 7 dias. Beba água ao longo do dia. Quem tem doença nos rins, gestantes e menores de 18 anos devem falar com o médico antes.</p>
+  </div>
+
+  <h2>Duas formas de começar</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Forma</th><th>Como fazer</th><th>Quando o músculo satura</th></tr></thead>
+      <tbody>
+        <tr><td>Sem carga</td><td>3 a 5 g por dia desde o começo</td><td>Em 3 a 4 semanas</td></tr>
+        <tr><td>Com carga</td><td>20 g por dia (4 doses de 5 g) por 5 a 7 dias, depois 3 a 5 g por dia</td><td>Em cerca de 1 semana</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>A carga dá resultado mais rápido, mas gasta um terço do pote na primeira semana e pode causar desconforto no estômago. Para a maioria das pessoas, começar direto com 3 a 5 g é suficiente.</p>
+
+  <h2>Dicas práticas</h2>
+  <ul>
+    <li><strong>Constância importa mais que horário:</strong> tome todos os dias, inclusive sem treino.</li>
+    <li><strong>Misture bem:</strong> creatina pura não tem gosto e dissolve melhor em líquido morno ou em shake.</li>
+    <li><strong>Água:</strong> mantenha a hidratação normal ao longo do dia.</li>
+    <li><strong>Cafeína:</strong> não precisa evitar café nas doses normais.</li>
+  </ul>
+
+  <h2>Efeitos colaterais</h2>
+  <ul>
+    <li><strong>Ganho de peso inicial:</strong> 1 a 2 kg de água dentro do músculo. É esperado.</li>
+    <li><strong>Estômago:</strong> doses grandes de uma vez (como na carga) podem causar enjoo ou diarreia. Divida em doses menores.</li>
+    <li><strong>Exame de creatinina:</strong> pode subir sem indicar doença. Avise o médico que você toma creatina.</li>
+  </ul>
+
+  <h2>Quem deve falar com o médico antes</h2>
+  <ul>
+    <li>Quem tem doença nos rins ou no fígado.</li>
+    <li>Gestantes e lactantes.</li>
+    <li>Menores de 18 anos.</li>
+    <li>Quem toma remédios que afetam os rins, como anti-inflamatórios todos os dias.</li>
+  </ul>
+
+  <BuyBox compact produto="Creatina Nature's Prime" href={p.link} title="Creatina Nature's Prime no site oficial" text="R$ 169,90 o pote de 300 g (60 doses de 5 g)." cta="Ver kits e preços" />
+</Article>

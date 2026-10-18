@@ -1,0 +1,86 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import { creatina as p, creatinaPages } from '../../data/site';
+
+const faq = [
+  { q: "O que é a Creatina Nature's Prime?", a: 'É creatina monohidratada pura em pó, em pote de 300 g, fabricada pela Natures Farma Indústria e Comércio. O rótulo diz "100% pure monohidratada".' },
+  { q: "Quanto custa a Creatina Nature's Prime?", a: 'Na consulta de 17/10/2026, 1 pote custava R$ 169,90, 2 potes R$ 299,90, 3 potes R$ 449,90 e 4 potes R$ 549,90, no site oficial. No cartão parcelado há juros de 3,49% ao mês.' },
+  { q: "Quanto tempo dura um pote de Creatina Nature's Prime?", a: 'Com 5 g por dia, 300 g duram 60 dias. Com 3 g por dia, cerca de 100 dias. Se fizer a fase de carga (20 g por dia por 5 a 7 dias), o primeiro pote acaba antes.' },
+  { q: "A Creatina Nature's Prime é cara?", a: 'Sim, em comparação com creatinas de marcas de mercado, que em grandes lojas online custavam de R$ 30 a R$ 55 o pote de 300 g em outubro de 2026. O que muda é a garantia de 30 dias e a compra direta do fabricante.' },
+];
+---
+<Article
+  ogImage="/img/creatina-natures-prime/og-creatina-natures-prime.jpg"
+  title="Creatina Nature's Prime: ficha completa, composição, preço e se vale a pena"
+  seoTitle="Creatina Nature's Prime: composição, preço e se vale"
+  description="Ficha da Creatina Nature's Prime: composição, quanto dura o pote, preço dos kits, comparação com outras creatinas, garantia de 30 dias, prós e contras."
+  kicker="Ficha de produto"
+  lead="A Creatina Nature's Prime é creatina monohidratada pura, o suplemento esportivo com mais estudos que existe. O produto é sério e a página de vendas é honesta. O ponto fraco é o preço, várias vezes maior que o de creatinas de marcas conhecidas."
+  crumbs={[{ name: "Creatina Nature's Prime", href: '/creatina-natures-prime/' }]}
+  faq={faq}
+  related={creatinaPages}
+  sources={[
+    { label: "Página oficial da Creatina Nature's Prime e checkouts da Braip (consultados em 17/10/2026)", url: 'https://naturesprime.ind.br/creatina/' },
+    { label: 'Kreider RB et al. ISSN position stand: safety and efficacy of creatine supplementation. J Int Soc Sports Nutr, 2017', url: 'https://pmc.ncbi.nlm.nih.gov/articles/5469049/' },
+    { label: 'Como Comprar: melhor creatina até R$ 80, comparativo por peso (preços lidos em 17/10/2026)', url: 'https://comocomprar.com.br/melhor-creatina-ate-80/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Creatina monohidratada pura, 300 g por pote, de um fabricante com CNPJ e sem reclamações no Reclame Aqui. A creatina funciona: aumenta força e desempenho em exercícios intensos, com muitos estudos por trás. A página de vendas não exagera e oferece garantia de 30 dias. O problema é o preço: R$ 169,90 o pote, contra R$ 30 a R$ 55 de marcas conhecidas no mesmo peso.</p>
+  </div>
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>Creatina 100% pure monohidratada, Nature's Prime</td></tr>
+        <tr><th>Fabricante</th><td>{p.maker}, CNPJ {p.cnpj}</td></tr>
+        <tr><th>Tipo</th><td>Suplemento alimentar em pó</td></tr>
+        <tr><th>Apresentação</th><td>Pote de 300 g</td></tr>
+        <tr><th>Dose indicada</th><td>3 a 5 g por dia. Fase de carga opcional: 20 g por dia por 5 a 7 dias</td></tr>
+        <tr><th>Duração do pote</th><td>60 dias com 5 g por dia</td></tr>
+        <tr><th>Atendimento</th><td>{p.sac} e {p.phone}</td></tr>
+        <tr><th>Garantia</th><td>30 dias, com devolução do dinheiro</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Composição</h2>
+  <p>O rótulo informa creatina monohidratada pura, sem outros ingredientes. É a forma de creatina usada na grande maioria dos estudos. A página não diz a origem da matéria-prima nem se tem selo de pureza de terceiros, como o Creapure.</p>
+  <p>A frase do rótulo, "a creatina auxilia no aumento do desempenho físico durante exercícios repetidos de curta duração e alta intensidade", é a alegação aprovada pela Anvisa para creatina. Veja <a href="/creatina-natures-prime/funciona/">o que mais a ciência diz</a>.</p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores conferidos nos checkouts em 17/10/2026. O preço por mês considera 5 g por dia. No cartão parcelado, os juros são de 3,49% ao mês.</p>
+  <KitCards kits={p.kits} unit="mês" produto="Creatina Nature's Prime" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Creatina monohidratada pura, a forma mais estudada</li>
+        <li>Fabricante com CNPJ e sem reclamações no Reclame Aqui</li>
+        <li>Página de vendas sem promessas exageradas, com contraindicações</li>
+        <li>Garantia de 30 dias com devolução do dinheiro</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Várias vezes mais cara que creatinas de marcas conhecidas</li>
+        <li>Não informa origem da matéria-prima nem teste de pureza de terceiros</li>
+        <li>Juros de 3,49% ao mês no parcelado</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>A creatina em si é uma ótima escolha: funciona, é segura para adultos saudáveis e tem estudos de sobra. A da Nature's Prime parece um produto correto, e a página de vendas é das mais honestas que analisamos. Mas, pelo mesmo peso, creatinas monohidratadas de marcas conhecidas custam uma fração do preço. A Nature's Prime faz sentido para quem valoriza comprar direto do fabricante com garantia de 30 dias. Quem só quer a creatina mais barata vai achar opções em lojas de suplementos.</p>
+  </div>
+  <p>Antes de comprar, veja <a href="/creatina-natures-prime/como-tomar/">como tomar creatina</a> e <a href="/creatina-natures-prime/onde-comprar/">a comparação de preços</a>.</p>
+
+  <BuyBox compact produto="Creatina Nature's Prime" href={p.link} title="Creatina Nature's Prime no site oficial" text="A partir de R$ 169,90 o pote de 300 g, com garantia de 30 dias." cta="Ver kits e preços" />
+</Article>

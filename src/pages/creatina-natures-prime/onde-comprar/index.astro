@@ -1,0 +1,56 @@
+---
+import Article from '../../../layouts/Article.astro';
+import KitCards from '../../../components/KitCards.astro';
+import { creatina as p, creatinaPages } from '../../../data/site';
+
+const faq = [
+  { q: "Onde comprar Creatina Nature's Prime original?", a: 'No site oficial do fabricante, com pagamento pela Braip. A marca diz que também vende em farmácias selecionadas e não recomenda comprar no Mercado Livre, onde não garante a origem.' },
+  { q: "A Creatina Nature's Prime tem garantia?", a: 'Sim. A página oferece 30 dias após a compra para pedir a devolução do dinheiro se o produto não atender às suas expectativas.' },
+  { q: 'Qual creatina tem o melhor custo-benefício?', a: 'Pelo preço por grama, creatinas monohidratadas de marcas de mercado vendidas em grandes lojas online costumam ser bem mais baratas. Compare sempre o preço por 100 g e prefira marcas que informam teste de pureza.' },
+];
+---
+<Article
+  ogImage="/img/creatina-natures-prime/og-creatina-natures-prime.jpg"
+  title="Onde comprar Creatina Nature's Prime: preço, comparação e garantia"
+  seoTitle="Onde comprar Creatina Nature's Prime e preço"
+  description="Onde comprar a Creatina Nature's Prime, preço de cada kit, quanto sai por mês, comparação com outras creatinas e como funciona a garantia de 30 dias."
+  kicker="Compra segura"
+  lead="A Creatina Nature's Prime é vendida pelo site oficial do fabricante, com pagamento pela Braip e garantia de 30 dias. O preço é o ponto que mais pesa na decisão."
+  crumbs={[{ name: "Creatina Nature's Prime", href: '/creatina-natures-prime/' }, { name: 'Onde comprar', href: '/creatina-natures-prime/onde-comprar/' }]}
+  faq={faq}
+  related={creatinaPages}
+  sources={[
+    { label: "Página oficial da Creatina Nature's Prime e checkouts da Braip (consultados em 17/10/2026)", url: 'https://naturesprime.ind.br/creatina/' },
+    { label: 'Como Comprar: melhor creatina até R$ 80, comparativo por peso (preços lidos em 17/10/2026)', url: 'https://comocomprar.com.br/melhor-creatina-ate-80/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>No site oficial: R$ 169,90 o pote de 300 g, ou R$ 549,90 por 4 potes, que sai a cerca de R$ 69 por mês. Em grandes lojas online, creatinas monohidratadas de marcas conhecidas custavam de R$ 30 a R$ 55 o pote de 300 g. A vantagem da Nature's Prime é a garantia de 30 dias com devolução do dinheiro.</p>
+  </div>
+
+  <h2>Escolha o kit</h2>
+  <KitCards kits={p.kits} unit="mês" produto="Creatina Nature's Prime" />
+
+  <h2>Comparação de preço</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Produto</th><th>Pote</th><th>Preço por 100 g</th></tr></thead>
+      <tbody>
+        <tr><td>Nature's Prime, 1 pote</td><td>300 g por R$ 169,90</td><td>R$ 56,63</td></tr>
+        <tr><td>Nature's Prime, kit de 4 potes</td><td>1,2 kg por R$ 549,90</td><td>R$ 45,83</td></tr>
+        <tr><td>Marcas de mercado em grandes lojas online</td><td>300 g por R$ 30 a R$ 55</td><td>R$ 10 a R$ 18</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Preços das outras marcas tirados de um comparativo publicado com valores de 17/10/2026. Eles mudam com frequência. Creatina monohidratada pura é a mesma substância em qualquer marca séria: o que justifica pagar mais é garantia, procedência e teste de pureza.</p>
+
+  <h2>Garantia de 30 dias</h2>
+  <ol>
+    <li><strong>O que cobre:</strong> devolução do dinheiro se o produto não atender às suas expectativas.</li>
+    <li><strong>Prazo:</strong> até 30 dias após a compra.</li>
+    <li><strong>Como pedir:</strong> pelo e-mail {p.sac} ou pelo telefone {p.phone}. Guarde o número do pedido.</li>
+  </ol>
+
+  <h2>Entrega e pagamento</h2>
+  <p>Os dados de rastreio aparecem em até 72 horas após a compra. Pagamento pela Braip, com cartão (até 12x, com juros de 3,49% ao mês), Pix e boleto.</p>
+</Article>
