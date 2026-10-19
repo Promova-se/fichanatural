@@ -1,0 +1,61 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { lizznutri as p, lizznutriPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Como tomar Lizz Anté Nutri?', a: '2 cápsulas por dia: uma depois do café da manhã e outra antes de dormir. A marca recomenda usar por pelo menos 3 meses.' },
+  { q: 'Lizz Anté Nutri tem efeito colateral?', a: 'A página diz que não, mas zinco pode causar enjoo se tomado em jejum, e a biotina pode alterar exames de sangue, como os de tireoide e de coração. Quem tem alergia a crustáceos deve evitar, porque o produto pode conter derivados.' },
+  { q: 'Posso tomar Lizz Anté Nutri com outro polivitamínico?', a: 'Converse com o médico ou nutricionista. Somar dois produtos com zinco e vitaminas pode passar do limite diário recomendado.' },
+];
+---
+<Article
+  ogImage="/img/lizz-ante-nutri/og-lizz-ante-nutri.jpg"
+  title="Como tomar Lizz Anté Nutri: horário, efeitos colaterais e quem não deve usar"
+  seoTitle="Como tomar Lizz Anté Nutri e efeitos colaterais"
+  description="Como tomar o Lizz Anté Nutri Cabelo, Pele e Unhas, por quanto tempo, possíveis efeitos colaterais, o cuidado com exames de sangue e quem não deve usar."
+  kicker="Modo de uso e segurança"
+  lead="A dose é de 2 cápsulas por dia. O cuidado mais importante, pouco falado, é avisar o médico antes de exames de sangue, porque a biotina pode alterar o resultado."
+  crumbs={[{ name: 'Lizz Anté Nutri', href: '/lizz-ante-nutri/' }, { name: 'Como tomar', href: '/lizz-ante-nutri/como-tomar/' }]}
+  faq={faq}
+  related={lizznutriPages}
+  sources={[
+    { label: 'Página oficial do Lizz Anté Nutri (consultada em 19/10/2026)', url: 'https://encapsulados.lojalizzante.com.br/' },
+    { label: 'NIH Office of Dietary Supplements: Biotin (interferência em exames)', url: 'https://ods.od.nih.gov/factsheets/Biotin-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>2 cápsulas por dia, uma depois do café da manhã e outra antes de dormir, por pelo menos 3 meses. Tome com comida para evitar enjoo. Pare alguns dias antes de exames de sangue, com orientação. Evite se tiver alergia a crustáceos. Gestantes, lactantes e menores de 18 anos só com orientação médica.</p>
+  </div>
+
+  <h2>Modo de uso</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Dose</th><td>2 cápsulas por dia</td></tr>
+        <tr><th>Horário</th><td>1 depois do café da manhã e 1 antes de dormir</td></tr>
+        <tr><th>Duração do pote</th><td>60 cápsulas, 1 mês</td></tr>
+        <tr><th>Tempo para avaliar</th><td>Pelo menos 3 meses</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Cuidados</h2>
+  <ul>
+    <li><strong>Exames de sangue:</strong> a biotina pode alterar exames de tireoide, de hormônios e de coração (troponina). Avise o laboratório e o médico, que podem pedir para parar alguns dias antes.</li>
+    <li><strong>Alergia a crustáceos:</strong> o produto pode conter derivados. Evite.</li>
+    <li><strong>Estômago:</strong> o zinco pode causar enjoo em jejum. Tome depois de comer.</li>
+    <li><strong>Outros suplementos:</strong> não some com outro polivitamínico sem orientação.</li>
+  </ul>
+
+  <h2>Quem deve falar com o médico antes</h2>
+  <ul>
+    <li>Gestantes e lactantes.</li>
+    <li>Menores de 18 anos.</li>
+    <li>Quem tem doença nos rins ou no fígado.</li>
+    <li>Quem tem queda de cabelo intensa: pode haver uma causa que precisa de tratamento.</li>
+  </ul>
+  <p>A página diz que o produto não tem contraindicação nem efeito colateral. Os cuidados acima valem para os ingredientes informados e para suplementos desse tipo em geral.</p>
+
+  <BuyBox compact produto="Lizz Anté Nutri" href={p.link} title="Lizz Anté Nutri no site oficial" text="A partir de R$ 127 o pote para 1 mês." cta="Ver kits e preços" />
+</Article>

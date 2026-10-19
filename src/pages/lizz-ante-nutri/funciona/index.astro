@@ -1,0 +1,61 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { lizznutri as p, lizznutriPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Lizz Anté Nutri faz o cabelo crescer?', a: 'Pode ajudar quem tem deficiência de biotina, zinco ou proteína, que atrapalha o crescimento. Em quem não tem deficiência, não há evidência de que vitaminas acelerem o crescimento do cabelo.' },
+  { q: 'Lizz Anté Nutri aumenta 5 vezes a espessura do cabelo?', a: 'Não há estudo publicado que mostre isso, nem com o produto nem com os ingredientes. A página não diz como esse número foi medido.' },
+  { q: 'O colágeno do Lizz Anté Nutri funciona para a pele?', a: 'Os estudos com colágeno para a pele usaram de 2,5 a 10 gramas por dia. Como o Lizz Anté Nutri tem 1.000 mg somando todos os ativos, a quantidade de colágeno é bem menor.' },
+  { q: 'Em quanto tempo o Lizz Anté Nutri faz efeito?', a: 'Unha e cabelo crescem devagar. Qualquer mudança leva pelo menos 2 a 3 meses para aparecer, por isso a garantia de 90 dias faz sentido.' },
+];
+---
+<Article
+  ogImage="/img/lizz-ante-nutri/og-lizz-ante-nutri.jpg"
+  title="Lizz Anté Nutri funciona? Os 9 ativos e o que a ciência diz"
+  seoTitle="Lizz Anté Nutri funciona? O que diz a ciência"
+  description="Lizz Anté Nutri funciona? Veja o que a ciência diz sobre biotina, colágeno, zinco, silício e ácido hialurônico para cabelo, pele e unhas, e o que é exagero."
+  kicker="Funciona?"
+  lead="Os ativos do Lizz Anté Nutri são os clássicos das fórmulas de beleza. O problema é a quantidade: 1.000 mg por dia divididos entre 9 ingredientes, sem dose publicada para cada um."
+  crumbs={[{ name: 'Lizz Anté Nutri', href: '/lizz-ante-nutri/' }, { name: 'Funciona?', href: '/lizz-ante-nutri/funciona/' }]}
+  faq={faq}
+  related={lizznutriPages}
+  sources={[
+    { label: 'Página oficial do Lizz Anté Nutri (consultada em 19/10/2026)', url: 'https://encapsulados.lojalizzante.com.br/' },
+    { label: 'Patel DP et al. A Review of the Use of Biotin for Hair Loss. Skin Appendage Disord, 2017', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC5582478/' },
+    { label: 'Proksch E et al. Oral intake of specific bioactive collagen peptides reduces skin wrinkles. Skin Pharmacol Physiol, 2014', url: 'https://pubmed.ncbi.nlm.nih.gov/24401291/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Pode ajudar quem tem alguma deficiência nutricional, como falta de biotina, zinco ou proteína, e aí cabelo e unhas melhoram. Para quem já se alimenta bem, o efeito esperado é pequeno. A quantidade de colágeno é bem menor que a dos estudos sobre pele. "5 vezes mais espessura" e "25 mil fios a mais" não têm estudo.</p>
+  </div>
+
+  <h2>Ativo por ativo</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Ativo</th><th>O que se sabe</th></tr></thead>
+      <tbody>
+        <tr><td>Biotina</td><td>Melhora cabelo e unhas de quem tem deficiência, o que é raro. Sem deficiência, não há evidência de efeito. Atenção: pode alterar exames de sangue</td></tr>
+        <tr><td>Zinco</td><td>A falta de zinco causa queda e unhas fracas. Repor ajuda quem tem deficiência</td></tr>
+        <tr><td>Colágeno</td><td>Estudos com 2,5 g por dia mostraram menos rugas em 8 semanas. Aqui, a quantidade cabe dentro de 1 g, junto com outros 8 ativos</td></tr>
+        <tr><td>Ácido hialurônico</td><td>Estudos com 120 a 240 mg por dia mostraram melhora na hidratação da pele. A dose do produto não é informada</td></tr>
+        <tr><td>Silício</td><td>Estudos pequenos sugerem melhora em unhas e cabelo com formas específicas de silício. A forma e a dose não são informadas</td></tr>
+        <tr><td>Cisteína, prolina e MSM</td><td>Fazem parte da queratina e do colágeno, mas há pouca evidência de que suplementá-los mude cabelo ou pele</td></tr>
+        <tr><td>Vitamina B6</td><td>Importante para o metabolismo. Só faz diferença se faltar</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>O que é exagero na página de vendas</h2>
+  <ul>
+    <li><strong>"Aumenta até 5x a espessura dos fios" e "sensação de 25.000 fios a mais":</strong> sem estudo e sem explicação de como foi medido.</li>
+    <li><strong>"Rejuvenescimento permanente":</strong> o efeito de vitaminas e minerais dura enquanto você toma.</li>
+    <li><strong>"Única do mercado" e "primeira vez que a ciência junta tantos ativos":</strong> fórmulas parecidas são vendidas em farmácia.</li>
+    <li><strong>"Resultados nas primeiras semanas":</strong> unha e cabelo levam meses para mostrar diferença.</li>
+  </ul>
+
+  <h2>Para quem faz sentido</h2>
+  <p>Para quem segue dieta restritiva, teve bebê há pouco tempo, fez cirurgia bariátrica ou tem unhas fracas e cabelo ralo sem outra causa aparente. A garantia de 90 dias dá tempo de avaliar. Queda intensa, falhas ou entradas merecem consulta com dermatologista, e exames de ferro, vitamina D e tireoide costumam ajudar a achar a causa.</p>
+
+  <BuyBox compact produto="Lizz Anté Nutri" href={p.link} title="Lizz Anté Nutri no site oficial" text="A partir de R$ 127 o pote, com garantia de 90 dias." cta="Ver kits e preços" />
+</Article>

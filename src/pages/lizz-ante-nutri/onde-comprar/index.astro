@@ -1,0 +1,58 @@
+---
+import Article from '../../../layouts/Article.astro';
+import KitCards from '../../../components/KitCards.astro';
+import { lizznutri as p, lizznutriPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Onde comprar Lizz Anté Nutri original?', a: 'No site oficial do Lizz Anté Nutri, com pagamento pela Monetizze, ou na loja da própria Lizz Anté. Os dois são da marca.' },
+  { q: 'Como funciona a garantia do Lizz Anté Nutri?', a: 'É um desafio de 90 dias: se ao final você não notar diferença no cabelo, na pele e nas unhas, a empresa devolve o dinheiro. O pedido é feito pelo WhatsApp ou pelo e-mail do atendimento.' },
+  { q: 'Dá para comprar o Lizz Anté Nutri junto com o Kit S.O.S?', a: 'Sim. O produtor tem combos de cápsulas com o Kit S.O.S Crescimento, a partir de R$ 199 por 1 pote e 1 kit.' },
+];
+---
+<Article
+  ogImage="/img/lizz-ante-nutri/og-lizz-ante-nutri.jpg"
+  title="Onde comprar Lizz Anté Nutri original: preço dos kits e garantia de 90 dias"
+  seoTitle="Onde comprar Lizz Anté Nutri original e preço"
+  description="Onde comprar o Lizz Anté Nutri Cabelo, Pele e Unhas original, preço de cada kit, quanto sai por mês, combos com o Kit S.O.S e como funciona a garantia de 90 dias."
+  kicker="Compra segura"
+  lead="O Lizz Anté Nutri é vendido no site oficial, com pagamento pela Monetizze, e na loja da Lizz Anté. O kit de 10 meses sai por cerca de R$ 63 por mês, e a garantia é de 90 dias."
+  crumbs={[{ name: 'Lizz Anté Nutri', href: '/lizz-ante-nutri/' }, { name: 'Onde comprar', href: '/lizz-ante-nutri/onde-comprar/' }]}
+  faq={faq}
+  related={lizznutriPages}
+  sources={[
+    { label: 'Página oficial do Lizz Anté Nutri e checkouts da Monetizze (consultados em 19/10/2026)', url: 'https://encapsulados.lojalizzante.com.br/' },
+    { label: 'Loja oficial Lizz Anté (consultada em 19/10/2026)', url: 'https://www.lojalizzante.com.br/products/cabelo-pele-e-unhas-lizz-ante-nutri' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>No site oficial: R$ 127 por 1 mês, R$ 227 por 3 meses, R$ 327 por 5 meses e R$ 627 por 10 meses. Na loja da marca, o pote avulso também custa R$ 127. A garantia de 90 dias permite testar o tratamento de 3 meses com pouco risco.</p>
+  </div>
+
+  <h2>Escolha o kit</h2>
+  <KitCards kits={p.kits} mcr={p.mcr} unit="mês" produto="Lizz Anté Nutri" />
+
+  <h2>Quanto sai por mês</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Kit</th><th>Total</th><th>Por mês</th></tr></thead>
+      <tbody>
+        <tr><td>1 mês</td><td>R$ 127</td><td>R$ 127</td></tr>
+        <tr><td>3 meses</td><td>R$ 227</td><td>R$ 75,67</td></tr>
+        <tr><td>5 meses</td><td>R$ 327</td><td>R$ 65,40</td></tr>
+        <tr><td>10 meses</td><td>R$ 627</td><td>R$ 62,70</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Como a garantia é de 90 dias e o efeito leva meses, o kit de 3 meses é o que melhor combina custo e prazo de teste.</p>
+
+  <h2>Garantia de 90 dias</h2>
+  <ol>
+    <li><strong>O que cobre:</strong> devolução do dinheiro se você não notar diferença no cabelo, na pele e nas unhas ao final de 90 dias.</li>
+    <li><strong>Como se preparar:</strong> tire fotos do cabelo, das unhas e da pele no primeiro dia e a cada mês.</li>
+    <li><strong>Como pedir:</strong> pelo WhatsApp {p.whatsapp} ou pelo e-mail {p.sac}. Guarde o número do pedido.</li>
+    <li><strong>Direito de arrependimento:</strong> nos primeiros 7 dias após o recebimento, vale por qualquer motivo, pelo Código de Defesa do Consumidor.</li>
+  </ol>
+
+  <h2>Entrega e pagamento</h2>
+  <p>Entrega em 7 a 15 dias úteis, segundo a página. Pagamento pela Monetizze: cartão em até 12x (com juros de 2,99% ao mês), Pix e boleto.</p>
+</Article>

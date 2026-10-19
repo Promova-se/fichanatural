@@ -6,7 +6,7 @@ export const site = {
   email: 'loja@promovase.net',
   company: 'Promova-se',
   cnpj: '43.315.814/0001-28',
-  updated: '2026-10-17',
+  updated: '2026-10-19',
   ga4: 'G-L47PVELQQ4',
 };
 
@@ -377,6 +377,34 @@ export const creatinaPages = [
   { href: '/creatina-natures-prime/e-confiavel/', title: "Creatina Nature's Prime é confiável? Fabricante, Anvisa e Reclame Aqui", short: 'É confiável?' },
 ];
 
+// Cabelo, Pele & Unhas - Lizz Anté Nutri (Monetizze), conferido em 19/10/2026. Mesma empresa do Kit S.O.S.
+// ATENÇÃO: o link geral /r/AVG25862882 do painel leva a um site inexistente (wwvv.info). Usar a página oficial com ?mcr=
+// e os checkouts K diretos (os 4 mostram "REF: AVG25862882"). 9 ativos somando 1.000 mg/dia, sem doses publicadas.
+export const lizznutri = {
+  name: 'Cabelo, Pele & Unhas Lizz Anté Nutri',
+  short: 'Lizz Anté Nutri',
+  brand: 'Lizz Anté',
+  sac: 'comercial@lizzante.com.br',
+  whatsapp: '(19) 98137-9295',
+  mcr: 'AVG25862882',
+  link: 'https://encapsulados.lojalizzante.com.br/?mcr=AVG25862882',
+  actives: ['Cisteína', 'Colágeno', 'Prolina', 'MSM (metilsulfonilmetano)', 'Vitamina B6', 'Zinco', 'Silício', 'Biotina', 'Ácido hialurônico'],
+  kits: [
+    { name: '1 mês', qty: '1 pote · 60 cápsulas', months: 1, total: 127, installments: '12x de R$ 12,75', plan: 'KEX391244' },
+    { name: '3 meses', qty: 'Tratamento para 3 meses', months: 3, total: 227, installments: '12x de R$ 22,79', plan: 'KBL391245' },
+    { name: '5 meses', qty: 'Tratamento para 5 meses', months: 5, total: 327, installments: '12x de R$ 32,83', plan: 'KLR391246' },
+    { name: '10 meses', qty: 'Tratamento para 10 meses', months: 10, total: 627, installments: '12x de R$ 62,95', plan: 'KYP391247' },
+  ],
+};
+
+export const lizznutriPages = [
+  { href: '/lizz-ante-nutri/', title: 'Lizz Anté Nutri Cabelo, Pele e Unhas: ficha completa, composição e preço', short: 'Ficha completa' },
+  { href: '/lizz-ante-nutri/funciona/', title: 'Lizz Anté Nutri funciona? Os 9 ativos e o que a ciência diz', short: 'Funciona?' },
+  { href: '/lizz-ante-nutri/como-tomar/', title: 'Como tomar Lizz Anté Nutri: horário, efeitos colaterais e quem não deve usar', short: 'Como tomar e cuidados' },
+  { href: '/lizz-ante-nutri/onde-comprar/', title: 'Onde comprar Lizz Anté Nutri original: preço dos kits e garantia de 90 dias', short: 'Onde comprar e garantia' },
+  { href: '/lizz-ante-nutri/e-confiavel/', title: 'Lizz Anté Nutri é confiável? Empresa, Anvisa e Reclame Aqui', short: 'É confiável?' },
+];
+
 export const ozenvittaPages = [
   { href: '/ozenvitta/', title: 'OzenVitta: ficha completa, composição e preço', short: 'Ficha completa' },
   { href: '/ozenvitta/funciona/', title: 'OzenVitta funciona? O que a ciência diz de cada ingrediente', short: 'Funciona?' },
@@ -450,6 +478,7 @@ export const catalog = [
   { name: 'IArmonize', href: '/iarmonize/', pill: 'Cabelo, sono e energia', summary: 'Kit da Integra Pharma com quatro fórmulas: Hair, Sleep, Energy e Vital.', pages: iarmonizePages },
   { name: "Creatina Nature's Prime", href: '/creatina-natures-prime/', pill: 'Treino', summary: 'Creatina monohidratada pura em pó, 300 g, da Natures Farma.', pages: creatinaPages },
   { name: 'Artic Protect', href: '/artic-protect/', pill: 'Articulações', summary: 'Colágeno tipo 2 de 40 mg com magnésio e vitamina D3, da Up Sports Nutrition.', pages: articPages },
+  { name: 'Lizz Anté Nutri', href: '/lizz-ante-nutri/', pill: 'Cabelo, pele e unhas', summary: 'Cápsulas da Lizz Anté com biotina, colágeno, silício, zinco e mais 5 ativos.', pages: lizznutriPages },
   { name: 'Kit S.O.S Crescimento', href: '/kit-sos-crescimento/', pill: 'Cabelo', summary: 'Shampoo, máscara e tônico da Lizz Anté para queda e crescimento capilar.', pages: kitsosPages },
   { name: 'Hot Men Caps', href: '/hot-men-caps/', pill: 'Saúde masculina', summary: 'Cápsulas vendidas para desempenho sexual masculino, sem ingredientes na página oficial.', pages: hotmenPages },
   { name: 'Vitta Resveratrol', href: '/vitta-resveratrol/', pill: 'Pele', summary: 'Colágeno, ácido hialurônico, resveratrol e vitaminas.', pages: resveratrolPages },

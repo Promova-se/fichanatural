@@ -1,0 +1,57 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { lizznutri as p, lizznutriPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Lizz Anté Nutri é confiável?', a: 'Sim, pelos sinais disponíveis. A Lizz Anté tem reputação "Ótima" no Reclame Aqui, com nota 8,4 e 93% das reclamações resolvidas, e vende também na Beleza na Web. O Nutri é a linha de suplementos da mesma empresa.' },
+  { q: 'Lizz Anté Nutri é aprovado pela Anvisa?', a: 'A página diz que os ingredientes estão na lista de ingredientes permitidos em suplementos (IN 28/2018) e que o produto é dispensado de registro, o que é o normal para suplementos. A Anvisa não avalia se o produto funciona.' },
+  { q: 'Lizz Anté Nutri é golpe?', a: 'Não. É de uma marca conhecida, com pagamento pela Monetizze, rastreio e garantia de 90 dias. As ressalvas estão nas promessas de resultado e na falta das doses.' },
+];
+---
+<Article
+  ogImage="/img/lizz-ante-nutri/og-lizz-ante-nutri.jpg"
+  title="Lizz Anté Nutri é confiável? Empresa, Anvisa e Reclame Aqui"
+  seoTitle="Lizz Anté Nutri é confiável? Reclame Aqui e Anvisa"
+  description="O Lizz Anté Nutri é confiável? Veja quem vende, a nota da Lizz Anté no Reclame Aqui, o que a página diz sobre a Anvisa e os pontos de atenção antes de comprar."
+  kicker="Reputação"
+  lead="O Lizz Anté Nutri é da Lizz Anté, uma das marcas mais bem avaliadas que analisamos. A confiança na empresa é alta. Os pontos de atenção estão na página de vendas."
+  crumbs={[{ name: 'Lizz Anté Nutri', href: '/lizz-ante-nutri/' }, { name: 'É confiável?', href: '/lizz-ante-nutri/e-confiavel/' }]}
+  faq={faq}
+  related={lizznutriPages}
+  sources={[
+    { label: 'Reclame Aqui: Lizz Anté (consultado em 17/10/2026)', url: 'https://www.reclameaqui.com.br/empresa/lizz-ante/' },
+    { label: 'Página oficial do Lizz Anté Nutri (consultada em 19/10/2026)', url: 'https://encapsulados.lojalizzante.com.br/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Sim. A Lizz Anté tem nota 8,4 e selo "Ótima" no Reclame Aqui, vende também na Beleza na Web, e o Nutri tem garantia de 90 dias. A ressalva é a página de vendas, que exagera nos resultados e não informa as doses.</p>
+  </div>
+
+  <h2>Quem vende</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Marca</th><td>Lizz Anté Nutri</td></tr>
+        <tr><th>Empresa</th><td>Lizz Anté Professional Comércio e Varejo de Cosméticos Ltda.</td></tr>
+        <tr><th>Atendimento</th><td>WhatsApp {p.whatsapp} e {p.sac}</td></tr>
+        <tr><th>Pagamento</th><td>Monetizze</td></tr>
+        <tr><th>Reclame Aqui</th><td>Ótima, nota 8,4, 93,3% das reclamações resolvidas (consulta em 17/10/2026)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>A mesma empresa vende o <a href="/kit-sos-crescimento/">Kit S.O.S Crescimento</a>, que analisamos em detalhe. Veja também <a href="/kit-sos-crescimento/e-confiavel/">a reputação da Lizz Anté</a>.</p>
+
+  <h2>A questão da Anvisa</h2>
+  <p>A página diz que os ingredientes estão autorizados para suplementos pela Instrução Normativa 28/2018 e que o produto é dispensado de registro. Isso é o normal para suplementos alimentares. Não encontramos medida da Anvisa contra o produto ou contra a Lizz Anté.</p>
+
+  <h2>Pontos de atenção</h2>
+  <ul>
+    <li><strong>Doses não informadas:</strong> nem a página nem a loja da marca mostram a tabela nutricional.</li>
+    <li><strong>Promessas acima da evidência:</strong> "até 5x a espessura", "25.000 fios a mais" e "rejuvenescimento permanente". Veja <a href="/lizz-ante-nutri/funciona/">o que a ciência diz</a>.</li>
+    <li><strong>"Sem contraindicação e sem efeito colateral":</strong> a própria página avisa sobre crustáceos, gestantes e lactantes.</li>
+    <li><strong>"Últimas unidades":</strong> aviso de escassez comum em páginas de venda, que não deve apressar a decisão.</li>
+  </ul>
+
+  <BuyBox compact produto="Lizz Anté Nutri" href={p.link} title="Lizz Anté Nutri no site oficial" text="A partir de R$ 127, com garantia de 90 dias." cta="Ver kits e preços" />
+</Article>

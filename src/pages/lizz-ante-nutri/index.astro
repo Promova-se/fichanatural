@@ -1,0 +1,100 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import { lizznutri as p, lizznutriPages } from '../../data/site';
+
+const faq = [
+  { q: 'O que é o Lizz Anté Nutri Cabelo, Pele e Unhas?', a: 'É um suplemento em cápsulas da Lizz Anté, a mesma marca do Kit S.O.S Crescimento. Tem 9 ativos (cisteína, colágeno, prolina, MSM, vitamina B6, zinco, silício, biotina e ácido hialurônico), somando 1.000 mg por dia em 2 cápsulas.' },
+  { q: 'Quanto custa o Lizz Anté Nutri?', a: 'No site oficial, em 19/10/2026: R$ 127 para 1 mês, R$ 227 para 3 meses, R$ 327 para 5 meses e R$ 627 para 10 meses. No cartão parcelado há juros de 2,99% ao mês.' },
+  { q: 'Lizz Anté Nutri tem garantia?', a: 'Sim. A página oferece um desafio de 90 dias: se você não notar diferença no cabelo, na pele e nas unhas, a empresa devolve o dinheiro.' },
+  { q: 'Qual a dose de cada ingrediente do Lizz Anté Nutri?', a: 'A página e a loja oficial não informam. Dizem só que os 9 ativos somam 1.000 mg por dia. Confira a tabela nutricional no rótulo ao receber.' },
+];
+---
+<Article
+  ogImage="/img/lizz-ante-nutri/og-lizz-ante-nutri.jpg"
+  title="Lizz Anté Nutri Cabelo, Pele e Unhas: ficha completa, composição, preço e o que esperar"
+  seoTitle="Lizz Anté Nutri: composição, preço e se vale a pena"
+  description="Ficha do Lizz Anté Nutri Cabelo, Pele e Unhas: os 9 ativos, o que a página não informa, preço dos kits, garantia de 90 dias, prós e contras e o que esperar."
+  kicker="Ficha de produto"
+  lead="O Lizz Anté Nutri é o suplemento de cabelo, pele e unhas da mesma marca do Kit S.O.S Crescimento. Tem uma lista boa de ativos e garantia longa, mas não publica as doses, e 1.000 mg por dia divididos entre 9 ingredientes deixam pouco para cada um."
+  crumbs={[{ name: 'Lizz Anté Nutri', href: '/lizz-ante-nutri/' }]}
+  faq={faq}
+  related={lizznutriPages}
+  sources={[
+    { label: 'Página oficial do Lizz Anté Nutri e checkouts da Monetizze (consultados em 19/10/2026)', url: 'https://encapsulados.lojalizzante.com.br/' },
+    { label: 'Loja oficial Lizz Anté: Cabelo, Pele e Unhas', url: 'https://www.lojalizzante.com.br/products/cabelo-pele-e-unhas-lizz-ante-nutri' },
+    { label: 'Reclame Aqui: Lizz Anté (consultado em 17/10/2026)', url: 'https://www.reclameaqui.com.br/empresa/lizz-ante/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Duas cápsulas por dia com 9 ativos: cisteína, colágeno, prolina, MSM, vitamina B6, zinco, silício, biotina e ácido hialurônico. A empresa é a Lizz Anté, com reputação "Ótima" no Reclame Aqui, e a garantia é de 90 dias. Pode ajudar quem tem falta de biotina, zinco ou proteína. As promessas de "5 vezes mais espessura" e "25 mil fios a mais" não têm estudo, e as doses não são divulgadas. A partir de R$ 127 por mês.</p>
+  </div>
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>Cabelo, Pele e Unhas - Lizz Anté Nutri</td></tr>
+        <tr><th>Marca</th><td>{p.brand} (Lizz Anté Professional Comércio e Varejo de Cosméticos Ltda.)</td></tr>
+        <tr><th>Tipo</th><td>Suplemento alimentar em cápsulas</td></tr>
+        <tr><th>Apresentação</th><td>Pote com 60 cápsulas, 1 mês de uso</td></tr>
+        <tr><th>Dose</th><td>2 cápsulas por dia: uma depois do café da manhã e outra antes de dormir</td></tr>
+        <tr><th>Atendimento</th><td>WhatsApp {p.whatsapp}, de segunda a sexta, das 9h às 18h, e {p.sac}</td></tr>
+        <tr><th>Garantia</th><td>90 dias, com devolução do dinheiro se não houver diferença</td></tr>
+        <tr><th>Alergênicos</th><td>Pode conter derivados de crustáceos</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Composição</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Ativo</th><th>Para que é usado</th></tr></thead>
+      <tbody>
+        <tr><td>Biotina</td><td>Vitamina ligada a cabelo e unhas, útil em quem tem deficiência</td></tr>
+        <tr><td>Zinco</td><td>Mineral importante para pele e cabelo, útil em quem tem deficiência</td></tr>
+        <tr><td>Silício</td><td>Mineral estudado para unhas e cabelo, com estudos pequenos</td></tr>
+        <tr><td>Colágeno</td><td>Proteína estudada para pele em doses de gramas</td></tr>
+        <tr><td>Ácido hialurônico</td><td>Estudado para hidratação da pele em doses de 120 a 240 mg</td></tr>
+        <tr><td>Cisteína, prolina e MSM</td><td>Componentes da queratina e do colágeno, com pouca evidência em suplemento</td></tr>
+        <tr><td>Vitamina B6</td><td>Vitamina do complexo B, útil em quem tem deficiência</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>A página informa que os 9 ativos somam 1.000 mg por dia, mas não diz quanto há de cada um. A loja da marca também não mostra a tabela nutricional. Detalhes em <a href="/lizz-ante-nutri/funciona/">Lizz Anté Nutri funciona?</a></p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores conferidos nos checkouts em 19/10/2026. No checkout aparece a oferta de mais 1 pote por R$ 45, que você não precisa aceitar. Os juros do parcelado são de 2,99% ao mês.</p>
+  <KitCards kits={p.kits} mcr={p.mcr} unit="mês" produto="Lizz Anté Nutri" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Empresa conhecida, com reputação "Ótima" no Reclame Aqui</li>
+        <li>Garantia de 90 dias, mais longa que a média</li>
+        <li>Ativos comuns em fórmulas de cabelo, pele e unhas</li>
+        <li>Cita gestantes, lactantes e alérgicos a crustáceos</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Não publica a dose de cada ativo</li>
+        <li>1.000 mg divididos entre 9 ativos deixam pouco colágeno, em comparação com os estudos</li>
+        <li>Promete "até 5 vezes mais espessura" e "25 mil fios a mais", sem estudo</li>
+        <li>Diz que não tem efeito colateral nem contraindicação</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>É um polivitamínico de beleza de uma marca séria, com garantia longa que reduz o risco de testar. Quem tem deficiência de biotina, zinco ou proteína, comum em dietas restritivas, pós-parto ou depois de cirurgia bariátrica, pode notar melhora em unhas e cabelo. Quem já se alimenta bem tende a ver pouca diferença. Para queda forte, vale combinar com o <a href="/kit-sos-crescimento/">Kit S.O.S Crescimento</a>, que age por fora, e com uma consulta ao dermatologista.</p>
+  </div>
+  <p>Antes de comprar, veja <a href="/lizz-ante-nutri/como-tomar/">quem não deve usar</a> e <a href="/lizz-ante-nutri/onde-comprar/">como funciona a garantia</a>.</p>
+
+  <BuyBox compact produto="Lizz Anté Nutri" href={p.link} title="Lizz Anté Nutri no site oficial" text="A partir de R$ 127 (1 pote para 1 mês), com garantia de 90 dias." cta="Ver kits e preços" />
+</Article>
