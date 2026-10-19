@@ -1,0 +1,62 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { detoxfit as p, detoxfitPages, ozenvitta } from '../../../data/site';
+
+const faq = [
+  { q: 'Detox Fit Caps Black emagrece?', a: 'Pode dar um pouco de saciedade e um leve aumento de gasto por causa da cafeína, mas o efeito esperado é pequeno. Os ingredientes têm estudos com doses maiores do que cabem em 1 grama por dia somando tudo.' },
+  { q: 'Detox Fit Caps Black reduz 80% da gordura corporal?', a: 'Não. Nenhum suplemento faz isso. A página não cita estudo para esse número. Mesmo remédios para obesidade levam a perdas de 5% a 20% do peso, não de 80% da gordura.' },
+  { q: 'Dá para emagrecer com Detox Fit Caps Black sem academia?', a: 'Emagrecer depende de comer menos calorias do que se gasta. Suplementos como esse podem, no máximo, ajudar um pouco no apetite. Sem mudar a alimentação, o efeito tende a ser mínimo.' },
+];
+---
+<Article
+  ogImage="/img/detox-fit-caps-black/og-detox-fit-caps-black.jpg"
+  title="Detox Fit Caps Black funciona? A promessa de reduzir 80% da gordura"
+  seoTitle="Detox Fit Caps Black funciona? O que esperar"
+  description="Detox Fit Caps Black funciona? Veja o que a ciência diz de cada ingrediente, por que as doses importam e o que é exagero nas promessas da página de vendas."
+  kicker="Funciona?"
+  lead="Os ingredientes do Detox Fit Caps Black têm alguma pesquisa por trás, mas em doses que não cabem em 1 grama por dia somando tudo. A promessa de reduzir 80% da gordura não tem base."
+  crumbs={[{ name: 'Detox Fit Caps Black', href: '/detox-fit-caps-black/' }, { name: 'Funciona?', href: '/detox-fit-caps-black/funciona/' }]}
+  faq={faq}
+  related={detoxfitPages}
+  sources={[
+    { label: 'Página oficial do Detox Fit Caps Black (consultada em 19/10/2026)', url: 'https://black.detoxfitcaps.com.br/' },
+    { label: 'NIH Office of Dietary Supplements: Dietary Supplements for Weight Loss', url: 'https://ods.od.nih.gov/factsheets/WeightLoss-HealthProfessional/' },
+    { label: 'Briskey D et al. Laranja moro (Morosil) e peso corporal. Nutrients, 2022', url: 'https://pubmed.ncbi.nlm.nih.gov/35276783/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Pouco. Fibras, cafeína, laranja moro e cromo têm efeitos pequenos mesmo nas doses dos estudos, e aqui todos dividem 1 grama por dia, sem quantidade informada. "Reduz 80% da gordura corporal", "destrói a gordura localizada" e "sem precisar pisar na academia" não têm base.</p>
+  </div>
+
+  <h2>O que se sabe de cada ingrediente</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Ingrediente</th><th>Dose nos estudos</th><th>O que esperar aqui</th></tr></thead>
+      <tbody>
+        <tr><td>Psyllium e inulina</td><td>5 a 15 g por dia</td><td>Alguma saciedade e intestino mais regular. Em menos de 1 g, efeito mínimo</td></tr>
+        <tr><td>Laranja moro</td><td>400 mg por dia</td><td>Num estudo de 6 meses, cerca de 1,6 kg a mais que o placebo, com dieta e caminhada. A dose aqui não é informada</td></tr>
+        <tr><td>Cafeína</td><td>Varia</td><td>Aumenta um pouco o gasto de energia e a disposição. A quantidade não é informada</td></tr>
+        <tr><td>L-carnitina</td><td>1 a 3 g por dia</td><td>Efeito pequeno no peso em alguns estudos. Em menos de 1 g, sem efeito esperado</td></tr>
+        <tr><td>Picolinato de cromo</td><td>200 a 1.000 mcg por dia</td><td>Efeito pequeno no peso, de relevância incerta</td></tr>
+        <tr><td>Espirulina e chlorella</td><td>Gramas por dia</td><td>Sem efeito relevante no peso nessas quantidades</td></tr>
+        <tr><td>Vitaminas B</td><td>-</td><td>Só ajudam se faltar. Não emagrecem</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>O que é exagero na página de vendas</h2>
+  <ul>
+    <li><strong>"Reduz 80% da gordura corporal":</strong> sem estudo, e impossível para um suplemento.</li>
+    <li><strong>"Destruir a gordura localizada sem sequer pisar na academia":</strong> não existe perda de gordura em um ponto específico do corpo.</li>
+    <li><strong>"97% perceberam grande perda de peso em poucos dias":</strong> a página não diz de onde vem esse número.</li>
+    <li><strong>"Ingredientes cientificamente comprovados":</strong> os estudos existem, mas com doses que não cabem na porção de 1 g.</li>
+    <li><strong>Espirulina e chlorella "controlam pressão e colesterol":</strong> suplemento não trata hipertensão nem colesterol alto.</li>
+  </ul>
+
+  <h2>Para quem pode fazer sentido</h2>
+  <p>Para quem quer um apoio leve no apetite e aceita um efeito pequeno. Com ingredientes parecidos, o <a href="/ozenvitta/">OzenVitta</a> tem garantia de 30 dias sem exigir o pote lacrado. Se a ideia é só a fibra, o <a href="/psyllium/">psyllium em pó</a> permite a dose dos estudos por menos dinheiro.</p>
+
+  <BuyBox compact produto="OzenVitta" href={ozenvitta.link} title="Alternativa: OzenVitta" text="Fibras, laranja moro e L-carnitina, a partir de R$ 147 o pote, com garantia de 30 dias." cta="Ver kits do OzenVitta" />
+  <p class="small">Se preferir o Detox Fit Caps Black, os kits estão na <a href="/detox-fit-caps-black/">ficha completa</a>.</p>
+</Article>

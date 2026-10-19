@@ -1,0 +1,62 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { detoxfit as p, detoxfitPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Como tomar Detox Fit Caps Black?', a: 'A porção indicada é de 2 cápsulas por dia. Como a fórmula tem cafeína, prefira tomar até o começo da tarde, com água e longe da hora de dormir.' },
+  { q: 'Detox Fit Caps Black tem efeito colateral?', a: 'Pode ter. A cafeína pode causar insônia, ansiedade, palpitação e dor de cabeça, e as fibras podem causar gases e inchaço. Como a quantidade de cafeína não é informada, comece devagar e observe como o corpo reage.' },
+  { q: 'Quem tem pressão alta pode tomar Detox Fit Caps Black?', a: 'Só com orientação médica. A cafeína pode subir a pressão e acelerar o coração, e a página não informa quanto o produto tem.' },
+];
+---
+<Article
+  ogImage="/img/detox-fit-caps-black/og-detox-fit-caps-black.jpg"
+  title="Como tomar Detox Fit Caps Black: cafeína, efeitos colaterais e quem não deve usar"
+  seoTitle="Como tomar Detox Fit Caps Black e efeitos colaterais"
+  description="Como tomar o Detox Fit Caps Black, melhor horário por causa da cafeína, possíveis efeitos colaterais e quem não deve usar sem orientação médica."
+  kicker="Modo de uso e segurança"
+  lead="A porção é de 2 cápsulas por dia. O cuidado principal é a cafeína, em quantidade não informada, que pode atrapalhar o sono e mexer com a pressão."
+  crumbs={[{ name: 'Detox Fit Caps Black', href: '/detox-fit-caps-black/' }, { name: 'Como tomar', href: '/detox-fit-caps-black/como-tomar/' }]}
+  faq={faq}
+  related={detoxfitPages}
+  sources={[
+    { label: 'Página oficial do Detox Fit Caps Black (consultada em 19/10/2026)', url: 'https://black.detoxfitcaps.com.br/' },
+    { label: 'NIH Office of Dietary Supplements: Dietary Supplements for Weight Loss (cafeína, cromo, carnitina)', url: 'https://ods.od.nih.gov/factsheets/WeightLoss-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>2 cápsulas por dia, com água, até o começo da tarde. Beba bastante água por causa das fibras. Evite somar com café em excesso, energéticos ou outros termogênicos. Quem tem pressão alta, arritmia, ansiedade, insônia, está grávida ou amamentando, ou tem menos de 18 anos, deve falar com o médico antes.</p>
+  </div>
+
+  <h2>Modo de uso</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Porção</th><td>2 cápsulas (1 g) por dia</td></tr>
+        <tr><th>Horário sugerido</th><td>Manhã ou início da tarde, por causa da cafeína</td></tr>
+        <tr><th>Com o quê</th><td>Um copo cheio de água, por causa das fibras</td></tr>
+        <tr><th>Duração do pote</th><td>60 cápsulas, 30 dias</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Confira o modo de uso no rótulo ao receber e não aumente a dose por conta própria.</p>
+
+  <h2>Possíveis efeitos colaterais</h2>
+  <ul>
+    <li><strong>Cafeína:</strong> insônia, agitação, ansiedade, palpitação, dor de cabeça e aumento da pressão.</li>
+    <li><strong>Fibras:</strong> gases, inchaço e intestino solto nas primeiras semanas.</li>
+    <li><strong>Cromo:</strong> raramente, enjoo e dor de cabeça.</li>
+  </ul>
+  <p>Se sentir palpitação forte, dor no peito ou falta de ar, pare e procure atendimento.</p>
+
+  <h2>Quem não deve usar sem orientação médica</h2>
+  <ul>
+    <li>Gestantes, lactantes e menores de 18 anos.</li>
+    <li>Quem tem pressão alta, arritmia ou doença no coração.</li>
+    <li>Quem tem ansiedade, insônia ou é sensível a cafeína.</li>
+    <li>Quem tem diabetes e usa remédio para glicose: o cromo pode somar efeito.</li>
+    <li>Quem toma remédio de uso contínuo: as fibras podem atrapalhar a absorção. Tome os remédios 2 horas antes ou depois.</li>
+  </ul>
+
+  <BuyBox compact produto="Detox Fit Caps Black" href={p.link} title="Detox Fit Caps Black no site oficial" text="A partir de R$ 137 o pote para 30 dias." cta="Ver kits e preços" />
+</Article>

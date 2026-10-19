@@ -1,0 +1,86 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import { detoxfit as p, detoxfitPages } from '../../data/site';
+
+const faq = [
+  { q: 'O que é o Detox Fit Caps Black?', a: 'É um suplemento em cápsulas vendido para emagrecimento, com psyllium, inulina, laranja moro, L-carnitina, cromo, cafeína, espirulina, chlorella e vitaminas do complexo B. O pote tem 60 cápsulas de 500 mg, e a porção é de 2 cápsulas por dia.' },
+  { q: 'Quanto custa o Detox Fit Caps Black?', a: 'Na consulta de 19/10/2026: 1 pote por R$ 137, 2 por R$ 167, 3 por R$ 197, 4 por R$ 257 e 6 por R$ 377, com frete grátis. No cartão parcelado há juros de 2,99% ao mês.' },
+  { q: 'Qual a dose de cada ingrediente do Detox Fit Caps Black?', a: 'A página mostra uma "informação nutricional" com o nome e a unidade de cada ingrediente, mas sem as quantidades. Só dá para saber que a porção de 2 cápsulas pesa 1 grama no total.' },
+  { q: 'Detox Fit Caps Black tem garantia?', a: 'A página fala em 30 dias com devolução se não houver resultado. Os termos de uso, porém, só aceitam devolução do pote lacrado, em até 7 dias após o recebimento, com o frete por conta do cliente.' },
+];
+---
+<Article
+  ogImage="/img/detox-fit-caps-black/og-detox-fit-caps-black.jpg"
+  title="Detox Fit Caps Black: ficha completa, composição, preço e o que esperar"
+  seoTitle="Detox Fit Caps Black: composição, preço e se vale"
+  description="Ficha do Detox Fit Caps Black: ingredientes, o que a tabela não mostra, preço dos kits, regras reais do reembolso, prós e contras e o que esperar do suplemento."
+  kicker="Ficha de produto"
+  lead="O Detox Fit Caps Black junta fibras, laranja moro, cafeína e L-carnitina em cápsulas. A fórmula é parecida com a de concorrentes conhecidos, mas a página não mostra as doses, exibe um selo do Reclame Aqui que a marca não tem e promete uma garantia que os termos não confirmam."
+  crumbs={[{ name: 'Detox Fit Caps Black', href: '/detox-fit-caps-black/' }]}
+  faq={faq}
+  related={detoxfitPages}
+  sources={[
+    { label: 'Página oficial do Detox Fit Caps Black e checkouts da Monetizze (consultados em 19/10/2026)', url: 'https://black.detoxfitcaps.com.br/' },
+    { label: 'Termos de uso do Detox Fit Caps Black', url: 'https://black.detoxfitcaps.com.br/termos/' },
+    { label: 'Reclame Aqui: Detox Fit Caps (consultado em 19/10/2026)', url: 'https://www.reclameaqui.com.br/empresa/detox-fit-caps/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Cápsulas com psyllium, inulina, laranja moro, L-carnitina, cromo, cafeína, espirulina, chlorella e vitaminas B, somando 1 grama por dia, sem dose de cada ingrediente. Com tanta coisa em 1 grama, as quantidades devem ser pequenas. A página promete "reduzir 80% da gordura corporal", exibe um selo "RA1000" que a marca não tem e anuncia uma garantia de 30 dias que os termos restringem a 7 dias com o pote lacrado. É barato: a partir de R$ 137 o pote, e R$ 63 por mês no kit de 6.</p>
+  </div>
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>{p.name}</td></tr>
+        <tr><th>Marca no rótulo</th><td>DPV Nutri. Na Monetizze, o produtor aparece como DBVNUTRI</td></tr>
+        <tr><th>Empresa e CNPJ</th><td>Não informados</td></tr>
+        <tr><th>Atendimento</th><td>WhatsApp {p.whatsapp}, de segunda a sexta, das 8h às 17h. E-mail do checkout: {p.sac}</td></tr>
+        <tr><th>Tipo</th><td>Suplemento alimentar em cápsulas de 500 mg</td></tr>
+        <tr><th>Apresentação</th><td>Pote com 60 cápsulas (30 g), 30 dias de uso</td></tr>
+        <tr><th>Porção</th><td>2 cápsulas (1 g) por dia</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Composição</h2>
+  <p>A página lista {p.ingredients.join(', ').replace(/, ([^,]*)$/, ' e $1')}. A "informação nutricional" mostrada tem só os nomes e as unidades (mg ou mcg), com a coluna de quantidades vazia. Confira o rótulo ao receber.</p>
+  <p>Como a porção inteira pesa 1 grama, a soma de todos esses ingredientes cabe em 1 g. Para comparar: os estudos com psyllium usam de 5 a 15 g por dia. O que se sabe de cada ingrediente está em <a href="/detox-fit-caps-black/funciona/">Detox Fit Caps Black funciona?</a></p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores conferidos nos checkouts em 19/10/2026, com frete grátis. No cartão parcelado, os juros são de 2,99% ao mês.</p>
+  <KitCards kits={p.kits} mcr={p.mcr} produto="Detox Fit Caps Black" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Preço baixo por mês nos kits maiores</li>
+        <li>Pagamento pela Monetizze, com rastreio</li>
+        <li>Ingredientes comuns em fórmulas de emagrecimento</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Sem empresa, CNPJ nem dose de cada ingrediente</li>
+        <li>Exibe selo "RA1000", mas a marca não tem reputação no Reclame Aqui</li>
+        <li>Garantia de 30 dias na página, mas reembolso só lacrado em 7 dias nos termos</li>
+        <li>Promete "reduzir 80% da gordura corporal" e emagrecer sem academia</li>
+        <li>Tem cafeína em quantidade não informada</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>A fórmula em si não tem nada de errado: são ingredientes comuns, com efeito pequeno. O problema é a forma de venda. Sem as doses, não dá para saber se há o suficiente de cada coisa, e o selo do Reclame Aqui e a garantia de 30 dias não correspondem ao que encontramos. Quem quer esse tipo de fórmula encontra opções parecidas com doses ou garantia mais clara, como o <a href="/ozenvitta/">OzenVitta</a>. Se for comprar, saiba que a devolução só vale com o pote fechado.</p>
+  </div>
+  <p>Antes de comprar, leia <a href="/detox-fit-caps-black/e-confiavel/">se o Detox Fit Caps Black é confiável</a> e <a href="/detox-fit-caps-black/onde-comprar/">as regras do reembolso</a>.</p>
+
+  <BuyBox compact produto="Detox Fit Caps Black" href={p.link} title="Detox Fit Caps Black no site oficial" text="A partir de R$ 137 (1 pote para 30 dias), com frete grátis." cta="Ver kits e preços" />
+</Article>

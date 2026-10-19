@@ -1,0 +1,73 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { detoxfit as p, detoxfitPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Detox Fit Caps Black tem selo RA1000 do Reclame Aqui?', a: 'Não. A página exibe um "Certificado RA1000", mas no Reclame Aqui a empresa Detox Fit Caps aparece como não verificada e sem reputação definida, com 19 reclamações no total (consulta em 19/10/2026). O RA1000 é dado só a empresas com índices altos de resolução.' },
+  { q: 'Detox Fit Caps Black é golpe?', a: 'O pagamento passa pela Monetizze e há rastreio, então não é um golpe de não entregar pelo site oficial. Mas a página usa um selo que a marca não tem, não informa empresa nem doses, e anuncia uma garantia que os termos não confirmam. No Reclame Aqui há relatos de quem comprou com "representantes" e não recebeu.' },
+  { q: 'Detox Fit Caps Black é aprovado pela Anvisa?', a: 'A página diz "aprovado Anvisa" e "dentro dos termos da Anvisa", sem número. Suplementos alimentares, em geral, são dispensados de registro, e a Anvisa não avalia se funcionam.' },
+];
+---
+<Article
+  ogImage="/img/detox-fit-caps-black/og-detox-fit-caps-black.jpg"
+  title="Detox Fit Caps Black é confiável? Reclame Aqui, selo RA1000 e empresa"
+  seoTitle="Detox Fit Caps Black é confiável? Reclame Aqui"
+  description="Detox Fit Caps Black é confiável ou golpe? Conferimos o selo RA1000 da página, o Reclame Aqui, quem vende, a questão da Anvisa e as regras do reembolso."
+  kicker="Reputação"
+  lead="A página do Detox Fit Caps Black exibe um certificado RA1000 do Reclame Aqui. Conferimos: a marca não tem reputação calculada e não é verificada. Também não há empresa nem CNPJ informados."
+  crumbs={[{ name: 'Detox Fit Caps Black', href: '/detox-fit-caps-black/' }, { name: 'É confiável?', href: '/detox-fit-caps-black/e-confiavel/' }]}
+  faq={faq}
+  related={detoxfitPages}
+  sources={[
+    { label: 'Reclame Aqui: Detox Fit Caps (consultado em 19/10/2026)', url: 'https://www.reclameaqui.com.br/empresa/detox-fit-caps/' },
+    { label: 'Página oficial do Detox Fit Caps Black (consultada em 19/10/2026)', url: 'https://black.detoxfitcaps.com.br/' },
+    { label: 'Termos de uso do Detox Fit Caps Black', url: 'https://black.detoxfitcaps.com.br/termos/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Com ressalvas sérias. O pagamento pela Monetizze dá segurança na entrega pelo site oficial. Mas o selo RA1000 da página não confere com o Reclame Aqui, a empresa e o CNPJ não aparecem, o e-mail de atendimento é pessoal e a garantia de 30 dias não é a dos termos. Se comprar, use o site oficial e o cartão de crédito.</p>
+  </div>
+
+  <h2>O selo do Reclame Aqui</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>A página diz</th><th>O Reclame Aqui mostra</th></tr></thead>
+      <tbody>
+        <tr><td>"Certificado RA1000 Reclame Aqui"</td><td>Empresa não verificada, sem reputação definida</td></tr>
+        <tr><td>-</td><td>19 reclamações no total, 7 entre abril e setembro de 2026, todas respondidas, em média em 17 dias</td></tr>
+        <tr><td>-</td><td>Principais motivos: estorno do valor pago, atraso na entrega e produto não recebido</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Algumas reclamações são de compras feitas com vendedoras que se apresentavam como "representantes oficiais" e não entregaram. Outra é de uma cliente que não emagreceu e não conseguiu a devolução prometida em 30 dias.</p>
+
+  <h2>Quem vende</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Marca</th><td>Detox Fit Caps (rótulo DPV Nutri; DBVNUTRI na Monetizze)</td></tr>
+        <tr><th>Empresa e CNPJ</th><td>Não informados</td></tr>
+        <tr><th>Atendimento</th><td>WhatsApp {p.whatsapp} e e-mail pessoal ({p.sac}) no checkout</td></tr>
+        <tr><th>Pagamento</th><td>Monetizze</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Outros pontos de atenção</h2>
+  <ul>
+    <li><strong>Doses escondidas:</strong> a "informação nutricional" mostra só os nomes dos ingredientes.</li>
+    <li><strong>Garantia que muda nos termos:</strong> veja <a href="/detox-fit-caps-black/onde-comprar/">a comparação</a>.</li>
+    <li><strong>Promessas:</strong> "reduz 80% da gordura corporal" e "97% perderam peso em poucos dias", sem fonte. Veja <a href="/detox-fit-caps-black/funciona/">o que a ciência diz</a>.</li>
+    <li><strong>Pressa:</strong> a oferta "válida só até hoje" mostra a data do dia em que você abre a página.</li>
+  </ul>
+
+  <h2>Como comprar com segurança</h2>
+  <ol>
+    <li>Compre só pelo site oficial. Não compre de "representantes" no WhatsApp ou nas redes sociais.</li>
+    <li>Pague no cartão de crédito, que permite contestar a cobrança.</li>
+    <li>Comece pelo pote avulso e decida antes de abrir se vai querer devolver.</li>
+  </ol>
+
+  <BuyBox compact produto="Detox Fit Caps Black" href={p.link} title="Detox Fit Caps Black no site oficial" text="A partir de R$ 137 o pote, com frete grátis." cta="Ver kits e preços" />
+</Article>

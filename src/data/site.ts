@@ -405,6 +405,35 @@ export const lizznutriPages = [
   { href: '/lizz-ante-nutri/e-confiavel/', title: 'Lizz Anté Nutri é confiável? Empresa, Anvisa e Reclame Aqui', short: 'É confiável?' },
 ];
 
+// Detox Fit Caps Black (Monetizze, produtor DBVNUTRI; rótulo "DPV Nutri"), conferido em 19/10/2026.
+// Sem empresa/CNPJ; e-mail do checkout é pessoal (Hotmail). "Tabela nutricional" sem quantidades.
+// Página exibe selo "RA1000" falso (Reclame Aqui: sem reputação, não verificada). Garantia de 30 dias na página,
+// mas os termos só aceitam devolução lacrada em 7 dias com frete pago pelo cliente. Links testados (REF ASD25863106).
+export const detoxfit = {
+  name: 'Detox Fit Caps Black',
+  brand: 'DPV Nutri (DBVNUTRI na Monetizze)',
+  sac: 'diogopantarotto@hotmail.com',
+  whatsapp: '(18) 99171-7774',
+  mcr: 'ASD25863106',
+  link: 'https://black.detoxfitcaps.com.br/?mcr=ASD25863106',
+  ingredients: ['Cafeína', 'Extrato de laranja moro', 'Psyllium', 'Inulina', 'Espirulina', 'Chlorella', 'Picolinato de cromo', 'L-carnitina', 'Vitaminas do complexo B'],
+  kits: [
+    { name: '1 pote', qty: '60 cápsulas · 30 dias', months: 1, total: 137, installments: '12x de R$ 13,76', plan: 'DNY265165' },
+    { name: '2 potes', qty: '120 cápsulas · 60 dias', months: 2, total: 167, installments: '12x de R$ 16,77', plan: 'DZM361372' },
+    { name: '3 potes', qty: '180 cápsulas · 90 dias', months: 3, total: 197, installments: '12x de R$ 19,78', plan: 'DJW361373' },
+    { name: '4 potes', qty: '240 cápsulas · 120 dias', months: 4, total: 257, installments: '12x de R$ 25,80', plan: 'DYJ361375' },
+    { name: '6 potes', qty: '360 cápsulas · 180 dias', months: 6, total: 377, installments: '12x de R$ 37,85', plan: 'DFX361376' },
+  ],
+};
+
+export const detoxfitPages = [
+  { href: '/detox-fit-caps-black/', title: 'Detox Fit Caps Black: ficha completa, composição e preço', short: 'Ficha completa' },
+  { href: '/detox-fit-caps-black/funciona/', title: 'Detox Fit Caps Black funciona? A promessa de reduzir 80% da gordura', short: 'Funciona?' },
+  { href: '/detox-fit-caps-black/como-tomar/', title: 'Como tomar Detox Fit Caps Black: cafeína, efeitos colaterais e quem não deve usar', short: 'Como tomar e cuidados' },
+  { href: '/detox-fit-caps-black/onde-comprar/', title: 'Onde comprar Detox Fit Caps Black original: preço e regras de reembolso', short: 'Onde comprar e reembolso' },
+  { href: '/detox-fit-caps-black/e-confiavel/', title: 'Detox Fit Caps Black é confiável? Reclame Aqui, selo RA1000 e empresa', short: 'É confiável?' },
+];
+
 export const ozenvittaPages = [
   { href: '/ozenvitta/', title: 'OzenVitta: ficha completa, composição e preço', short: 'Ficha completa' },
   { href: '/ozenvitta/funciona/', title: 'OzenVitta funciona? O que a ciência diz de cada ingrediente', short: 'Funciona?' },
@@ -472,6 +501,7 @@ export const catalog = [
   { name: 'OzenVitta', href: '/ozenvitta/', pill: 'Emagrecimento', summary: 'Fibras, L-carnitina, laranja moro e cromo em cápsulas.', pages: ozenvittaPages },
   { name: 'ReduPhine Caps', href: '/reduphine-caps/', pill: 'Emagrecimento', summary: 'Spirulina, psyllium, quitosana e cromo, com opção de combo com gotas.', pages: reduphinePages },
   { name: 'Inibe One', href: '/inibe-one/', pill: 'Emagrecimento', summary: 'Psyllium, quitosana, espirulina, chia, ágar e cromo em cápsulas.', pages: inibeonePages },
+  { name: 'Detox Fit Caps Black', href: '/detox-fit-caps-black/', pill: 'Emagrecimento', summary: 'Fibras, laranja moro, cafeína, carnitina e cromo em cápsulas, sem doses no rótulo.', pages: detoxfitPages },
   { name: 'DTX Black', href: '/dtx-black/', pill: 'Emagrecimento', summary: 'Psyllium, cafeína, cromo, spirulina, inulina e linhaça em cápsulas.', pages: dtxblackPages },
   { name: 'Mounjax', href: '/mounjax/', pill: 'Gotas', summary: 'Gotas da Ozenpharma com café verde, cúrcuma, cromo e vitaminas. Não é Mounjaro.', pages: mounjaxPages },
   { name: 'TG30 Crisfit', href: '/tg30/', pill: 'Gotas', summary: 'Café verde, cúrcuma e vitaminas D3 e B12 em gotas.', pages: tg30Pages },

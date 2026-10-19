@@ -1,0 +1,63 @@
+---
+import Article from '../../../layouts/Article.astro';
+import KitCards from '../../../components/KitCards.astro';
+import { detoxfit as p, detoxfitPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Onde comprar Detox Fit Caps Black original?', a: 'No site oficial, com pagamento pela Monetizze. A marca diz que não autoriza venda em OLX, Mercado Livre e sites parecidos. No Reclame Aqui há reclamações de pessoas que compraram com "representantes" e não receberam.' },
+  { q: 'O Detox Fit Caps Black tem garantia de 30 dias?', a: 'A página diz que sim, mas os termos de uso dizem outra coisa: o reembolso só vale com o pote lacrado, em até 7 dias após o recebimento, e o cliente paga o frete da devolução.' },
+  { q: 'Qual o prazo de entrega do Detox Fit Caps Black?', a: 'O produtor informa envio pelos Correios em dias úteis e entrega de 3 a 12 dias úteis.' },
+];
+---
+<Article
+  ogImage="/img/detox-fit-caps-black/og-detox-fit-caps-black.jpg"
+  title="Onde comprar Detox Fit Caps Black original: preço e regras de reembolso"
+  seoTitle="Onde comprar Detox Fit Caps Black original e preço"
+  description="Onde comprar o Detox Fit Caps Black original, preço de cada kit, quanto sai por mês e o que os termos dizem de verdade sobre a garantia e o reembolso."
+  kicker="Compra segura"
+  lead="O Detox Fit Caps Black é vendido no site oficial, com pagamento pela Monetizze. Os preços são baixos, mas a garantia anunciada não é a que vale nos termos."
+  crumbs={[{ name: 'Detox Fit Caps Black', href: '/detox-fit-caps-black/' }, { name: 'Onde comprar', href: '/detox-fit-caps-black/onde-comprar/' }]}
+  faq={faq}
+  related={detoxfitPages}
+  sources={[
+    { label: 'Página oficial do Detox Fit Caps Black e checkouts da Monetizze (consultados em 19/10/2026)', url: 'https://black.detoxfitcaps.com.br/' },
+    { label: 'Termos de uso do Detox Fit Caps Black', url: 'https://black.detoxfitcaps.com.br/termos/' },
+    { label: 'Código de Defesa do Consumidor, art. 49 (direito de arrependimento)', url: 'https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Compre só pelo site oficial: R$ 137 por 1 pote, R$ 197 por 3 e R$ 377 por 6, com frete grátis. A página promete 30 dias de garantia, mas os termos só aceitam devolução do pote lacrado em 7 dias. Na prática, se abrir e não gostar, é difícil ter o dinheiro de volta.</p>
+  </div>
+
+  <h2>Escolha o kit</h2>
+  <KitCards kits={p.kits} mcr={p.mcr} produto="Detox Fit Caps Black" />
+
+  <h2>Quanto sai por mês</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Kit</th><th>Total</th><th>Por mês</th></tr></thead>
+      <tbody>
+        <tr><td>1 pote</td><td>R$ 137</td><td>R$ 137</td></tr>
+        <tr><td>2 potes</td><td>R$ 167</td><td>R$ 83,50</td></tr>
+        <tr><td>3 potes</td><td>R$ 197</td><td>R$ 65,67</td></tr>
+        <tr><td>4 potes</td><td>R$ 257</td><td>R$ 64,25</td></tr>
+        <tr><td>6 potes</td><td>R$ 377</td><td>R$ 62,83</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Garantia: o que a página diz e o que vale</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Onde</th><th>O que diz</th></tr></thead>
+      <tbody>
+        <tr><td>Página de vendas</td><td>"Caso você utilize durante 30 dias e não tenha resultados, devolvemos 100% do seu dinheiro"</td></tr>
+        <tr><td>Termos de uso</td><td>Reembolso só "no caso de não uso do produto, estando lacrado", devolvido em até 7 dias após o recebimento, com frete pago pelo cliente</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Na dúvida, guarde prints da página de vendas no dia da compra e faça qualquer pedido por escrito. Nos primeiros 7 dias, vale o direito de arrependimento do Código de Defesa do Consumidor.</p>
+
+  <h2>Entrega e pagamento</h2>
+  <p>Envio pelos Correios, com entrega de 3 a 12 dias úteis, segundo o produtor. Cartão em até 12x (com juros de 2,99% ao mês), Pix e boleto, pela Monetizze. Prefira o cartão, que facilita contestar a cobrança.</p>
+</Article>
