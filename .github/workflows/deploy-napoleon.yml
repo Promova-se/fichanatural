@@ -29,6 +29,8 @@ jobs:
 
       - uses: actions/checkout@v4
         if: steps.check.outputs.ready == 'true'
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         if: steps.check.outputs.ready == 'true'
@@ -52,3 +54,31 @@ jobs:
           protocol: ftp
           local-dir: ./dist/
           server-dir: ./
+
+      # Avisa Bing (e outros buscadores do IndexNow) sobre as páginas novas ou alteradas.
+      # Publicação manual ou mudança em dados/layout/componentes: envia todas as páginas do sitemap.
+      - name: Avisar buscadores (IndexNow)
+        if: steps.check.outputs.ready == 'true'
+        continue-on-error: true
+        env:
+          BEFORE: ${{ github.event.before }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          KEY=d0042a93a526af604024acae1f9e49d4
+          SITE=https://fichanatural.com.br
+          grep -o '<loc>[^<]*</loc>' dist/sitemap-0.xml | sed 's/<[^>]*>//g' > todas.txt
+          if [ "$EVENT" != "push" ] || [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ] \
+             || git diff --name-only "$BEFORE" HEAD | grep -qE '^src/(data|layouts|components)/'; then
+            cp todas.txt urls.txt
+          else
+            git diff --name-only "$BEFORE" HEAD | grep -E '^src/pages/.*\.astro$' \
+              | sed -E 's#^src/pages/##; s#(^|/)index\.astro$##; s#\.astro$##' \
+              | while read -r path; do u="$SITE/$path"; [ -n "$path" ] && u="$u/"; [ -z "$path" ] && u="$SITE/"; grep -qxF "$u" todas.txt && echo "$u"; done | sort -u > urls.txt
+          fi
+          echo "Páginas a avisar: $(wc -l < urls.txt)"
+          [ -s urls.txt ] || exit 0
+          jq -Rn --arg key "$KEY" --rawfile u urls.txt \
+            '{host:"fichanatural.com.br", key:$key, keyLocation:("https://fichanatural.com.br/"+$key+".txt"), urlList:($u|split("\n")|map(select(length>0)))}' > body.json
+          curl -sS -o resp.txt -w "IndexNow HTTP %{http_code}\n" -H 'Content-Type: application/json; charset=utf-8' \
+            --data @body.json https://api.indexnow.org/indexnow
+          cat resp.txt
