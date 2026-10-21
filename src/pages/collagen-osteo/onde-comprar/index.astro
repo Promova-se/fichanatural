@@ -1,0 +1,43 @@
+---
+import Article from '../../../layouts/Article.astro';
+import KitCards from '../../../components/KitCards.astro';
+import { collagenosteo as p, collagenosteoPages, collagenvitta } from '../../../data/site';
+
+const faq = [
+  { q: 'Onde comprar Collagen Osteo original?', a: 'No site oficial, com pagamento pela Braip. Ele também vem de brinde nos kits de 2 potes ou mais do Collagen Vitta, da mesma empresa.' },
+  { q: 'Collagen Osteo tem garantia?', a: 'A página fala em 90 dias no texto principal e em 30 dias nas perguntas frequentes. O cadastro do produto na Braip indica 7 dias. Para não ter discussão, peça o reembolso dentro de 7 dias.' },
+  { q: 'Quanto tempo demora a entrega do Collagen Osteo?', a: 'Até 20 dias úteis pelo PAC, que é o frete grátis. A empresa diz que a maioria chega antes de 15 dias.' },
+];
+---
+<Article
+  ogImage="/img/collagen-osteo/og-collagen-osteo.jpg"
+  title="Onde comprar Collagen Osteo: preço, kits e garantia"
+  seoTitle="Onde comprar Collagen Osteo e preço"
+  description="Onde comprar Collagen Osteo original, preço de cada kit, quanto sai por frasco, prazo de entrega e as três garantias diferentes anunciadas."
+  kicker="Compra segura"
+  lead="O Collagen Osteo é vendido pelo site oficial, com pagamento pela Braip, em kits que sempre incluem 1 frasco grátis."
+  crumbs={[{ name: 'Collagen Osteo', href: '/collagen-osteo/' }, { name: 'Onde comprar', href: '/collagen-osteo/onde-comprar/' }]}
+  faq={faq}
+  related={collagenosteoPages}
+  sources={[
+    { label: 'Página oficial do Collagen Osteo e checkouts da Braip (consultados em 21/10/2026)', url: 'https://collagenosteo.com.br/braip-2/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>No site oficial: R$ 157 por 2 frascos, R$ 197 por 4 e R$ 297 por 6, que sai a R$ 49,50 o frasco. Frete grátis pelo PAC, em até 20 dias úteis. A garantia aparece como 90, 30 ou 7 dias, conforme onde se lê: conte com 7.</p>
+  </div>
+
+  <h2>Escolha o kit</h2>
+  <KitCards kits={p.kits} unit="frasco" produto="Collagen Osteo" />
+
+  <h2>Garantia: 90, 30 ou 7 dias?</h2>
+  <ol>
+    <li><strong>Texto da página:</strong> 90 dias para experimentar e pedir o dinheiro de volta por e-mail.</li>
+    <li><strong>Perguntas frequentes da mesma página:</strong> 30 dias.</li>
+    <li><strong>Cadastro na Braip:</strong> 7 dias.</li>
+  </ol>
+  <p>Pelo Código de Defesa do Consumidor, compras pela internet podem ser canceladas em até 7 dias após o recebimento. Para pedir: {collagenvitta.sac} ou {collagenvitta.phone}, sempre por escrito e com o número do pedido.</p>
+
+  <h2>Entrega e pagamento</h2>
+  <p>O produto só é enviado depois da confirmação do pagamento. Frete grátis pelo PAC, em até 20 dias úteis. Pagamento pela Braip, com cartão (até 12x, com juros de 3,49% ao mês), Pix e boleto. No Reclame Aqui há relatos de atraso na postagem de produtos da mesma empresa: acompanhe o rastreio.</p>
+</Article>

@@ -1,0 +1,63 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { collagenosteo as p, collagenosteoPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Collagen Osteo funciona para dor no joelho?', a: 'Pode ajudar um pouco, se as doses forem as dos estudos. Colágeno tipo II não desnaturado (40 mg por dia) e curcumina (cerca de 1 g por dia) mostraram redução modesta da dor de artrose no joelho. A página não informa as doses, então não dá para saber se o produto chega lá.' },
+  { q: 'Collagen Osteo cura artrose?', a: 'Não. Nenhum suplemento cura ou regenera a cartilagem desgastada. Os estudos com esses ingredientes mostram, no máximo, alívio parcial de sintomas.' },
+  { q: 'Collagen Osteo previne osteoporose?', a: 'Não há estudo com o produto. A vitamina D ajuda os ossos de quem tem deficiência, mas prevenção e tratamento de osteoporose dependem de cálcio, vitamina D, exercício e, muitas vezes, remédios indicados pelo médico.' },
+  { q: 'As gotas embaixo da língua fazem efeito em minutos?', a: 'Não há evidência disso. Colágeno, curcumina e vitaminas são absorvidos principalmente pelo intestino. Nos estudos, os efeitos sobre a dor aparecem depois de semanas a meses.' },
+];
+---
+<Article
+  ogImage="/img/collagen-osteo/og-collagen-osteo.jpg"
+  title="Collagen Osteo funciona? Osteoporose, artrose e o que a ciência diz"
+  seoTitle="Collagen Osteo funciona? O que esperar"
+  description="Collagen Osteo funciona? O que os estudos mostram sobre colágeno tipo II, curcumina e vitaminas D3 e K2 para artrose e ossos, e o que é exagero na página."
+  kicker="Funciona?"
+  lead="Os ingredientes do Collagen Osteo têm algum estudo para dor de artrose, em doses que a página não informa. Tratar osteoporose, agir como anti-inflamatório e aliviar a dor em minutos são promessas do fabricante sem base."
+  crumbs={[{ name: 'Collagen Osteo', href: '/collagen-osteo/' }, { name: 'Funciona?', href: '/collagen-osteo/funciona/' }]}
+  faq={faq}
+  related={collagenosteoPages}
+  sources={[
+    { label: 'Página oficial do Collagen Osteo (consultada em 21/10/2026)', url: 'https://collagenosteo.com.br/braip-2/' },
+    { label: 'Lugo JP et al. Undenatured type II collagen in knee osteoarthritis. Nutr J, 2016', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4731911/' },
+    { label: 'Daily JW et al. Curcuma extracts for joint arthritis: systematic review and meta-analysis. J Med Food, 2016', url: 'https://pubmed.ncbi.nlm.nih.gov/27533649/' },
+    { label: 'NIH Office of Dietary Supplements: Vitamin D, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Talvez um pouco para dor de artrose, se as doses forem as dos estudos, o que a página não informa. Não trata osteoporose, não regenera cartilagem e não alivia dor em minutos. Quem tem osteoporose ou artrose deve seguir o tratamento médico.</p>
+  </div>
+
+  <h2>O que se sabe de cada ingrediente</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Ingrediente</th><th>O que os estudos mostram</th></tr></thead>
+      <tbody>
+        <tr><td>Colágeno tipo II não desnaturado</td><td>Com 40 mg por dia, em cápsula, melhora modesta da dor e da rigidez de artrose no joelho em 6 meses, num estudo com cerca de 190 pessoas</td></tr>
+        <tr><td>Curcumina</td><td>Com cerca de 1 g por dia de extrato, alívio da dor de artrose parecido com o de anti-inflamatórios em estudos pequenos e de qualidade limitada</td></tr>
+        <tr><td>Vitamina D3</td><td>Ajuda a manter os ossos em quem tem deficiência. Sozinha, não trata osteoporose</td></tr>
+        <tr><td>Vitamina K2</td><td>Estudos com ossos têm resultados mistos</td></tr>
+        <tr><td>Magnésio</td><td>Importante para os ossos, mas 1 ml de gotas não deve ter quantidade relevante</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Todos esses estudos usaram cápsulas ou comprimidos, com doses conhecidas. Não há estudo com o Collagen Osteo nem com essa combinação em gotas.</p>
+
+  <h2>O que a página promete e o que dá para dizer</h2>
+  <ul>
+    <li><strong>"Tratamento e prevenção da osteoporose":</strong> suplemento não trata osteoporose. Osteoporose sem tratamento aumenta o risco de fraturas.</li>
+    <li><strong>"Atua como anti-inflamatório":</strong> a curcumina tem ação anti-inflamatória em laboratório, mas isso não faz do produto um anti-inflamatório, e a dose não é informada.</li>
+    <li><strong>"Efeitos surpreendentes em poucos minutos":</strong> sem base. Nos estudos, o alívio aparece depois de semanas ou meses.</li>
+    <li><strong>"Auxilia na regeneração da cartilagem danificada":</strong> nenhum suplemento regenera cartilagem.</li>
+    <li><strong>Profissionais recomendariam no lugar de remédios:</strong> a página não cita nenhum profissional nem estudo.</li>
+    <li><strong>Percentuais de melhora:</strong> a página mostra contadores de "redução da dor" e "melhora na flexibilidade" sem fonte.</li>
+  </ul>
+
+  <h2>Para quem pode fazer sentido</h2>
+  <p>Para quem já tem diagnóstico e acompanhamento médico e quer experimentar um complemento, sem trocar nenhum remédio. Se a ideia é colágeno tipo II, o <a href="/artic-protect/funciona/">Artic Protect</a> informa a dose dos estudos.</p>
+
+  <BuyBox compact produto="Collagen Osteo" href={p.link} title="Collagen Osteo no site oficial" text="2 frascos por R$ 157 (1 + 1 grátis)." cta="Ver kits e preços" />
+</Article>

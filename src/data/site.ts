@@ -561,6 +561,31 @@ export const collagenvittaPages = [
   { href: '/collagen-vitta/e-confiavel/', title: 'Collagen Vitta é confiável? Natturabio e Reclame Aqui', short: 'É confiável?' },
 ];
 
+// Collagen Osteo (Braip, proq21q3), conferido na página de vendas e nos checkouts em 21/10/2026. Publicado por decisão do dono do site
+// (não passa no critério 2: promete tratar e prevenir osteoporose e agir como anti-inflamatório). As páginas mostram as promessas como do fabricante.
+// Mesma empresa do Collagen Vitta (Naturivale na Braip, Natturabio na página). Gotas sublinguais, 12 gotas (1 ml) por dia, sabor menta.
+// Garantia: 90 dias no texto da página, 30 dias no FAQ, 7 dias no cadastro da Braip. Cada kit leva 1 frasco grátis.
+// Links oficiais: ev.braip.com/ref?pl={plano}&ck=chejz7wl&af=afilx3ye0d. Os 3 mostram "REF.: afilx3ye0d".
+const collagenOsteoRef = (plan: string) => `https://ev.braip.com/ref?pl=${plan}&ck=chejz7wl&af=afilx3ye0d`;
+export const collagenosteo = {
+  name: 'Collagen Osteo',
+  link: 'https://ev.braip.com/ref?pv=proq21q3&af=afilx3ye0d',
+  ingredients: ['Colágeno tipo II não desnaturado', 'Vitamina K2', 'Vitamina D3', 'Magnésio', 'Curcumina'],
+  kits: [
+    { name: '1 + 1 grátis', qty: '2 frascos', months: 2, total: 157, installments: '12x de R$ 16,24', plan: collagenOsteoRef('pla66z46') },
+    { name: '3 + 1 grátis', qty: '4 frascos', months: 4, total: 197, installments: '12x de R$ 20,37', plan: collagenOsteoRef('plam0lpg') },
+    { name: '5 + 1 grátis', qty: '6 frascos', months: 6, total: 297, installments: '12x de R$ 30,72', plan: collagenOsteoRef('pla8mgz1') },
+  ],
+};
+
+export const collagenosteoPages = [
+  { href: '/collagen-osteo/', title: 'Collagen Osteo: ficha completa, composição e preço', short: 'Ficha completa' },
+  { href: '/collagen-osteo/funciona/', title: 'Collagen Osteo funciona? Osteoporose, artrose e o que a ciência diz', short: 'Funciona?' },
+  { href: '/collagen-osteo/como-tomar/', title: 'Como tomar Collagen Osteo: gotas, cuidados e interações', short: 'Como tomar e cuidados' },
+  { href: '/collagen-osteo/onde-comprar/', title: 'Onde comprar Collagen Osteo: preço, kits e garantia', short: 'Onde comprar' },
+  { href: '/collagen-osteo/e-confiavel/', title: 'Collagen Osteo é confiável? Empresa, Anvisa e Reclame Aqui', short: 'É confiável?' },
+];
+
 export const catalog = [
   { name: 'OzenVitta', href: '/ozenvitta/', pill: 'Emagrecimento', summary: 'Fibras, L-carnitina, laranja moro e cromo em cápsulas.', pages: ozenvittaPages },
   { name: 'ReduPhine Caps', href: '/reduphine-caps/', pill: 'Emagrecimento', summary: 'Spirulina, psyllium, quitosana e cromo, com opção de combo com gotas.', pages: reduphinePages },
@@ -576,6 +601,7 @@ export const catalog = [
   { name: 'Lizz Anté Nutri', href: '/lizz-ante-nutri/', pill: 'Cabelo, pele e unhas', summary: 'Cápsulas da Lizz Anté com biotina, colágeno, silício, zinco e mais 5 ativos.', pages: lizznutriPages },
   { name: 'Kit S.O.S Crescimento', href: '/kit-sos-crescimento/', pill: 'Cabelo', summary: 'Shampoo, máscara e tônico da Lizz Anté para queda e crescimento capilar.', pages: kitsosPages },
   { name: 'Hot Men Caps', href: '/hot-men-caps/', pill: 'Saúde masculina', summary: 'Cápsulas vendidas para desempenho sexual masculino, sem ingredientes na página oficial.', pages: hotmenPages },
+  { name: 'Collagen Osteo', href: '/collagen-osteo/', pill: 'Articulações', summary: 'Gotas da Natturabio com colágeno tipo II, curcumina, vitaminas D3 e K2 e magnésio, sem doses na página.', pages: collagenosteoPages },
   { name: 'Collagen Vitta', href: '/collagen-vitta/', pill: 'Pele', summary: 'Colágeno Verisol em pó com ácido hialurônico, biotina e vitaminas, da Natturabio, sem doses na página.', pages: collagenvittaPages },
   { name: 'Vitta Resveratrol', href: '/vitta-resveratrol/', pill: 'Pele', summary: 'Colágeno, ácido hialurônico, resveratrol e vitaminas.', pages: resveratrolPages },
 ];

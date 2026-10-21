@@ -1,0 +1,60 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { collagenosteo as p, collagenosteoPages, collagenvitta as v } from '../../../data/site';
+
+const faq = [
+  { q: 'Collagen Osteo é confiável?', a: 'Com ressalvas sérias. A distribuidora tem CNPJ e o pagamento passa pela Braip. Mas a página promete tratar osteoporose e artrose, o que suplemento não pode fazer, não informa doses e anuncia três prazos de garantia diferentes.' },
+  { q: 'Collagen Osteo é golpe?', a: 'Não há sinais de golpe pelo site oficial: empresa identificada, pagamento pela Braip e rastreio. O problema está nas promessas, não na entrega.' },
+  { q: 'Collagen Osteo é aprovado pela Anvisa?', a: 'A página diz que é isento de registro por ser suplemento alimentar. Isso é comum, mas significa que a Anvisa não avaliou se funciona. E suplementos não podem prometer tratar doenças, como a página faz.' },
+];
+---
+<Article
+  ogImage="/img/collagen-osteo/og-collagen-osteo.jpg"
+  title="Collagen Osteo é confiável? Empresa, Anvisa e Reclame Aqui"
+  seoTitle="Collagen Osteo é confiável? Reclame Aqui"
+  description="Collagen Osteo é confiável ou golpe? Quem vende, os CNPJs, a questão da Anvisa, as promessas de tratar doenças e o que dizem as reclamações."
+  kicker="Reputação"
+  lead="O Collagen Osteo é da Natturabio, a mesma empresa do Collagen Vitta e do Vitta Resveratrol. A empresa é identificada, mas a página faz promessas de remédio e as reclamações ficam sem resposta."
+  crumbs={[{ name: 'Collagen Osteo', href: '/collagen-osteo/' }, { name: 'É confiável?', href: '/collagen-osteo/e-confiavel/' }]}
+  faq={faq}
+  related={collagenosteoPages}
+  sources={[
+    { label: 'Página oficial do Collagen Osteo (consultada em 21/10/2026)', url: 'https://collagenosteo.com.br/braip-2/' },
+    { label: 'Reclame Aqui: Natturabio (consultado em 21/10/2026)', url: 'https://www.reclameaqui.com.br/empresa/nattura-bio/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Com ressalvas sérias. A compra pelo site oficial é segura: a distribuidora tem CNPJ e o pagamento passa pela Braip. Mas a página promete tratar osteoporose e artrose, não informa doses, mostra três garantias diferentes, e a empresa não responde as reclamações no Reclame Aqui.</p>
+  </div>
+
+  <h2>Quem vende</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Distribuidora (na página)</th><td>{v.distributor}, CNPJ {v.distributorCnpj}</td></tr>
+        <tr><th>Produtor (na Braip)</th><td>{v.producer}, CNPJ {v.producerCnpj}</td></tr>
+        <tr><th>Atendimento</th><td>{v.sac} e {v.phone}</td></tr>
+        <tr><th>Reclame Aqui</th><td>Natturabio sem nota, 1 reclamação de abril a setembro de 2026, nenhuma respondida (consulta em 21/10/2026)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Pontos de atenção</h2>
+  <ul>
+    <li><strong>Promessas de remédio:</strong> "tratamento e prevenção da osteoporose", "anti-inflamatório", "tratamento natural para artrose". Veja <a href="/collagen-osteo/funciona/">o que a ciência diz</a>.</li>
+    <li><strong>Depoimento perigoso:</strong> a página mostra uma cliente dizendo que deixou de ir ao hospital tomar injeção para dor na coluna depois do produto. Não abandone tratamento por causa de um suplemento.</li>
+    <li><strong>Sem doses:</strong> nenhuma quantidade informada, nem o volume do frasco.</li>
+    <li><strong>Garantias diferentes:</strong> 90, 30 ou 7 dias. Veja <a href="/collagen-osteo/onde-comprar/">os detalhes</a>.</li>
+    <li><strong>Números sem fonte:</strong> contadores de "redução da dor" e "satisfação" sem estudo.</li>
+  </ul>
+
+  <h2>Como comprar com segurança</h2>
+  <ol>
+    <li>Compre só pelo site oficial, com pagamento pela Braip.</li>
+    <li>Pague no cartão de crédito, que permite contestar a cobrança.</li>
+    <li>Não troque remédios pelo suplemento sem falar com o médico.</li>
+  </ol>
+
+  <BuyBox compact produto="Collagen Osteo" href={p.link} title="Collagen Osteo no site oficial" text="2 frascos por R$ 157 (1 + 1 grátis)." cta="Ver kits e preços" />
+</Article>

@@ -1,0 +1,95 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import { collagenosteo as p, collagenosteoPages, collagenvitta } from '../../data/site';
+
+const faq = [
+  { q: 'O que é o Collagen Osteo?', a: 'É um suplemento em gotas, sabor menta, vendido pela Natturabio, a mesma empresa do Collagen Vitta. A página diz que tem colágeno tipo II não desnaturado, vitaminas K2 e D3, magnésio e curcumina. A orientação é pingar 12 gotas (1 ml) na boca uma vez por dia.' },
+  { q: 'Quanto custa o Collagen Osteo?', a: 'Nos checkouts de 21/10/2026: 2 frascos (1 + 1 grátis) por R$ 157, 4 frascos (3 + 1) por R$ 197 e 6 frascos (5 + 1) por R$ 297. No cartão parcelado há juros de 3,49% ao mês.' },
+  { q: 'Collagen Osteo trata osteoporose?', a: 'Não. A página do fabricante promete "tratamento e prevenção da osteoporose", mas suplemento alimentar não pode tratar doença, e não há estudo com o produto. Osteoporose se trata com acompanhamento médico.' },
+  { q: 'Qual a dose de cada ingrediente do Collagen Osteo?', a: 'A página não informa a dose de nenhum ingrediente, nem o volume do frasco. Só diz que a porção diária é de 1 ml.' },
+];
+---
+<Article
+  ogImage="/img/collagen-osteo/og-collagen-osteo.jpg"
+  title="Collagen Osteo: ficha completa, composição, preço e o que esperar"
+  seoTitle="Collagen Osteo: composição, preço e se vale"
+  description="Ficha do Collagen Osteo: o que as gotas têm, o que a página não informa, as promessas sobre osteoporose e artrose, preço dos kits e garantia."
+  kicker="Ficha de produto"
+  lead="O Collagen Osteo é vendido em gotas para ossos e articulações. A página do fabricante promete tratar osteoporose e aliviar a dor em minutos, o que nenhum suplemento pode prometer. Reunimos o que a fórmula tem e o que dá para esperar de verdade."
+  crumbs={[{ name: 'Collagen Osteo', href: '/collagen-osteo/' }]}
+  faq={faq}
+  related={collagenosteoPages}
+  sources={[
+    { label: 'Página oficial do Collagen Osteo e checkouts da Braip (consultados em 21/10/2026)', url: 'https://collagenosteo.com.br/braip-2/' },
+    { label: 'Reclame Aqui: Natturabio (consultado em 21/10/2026)', url: 'https://www.reclameaqui.com.br/empresa/nattura-bio/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Gotas com colágeno tipo II, curcumina, vitaminas D3 e K2 e magnésio, 1 ml por dia, sem dose de nenhum ingrediente. As promessas de tratar e prevenir osteoporose, agir como anti-inflamatório e aliviar a dor "em poucos minutos" são do fabricante e não têm estudo com o produto. Custa R$ 157 por 2 frascos. Quem tem dor nas articulações ou osteoporose precisa de avaliação médica, não de um suplemento no lugar do remédio.</p>
+  </div>
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>{p.name}, sabor menta</td></tr>
+        <tr><th>Distribuidora</th><td>{collagenvitta.distributor}, CNPJ {collagenvitta.distributorCnpj}</td></tr>
+        <tr><th>Produtor na Braip</th><td>{collagenvitta.producer}, CNPJ {collagenvitta.producerCnpj}</td></tr>
+        <tr><th>Tipo</th><td>Suplemento alimentar em gotas</td></tr>
+        <tr><th>Dose</th><td>12 gotas (1 ml) por dia, na boca, sem diluir, de preferência de manhã</td></tr>
+        <tr><th>Volume do frasco</th><td>Não informado na página</td></tr>
+        <tr><th>Atendimento</th><td>{collagenvitta.sac} e {collagenvitta.phone}</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Composição</h2>
+  <p>A página lista {p.ingredients.join(', ').replace(/, ([^,]*)$/, ' e $1')}. Não há tabela nutricional nem quantidade de nenhum ingrediente. Como a porção é de só 1 ml, a quantidade de magnésio, em especial, deve ser muito pequena: as doses usuais desse mineral são de centenas de miligramas.</p>
+  <p>O ingrediente com melhor estudo para articulações é o colágeno tipo II não desnaturado, com 40 mg por dia em cápsula. Não dá para saber quanto há no Collagen Osteo. O que se sabe de cada ingrediente está em <a href="/collagen-osteo/funciona/">Collagen Osteo funciona?</a></p>
+
+  <h2>O que a página promete</h2>
+  <p>As frases abaixo são do fabricante. Suplementos alimentares não podem prometer tratar doenças.</p>
+  <ul>
+    <li>"Tratamento e prevenção da osteoporose"</li>
+    <li>"Atua como anti-inflamatório nas articulações e na cartilagem"</li>
+    <li>"Efeitos surpreendentes em poucos minutos", pela absorção embaixo da língua</li>
+    <li>Profissionais de saúde recomendariam o produto no lugar de remédios</li>
+    <li>Na descrição da Braip: "tratamento natural para artrose" e ajuda em "doenças como artrite"</li>
+  </ul>
+
+  <h2>Preço e kits</h2>
+  <p>Valores conferidos nos checkouts em 21/10/2026. Todos os kits incluem 1 frasco grátis. No cartão parcelado, os juros são de 3,49% ao mês.</p>
+  <KitCards kits={p.kits} unit="frasco" produto="Collagen Osteo" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Ingredientes usados em produtos para articulações</li>
+        <li>Distribuidora com CNPJ e pagamento pela Braip</li>
+        <li>Fácil de tomar, em gotas</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Promete tratar osteoporose, artrose e inflamação</li>
+        <li>Não informa doses nem o volume do frasco</li>
+        <li>Garantia de 90, 30 ou 7 dias, conforme onde se lê</li>
+        <li>Curcumina e vitamina K2 pedem cuidado de quem toma anticoagulante</li>
+        <li>Reclamações sem resposta da empresa no Reclame Aqui</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>Os ingredientes têm alguma lógica para articulações, mas a página vai muito além do que um suplemento pode prometer, e não informa as doses que permitiriam comparar com os estudos. Se você quer um colágeno tipo II com dose conhecida, o <a href="/artic-protect/">Artic Protect</a> informa 40 mg por cápsula, a dose dos estudos. Se tem osteoporose, artrose ou dor que não passa, procure um médico: o suplemento pode, no máximo, ser um complemento.</p>
+  </div>
+  <p>Antes de comprar, veja <a href="/collagen-osteo/como-tomar/">os cuidados de uso</a> e <a href="/collagen-osteo/onde-comprar/">as regras de garantia</a>.</p>
+
+  <BuyBox compact produto="Collagen Osteo" href={p.link} title="Collagen Osteo no site oficial" text="2 frascos por R$ 157 (1 + 1 grátis), ou 6 frascos por R$ 297." cta="Ver kits e preços" />
+</Article>

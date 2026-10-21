@@ -1,0 +1,53 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { collagenosteo as p, collagenosteoPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Como tomar Collagen Osteo?', a: 'A orientação da página é pingar 12 gotas (1 ml) direto na boca, sem diluir, uma vez por dia, de preferência pela manhã.' },
+  { q: 'Collagen Osteo substitui o remédio para osteoporose ou artrose?', a: 'Não. Não pare nem troque nenhum remédio por conta própria. Converse com seu médico antes de usar o suplemento junto com o tratamento.' },
+  { q: 'Quem toma anticoagulante pode usar Collagen Osteo?', a: 'Só com orientação médica. A vitamina K2 pode reduzir o efeito da varfarina, e a curcumina pode aumentar o risco de sangramento junto com anticoagulantes e antiagregantes.' },
+  { q: 'Por quanto tempo tomar Collagen Osteo?', a: 'A empresa fala em no mínimo 6 meses. Nos estudos com colágeno tipo II e curcumina, a avaliação foi feita entre 2 e 6 meses. Se não houver melhora nesse prazo, não vale insistir.' },
+];
+---
+<Article
+  ogImage="/img/collagen-osteo/og-collagen-osteo.jpg"
+  title="Como tomar Collagen Osteo: gotas, cuidados e interações"
+  seoTitle="Como tomar Collagen Osteo e cuidados"
+  description="Como tomar Collagen Osteo: dose em gotas, horário, tempo de uso, interações com anticoagulantes e quem não deve usar sem orientação médica."
+  kicker="Modo de uso"
+  lead="São 12 gotas por dia, direto na boca. Os cuidados mais importantes são não trocar remédios pelo suplemento e ter atenção se você toma anticoagulante."
+  crumbs={[{ name: 'Collagen Osteo', href: '/collagen-osteo/' }, { name: 'Como tomar', href: '/collagen-osteo/como-tomar/' }]}
+  faq={faq}
+  related={collagenosteoPages}
+  sources={[
+    { label: 'Página oficial do Collagen Osteo (consultada em 21/10/2026)', url: 'https://collagenosteo.com.br/braip-2/' },
+    { label: 'NIH Office of Dietary Supplements: Vitamin K, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/VitaminK-HealthProfessional/' },
+    { label: 'NCCIH: Turmeric', url: 'https://www.nccih.nih.gov/health/turmeric' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>12 gotas (1 ml) por dia, direto na boca, de preferência de manhã. Não substitui remédio para osteoporose, artrose ou dor. Quem toma anticoagulante, está grávida, amamentando ou tem problema de vesícula deve falar com o médico antes.</p>
+  </div>
+
+  <h2>Dose</h2>
+  <ol>
+    <li>Pingue 12 gotas (1 ml) na boca, sem diluir.</li>
+    <li>Tome uma vez por dia, de preferência pela manhã.</li>
+    <li>Não aumente a dose: a página não informa a quantidade de vitamina D e K2, que podem se somar a outros suplementos.</li>
+  </ol>
+
+  <h2>Quem não deve tomar sem orientação</h2>
+  <ul>
+    <li><strong>Quem toma anticoagulante ou antiagregante</strong> (varfarina, rivaroxabana, AAS e outros): vitamina K2 e curcumina podem interferir.</li>
+    <li><strong>Quem tem cálculo ou problema de vesícula:</strong> a cúrcuma pode piorar.</li>
+    <li><strong>Gestantes e lactantes.</strong></li>
+    <li><strong>Quem já toma vitamina D:</strong> as doses se somam.</li>
+    <li><strong>Quem trata osteoporose ou artrose:</strong> mantenha o tratamento e avise o médico.</li>
+  </ul>
+
+  <h2>Quando procurar um médico</h2>
+  <p>Dor articular com inchaço, vermelhidão, febre, travamento da articulação, ou dor que não melhora em algumas semanas precisa de avaliação. O mesmo vale para quem teve fratura por queda leve, um sinal possível de osteoporose.</p>
+
+  <BuyBox compact produto="Collagen Osteo" href={p.link} title="Collagen Osteo no site oficial" text="2 frascos por R$ 157 (1 + 1 grátis)." cta="Ver kits e preços" />
+</Article>
