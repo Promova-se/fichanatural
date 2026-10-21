@@ -1,0 +1,65 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { colageno as p, colagenoPages } from '../../../data/site';
+
+const faq = [
+  { q: "Como tomar o Colágeno Nature's Prime?", a: 'Misture 1 colher dosadora (5 g) em um copo de água ou suco e tome uma vez por dia. O pó já é sabor abacaxi com hortelã.' },
+  { q: 'Qual o melhor horário para tomar colágeno?', a: 'Não há horário melhor comprovado. O que importa é tomar todos os dias. Escolha o momento mais fácil de lembrar, como no café da manhã.' },
+  { q: 'Posso tomar colágeno junto com outros suplementos?', a: 'Em geral, sim. Só confira o zinco: esta dose tem 7 mg. Se você toma outro suplemento com zinco, some as quantidades: o limite seguro para adultos é de 40 mg por dia.' },
+  { q: 'Colágeno engorda?', a: 'Não. Cada dose tem 17 kcal e 2 g de açúcares, o equivalente a meia colher de chá de açúcar.' },
+];
+---
+<Article
+  ogImage="/img/colageno-natures-prime/og-colageno-natures-prime.jpg"
+  title="Como tomar colágeno hidrolisado: dose, horário, tempo de uso e cuidados"
+  seoTitle="Como tomar o Colágeno Nature's Prime"
+  description="Como tomar o Colágeno Nature's Prime: dose diária, melhor horário, quanto tempo usar, quem não deve tomar e cuidados com zinco e outros suplementos."
+  kicker="Modo de uso"
+  lead="Uma colher de 5 g por dia, diluída em água ou suco. O mais importante é a constância: os estudos medem resultados depois de 2 a 3 meses de uso diário."
+  crumbs={[{ name: "Colágeno Nature's Prime", href: '/colageno-natures-prime/' }, { name: 'Como tomar', href: '/colageno-natures-prime/como-tomar/' }]}
+  faq={faq}
+  related={colagenoPages}
+  sources={[
+    { label: "Página oficial do Colágeno Hidrolisado + Ácido Hialurônico (consultada em 21/10/2026)", url: 'https://naturesprime.ind.br/colagenohidrolisado-acidohialuronico/' },
+    { label: "Loja oficial Nature's Prime: tabela nutricional (consultada em 21/10/2026)", url: 'https://loja.naturesprime.com.br/cabelo-pele-e-unhas/colageno-hidrolisado-acido-hialuronico-abacaxi-com-hortela' },
+    { label: 'NIH Office of Dietary Supplements: Zinc, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/Zinc-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>1 colher dosadora (5 g) por dia, em um copo de água ou suco, em qualquer horário. Use por pelo menos 8 a 12 semanas antes de avaliar o resultado. Não é indicado para menores de 18 anos, gestantes e lactantes sem orientação médica.</p>
+  </div>
+
+  <h2>Dose e preparo</h2>
+  <ol>
+    <li>Coloque 1 colher dosadora (5 g) em um copo de água (cerca de 200 ml) ou de suco.</li>
+    <li>Mexa até dissolver e tome.</li>
+    <li>Repita uma vez por dia, todos os dias.</li>
+  </ol>
+  <p>Tomar mais de uma dose não acelera o resultado. A dose de 5 g já traz 2,5 g de Verisol, a quantidade dos estudos.</p>
+
+  <h2>Quanto tempo usar</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Objetivo</th><th>Tempo nos estudos</th><th>Potes</th></tr></thead>
+      <tbody>
+        <tr><td>Hidratação e elasticidade da pele</td><td>8 a 12 semanas</td><td>2</td></tr>
+        <tr><td>Unhas</td><td>24 semanas</td><td>3 a 4</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Nos estudos, parte do efeito diminuiu algumas semanas depois de parar. Se notar diferença, ela tende a depender de continuar tomando.</p>
+
+  <h2>Quem não deve tomar sem orientação</h2>
+  <ul>
+    <li>Menores de 18 anos, gestantes e lactantes (recomendação do fabricante).</li>
+    <li>Quem tem doença crônica ou usa remédios contínuos.</li>
+    <li>Quem já toma outro suplemento com zinco: esta dose tem 7 mg, e o limite seguro para adultos é de 40 mg por dia somando tudo.</li>
+    <li>Quem tem alergia a algum ingrediente. Confira o rótulo ao receber.</li>
+  </ul>
+
+  <h2>Efeitos colaterais</h2>
+  <p>O colágeno hidrolisado é bem tolerado. Algumas pessoas relatam sensação de estômago cheio ou gosto residual. Como tem zinco, tomar em jejum pode dar enjoo em quem é sensível: nesse caso, tome junto com uma refeição.</p>
+
+  <BuyBox compact produto="Colágeno Nature's Prime" href={p.link} title="Colágeno Nature's Prime no site oficial" text="Pote de 250 g para 50 dias, a partir de R$ 164,90." cta="Ver kits e preços" />
+</Article>

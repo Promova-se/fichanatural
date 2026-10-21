@@ -1,0 +1,100 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import { colageno as p, colagenoPages } from '../../data/site';
+
+const faq = [
+  { q: "O que é o Colágeno Nature's Prime?", a: 'É um suplemento em pó, sabor abacaxi com hortelã, com peptídeos de colágeno Verisol, ácido hialurônico, coenzima Q10, vitamina C, zinco e selênio. O pote tem 250 g, que rendem 50 doses de 5 g, uma por dia. É fabricado pela Natures Farma Indústria e Comércio.' },
+  { q: "Quanto colágeno tem o Colágeno Nature's Prime?", a: 'Cada dose de 5 g tem 2,5 g de peptídeos de colágeno Verisol, a mesma quantidade usada nos estudos desse ingrediente. Também tem 120 mg de ácido hialurônico, 30 mg de coenzima Q10, 100 mg de vitamina C, 7 mg de zinco e 34 mcg de selênio.' },
+  { q: "Quanto custa o Colágeno Nature's Prime?", a: 'No site oficial, em 21/10/2026: 1 pote por R$ 164,90, 2 por R$ 274,90, 3 por R$ 349,90 e 6 por R$ 649,90. Na mesma data, a farmácia online PB Pharma vendia o mesmo pote por R$ 95,39, mais frete.' },
+  { q: "Quanto tempo dura um pote do Colágeno Nature's Prime?", a: '50 dias, com uma dose de 5 g por dia.' },
+];
+---
+<Article
+  ogImage="/img/colageno-natures-prime/og-colageno-natures-prime.jpg"
+  title="Colágeno Nature's Prime com ácido hialurônico: ficha completa, doses e preço"
+  seoTitle="Colágeno Nature's Prime: doses, preço e se vale"
+  description="Ficha do Colágeno Hidrolisado + Ácido Hialurônico Nature's Prime: dose de Verisol e de cada ingrediente, preço dos kits, onde sai mais barato, prós e contras."
+  kicker="Ficha de produto"
+  lead="Diferente da maioria dos suplementos que analisamos, este informa a dose de cada ingrediente, e a de colágeno é a mesma dos estudos. O que pesa contra é o preço no site oficial e uma ciência mais dividida do que a página de vendas dá a entender."
+  crumbs={[{ name: "Colágeno Nature's Prime", href: '/colageno-natures-prime/' }]}
+  faq={faq}
+  related={colagenoPages}
+  sources={[
+    { label: "Página oficial do Colágeno Hidrolisado + Ácido Hialurônico e checkouts da Braip (consultados em 21/10/2026)", url: 'https://naturesprime.ind.br/colagenohidrolisado-acidohialuronico/' },
+    { label: "Loja oficial Nature's Prime: descrição e tabela nutricional (consultada em 21/10/2026)", url: 'https://loja.naturesprime.com.br/cabelo-pele-e-unhas/colageno-hidrolisado-acido-hialuronico-abacaxi-com-hortela' },
+    { label: 'PB Pharma: Colágeno Hidrolisado (Verisol) + Ácido Hialurônico Nature\'s Prime (preço lido em 21/10/2026)', url: 'https://www.pbpharma.com.br/beleza/colageno-hidrolisado-acido-hialuronico-abacaxi' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Colágeno em pó com 2,5 g de Verisol por dose, a quantidade dos estudos, mais 120 mg de ácido hialurônico, coenzima Q10, vitamina C e zinco. O fabricante tem CNPJ e não tem reclamações no Reclame Aqui. Para a pele, espere no máximo mais hidratação e elasticidade depois de 2 a 3 meses, não o fim das rugas. No site oficial custa R$ 164,90 o pote; numa farmácia online, o mesmo pote saía por R$ 95,39.</p>
+  </div>
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>{p.fullName}, sabor abacaxi com hortelã</td></tr>
+        <tr><th>Fabricante</th><td>{p.maker}, CNPJ {p.cnpj}</td></tr>
+        <tr><th>Tipo</th><td>Suplemento alimentar de colágeno em pó</td></tr>
+        <tr><th>Apresentação</th><td>Pote de 250 g, 50 doses</td></tr>
+        <tr><th>Dose</th><td>5 g (1 colher dosadora) por dia, em água ou suco</td></tr>
+        <tr><th>Duração do pote</th><td>50 dias</td></tr>
+        <tr><th>Atendimento</th><td>{p.sac} e {p.phone}</td></tr>
+        <tr><th>Garantia</th><td>30 dias, com devolução do dinheiro</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Composição por dose de 5 g</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Ingrediente</th><th>Quantidade</th><th>Comparação</th></tr></thead>
+      <tbody>
+        <tr><td>Peptídeos de colágeno (Verisol)</td><td>2,5 g</td><td>Mesma dose dos estudos do Verisol</td></tr>
+        <tr><td>Ácido hialurônico</td><td>120 mg</td><td>Mesma dose do principal estudo com ácido hialurônico oral</td></tr>
+        <tr><td>Coenzima Q10</td><td>30 mg</td><td>Abaixo dos 50 a 150 mg dos estudos com pele</td></tr>
+        <tr><td>Vitamina C</td><td>100 mg</td><td>100% do valor diário</td></tr>
+        <tr><td>Zinco</td><td>7 mg</td><td>64% do valor diário</td></tr>
+        <tr><td>Selênio</td><td>34 mcg</td><td>57% do valor diário</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>A dose tem 17 kcal e 2 g de açúcares. A descrição da loja oficial cita também vitamina E, que não aparece na tabela nutricional. Valem os números da tabela.</p>
+  <p>Verisol é uma marca de peptídeos de colágeno da empresa alemã Gelita, feita para a pele. Ver o nome dela no rótulo ajuda: dá para saber exatamente qual colágeno é e comparar com os estudos. O que eles mostram está em <a href="/colageno-natures-prime/funciona/">Colágeno Nature's Prime funciona?</a></p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores conferidos nos checkouts em 21/10/2026. No cartão parcelado, os juros são de 3,49% ao mês. Há também um kit de 10 potes com um Power Capsules Hair Woman por R$ 1.099,90.</p>
+  <KitCards kits={p.kits} produto="Colágeno Nature's Prime" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Informa a dose de cada ingrediente</li>
+        <li>Verisol e ácido hialurônico nas doses dos estudos</li>
+        <li>Fabricante com CNPJ e sem reclamações no Reclame Aqui</li>
+        <li>Garantia de 30 dias com devolução do dinheiro</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>No site oficial custa bem mais que em farmácia online</li>
+        <li>Promete "rejuvenescer a pele e reduzir as rugas", o que as revisões mais recentes não confirmam</li>
+        <li>Depoimentos sem como conferir, com fotos que parecem de banco de imagens</li>
+        <li>Juros de 3,49% ao mês no parcelado</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>É dos produtos mais bem formulados que analisamos: diz o que tem, em quanto, e usa um colágeno com nome e estudos. Se você quer tomar colágeno para a pele, esta é uma forma correta de fazer isso. A ressalva é a expectativa: os estudos mostram mais hidratação e elasticidade, e a evidência para rugas é fraca. E vale comparar o preço antes: em outubro de 2026, o mesmo pote estava bem mais barato numa farmácia online do que no site oficial, que em troca oferece a garantia de 30 dias.</p>
+  </div>
+  <p>Antes de comprar, veja <a href="/colageno-natures-prime/como-tomar/">como tomar</a> e <a href="/colageno-natures-prime/onde-comprar/">a comparação de preços</a>.</p>
+
+  <BuyBox compact produto="Colágeno Nature's Prime" href={p.link} title="Colágeno Nature's Prime no site oficial" text="A partir de R$ 164,90 o pote de 250 g (50 dias), com garantia de 30 dias." cta="Ver kits e preços" />
+</Article>

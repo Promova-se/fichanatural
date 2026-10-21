@@ -1,0 +1,69 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { colageno as p, colagenoPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Colágeno hidrolisado funciona para a pele?', a: 'Os estudos estão divididos. Uma revisão de 2026 que reuniu 16 meta-análises encontrou melhora na elasticidade e na hidratação, mas não nas rugas. Uma meta-análise de 2025 viu que, quando se olham só os estudos sem financiamento da indústria, o efeito desaparece. O mais honesto é esperar um efeito pequeno, se houver.' },
+  { q: 'Colágeno Verisol tira rugas?', a: 'Num estudo de 2014 com 114 mulheres, 2,5 g de Verisol por dia reduziram o volume das rugas ao redor dos olhos em 20% em 8 semanas, comparado ao placebo. Mas o estudo teve ligação com o fabricante do ingrediente, e revisões mais amplas não confirmam efeito sobre rugas.' },
+  { q: 'Colágeno fortalece as unhas?', a: 'Um estudo brasileiro com 25 mulheres e 2,5 g de Verisol por 24 semanas relatou unhas crescendo 12% mais rápido e 42% menos quebras. Não teve grupo placebo, então o resultado é fraco.' },
+  { q: 'Em quanto tempo o colágeno faz efeito?', a: 'Nos estudos, as medições foram feitas depois de 8 a 12 semanas para a pele e de 24 semanas para as unhas. Antes de 2 meses, é difícil notar diferença.' },
+];
+---
+<Article
+  ogImage="/img/colageno-natures-prime/og-colageno-natures-prime.jpg"
+  title="Colágeno Nature's Prime funciona? O que os estudos do Verisol mostram"
+  seoTitle="Colágeno Nature's Prime funciona? O que esperar"
+  description="O Colágeno Nature's Prime funciona? O que os estudos do Verisol e do ácido hialurônico mostram para pele, rugas, unhas e articulações, e o que é exagero."
+  kicker="Funciona?"
+  lead="As doses de colágeno e de ácido hialurônico batem com as dos estudos. O problema é que os estudos positivos são, na maioria, ligados aos fabricantes dos ingredientes, e revisões independentes são bem menos animadoras."
+  crumbs={[{ name: "Colágeno Nature's Prime", href: '/colageno-natures-prime/' }, { name: 'Funciona?', href: '/colageno-natures-prime/funciona/' }]}
+  faq={faq}
+  related={colagenoPages}
+  sources={[
+    { label: 'Proksch E et al. Peptídeos bioativos de colágeno (Verisol) e rugas. Skin Pharmacol Physiol, 2014', url: 'https://pubmed.ncbi.nlm.nih.gov/24401291/' },
+    { label: 'Hexsel D et al. Peptídeos de colágeno e unhas quebradiças. J Cosmet Dermatol, 2017', url: 'https://www.nutraingredients.com/Article/2017/08/16/Collagen-supplements-may-boost-nail-growth-and-appearance-Human-data' },
+    { label: 'Oe M et al. Ácido hialurônico oral e rugas, 120 mg por 12 semanas. Clin Cosmet Investig Dermatol, 2017', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC5522662/' },
+    { label: 'Myung SK, Park Y. Meta-análise de 23 ensaios sobre colágeno e envelhecimento da pele. Am J Med, 2025 (reportagem NutraIngredients)', url: 'https://nutraingredients.com/Article/2025/08/26/industry-reacts-to-meta-analysis-concluding-collagen-supplements-show-no-proven-benefit-for-skin-aging' },
+    { label: 'Band: revisão de 16 meta-análises sobre colágeno e pele (Aesthetic Surgery Journal Open Forum, 2026)', url: 'https://www.band.com.br/saude/noticias/colageno-melhora-elasticidade-da-pele-mas-nao-reduz-rugas-aponta-estudo-202602271448' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Talvez um pouco. A fórmula usa as doses certas: 2,5 g de Verisol e 120 mg de ácido hialurônico, como nos estudos. Esses estudos mostram pele mais hidratada e elástica, e alguns mostram menos rugas. Mas quase todos foram ligados aos fabricantes, e as revisões mais amplas não confirmam efeito sobre rugas. "Rejuvenesce a pele" é exagero.</p>
+  </div>
+
+  <h2>O que se sabe de cada ingrediente</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Ingrediente e dose</th><th>O que os estudos mostram</th></tr></thead>
+      <tbody>
+        <tr><td>Verisol, 2,5 g</td><td>Em 114 mulheres, 20% menos volume de rugas ao redor dos olhos em 8 semanas, comparado ao placebo. Num estudo sem placebo, unhas crescendo 12% mais rápido em 24 semanas</td></tr>
+        <tr><td>Ácido hialurônico, 120 mg</td><td>Em 60 japoneses, rugas um pouco menores que no placebo em 8 a 12 semanas. Estudo pequeno, pago pelo fabricante do ingrediente</td></tr>
+        <tr><td>Coenzima Q10, 30 mg</td><td>Estudos com pele usam 50 a 150 mg. Aqui, efeito esperado pequeno</td></tr>
+        <tr><td>Vitamina C, 100 mg</td><td>O corpo precisa dela para formar colágeno. Ajuda se faltar na alimentação</td></tr>
+        <tr><td>Zinco e selênio</td><td>Antioxidantes e importantes para cabelo, pele e unhas, mas só fazem diferença se faltarem</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Por que a ciência está dividida</h2>
+  <p>Os estudos com colágeno costumam ser pequenos e, em boa parte, financiados por quem vende o ingrediente. Duas revisões recentes resumem o quadro:</p>
+  <ul>
+    <li><strong>Revisão de 2026, com 16 meta-análises e 113 ensaios:</strong> o colágeno melhorou a elasticidade e a hidratação da pele, mas não as rugas. Os autores ressalvam que a qualidade de muitas análises era baixa.</li>
+    <li><strong>Meta-análise de 2025, com 23 ensaios e 1.474 pessoas:</strong> os estudos pagos pela indústria mostraram benefício; os independentes, não. Considerando só os de melhor qualidade, não houve efeito em hidratação, elasticidade ou rugas. Entidades do setor contestaram a metodologia.</li>
+  </ul>
+  <p>Na prática: o colágeno não faz mal, e a dose aqui é a certa. Mas o efeito, se existir, é pequeno e leva meses.</p>
+
+  <h2>O que é exagero na página de vendas</h2>
+  <ul>
+    <li><strong>"Rejuvenesce a pele e reduz as rugas":</strong> as revisões mais amplas não encontraram efeito sobre rugas.</li>
+    <li><strong>"Auxilia na saúde das articulações":</strong> o Verisol foi desenvolvido para a pele. Os estudos de colágeno para articulação usam outros tipos de peptídeo e doses maiores, em geral de 5 a 10 g por dia. Para articulações, veja o <a href="/artic-protect/funciona/">colágeno tipo 2</a>.</li>
+    <li><strong>"Benefícios comprovados cientificamente":</strong> há estudos, mas com as ressalvas acima.</li>
+    <li><strong>Depoimentos:</strong> só nome e foto, sem como conferir, e as fotos parecem de banco de imagens.</li>
+  </ul>
+
+  <h2>Para quem pode fazer sentido</h2>
+  <p>Para quem quer experimentar colágeno para a pele e prefere um produto com dose conhecida e um ingrediente estudado. Use por pelo menos 2 a 3 meses antes de avaliar, e lembre que protetor solar e não fumar fazem mais pela pele do que qualquer suplemento.</p>
+
+  <BuyBox compact produto="Colágeno Nature's Prime" href={p.link} title="Colágeno Nature's Prime no site oficial" text="A partir de R$ 164,90 o pote de 50 dias, com garantia de 30 dias." cta="Ver kits e preços" />
+</Article>

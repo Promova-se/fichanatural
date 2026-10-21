@@ -6,7 +6,7 @@ export const site = {
   email: 'loja@promovase.net',
   company: 'Promova-se',
   cnpj: '43.315.814/0001-28',
-  updated: '2026-10-19',
+  updated: '2026-10-21',
   ga4: 'G-L47PVELQQ4',
 };
 
@@ -497,6 +497,37 @@ export const study = {
 
 // Catálogo usado no menu, no rodapé e nas páginas-índice /produtos/ e /guias/.
 // Para um produto novo: crie as páginas, a lista xxxPages e adicione um item aqui.
+// Colágeno Hidrolisado + Ácido Hialurônico Nature's Prime (Braip, prok72go), conferido na página, na loja oficial e nos checkouts em 21/10/2026.
+// Mesmo fabricante da creatina. Tabela nutricional (loja.naturesprime.com.br): porção 5 g, 50 porções; Verisol 2,5 g, ácido hialurônico 120 mg,
+// coenzima Q10 30 mg, vitamina C 100 mg, zinco 7 mg, selênio 34 mcg; 17 kcal, 2 g de açúcares totais.
+// Links oficiais do painel: ev.braip.com/ref?pl={plano}&ck=chen80pq&af=afig5gemzq. Os 5 mostram "REF.: afig5gemzq". Juros de 3,49% a.m.
+// PB Pharma (farmácia online) vendia o mesmo pote por R$ 95,39 em 21/10/2026.
+const colagenoRef = (plan: string) => `https://ev.braip.com/ref?pl=${plan}&ck=chen80pq&af=afig5gemzq`;
+export const colageno = {
+  name: "Colágeno Nature's Prime",
+  fullName: "Colágeno Hidrolisado + Ácido Hialurônico Nature's Prime",
+  maker: 'Natures Farma Indústria e Comércio Ltda',
+  cnpj: '28.209.818/0001-38',
+  sac: 'sac@naturesprime.ind.br',
+  phone: '(62) 9374-2145',
+  link: 'https://ev.braip.com/ref?pv=prok72go&af=afig5gemzq',
+  kits: [
+    { name: '1 pote', qty: '250 g · 50 doses (50 dias)', months: 1, total: 164.9, installments: '12x de R$ 17,05', plan: colagenoRef('plawdmnw') },
+    { name: '2 potes', qty: '500 g · 100 dias', months: 2, total: 274.9, installments: '12x de R$ 28,43', plan: colagenoRef('playpkrp') },
+    { name: '3 potes', qty: '750 g · 150 dias', months: 3, total: 349.9, installments: '12x de R$ 36,19', plan: colagenoRef('plakp9w2') },
+    { name: '6 potes', qty: '1,5 kg · 300 dias', months: 6, total: 649.9, installments: '12x de R$ 67,21', plan: colagenoRef('pla8kvg2') },
+  ],
+  kit10: { total: 1099.9, installments: '12x de R$ 113,76', plan: colagenoRef('plaexvqj') },
+};
+
+export const colagenoPages = [
+  { href: '/colageno-natures-prime/', title: "Colágeno Nature's Prime com ácido hialurônico: ficha, doses e preço", short: 'Ficha completa' },
+  { href: '/colageno-natures-prime/funciona/', title: "Colágeno Nature's Prime funciona? O que os estudos do Verisol mostram", short: 'Funciona?' },
+  { href: '/colageno-natures-prime/como-tomar/', title: 'Como tomar colágeno hidrolisado: dose, horário e cuidados', short: 'Como tomar' },
+  { href: '/colageno-natures-prime/onde-comprar/', title: "Onde comprar Colágeno Nature's Prime: preço, farmácia e garantia", short: 'Onde comprar e preço' },
+  { href: '/colageno-natures-prime/e-confiavel/', title: "Colágeno Nature's Prime é confiável? Fabricante e Reclame Aqui", short: 'É confiável?' },
+];
+
 export const catalog = [
   { name: 'OzenVitta', href: '/ozenvitta/', pill: 'Emagrecimento', summary: 'Fibras, L-carnitina, laranja moro e cromo em cápsulas.', pages: ozenvittaPages },
   { name: 'ReduPhine Caps', href: '/reduphine-caps/', pill: 'Emagrecimento', summary: 'Spirulina, psyllium, quitosana e cromo, com opção de combo com gotas.', pages: reduphinePages },
@@ -506,6 +537,7 @@ export const catalog = [
   { name: 'Mounjax', href: '/mounjax/', pill: 'Gotas', summary: 'Gotas da Ozenpharma com café verde, cúrcuma, cromo e vitaminas. Não é Mounjaro.', pages: mounjaxPages },
   { name: 'TG30 Crisfit', href: '/tg30/', pill: 'Gotas', summary: 'Café verde, cúrcuma e vitaminas D3 e B12 em gotas.', pages: tg30Pages },
   { name: 'IArmonize', href: '/iarmonize/', pill: 'Cabelo, sono e energia', summary: 'Kit da Integra Pharma com quatro fórmulas: Hair, Sleep, Energy e Vital.', pages: iarmonizePages },
+  { name: "Colágeno Nature's Prime", href: '/colageno-natures-prime/', pill: 'Pele', summary: 'Colágeno Verisol 2,5 g com ácido hialurônico, Q10, vitamina C e zinco, em pó.', pages: colagenoPages },
   { name: "Creatina Nature's Prime", href: '/creatina-natures-prime/', pill: 'Treino', summary: 'Creatina monohidratada pura em pó, 300 g, da Natures Farma.', pages: creatinaPages },
   { name: 'Artic Protect', href: '/artic-protect/', pill: 'Articulações', summary: 'Colágeno tipo 2 de 40 mg com magnésio e vitamina D3, da Up Sports Nutrition.', pages: articPages },
   { name: 'Lizz Anté Nutri', href: '/lizz-ante-nutri/', pill: 'Cabelo, pele e unhas', summary: 'Cápsulas da Lizz Anté com biotina, colágeno, silício, zinco e mais 5 ativos.', pages: lizznutriPages },

@@ -1,0 +1,60 @@
+---
+import Article from '../../../layouts/Article.astro';
+import KitCards from '../../../components/KitCards.astro';
+import { colageno as p, colagenoPages } from '../../../data/site';
+
+const faq = [
+  { q: "Onde comprar Colágeno Nature's Prime original?", a: 'No site oficial do fabricante, com pagamento pela Braip, ou em farmácias. A marca diz que vende em farmácias selecionadas e não recomenda o Mercado Livre, onde não garante a origem. Em 21/10/2026, a farmácia online PB Pharma vendia o pote por R$ 95,39.' },
+  { q: "Colágeno Nature's Prime tem na farmácia?", a: 'Sim, segundo o fabricante, em farmácias selecionadas. Encontramos o mesmo pote de 250 g sabor abacaxi com hortelã na PB Pharma, uma farmácia online.' },
+  { q: "O Colágeno Nature's Prime tem garantia?", a: 'No site oficial, sim: 30 dias após a compra para pedir a devolução do dinheiro se o produto não atender às suas expectativas. Comprando em farmácia, valem as regras da loja.' },
+];
+---
+<Article
+  ogImage="/img/colageno-natures-prime/og-colageno-natures-prime.jpg"
+  title="Onde comprar Colágeno Nature's Prime: preço, farmácia e garantia"
+  seoTitle="Onde comprar Colágeno Nature's Prime e preço"
+  description="Onde comprar o Colágeno Nature's Prime com ácido hialurônico: preço de cada kit no site oficial, preço em farmácia online, quanto sai por dia e a garantia de 30 dias."
+  kicker="Compra segura"
+  lead="O Colágeno Nature's Prime é vendido no site oficial, com garantia de 30 dias, e em farmácias. Em outubro de 2026, a diferença de preço entre os dois era grande."
+  crumbs={[{ name: "Colágeno Nature's Prime", href: '/colageno-natures-prime/' }, { name: 'Onde comprar', href: '/colageno-natures-prime/onde-comprar/' }]}
+  faq={faq}
+  related={colagenoPages}
+  sources={[
+    { label: "Página oficial do Colágeno Hidrolisado + Ácido Hialurônico e checkouts da Braip (consultados em 21/10/2026)", url: 'https://naturesprime.ind.br/colagenohidrolisado-acidohialuronico/' },
+    { label: "Loja oficial Nature's Prime (consultada em 21/10/2026)", url: 'https://loja.naturesprime.com.br/cabelo-pele-e-unhas/colageno-hidrolisado-acido-hialuronico-abacaxi-com-hortela' },
+    { label: 'PB Pharma: Colágeno Hidrolisado (Verisol) + Ácido Hialurônico Nature\'s Prime (preço lido em 21/10/2026)', url: 'https://www.pbpharma.com.br/beleza/colageno-hidrolisado-acido-hialuronico-abacaxi' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>No site oficial: R$ 164,90 o pote, ou R$ 649,90 por 6 potes (R$ 108 cada). Na farmácia online PB Pharma, o mesmo pote saía por R$ 95,39, mais frete, em 21/10/2026. O site oficial tem a vantagem da garantia de 30 dias com devolução do dinheiro.</p>
+  </div>
+
+  <h2>Comparação de preço</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Onde</th><th>Preço</th><th>Por pote</th><th>Por dia</th></tr></thead>
+      <tbody>
+        <tr><td>Site oficial, 1 pote</td><td>R$ 164,90</td><td>R$ 164,90</td><td>R$ 3,30</td></tr>
+        <tr><td>Site oficial, 3 potes</td><td>R$ 349,90</td><td>R$ 116,63</td><td>R$ 2,33</td></tr>
+        <tr><td>Site oficial, 6 potes</td><td>R$ 649,90</td><td>R$ 108,32</td><td>R$ 2,17</td></tr>
+        <tr><td>PB Pharma, 1 pote</td><td>R$ 95,39 + frete</td><td>R$ 95,39</td><td>R$ 1,91</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Preços mudam com frequência. Na farmácia, confira se é o pote de 250 g sabor abacaxi com hortelã e some o frete antes de comparar.</p>
+
+  <h2>Kits no site oficial</h2>
+  <KitCards kits={p.kits} produto="Colágeno Nature's Prime" />
+  <p class="small">Há também um kit de 10 potes com um Power Capsules Hair Woman por R$ 1.099,90 (12x de R$ 113,76).</p>
+
+  <h2>Garantia de 30 dias</h2>
+  <ol>
+    <li><strong>O que cobre:</strong> devolução do dinheiro se o produto não atender às suas expectativas.</li>
+    <li><strong>Prazo:</strong> até 30 dias após a compra.</li>
+    <li><strong>Como pedir:</strong> pelo e-mail {p.sac} ou pelo telefone {p.phone}. Guarde o número do pedido.</li>
+  </ol>
+  <p>Como o efeito do colágeno só aparece depois de 2 a 3 meses, a garantia de 30 dias serve mais para problemas com o produto (sabor, tolerância) do que para avaliar resultado.</p>
+
+  <h2>Entrega e pagamento</h2>
+  <p>Os dados de rastreio aparecem em até 72 horas após a compra. Pagamento pela Braip, com cartão (até 12x, com juros de 3,49% ao mês), Pix e boleto.</p>
+</Article>
