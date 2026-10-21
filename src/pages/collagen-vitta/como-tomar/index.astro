@@ -1,0 +1,56 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { collagenvitta as p, collagenvittaPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Como tomar Collagen Vitta?', a: 'Dilua 1 scoop (10 g) em 100 a 150 ml de água ou no suco que preferir, uma vez por dia.' },
+  { q: 'Qual o melhor horário para tomar Collagen Vitta?', a: 'Não há horário melhor comprovado. O que importa é tomar todos os dias. Escolha um momento fácil de lembrar.' },
+  { q: 'Grávida pode tomar Collagen Vitta?', a: 'Não sem orientação médica. A fórmula tem retinol (vitamina A), que em excesso na gravidez pode causar malformações, e a página não diz a quantidade.' },
+  { q: 'Por quanto tempo tomar Collagen Vitta?', a: 'A empresa recomenda no mínimo 5 meses. Nos estudos com colágeno, os efeitos na pele são medidos depois de 2 a 3 meses. Se não notar nada em 3 meses, dificilmente vai notar depois.' },
+];
+---
+<Article
+  ogImage="/img/collagen-vitta/og-collagen-vitta.jpg"
+  title="Como tomar Collagen Vitta: dose, tempo de uso e quem deve evitar"
+  seoTitle="Como tomar Collagen Vitta e cuidados"
+  description="Como tomar Collagen Vitta: dose diária, preparo, quanto tempo usar, cuidados com o retinol, quem deve evitar e como usar o brinde Collagen Osteo."
+  kicker="Modo de uso"
+  lead="Um scoop de 10 g por dia, diluído em água ou suco. O cuidado principal é com o retinol da fórmula, que não é indicado na gravidez."
+  crumbs={[{ name: 'Collagen Vitta', href: '/collagen-vitta/' }, { name: 'Como tomar', href: '/collagen-vitta/como-tomar/' }]}
+  faq={faq}
+  related={collagenvittaPages}
+  sources={[
+    { label: 'Página oficial do Collagen Vitta (consultada em 21/10/2026)', url: 'https://collagennatturabio.com.br/collagen-vitta-b/' },
+    { label: 'NIH Office of Dietary Supplements: Vitamin A, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/VitaminA-HealthProfessional/' },
+    { label: 'NIH Office of Dietary Supplements: Vitamin K, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/VitaminK-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>1 scoop (10 g) por dia, em 100 a 150 ml de água ou suco, em qualquer horário. Use por 2 a 3 meses antes de avaliar. Gestantes, lactantes e quem toma anticoagulante devem falar com o médico antes, por causa do retinol e da vitamina K2.</p>
+  </div>
+
+  <h2>Dose e preparo</h2>
+  <ol>
+    <li>Coloque 1 scoop (10 g) em um copo com 100 a 150 ml de água, ou em um suco.</li>
+    <li>Mexa até dissolver e tome.</li>
+    <li>Repita uma vez por dia. Um pote de 300 g dura 30 dias.</li>
+  </ol>
+  <p>Tomar mais de um scoop não acelera o resultado e aumenta a quantidade de vitamina A.</p>
+
+  <h2>Quem não deve tomar sem orientação</h2>
+  <ul>
+    <li><strong>Gestantes e lactantes:</strong> a fórmula tem retinol, e o excesso de vitamina A na gravidez pode causar malformações.</li>
+    <li><strong>Quem toma anticoagulante (como varfarina):</strong> a vitamina K2 pode interferir no efeito do remédio.</li>
+    <li><strong>Quem já toma outro suplemento com vitamina A:</strong> as doses se somam, e a página não diz quanto há no Collagen Vitta.</li>
+    <li>Quem tem doença crônica, usa remédios contínuos ou tem alergia a algum ingrediente.</li>
+  </ul>
+
+  <h2>E o Collagen Osteo que vem de brinde?</h2>
+  <p>O Collagen Osteo é em gotas: a orientação da página é pingar 12 gotas embaixo da língua, uma vez por dia, de manhã. Ele tem curcumina e vitamina K2, que também pedem cuidado de quem toma anticoagulante. Não troque nenhum remédio para dor, inflamação ou osteoporose por ele.</p>
+
+  <h2>Efeitos colaterais</h2>
+  <p>O colágeno em pó costuma ser bem tolerado. Algumas pessoas sentem o estômago pesado ou gosto residual. Se tiver qualquer reação, pare e procure orientação.</p>
+
+  <BuyBox compact produto="Collagen Vitta" href={p.link} title="Collagen Vitta no site oficial" text="Pote de 300 g para 30 dias, a partir de R$ 157." cta="Ver kits e preços" />
+</Article>

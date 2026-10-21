@@ -1,0 +1,75 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { collagenvitta as p, collagenvittaPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Collagen Vitta é confiável?', a: 'Com ressalvas. A distribuidora, Natturabio, informa CNPJ e o pagamento passa pela Braip. Mas a página não diz as doses, faz promessas sem base, e as reclamações no Reclame Aqui, sobre atraso e embalagem diferente, ficaram sem resposta.' },
+  { q: 'Collagen Vitta é golpe?', a: 'Não há sinais de golpe pelo site oficial: empresa identificada, pagamento pela Braip e rastreio. Os cuidados são comprar só pelo site oficial e acompanhar a entrega.' },
+  { q: 'Collagen Vitta é aprovado pela Anvisa?', a: 'A página diz que o produto se enquadra nas normas de suplementos (RDC 27/2010 e 240/2018). Suplementos alimentares, em geral, não precisam de registro, e a Anvisa não avalia se funcionam.' },
+  { q: 'Collagen Vitta tem reclamação no Reclame Aqui?', a: 'Sim. A Natturabio tem 23 reclamações no histórico e 1 entre abril e setembro de 2026, sem resposta. As visíveis falam de atraso na postagem, pedido não entregue e uma embalagem diferente da primeira compra, todas sobre o colágeno.' },
+];
+---
+<Article
+  ogImage="/img/collagen-vitta/og-collagen-vitta.jpg"
+  title="Collagen Vitta é confiável? Natturabio, Reclame Aqui e Anvisa"
+  seoTitle="Collagen Vitta é confiável? Reclame Aqui"
+  description="Collagen Vitta é confiável ou golpe? Veja quem vende, os dois CNPJs, o que dizem as reclamações no Reclame Aqui, a questão da Anvisa e como comprar com segurança."
+  kicker="Reputação"
+  lead="O Collagen Vitta é vendido pela Natturabio, a mesma empresa do Vitta Resveratrol. A empresa é identificada, mas as reclamações sobre o colágeno ficaram sem resposta."
+  crumbs={[{ name: 'Collagen Vitta', href: '/collagen-vitta/' }, { name: 'É confiável?', href: '/collagen-vitta/e-confiavel/' }]}
+  faq={faq}
+  related={collagenvittaPages}
+  sources={[
+    { label: 'Reclame Aqui: Natturabio (consultado em 21/10/2026)', url: 'https://www.reclameaqui.com.br/empresa/nattura-bio/' },
+    { label: 'Página oficial do Collagen Vitta (consultada em 21/10/2026)', url: 'https://collagennatturabio.com.br/collagen-vitta-b/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Com ressalvas. A distribuidora tem CNPJ e o pagamento passa pela Braip, o que dá segurança na compra. Mas a Natturabio não tem nota no Reclame Aqui e não respondeu as reclamações recentes, sobre atraso e embalagem diferente do colágeno. A página também não informa as doses e promete mais do que o produto pode entregar.</p>
+  </div>
+
+  <h2>Quem vende</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Distribuidora (na página)</th><td>{p.distributor}, CNPJ {p.distributorCnpj}</td></tr>
+        <tr><th>Produtor (na Braip)</th><td>{p.producer}, CNPJ {p.producerCnpj}, Valparaíso de Goiás (GO)</td></tr>
+        <tr><th>Atendimento</th><td>{p.sac} e {p.phone}</td></tr>
+        <tr><th>Pagamento</th><td>Braip</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>São dois CNPJs diferentes: um aparece na página de vendas e o outro no cadastro da Braip. As duas empresas usam o nome Natturabio ou Naturivale.</p>
+
+  <h2>O que aparece no Reclame Aqui</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Reputação</th><td>Sem índice, empresa não verificada</td></tr>
+        <tr><th>Reclamações</th><td>1 entre abril e setembro de 2026, cerca de 23 no histórico</td></tr>
+        <tr><th>Respondidas</th><td>0%</td></tr>
+        <tr><th>Assuntos</th><td>Atraso na postagem, pedido não entregue, embalagem diferente sem resposta da empresa</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">Consulta em 21/10/2026.</p>
+
+  <h2>Outros pontos de atenção</h2>
+  <ul>
+    <li><strong>Doses escondidas:</strong> a página não tem tabela nutricional.</li>
+    <li><strong>Promessas:</strong> rejuvenescer "em até 90%", firmar os seios, acabar com a celulite e prevenir osteoporose. Veja <a href="/collagen-vitta/funciona/">o que a ciência diz</a>.</li>
+    <li><strong>Garantia:</strong> 30 dias na página, 7 dias no cadastro da Braip. Veja <a href="/collagen-vitta/onde-comprar/">os detalhes</a>.</li>
+    <li><strong>Brinde com promessas de remédio:</strong> o Collagen Osteo, que vem nos kits, diz tratar osteoporose e agir como anti-inflamatório.</li>
+    <li><strong>Sites parecidos:</strong> há várias páginas com o nome Collagen Vitta. Compre só pelo site oficial, com pagamento pela Braip.</li>
+  </ul>
+
+  <h2>Como comprar com segurança</h2>
+  <ol>
+    <li>Compre pelo site oficial, não por anúncios no Mercado Livre ou em redes sociais.</li>
+    <li>Pague no cartão de crédito, que permite contestar a cobrança.</li>
+    <li>Guarde o número do pedido e acompanhe o rastreio. Se a postagem atrasar, reclame por escrito.</li>
+  </ol>
+
+  <BuyBox compact produto="Collagen Vitta" href={p.link} title="Collagen Vitta no site oficial" text="A partir de R$ 157 o pote de 30 dias." cta="Ver kits e preços" />
+</Article>

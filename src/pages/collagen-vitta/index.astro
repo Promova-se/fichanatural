@@ -1,0 +1,90 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import { collagenvitta as p, collagenvittaPages } from '../../data/site';
+
+const faq = [
+  { q: 'O que é o Collagen Vitta?', a: 'É um suplemento de colágeno em pó, sabor laranja, vendido pela Natturabio. A página diz que a fórmula tem colágeno Verisol, colágeno tipo II, ácido hialurônico, biotina, ácido pantotênico, silício orgânico e as vitaminas A (retinol), C e K2. O pote tem 300 g, para 30 dias.' },
+  { q: 'Quanto custa o Collagen Vitta?', a: 'Nos checkouts de 21/10/2026: 1 pote por R$ 157, 2 potes por R$ 227, 3 por R$ 297 e 5 por R$ 477. Os kits de 2, 3 e 5 potes trazem 1 Collagen Osteo de brinde. No cartão parcelado há juros de 3,49% ao mês.' },
+  { q: 'Qual a dose de colágeno do Collagen Vitta?', a: 'A página não informa. Ela cita o colágeno Verisol, mas não diz quanto há em cada dose de 10 g. Nos estudos, o Verisol funciona com 2,5 g por dia. Confira a tabela do rótulo ao receber.' },
+  { q: 'O que é o Collagen Osteo que vem de brinde?', a: 'É um produto em gotas da mesma empresa, com colágeno tipo II, vitaminas K2 e D3, magnésio e curcumina. A página dele promete tratar e prevenir osteoporose e agir como anti-inflamatório, o que um suplemento não pode prometer. Não o use no lugar de tratamento médico.' },
+];
+---
+<Article
+  ogImage="/img/collagen-vitta/og-collagen-vitta.jpg"
+  title="Collagen Vitta: ficha completa, composição, preço e o que esperar"
+  seoTitle="Collagen Vitta: composição, preço e se vale"
+  description="Ficha do Collagen Vitta: o que a fórmula tem, o que a página não informa, preço dos kits, o brinde Collagen Osteo, garantia, prós e contras."
+  kicker="Ficha de produto"
+  lead="O Collagen Vitta é um colágeno em pó com Verisol, ácido hialurônico e vitaminas. A lista de ingredientes faz sentido para a pele, mas a página não diz a dose de nenhum deles e promete bem mais do que colágeno entrega."
+  crumbs={[{ name: 'Collagen Vitta', href: '/collagen-vitta/' }]}
+  faq={faq}
+  related={collagenvittaPages}
+  sources={[
+    { label: 'Página oficial do Collagen Vitta e checkouts da Braip (consultados em 21/10/2026)', url: 'https://collagennatturabio.com.br/collagen-vitta-b/' },
+    { label: 'Página oficial do Collagen Osteo (consultada em 21/10/2026)', url: 'https://collagenosteo.com.br/braip-2/' },
+    { label: 'Reclame Aqui: Natturabio (consultado em 21/10/2026)', url: 'https://www.reclameaqui.com.br/empresa/nattura-bio/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Colágeno em pó, 10 g por dia, com Verisol, colágeno tipo II, ácido hialurônico, biotina e vitaminas. É o mesmo tipo de colágeno usado em estudos de pele, mas a página não informa nenhuma dose. Promete "rejuvenescer a pele em até 90%", firmar os seios e acabar com a celulite, o que nenhum colágeno faz. Custa R$ 157 o pote de 30 dias. A empresa tem CNPJ, mas não responde as reclamações no Reclame Aqui.</p>
+  </div>
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>{p.name}, sabor laranja da terra</td></tr>
+        <tr><th>Distribuidora</th><td>{p.distributor}, CNPJ {p.distributorCnpj}</td></tr>
+        <tr><th>Produtor na Braip</th><td>{p.producer}, CNPJ {p.producerCnpj}</td></tr>
+        <tr><th>Tipo</th><td>Suplemento alimentar de colágeno em pó</td></tr>
+        <tr><th>Apresentação</th><td>Pote de 300 g</td></tr>
+        <tr><th>Dose</th><td>1 scoop (10 g) por dia, em 100 a 150 ml de água ou suco</td></tr>
+        <tr><th>Duração do pote</th><td>30 dias</td></tr>
+        <tr><th>Atendimento</th><td>{p.sac} e {p.phone}</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Composição</h2>
+  <p>A página lista {p.ingredients.join(', ').replace(/, ([^,]*)$/, ' e $1')}. Os anúncios dos kits citam também astaxantina, e os ícones mostram magnésio e vitamina E. A página não tem tabela nutricional nem diz a quantidade de nenhum ingrediente. Confira o rótulo ao receber.</p>
+  <p>A presença do Verisol é um bom sinal: é o colágeno com mais estudos para a pele. Mas ele funciona com 2,5 g por dia, e não dá para saber quanto há nos 10 g do Collagen Vitta. Se você quer um colágeno com Verisol e dose informada, compare com o <a href="/colageno-natures-prime/">Colágeno Nature's Prime</a>. O que se sabe de cada ingrediente está em <a href="/collagen-vitta/funciona/">Collagen Vitta funciona?</a></p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores conferidos nos checkouts em 21/10/2026. No cartão parcelado, os juros são de 3,49% ao mês. Os kits de 2 potes ou mais trazem 1 frasco de Collagen Osteo de brinde.</p>
+  <KitCards kits={p.kits} unit="mês" produto="Collagen Vitta" />
+
+  <h2>O brinde Collagen Osteo</h2>
+  <p>O Collagen Osteo é um produto em gotas da mesma empresa, com colágeno tipo II, vitaminas K2 e D3, magnésio e curcumina. A página dele promete "tratamento e prevenção da osteoporose", ação anti-inflamatória e alívio da dor "em poucos minutos". Suplemento não trata osteoporose nem substitui remédio. Se você tem dor nas articulações ou osteoporose, siga o tratamento do seu médico.</p>
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Usa colágeno Verisol, o mais estudado para a pele</li>
+        <li>Distribuidora com CNPJ informado na página</li>
+        <li>Pagamento pela Braip, com rastreio</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Não informa a dose de nenhum ingrediente</li>
+        <li>Promete rejuvenescer a pele "em até 90%", firmar os seios e acabar com a celulite</li>
+        <li>Garantia de 30 dias na página, mas de 7 dias no cadastro da Braip</li>
+        <li>Reclamações sem resposta no Reclame Aqui, sobre atraso e embalagem diferente</li>
+        <li>Tem retinol: gestantes devem evitar</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>A ideia da fórmula é boa: colágeno Verisol com vitamina C e ácido hialurônico é a combinação mais estudada para a pele. O problema é que não dá para conferir as doses, e a página promete resultados que nenhum colágeno entrega. Se você quer experimentar colágeno, espere no máximo pele mais hidratada e elástica depois de 2 a 3 meses. Pelo mesmo dinheiro, há colágenos com Verisol e dose informada no rótulo.</p>
+  </div>
+  <p>Antes de comprar, veja <a href="/collagen-vitta/e-confiavel/">se a Natturabio é confiável</a> e <a href="/collagen-vitta/onde-comprar/">como funcionam entrega e garantia</a>.</p>
+
+  <BuyBox compact produto="Collagen Vitta" href={p.link} title="Collagen Vitta no site oficial" text="A partir de R$ 157 o pote de 30 dias. Kits de 2 ou mais potes com Collagen Osteo de brinde." cta="Ver kits e preços" />
+</Article>

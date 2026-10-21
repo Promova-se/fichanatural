@@ -1,0 +1,70 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { collagenvitta as p, collagenvittaPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Collagen Vitta funciona?', a: 'Pode ajudar um pouco na hidratação e na elasticidade da pele, se tiver Verisol na dose dos estudos (2,5 g por dia). A página não informa a dose. Rejuvenescer a pele "em até 90%", firmar os seios e acabar com a celulite não têm base.' },
+  { q: 'Collagen Vitta tira rugas?', a: 'Um estudo com Verisol mostrou 20% menos volume de rugas ao redor dos olhos em 8 semanas, mas foi ligado ao fabricante do ingrediente. Revisões mais amplas não encontraram efeito do colágeno sobre rugas já formadas.' },
+  { q: 'Collagen Vitta acaba com a celulite?', a: 'Não. Um estudo de 6 meses com cerca de 100 mulheres, ligado ao fabricante do Verisol, viu melhora leve da aparência da celulite, maior nas de peso normal. Nada que permita falar em "reduzir drasticamente" ou eliminar a celulite.' },
+  { q: 'Collagen Vitta previne osteoporose?', a: 'Não há evidência para dizer isso. A prevenção da osteoporose depende de cálcio, vitamina D, exercício e, quando indicado, remédios. Converse com seu médico.' },
+];
+---
+<Article
+  ogImage="/img/collagen-vitta/og-collagen-vitta.jpg"
+  title="Collagen Vitta funciona? O que a ciência diz e o que é exagero"
+  seoTitle="Collagen Vitta funciona? O que esperar"
+  description="Collagen Vitta funciona? O que os estudos mostram sobre colágeno Verisol, ácido hialurônico e biotina para pele, cabelo e unhas, e o que é exagero na página."
+  kicker="Funciona?"
+  lead="O Collagen Vitta usa o colágeno com mais estudos para a pele, mas não diz em que quantidade. E várias promessas da página, como firmar os seios e rejuvenescer 90%, não têm nenhuma base."
+  crumbs={[{ name: 'Collagen Vitta', href: '/collagen-vitta/' }, { name: 'Funciona?', href: '/collagen-vitta/funciona/' }]}
+  faq={faq}
+  related={collagenvittaPages}
+  sources={[
+    { label: 'Página oficial do Collagen Vitta (consultada em 21/10/2026)', url: 'https://collagennatturabio.com.br/collagen-vitta-b/' },
+    { label: 'Proksch E et al. Peptídeos bioativos de colágeno (Verisol) e rugas. Skin Pharmacol Physiol, 2014', url: 'https://pubmed.ncbi.nlm.nih.gov/24401291/' },
+    { label: 'Myung SK, Park Y. Meta-análise de 23 ensaios sobre colágeno e envelhecimento da pele. Am J Med, 2025 (reportagem NutraIngredients)', url: 'https://nutraingredients.com/Article/2025/08/26/industry-reacts-to-meta-analysis-concluding-collagen-supplements-show-no-proven-benefit-for-skin-aging' },
+    { label: 'Band: revisão de 16 meta-análises sobre colágeno e pele (Aesthetic Surgery Journal Open Forum, 2026)', url: 'https://www.band.com.br/saude/noticias/colageno-melhora-elasticidade-da-pele-mas-nao-reduz-rugas-aponta-estudo-202602271448' },
+    { label: 'NIH Office of Dietary Supplements: Vitamin A, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/VitaminA-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Talvez um pouco, para hidratação e elasticidade da pele, e só se a dose de Verisol chegar a 2,5 g por dia, o que a página não informa. As revisões mais amplas não confirmam efeito sobre rugas. Firmar os seios, acabar com a celulite, fazer o cabelo crescer e prevenir osteoporose são promessas sem base.</p>
+  </div>
+
+  <h2>O que se sabe de cada ingrediente</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Ingrediente</th><th>O que os estudos mostram</th></tr></thead>
+      <tbody>
+        <tr><td>Colágeno Verisol</td><td>Com 2,5 g por dia, pele mais hidratada e elástica, e menos rugas ao redor dos olhos em 8 semanas, em estudos ligados ao fabricante. A dose do Collagen Vitta não é informada</td></tr>
+        <tr><td>Colágeno tipo II</td><td>Estudado para articulações, com 40 mg por dia da forma não desnaturada. Não tem efeito na pele</td></tr>
+        <tr><td>Ácido hialurônico</td><td>Num estudo com 120 mg por dia, rugas um pouco menores em 8 a 12 semanas. Dose aqui não informada</td></tr>
+        <tr><td>Biotina</td><td>Só ajuda cabelo e unhas de quem tem falta, o que é raro</td></tr>
+        <tr><td>Vitamina C</td><td>O corpo precisa dela para formar colágeno. Ajuda se faltar na alimentação</td></tr>
+        <tr><td>Retinol (vitamina A)</td><td>Na pele, o retinol que funciona é o de creme. Por via oral, só ajuda se faltar, e em excesso faz mal</td></tr>
+        <tr><td>Silício, ácido pantotênico e vitamina K2</td><td>Sem evidência relevante para a pele nessas formas</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Por que a ciência do colágeno está dividida</h2>
+  <ul>
+    <li><strong>Revisão de 2026, com 16 meta-análises e 113 ensaios:</strong> melhora de elasticidade e hidratação, sem efeito sobre rugas. Muitas análises tinham qualidade baixa.</li>
+    <li><strong>Meta-análise de 2025, com 23 ensaios:</strong> os estudos pagos pela indústria mostraram benefício; os independentes, não. Entidades do setor contestaram a metodologia.</li>
+  </ul>
+
+  <h2>O que é exagero na página de vendas</h2>
+  <ul>
+    <li><strong>"Rejuvenescendo a pele em até 90%":</strong> não há estudo que sustente esse número.</li>
+    <li><strong>"Deixará seus seios firmes", "acabando com o efeito seios caídos":</strong> nenhum suplemento faz isso.</li>
+    <li><strong>"Reduzindo drasticamente as celulites":</strong> o efeito visto em estudo foi leve, depois de 6 meses.</li>
+    <li><strong>"Prevenção de doenças como a osteoporose":</strong> sem evidência para colágeno.</li>
+    <li><strong>"Resultado surpreendente e definitivo" em 5 meses:</strong> nos estudos, parte do efeito some semanas depois de parar.</li>
+  </ul>
+
+  <h2>Para quem pode fazer sentido</h2>
+  <p>Para quem quer experimentar colágeno para a pele e aceita não saber as doses. Se quiser conferir quanto Verisol está tomando, o <a href="/colageno-natures-prime/">Colágeno Nature's Prime</a> informa 2,5 g por dose. Protetor solar e não fumar continuam fazendo mais pela pele do que qualquer suplemento.</p>
+
+  <BuyBox compact produto="Collagen Vitta" href={p.link} title="Collagen Vitta no site oficial" text="A partir de R$ 157 o pote de 30 dias." cta="Ver kits e preços" />
+</Article>

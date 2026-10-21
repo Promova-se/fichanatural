@@ -1,0 +1,57 @@
+---
+import Article from '../../../layouts/Article.astro';
+import KitCards from '../../../components/KitCards.astro';
+import { collagenvitta as p, collagenvittaPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Onde comprar Collagen Vitta original?', a: 'No site oficial, com pagamento pela Braip. A empresa diz que não vende no Mercado Livre e não se responsabiliza por compras em outros sites. Existem várias páginas com o nome do produto: confira se o pagamento é pela Braip.' },
+  { q: 'Collagen Vitta tem garantia?', a: 'A página fala em 30 dias para pedir o dinheiro de volta se não perceber melhora. O cadastro do produto na Braip, porém, indica 7 dias de garantia. Se for pedir reembolso, faça isso dentro de 7 dias para não ter discussão.' },
+  { q: 'Quanto tempo demora a entrega do Collagen Vitta?', a: 'Até 20 dias úteis pelo PAC, que é o frete grátis. A empresa diz que a maioria chega antes de 15 dias. Dá para pagar Sedex para receber mais rápido.' },
+];
+---
+<Article
+  ogImage="/img/collagen-vitta/og-collagen-vitta.jpg"
+  title="Onde comprar Collagen Vitta original: preço, entrega e garantia"
+  seoTitle="Onde comprar Collagen Vitta e preço"
+  description="Onde comprar Collagen Vitta original, preço de cada kit, quanto sai por mês, o brinde Collagen Osteo, prazo de entrega e a diferença entre as garantias."
+  kicker="Compra segura"
+  lead="O Collagen Vitta é vendido pelo site oficial, com pagamento pela Braip. Antes de comprar, vale saber que a garantia anunciada na página não é a mesma do cadastro do produto."
+  crumbs={[{ name: 'Collagen Vitta', href: '/collagen-vitta/' }, { name: 'Onde comprar', href: '/collagen-vitta/onde-comprar/' }]}
+  faq={faq}
+  related={collagenvittaPages}
+  sources={[
+    { label: 'Página oficial do Collagen Vitta e checkouts da Braip (consultados em 21/10/2026)', url: 'https://collagennatturabio.com.br/collagen-vitta-b/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>No site oficial: R$ 157 por 1 pote (30 dias), R$ 227 por 2, R$ 297 por 3 e R$ 477 por 5, que sai a R$ 95 por mês. Os kits de 2 potes ou mais trazem 1 Collagen Osteo de brinde. Frete grátis pelo PAC, com entrega em até 20 dias úteis. A página promete 30 dias de garantia, mas o cadastro na Braip diz 7 dias.</p>
+  </div>
+
+  <h2>Escolha o kit</h2>
+  <KitCards kits={p.kits} unit="mês" produto="Collagen Vitta" />
+
+  <h2>Quanto sai por mês</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Kit</th><th>Preço</th><th>Por mês</th><th>Brinde</th></tr></thead>
+      <tbody>
+        <tr><td>1 pote</td><td>R$ 157</td><td>R$ 157</td><td>-</td></tr>
+        <tr><td>2 potes</td><td>R$ 227</td><td>R$ 113,50</td><td>1 Collagen Osteo</td></tr>
+        <tr><td>3 potes</td><td>R$ 297</td><td>R$ 99</td><td>1 Collagen Osteo</td></tr>
+        <tr><td>5 potes</td><td>R$ 477</td><td>R$ 95,40</td><td>1 Collagen Osteo</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Para comparar: o <a href="/colageno-natures-prime/onde-comprar/">Colágeno Nature's Prime</a>, que informa 2,5 g de Verisol por dose, custava R$ 164,90 o pote de 50 dias no site oficial.</p>
+
+  <h2>Garantia: 30 ou 7 dias?</h2>
+  <ol>
+    <li><strong>Na página de vendas:</strong> 30 dias após a compra para pedir o dinheiro de volta se não perceber melhora.</li>
+    <li><strong>No cadastro da Braip:</strong> 7 dias.</li>
+    <li><strong>Como pedir:</strong> pelo e-mail {p.sac} ou pelo telefone {p.phone}. Guarde o número do pedido e faça o pedido por escrito.</li>
+  </ol>
+  <p>Pelo Código de Defesa do Consumidor, compras pela internet podem ser canceladas em até 7 dias após o recebimento. Se tiver dúvida, decida dentro desse prazo.</p>
+
+  <h2>Entrega e pagamento</h2>
+  <p>O produto só é enviado depois da confirmação do pagamento. Frete grátis pelo PAC, em até 20 dias úteis; Sedex pago à parte. Pagamento pela Braip, com cartão (até 12x, com juros de 3,49% ao mês), Pix e boleto. No Reclame Aqui há relatos de atraso na postagem: acompanhe o rastreio.</p>
+</Article>

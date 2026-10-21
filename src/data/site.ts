@@ -528,6 +528,39 @@ export const colagenoPages = [
   { href: '/colageno-natures-prime/e-confiavel/', title: "Colágeno Nature's Prime é confiável? Fabricante e Reclame Aqui", short: 'É confiável?' },
 ];
 
+// Collagen Vitta (Braip, proowwnn), conferido na página de vendas e nos checkouts em 21/10/2026.
+// Produtor na Braip: Naturivale Serviços e Comércio Ltda, CNPJ 37.071.306/0001-49 (Valparaíso de Goiás). A página diz
+// "Distribuído por Natturabio Produtos Naturais, CNPJ 37.971.418/0001-56" (mesma do Vitta Resveratrol).
+// Pote de 300 g, 10 g por dia (30 dias). A página não informa a dose de nenhum ingrediente.
+// Garantia: 30 dias na página, 7 dias no cadastro da Braip. Juros de 3,49% a.m. Kits de 2+ potes trazem 1 Collagen Osteo de brinde.
+// Links oficiais do painel: ev.braip.com/ref?pl={plano}&ck=chexej1m&af=afi4v1p59q. Os 4 mostram "REF.: afi4v1p59q".
+const collagenVittaRef = (plan: string) => `https://ev.braip.com/ref?pl=${plan}&ck=chexej1m&af=afi4v1p59q`;
+export const collagenvitta = {
+  name: 'Collagen Vitta',
+  producer: 'Naturivale Serviços e Comércio Ltda',
+  producerCnpj: '37.071.306/0001-49',
+  distributor: 'Natturabio Produtos Naturais',
+  distributorCnpj: '37.971.418/0001-56',
+  sac: 'sac@natturabio.com.br',
+  phone: '(61) 99427-8736',
+  link: 'https://ev.braip.com/ref?pv=proowwnn&af=afi4v1p59q',
+  ingredients: ['Colágeno Verisol', 'Colágeno tipo II', 'Ácido hialurônico', 'Biotina', 'Ácido pantotênico', 'Silício orgânico', 'Vitamina C', 'Retinol (vitamina A)', 'Vitamina K2'],
+  kits: [
+    { name: '1 pote', qty: '300 g · 30 dias', months: 1, total: 157, installments: '12x de R$ 16,24', plan: collagenVittaRef('pla92oeq') },
+    { name: '2 potes + 1 Osteo', qty: '60 dias · Collagen Osteo de brinde', months: 2, total: 227, installments: '12x de R$ 23,48', plan: collagenVittaRef('pla8gooo') },
+    { name: '3 potes + 1 Osteo', qty: '90 dias · Collagen Osteo de brinde', months: 3, total: 297, installments: '12x de R$ 30,72', plan: collagenVittaRef('plajgkk2') },
+    { name: '5 potes + 1 Osteo', qty: '150 dias · Collagen Osteo de brinde', months: 5, total: 477, installments: '12x de R$ 49,33', plan: collagenVittaRef('pla4wom0') },
+  ],
+};
+
+export const collagenvittaPages = [
+  { href: '/collagen-vitta/', title: 'Collagen Vitta: ficha completa, composição e preço', short: 'Ficha completa' },
+  { href: '/collagen-vitta/funciona/', title: 'Collagen Vitta funciona? O que a ciência diz e o que é exagero', short: 'Funciona?' },
+  { href: '/collagen-vitta/como-tomar/', title: 'Como tomar Collagen Vitta: dose, tempo de uso e quem deve evitar', short: 'Como tomar e cuidados' },
+  { href: '/collagen-vitta/onde-comprar/', title: 'Onde comprar Collagen Vitta original: preço, entrega e garantia', short: 'Onde comprar' },
+  { href: '/collagen-vitta/e-confiavel/', title: 'Collagen Vitta é confiável? Natturabio e Reclame Aqui', short: 'É confiável?' },
+];
+
 export const catalog = [
   { name: 'OzenVitta', href: '/ozenvitta/', pill: 'Emagrecimento', summary: 'Fibras, L-carnitina, laranja moro e cromo em cápsulas.', pages: ozenvittaPages },
   { name: 'ReduPhine Caps', href: '/reduphine-caps/', pill: 'Emagrecimento', summary: 'Spirulina, psyllium, quitosana e cromo, com opção de combo com gotas.', pages: reduphinePages },
@@ -543,6 +576,7 @@ export const catalog = [
   { name: 'Lizz Anté Nutri', href: '/lizz-ante-nutri/', pill: 'Cabelo, pele e unhas', summary: 'Cápsulas da Lizz Anté com biotina, colágeno, silício, zinco e mais 5 ativos.', pages: lizznutriPages },
   { name: 'Kit S.O.S Crescimento', href: '/kit-sos-crescimento/', pill: 'Cabelo', summary: 'Shampoo, máscara e tônico da Lizz Anté para queda e crescimento capilar.', pages: kitsosPages },
   { name: 'Hot Men Caps', href: '/hot-men-caps/', pill: 'Saúde masculina', summary: 'Cápsulas vendidas para desempenho sexual masculino, sem ingredientes na página oficial.', pages: hotmenPages },
+  { name: 'Collagen Vitta', href: '/collagen-vitta/', pill: 'Pele', summary: 'Colágeno Verisol em pó com ácido hialurônico, biotina e vitaminas, da Natturabio, sem doses na página.', pages: collagenvittaPages },
   { name: 'Vitta Resveratrol', href: '/vitta-resveratrol/', pill: 'Pele', summary: 'Colágeno, ácido hialurônico, resveratrol e vitaminas.', pages: resveratrolPages },
 ];
 
