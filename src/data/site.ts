@@ -458,6 +458,8 @@ export const comparePages = [
 ];
 export const ingredientGuides = [
   { href: '/colageno/', title: 'Qual o melhor colágeno? Tipos, doses e como escolher', short: 'Qual colágeno escolher' },
+  { href: '/magnesio/', title: 'Magnésio: qual o melhor tipo, para que serve e quanto tomar', short: 'Qual magnésio escolher' },
+  { href: '/menopausa/', title: 'Suplemento para menopausa funciona? O que ajuda de verdade nos calores', short: 'Menopausa: o que ajuda' },
   { href: '/psyllium/', title: 'Psyllium emagrece? O que é, como tomar e cuidados', short: 'Psyllium emagrece?' },
   { href: '/resveratrol/', title: 'Resveratrol: o que é, para que serve e o que a ciência diz', short: 'Resveratrol: o que é' },
 ];

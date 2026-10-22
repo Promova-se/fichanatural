@@ -1,0 +1,73 @@
+---
+import Article from '../../layouts/Article.astro';
+import { ingredientGuides } from '../../data/site';
+
+const faq = [
+  { q: 'Suplemento para menopausa funciona?', a: 'Para os calores (fogachos), o efeito dos suplementos é pequeno ou não comprovado. A principal sociedade médica de menopausa dos Estados Unidos não recomenda suplementos, ervas nem soja para os calores. Os tratamentos com melhor evidência são a terapia hormonal e alguns remédios sem hormônio, sempre com receita.' },
+  { q: 'Amora miúra ajuda na menopausa?', a: 'Há um estudo brasileiro de mestrado, com 62 mulheres e 60 dias de uso, em que 250 mg de extrato de folha de amora reduziu os sintomas mais que o placebo. É um resultado interessante, mas pequeno, curto e ainda não confirmado por outros estudos.' },
+  { q: 'Isoflavona de soja funciona para os calores?', a: 'Alguns estudos mostram redução pequena dos calores, outros não mostram efeito. Por isso, a The Menopause Society não recomenda produtos de soja para esse fim. Quem tem ou teve câncer de mama deve falar com o médico antes.' },
+  { q: 'O que mais ajuda nos calores sem hormônio?', a: 'Remédios como alguns antidepressivos em dose baixa, gabapentina e o fezolinetante, além de terapia cognitivo-comportamental, hipnose clínica e perda de peso, segundo a posição de 2023 da The Menopause Society. Os remédios exigem receita.' },
+  { q: 'Precisa tomar cálcio e vitamina D na menopausa?', a: 'A perda de massa óssea acelera na menopausa. Cálcio e vitamina D ajudam quando a alimentação não supre a necessidade, junto com exercício com carga. O médico pode pedir densitometria para avaliar os ossos.' },
+];
+
+const related = ingredientGuides;
+---
+<Article
+  ogImage="/img/menopausa/og-menopausa.jpg"
+  title="Suplemento para menopausa funciona? O que ajuda de verdade nos calores"
+  seoTitle="Suplemento para menopausa funciona? O que ajuda"
+  description="Suplemento para menopausa funciona? O que a ciência diz sobre amora miúra, isoflavona de soja, cimicífuga e vitaminas, e quais tratamentos têm melhor evidência para os calores."
+  kicker="Guia"
+  lead="A maioria dos suplementos vendidos para menopausa promete acabar com os calores. A ciência mostra um quadro mais modesto. Reunimos o que funciona, o que talvez ajude e o que não tem base."
+  crumbs={[{ name: 'Guias', href: '/guias/' }, { name: 'Menopausa', href: '/menopausa/' }]}
+  faq={faq}
+  related={related}
+  sources={[
+    { label: 'The Menopause Society (NAMS): posição de 2023 sobre tratamentos sem hormônio, comunicado oficial', url: 'https://menopause.org/wp-content/uploads/press-release/nonhormone-therapy-position-statement-release.pdf' },
+    { label: 'Costa JPL. Efeito do extrato de Morus nigra L. em sintomas vasomotores no climatério: estudo randomizado, placebo-controlado. Dissertação, UFMA, 2018', url: 'https://bdtd.ibict.br/vufind/Record/UFMA_14976962775c4b484b6438698247d307' },
+    { label: 'NCCIH: Menopausal symptoms, in depth', url: 'https://www.nccih.nih.gov/health/menopausal-symptoms-in-depth' },
+    { label: 'NCCIH: Black cohosh', url: 'https://www.nccih.nih.gov/health/black-cohosh' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Para os calores da menopausa, os suplementos têm efeito pequeno ou não comprovado. A The Menopause Society, referência no assunto, não recomenda suplementos, ervas nem soja. O que mais funciona é a terapia hormonal, para quem pode usar, e alguns remédios sem hormônio. A amora miúra tem um estudo brasileiro pequeno com resultado positivo, ainda sem confirmação. Converse com seu ginecologista antes de escolher.</p>
+  </div>
+
+  <h2>O que a ciência diz de cada opção</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Opção</th><th>Evidência para os calores</th></tr></thead>
+      <tbody>
+        <tr><td>Terapia hormonal</td><td>A mais eficaz. Exige avaliação médica, porque não é indicada para todas as mulheres</td></tr>
+        <tr><td>Remédios sem hormônio (alguns antidepressivos em dose baixa, gabapentina, fezolinetante)</td><td>Boa evidência; recomendados pela The Menopause Society. Exigem receita</td></tr>
+        <tr><td>Terapia cognitivo-comportamental, hipnose clínica, perda de peso</td><td>Recomendadas pela The Menopause Society</td></tr>
+        <tr><td>Isoflavona de soja</td><td>Resultados inconsistentes, efeito pequeno quando aparece. Não recomendada para os calores</td></tr>
+        <tr><td>Cimicífuga (black cohosh)</td><td>Estudos conflitantes. Há relatos raros de lesão no fígado</td></tr>
+        <tr><td>Amora miúra (folha de Morus nigra)</td><td>Um estudo brasileiro com 62 mulheres e 60 dias mostrou melhora com 250 mg de extrato. Precisa de confirmação</td></tr>
+        <tr><td>Vitaminas e minerais (E, complexo B, magnésio)</td><td>Sem efeito comprovado nos calores. Ajudam se houver falta</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Por que os suplementos parecem funcionar</h2>
+  <p>Nos estudos sobre calores, o grupo que toma placebo costuma melhorar bastante, às vezes 30% ou mais, porque os sintomas variam e tendem a diminuir com o tempo. Por isso, relatos de "melhorei muito" não bastam: só a comparação com placebo mostra o efeito real. No estudo da amora miúra, por exemplo, o grupo placebo também melhorou, só que menos.</p>
+
+  <h2>Como avaliar um suplemento para menopausa</h2>
+  <ol>
+    <li><strong>Veja a dose de cada ingrediente.</strong> Sem a quantidade, não dá para comparar com os estudos.</li>
+    <li><strong>Desconfie de promessas de "acabar com os calores" ou "equilibrar os hormônios".</strong> Nenhum suplemento faz isso de forma comprovada.</li>
+    <li><strong>Confira a empresa.</strong> CNPJ, atendimento e reputação no Reclame Aqui.</li>
+    <li><strong>Dê prazo.</strong> Os estudos avaliam o efeito depois de 6 a 12 semanas. Se não mudar nada, não vale insistir.</li>
+    <li><strong>Conte ao médico.</strong> Especialmente se você tem ou teve câncer de mama, problema no fígado ou usa remédios contínuos.</li>
+  </ol>
+
+  <h2>Além dos calores: ossos e coração</h2>
+  <p>A queda do estrogênio acelera a perda de massa óssea e muda o risco cardiovascular. Por isso, a menopausa é uma boa hora para rever cálcio e vitamina D na alimentação, praticar exercício com carga e fazer os exames que o médico indicar. Para colágeno e ossos, veja o nosso <a href="/colageno/">guia de colágeno</a>.</p>
+
+  <h2>Quando procurar o médico</h2>
+  <ul>
+    <li>Calores que atrapalham o sono, o trabalho ou o humor.</li>
+    <li>Sangramento depois de 12 meses sem menstruar.</li>
+    <li>Tristeza persistente, ansiedade ou insônia.</li>
+  </ul>
+</Article>

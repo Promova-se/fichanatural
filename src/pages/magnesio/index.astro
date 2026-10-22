@@ -1,0 +1,96 @@
+---
+import Article from '../../layouts/Article.astro';
+import { ingredientGuides } from '../../data/site';
+
+const faq = [
+  { q: 'Qual o melhor tipo de magnésio?', a: 'Não existe um melhor para tudo. Citrato, glicinato (ou bisglicinato) e cloreto são bem absorvidos. O óxido é barato e tem pouco magnésio absorvido, mas funciona como laxante. Para a maioria das pessoas, o que importa mais é a quantidade de magnésio elementar e a tolerância do intestino.' },
+  { q: 'Quanto magnésio tomar por dia?', a: 'A necessidade total de um adulto é de cerca de 310 a 420 mg por dia, somando alimentação e suplemento. O limite seguro para o magnésio de suplementos é de 350 mg por dia de magnésio elementar, salvo orientação médica.' },
+  { q: 'Magnésio ajuda a dormir?', a: 'A evidência é fraca. Alguns estudos pequenos em idosos mostram melhora leve no sono, mas com qualidade baixa. Pode valer a pena para quem tem falta de magnésio, não como remédio para insônia.' },
+  { q: 'Magnésio acaba com cãibra?', a: 'Para a cãibra comum de pessoas mais velhas, uma revisão Cochrane concluiu que o magnésio provavelmente não ajuda. Na gravidez, os estudos são conflitantes. Cãibras frequentes merecem avaliação médica.' },
+  { q: 'O que é "magnésio elementar"?', a: 'É a quantidade de magnésio de verdade dentro do composto. Em 1 g de citrato de magnésio, por exemplo, só cerca de 15% a 16% é magnésio. Muitos rótulos destacam o peso do composto, que parece maior. Procure na tabela nutricional o valor de "magnésio" em mg.' },
+  { q: 'Quem não deve tomar magnésio?', a: 'Quem tem doença nos rins deve falar com o médico antes, porque o rim é quem elimina o excesso. O magnésio também atrapalha a absorção de alguns antibióticos e de remédios para osteoporose: tome com pelo menos 2 horas de diferença.' },
+];
+
+const related = ingredientGuides;
+---
+<Article
+  ogImage="/img/magnesio/og-magnesio.jpg"
+  title="Magnésio: qual o melhor tipo, para que serve e quanto tomar"
+  seoTitle="Magnésio: qual o melhor tipo e quanto tomar"
+  description="Qual magnésio escolher: diferença entre citrato, glicinato, cloreto, óxido e dimalato, quanto tomar, o que a ciência diz para sono, cãibra e enxaqueca, e quem deve evitar."
+  kicker="Guia"
+  lead="Magnésio virou um dos suplementos mais vendidos do Brasil, com dezenas de tipos e combinações. Explicamos o que muda de um tipo para outro, quanto tomar e para que ele realmente tem evidência."
+  crumbs={[{ name: 'Guias', href: '/guias/' }, { name: 'Magnésio', href: '/magnesio/' }]}
+  faq={faq}
+  related={related}
+  sources={[
+    { label: 'NIH Office of Dietary Supplements: Magnesium, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/' },
+    { label: 'Garrison SR et al. Magnesium for skeletal muscle cramps. Cochrane Database Syst Rev, 2020', url: 'https://cochranelibrary.com/cdsr/doi/10.1002/14651858.CD009402.pub3/information' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Para a maioria das pessoas, citrato, glicinato (bisglicinato) ou cloreto de magnésio são boas escolhas, por serem bem absorvidos. O óxido serve mais como laxante. Mais importante que o tipo é a dose: some o magnésio da comida e do suplemento e não passe de 350 mg por dia de magnésio elementar em suplementos sem orientação. O magnésio tem evidência para corrigir falta, para intestino preso e, em parte, para prevenir enxaqueca. Para cãibra comum e insônia, a evidência é fraca.</p>
+  </div>
+
+  <h2>Os tipos de magnésio</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Tipo</th><th>Absorção</th><th>Observações</th></tr></thead>
+      <tbody>
+        <tr><td>Citrato</td><td>Boa</td><td>Dos mais estudados. Em doses maiores, solta o intestino</td></tr>
+        <tr><td>Glicinato ou bisglicinato</td><td>Boa</td><td>Costuma ser o mais leve para o estômago e o intestino</td></tr>
+        <tr><td>Cloreto (inclusive o "P.A.")</td><td>Boa</td><td>Barato e popular no Brasil. Gosto amargo e efeito laxativo</td></tr>
+        <tr><td>Óxido</td><td>Baixa</td><td>Muito magnésio por grama, mas pouco é absorvido. Usado como laxante</td></tr>
+        <tr><td>Dimalato (malato)</td><td>Boa</td><td>Vendido para cansaço e dor muscular, com poucos estudos em pessoas</td></tr>
+        <tr><td>Treonato</td><td>Pouco estudada</td><td>Vendido para memória com base em estudos em animais</td></tr>
+        <tr><td>Combinações ("3, 6 ou 7 magnésios")</td><td>Depende da mistura</td><td>Não há estudo mostrando que misturar tipos seja melhor que usar um tipo bem absorvido</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Na prática, as diferenças de absorção entre os tipos bem absorvidos são pequenas. Escolha pelo preço por miligrama de magnésio elementar e pela tolerância do seu intestino.</p>
+
+  <h2>Quanto tomar</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Quem</th><th>Necessidade diária total</th></tr></thead>
+      <tbody>
+        <tr><td>Homens adultos</td><td>400 a 420 mg</td></tr>
+        <tr><td>Mulheres adultas</td><td>310 a 320 mg</td></tr>
+        <tr><td>Gestantes</td><td>350 a 360 mg</td></tr>
+        <tr><td>Limite para suplementos (adultos)</td><td>350 mg de magnésio elementar por dia</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Esses valores somam comida e suplemento, e são do órgão de saúde dos Estados Unidos (NIH). Feijão, castanhas, sementes, folhas verdes escuras, aveia e chocolate amargo têm bastante magnésio. Quem come pouco desses alimentos tem mais chance de precisar de suplemento.</p>
+
+  <h2>Para que o magnésio tem evidência</h2>
+  <ul>
+    <li><strong>Corrigir falta de magnésio:</strong> é a indicação mais clara. A falta é mais comum em quem bebe muito álcool, tem diabetes descompensado, problemas intestinais ou usa alguns diuréticos e remédios para estômago (omeprazol e similares) por muito tempo.</li>
+    <li><strong>Intestino preso:</strong> o óxido e o citrato de magnésio funcionam como laxantes.</li>
+    <li><strong>Enxaqueca:</strong> doses de 400 a 600 mg por dia têm alguma evidência para reduzir crises, o que deve ser combinado com o médico, porque passa do limite comum.</li>
+    <li><strong>Pressão arterial:</strong> efeito pequeno, de poucos pontos, em alguns estudos.</li>
+  </ul>
+
+  <h2>Onde a evidência é fraca</h2>
+  <ul>
+    <li><strong>Cãibra:</strong> para a cãibra comum de pessoas mais velhas, uma revisão Cochrane de 2020 concluiu que o magnésio provavelmente não traz benefício relevante. Na gravidez, os resultados são conflitantes.</li>
+    <li><strong>Sono e ansiedade:</strong> estudos pequenos e de baixa qualidade. Pode ajudar quem tem falta, mas não substitui tratamento.</li>
+    <li><strong>Memória, energia e "desinflamar":</strong> promessas comuns em anúncios, sem estudos sólidos em pessoas.</li>
+  </ul>
+
+  <h2>Como ler o rótulo</h2>
+  <ol>
+    <li>Procure na tabela nutricional a linha "magnésio", em mg. É o magnésio elementar, o número que importa.</li>
+    <li>Desconfie do número grande na frente do pote: muitas vezes é o peso do composto, não do magnésio.</li>
+    <li>Calcule quantas cápsulas são necessárias para chegar à dose que você quer, e o custo por dia.</li>
+    <li>Confira se não há outros ingredientes desnecessários que encarecem o produto.</li>
+  </ol>
+
+  <h2>Cuidados</h2>
+  <ul>
+    <li><strong>Diarreia</strong> é o efeito colateral mais comum. Se acontecer, reduza a dose ou troque por glicinato.</li>
+    <li><strong>Doença nos rins:</strong> só com orientação médica. O excesso de magnésio pode se acumular.</li>
+    <li><strong>Remédios:</strong> o magnésio reduz a absorção de antibióticos como ciprofloxacino e tetraciclinas e de remédios para osteoporose (alendronato). Tome com pelo menos 2 horas de diferença.</li>
+    <li>Fraqueza, sonolência ou pressão baixa depois de começar o suplemento são sinais para parar e procurar atendimento.</li>
+  </ul>
+</Article>
