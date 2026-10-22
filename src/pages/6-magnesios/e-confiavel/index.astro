@@ -1,0 +1,73 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { seismag as p, seismagPages } from '../../../data/site';
+
+const faq = [
+  { q: 'O Empório Terra Nativa é confiável?', a: 'Com ressalvas. A empresa tem CNPJ e endereço em São Paulo, o pagamento passa pela Braip e o rótulo informa a dose. Mas a empresa tem pouco histórico, 4 reclamações no Reclame Aqui e só respondeu 1, depois de muito tempo.' },
+  { q: '6 Magnésios é golpe?', a: 'Não há sinais de golpe: empresa identificada, pagamento pela Braip e rótulo com tabela nutricional. Os pontos de atenção são números de vendas sem fonte e relatos de atraso e falta de resposta.' },
+  { q: '6 Magnésios é aprovado pela Anvisa?', a: 'Suplementos de magnésio, em geral, não precisam de registro na Anvisa, mas precisam seguir as regras de ingredientes e limites. A dose de 260 mg por dia está dentro do que é usual para magnésio.' },
+];
+---
+<Article
+  ogImage="/img/6-magnesios/og-6-magnesios.jpg"
+  title="6 Magnésios Terra Nativa é confiável? Empresa, Anvisa e Reclame Aqui"
+  seoTitle="6 Magnésios Terra Nativa é confiável? Reclame Aqui"
+  description="O 6 Magnésios do Empório Terra Nativa é confiável? Quem vende, o CNPJ, o que dizem as reclamações no Reclame Aqui e os números da página de vendas."
+  kicker="Reputação"
+  lead="O Empório Terra Nativa informa CNPJ, endereço e tabela nutricional. Mas tem pouco histórico, reclamações sem resposta e números de vendas que não dá para conferir."
+  crumbs={[{ name: '6 Magnésios', href: '/6-magnesios/' }, { name: 'É confiável?', href: '/6-magnesios/e-confiavel/' }]}
+  faq={faq}
+  related={seismagPages}
+  sources={[
+    { label: 'Reclame Aqui: Empório Terra Nativa (consultado em 22/10/2026)', url: 'https://www.reclameaqui.com.br/empresa/emporio-terra-nativa-ltda/' },
+    { label: 'Página oficial do 6 Magnésios (consultada em 22/10/2026)', url: 'https://oferta.emporioterranativa.com.br/6magnesios-bp/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Com ressalvas. A empresa é identificada (Empório Terra Nativa Ltda, CNPJ 61.285.739/0001-81, São Paulo) e o produto tem rótulo com dose. Mas no Reclame Aqui há 4 reclamações, sobre atraso, pedido não recebido e falta de contato, e só uma foi respondida. Compre pelo site oficial, pague no cartão e acompanhe o rastreio.</p>
+  </div>
+
+  <h2>Quem vende</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Empresa</th><td>{p.company}</td></tr>
+        <tr><th>CNPJ</th><td>{p.cnpj}</td></tr>
+        <tr><th>Endereço</th><td>Rua George Smith, Lapa, São Paulo (SP)</td></tr>
+        <tr><th>Atendimento</th><td>WhatsApp {p.whatsapp} e {p.sac}</td></tr>
+        <tr><th>Pagamento</th><td>Braip</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>O que aparece no Reclame Aqui</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Reputação</th><td>Sem índice (menos de 10 reclamações avaliadas)</td></tr>
+        <tr><th>Reclamações</th><td>4 entre abril e setembro de 2026</td></tr>
+        <tr><th>Respondidas</th><td>1 (25%), com tempo médio de resposta de 146 dias</td></tr>
+        <tr><th>Assuntos</th><td>Atraso na entrega, pedido não recebido, falta de contato e um pedido de devolução por gravidez</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">Consulta em 22/10/2026.</p>
+
+  <h2>Pontos de atenção na página de vendas</h2>
+  <ul>
+    <li><strong>"94.319+ pedidos entregues por mês":</strong> sem fonte e sem como conferir.</li>
+    <li><strong>Avaliações:</strong> ficam na própria página, com o selo "compra verificada", sem como conferir.</li>
+    <li><strong>Contador de oferta:</strong> "válida até o fim do dia de hoje" aparece em qualquer dia. Não é motivo para decidir com pressa.</li>
+    <li><strong>Promessas:</strong> sono, cãibra, estresse e coração. Veja <a href="/6-magnesios/funciona/">o que a ciência diz</a>.</li>
+  </ul>
+
+  <h2>O que pesa a favor</h2>
+  <ul>
+    <li>CNPJ, endereço e atendimento informados.</li>
+    <li>Tabela nutricional com a quantidade de magnésio, algo que muitos produtos não mostram.</li>
+    <li>A própria página avisa que o produto não é remédio e não trata doenças.</li>
+  </ul>
+
+  <BuyBox compact produto="6 Magnésios" href={p.link} title="6 Magnésios no site oficial" text="A partir de R$ 147,90 o pote de 40 dias." cta="Ver kits e preços" />
+</Article>

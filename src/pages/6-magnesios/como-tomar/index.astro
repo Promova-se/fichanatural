@@ -1,0 +1,64 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { seismag as p, seismagPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Como tomar 6 Magnésios?', a: 'O rótulo indica 3 cápsulas por dia, para adultos a partir de 19 anos. Você pode dividir ao longo do dia, por exemplo 1 cápsula em cada refeição, o que costuma ser mais leve para o intestino.' },
+  { q: 'Qual o melhor horário para tomar magnésio?', a: 'Não há horário comprovadamente melhor. Tomar com as refeições reduz desconforto no estômago. Se a ideia é o sono, muita gente prefere à noite, mas a evidência para sono é fraca.' },
+  { q: 'Posso tomar 6 Magnésios com outros suplementos?', a: 'Sim, mas some o magnésio de todos eles. O limite para magnésio de suplementos é de 350 mg por dia; o 6 Magnésios já entrega 260 mg.' },
+  { q: '6 Magnésios dá diarreia?', a: 'Pode dar, principalmente por causa do óxido e do hidróxido da fórmula. Se acontecer, divida as cápsulas ao longo do dia ou reduza a dose.' },
+];
+---
+<Article
+  ogImage="/img/6-magnesios/og-6-magnesios.jpg"
+  title="Como tomar 6 Magnésios: dose, horário, interações e cuidados"
+  seoTitle="Como tomar 6 Magnésios e cuidados"
+  description="Como tomar 6 Magnésios: dose de 3 cápsulas, melhor horário, intervalo com antibióticos e remédios para osteoporose, efeitos colaterais e quem deve evitar."
+  kicker="Modo de uso"
+  lead="São 3 cápsulas por dia, com 260 mg de magnésio. Os cuidados principais são não somar com outros suplementos de magnésio sem conta e separar dos remédios que o magnésio atrapalha."
+  crumbs={[{ name: '6 Magnésios', href: '/6-magnesios/' }, { name: 'Como tomar', href: '/6-magnesios/como-tomar/' }]}
+  faq={faq}
+  related={seismagPages}
+  sources={[
+    { label: 'Rótulo do 6 Magnésios na página oficial (consultada em 22/10/2026)', url: 'https://oferta.emporioterranativa.com.br/6magnesios-bp/' },
+    { label: 'NIH Office of Dietary Supplements: Magnesium, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>3 cápsulas por dia, de preferência com as refeições. Não some com outros suplementos de magnésio sem fazer a conta (limite de 350 mg por dia). Separe por pelo menos 2 horas de antibióticos como ciprofloxacino e tetraciclinas e de remédios para osteoporose. Quem tem doença nos rins só deve tomar com orientação médica.</p>
+  </div>
+
+  <h2>Dose</h2>
+  <ol>
+    <li>Tome 3 cápsulas por dia, juntas ou divididas nas refeições.</li>
+    <li>Beba com água.</li>
+    <li>Um pote de 120 cápsulas dura 40 dias.</li>
+  </ol>
+
+  <h2>Interações com remédios</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Remédio</th><th>O que fazer</th></tr></thead>
+      <tbody>
+        <tr><td>Antibióticos (ciprofloxacino, levofloxacino, tetraciclinas)</td><td>Tome o antibiótico 2 horas antes ou 4 a 6 horas depois do magnésio</td></tr>
+        <tr><td>Remédios para osteoporose (alendronato e similares)</td><td>Separe por pelo menos 2 horas</td></tr>
+        <tr><td>Remédio para tireoide (levotiroxina)</td><td>Separe por pelo menos 4 horas</td></tr>
+        <tr><td>Diuréticos, omeprazol e similares</td><td>Podem alterar o magnésio do corpo. Converse com o médico</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Quem deve evitar ou falar com o médico antes</h2>
+  <ul>
+    <li><strong>Quem tem doença nos rins:</strong> o magnésio pode se acumular.</li>
+    <li><strong>Gestantes e lactantes</strong> (orientação da própria página).</li>
+    <li><strong>Menores de 19 anos:</strong> o rótulo indica o produto a partir dessa idade.</li>
+    <li>Quem usa remédios contínuos.</li>
+  </ul>
+
+  <h2>Efeitos colaterais</h2>
+  <p>O mais comum é diarreia ou intestino solto, por causa do óxido e do hidróxido de magnésio. Náusea e cólica também podem aparecer. Fraqueza, sonolência, pressão baixa ou batimento irregular são sinais de excesso: pare e procure atendimento.</p>
+
+  <BuyBox compact produto="6 Magnésios" href={p.link} title="6 Magnésios no site oficial" text="Pote de 120 cápsulas para 40 dias, a partir de R$ 147,90." cta="Ver kits e preços" />
+</Article>

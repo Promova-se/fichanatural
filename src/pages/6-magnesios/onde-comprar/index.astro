@@ -1,0 +1,51 @@
+---
+import Article from '../../../layouts/Article.astro';
+import KitCards from '../../../components/KitCards.astro';
+import { seismag as p, seismagPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Onde comprar 6 Magnésios original?', a: 'No site oficial do Empório Terra Nativa, com pagamento pela Braip.' },
+  { q: '6 Magnésios tem garantia?', a: 'A página fala em direito de arrependimento de 7 dias, que é o prazo do Código de Defesa do Consumidor para compras pela internet. Não há garantia de resultado além disso.' },
+  { q: 'O frete do 6 Magnésios é grátis?', a: 'Segundo a página, só em compras acima de R$ 250, ou seja, nos kits de 2 e 3 potes. No pote avulso, o frete é cobrado à parte.' },
+];
+---
+<Article
+  ogImage="/img/6-magnesios/og-6-magnesios.jpg"
+  title="Onde comprar 6 Magnésios: preço, frete, custo por dia e garantia"
+  seoTitle="Onde comprar 6 Magnésios e preço"
+  description="Onde comprar 6 Magnésios do Empório Terra Nativa: preço de cada kit, custo por dia, frete, parcelamento e o prazo de arrependimento de 7 dias."
+  kicker="Compra segura"
+  lead="O 6 Magnésios é vendido pelo site oficial, com pagamento pela Braip. O kit de 2 potes é o que mais compensa: frete grátis e preço menor por cápsula."
+  crumbs={[{ name: '6 Magnésios', href: '/6-magnesios/' }, { name: 'Onde comprar', href: '/6-magnesios/onde-comprar/' }]}
+  faq={faq}
+  related={seismagPages}
+  sources={[
+    { label: 'Página oficial do 6 Magnésios e checkouts da Braip (consultados em 22/10/2026)', url: 'https://oferta.emporioterranativa.com.br/6magnesios-bp/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>No site oficial: R$ 147,90 por 1 pote (mais frete), R$ 257,90 por 2 e R$ 377,90 por 3, os dois últimos com frete grátis. Cada pote dura 40 dias, o que dá de R$ 3,15 a R$ 3,70 por dia. Há 7 dias de direito de arrependimento.</p>
+  </div>
+
+  <h2>Escolha o kit</h2>
+  <KitCards kits={p.kits} produto="6 Magnésios" />
+
+  <h2>Custo por dia</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Kit</th><th>Preço</th><th>Dias</th><th>Por dia</th></tr></thead>
+      <tbody>
+        <tr><td>1 pote</td><td>R$ 147,90 + frete</td><td>40</td><td>R$ 3,70</td></tr>
+        <tr><td>2 potes</td><td>R$ 257,90</td><td>80</td><td>R$ 3,22</td></tr>
+        <tr><td>3 potes</td><td>R$ 377,90</td><td>120</td><td>R$ 3,15</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Para comparar com outros magnésios, faça a mesma conta: preço dividido pelos dias de uso na dose que entrega a quantidade de magnésio que você quer. O <a href="/magnesio/">guia de magnésio</a> explica como ler o rótulo.</p>
+
+  <h2>Arrependimento e devolução</h2>
+  <p>A página garante o direito de arrependimento de 7 dias do Código de Defesa do Consumidor. Para pedir: WhatsApp {p.whatsapp} ou {p.sac}, sempre por escrito e com o número do pedido. No Reclame Aqui há relatos de dificuldade de contato: guarde os comprovantes.</p>
+
+  <h2>Entrega e pagamento</h2>
+  <p>Pagamento pela Braip, com cartão, Pix e boleto. A página anuncia até 3x sem juros; confira as parcelas no checkout. Acompanhe o rastreio: as reclamações registradas falam de atraso e de dificuldade para rastrear o pedido.</p>
+</Article>

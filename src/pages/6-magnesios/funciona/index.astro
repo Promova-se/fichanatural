@@ -1,0 +1,68 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { seismag as p, seismagPages } from '../../../data/site';
+
+const faq = [
+  { q: '6 Magnésios funciona para cãibra?', a: 'Para a cãibra comum de pessoas mais velhas, uma revisão Cochrane de 2020 concluiu que o magnésio provavelmente não traz benefício relevante. Na gravidez, os estudos são conflitantes. Se as cãibras vêm de falta de magnésio, aí sim pode ajudar.' },
+  { q: '6 Magnésios ajuda a dormir?', a: 'A evidência é fraca: estudos pequenos, principalmente em idosos, mostram melhora leve. Pode ajudar quem tem falta de magnésio, mas não é tratamento para insônia.' },
+  { q: 'Seis formas de magnésio são melhores que uma?', a: 'Não há estudo comparando misturas com uma forma só. Todas liberam o mesmo mineral no corpo; o que muda é quanto é absorvido e o efeito no intestino. Uma forma bem absorvida, como o bisglicinato ou o citrato, já entrega o magnésio.' },
+];
+---
+<Article
+  ogImage="/img/6-magnesios/og-6-magnesios.jpg"
+  title="6 Magnésios funciona? Sono, cãibra, estresse e o que a ciência diz"
+  seoTitle="6 Magnésios funciona? O que esperar"
+  description="6 Magnésios funciona? O que os estudos mostram sobre magnésio para cãibra, sono, estresse e coração, e se misturar seis formas faz diferença."
+  kicker="Funciona?"
+  lead="O 6 Magnésios entrega uma dose adequada de magnésio. A pergunta é o que o magnésio faz de verdade, e a resposta é mais modesta do que a página de vendas sugere."
+  crumbs={[{ name: '6 Magnésios', href: '/6-magnesios/' }, { name: 'Funciona?', href: '/6-magnesios/funciona/' }]}
+  faq={faq}
+  related={seismagPages}
+  sources={[
+    { label: 'Página oficial do 6 Magnésios (consultada em 22/10/2026)', url: 'https://oferta.emporioterranativa.com.br/6magnesios-bp/' },
+    { label: 'Garrison SR et al. Magnesium for skeletal muscle cramps. Cochrane Database Syst Rev, 2020', url: 'https://cochranelibrary.com/cdsr/doi/10.1002/14651858.CD009402.pub3/information' },
+    { label: 'NIH Office of Dietary Supplements: Magnesium, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Funciona para repor magnésio, com 260 mg por dia. Para quem não tem falta, os efeitos em sono, estresse e cãibra são pequenos ou não comprovados: para a cãibra comum de pessoas mais velhas, a principal revisão concluiu que o magnésio provavelmente não ajuda. E não há estudo mostrando que misturar seis formas seja melhor que usar uma.</p>
+  </div>
+
+  <h2>A promessa de cada forma</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Forma</th><th>A página diz</th><th>O que se sabe</th></tr></thead>
+      <tbody>
+        <tr><td>Bisglicinato quelato</td><td>Sono</td><td>Bem absorvido e leve para o intestino. Não há estudo mostrando que melhore o sono mais que outras formas</td></tr>
+        <tr><td>Malato</td><td>Energia</td><td>Bem absorvido. Estudos sobre cansaço e dor muscular são poucos e pequenos</td></tr>
+        <tr><td>Óxido</td><td>Intestino</td><td>Pouco absorvido; age como laxante. Isso é verdade</td></tr>
+        <tr><td>Hidróxido</td><td>Digestão</td><td>Usado como antiácido e laxante (o "leite de magnésia")</td></tr>
+        <tr><td>Citrato malato</td><td>Cãibras e coração</td><td>Bem absorvido. Para cãibra comum, magnésio de qualquer forma mostrou pouco ou nenhum efeito</td></tr>
+        <tr><td>Taurato</td><td>Coração</td><td>Estudos principalmente em animais</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>No corpo, todas essas formas liberam o mesmo mineral. A ideia de que cada uma "age em um ponto diferente" não tem comprovação em pessoas.</p>
+
+  <h2>O que o magnésio faz de verdade</h2>
+  <ul>
+    <li><strong>Corrige a falta de magnésio,</strong> mais comum em quem come pouco feijão, castanhas e verduras, bebe muito álcool, tem diabetes descompensado ou usa omeprazol e diuréticos por muito tempo.</li>
+    <li><strong>Solta o intestino,</strong> especialmente as formas óxido, hidróxido e citrato.</li>
+    <li><strong>Pode reduzir crises de enxaqueca,</strong> em doses maiores, com orientação médica.</li>
+    <li><strong>Reduz um pouco a pressão arterial</strong> em alguns estudos.</li>
+  </ul>
+
+  <h2>O que é exagero na página de vendas</h2>
+  <ul>
+    <li><strong>"Age no sono, nas câimbras, no estresse e no coração ao mesmo tempo":</strong> a evidência para cada um desses pontos é fraca ou ausente em quem não tem falta de magnésio.</li>
+    <li><strong>"As 6 formas mais estudadas":</strong> taurato e malato têm poucos estudos em pessoas, e o óxido é estudado mais como laxante.</li>
+    <li><strong>"94.319 pedidos entregues por mês" e "97% de satisfação":</strong> números sem fonte, que não dá para conferir.</li>
+    <li><strong>"Avaliações reais de clientes verificados":</strong> as avaliações estão na própria página, sem como conferir.</li>
+  </ul>
+
+  <h2>Para quem pode fazer sentido</h2>
+  <p>Para quem quer suplementar magnésio, especialmente se a alimentação é pobre nele, e prefere uma dose já pronta de 260 mg. Quem tem intestino sensível pode estranhar o óxido e o hidróxido da fórmula. Para entender os tipos e escolher, veja o <a href="/magnesio/">guia de magnésio</a>.</p>
+
+  <BuyBox compact produto="6 Magnésios" href={p.link} title="6 Magnésios no site oficial" text="A partir de R$ 147,90 o pote de 40 dias." cta="Ver kits e preços" />
+</Article>

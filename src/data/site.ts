@@ -589,6 +589,35 @@ export const collagenosteoPages = [
   { href: '/collagen-osteo/e-confiavel/', title: 'Collagen Osteo é confiável? Empresa, Anvisa e Reclame Aqui', short: 'É confiável?' },
 ];
 
+// 6 Magnésios (6MAG) do Empório Terra Nativa (Braip, pronnj26), conferido na página, no rótulo e nos checkouts em 22/10/2026.
+// Empório Terra Nativa Ltda, CNPJ 61.285.739/0001-81, São Paulo (SP). Comissão fixa (R$ 67,90 no pote avulso). Cookie 90 dias. Garantia 7 dias.
+// Rótulo: 3 cápsulas (1,5 g) = 260 mg de magnésio (62% VD); 40 porções por pote de 120 cápsulas. Formas: bisglicinato quelato, malato,
+// óxido, hidróxido, citrato malato e taurato. A página anuncia 3x sem juros e frete grátis acima de R$ 250.
+// Links oficiais: ev.braip.com/ref?pl={plano}&ck={checkout}&af=afizj2vn9n (cada plano tem um checkout). Os 3 mostram "REF.: afizj2vn9n".
+const magRef = (plan: string, ck: string) => `https://ev.braip.com/ref?pl=${plan}&ck=${ck}&af=afizj2vn9n`;
+export const seismag = {
+  name: '6 Magnésios',
+  fullName: '6 Magnésios (6MAG) Empório Terra Nativa',
+  company: 'Empório Terra Nativa Ltda',
+  cnpj: '61.285.739/0001-81',
+  sac: 'emporioterranativa@gmail.com',
+  whatsapp: '(11) 92154-0956',
+  link: 'https://ev.braip.com/ref?pv=pronnj26&af=afizj2vn9n',
+  kits: [
+    { name: '1 pote', qty: '120 cápsulas · 40 dias', months: 1, total: 147.9, installments: '3x de R$ 49,30 (anunciado)', plan: magRef('plaq4xk0', 'che4zovd') },
+    { name: '2 potes', qty: '240 cápsulas · 80 dias · frete grátis', months: 2, total: 257.9, installments: '3x de R$ 85,97 (anunciado)', plan: magRef('plajewkr', 'chew0dv1') },
+    { name: '3 potes', qty: '360 cápsulas · 120 dias · frete grátis', months: 3, total: 377.9, installments: '3x de R$ 125,97 (anunciado)', plan: magRef('plan4rkz', 'cherkndz') },
+  ],
+};
+
+export const seismagPages = [
+  { href: '/6-magnesios/', title: '6 Magnésios Terra Nativa: ficha completa, dose e preço', short: 'Ficha completa' },
+  { href: '/6-magnesios/funciona/', title: '6 Magnésios funciona? Sono, cãibra e o que a ciência diz', short: 'Funciona?' },
+  { href: '/6-magnesios/como-tomar/', title: 'Como tomar 6 Magnésios: dose, horário e cuidados', short: 'Como tomar e cuidados' },
+  { href: '/6-magnesios/onde-comprar/', title: 'Onde comprar 6 Magnésios: preço, frete e garantia', short: 'Onde comprar' },
+  { href: '/6-magnesios/e-confiavel/', title: '6 Magnésios Terra Nativa é confiável? Empresa e Reclame Aqui', short: 'É confiável?' },
+];
+
 export const catalog = [
   { name: 'OzenVitta', href: '/ozenvitta/', pill: 'Emagrecimento', summary: 'Fibras, L-carnitina, laranja moro e cromo em cápsulas.', pages: ozenvittaPages },
   { name: 'ReduPhine Caps', href: '/reduphine-caps/', pill: 'Emagrecimento', summary: 'Spirulina, psyllium, quitosana e cromo, com opção de combo com gotas.', pages: reduphinePages },
@@ -604,6 +633,7 @@ export const catalog = [
   { name: 'Lizz Anté Nutri', href: '/lizz-ante-nutri/', pill: 'Cabelo, pele e unhas', summary: 'Cápsulas da Lizz Anté com biotina, colágeno, silício, zinco e mais 5 ativos.', pages: lizznutriPages },
   { name: 'Kit S.O.S Crescimento', href: '/kit-sos-crescimento/', pill: 'Cabelo', summary: 'Shampoo, máscara e tônico da Lizz Anté para queda e crescimento capilar.', pages: kitsosPages },
   { name: 'Hot Men Caps', href: '/hot-men-caps/', pill: 'Saúde masculina', summary: 'Cápsulas vendidas para desempenho sexual masculino, sem ingredientes na página oficial.', pages: hotmenPages },
+  { name: '6 Magnésios', href: '/6-magnesios/', pill: 'Minerais', summary: 'Cápsulas com 6 formas de magnésio, 260 mg por dose, do Empório Terra Nativa.', pages: seismagPages },
   { name: 'Collagen Osteo', href: '/collagen-osteo/', pill: 'Articulações', summary: 'Gotas da Natturabio com colágeno tipo II, curcumina, vitaminas D3 e K2 e magnésio, sem doses na página.', pages: collagenosteoPages },
   { name: 'Collagen Vitta', href: '/collagen-vitta/', pill: 'Pele', summary: 'Colágeno Verisol em pó com ácido hialurônico, biotina e vitaminas, da Natturabio, sem doses na página.', pages: collagenvittaPages },
   { name: 'Vitta Resveratrol', href: '/vitta-resveratrol/', pill: 'Pele', summary: 'Colágeno, ácido hialurônico, resveratrol e vitaminas.', pages: resveratrolPages },

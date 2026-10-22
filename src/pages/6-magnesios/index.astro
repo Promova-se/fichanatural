@@ -1,0 +1,88 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import { seismag as p, seismagPages } from '../../data/site';
+
+const faq = [
+  { q: 'O que é o 6 Magnésios?', a: 'É um suplemento em cápsulas do Empório Terra Nativa, vendido como 6MAG, com seis formas de magnésio: bisglicinato quelato, malato, óxido, hidróxido, citrato malato e taurato. O pote tem 120 cápsulas, e a dose é de 3 cápsulas por dia.' },
+  { q: 'Quanto magnésio tem o 6 Magnésios?', a: 'Segundo a tabela nutricional, 3 cápsulas (1,5 g) têm 260 mg de magnésio, 62% do valor diário. É uma dose comum de suplemento, abaixo do limite de 350 mg por dia para magnésio de suplementos.' },
+  { q: 'Quanto custa o 6 Magnésios?', a: 'Nos checkouts de 22/10/2026: 1 pote por R$ 147,90, 2 potes por R$ 257,90 e 3 potes por R$ 377,90. A página anuncia frete grátis acima de R$ 250 e parcelamento em até 3x sem juros.' },
+  { q: 'Quanto tempo dura um pote de 6 Magnésios?', a: '40 dias, com 3 cápsulas por dia.' },
+];
+---
+<Article
+  ogImage="/img/6-magnesios/og-6-magnesios.jpg"
+  title="6 Magnésios Terra Nativa: ficha completa, dose, preço e o que esperar"
+  seoTitle="6 Magnésios Terra Nativa: dose, preço e se vale"
+  description="Ficha do 6 Magnésios (6MAG) do Empório Terra Nativa: quanto magnésio tem, as seis formas, preço dos kits, custo por dia, prós e contras e o que esperar."
+  kicker="Ficha de produto"
+  lead="O 6 Magnésios informa a dose no rótulo, e ela é adequada: 260 mg de magnésio por dia. O argumento de venda, de que seis formas juntas agem melhor que uma, não tem estudo por trás, e o preço por dia é alto para um suplemento de magnésio."
+  crumbs={[{ name: '6 Magnésios', href: '/6-magnesios/' }]}
+  faq={faq}
+  related={seismagPages}
+  sources={[
+    { label: 'Página oficial do 6 Magnésios e checkouts da Braip (consultados em 22/10/2026)', url: 'https://oferta.emporioterranativa.com.br/6magnesios-bp/' },
+    { label: 'NIH Office of Dietary Supplements: Magnesium, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/' },
+    { label: 'Reclame Aqui: Empório Terra Nativa (consultado em 22/10/2026)', url: 'https://www.reclameaqui.com.br/empresa/emporio-terra-nativa-ltda/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Cápsulas com seis formas de magnésio, 260 mg de magnésio por dia em 3 cápsulas, dose informada e dentro do limite seguro. Serve para quem precisa de magnésio. Mas misturar seis formas não tem vantagem comprovada, duas delas (óxido e hidróxido) são pouco absorvidas, e a página promete efeito em sono, cãibra, estresse e coração além do que o magnésio mostra nos estudos. Custa R$ 3,70 por dia no pote avulso. A empresa tem pouco histórico e reclamações sem resposta.</p>
+  </div>
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>{p.fullName}</td></tr>
+        <tr><th>Empresa</th><td>{p.company}, CNPJ {p.cnpj}, São Paulo (SP)</td></tr>
+        <tr><th>Tipo</th><td>Suplemento alimentar em cápsulas</td></tr>
+        <tr><th>Apresentação</th><td>Pote com 120 cápsulas</td></tr>
+        <tr><th>Dose</th><td>3 cápsulas por dia (1,5 g)</td></tr>
+        <tr><th>Magnésio por dose</th><td>260 mg (62% do valor diário)</td></tr>
+        <tr><th>Duração do pote</th><td>40 dias</td></tr>
+        <tr><th>Atendimento</th><td>WhatsApp {p.whatsapp} e {p.sac}</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Composição</h2>
+  <p>Ingredientes do rótulo, na ordem: bisglicinato de magnésio quelato, malato de magnésio, óxido de magnésio, hidróxido de magnésio, magnésio citrato malato e taurato de magnésio, mais talco e dióxido de silício. A cápsula é de gelatina. Não tem glúten.</p>
+  <p>O rótulo informa o total de magnésio (260 mg), mas não quanto vem de cada forma. Como os ingredientes são listados do mais para o menos abundante, o bisglicinato, bem absorvido, vem primeiro. Óxido e hidróxido, em terceiro e quarto, são pouco absorvidos e têm efeito laxativo. Para entender a diferença entre os tipos, veja o <a href="/magnesio/">guia de magnésio</a>.</p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores conferidos nos checkouts em 22/10/2026. A página anuncia frete grátis acima de R$ 250 (kits de 2 e 3 potes) e até 3x sem juros; confira as condições no checkout.</p>
+  <KitCards kits={p.kits} produto="6 Magnésios" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Informa a quantidade de magnésio: 260 mg por dia</li>
+        <li>Dose dentro do limite seguro para suplementos</li>
+        <li>A forma principal, o bisglicinato, é bem absorvida e leve para o intestino</li>
+        <li>Empresa com CNPJ e endereço informados</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Não há estudo mostrando que misturar seis formas seja melhor que uma</li>
+        <li>Óxido e hidróxido são pouco absorvidos</li>
+        <li>Promete ação em sono, cãibra, estresse e coração além do que os estudos mostram</li>
+        <li>R$ 3,70 por dia, caro para magnésio</li>
+        <li>Empresa com pouco histórico e reclamações sem resposta no Reclame Aqui</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>É um suplemento de magnésio honesto na dose: o rótulo diz quanto magnésio você toma, e é uma quantidade razoável. O problema está na promessa. "Seis formas para seis problemas" é um argumento de marketing, não de ciência, e o magnésio só faz diferença real para quem tem falta dele, intestino preso ou, com orientação, enxaqueca. Se você quer magnésio, ele cumpre o papel. Só não espere que resolva sono, ansiedade e cãibra de uma vez.</p>
+  </div>
+  <p>Antes de comprar, veja <a href="/6-magnesios/funciona/">o que o magnésio faz de verdade</a> e <a href="/6-magnesios/e-confiavel/">o que dizem as reclamações</a>.</p>
+
+  <BuyBox compact produto="6 Magnésios" href={p.link} title="6 Magnésios no site oficial" text="A partir de R$ 147,90 o pote de 120 cápsulas (40 dias)." cta="Ver kits e preços" />
+</Article>
