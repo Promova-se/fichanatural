@@ -618,6 +618,29 @@ export const seismagPages = [
   { href: '/6-magnesios/e-confiavel/', title: '6 Magnésios Terra Nativa é confiável? Empresa e Reclame Aqui', short: 'É confiável?' },
 ];
 
+// Maca Peruana Negra do Empório Terra Nativa (Braip, pro5375z), conferida na página e nos checkouts em 22/10/2026. Publicada por decisão do
+// dono do site com aviso: a maca não está na lista de ingredientes autorizados pela Anvisa para suplementos (critério 3).
+// 120 cápsulas de 500 mg, 4 por dia (2 g), 30 dias. Comissão fixa. Links: ev.braip.com/ref?pl={plano}&ck={checkout}&af=afixjm130d (REF conferido).
+const macaRef = (plan: string, ck: string) => `https://ev.braip.com/ref?pl=${plan}&ck=${ck}&af=afixjm130d`;
+export const maca = {
+  name: 'Maca Peruana Negra',
+  fullName: 'Maca Peruana Negra Empório Terra Nativa',
+  link: 'https://ev.braip.com/ref?pv=pro5375z&af=afixjm130d',
+  kits: [
+    { name: '1 pote', qty: '120 cápsulas · 30 dias', months: 1, total: 139.9, installments: '3x de R$ 46,63 (anunciado)', plan: macaRef('plajeln2', 'chel5rkq') },
+    { name: '2 potes', qty: '240 cápsulas · 60 dias · frete grátis', months: 2, total: 253.9, installments: '3x de R$ 84,63 (anunciado)', plan: macaRef('plao4g8g', 'che74rmg') },
+    { name: '3 potes', qty: '360 cápsulas · 90 dias · frete grátis', months: 3, total: 367.9, installments: '3x de R$ 122,63 (anunciado)', plan: macaRef('plaw0zg0', 'cheq8oqe') },
+  ],
+};
+
+export const macaPages = [
+  { href: '/maca-peruana-negra/', title: 'Maca Peruana Negra Terra Nativa: ficha completa, dose e preço', short: 'Ficha completa' },
+  { href: '/maca-peruana-negra/funciona/', title: 'Maca peruana negra funciona? Libido, energia e o que a ciência diz', short: 'Funciona?' },
+  { href: '/maca-peruana-negra/como-tomar/', title: 'Como tomar maca peruana: dose, horário e cuidados', short: 'Como tomar e cuidados' },
+  { href: '/maca-peruana-negra/onde-comprar/', title: 'Onde comprar Maca Peruana Negra Terra Nativa: preço e frete', short: 'Onde comprar' },
+  { href: '/maca-peruana-negra/e-confiavel/', title: 'Maca Peruana Negra Terra Nativa é confiável? Anvisa e Reclame Aqui', short: 'É confiável?' },
+];
+
 export const catalog = [
   { name: 'OzenVitta', href: '/ozenvitta/', pill: 'Emagrecimento', summary: 'Fibras, L-carnitina, laranja moro e cromo em cápsulas.', pages: ozenvittaPages },
   { name: 'ReduPhine Caps', href: '/reduphine-caps/', pill: 'Emagrecimento', summary: 'Spirulina, psyllium, quitosana e cromo, com opção de combo com gotas.', pages: reduphinePages },
@@ -633,6 +656,7 @@ export const catalog = [
   { name: 'Lizz Anté Nutri', href: '/lizz-ante-nutri/', pill: 'Cabelo, pele e unhas', summary: 'Cápsulas da Lizz Anté com biotina, colágeno, silício, zinco e mais 5 ativos.', pages: lizznutriPages },
   { name: 'Kit S.O.S Crescimento', href: '/kit-sos-crescimento/', pill: 'Cabelo', summary: 'Shampoo, máscara e tônico da Lizz Anté para queda e crescimento capilar.', pages: kitsosPages },
   { name: 'Hot Men Caps', href: '/hot-men-caps/', pill: 'Saúde masculina', summary: 'Cápsulas vendidas para desempenho sexual masculino, sem ingredientes na página oficial.', pages: hotmenPages },
+  { name: 'Maca Peruana Negra', href: '/maca-peruana-negra/', pill: 'Energia', summary: 'Cápsulas de maca negra do Empório Terra Nativa, 2 g por dia. A maca não está na lista da Anvisa para suplementos.', pages: macaPages },
   { name: '6 Magnésios', href: '/6-magnesios/', pill: 'Minerais', summary: 'Cápsulas com 6 formas de magnésio, 260 mg por dose, do Empório Terra Nativa.', pages: seismagPages },
   { name: 'Collagen Osteo', href: '/collagen-osteo/', pill: 'Articulações', summary: 'Gotas da Natturabio com colágeno tipo II, curcumina, vitaminas D3 e K2 e magnésio, sem doses na página.', pages: collagenosteoPages },
   { name: 'Collagen Vitta', href: '/collagen-vitta/', pill: 'Pele', summary: 'Colágeno Verisol em pó com ácido hialurônico, biotina e vitaminas, da Natturabio, sem doses na página.', pages: collagenvittaPages },

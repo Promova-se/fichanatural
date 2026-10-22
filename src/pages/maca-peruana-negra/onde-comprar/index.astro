@@ -1,0 +1,54 @@
+---
+import Article from '../../../layouts/Article.astro';
+import KitCards from '../../../components/KitCards.astro';
+import { maca as p, macaPages, seismag } from '../../../data/site';
+
+const faq = [
+  { q: 'Onde comprar a Maca Peruana Negra do Empório Terra Nativa?', a: 'No site oficial do Empório Terra Nativa, com pagamento pela Braip.' },
+  { q: 'A Maca Peruana Negra tem garantia?', a: 'A página fala em direito de arrependimento de 7 dias, o prazo do Código de Defesa do Consumidor para compras pela internet. Não há garantia de resultado.' },
+  { q: 'O frete é grátis?', a: 'Segundo a página, só em compras acima de R$ 250, ou seja, nos kits de 2 e 3 potes.' },
+];
+---
+<Article
+  ogImage="/img/maca-peruana-negra/og-maca-peruana-negra.jpg"
+  title="Onde comprar Maca Peruana Negra Terra Nativa: preço, frete e custo por dia"
+  seoTitle="Onde comprar Maca Peruana Negra e preço"
+  description="Onde comprar a Maca Peruana Negra do Empório Terra Nativa: preço de cada kit, custo por dia, frete, parcelamento e o prazo de arrependimento de 7 dias."
+  kicker="Compra segura"
+  lead="A Maca Peruana Negra do Empório Terra Nativa é vendida pelo site oficial, com pagamento pela Braip. Antes de comprar, leia o aviso sobre a situação da maca com a Anvisa."
+  crumbs={[{ name: 'Maca Peruana Negra', href: '/maca-peruana-negra/' }, { name: 'Onde comprar', href: '/maca-peruana-negra/onde-comprar/' }]}
+  faq={faq}
+  related={macaPages}
+  sources={[
+    { label: 'Página oficial da Maca Peruana Negra e checkouts da Braip (consultados em 22/10/2026)', url: 'https://oferta.emporioterranativa.com.br/maca-combo3-bp/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>No site oficial: R$ 139,90 por 1 pote (mais frete), R$ 253,90 por 2 e R$ 367,90 por 3, os dois últimos com frete grátis. Cada pote dura 30 dias, de R$ 4,09 a R$ 4,66 por dia. Há 7 dias de direito de arrependimento.</p>
+  </div>
+
+  <aside class="notice" role="note">
+    <strong>Aviso:</strong> a maca não está na lista de ingredientes autorizados pela Anvisa para suplementos alimentares. Veja <a href="/maca-peruana-negra/e-confiavel/">os detalhes</a>.
+  </aside>
+
+  <h2>Escolha o kit</h2>
+  <KitCards kits={p.kits} produto="Maca Peruana Negra" />
+
+  <h2>Custo por dia</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Kit</th><th>Preço</th><th>Dias</th><th>Por dia</th></tr></thead>
+      <tbody>
+        <tr><td>1 pote</td><td>R$ 139,90 + frete</td><td>30</td><td>R$ 4,66</td></tr>
+        <tr><td>2 potes</td><td>R$ 253,90</td><td>60</td><td>R$ 4,23</td></tr>
+        <tr><td>3 potes</td><td>R$ 367,90</td><td>90</td><td>R$ 4,09</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Arrependimento e devolução</h2>
+  <p>A página garante o direito de arrependimento de 7 dias do Código de Defesa do Consumidor. Para pedir: WhatsApp {seismag.whatsapp} ou {seismag.sac}, por escrito e com o número do pedido. No Reclame Aqui há relatos de dificuldade de contato com a empresa: guarde os comprovantes.</p>
+
+  <h2>Entrega e pagamento</h2>
+  <p>Pagamento pela Braip, com cartão, Pix e boleto. A página anuncia até 3x sem juros; confira no checkout. Acompanhe o rastreio: as reclamações registradas falam de atraso e pedido não recebido.</p>
+</Article>

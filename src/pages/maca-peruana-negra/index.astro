@@ -1,0 +1,95 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import { maca as p, macaPages, seismag } from '../../data/site';
+
+const faq = [
+  { q: 'O que é a Maca Peruana Negra do Empório Terra Nativa?', a: 'São cápsulas de 500 mg de raiz de maca negra (Lepidium meyenii), vendidas pelo Empório Terra Nativa como "100% pura" e importada do Peru. A orientação é de 4 cápsulas por dia, 2 de manhã e 2 à noite, o que dá 2 g de maca por dia. O pote de 120 cápsulas dura 30 dias.' },
+  { q: 'Quanto custa a Maca Peruana Negra?', a: 'Nos checkouts de 22/10/2026: 1 pote por R$ 139,90, 2 por R$ 253,90 e 3 por R$ 367,90. A página anuncia frete grátis acima de R$ 250 e parcelamento em até 3x sem juros.' },
+  { q: 'A maca peruana em cápsula é liberada pela Anvisa?', a: 'A maca não está na lista de ingredientes que a Anvisa autoriza em suplementos alimentares. Em 2018, a Anvisa suspendeu propagandas de produtos de maca com promessas sem comprovação. Isso não quer dizer que a maca faça mal, mas o produto vendido como suplemento não segue as regras sanitárias.' },
+  { q: 'Maca peruana aumenta a testosterona?', a: 'Não. Os estudos em homens não mostraram mudança nos níveis de testosterona ou estrogênio. O efeito relatado sobre o desejo sexual parece não depender de hormônios.' },
+];
+---
+<Article
+  ogImage="/img/maca-peruana-negra/og-maca-peruana-negra.jpg"
+  title="Maca Peruana Negra Terra Nativa: ficha completa, dose, preço e o que esperar"
+  seoTitle="Maca Peruana Negra Terra Nativa: dose, preço e se vale"
+  description="Ficha da Maca Peruana Negra do Empório Terra Nativa: dose por dia, o que os estudos mostram para libido e energia, a situação da maca com a Anvisa, preço dos kits, prós e contras."
+  kicker="Ficha de produto"
+  lead="A Maca Peruana Negra do Empório Terra Nativa entrega 2 g de maca por dia, dentro da faixa dos estudos. Mas a maca não está na lista de ingredientes autorizados pela Anvisa para suplementos, e os estudos sobre libido e energia são poucos e pequenos."
+  crumbs={[{ name: 'Maca Peruana Negra', href: '/maca-peruana-negra/' }]}
+  faq={faq}
+  related={macaPages}
+  sources={[
+    { label: 'Página oficial da Maca Peruana Negra e checkouts da Braip (consultados em 22/10/2026)', url: 'https://oferta.emporioterranativa.com.br/maca-combo3-bp/' },
+    { label: 'Anvisa: Propagandas irregulares de Maca Peruana são suspensas', url: 'https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2018/propagandas-irregulares-de-maca-peruana-sao-suspensas' },
+    { label: 'Shin BC et al. Maca (L. meyenii) for improving sexual function: a systematic review. BMC Complement Altern Med, 2010', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC2928177/' },
+  ]}
+>
+  <aside class="notice" role="note">
+    <strong>Aviso:</strong> a maca peruana não está na lista de ingredientes autorizados pela Anvisa para suplementos alimentares, e a agência já suspendeu propagandas de maca com promessas sem comprovação. As promessas citadas nesta página são do fabricante.
+  </aside>
+
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Cápsulas de maca negra, 4 por dia (2 g), sem outros ingredientes, segundo o fabricante. A dose está dentro da faixa usada em estudos (1,5 a 3 g por dia). Esses estudos são poucos e pequenos: alguns mostram leve aumento do desejo sexual depois de 6 a 8 semanas, sem mudar hormônios. A maca não é autorizada pela Anvisa como ingrediente de suplemento. Custa R$ 4,66 por dia no pote avulso.</p>
+  </div>
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>{p.fullName}, 100% maca (Lepidium meyenii), segundo o fabricante</td></tr>
+        <tr><th>Empresa</th><td>{seismag.company}, CNPJ {seismag.cnpj}, São Paulo (SP)</td></tr>
+        <tr><th>Apresentação</th><td>Pote com 120 cápsulas de 500 mg</td></tr>
+        <tr><th>Dose</th><td>4 cápsulas por dia (2 de manhã e 2 à noite), 2 g de maca</td></tr>
+        <tr><th>Duração do pote</th><td>30 dias</td></tr>
+        <tr><th>Situação na Anvisa</th><td>Maca fora da lista de ingredientes autorizados para suplementos</td></tr>
+        <tr><th>Atendimento</th><td>WhatsApp {seismag.whatsapp} e {seismag.sac}</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>O que a página promete</h2>
+  <p>As frases abaixo são do fabricante:</p>
+  <ul>
+    <li>"Ajuda a aumentar a disposição e a vitalidade no dia a dia"</li>
+    <li>"Tradicionalmente usada para fortalecer a energia e a conexão do casal"</li>
+    <li>"Mais fôlego e resistência física na rotina"</li>
+    <li>A maca negra seria a variedade "associada a efeitos mais intensos"</li>
+  </ul>
+  <p>O que os estudos mostram de cada promessa está em <a href="/maca-peruana-negra/funciona/">Maca peruana negra funciona?</a></p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores conferidos nos checkouts em 22/10/2026. A página anuncia frete grátis acima de R$ 250 (kits de 2 e 3 potes) e até 3x sem juros; confira as condições no checkout.</p>
+  <KitCards kits={p.kits} produto="Maca Peruana Negra" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Dose de 2 g por dia, dentro da faixa dos estudos</li>
+        <li>Ingrediente único, sem misturas</li>
+        <li>Empresa com CNPJ e endereço</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Maca fora da lista de ingredientes autorizados pela Anvisa para suplementos</li>
+        <li>Estudos poucos e pequenos, com efeito modesto</li>
+        <li>A superioridade da maca negra não é comprovada em pessoas</li>
+        <li>R$ 4,66 por dia no pote avulso</li>
+        <li>Reclamações sem resposta da empresa no Reclame Aqui</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>A maca é um alimento tradicional dos Andes e, nas doses estudadas, parece segura para adultos saudáveis. Há sinais de um efeito pequeno sobre o desejo sexual, mas de estudos curtos e com poucas pessoas, e nenhum efeito sobre hormônios. O ponto mais importante é regulatório: em cápsula, como suplemento, ela não segue a lista da Anvisa. Quem quiser experimentar deve saber disso e conversar com o médico se tiver pressão alta, problema de tireoide ou usar remédios.</p>
+  </div>
+
+  <BuyBox compact produto="Maca Peruana Negra" href={p.link} title="Maca Peruana Negra no site oficial" text="A partir de R$ 139,90 o pote de 120 cápsulas (30 dias)." cta="Ver kits e preços" />
+</Article>

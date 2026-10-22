@@ -1,0 +1,62 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { maca as p, macaPages, seismag } from '../../../data/site';
+
+const faq = [
+  { q: 'A Maca Peruana Negra do Empório Terra Nativa é confiável?', a: 'Com ressalvas sérias. A empresa tem CNPJ e o pagamento passa pela Braip. Mas a maca não está na lista de ingredientes autorizados pela Anvisa para suplementos, e a empresa tem reclamações sem resposta no Reclame Aqui.' },
+  { q: 'Maca peruana em cápsula é proibida?', a: 'Não há uma proibição nominal da maca, mas ela não está na lista de ingredientes que a Anvisa autoriza em suplementos alimentares. Por isso, produtos de maca vendidos como suplemento estão fora das regras e sujeitos a fiscalização. A Anvisa já suspendeu propagandas de maca com promessas sem comprovação.' },
+  { q: 'É golpe?', a: 'Não há sinais de golpe: empresa identificada, pagamento pela Braip e rastreio. A ressalva é regulatória e de atendimento, não de entrega fraudulenta.' },
+];
+---
+<Article
+  ogImage="/img/maca-peruana-negra/og-maca-peruana-negra.jpg"
+  title="Maca Peruana Negra Terra Nativa é confiável? Anvisa, empresa e Reclame Aqui"
+  seoTitle="Maca Peruana Negra é confiável? Anvisa e Reclame Aqui"
+  description="A Maca Peruana Negra do Empório Terra Nativa é confiável? A situação da maca com a Anvisa, quem vende, o CNPJ e o que dizem as reclamações."
+  kicker="Reputação"
+  lead="A empresa por trás da Maca Peruana Negra é identificada. O problema principal é regulatório: a maca não está na lista de ingredientes que a Anvisa permite em suplementos."
+  crumbs={[{ name: 'Maca Peruana Negra', href: '/maca-peruana-negra/' }, { name: 'É confiável?', href: '/maca-peruana-negra/e-confiavel/' }]}
+  faq={faq}
+  related={macaPages}
+  sources={[
+    { label: 'Anvisa: Propagandas irregulares de Maca Peruana são suspensas', url: 'https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2018/propagandas-irregulares-de-maca-peruana-sao-suspensas' },
+    { label: 'Reclame Aqui: Empório Terra Nativa (consultado em 22/10/2026)', url: 'https://www.reclameaqui.com.br/empresa/emporio-terra-nativa-ltda/' },
+    { label: 'Página oficial da Maca Peruana Negra (consultada em 22/10/2026)', url: 'https://oferta.emporioterranativa.com.br/maca-combo3-bp/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Com ressalvas sérias. A empresa tem CNPJ (Empório Terra Nativa Ltda, 61.285.739/0001-81) e a venda passa pela Braip. Mas a maca não é autorizada pela Anvisa como ingrediente de suplemento, e a empresa tem 4 reclamações no Reclame Aqui, só uma respondida.</p>
+  </div>
+
+  <h2>A situação da maca com a Anvisa</h2>
+  <ul>
+    <li>Suplementos alimentares no Brasil só podem usar ingredientes de uma lista aprovada pela Anvisa. A maca peruana não está nessa lista.</li>
+    <li>A Anvisa já suspendeu propagandas de produtos de maca que atribuíam a ela efeitos sem comprovação.</li>
+    <li>Isso não significa que a maca seja tóxica: ela é um alimento tradicional nos Andes. Significa que o produto vendido como suplemento em cápsula não tem respaldo sanitário.</li>
+  </ul>
+
+  <h2>Quem vende</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Empresa</th><td>{seismag.company}, CNPJ {seismag.cnpj}</td></tr>
+        <tr><th>Endereço</th><td>Rua George Smith, Lapa, São Paulo (SP)</td></tr>
+        <tr><th>Atendimento</th><td>WhatsApp {seismag.whatsapp} e {seismag.sac}</td></tr>
+        <tr><th>Pagamento</th><td>Braip</td></tr>
+        <tr><th>Reclame Aqui</th><td>4 reclamações de abril a setembro de 2026, 1 respondida, tempo médio de resposta de 146 dias (consulta em 22/10/2026)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>As reclamações falam de atraso na entrega, pedido não recebido e falta de contato. A mesma empresa vende o <a href="/6-magnesios/">6 Magnésios</a>.</p>
+
+  <h2>Outros pontos de atenção</h2>
+  <ul>
+    <li><strong>Números sem fonte:</strong> "94.319+ pedidos por mês" e "97% de satisfação".</li>
+    <li><strong>Imagem de outro produto:</strong> a página usa uma arte que termina com "garanta sua moringa", de outro produto da loja.</li>
+    <li><strong>Contador de oferta:</strong> "válida até o fim do dia de hoje" aparece em qualquer dia.</li>
+    <li><strong>"Laudo de pureza":</strong> citado, mas não mostrado na página.</li>
+  </ul>
+
+  <BuyBox compact produto="Maca Peruana Negra" href={p.link} title="Maca Peruana Negra no site oficial" text="A partir de R$ 139,90 o pote de 30 dias." cta="Ver kits e preços" />
+</Article>

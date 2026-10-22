@@ -1,0 +1,60 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { maca as p, macaPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Maca peruana aumenta a libido?', a: 'Talvez um pouco. Uma revisão sistemática de 2010 encontrou 4 ensaios pequenos: alguns mostraram aumento do desejo sexual relatado depois de 6 a 12 semanas, com 1,5 a 3 g por dia. Os autores consideraram a evidência limitada.' },
+  { q: 'Maca peruana dá energia?', a: 'Há estudos pequenos com melhora de humor e disposição relatados, mas sem confirmação em estudos maiores. Não é estimulante como a cafeína.' },
+  { q: 'Maca negra é melhor que a amarela?', a: 'Estudos em animais sugerem diferenças entre as cores de maca, mas em pessoas não há comparação que mostre a negra melhor para energia ou libido.' },
+  { q: 'Maca peruana ajuda na menopausa?', a: 'Estudos pequenos em mulheres na pós-menopausa relataram melhora de sintomas psicológicos, como ansiedade, sem efeito claro nos calores. Veja nosso guia sobre menopausa.' },
+];
+---
+<Article
+  ogImage="/img/maca-peruana-negra/og-maca-peruana-negra.jpg"
+  title="Maca peruana negra funciona? Libido, energia e o que a ciência diz"
+  seoTitle="Maca peruana negra funciona? O que diz a ciência"
+  description="Maca peruana negra funciona? O que os estudos mostram sobre libido, energia, hormônios e menopausa, a dose usada e o que é exagero nas promessas."
+  kicker="Funciona?"
+  lead="A maca tem alguns estudos em pessoas, quase todos pequenos e curtos. O sinal mais consistente é um aumento modesto do desejo sexual relatado, sem mudança nos hormônios."
+  crumbs={[{ name: 'Maca Peruana Negra', href: '/maca-peruana-negra/' }, { name: 'Funciona?', href: '/maca-peruana-negra/funciona/' }]}
+  faq={faq}
+  related={macaPages}
+  sources={[
+    { label: 'Shin BC et al. Maca (L. meyenii) for improving sexual function: a systematic review. BMC Complement Altern Med, 2010', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC2928177/' },
+    { label: 'Página oficial da Maca Peruana Negra (consultada em 22/10/2026)', url: 'https://oferta.emporioterranativa.com.br/maca-combo3-bp/' },
+    { label: 'Anvisa: Propagandas irregulares de Maca Peruana são suspensas', url: 'https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2018/propagandas-irregulares-de-maca-peruana-sao-suspensas' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Pode haver um efeito pequeno no desejo sexual, depois de 6 a 12 semanas, com 1,5 a 3 g por dia, a faixa da dose deste produto. A evidência vem de poucos estudos pequenos. A maca não aumenta testosterona, e não há prova de que a maca negra seja melhor que as outras. Para energia e disposição, os estudos são ainda mais fracos.</p>
+  </div>
+
+  <h2>O que os estudos mostram</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Uso</th><th>Evidência em pessoas</th></tr></thead>
+      <tbody>
+        <tr><td>Desejo sexual</td><td>Alguns ensaios pequenos com aumento relatado, com 1,5 a 3 g por dia por 6 a 12 semanas. Revisão sistemática de 2010: evidência limitada</td></tr>
+        <tr><td>Hormônios (testosterona, estrogênio)</td><td>Sem alteração nos estudos em homens</td></tr>
+        <tr><td>Disposição e humor</td><td>Estudos pequenos, resultados inconsistentes</td></tr>
+        <tr><td>Menopausa</td><td>Estudos pequenos com melhora de sintomas psicológicos; pouco efeito nos calores</td></tr>
+        <tr><td>Fertilidade masculina</td><td>Estudos pequenos com alguma melhora em exames de sêmen; sem dados sobre gravidez</td></tr>
+        <tr><td>Maca negra x outras cores</td><td>Diferenças vistas em animais, não em pessoas</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>O que é exagero na página de vendas</h2>
+  <ul>
+    <li><strong>"Está devolvendo a disposição de quem já tentou de tudo":</strong> não há estudo que sustente esse efeito.</li>
+    <li><strong>A negra "associada a efeitos mais intensos":</strong> sem comparação em pessoas.</li>
+    <li><strong>"Estudada academicamente" por universidades brasileiras:</strong> a página não cita os estudos, e estudar um ingrediente não é o mesmo que comprovar efeito.</li>
+    <li><strong>"94.319+ pedidos por mês" e "97% de satisfação":</strong> números sem fonte.</li>
+  </ul>
+
+  <h2>Para quem pode fazer sentido</h2>
+  <p>Para adultos saudáveis curiosos com o efeito sobre o desejo sexual, que aceitam um resultado incerto e sabem que a maca não está na lista da Anvisa para suplementos. Falta de desejo persistente, cansaço sem explicação ou disfunção erétil têm várias causas tratáveis e merecem avaliação médica. Para menopausa, veja <a href="/menopausa/">o que ajuda de verdade</a>.</p>
+
+  <BuyBox compact produto="Maca Peruana Negra" href={p.link} title="Maca Peruana Negra no site oficial" text="A partir de R$ 139,90 o pote de 30 dias." cta="Ver kits e preços" />
+</Article>

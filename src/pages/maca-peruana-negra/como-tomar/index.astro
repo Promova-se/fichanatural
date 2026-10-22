@@ -1,0 +1,53 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import { maca as p, macaPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Como tomar maca peruana em cápsula?', a: 'A orientação do Empório Terra Nativa é de 4 cápsulas de 500 mg por dia: 2 de manhã e 2 à noite. Isso dá 2 g de maca, dentro da faixa de 1,5 a 3 g usada nos estudos.' },
+  { q: 'Quanto tempo leva para a maca fazer efeito?', a: 'Nos estudos sobre desejo sexual, as diferenças apareceram depois de 6 a 8 semanas. Se não notar nada em 2 a 3 meses, não vale insistir.' },
+  { q: 'Maca peruana tem efeito colateral?', a: 'Em geral é bem tolerada. Algumas pessoas relatam desconforto no estômago, gases e, à noite, dificuldade para dormir. Por isso, muita gente prefere tomar só de manhã e no almoço.' },
+  { q: 'Quem não deve tomar maca peruana?', a: 'Gestantes, lactantes e quem tem pressão alta ou distúrbios hormonais devem falar com o médico antes, como a própria página orienta. Também quem tem problema de tireoide ou já teve câncer sensível a hormônios.' },
+];
+---
+<Article
+  ogImage="/img/maca-peruana-negra/og-maca-peruana-negra.jpg"
+  title="Como tomar maca peruana: dose, horário, tempo de uso e cuidados"
+  seoTitle="Como tomar maca peruana e cuidados"
+  description="Como tomar maca peruana negra em cápsulas: dose de 2 g por dia, melhor horário, quanto tempo leva para fazer efeito, efeitos colaterais e quem deve evitar."
+  kicker="Modo de uso"
+  lead="São 4 cápsulas por dia, com 2 g de maca. A dose está dentro do que os estudos usaram; o mais importante é saber quem deve evitar e dar tempo para avaliar."
+  crumbs={[{ name: 'Maca Peruana Negra', href: '/maca-peruana-negra/' }, { name: 'Como tomar', href: '/maca-peruana-negra/como-tomar/' }]}
+  faq={faq}
+  related={macaPages}
+  sources={[
+    { label: 'Página oficial da Maca Peruana Negra (consultada em 22/10/2026)', url: 'https://oferta.emporioterranativa.com.br/maca-combo3-bp/' },
+    { label: 'Shin BC et al. Maca (L. meyenii) for improving sexual function: a systematic review. BMC Complement Altern Med, 2010', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC2928177/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>4 cápsulas por dia (2 g), divididas entre manhã e tarde. Avalie depois de 6 a 8 semanas. Gestantes, lactantes e quem tem pressão alta, problema de tireoide ou doença sensível a hormônios devem falar com o médico antes.</p>
+  </div>
+
+  <h2>Dose</h2>
+  <ol>
+    <li>Tome 4 cápsulas por dia. A página sugere 2 de manhã e 2 à noite.</li>
+    <li>Se a maca atrapalhar o sono, troque a dose da noite pela do almoço.</li>
+    <li>Um pote de 120 cápsulas dura 30 dias.</li>
+  </ol>
+  <p>Nos estudos, a dose variou de 1,5 a 3 g por dia. Tomar mais do que isso não tem benefício comprovado.</p>
+
+  <h2>Quem deve evitar ou falar com o médico antes</h2>
+  <ul>
+    <li><strong>Gestantes e lactantes.</strong></li>
+    <li><strong>Pressão alta</strong> (orientação da própria página).</li>
+    <li><strong>Problemas de tireoide:</strong> a maca, como outras plantas da família do repolho, tem compostos que podem interferir na tireoide em quem já tem problema.</li>
+    <li><strong>Distúrbios hormonais ou câncer sensível a hormônios</strong> (mama, útero, ovário, próstata).</li>
+    <li>Quem usa remédios contínuos.</li>
+  </ul>
+
+  <h2>Efeitos colaterais</h2>
+  <p>A maca costuma ser bem tolerada. Os relatos mais comuns são gases, desconforto no estômago e insônia. Se aparecer palpitação, aumento da pressão ou qualquer reação diferente, pare e procure orientação.</p>
+
+  <BuyBox compact produto="Maca Peruana Negra" href={p.link} title="Maca Peruana Negra no site oficial" text="Pote de 120 cápsulas para 30 dias, a partir de R$ 139,90." cta="Ver kits e preços" />
+</Article>
