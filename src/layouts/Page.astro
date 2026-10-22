@@ -1,9 +1,9 @@
 ---
 import Base from './Base.astro';
-interface Props { title: string; description: string; noindex?: boolean }
-const { title, description, noindex } = Astro.props;
+interface Props { title: string; description: string; noindex?: boolean; schema?: object[] }
+const { title, description, noindex, schema } = Astro.props;
 ---
-<Base title={title} description={description} noindex={noindex}>
+<Base title={title} description={description} noindex={noindex} schema={schema}>
   <div class="wrap article">
     <header class="article-head"><h1>{title}</h1></header>
     <div class="prose"><slot /></div>

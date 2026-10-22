@@ -1,23 +1,66 @@
 ---
 import Page from '../../layouts/Page.astro';
-import { site } from '../../data/site';
----
-<Page title="Sobre a Ficha Natural e nossa política editorial" description="Quem somos, como produzimos os guias da Ficha Natural e como nos mantemos.">
-  <p>A {site.name} nasceu para responder, de forma direta, as perguntas que as pessoas fazem antes de comprar um suplemento ou produto natural: o que tem dentro, se funciona, como usar, quem deve evitar e onde comprar com segurança.</p>
+import { site, catalog } from '../../data/site';
 
-  <h2>Como produzimos o conteúdo</h2>
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: `Sobre a ${site.name}`,
+    url: `${site.url}/sobre/`,
+    inLanguage: 'pt-BR',
+    about: {
+      '@type': 'Organization',
+      name: site.name,
+      url: site.url,
+      email: site.email,
+      description: site.tagline,
+      parentOrganization: { '@type': 'Organization', name: site.company, taxID: site.cnpj },
+    },
+  },
+];
+---
+<Page title="Sobre a Ficha Natural: quem escreve e como analisamos os produtos" description="Quem é a Redação Ficha Natural, por que o site existe, como cada ficha é feita, os critérios para analisar um produto e como o site se mantém." schema={schema}>
+  <p>A {site.name} existe por um motivo simples: quem pensa em comprar um suplemento pela internet quase sempre só encontra a página de vendas do próprio fabricante. E página de vendas promete muito, mostra pouco e raramente diz o que está dentro do pote. Aqui, a ideia é fazer o que um consumidor atento faria se tivesse tempo: ler o rótulo, conferir a empresa, procurar os estudos e comparar o preço, e contar o que encontrou.</p>
+
+  <h2>Quem escreve</h2>
+  <p>Os textos são da <strong>Redação {site.name}</strong>, a equipe editorial do site. Nenhum fabricante escreve, revisa ou aprova o que publicamos.</p>
+
+  <h2>Como cada ficha é feita</h2>
+  <p>Cada produto ganha uma ficha completa e páginas que respondem às perguntas mais comuns: se funciona, como tomar, onde comprar e se é confiável. Para montar essas páginas, conferimos sempre:</p>
+  <ol>
+    <li><strong>A composição.</strong> Os ingredientes e a dose de cada um, na tabela nutricional ou no rótulo. Quando o fabricante não informa as doses, dizemos isso com todas as letras.</li>
+    <li><strong>O que a ciência diz.</strong> Comparamos cada ingrediente e cada dose com estudos publicados, revisões científicas e órgãos de saúde, e listamos as fontes no fim da página.</li>
+    <li><strong>As promessas.</strong> Separamos o que tem base do que é exagero da página de vendas.</li>
+    <li><strong>Quem vende.</strong> Empresa, CNPJ, canais de atendimento e reputação no Reclame Aqui, com a data da consulta.</li>
+    <li><strong>Preço e garantia.</strong> Valores conferidos no próprio checkout, com a data, e as regras reais de reembolso, inclusive quando o que está escrito na página não bate com os termos.</li>
+    <li><strong>Cuidados.</strong> Quem deve evitar o produto, interações com remédios e quando procurar um médico.</li>
+  </ol>
+
+  <h2>Nossos critérios</h2>
+  <p>Promessa exagerada ou dose baixa não impedem um produto de aparecer aqui: elas são apontadas na própria ficha. Somos mais rigorosos quando:</p>
   <ul>
-    <li><strong>Fontes verificáveis.</strong> Baseamos os guias em estudos publicados, em informações oficiais dos fabricantes e em órgãos de saúde. As fontes ficam listadas no fim de cada página.</li>
-    <li><strong>Nada de promessa.</strong> Não publicamos depoimentos inventados, notas ou estrelas sem avaliação real por trás, nem resultados que os estudos não mostraram.</li>
-    <li><strong>Atualização.</strong> Cada página mostra a data da última revisão. Quando um estudo novo ou uma mudança no produto aparecem, atualizamos o conteúdo.</li>
-    <li><strong>Correções.</strong> Encontrou um erro? Escreva para <a href={`mailto:${site.email}`}>{site.email}</a> e corrigimos.</li>
+    <li>não há empresa identificada por trás do produto;</li>
+    <li>o produto promete tratar ou curar doenças;</li>
+    <li>há proibição da Anvisa ou ingrediente acima do permitido.</li>
   </ul>
+  <p>Quando analisamos um produto que esbarra em algum desses pontos, isso fica claro nas páginas: as promessas aparecem como sendo do fabricante, ao lado do que os estudos realmente mostram. E sempre que existe uma alternativa mais bem documentada, nós indicamos.</p>
+
+  <h2>O que você não vai encontrar aqui</h2>
+  <ul>
+    <li>Depoimentos inventados, notas ou estrelas sem avaliação real por trás.</li>
+    <li>Promessa de resultado que os estudos não mostraram.</li>
+    <li>Contadores de "promoção acaba hoje" ou pressão para comprar.</li>
+  </ul>
+
+  <h2>Datas e correções</h2>
+  <p>Cada página mostra quando foi publicada e, se mudou depois, quando foi atualizada. Preços, reputação e composição podem mudar: por isso informamos a data de cada consulta. Encontrou um erro ou uma informação desatualizada? Escreva para <a href={`mailto:${site.email}`}>{site.email}</a> e corrigimos.</p>
 
   <h2>Não somos uma farmácia nem uma loja</h2>
   <p>Não vendemos, armazenamos nem entregamos produtos. Quando indicamos um produto, o link leva ao site oficial ou à plataforma de pagamento do fabricante, onde a compra, a entrega e a garantia acontecem.</p>
 
   <h2>Como nos mantemos</h2>
-  <p>Somos afiliados de alguns produtos. Quando você compra por um dos nossos links, podemos receber uma comissão, sem custo extra para você. Isso não muda o que escrevemos sobre o produto. Veja o <a href="/aviso-de-afiliado/">aviso de afiliado</a>.</p>
+  <p>Somos afiliados dos produtos analisados. Quando você compra por um dos nossos links, podemos receber uma comissão, sem custo extra para você. A comissão não muda o que escrevemos: várias fichas apontam problemas sérios no produto ou indicam outro mais bem documentado. Veja o <a href="/aviso-de-afiliado/">aviso de afiliado</a>. Hoje são {catalog.length} produtos analisados, todos listados em <a href="/produtos/">Produtos</a>.</p>
 
   <h2>Responsável</h2>
   <p>A {site.name} é mantida por {site.company}, CNPJ {site.cnpj}. Contato: <a href={`mailto:${site.email}`}>{site.email}</a>.</p>

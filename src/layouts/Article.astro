@@ -1,6 +1,7 @@
 ---
 import Base from './Base.astro';
 import { site, guides } from '../data/site';
+import { pageDates } from '../data/dates.mjs';
 
 interface Props {
   title: string;        // H1
@@ -17,7 +18,9 @@ interface Props {
 }
 const { title, seoTitle, image, ogImage, description, kicker, lead, crumbs, faq = [], sources = [], related: relatedProp } = Astro.props;
 const url = new URL(Astro.url.pathname, site.url).href;
-const updatedBr = site.updated.split('-').reverse().join('/');
+const dates = pageDates(Astro.url.pathname);
+const br = (d: string) => d.split('-').reverse().join('/');
+const author = `Redação ${site.name}`;
 
 const schema: object[] = [
   {
@@ -25,9 +28,9 @@ const schema: object[] = [
     '@type': 'Article',
     headline: title,
     description,
-    dateModified: site.updated,
-    datePublished: site.updated,
-    author: { '@type': 'Organization', name: `Equipe ${site.name}`, url: `${site.url}/sobre/` },
+    dateModified: dates.modified,
+    datePublished: dates.published,
+    author: { '@type': 'Organization', name: author, url: `${site.url}/sobre/` },
     publisher: { '@type': 'Organization', name: site.name, url: site.url },
     mainEntityOfPage: url,
     ...(image || ogImage ? { image: new URL((ogImage ?? image!.src), site.url).href } : {}),
@@ -69,7 +72,7 @@ const related = (relatedProp ?? guides).filter((g) => g.href !== Astro.url.pathn
       {kicker && <p class="kicker">{kicker}</p>}
       <h1>{title}</h1>
       <p class="lead">{lead}</p>
-      <p class="meta">Por <a href="/sobre/">Equipe {site.name}</a> · Atualizado em <time datetime={site.updated}>{updatedBr}</time></p>
+      <p class="meta">Por <a href="/sobre/">{author}</a> · Publicado em <time datetime={dates.published}>{br(dates.published)}</time>{dates.modified !== dates.published && <> · Atualizado em <time datetime={dates.modified}>{br(dates.modified)}</time></>}</p>
       </div>
       {image && (
         <figure class="article-head-image">

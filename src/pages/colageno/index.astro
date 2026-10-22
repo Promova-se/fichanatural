@@ -1,0 +1,97 @@
+---
+import Article from '../../layouts/Article.astro';
+import { colagenoPages, collagenvittaPages, articPages, collagenosteoPages } from '../../data/site';
+
+const faq = [
+  { q: 'Qual o melhor colágeno?', a: 'Depende do objetivo. Para pele, cabelo e unhas, o colágeno hidrolisado (peptídeos de colágeno), com 2,5 a 10 g por dia; o Verisol é o mais estudado, com 2,5 g. Para articulações, o colágeno tipo II não desnaturado, com 40 mg por dia, ou peptídeos específicos para articulação, com 5 g. O melhor é o que informa a dose no rótulo e chega à quantidade dos estudos.' },
+  { q: 'Qual a diferença entre colágeno tipo 1 e tipo 2?', a: 'O tipo I é o que forma a pele, os ossos e os tendões, e está na maior parte dos colágenos hidrolisados. O tipo II é o da cartilagem. Nos suplementos, o que mais importa não é o "tipo" escrito no rótulo, mas a forma (hidrolisado ou não desnaturado) e a dose.' },
+  { q: 'Colágeno em cápsula ou em pó?', a: 'Para colágeno hidrolisado, o pó é mais prático: 2,5 g equivalem a 5 cápsulas de 500 mg, e muitas cápsulas trazem bem menos que isso por dose. Para colágeno tipo II não desnaturado, a cápsula funciona bem, porque a dose dos estudos é de só 40 mg.' },
+  { q: 'Colágeno funciona mesmo?', a: 'A ciência está dividida. Uma revisão de 2026 com 16 meta-análises encontrou melhora de elasticidade e hidratação da pele, mas não de rugas. Uma meta-análise de 2025 viu que o benefício aparece nos estudos pagos pela indústria e some nos independentes. Para articulações, há melhora modesta da dor em alguns estudos. Espere efeito pequeno, depois de 2 a 3 meses.' },
+  { q: 'Qual o melhor horário para tomar colágeno?', a: 'Não há horário melhor comprovado. O que importa é tomar todos os dias, na dose certa.' },
+  { q: 'Quem não deve tomar colágeno?', a: 'O colágeno é bem tolerado. Quem tem alergia a peixe ou frutos do mar deve conferir a origem do colágeno no rótulo. Atenção também aos outros ingredientes da fórmula: retinol (vitamina A) não é indicado na gravidez, e vitamina K2 e curcumina podem interferir com anticoagulantes.' },
+];
+
+const related = [
+  colagenoPages[0], colagenoPages[1],
+  collagenvittaPages[0], collagenvittaPages[1],
+  articPages[0], articPages[1],
+  collagenosteoPages[0], collagenosteoPages[1],
+];
+---
+<Article
+  ogImage="/img/colageno/og-colageno.jpg"
+  title="Qual o melhor colágeno? Tipos, doses e como escolher"
+  seoTitle="Qual o melhor colágeno? Tipos, doses e como escolher"
+  description="Qual colágeno escolher para pele, cabelo, unhas ou articulações: diferença entre hidrolisado, Verisol e tipo II, a dose dos estudos, o que a ciência diz e como comparar produtos."
+  kicker="Guia"
+  lead="Existem vários tipos de colágeno, e cada um foi estudado para uma coisa. Escolher bem depende de três perguntas: para que você quer, qual forma de colágeno o produto usa e se a dose chega à dos estudos."
+  crumbs={[{ name: 'Guias', href: '/guias/' }, { name: 'Qual colágeno escolher', href: '/colageno/' }]}
+  faq={faq}
+  related={related}
+  sources={[
+    { label: 'Proksch E et al. Peptídeos bioativos de colágeno (Verisol) e rugas. Skin Pharmacol Physiol, 2014', url: 'https://pubmed.ncbi.nlm.nih.gov/24401291/' },
+    { label: 'Lugo JP et al. Undenatured type II collagen in knee osteoarthritis. Nutr J, 2016', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4731911/' },
+    { label: 'NutraIngredients: Anvisa aprova alegação para peptídeos de colágeno Fortigel, 5 g por dia (2022)', url: 'https://www.nutraingredients.com/Article/2022/10/27/gelita-s-fortigel-gets-brazilian-joint-health-claim/' },
+    { label: 'Band: revisão de 16 meta-análises sobre colágeno e pele (Aesthetic Surgery Journal Open Forum, 2026)', url: 'https://www.band.com.br/saude/noticias/colageno-melhora-elasticidade-da-pele-mas-nao-reduz-rugas-aponta-estudo-202602271448' },
+    { label: 'Myung SK, Park Y. Meta-análise de 23 ensaios sobre colágeno e envelhecimento da pele. Am J Med, 2025 (reportagem NutraIngredients)', url: 'https://nutraingredients.com/Article/2025/08/26/industry-reacts-to-meta-analysis-concluding-collagen-supplements-show-no-proven-benefit-for-skin-aging' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Para pele, cabelo e unhas, escolha colágeno hidrolisado em pó, com dose informada de pelo menos 2,5 g por dia; o Verisol é o mais estudado. Para articulações, escolha colágeno tipo II não desnaturado, com 40 mg por dia, ou peptídeos específicos para articulação, com 5 g. Desconfie de produto que não diz a dose e de promessa de "rejuvenescer" ou "regenerar cartilagem". O efeito, quando aparece, é pequeno e leva de 2 a 3 meses.</p>
+  </div>
+
+  <h2>Os tipos de colágeno nos suplementos</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Forma</th><th>Para que foi estudado</th><th>Dose nos estudos</th></tr></thead>
+      <tbody>
+        <tr><td>Colágeno hidrolisado (peptídeos de colágeno)</td><td>Hidratação e elasticidade da pele, unhas</td><td>2,5 a 10 g por dia</td></tr>
+        <tr><td>Verisol (marca de peptídeos)</td><td>Pele, rugas ao redor dos olhos, unhas</td><td>2,5 g por dia</td></tr>
+        <tr><td>Peptídeos para articulação (como o Fortigel)</td><td>Articulações; alegação aprovada pela Anvisa</td><td>5 g por dia</td></tr>
+        <tr><td>Colágeno tipo II não desnaturado (como o UC-II)</td><td>Dor e rigidez da artrose no joelho</td><td>40 mg por dia</td></tr>
+        <tr><td>Gelatina</td><td>É colágeno, mas sem estudos fortes como suplemento</td><td>-</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Repare na diferença de dose: o colágeno tipo II age em quantidade mínima, por um mecanismo ligado ao sistema imune, enquanto o hidrolisado precisa de gramas. Por isso não faz sentido comparar os dois pela quantidade, e um produto com "colágeno tipo II" na lista de ingredientes não substitui o hidrolisado para a pele, nem o contrário.</p>
+
+  <h2>Como escolher, passo a passo</h2>
+  <ol>
+    <li><strong>Defina o objetivo.</strong> Pele, cabelo e unhas pedem colágeno hidrolisado. Articulações pedem tipo II não desnaturado ou peptídeos próprios para articulação.</li>
+    <li><strong>Procure a dose no rótulo.</strong> A tabela nutricional deve dizer quantos gramas (ou miligramas) de colágeno há por porção. Sem isso, não dá para saber se chega à dose dos estudos.</li>
+    <li><strong>Prefira ingrediente com nome.</strong> Verisol, Fortigel e UC-II são marcas de matérias-primas com estudos publicados. "Colágeno" genérico pode ser qualquer coisa.</li>
+    <li><strong>Veja se tem vitamina C.</strong> O corpo precisa dela para formar colágeno. É um bom complemento, não obrigatório.</li>
+    <li><strong>Calcule o custo por dia.</strong> Divida o preço pelo número de doses, na dose certa.</li>
+    <li><strong>Desconfie das promessas.</strong> "Rejuvenesce 90%", "acaba com a celulite", "regenera a cartilagem" e "trata osteoporose" não têm base.</li>
+  </ol>
+
+  <h2>O que a ciência diz de verdade</h2>
+  <ul>
+    <li><strong>Pele:</strong> uma revisão de 2026 com 16 meta-análises e 113 ensaios encontrou melhora de elasticidade e hidratação, mas não de rugas. Uma meta-análise de 2025 com 23 ensaios mostrou benefício nos estudos pagos pela indústria e nenhum efeito nos independentes.</li>
+    <li><strong>Unhas:</strong> um estudo pequeno com Verisol, sem placebo, relatou unhas crescendo mais rápido e quebrando menos em 24 semanas.</li>
+    <li><strong>Articulações:</strong> colágeno tipo II não desnaturado (40 mg) reduziu de forma modesta a dor da artrose no joelho em 6 meses. Nenhum colágeno regenera cartilagem desgastada.</li>
+    <li><strong>Ossos:</strong> não há evidência de que colágeno trate ou previna osteoporose.</li>
+  </ul>
+
+  <h2>Comparação dos colágenos que analisamos</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Produto</th><th>Forma e dose</th><th>Para</th><th>Custo por dia</th></tr></thead>
+      <tbody>
+        <tr><td><a href="/colageno-natures-prime/">Colágeno Nature's Prime</a></td><td>Pó; Verisol 2,5 g + ácido hialurônico 120 mg, doses informadas</td><td>Pele e unhas</td><td>R$ 3,30 (1 pote)</td></tr>
+        <tr><td><a href="/collagen-vitta/">Collagen Vitta</a></td><td>Pó com Verisol e colágeno tipo II, doses não informadas</td><td>Pele</td><td>R$ 5,23 (1 pote)</td></tr>
+        <tr><td><a href="/artic-protect/">Artic Protect</a></td><td>Cápsula; colágeno tipo II 40 mg, dose informada (não diz se é não desnaturado)</td><td>Articulações</td><td>R$ 3,97 (1 pote)</td></tr>
+        <tr><td><a href="/collagen-osteo/">Collagen Osteo</a></td><td>Gotas com colágeno tipo II, doses não informadas</td><td>Articulações</td><td>Não dá para calcular</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">Preços dos sites oficiais consultados entre 17 e 21/10/2026, comprando 1 unidade. Kits maiores saem mais baratos por dia. O <a href="/lizz-ante-nutri/">Lizz Anté Nutri</a> e o <a href="/vitta-resveratrol/">Vitta Resveratrol</a> também têm colágeno, junto com outros ativos, mas sem dose informada.</p>
+  <p>Pelos critérios deste guia, para a pele o Colágeno Nature's Prime é o único da lista que informa a dose do Verisol, e ela é a dos estudos. Para articulações, o Artic Protect informa 40 mg de colágeno tipo II, a quantidade dos estudos, mas não diz se é a forma não desnaturada, que é a que foi testada.</p>
+
+  <h2>Cuidados</h2>
+  <ul>
+    <li>Colágeno é bem tolerado. Quem tem alergia a peixe ou frutos do mar deve conferir a origem no rótulo.</li>
+    <li>Olhe os outros ingredientes: retinol (vitamina A) não é indicado na gravidez; vitamina K2 e curcumina podem interferir com anticoagulantes.</li>
+    <li>Dor nas articulações que não passa, inchaço ou fratura por queda leve pedem avaliação médica, não suplemento.</li>
+  </ul>
+</Article>

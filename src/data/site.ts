@@ -457,6 +457,7 @@ export const comparePages = [
   { href: '/ozenvitta-ou-reduphine/', title: 'OzenVitta ou ReduPhine: qual escolher? Comparação completa', short: 'OzenVitta ou ReduPhine?' },
 ];
 export const ingredientGuides = [
+  { href: '/colageno/', title: 'Qual o melhor colágeno? Tipos, doses e como escolher', short: 'Qual colágeno escolher' },
   { href: '/psyllium/', title: 'Psyllium emagrece? O que é, como tomar e cuidados', short: 'Psyllium emagrece?' },
   { href: '/resveratrol/', title: 'Resveratrol: o que é, para que serve e o que a ciência diz', short: 'Resveratrol: o que é' },
 ];

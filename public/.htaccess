@@ -1,6 +1,8 @@
 # Ficha Natural - regras do Apache (Napoleon / cPanel)
 Options -Indexes
 DirectoryIndex index.html
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .txt .xml
 ErrorDocument 404 /404.html
 
 <IfModule mod_rewrite.c>
