@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { iarmonize as p, iarmonizePages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'IArmonize Hair faz o cabelo crescer?', a: 'Só tende a ajudar se a queda vier da falta de algum nutriente, como ferro ou biotina. Em quem não tem deficiência, os estudos não mostram efeito. Queda forte ou repentina deve ser avaliada por um dermatologista.' },
@@ -31,6 +32,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Em parte. O Energy é o mais bem montado, mas o efeito sobre o cansaço costuma ser discreto. O Hair e o Vital só fazem diferença em quem tem deficiência de algum nutriente, e as doses não são informadas. O Sleep provavelmente ajuda a dormir, mas com 5 mg de melatonina, dose que deveria ter orientação médica.</p>
   </div>
+
+  <TopCta produto="IArmonize" href={p.link} />
 
   <h2>Fórmula por fórmula</h2>
   <div class="table-scroll">

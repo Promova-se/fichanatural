@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { seismag as p, seismagPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: '6 Magnésios funciona para cãibra?', a: 'Para a cãibra comum de pessoas mais velhas, uma revisão Cochrane de 2020 concluiu que o magnésio provavelmente não traz benefício relevante. Na gravidez, os estudos são conflitantes. Se as cãibras vêm de falta de magnésio, aí sim pode ajudar.' },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Funciona para repor magnésio, com 260 mg por dia. Para quem não tem falta, os efeitos em sono, estresse e cãibra são pequenos ou não comprovados: para a cãibra comum de pessoas mais velhas, a principal revisão concluiu que o magnésio provavelmente não ajuda. E não há estudo mostrando que misturar seis formas seja melhor que usar uma.</p>
   </div>
+
+  <TopCta produto="6 Magnésios" href={p.link} />
 
   <h2>A promessa de cada forma</h2>
   <div class="table-scroll">

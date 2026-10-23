@@ -3,6 +3,7 @@ import Article from '../../layouts/Article.astro';
 import BuyBox from '../../components/BuyBox.astro';
 import KitCards from '../../components/KitCards.astro';
 import { detoxfit as p, detoxfitPages } from '../../data/site';
+import TopCta from '../../components/TopCta.astro';
 
 const faq = [
   { q: 'O que é o Detox Fit Caps Black?', a: 'É um suplemento em cápsulas vendido para emagrecimento, com psyllium, inulina, laranja moro, L-carnitina, cromo, cafeína, espirulina, chlorella e vitaminas do complexo B. O pote tem 60 cápsulas de 500 mg, e a porção é de 2 cápsulas por dia.' },
@@ -31,6 +32,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resumo da ficha</strong>Cápsulas com psyllium, inulina, laranja moro, L-carnitina, cromo, cafeína, espirulina, chlorella e vitaminas B, somando 1 grama por dia, sem dose de cada ingrediente. Com tanta coisa em 1 grama, as quantidades devem ser pequenas. A página promete "reduzir 80% da gordura corporal", exibe um selo "RA1000" que a marca não tem e anuncia uma garantia de 30 dias que os termos restringem a 7 dias com o pote lacrado. É barato: a partir de R$ 137 o pote, e R$ 63 por mês no kit de 6.</p>
   </div>
+
+  <TopCta produto="Detox Fit Caps Black" href={p.link} />
 
   <h2>Ficha técnica</h2>
   <div class="table-scroll">

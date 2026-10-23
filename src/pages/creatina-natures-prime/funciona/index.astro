@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { creatina as p, creatinaPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Creatina funciona mesmo?', a: 'Sim. É o suplemento esportivo com mais estudos. Somada ao treino de força, aumenta força, potência e ganho de massa magra, principalmente em exercícios curtos e intensos, como musculação e tiros de corrida.' },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Sim. Junto com treino de força, a creatina aumenta força e potência e ajuda no ganho de massa magra. O efeito é maior em exercícios curtos e intensos. Ela não faz milagre sem treino e não queima gordura. Como a Nature's Prime é creatina monohidratada pura, deve funcionar como qualquer outra creatina pura.</p>
   </div>
+
+  <TopCta produto="Creatina Nature's Prime" href={p.link} />
 
   <h2>O que a creatina faz e o que não faz</h2>
   <div class="table-scroll">

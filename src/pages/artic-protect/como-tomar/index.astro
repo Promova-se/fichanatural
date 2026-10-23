@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { artic as p, articPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Como tomar Artic Protect?', a: '1 cápsula por dia, em qualquer horário, de preferência longe das refeições grandes. Não passe de 1 cápsula por dia.' },
@@ -29,6 +30,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>1 cápsula por dia, em qualquer horário, longe das refeições grandes. Use por pelo menos 3 meses antes de avaliar o resultado. Evite se tiver alergia a frango. Gestantes, lactantes, menores de 18 anos e quem tem doença autoimune devem falar com o médico antes.</p>
   </div>
+
+  <TopCta produto="Artic Protect" href={p.link} />
 
   <h2>Modo de uso</h2>
   <div class="table-scroll">

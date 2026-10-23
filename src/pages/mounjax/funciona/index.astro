@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { mounjax as p, mounjaxPages, ozenvitta } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Mounjax emagrece?', a: 'Não há estudo com o Mounjax. Os ingredientes, nas doses usadas em pesquisas, têm efeito pequeno sobre o peso. Como a página não informa as doses do produto, não dá para saber se ele chega perto disso.' },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Dificilmente faz diferença no peso. Os ingredientes têm efeito pequeno mesmo nas doses dos estudos, e a página não informa quanto há de cada um. Um produto de fórmula quase igual, o <a href="/tg30/">TG30</a>, informa as doses: 33 mg de café verde e de cúrcuma por dose, muito abaixo do que se estuda. O efeito não tem nada a ver com o do Mounjaro.</p>
   </div>
+
+  <TopCta produto="Mounjax" href={p.link} />
 
   <h2>Ingrediente por ingrediente</h2>
   <div class="table-scroll">

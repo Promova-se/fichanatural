@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { collagenosteo as p, collagenosteoPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Como tomar Collagen Osteo?', a: 'A orientação da página é pingar 12 gotas (1 ml) direto na boca, sem diluir, uma vez por dia, de preferência pela manhã.' },
@@ -29,6 +30,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>12 gotas (1 ml) por dia, direto na boca, de preferência de manhã. Não substitui remédio para osteoporose, artrose ou dor. Quem toma anticoagulante, está grávida, amamentando ou tem problema de vesícula deve falar com o médico antes.</p>
   </div>
+
+  <TopCta produto="Collagen Osteo" href={p.link} />
 
   <h2>Dose</h2>
   <ol>

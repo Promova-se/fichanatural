@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { tg30 as p, tg30Pages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Quantas gotas de TG30 por dia?', a: 'A página de vendas fala em 12 gotas por dia. O rótulo manda tomar 1 mL por dia e diz que 1 mL tem 30 gotas. Na dúvida, siga o rótulo: 1 mL por dia, medido no conta-gotas.' },
@@ -27,6 +28,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Agite o frasco e tome 1 mL por dia, sempre no mesmo horário. O rótulo diz que isso dá 30 gotas; a página de vendas fala em 12. Não use se estiver grávida, amamentando ou tiver menos de 19 anos, e não some com outro suplemento de vitamina D sem orientação.</p>
   </div>
+
+  <TopCta produto="TG30" href={p.link} />
 
   <h2>Modo de uso</h2>
   <ol>

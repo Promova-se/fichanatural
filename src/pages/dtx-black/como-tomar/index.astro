@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { dtxblack as p, dtxblackPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Quantas cápsulas de DTX Black por dia?', a: 'A página indica 2 cápsulas por dia, de preferência com líquido. Um pote dura 30 dias.' },
@@ -27,6 +28,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Tome 2 cápsulas por dia, com um copo cheio de água, de preferência pela manhã ou antes do almoço. Evite tomar à noite, por causa da cafeína. Gestantes, lactantes, idosos, pessoas com pressão alta, ansiedade ou que tomam remédios contínuos devem falar com o médico antes.</p>
   </div>
+
+  <TopCta produto="DTX Black" href={p.link} />
 
   <h2>Modo de uso</h2>
   <ol>

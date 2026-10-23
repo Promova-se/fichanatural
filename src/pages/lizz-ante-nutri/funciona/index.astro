@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { lizznutri as p, lizznutriPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Lizz Anté Nutri faz o cabelo crescer?', a: 'Pode ajudar quem tem deficiência de biotina, zinco ou proteína, que atrapalha o crescimento. Em quem não tem deficiência, não há evidência de que vitaminas acelerem o crescimento do cabelo.' },
@@ -29,6 +30,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Pode ajudar quem tem alguma deficiência nutricional, como falta de biotina, zinco ou proteína, e aí cabelo e unhas melhoram. Para quem já se alimenta bem, o efeito esperado é pequeno. A quantidade de colágeno é bem menor que a dos estudos sobre pele. "5 vezes mais espessura" e "25 mil fios a mais" não têm estudo.</p>
   </div>
+
+  <TopCta produto="Lizz Anté Nutri" href={p.link} />
 
   <h2>Ativo por ativo</h2>
   <div class="table-scroll">

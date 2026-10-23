@@ -1,6 +1,7 @@
 ---
 import Article from '../../../layouts/Article.astro';
 import { resveratrol, resveratrolPages, reputation } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const r = reputation.natturabio;
 const faq = [
@@ -27,6 +28,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Não há sinais de golpe: a distribuidora é identificada, a venda passa pela Monetizze e as reclamações públicas são poucas. Mas a Natturabio não tem nota no Reclame Aqui e não respondeu as reclamações recentes, quase todas sobre atraso na entrega. Pague no cartão e guarde os comprovantes.</p>
   </div>
+
+  <TopCta produto="Vitta Resveratrol" href={resveratrol.link} />
 
   <h2>O que aparece no Reclame Aqui</h2>
   <div class="table-scroll">

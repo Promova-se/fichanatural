@@ -3,6 +3,7 @@ import Article from '../../layouts/Article.astro';
 import BuyBox from '../../components/BuyBox.astro';
 import KitCards from '../../components/KitCards.astro';
 import { creatina as p, creatinaPages } from '../../data/site';
+import TopCta from '../../components/TopCta.astro';
 
 const faq = [
   { q: "O que é a Creatina Nature's Prime?", a: 'É creatina monohidratada pura em pó, em pote de 300 g, fabricada pela Natures Farma Indústria e Comércio. O rótulo diz "100% pure monohidratada".' },
@@ -31,6 +32,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resumo da ficha</strong>Creatina monohidratada pura, 300 g por pote, de um fabricante com CNPJ e sem reclamações no Reclame Aqui. A creatina funciona: aumenta força e desempenho em exercícios intensos, com muitos estudos por trás. A página de vendas não exagera e oferece garantia de 30 dias. O problema é o preço: R$ 169,90 o pote, contra R$ 30 a R$ 55 de marcas conhecidas no mesmo peso.</p>
   </div>
+
+  <TopCta produto="Creatina Nature's Prime" href={p.link} />
 
   <h2>Ficha técnica</h2>
   <div class="table-scroll">

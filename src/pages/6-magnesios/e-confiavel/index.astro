@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { seismag as p, seismagPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'O Empório Terra Nativa é confiável?', a: 'Com ressalvas. A empresa tem CNPJ e endereço em São Paulo, o pagamento passa pela Braip e o rótulo informa a dose. Mas a empresa tem pouco histórico, 4 reclamações no Reclame Aqui e só respondeu 1, depois de muito tempo.' },
@@ -27,6 +28,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Com ressalvas. A empresa é identificada (Empório Terra Nativa Ltda, CNPJ 61.285.739/0001-81, São Paulo) e o produto tem rótulo com dose. Mas no Reclame Aqui há 4 reclamações, sobre atraso, pedido não recebido e falta de contato, e só uma foi respondida. Compre pelo site oficial, pague no cartão e acompanhe o rastreio.</p>
   </div>
+
+  <TopCta produto="6 Magnésios" href={p.link} />
 
   <h2>Quem vende</h2>
   <div class="table-scroll">

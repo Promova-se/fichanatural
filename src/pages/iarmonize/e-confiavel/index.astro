@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { iarmonize as p, iarmonizePages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'IArmonize é golpe?', a: `Não encontramos sinais de golpe. O produtor aparece no checkout como ${p.maker}, a venda passa pela Braip e a página informa endereço, telefone e e-mail. Os pontos de atenção são a falta de CNPJ e de garantia na página e a dose de melatonina do Sleep.` },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Em parte. Há sinais de empresa real: produtor identificado, endereço, telefone e pagamento pela Braip. Faltam o CNPJ e uma política de garantia na página, e a marca ainda não tem histórico no Reclame Aqui. O maior problema não é de confiança, e sim de segurança: o Sleep tem melatonina em dose acima do limite para suplementos.</p>
   </div>
+
+  <TopCta produto="IArmonize" href={p.link} />
 
   <h2>Quem vende</h2>
   <div class="table-scroll">

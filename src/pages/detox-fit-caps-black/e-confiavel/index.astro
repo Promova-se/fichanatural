@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { detoxfit as p, detoxfitPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Detox Fit Caps Black tem selo RA1000 do Reclame Aqui?', a: 'Não. A página exibe um "Certificado RA1000", mas no Reclame Aqui a empresa Detox Fit Caps aparece como não verificada e sem reputação definida, com 19 reclamações no total (consulta em 19/10/2026). O RA1000 é dado só a empresas com índices altos de resolução.' },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Com ressalvas sérias. O pagamento pela Monetizze dá segurança na entrega pelo site oficial. Mas o selo RA1000 da página não confere com o Reclame Aqui, a empresa e o CNPJ não aparecem, o e-mail de atendimento é pessoal e a garantia de 30 dias não é a dos termos. Se comprar, use o site oficial e o cartão de crédito.</p>
   </div>
+
+  <TopCta produto="Detox Fit Caps Black" href={p.link} />
 
   <h2>O selo do Reclame Aqui</h2>
   <div class="table-scroll">

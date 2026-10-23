@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { mounjax as p, mounjaxPages, reputation } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const r = reputation.ozenpharma;
 const faq = [
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Comprado no site oficial, o Mounjax não tem cara de golpe: a venda passa pela Monetizze e a Ozenpharma responde {r.answered} das reclamações, com reputação "{r.label}" (nota {r.score}). Mas há reclamações de clientes que não viram resultado, a empresa não informa CNPJ e existem outros sites vendendo produtos com o mesmo nome.</p>
   </div>
+
+  <TopCta produto="Mounjax" href={p.link} />
 
   <h2>A empresa no Reclame Aqui</h2>
   <div class="table-scroll">

@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { ozenvitta as p, ozenvittaPages, study } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'OzenVitta emagrece quantos quilos?', a: 'Não há estudo com o OzenVitta em si. Os estudos com os ingredientes mostram perdas pequenas: cerca de 2 pontos percentuais de peso a mais que o placebo em 6 meses com laranja moro, e por volta de 1 kg a mais com L-carnitina, sempre junto com dieta.' },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Funciona como apoio, não como emagrecedor. Laranja moro e L-carnitina têm estudos com perda de peso pequena, a mais que o placebo. As fibras (psyllium e inulina) ajudam na saciedade e no intestino. Como a página não informa as doses, não dá para saber se o produto chega às quantidades estudadas.</p>
   </div>
+
+  <TopCta produto="OzenVitta" href={p.link} />
 
   <h2>Ingrediente por ingrediente</h2>
   <div class="table-scroll">

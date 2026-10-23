@@ -1,7 +1,8 @@
 ---
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
-import { reduphinePages } from '../../../data/site';
+import { reduphinePages, reduphine } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'ReduPhine emagrece quantos quilos por mês?', a: 'Não há estudo com o ReduPhine Caps em si. Os estudos com os ingredientes da fórmula mostram perdas pequenas, em geral de menos de 1 a 2 kg a mais que o placebo ao longo de semanas ou meses. A promessa de 4 kg no primeiro mês não tem respaldo nesses estudos.' },
@@ -27,6 +28,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Funciona como apoio, não como emagrecedor. Psyllium e quitosana são fibras que ajudam na saciedade e têm efeito pequeno sobre o peso; spirulina e cromo têm evidência ainda mais fraca. Quem combina com dieta tem mais chance de perceber diferença.</p>
   </div>
+
+  <TopCta produto="ReduPhine Caps" href={reduphine.link} />
 
   <h2>O que dá para afirmar e o que não dá</h2>
   <p>O ReduPhine Caps <strong>não tem estudo clínico publicado</strong> com a fórmula pronta. E a página oficial <strong>não informa quanto de cada ingrediente</strong> vem nas cápsulas. Por isso, a análise abaixo olha para o que se sabe de cada ingrediente, sem garantir que o produto tenha as mesmas doses usadas nas pesquisas.</p>

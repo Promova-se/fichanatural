@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { detoxfit as p, detoxfitPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Como tomar Detox Fit Caps Black?', a: 'A porção indicada é de 2 cápsulas por dia. Como a fórmula tem cafeína, prefira tomar até o começo da tarde, com água e longe da hora de dormir.' },
@@ -27,6 +28,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>2 cápsulas por dia, com água, até o começo da tarde. Beba bastante água por causa das fibras. Evite somar com café em excesso, energéticos ou outros termogênicos. Quem tem pressão alta, arritmia, ansiedade, insônia, está grávida ou amamentando, ou tem menos de 18 anos, deve falar com o médico antes.</p>
   </div>
+
+  <TopCta produto="Detox Fit Caps Black" href={p.link} />
 
   <h2>Modo de uso</h2>
   <div class="table-scroll">

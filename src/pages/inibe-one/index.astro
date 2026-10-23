@@ -3,6 +3,7 @@ import Article from '../../layouts/Article.astro';
 import BuyBox from '../../components/BuyBox.astro';
 import KitCards from '../../components/KitCards.astro';
 import { inibeone as p, inibeonePages } from '../../data/site';
+import TopCta from '../../components/TopCta.astro';
 
 const faq = [
   { q: 'O que é o Inibe One?', a: 'É um suplemento em cápsulas vendido para emagrecimento. Cada cápsula de 500 mg tem psyllium, espirulina, FOS, farinha de chia, inulina, ágar-ágar, quitosana e cromo, segundo a tabela publicada na página oficial.' },
@@ -30,6 +31,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resumo da ficha</strong>Cápsulas com fibras (psyllium, FOS, inulina, chia e ágar-ágar), espirulina, quitosana e cromo. A empresa e o CNPJ são informados, e a tabela mostra as doses. O problema é que elas são pequenas: com 30 cápsulas por pote, a dose é de 1 cápsula por dia, com cerca de 350 mg de fibras, quando os estudos usam gramas por dia. A garantia exige fotos da balança. Custa a partir de R$ 187 o pote.</p>
   </div>
+
+  <TopCta produto="Inibe One" href={p.link} />
 
   <h2>Ficha técnica</h2>
   <div class="table-scroll">

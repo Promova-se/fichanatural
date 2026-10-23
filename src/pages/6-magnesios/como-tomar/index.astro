@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { seismag as p, seismagPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Como tomar 6 Magnésios?', a: 'O rótulo indica 3 cápsulas por dia, para adultos a partir de 19 anos. Você pode dividir ao longo do dia, por exemplo 1 cápsula em cada refeição, o que costuma ser mais leve para o intestino.' },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>3 cápsulas por dia, de preferência com as refeições. Não some com outros suplementos de magnésio sem fazer a conta (limite de 350 mg por dia). Separe por pelo menos 2 horas de antibióticos como ciprofloxacino e tetraciclinas e de remédios para osteoporose. Quem tem doença nos rins só deve tomar com orientação médica.</p>
   </div>
+
+  <TopCta produto="6 Magnésios" href={p.link} />
 
   <h2>Dose</h2>
   <ol>

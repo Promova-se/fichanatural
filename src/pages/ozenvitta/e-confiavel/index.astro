@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { ozenvitta as p, ozenvittaPages, reputation } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const r = reputation.ozenpharma;
 const faq = [
@@ -29,6 +30,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>O OzenVitta não tem cara de golpe: a venda passa pela Monetizze, o produto é entregue e a empresa responde {r.answered} das reclamações, com reputação "{r.label}" (nota {r.score}) no Reclame Aqui. Mas só {r.again} dos clientes que reclamaram voltariam a comprar, e a marca não informa CNPJ. Compre esperando um apoio modesto, não milagre.</p>
   </div>
+
+  <TopCta produto="OzenVitta" href={p.link} />
 
   <h2>A nota no Reclame Aqui</h2>
   <div class="table-scroll">

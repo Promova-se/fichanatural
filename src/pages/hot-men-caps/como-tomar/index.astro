@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { hotmen as p, hotmenPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Como tomar Hot Men Caps?', a: 'A página indica 2 cápsulas por dia: uma 30 minutos antes do almoço e outra 30 minutos antes do jantar, com água. Cada pote de 60 cápsulas dura 1 mês.' },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>2 cápsulas por dia, uma antes do almoço e outra antes do jantar. Quem tem pressão alta, doença no coração ou nos rins, usa remédio para ereção ou nitrato deve falar com o médico antes. A página diz que não há efeito colateral nenhum, mas não mostra a fórmula para que isso possa ser conferido.</p>
   </div>
+
+  <TopCta produto="Hot Men Caps" href={p.link} />
 
   <h2>Modo de uso indicado</h2>
   <div class="table-scroll">

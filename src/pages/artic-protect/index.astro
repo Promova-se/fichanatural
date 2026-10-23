@@ -3,6 +3,7 @@ import Article from '../../layouts/Article.astro';
 import BuyBox from '../../components/BuyBox.astro';
 import KitCards from '../../components/KitCards.astro';
 import { artic as p, articPages } from '../../data/site';
+import TopCta from '../../components/TopCta.astro';
 
 const faq = [
   { q: 'O que é o Artic Protect?', a: 'É um suplemento em cápsulas da Up Sports Nutrition com colágeno tipo 2 (40 mg), magnésio e vitamina D3, vendido para a saúde das articulações. O pote tem 30 cápsulas, e a dose é de 1 cápsula por dia.' },
@@ -31,6 +32,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resumo da ficha</strong>Uma cápsula por dia com 40 mg de colágeno tipo 2, magnésio e vitamina D3. A marca é vendida em grandes redes de farmácia, e o site oficial sai mais barato que a farmácia. O colágeno tipo 2 tem estudos sérios de alívio moderado da dor no joelho, mas a página não informa se é a forma não desnaturada nem as doses de magnésio e vitamina D. Promessas de "regenerar cartilagem" e "acabar com a dor agora" são exagero. Não há garantia própria.</p>
   </div>
+
+  <TopCta produto="Artic Protect" href={p.link} />
 
   <h2>Ficha técnica</h2>
   <div class="table-scroll">

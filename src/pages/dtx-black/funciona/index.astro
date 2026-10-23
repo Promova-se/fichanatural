@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { dtxblack as p, dtxblackPages, ozenvitta } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'DTX Black emagrece 4 kg em 30 dias?', a: 'Não há estudo com o DTX Black que mostre isso. Com os ingredientes da fórmula, os estudos mostram perdas pequenas, de no máximo 1 a 2 kg em vários meses, e sempre junto com dieta.' },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Funciona como apoio, não como emagrecedor. As fibras ajudam na saciedade e no intestino, e a cafeína dá um pequeno empurrão no gasto de energia. Mas os estudos com esses ingredientes mostram perdas pequenas ao longo de meses, longe dos "4 kg em 30 dias". A balança pode cair um pouco no começo por perda de líquido, não de gordura.</p>
   </div>
+
+  <TopCta produto="DTX Black" href={p.link} />
 
   <h2>Ingrediente por ingrediente</h2>
   <div class="table-scroll">

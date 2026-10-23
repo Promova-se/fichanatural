@@ -3,6 +3,7 @@ import Article from '../../layouts/Article.astro';
 import BuyBox from '../../components/BuyBox.astro';
 import KitCards from '../../components/KitCards.astro';
 import { colageno as p, colagenoPages } from '../../data/site';
+import TopCta from '../../components/TopCta.astro';
 
 const faq = [
   { q: "O que é o Colágeno Nature's Prime?", a: 'É um suplemento em pó, sabor abacaxi com hortelã, com peptídeos de colágeno Verisol, ácido hialurônico, coenzima Q10, vitamina C, zinco e selênio. O pote tem 250 g, que rendem 50 doses de 5 g, uma por dia. É fabricado pela Natures Farma Indústria e Comércio.' },
@@ -31,6 +32,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resumo da ficha</strong>Colágeno em pó com 2,5 g de Verisol por dose, a quantidade dos estudos, mais 120 mg de ácido hialurônico, coenzima Q10, vitamina C e zinco. O fabricante tem CNPJ e não tem reclamações no Reclame Aqui. Para a pele, espere no máximo mais hidratação e elasticidade depois de 2 a 3 meses, não o fim das rugas. No site oficial custa R$ 164,90 o pote; numa farmácia online, o mesmo pote saía por R$ 95,39.</p>
   </div>
+
+  <TopCta produto="Colágeno Nature's Prime" href={p.link} />
 
   <h2>Ficha técnica</h2>
   <div class="table-scroll">

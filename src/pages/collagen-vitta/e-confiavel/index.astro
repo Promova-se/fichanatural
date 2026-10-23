@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { collagenvitta as p, collagenvittaPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Collagen Vitta é confiável?', a: 'Com ressalvas. A distribuidora, Natturabio, informa CNPJ e o pagamento passa pela Braip. Mas a página não diz as doses, faz promessas sem base, e as reclamações no Reclame Aqui, sobre atraso e embalagem diferente, ficaram sem resposta.' },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Com ressalvas. A distribuidora tem CNPJ e o pagamento passa pela Braip, o que dá segurança na compra. Mas a Natturabio não tem nota no Reclame Aqui e não respondeu as reclamações recentes, sobre atraso e embalagem diferente do colágeno. A página também não informa as doses e promete mais do que o produto pode entregar.</p>
   </div>
+
+  <TopCta produto="Collagen Vitta" href={p.link} />
 
   <h2>Quem vende</h2>
   <div class="table-scroll">

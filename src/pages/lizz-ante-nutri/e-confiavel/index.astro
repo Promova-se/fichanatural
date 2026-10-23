@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { lizznutri as p, lizznutriPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Lizz Anté Nutri é confiável?', a: 'Sim, pelos sinais disponíveis. A Lizz Anté tem reputação "Ótima" no Reclame Aqui, com nota 8,4 e 93% das reclamações resolvidas, e vende também na Beleza na Web. O Nutri é a linha de suplementos da mesma empresa.' },
@@ -27,6 +28,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Sim. A Lizz Anté tem nota 8,4 e selo "Ótima" no Reclame Aqui, vende também na Beleza na Web, e o Nutri tem garantia de 90 dias. A ressalva é a página de vendas, que exagera nos resultados e não informa as doses.</p>
   </div>
+
+  <TopCta produto="Lizz Anté Nutri" href={p.link} />
 
   <h2>Quem vende</h2>
   <div class="table-scroll">

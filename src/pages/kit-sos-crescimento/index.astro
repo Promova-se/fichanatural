@@ -3,6 +3,7 @@ import Article from '../../layouts/Article.astro';
 import BuyBox from '../../components/BuyBox.astro';
 import KitCards from '../../components/KitCards.astro';
 import { kitsos as p, kitsosPages } from '../../data/site';
+import TopCta from '../../components/TopCta.astro';
 
 const faq = [
   { q: 'O que vem no Kit S.O.S Crescimento?', a: 'Um shampoo de 300 ml, uma máscara de 300 g e um tônico capilar de 100 ml, da marca Lizz Anté Professional. Os kits maiores vêm com produtos extras de brinde.' },
@@ -31,6 +32,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resumo da ficha</strong>Shampoo, máscara e tônico com biotina, pantenol, queratina, óleo de rícino, bambu, bardana e cafeína. É cosmético, não suplemento. A Lizz Anté tem reputação "Ótima" no Reclame Aqui e oferece garantia de 60 dias com estorno total. O kit deixa o cabelo mais tratado e menos quebradiço, mas não há estudo que mostre crescimento "7 vezes mais rápido". Custa R$ 179 o kit, e fica mais barato por kit nos combos.</p>
   </div>
+
+  <TopCta produto="Kit S.O.S Crescimento" href={p.link} />
 
   <h2>Ficha técnica</h2>
   <div class="table-scroll">

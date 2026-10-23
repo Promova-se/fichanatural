@@ -1,6 +1,7 @@
 ---
 import Article from '../../../layouts/Article.astro';
 import { reduphine, reduphinePages, reputation } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const r = reputation.vittabalance;
 const faq = [
@@ -27,6 +28,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>O ReduPhine é vendido por uma empresa identificada, com pagamento pela Monetizze, então não é golpe. Mas o atendimento é o ponto fraco: no Reclame Aqui, a VittaBalance tem nota {r.score}, reputação "{r.label}" e {r.answered} de reclamações respondidas no período. Se decidir comprar, pague no cartão e guarde tudo.</p>
   </div>
+
+  <TopCta produto="ReduPhine Caps" href={reduphine.link} />
 
   <h2>A nota no Reclame Aqui</h2>
   <div class="table-scroll">

@@ -3,6 +3,7 @@ import Article from '../../layouts/Article.astro';
 import BuyBox from '../../components/BuyBox.astro';
 import KitCards from '../../components/KitCards.astro';
 import { maca as p, macaPages, seismag } from '../../data/site';
+import TopCta from '../../components/TopCta.astro';
 
 const faq = [
   { q: 'O que é a Maca Peruana Negra do Empório Terra Nativa?', a: 'São cápsulas de 500 mg de raiz de maca negra (Lepidium meyenii), vendidas pelo Empório Terra Nativa como "100% pura" e importada do Peru. A orientação é de 4 cápsulas por dia, 2 de manhã e 2 à noite, o que dá 2 g de maca por dia. O pote de 120 cápsulas dura 30 dias.' },
@@ -35,6 +36,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resumo da ficha</strong>Cápsulas de maca negra, 4 por dia (2 g), sem outros ingredientes, segundo o fabricante. A dose está dentro da faixa usada em estudos (1,5 a 3 g por dia). Esses estudos são poucos e pequenos: alguns mostram leve aumento do desejo sexual depois de 6 a 8 semanas, sem mudar hormônios. A maca não é autorizada pela Anvisa como ingrediente de suplemento. Custa R$ 4,66 por dia no pote avulso.</p>
   </div>
+
+  <TopCta produto="Maca Peruana Negra" href={p.link} />
 
   <h2>Ficha técnica</h2>
   <div class="table-scroll">

@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { creatina as p, creatinaPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Qual a dose certa de creatina?', a: 'De 3 a 5 g por dia, todos os dias, inclusive nos dias sem treino. Pessoas mais pesadas podem usar até 0,1 g por quilo de peso por dia.' },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>3 a 5 g por dia (uma colher medida), misturados em água, suco ou shake, todos os dias, no horário que preferir. Fase de carga opcional: 20 g por dia, em 4 doses de 5 g, por 5 a 7 dias. Beba água ao longo do dia. Quem tem doença nos rins, gestantes e menores de 18 anos devem falar com o médico antes.</p>
   </div>
+
+  <TopCta produto="Creatina Nature's Prime" href={p.link} />
 
   <h2>Duas formas de começar</h2>
   <div class="table-scroll">

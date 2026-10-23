@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { maca as p, macaPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Como tomar maca peruana em cápsula?', a: 'A orientação do Empório Terra Nativa é de 4 cápsulas de 500 mg por dia: 2 de manhã e 2 à noite. Isso dá 2 g de maca, dentro da faixa de 1,5 a 3 g usada nos estudos.' },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>4 cápsulas por dia (2 g), divididas entre manhã e tarde. Avalie depois de 6 a 8 semanas. Gestantes, lactantes e quem tem pressão alta, problema de tireoide ou doença sensível a hormônios devem falar com o médico antes.</p>
   </div>
+
+  <TopCta produto="Maca Peruana Negra" href={p.link} />
 
   <h2>Dose</h2>
   <ol>

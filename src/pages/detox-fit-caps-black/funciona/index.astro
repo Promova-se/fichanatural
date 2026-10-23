@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { detoxfit as p, detoxfitPages, ozenvitta } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Detox Fit Caps Black emagrece?', a: 'Pode dar um pouco de saciedade e um leve aumento de gasto por causa da cafeína, mas o efeito esperado é pequeno. Os ingredientes têm estudos com doses maiores do que cabem em 1 grama por dia somando tudo.' },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Pouco. Fibras, cafeína, laranja moro e cromo têm efeitos pequenos mesmo nas doses dos estudos, e aqui todos dividem 1 grama por dia, sem quantidade informada. "Reduz 80% da gordura corporal", "destrói a gordura localizada" e "sem precisar pisar na academia" não têm base.</p>
   </div>
+
+  <TopCta produto="Detox Fit Caps Black" href={p.link} />
 
   <h2>O que se sabe de cada ingrediente</h2>
   <div class="table-scroll">

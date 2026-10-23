@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { collagenvitta as p, collagenvittaPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Collagen Vitta funciona?', a: 'Pode ajudar um pouco na hidratação e na elasticidade da pele, se tiver Verisol na dose dos estudos (2,5 g por dia). A página não informa a dose. Rejuvenescer a pele "em até 90%", firmar os seios e acabar com a celulite não têm base.' },
@@ -31,6 +32,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Talvez um pouco, para hidratação e elasticidade da pele, e só se a dose de Verisol chegar a 2,5 g por dia, o que a página não informa. As revisões mais amplas não confirmam efeito sobre rugas. Firmar os seios, acabar com a celulite, fazer o cabelo crescer e prevenir osteoporose são promessas sem base.</p>
   </div>
+
+  <TopCta produto="Collagen Vitta" href={p.link} />
 
   <h2>O que se sabe de cada ingrediente</h2>
   <div class="table-scroll">

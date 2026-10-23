@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { inibeone as p, inibeonePages, ozenvitta } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Inibe One emagrece?', a: 'Pode ajudar um pouco na saciedade, mas as doses de fibras são pequenas. Os estudos com psyllium e quitosana usam quantidades dezenas de vezes maiores e, mesmo assim, mostram perdas pequenas.' },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Pouco. As fibras dão alguma saciedade, mas a cápsula tem cerca de 350 mg delas, enquanto os estudos usam de 5 a 15 gramas por dia. A quitosana vem com 50 mg, contra 1 a 3 gramas nas pesquisas, que já mostram efeito mínimo. "Efeito bariátrica" e "eliminar gordura localizada" não têm base.</p>
   </div>
+
+  <TopCta produto="Inibe One" href={p.link} />
 
   <h2>Dose do rótulo contra dose dos estudos</h2>
   <div class="table-scroll">

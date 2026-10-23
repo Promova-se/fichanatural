@@ -3,6 +3,7 @@ import Article from '../../layouts/Article.astro';
 import BuyBox from '../../components/BuyBox.astro';
 import KitCards from '../../components/KitCards.astro';
 import { dtxblack as p, dtxblackPages } from '../../data/site';
+import TopCta from '../../components/TopCta.astro';
 
 const faq = [
   { q: 'O que é o DTX Black?', a: 'É um suplemento em cápsulas vendido para emagrecimento e "detox". A página cita psyllium, cromo, cafeína, spirulina, inulina e farinha de linhaça, sem informar a dose de cada um. São 2 cápsulas por dia.' },
@@ -30,6 +31,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resumo da ficha</strong>Cápsulas com psyllium, inulina e farinha de linhaça (fibras), cafeína, cromo e spirulina. São 2 cápsulas por dia. A fórmula é parecida com a de outros suplementos de fibras, com cafeína a mais. A página não informa doses nem CNPJ, promete resultados que os estudos não mostram e só devolve o dinheiro com o produto lacrado. A partir de R$ 157 o pote.</p>
   </div>
+
+  <TopCta produto="DTX Black" href={p.link} />
 
   <h2>Ficha técnica</h2>
   <div class="table-scroll">

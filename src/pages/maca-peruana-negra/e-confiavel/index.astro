@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { maca as p, macaPages, seismag } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'A Maca Peruana Negra do Empório Terra Nativa é confiável?', a: 'Com ressalvas sérias. A empresa tem CNPJ e o pagamento passa pela Braip. Mas a maca não está na lista de ingredientes autorizados pela Anvisa para suplementos, e a empresa tem reclamações sem resposta no Reclame Aqui.' },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Com ressalvas sérias. A empresa tem CNPJ (Empório Terra Nativa Ltda, 61.285.739/0001-81) e a venda passa pela Braip. Mas a maca não é autorizada pela Anvisa como ingrediente de suplemento, e a empresa tem 4 reclamações no Reclame Aqui, só uma respondida.</p>
   </div>
+
+  <TopCta produto="Maca Peruana Negra" href={p.link} />
 
   <h2>A situação da maca com a Anvisa</h2>
   <ul>

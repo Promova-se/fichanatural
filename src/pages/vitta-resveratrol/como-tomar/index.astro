@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { resveratrol as p, resveratrolPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Quantas cápsulas de Vitta Resveratrol por dia?', a: 'O modo de uso informado na página é de 2 cápsulas por dia. A seção de perguntas da mesma página fala em uma cápsula de manhã ou à noite. Siga o que estiver no rótulo do pote que você receber.' },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Tome 2 cápsulas por dia, com água, de preferência junto a uma refeição, por 3 meses seguidos. Não use sem orientação médica se estiver grávida, tomar anticoagulante (como a varfarina), já usar outro suplemento com vitamina A ou tiver histórico de câncer sensível a estrogênio.</p>
   </div>
+
+  <TopCta produto="Vitta Resveratrol" href={p.link} />
 
   <h2>Modo de uso</h2>
   <ol>

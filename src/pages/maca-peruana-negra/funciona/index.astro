@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { maca as p, macaPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Maca peruana aumenta a libido?', a: 'Talvez um pouco. Uma revisão sistemática de 2010 encontrou 4 ensaios pequenos: alguns mostraram aumento do desejo sexual relatado depois de 6 a 12 semanas, com 1,5 a 3 g por dia. Os autores consideraram a evidência limitada.' },
@@ -29,6 +30,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Pode haver um efeito pequeno no desejo sexual, depois de 6 a 12 semanas, com 1,5 a 3 g por dia, a faixa da dose deste produto. A evidência vem de poucos estudos pequenos. A maca não aumenta testosterona, e não há prova de que a maca negra seja melhor que as outras. Para energia e disposição, os estudos são ainda mais fracos.</p>
   </div>
+
+  <TopCta produto="Maca Peruana Negra" href={p.link} />
 
   <h2>O que os estudos mostram</h2>
   <div class="table-scroll">

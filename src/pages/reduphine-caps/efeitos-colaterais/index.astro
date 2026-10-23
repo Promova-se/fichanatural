@@ -1,6 +1,7 @@
 ---
 import Article from '../../../layouts/Article.astro';
-import { reduphinePages } from '../../../data/site';
+import { reduphinePages, reduphine } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'ReduPhine Caps tem efeito colateral?', a: 'A página oficial diz que não, mas os ingredientes podem causar gases, inchaço, desconforto abdominal e alteração do intestino, principalmente no início ou com pouca água. Quem tem alergia a frutos do mar pode ter reação à quitosana.' },
@@ -26,6 +27,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Os efeitos mais comuns de fórmulas com fibras são gases, inchaço e mudança no intestino. Não use se tiver alergia a peixe ou crustáceos, fenilcetonúria, se estiver grávida ou amamentando ou se tiver menos de 16 anos. Quem toma remédios deve conversar com o médico.</p>
   </div>
+
+  <TopCta produto="ReduPhine Caps" href={reduphine.link} />
 
   <h2>Efeitos colaterais possíveis</h2>
   <ul>

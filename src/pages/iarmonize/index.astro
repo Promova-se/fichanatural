@@ -3,6 +3,7 @@ import Article from '../../layouts/Article.astro';
 import BuyBox from '../../components/BuyBox.astro';
 import KitCards from '../../components/KitCards.astro';
 import { iarmonize as p, iarmonizePages } from '../../data/site';
+import TopCta from '../../components/TopCta.astro';
 
 const faq = [
   { q: 'O que é o IArmonize?', a: 'É uma linha de quatro suplementos da Integra Pharma: Hair (cabelo e unhas), Sleep (sono), Energy (disposição) e Vital (gotas de vitaminas). Eles são vendidos separados ou juntos, no Kit IArmonize, com uma necessaire.' },
@@ -30,6 +31,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resumo da ficha</strong>Quatro fórmulas vendidas juntas ou separadas. O Energy (coenzima Q10, magnésio e zinco) e o Sleep (melatonina, L-teanina, 5-HTP e magnésio) mostram as doses. O Hair e o Vital listam os ingredientes sem dizer quanto tem de cada um. O kit completo custa R$ 1.256 por 3 meses. O produtor é uma farmácia de manipulação de Belo Horizonte.</p>
   </div>
+
+  <TopCta produto="IArmonize" href={p.link} />
 
   <div class="alert">
     <p><strong>Atenção ao IArmonize Sleep</strong>Cada cápsula tem 5 mg de melatonina. Em suplementos alimentares, a Anvisa permite no máximo 0,21 mg por dia: o Sleep tem cerca de 24 vezes isso. A fórmula também leva 5-HTP, que não deve ser combinado com antidepressivos. Use o Sleep só com orientação médica. Ele vem no kit completo.</p>

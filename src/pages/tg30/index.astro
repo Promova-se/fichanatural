@@ -3,6 +3,7 @@ import Article from '../../layouts/Article.astro';
 import BuyBox from '../../components/BuyBox.astro';
 import KitCards from '../../components/KitCards.astro';
 import { tg30 as p, tg30Pages } from '../../data/site';
+import TopCta from '../../components/TopCta.astro';
 
 const faq = [
   { q: 'O que é o TG30?', a: 'É um suplemento alimentar em gotas da marca Crisfit, fabricado pela Lemoncaps, em Cuiabá. Tem extratos de cúrcuma, café verde e feno-grego, colina, inulina, cromo e vitaminas D3 e B12. Cada frasco de 30 mL dura 30 dias.' },
@@ -29,6 +30,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resumo da ficha</strong>Suplemento em gotas com 8 ativos. Por dose, tem 33 mg de extrato de café verde, 33 mg de cúrcuma e 22 mg de inulina, quantidades muito abaixo das usadas em estudos. As doses relevantes são de vitamina D3 (2.000 UI) e B12. Custa de R$ 108 a R$ 150 por mês. Pode ajudar quem tem falta dessas vitaminas, mas não é um "queimador de gordura".</p>
   </div>
+
+  <TopCta produto="TG30" href={p.link} />
 
   <h2>Ficha técnica</h2>
   <div class="table-scroll">

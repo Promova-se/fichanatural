@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { mounjax as p, mounjaxPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Quantas gotas de Mounjax por dia?', a: 'A página oficial indica 12 gotas por dia, antes do café da manhã, de preferência sempre no mesmo horário.' },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Pingue 12 gotas por dia, antes do café da manhã, sempre no mesmo horário. Agite o frasco antes. Menores de idade e alérgicos a crustáceos não devem usar. Gestantes, lactantes e quem toma remédios contínuos precisam falar com o médico antes.</p>
   </div>
+
+  <TopCta produto="Mounjax" href={p.link} />
 
   <h2>Modo de uso</h2>
   <ol>

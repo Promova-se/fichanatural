@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { colageno as p, colagenoPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: "O Colágeno Nature's Prime é confiável?", a: "Sim. A marca pertence à Natures Farma Indústria e Comércio, com CNPJ informado, não tinha reclamações no Reclame Aqui em 21/10/2026, informa a dose de cada ingrediente e usa um colágeno de marca registrada, o Verisol. As ressalvas são promessas acima do que os estudos mostram e o preço do site oficial." },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Sim. Fabricante identificado (Natures Farma Indústria e Comércio, CNPJ 28.209.818/0001-38), nenhuma reclamação no Reclame Aqui, pagamento pela Braip e garantia de 30 dias. O rótulo traz a dose de cada ingrediente. Os pontos fracos são promessas maiores que a ciência, depoimentos que não dá para conferir e o preço do site oficial.</p>
   </div>
+
+  <TopCta produto="Colágeno Nature's Prime" href={p.link} />
 
   <h2>Quem fabrica</h2>
   <div class="table-scroll">

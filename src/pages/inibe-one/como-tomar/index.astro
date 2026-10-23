@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { inibeone as p, inibeonePages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Como tomar Inibe One?', a: 'A página de vendas não informa o modo de uso, mas o pote tem 30 cápsulas para 1 mês e a tabela considera 1 cápsula como porção: ou seja, 1 cápsula por dia. Confirme no rótulo e tome sempre com um copo cheio de água.' },
@@ -27,6 +28,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Siga a dose do rótulo, com um copo cheio de água, de preferência antes das refeições. Deixe 2 horas de intervalo de qualquer remédio. Não use se tiver alergia a crustáceos, estiver grávida ou amamentando, sem falar com o médico.</p>
   </div>
+
+  <TopCta produto="Inibe One" href={p.link} />
 
   <h2>Modo de uso</h2>
   <ol>

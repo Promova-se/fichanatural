@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { kitsos as p, kitsosPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Lizz Anté é confiável?', a: 'Sim, pelos sinais disponíveis. A marca tem reputação "Ótima" no Reclame Aqui, com nota 8,4 e 93,3% das reclamações resolvidas, vende na Beleza na Web e tem loja própria. Os exageros estão nas promessas de resultado, não na entrega.' },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Sim. A Lizz Anté tem nota 8,4 e selo "Ótima" no Reclame Aqui, resolve 93% das reclamações e é vendida na Beleza na Web. O pagamento do kit passa pela Monetizze, com rastreio e garantia de 60 dias. A ressalva é sobre o que o kit promete, e não sobre a empresa.</p>
   </div>
+
+  <TopCta produto="Kit S.O.S Crescimento" href={p.link} />
 
   <h2>Quem vende</h2>
   <div class="table-scroll">

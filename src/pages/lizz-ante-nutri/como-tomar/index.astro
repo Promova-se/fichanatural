@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { lizznutri as p, lizznutriPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Como tomar Lizz Anté Nutri?', a: '2 cápsulas por dia: uma depois do café da manhã e outra antes de dormir. A marca recomenda usar por pelo menos 3 meses.' },
@@ -27,6 +28,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>2 cápsulas por dia, uma depois do café da manhã e outra antes de dormir, por pelo menos 3 meses. Tome com comida para evitar enjoo. Pare alguns dias antes de exames de sangue, com orientação. Evite se tiver alergia a crustáceos. Gestantes, lactantes e menores de 18 anos só com orientação médica.</p>
   </div>
+
+  <TopCta produto="Lizz Anté Nutri" href={p.link} />
 
   <h2>Modo de uso</h2>
   <div class="table-scroll">

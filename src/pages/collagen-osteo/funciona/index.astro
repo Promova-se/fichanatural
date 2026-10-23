@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { collagenosteo as p, collagenosteoPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Collagen Osteo funciona para dor no joelho?', a: 'Pode ajudar um pouco, se as doses forem as dos estudos. Colágeno tipo II não desnaturado (40 mg por dia) e curcumina (cerca de 1 g por dia) mostraram redução modesta da dor de artrose no joelho. A página não informa as doses, então não dá para saber se o produto chega lá.' },
@@ -30,6 +31,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Talvez um pouco para dor de artrose, se as doses forem as dos estudos, o que a página não informa. Não trata osteoporose, não regenera cartilagem e não alivia dor em minutos. Quem tem osteoporose ou artrose deve seguir o tratamento médico.</p>
   </div>
+
+  <TopCta produto="Collagen Osteo" href={p.link} />
 
   <h2>O que se sabe de cada ingrediente</h2>
   <div class="table-scroll">

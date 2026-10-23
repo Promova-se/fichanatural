@@ -2,6 +2,7 @@
 import Article from '../../layouts/Article.astro';
 import BuyBox from '../../components/BuyBox.astro';
 import { reduphine, reduphinePages, checkoutUrl } from '../../data/site';
+import TopCta from '../../components/TopCta.astro';
 
 const brl = (n: number) => n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 const faq = [
@@ -27,6 +28,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resumo da ficha</strong>Suplemento em cápsulas com spirulina, psyllium, quitosana e cromo. São 2 cápsulas por dia, antes do almoço e do jantar. Os ingredientes têm efeito real, mas modesto, sobre o peso. Funciona como apoio a dieta e exercício, não como emagrecedor milagroso. Preço a partir de R$ 147 o pote.</p>
   </div>
+
+  <TopCta produto="ReduPhine Caps" href={reduphine.link} />
 
   <h2>Ficha técnica</h2>
   <div class="table-scroll">

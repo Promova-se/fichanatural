@@ -1,7 +1,8 @@
 ---
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
-import { reduphinePages } from '../../../data/site';
+import { reduphinePages, reduphine } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Posso tomar as duas cápsulas de ReduPhine de uma vez?', a: 'O fabricante indica dividir em duas tomadas, antes do almoço e antes do jantar. Como as fibras agem na saciedade da refeição seguinte, tomar tudo de uma vez tende a reduzir o efeito.' },
@@ -24,6 +25,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Tome 1 cápsula cerca de 30 minutos antes do almoço e 1 cerca de 30 minutos antes do jantar, com um copo cheio de água. Um pote de 60 cápsulas dura um mês. Não ultrapasse 2 cápsulas por dia.</p>
   </div>
+
+  <TopCta produto="ReduPhine Caps" href={reduphine.link} />
 
   <h2>Modo de uso indicado pelo fabricante</h2>
   <ol>

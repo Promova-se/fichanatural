@@ -3,6 +3,7 @@ import Article from '../../layouts/Article.astro';
 import BuyBox from '../../components/BuyBox.astro';
 import KitCards from '../../components/KitCards.astro';
 import { lizznutri as p, lizznutriPages } from '../../data/site';
+import TopCta from '../../components/TopCta.astro';
 
 const faq = [
   { q: 'O que é o Lizz Anté Nutri Cabelo, Pele e Unhas?', a: 'É um suplemento em cápsulas da Lizz Anté, a mesma marca do Kit S.O.S Crescimento. Tem 9 ativos (cisteína, colágeno, prolina, MSM, vitamina B6, zinco, silício, biotina e ácido hialurônico), somando 1.000 mg por dia em 2 cápsulas.' },
@@ -31,6 +32,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resumo da ficha</strong>Duas cápsulas por dia com 9 ativos: cisteína, colágeno, prolina, MSM, vitamina B6, zinco, silício, biotina e ácido hialurônico. A empresa é a Lizz Anté, com reputação "Ótima" no Reclame Aqui, e a garantia é de 90 dias. Pode ajudar quem tem falta de biotina, zinco ou proteína. As promessas de "5 vezes mais espessura" e "25 mil fios a mais" não têm estudo, e as doses não são divulgadas. A partir de R$ 127 por mês.</p>
   </div>
+
+  <TopCta produto="Lizz Anté Nutri" href={p.link} />
 
   <h2>Ficha técnica</h2>
   <div class="table-scroll">

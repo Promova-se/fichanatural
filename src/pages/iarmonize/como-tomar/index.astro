@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { iarmonize as p, iarmonizePages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Como tomar o Kit IArmonize?', a: 'Pela página oficial: Hair, 2 cápsulas por dia; Energy, 1 cápsula pela manhã; Sleep, 1 cápsula cerca de 1 hora antes de dormir; Vital, 8 gotas por dia. O uso indicado é contínuo por 90 dias.' },
@@ -30,6 +31,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Hair: 2 cápsulas por dia. Energy: 1 cápsula de manhã. Sleep: 1 cápsula 1 hora antes de dormir. Vital: 8 gotas por dia. Quem toma antidepressivo, anticoagulante ou remédio para dormir, e grávidas ou lactantes, deve falar com o médico antes, principalmente sobre o Sleep.</p>
   </div>
+
+  <TopCta produto="IArmonize" href={p.link} />
 
   <h2>Horários de cada produto</h2>
   <div class="table-scroll">

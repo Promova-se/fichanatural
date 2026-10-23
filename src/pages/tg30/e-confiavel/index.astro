@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { tg30 as p, tg30Pages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'TG30 é golpe?', a: `Não há sinais de golpe: o fabricante, a ${p.maker}, é uma empresa ativa com CNPJ ${p.cnpj}, e a venda passa pela Monetizze. Os problemas são outros: promessas exageradas, doses baixas e atendimento informado por Gmail e WhatsApp.` },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>O TG30 não parece golpe: o fabricante existe, é licenciado e a compra passa pela Monetizze. Mas é um produto novo, sem histórico no Reclame Aqui, com atendimento por Gmail e WhatsApp e links de troca e privacidade que não abrem. Se comprar, pague no cartão e guarde tudo.</p>
   </div>
+
+  <TopCta produto="TG30" href={p.link} />
 
   <h2>Quem fabrica e quem vende</h2>
   <div class="table-scroll">

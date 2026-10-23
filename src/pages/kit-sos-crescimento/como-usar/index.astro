@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { kitsos as p, kitsosPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Como usar o tônico S.O.S Crescimento?', a: 'Todos os dias, com o cabelo limpo e úmido: borrife no couro cabeludo, massageie e penteie. Não use secador logo em seguida. Se precisar de calor, espere 20 minutos.' },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>1. Shampoo no couro cabeludo molhado, massageie e enxágue. 2. Máscara no comprimento, deixe agir 5 minutos e enxágue. 3. Tônico no couro cabeludo úmido, com massagem, sem enxaguar e sem secador logo depois. Shampoo e máscara pelo menos 3 vezes por semana. Tônico todos os dias.</p>
   </div>
+
+  <TopCta produto="Kit S.O.S Crescimento" href={p.link} />
 
   <h2>Passo a passo</h2>
   <div class="table-scroll">

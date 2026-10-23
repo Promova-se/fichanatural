@@ -3,6 +3,7 @@ import Article from '../../layouts/Article.astro';
 import BuyBox from '../../components/BuyBox.astro';
 import KitCards from '../../components/KitCards.astro';
 import { hotmen as p, hotmenPages } from '../../data/site';
+import TopCta from '../../components/TopCta.astro';
 
 const faq = [
   { q: 'O que é o Hot Men Caps?', a: 'É um suplemento em cápsulas vendido pela internet para desempenho sexual masculino. O pote tem 60 cápsulas de 500 mg, e a dose indicada é de 2 cápsulas por dia. A página oficial não informa os ingredientes.' },
@@ -31,6 +32,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resumo da ficha</strong>Cápsulas de 500 mg, 2 por dia, vendidas em potes de 60. A página oficial não informa ingredientes, doses, empresa nem CNPJ. As promessas de aumentar o pênis em até 9 cm e de ereções "por horas" são do fabricante e não têm estudo por trás. Custa a partir de R$ 227 o pote, e o kit de 5 potes sai por cerca de R$ 85 por mês.</p>
   </div>
+
+  <TopCta produto="Hot Men Caps" href={p.link} />
 
   <h2>Ficha técnica</h2>
   <div class="table-scroll">

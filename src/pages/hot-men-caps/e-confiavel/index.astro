@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { hotmen as p, hotmenPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Hot Men Caps é golpe?', a: 'O pagamento passa pela Monetizze, que é uma plataforma conhecida, e o pedido tem rastreio. Mas a página não informa empresa nem CNPJ, não mostra a fórmula e faz promessas sem prova. Compre sabendo disso e prefira o cartão de crédito.' },
@@ -27,6 +28,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Em parte. O pagamento e o rastreio passam pela Monetizze, o que dá alguma segurança na entrega. Mas faltam o básico: nome da empresa, CNPJ, endereço e lista de ingredientes. Se o pedido der problema, o contato é só por WhatsApp e e-mail do Gmail. Se for comprar, use o cartão e comece pelo pote avulso.</p>
   </div>
+
+  <TopCta produto="Hot Men Caps" href={p.link} />
 
   <h2>Quem vende</h2>
   <div class="table-scroll">

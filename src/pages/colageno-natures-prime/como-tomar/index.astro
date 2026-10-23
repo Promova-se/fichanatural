@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { colageno as p, colagenoPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: "Como tomar o Colágeno Nature's Prime?", a: 'Misture 1 colher dosadora (5 g) em um copo de água ou suco e tome uma vez por dia. O pó já é sabor abacaxi com hortelã.' },
@@ -29,6 +30,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>1 colher dosadora (5 g) por dia, em um copo de água ou suco, em qualquer horário. Use por pelo menos 8 a 12 semanas antes de avaliar o resultado. Não é indicado para menores de 18 anos, gestantes e lactantes sem orientação médica.</p>
   </div>
+
+  <TopCta produto="Colágeno Nature's Prime" href={p.link} />
 
   <h2>Dose e preparo</h2>
   <ol>

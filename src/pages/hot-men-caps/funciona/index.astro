@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { hotmen as p, hotmenPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Hot Men Caps aumenta o pênis de verdade?', a: 'Não há estudo que mostre aumento do pênis com suplemento, com nenhum ingrediente. A Mayo Clinic resume que nenhum desses produtos provou funcionar. A tabela da página de vendas, com centímetros por semana, é uma "simulação" sem fonte.' },
@@ -29,6 +30,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Para aumentar o pênis, não: nenhum suplemento tem esse efeito comprovado. Para libido e disposição, pode haver um efeito pequeno, se a fórmula tiver mesmo maca e arginina nas doses certas, o que a página não informa. Ereção fraca com frequência pede consulta, porque há tratamentos que funcionam e a causa pode ser outra doença.</p>
   </div>
+
+  <TopCta produto="Hot Men Caps" href={p.link} />
 
   <h2>As promessas, uma por uma</h2>
   <div class="table-scroll">

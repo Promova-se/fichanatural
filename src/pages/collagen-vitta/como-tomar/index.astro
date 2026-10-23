@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { collagenvitta as p, collagenvittaPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Como tomar Collagen Vitta?', a: 'Dilua 1 scoop (10 g) em 100 a 150 ml de água ou no suco que preferir, uma vez por dia.' },
@@ -29,6 +30,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>1 scoop (10 g) por dia, em 100 a 150 ml de água ou suco, em qualquer horário. Use por 2 a 3 meses antes de avaliar. Gestantes, lactantes e quem toma anticoagulante devem falar com o médico antes, por causa do retinol e da vitamina K2.</p>
   </div>
+
+  <TopCta produto="Collagen Vitta" href={p.link} />
 
   <h2>Dose e preparo</h2>
   <ol>

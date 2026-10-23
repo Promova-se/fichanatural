@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { ozenvitta as p, ozenvittaPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Qual o melhor horário para tomar OzenVitta?', a: 'Segundo a página oficial, 1 cápsula antes do café da manhã e 1 antes do jantar. Tomar antes das refeições ajuda as fibras a aumentar a saciedade.' },
@@ -24,6 +25,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Tome 1 cápsula antes do café da manhã e 1 antes do jantar, com um copo cheio de água. Um pote dura 30 dias. Não use se for menor de idade ou alérgico a crustáceos. Gestantes, lactantes e quem toma remédios devem conversar com o médico antes.</p>
   </div>
+
+  <TopCta produto="OzenVitta" href={p.link} />
 
   <h2>Modo de uso</h2>
   <ol>

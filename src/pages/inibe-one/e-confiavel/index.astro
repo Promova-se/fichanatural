@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { inibeone as p, inibeonePages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Inibe One é golpe?', a: `Não. O produto é vendido por uma empresa identificada, a ${p.company} (CNPJ ${p.cnpj}), com pagamento pela Monetizze, e tem reputação "Boa" no Reclame Aqui. Os pontos de atenção são as promessas exageradas e reclamações recentes ainda sem resposta.` },
@@ -27,6 +28,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Sim, no sentido de não ser golpe: a empresa é identificada, a venda passa pela Monetizze e a reputação no Reclame Aqui é "Boa" (nota 7,6). Mas a qualidade do atendimento caiu nos últimos meses, há relatos de reações adversas e a página promete muito mais do que a fórmula entrega.</p>
   </div>
+
+  <TopCta produto="Inibe One" href={p.link} />
 
   <h2>A nota no Reclame Aqui</h2>
   <div class="table-scroll">

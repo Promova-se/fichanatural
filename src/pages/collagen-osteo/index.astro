@@ -3,6 +3,7 @@ import Article from '../../layouts/Article.astro';
 import BuyBox from '../../components/BuyBox.astro';
 import KitCards from '../../components/KitCards.astro';
 import { collagenosteo as p, collagenosteoPages, collagenvitta } from '../../data/site';
+import TopCta from '../../components/TopCta.astro';
 
 const faq = [
   { q: 'O que é o Collagen Osteo?', a: 'É um suplemento em gotas, sabor menta, vendido pela Natturabio, a mesma empresa do Collagen Vitta. A página diz que tem colágeno tipo II não desnaturado, vitaminas K2 e D3, magnésio e curcumina. A orientação é pingar 12 gotas (1 ml) na boca uma vez por dia.' },
@@ -30,6 +31,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resumo da ficha</strong>Gotas com colágeno tipo II, curcumina, vitaminas D3 e K2 e magnésio, 1 ml por dia, sem dose de nenhum ingrediente. As promessas de tratar e prevenir osteoporose, agir como anti-inflamatório e aliviar a dor "em poucos minutos" são do fabricante e não têm estudo com o produto. Custa R$ 157 por 2 frascos. Quem tem dor nas articulações ou osteoporose precisa de avaliação médica, não de um suplemento no lugar do remédio.</p>
   </div>
+
+  <TopCta produto="Collagen Osteo" href={p.link} />
 
   <h2>Ficha técnica</h2>
   <div class="table-scroll">

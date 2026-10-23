@@ -3,6 +3,7 @@ import Article from '../../layouts/Article.astro';
 import BuyBox from '../../components/BuyBox.astro';
 import KitCards from '../../components/KitCards.astro';
 import { collagenvitta as p, collagenvittaPages } from '../../data/site';
+import TopCta from '../../components/TopCta.astro';
 
 const faq = [
   { q: 'O que é o Collagen Vitta?', a: 'É um suplemento de colágeno em pó, sabor laranja, vendido pela Natturabio. A página diz que a fórmula tem colágeno Verisol, colágeno tipo II, ácido hialurônico, biotina, ácido pantotênico, silício orgânico e as vitaminas A (retinol), C e K2. O pote tem 300 g, para 30 dias.' },
@@ -31,6 +32,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resumo da ficha</strong>Colágeno em pó, 10 g por dia, com Verisol, colágeno tipo II, ácido hialurônico, biotina e vitaminas. É o mesmo tipo de colágeno usado em estudos de pele, mas a página não informa nenhuma dose. Promete "rejuvenescer a pele em até 90%", firmar os seios e acabar com a celulite, o que nenhum colágeno faz. Custa R$ 157 o pote de 30 dias. A empresa tem CNPJ, mas não responde as reclamações no Reclame Aqui.</p>
   </div>
+
+  <TopCta produto="Collagen Vitta" href={p.link} />
 
   <h2>Ficha técnica</h2>
   <div class="table-scroll">

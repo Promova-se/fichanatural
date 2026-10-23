@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { kitsos as p, kitsosPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Kit S.O.S Crescimento faz o cabelo crescer mais rápido?', a: 'Não há estudo com o kit. O cabelo cresce cerca de 1 cm por mês, e nenhum ativo da fórmula tem evidência de multiplicar essa velocidade por 7. O que o kit pode fazer é reduzir a quebra, o que faz o comprimento render mais.' },
@@ -29,6 +30,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Funciona como tratamento cosmético: deixa os fios mais macios, hidratados e menos quebradiços, o que ajuda o comprimento a render. Contra a queda, o ativo mais promissor é a cafeína do tônico, que tem estudos em queda de origem hormonal, mas a marca não informa a concentração. Crescimento "7 vezes mais rápido" e "parar 95% da queda" não têm estudo publicado.</p>
   </div>
+
+  <TopCta produto="Kit S.O.S Crescimento" href={p.link} />
 
   <h2>Ativo por ativo</h2>
   <div class="table-scroll">

@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { collagenosteo as p, collagenosteoPages, collagenvitta as v } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Collagen Osteo é confiável?', a: 'Com ressalvas sérias. A distribuidora tem CNPJ e o pagamento passa pela Braip. Mas a página promete tratar osteoporose e artrose, o que suplemento não pode fazer, não informa doses e anuncia três prazos de garantia diferentes.' },
@@ -27,6 +28,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Com ressalvas sérias. A compra pelo site oficial é segura: a distribuidora tem CNPJ e o pagamento passa pela Braip. Mas a página promete tratar osteoporose e artrose, não informa doses, mostra três garantias diferentes, e a empresa não responde as reclamações no Reclame Aqui.</p>
   </div>
+
+  <TopCta produto="Collagen Osteo" href={p.link} />
 
   <h2>Quem vende</h2>
   <div class="table-scroll">

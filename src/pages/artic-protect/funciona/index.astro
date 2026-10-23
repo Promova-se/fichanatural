@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { artic as p, articPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Colágeno tipo 2 funciona para dor no joelho?', a: 'Há estudos que indicam que sim, de forma moderada. No principal deles, 40 mg por dia de colágeno tipo 2 não desnaturado reduziu dor e rigidez no joelho mais que o placebo depois de 6 meses. O estudo foi financiado pelo fabricante do ingrediente.' },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Pode ajudar, de forma moderada. Num estudo com 191 pessoas com artrose no joelho, 40 mg por dia de colágeno tipo 2 não desnaturado reduziu dor, rigidez e dificuldade de movimento mais que o placebo em 6 meses. O Artic Protect tem 40 mg, mas não diz se o colágeno é não desnaturado. Regenerar cartilagem e acabar com a dor de imediato não têm base.</p>
   </div>
+
+  <TopCta produto="Artic Protect" href={p.link} />
 
   <h2>O que dizem os estudos</h2>
   <div class="table-scroll">

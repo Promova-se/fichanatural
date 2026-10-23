@@ -3,6 +3,7 @@ import Article from '../../layouts/Article.astro';
 import BuyBox from '../../components/BuyBox.astro';
 import KitCards from '../../components/KitCards.astro';
 import { resveratrol as p, resveratrolPages } from '../../data/site';
+import TopCta from '../../components/TopCta.astro';
 
 const box = {
   href: p.link,
@@ -34,6 +35,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resumo da ficha</strong>Suplemento em cápsulas para a pele, com colágeno hidrolisado, ácido hialurônico, resveratrol e vitaminas A, C, E e K2. O colágeno tem boa evidência para elasticidade e hidratação da pele, mas não para apagar rugas. O fabricante não informa a dose de cada ingrediente. Quem toma anticoagulante ou está grávida deve conversar com o médico antes.</p>
   </div>
+
+  <TopCta produto="Vitta Resveratrol" href={p.link} />
 
   <h2>Ficha técnica</h2>
   <div class="table-scroll">

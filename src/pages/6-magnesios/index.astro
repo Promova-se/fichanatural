@@ -3,6 +3,7 @@ import Article from '../../layouts/Article.astro';
 import BuyBox from '../../components/BuyBox.astro';
 import KitCards from '../../components/KitCards.astro';
 import { seismag as p, seismagPages } from '../../data/site';
+import TopCta from '../../components/TopCta.astro';
 
 const faq = [
   { q: 'O que é o 6 Magnésios?', a: 'É um suplemento em cápsulas do Empório Terra Nativa, vendido como 6MAG, com seis formas de magnésio: bisglicinato quelato, malato, óxido, hidróxido, citrato malato e taurato. O pote tem 120 cápsulas, e a dose é de 3 cápsulas por dia.' },
@@ -31,6 +32,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resumo da ficha</strong>Cápsulas com seis formas de magnésio, 260 mg de magnésio por dia em 3 cápsulas, dose informada e dentro do limite seguro. Serve para quem precisa de magnésio. Mas misturar seis formas não tem vantagem comprovada, duas delas (óxido e hidróxido) são pouco absorvidas, e a página promete efeito em sono, cãibra, estresse e coração além do que o magnésio mostra nos estudos. Custa R$ 3,70 por dia no pote avulso. A empresa tem pouco histórico e reclamações sem resposta.</p>
   </div>
+
+  <TopCta produto="6 Magnésios" href={p.link} />
 
   <h2>Ficha técnica</h2>
   <div class="table-scroll">

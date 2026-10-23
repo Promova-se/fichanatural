@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { dtxblack as p, dtxblackPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'DTX Black é golpe?', a: 'Não há sinais de golpe no sentido de não entregar: a venda passa pela Monetizze e há rastreio. Mas a página faz promessas sem prova, afirma algo falso sobre a Anvisa, não informa CNPJ e só aceita devolução do produto lacrado.' },
@@ -27,6 +28,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Comprado no site oficial, o DTX Black não tem cara de golpe: o pagamento passa pela Monetizze e há rastreio do pedido. Mas a confiança fica abalada por três motivos: promessas sem prova, uma afirmação falsa sobre a Anvisa e a falta de CNPJ. Se comprar, pague no cartão e comece por um kit pequeno.</p>
   </div>
+
+  <TopCta produto="DTX Black" href={p.link} />
 
   <h2>Quem vende</h2>
   <div class="table-scroll">

@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { artic as p, articPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Artic Protect é confiável?', a: 'É uma marca vendida na Droga Raia, na Drogasil e na Netshoes, e o pagamento do site oficial passa pela Monetizze. Isso indica um produto real e com distribuição séria. Os pontos fracos estão nas promessas e na falta de algumas informações na página.' },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Sim, como empresa. A marca Up Sports Nutrition está na Droga Raia, na Drogasil e na Netshoes, e o vendedor, a Extra Fórmulas, não tem reclamações no Reclame Aqui. A ressalva é a página de vendas, que promete regenerar cartilagem e trata a artrose como doença autoimune, o que não é correto.</p>
   </div>
+
+  <TopCta produto="Artic Protect" href={p.link} />
 
   <h2>Quem fabrica e quem vende</h2>
   <div class="table-scroll">

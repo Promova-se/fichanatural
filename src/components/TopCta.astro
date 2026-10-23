@@ -1,0 +1,10 @@
+---
+// Botão discreto logo depois do resumo ("Resposta rápida") das páginas de produto.
+// Leva à página oficial pelo link de afiliado; registrado no GA4 com posicao="topo".
+interface Props { produto: string; href: string }
+const { produto, href } = Astro.props;
+---
+<p class="top-cta">
+  <a class="btn btn-sm" data-produto={produto} data-kit="geral" data-posicao="topo" href={href} target="_blank" rel="sponsored nofollow noopener">Ver preço atual no site oficial</a>
+  <span class="small">Link de afiliado. <a href="/aviso-de-afiliado/">Saiba mais</a></span>
+</p>

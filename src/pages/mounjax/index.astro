@@ -3,6 +3,7 @@ import Article from '../../layouts/Article.astro';
 import BuyBox from '../../components/BuyBox.astro';
 import KitCards from '../../components/KitCards.astro';
 import { mounjax as p, mounjaxPages } from '../../data/site';
+import TopCta from '../../components/TopCta.astro';
 
 const faq = [
   { q: 'O que é o Mounjax?', a: 'É um suplemento alimentar em gotas da Ozenpharma, vendido para controle de peso. A página cita café verde, dihidrocapsiato, cúrcuma, colina, inulina, feno-grego, cromo e vitaminas D3 e B12. Não tem relação com o Mounjaro, o remédio injetável.' },
@@ -30,6 +31,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resumo da ficha</strong>Suplemento em gotas com 9 ingredientes: café verde, dihidrocapsiato, cúrcuma, colina, inulina, feno-grego, cromo e vitaminas D3 e B12. São 12 gotas por dia, antes do café da manhã. A página não informa as doses, e fórmulas parecidas em gotas trazem quantidades muito pequenas dos extratos. Custa a partir de R$ 147 o frasco. Não é Mounjaro.</p>
   </div>
+
+  <TopCta produto="Mounjax" href={p.link} />
 
   <h2>Ficha técnica</h2>
   <div class="table-scroll">

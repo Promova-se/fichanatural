@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { resveratrol as p, resveratrolPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Colágeno em cápsula funciona para a pele?', a: 'Sim, para elasticidade e hidratação. Uma revisão de 2026 que reuniu 16 meta-análises, com 113 ensaios clínicos e quase 8 mil participantes, encontrou melhora significativa nesses dois pontos. Para rugas já estabelecidas, o efeito não foi significativo.' },
@@ -28,6 +29,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>O colágeno hidrolisado melhora elasticidade e hidratação da pele, com boa evidência. Não reduz rugas já formadas. O resveratrol é pouco absorvido por via oral e tem resultados limitados em pessoas. Como o fabricante não informa as doses, não dá para saber se o produto chega às quantidades usadas nos estudos.</p>
   </div>
+
+  <TopCta produto="Vitta Resveratrol" href={p.link} />
 
   <h2>O que dá para afirmar</h2>
   <p>O Vitta Resveratrol não tem estudo clínico próprio publicado, e a página oficial não informa quanto de cada ingrediente vem nas cápsulas. Por isso, a análise abaixo olha para o que se sabe de cada ingrediente.</p>

@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { tg30 as p, tg30Pages, ozenvitta } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'TG30 emagrece?', a: 'É pouco provável que faça diferença no peso. Os extratos ligados a emagrecimento, como café verde e cúrcuma, aparecem em cerca de 33 mg por dose, muito abaixo das quantidades testadas em estudos, que já mostram efeitos pequenos.' },
@@ -29,6 +30,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Para emagrecer, dificilmente. Os extratos de café verde, cúrcuma e feno-grego e a inulina estão em doses dezenas ou centenas de vezes menores que as estudadas. O que pode fazer efeito são as vitaminas D3 (2.000 UI) e B12, e só em quem tem falta delas.</p>
   </div>
+
+  <TopCta produto="TG30" href={p.link} />
 
   <h2>Dose do rótulo contra dose dos estudos</h2>
   <div class="table-scroll">

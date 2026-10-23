@@ -2,6 +2,7 @@
 import Article from '../../../layouts/Article.astro';
 import BuyBox from '../../../components/BuyBox.astro';
 import { colageno as p, colagenoPages } from '../../../data/site';
+import TopCta from '../../../components/TopCta.astro';
 
 const faq = [
   { q: 'Colágeno hidrolisado funciona para a pele?', a: 'Os estudos estão divididos. Uma revisão de 2026 que reuniu 16 meta-análises encontrou melhora na elasticidade e na hidratação, mas não nas rugas. Uma meta-análise de 2025 viu que, quando se olham só os estudos sem financiamento da indústria, o efeito desaparece. O mais honesto é esperar um efeito pequeno, se houver.' },
@@ -31,6 +32,8 @@ const faq = [
   <div class="answer">
     <p><strong>Resposta rápida</strong>Talvez um pouco. A fórmula usa as doses certas: 2,5 g de Verisol e 120 mg de ácido hialurônico, como nos estudos. Esses estudos mostram pele mais hidratada e elástica, e alguns mostram menos rugas. Mas quase todos foram ligados aos fabricantes, e as revisões mais amplas não confirmam efeito sobre rugas. "Rejuvenesce a pele" é exagero.</p>
   </div>
+
+  <TopCta produto="Colágeno Nature's Prime" href={p.link} />
 
   <h2>O que se sabe de cada ingrediente</h2>
   <div class="table-scroll">
