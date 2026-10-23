@@ -1,0 +1,54 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import TopCta from '../../../components/TopCta.astro';
+import { npq10 as p, npq10Pages } from '../../../data/site';
+
+const faq = [
+  { q: 'Coenzima Q10 dá energia?', a: 'Em pessoas saudáveis, não há boa evidência. A Q10 participa da produção de energia nas células, mas o corpo fabrica o que precisa, e suplementar não mostrou mais disposição em estudos bem feitos.' },
+  { q: 'Coenzima Q10 ajuda quem toma estatina?', a: 'Os estudos são divididos. As estatinas reduzem a Q10 no sangue, e alguns estudos mostraram menos dor muscular com o suplemento, mas outros, maiores e mais bem controlados, não encontraram diferença para o placebo.' },
+  { q: 'Coenzima Q10 é boa para o coração?', a: 'Na insuficiência cardíaca, um estudo de 2 anos (Q-SYMBIO) mostrou menos internações e mortes com 300 mg por dia, como complemento ao tratamento. É um estudo só, com cerca de 420 pessoas, e a dose foi o triplo desta cápsula.' },
+];
+---
+<Article
+  ogImage="/img/coenzima-q10-natures-prime/og-coenzima-q10-natures-prime.jpg"
+  title="Coenzima Q10 Nature's Prime funciona? Energia, coração, estatinas e envelhecimento"
+  seoTitle="Coenzima Q10 Nature's Prime funciona?"
+  description="A Coenzima Q10 Nature's Prime funciona? O que os estudos mostram sobre Q10 para energia, insuficiência cardíaca, dor muscular de estatina, enxaqueca e envelhecimento."
+  kicker="Funciona?"
+  lead="A Q10 tem algum apoio como complemento na insuficiência cardíaca e na prevenção de enxaqueca. Para energia, beleza e envelhecimento em quem é saudável, as promessas não se sustentam."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }, { name: 'Coenzima Q10', href: '/coenzima-q10-natures-prime/' }, { name: 'Funciona?', href: '/coenzima-q10-natures-prime/funciona/' }]}
+  faq={faq}
+  related={npq10Pages}
+  sources={[
+    { label: 'NCCIH (NIH): Coenzyme Q10', url: 'https://www.nccih.nih.gov/health/coenzyme-q10' },
+    { label: 'Mortensen SA et al. The effect of coenzyme Q10 on morbidity and mortality in chronic heart failure (Q-SYMBIO). JACC Heart Fail, 2014', url: 'https://pubmed.ncbi.nlm.nih.gov/25282031/' },
+    { label: "Página oficial da Coenzima Q10 (consultada em 23/10/2026)", url: 'https://naturesprime.ind.br/coenzimaq102/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Para poucas coisas. Há evidência modesta como complemento no tratamento da insuficiência cardíaca e na prevenção de enxaqueca, em doses de 100 a 300 mg. Para dor muscular de estatina, os estudos são divididos. Para energia e envelhecimento em pessoas saudáveis, não há boa evidência.</p>
+  </div>
+
+  <TopCta produto="Coenzima Q10 Nature's Prime" href={p.link} />
+
+  <h2>Promessa por promessa</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Uso</th><th>O que os estudos mostram</th></tr></thead>
+      <tbody>
+        <tr><td>Mais energia e disposição</td><td>Sem boa evidência em pessoas saudáveis</td></tr>
+        <tr><td>Saúde cardiovascular</td><td>Complemento com algum benefício na insuficiência cardíaca (300 mg/dia, estudo Q-SYMBIO); sem prova de prevenção de infarto em quem é saudável</td></tr>
+        <tr><td>Dor muscular por estatina</td><td>Resultados divididos; estudos maiores não mostraram diferença para o placebo</td></tr>
+        <tr><td>Enxaqueca</td><td>Pode reduzir a frequência de crises em alguns estudos pequenos</td></tr>
+        <tr><td>Retarda o envelhecimento</td><td>Sem evidência em humanos</td></tr>
+        <tr><td>Pressão alta</td><td>Revisões não mostraram redução consistente</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Para quem pode fazer sentido</h2>
+  <p>Para quem tem insuficiência cardíaca e conversa com o cardiologista sobre um complemento, para quem tem enxaqueca frequente e quer testar com o neurologista, ou para quem toma estatina, sente dor muscular e quer experimentar por 2 a 3 meses. Nunca pare a estatina por conta própria.</p>
+
+  <BuyBox compact produto="Coenzima Q10 Nature's Prime" href={p.link} title="Coenzima Q10 no site oficial" text="A partir de R$ 134,90 o pote de 60 dias." cta="Ver kits e preços" />
+</Article>

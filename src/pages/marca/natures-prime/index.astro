@@ -1,0 +1,62 @@
+---
+import Article from '../../../layouts/Article.astro';
+import ProductCard from '../../../components/ProductCard.astro';
+import { natures, catalog } from '../../../data/site';
+
+const npProducts = catalog.filter((c) => c.name.includes("Nature's Prime"));
+
+const faq = [
+  { q: "A Nature's Prime é confiável?", a: "Sim, pelos critérios que usamos. A marca pertence à Natures Farma Indústria e Comércio Ltda, CNPJ 28.209.818/0001-38, de Anápolis (GO), não tinha reclamações no Reclame Aqui em outubro de 2026, informa a dose dos ingredientes e vende por plataformas com rastreio (Monetizze e Braip). As ressalvas são promessas de saúde acima do que a ciência mostra em algumas páginas e a diferença de prazo de garantia." },
+  { q: "Qual a garantia da Nature's Prime?", a: 'As páginas de vendas falam em 30 dias para pedir o dinheiro de volta. No cadastro da Monetizze, alguns produtos aparecem com garantia de 7 dias. Pelo Código de Defesa do Consumidor, a compra pela internet pode ser cancelada em até 7 dias após o recebimento, com reembolso integral.' },
+  { q: "A Nature's Prime vende no Mercado Livre?", a: 'As páginas oficiais dizem que a marca vende em farmácias selecionadas e não recomendam comprar no Mercado Livre, por causa de falsificações.' },
+];
+---
+<Article
+  ogImage="/img/marca/og-natures-prime.jpg"
+  title="Nature's Prime é confiável? A marca, o fabricante e todos os produtos"
+  seoTitle="Nature's Prime é confiável? Fabricante e produtos"
+  description="Nature's Prime é confiável? Quem fabrica, CNPJ, Reclame Aqui, garantia, onde comprar e as fichas de todos os produtos da marca que analisamos."
+  kicker="Marca"
+  lead="A Nature's Prime é a marca de suplementos da Natures Farma, uma indústria de Anápolis (GO). Reunimos aqui o que vale para todos os produtos dela e as fichas de cada um."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }]}
+  faq={faq}
+  related={npProducts.map((c) => ({ href: c.href, title: c.name }))}
+  sources={[
+    { label: 'Reclame Aqui: Natures Farma Indústria e Comércio (consultado em 23/10/2026)', url: 'https://www.reclameaqui.com.br/empresa/natures-farma-industria-e-comercio-ltda/' },
+    { label: "Páginas oficiais dos produtos Nature's Prime e checkouts da Monetizze e da Braip (consultados entre 21 e 23/10/2026)", url: 'https://naturesprime.ind.br/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Sim. A Nature's Prime pertence à {natures.maker}, CNPJ {natures.cnpj}, não tinha reclamações no Reclame Aqui em outubro de 2026 e informa a dose dos ingredientes nas tabelas. Os pontos de atenção são algumas promessas de saúde exageradas nas páginas de vendas e a garantia, que aparece como 30 dias na página e 7 dias na plataforma de pagamento.</p>
+  </div>
+
+  <h2>Quem fabrica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Marca</th><td>Nature's Prime</td></tr>
+        <tr><th>Fabricante</th><td>{natures.maker}</td></tr>
+        <tr><th>CNPJ</th><td>{natures.cnpj}</td></tr>
+        <tr><th>Cidade</th><td>Anápolis (GO)</td></tr>
+        <tr><th>Atendimento</th><td>{natures.sac} e {natures.phone}</td></tr>
+        <tr><th>Pagamento</th><td>Monetizze (magnésio, ômega 3, Q10, colágeno tipo II) e Braip (colágeno, creatina)</td></tr>
+        <tr><th>Reclame Aqui</th><td>Nenhuma reclamação, empresa não verificada (consulta em 23/10/2026)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Produtos da Nature's Prime que analisamos</h2>
+  <div class="prod-grid">
+    {npProducts.map((c) => <ProductCard name={c.name} href={c.href} pill={c.pill} summary={c.summary} pages={c.pages} />)}
+  </div>
+
+  <h2>O que vale para todos os produtos</h2>
+  <ul>
+    <li><strong>Transparência:</strong> as tabelas nutricionais informam a quantidade de cada ingrediente, o que nem todo produto vendido por afiliados faz.</li>
+    <li><strong>Promessas:</strong> variam muito. O colágeno tipo II tem discurso moderado; o magnésio dimalato fala em ansiedade, depressão e arritmia, e o ômega 3 em reduzir colesterol. Em cada ficha mostramos o que os estudos dizem.</li>
+    <li><strong>Garantia:</strong> 30 dias nas páginas de vendas, 7 dias no cadastro da Monetizze. Se não gostar, peça o reembolso nos primeiros 7 dias para não depender da interpretação.</li>
+    <li><strong>Onde comprar:</strong> nos sites oficiais. A marca diz que vende em farmácias selecionadas e não recomenda o Mercado Livre.</li>
+  </ul>
+
+  <p class="small">Os links das fichas para os sites oficiais são de afiliado. <a href="/aviso-de-afiliado/">Saiba como funciona</a>.</p>
+</Article>

@@ -1,0 +1,97 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import TopCta from '../../components/TopCta.astro';
+import { npcol2 as p, npcol2Pages, natures } from '../../data/site';
+
+const faq = [
+  { q: "O que tem no Colágeno Tipo II Nature's Prime?", a: 'Segundo a tabela nutricional, cada cápsula tem 4 mg de colágeno tipo II não desnaturado, 50 mcg de vitamina D (2.000 UI), 65 mcg de vitamina K e 90 mg de magnésio. A dose é de 1 cápsula por dia.' },
+  { q: "Colágeno Tipo II Nature's Prime ou Artic Protect?", a: 'Os dois são de 1 cápsula por dia, com colágeno tipo II, vitamina D3 e magnésio. O da Nature\'s Prime informa a dose de cada ingrediente e diz que o colágeno é não desnaturado; o Artic Protect informa 40 mg de colágeno tipo II, sem dizer se é não desnaturado. O da Nature\'s Prime sai mais barato por dia.' },
+  { q: "Quanto custa o Colágeno Tipo II Nature's Prime?", a: 'Nos checkouts de 23/10/2026: 1 pote de 60 cápsulas por R$ 144,90 e 2 potes por R$ 204,90. Cada pote dura 60 dias.' },
+];
+---
+<Article
+  ogImage="/img/colageno-tipo-2-natures-prime/og-colageno-tipo-2-natures-prime.jpg"
+  title="Colágeno Tipo II Nature's Prime: ficha completa, dose, preço e o que esperar"
+  seoTitle="Colágeno Tipo II Nature's Prime: dose e preço"
+  description="Ficha do Colágeno Tipo II Nature's Prime: colágeno não desnaturado, vitamina D3, vitamina K e magnésio por cápsula, preço, comparação com o Artic Protect e o que esperar."
+  kicker="Ficha de produto"
+  lead="Uma cápsula por dia com colágeno tipo II não desnaturado, vitamina D3, vitamina K e magnésio, tudo com dose informada. É a fórmula mais transparente de colágeno tipo II que analisamos."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }, { name: 'Colágeno Tipo II', href: '/colageno-tipo-2-natures-prime/' }]}
+  faq={faq}
+  related={[...npcol2Pages, { href: '/colageno/', title: 'Qual o melhor colágeno? Tipos, doses e como escolher' }, { href: '/marca/natures-prime/', title: "Nature's Prime é confiável? A marca e todos os produtos" }]}
+  sources={[
+    { label: "Página oficial do Colágeno Tipo II e checkouts da Monetizze (consultados em 23/10/2026)", url: 'https://naturesprime.ind.br/colagenotipoii60caps1/' },
+    { label: "Loja oficial Nature's Prime: tabela nutricional (consultada em 23/10/2026)", url: 'https://loja.naturesprime.com.br/ossos-e-articulacoes/colageno-tipo-ii' },
+    { label: 'Lugo JP et al. Undenatured type II collagen in knee osteoarthritis. Nutr J, 2016', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4731911/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Uma cápsula por dia com 4 mg de colágeno tipo II não desnaturado, 2.000 UI de vitamina D3, vitamina K e 90 mg de magnésio. O colágeno tipo II não desnaturado tem estudos com redução modesta da dor de artrose no joelho. Fabricante com CNPJ e sem reclamações. Custa de R$ 1,71 a R$ 2,42 por dia. A dose de vitamina D é alta: some com outros suplementos antes de tomar.</p>
+  </div>
+
+  <TopCta produto="Colágeno Tipo II Nature's Prime" href={p.link} />
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>Colágeno Tipo II 60 cápsulas, Nature's Prime</td></tr>
+        <tr><th>Fabricante</th><td>{natures.maker}, CNPJ {natures.cnpj}</td></tr>
+        <tr><th>Dose</th><td>1 cápsula por dia, com a primeira refeição</td></tr>
+        <tr><th>Duração do pote</th><td>60 dias</td></tr>
+        <tr><th>Atendimento</th><td>{natures.sac} e {natures.phone}</td></tr>
+        <tr><th>Garantia</th><td>30 dias na página de vendas; 7 dias no cadastro da Monetizze</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Composição por cápsula</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Ingrediente</th><th>Quantidade</th><th>Comparação</th></tr></thead>
+      <tbody>
+        <tr><td>Colágeno tipo II não desnaturado</td><td>4 mg</td><td>Nos estudos, 40 mg do ingrediente UC-II, que contém cerca de 1,2 mg de colágeno não desnaturado</td></tr>
+        <tr><td>Vitamina D3</td><td>50 mcg (2.000 UI)</td><td>333% do valor diário; abaixo do limite de 100 mcg (4.000 UI)</td></tr>
+        <tr><td>Vitamina K</td><td>65 mcg</td><td>54% do valor diário</td></tr>
+        <tr><td>Magnésio</td><td>90 mg</td><td>21% do valor diário</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>A tabela da loja oficial escreve "mg" nas linhas das vitaminas D e K, mas pelo percentual do valor diário as quantidades são em microgramas. O rótulo não diz qual matéria-prima de colágeno é usada, então não dá para comparar exatamente com o UC-II dos estudos, mas a quantidade informada é compatível.</p>
+  <p>Para comparar com outros colágenos, veja <a href="/colageno/">qual o melhor colágeno e como escolher</a>.</p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores conferidos nos checkouts em 23/10/2026. Parcelamento em até 12x com juros.</p>
+  <KitCards kits={p.kits} unit="mês" produto="Colágeno Tipo II Nature's Prime" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Dose de cada ingrediente informada</li>
+        <li>Colágeno tipo II declarado como não desnaturado, a forma estudada</li>
+        <li>1 cápsula por dia, pote para 2 meses</li>
+        <li>Fabricante com CNPJ e sem reclamações no Reclame Aqui</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Efeito do colágeno tipo II é modesto, para dor e rigidez</li>
+        <li>2.000 UI de vitamina D: cuidado ao somar com outros suplementos</li>
+        <li>Vitamina K pode interferir com anticoagulantes</li>
+        <li>Garantia de 30 dias na página, 7 dias no cadastro da plataforma</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>Entre os colágenos tipo II que analisamos, é o que mostra a composição mais completa e o melhor preço por dia. A página de vendas é moderada: fala em saúde articular, flexibilidade e mobilidade, sem prometer curar artrose. Espere, no máximo, um alívio pequeno de dor e rigidez depois de alguns meses, e não troque o tratamento médico por ele. Quem toma anticoagulante deve falar com o médico antes, por causa da vitamina K.</p>
+  </div>
+
+  <BuyBox compact produto="Colágeno Tipo II Nature's Prime" href={p.link} title="Colágeno Tipo II no site oficial" text="A partir de R$ 144,90 o pote de 60 cápsulas (60 dias)." cta="Ver kits e preços" />
+</Article>

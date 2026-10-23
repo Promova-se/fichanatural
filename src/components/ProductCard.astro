@@ -1,0 +1,19 @@
+---
+import { productImage } from '../data/images.mjs';
+interface Props { name: string; href: string; pill: string; summary: string; pages: { href: string; short: string }[] }
+const { name, href, pill, summary, pages } = Astro.props;
+const img = productImage(href);
+---
+<article class="prod-card">
+  <a class="prod-img" href={href} tabindex="-1" aria-hidden="true">
+    {img ? <img src={img} alt="" width="380" height="380" loading="lazy" decoding="async" /> : <span class="prod-noimg">{name.slice(0, 1)}</span>}
+  </a>
+  <div class="prod-body">
+    <span class="pill">{pill}</span>
+    <h3><a href={href}>{name}</a></h3>
+    <p>{summary}</p>
+    <ul class="prod-links">
+      {pages.filter((p) => p.href !== href).slice(0, 4).map((p) => <li><a href={p.href}>{p.short}</a></li>)}
+    </ul>
+  </div>
+</article>

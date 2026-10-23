@@ -1,0 +1,47 @@
+---
+import Article from '../../../layouts/Article.astro';
+import KitCards from '../../../components/KitCards.astro';
+import { npmag as p, npmagPages, natures } from '../../../data/site';
+
+const faq = [
+  { q: "Onde comprar Magnésio Dimalato Nature's Prime original?", a: 'No site oficial do fabricante, com pagamento pela Monetizze. A marca diz que vende em farmácias selecionadas e não recomenda o Mercado Livre.' },
+  { q: "O Magnésio Dimalato Nature's Prime tem garantia?", a: 'A página de vendas fala em 30 dias para pedir o dinheiro de volta; o cadastro na Monetizze indica 7 dias. Para não ter discussão, decida em até 7 dias.' },
+];
+---
+<Article
+  ogImage="/img/magnesio-dimalato-natures-prime/og-magnesio-dimalato-natures-prime.jpg"
+  title="Onde comprar Magnésio Dimalato Nature's Prime: preço, kits e custo por dia"
+  seoTitle="Onde comprar Magnésio Dimalato Nature's Prime"
+  description="Onde comprar o Magnésio Dimalato Nature's Prime: preço de 1, 2 e 3 potes, custo por dia com 1 ou 2 cápsulas, parcelamento e garantia."
+  kicker="Compra segura"
+  lead="O Magnésio Dimalato é vendido no site oficial da Nature's Prime, com pagamento pela Monetizze. O kit de 2 potes é o que sai mais barato por dia."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }, { name: 'Magnésio Dimalato', href: '/magnesio-dimalato-natures-prime/' }, { name: 'Onde comprar', href: '/magnesio-dimalato-natures-prime/onde-comprar/' }]}
+  faq={faq}
+  related={[...npmagPages, { href: '/marca/natures-prime/', title: "Nature's Prime é confiável? A marca e todos os produtos" }]}
+  sources={[
+    { label: "Página oficial do Magnésio Dimalato e checkouts da Monetizze (consultados em 23/10/2026)", url: 'https://naturesprime.ind.br/magnesiodimalato1/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>No site oficial: R$ 84,90 por 1 pote, R$ 119,90 por 2 e R$ 179,90 por 3. Com 2 cápsulas por dia, o kit de 2 potes sai a R$ 2,00 por dia; com 1 cápsula, a R$ 1,00. Parcelamento em até 12x com juros.</p>
+  </div>
+
+  <h2>Escolha o kit</h2>
+  <KitCards kits={p.kits} unit="mês" produto="Magnésio Dimalato Nature's Prime" />
+
+  <h2>Custo por dia</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Kit</th><th>Preço</th><th>Com 2 cápsulas/dia</th><th>Com 1 cápsula/dia</th></tr></thead>
+      <tbody>
+        <tr><td>1 pote</td><td>R$ 84,90</td><td>R$ 2,83</td><td>R$ 1,42</td></tr>
+        <tr><td>2 potes</td><td>R$ 119,90</td><td>R$ 2,00</td><td>R$ 1,00</td></tr>
+        <tr><td>3 potes</td><td>R$ 179,90</td><td>R$ 2,00</td><td>R$ 1,00</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>O kit de 3 potes custa o mesmo por dia que o de 2. Só vale se você quiser estoque.</p>
+
+  <h2>Garantia e atendimento</h2>
+  <p>A página de vendas oferece 30 dias para pedir o dinheiro de volta; o cadastro do produto na Monetizze indica 7 dias. Pelo Código de Defesa do Consumidor, você pode desistir em até 7 dias após receber. Atendimento: {natures.sac} e {natures.phone}.</p>
+</Article>

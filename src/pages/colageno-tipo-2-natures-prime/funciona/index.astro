@@ -1,0 +1,55 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import TopCta from '../../../components/TopCta.astro';
+import { npcol2 as p, npcol2Pages } from '../../../data/site';
+
+const faq = [
+  { q: 'Colágeno tipo 2 funciona para dor no joelho?', a: 'Há evidência modesta. No principal estudo, com cerca de 190 pessoas com artrose no joelho, o colágeno tipo II não desnaturado reduziu dor e rigidez um pouco mais que o placebo e que a glucosamina com condroitina em 6 meses.' },
+  { q: 'Colágeno tipo 2 regenera a cartilagem?', a: 'Não. Nenhum estudo mostrou regeneração de cartilagem. O efeito parece vir de uma ação no sistema imune, que reduz a inflamação na articulação.' },
+  { q: 'Por que o colágeno tipo 2 é em dose tão pequena?', a: 'O colágeno tipo II não desnaturado não age como matéria-prima para a cartilagem. Em miligramas, ele "treina" o sistema imune do intestino a reduzir a resposta contra a cartilagem. Por isso a dose é de miligramas, e não de gramas como no colágeno hidrolisado.' },
+];
+---
+<Article
+  ogImage="/img/colageno-tipo-2-natures-prime/og-colageno-tipo-2-natures-prime.jpg"
+  title="Colágeno Tipo II Nature's Prime funciona? O que os estudos mostram para as articulações"
+  seoTitle="Colágeno Tipo II Nature's Prime funciona?"
+  description="O Colágeno Tipo II Nature's Prime funciona? O que os estudos mostram sobre colágeno tipo II não desnaturado, vitamina D3, vitamina K e magnésio para articulações e ossos."
+  kicker="Funciona?"
+  lead="O colágeno tipo II não desnaturado tem estudos com alívio modesto da dor de artrose. Vitamina D3, vitamina K e magnésio ajudam os ossos de quem tem falta. Não espere regeneração de cartilagem."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }, { name: 'Colágeno Tipo II', href: '/colageno-tipo-2-natures-prime/' }, { name: 'Funciona?', href: '/colageno-tipo-2-natures-prime/funciona/' }]}
+  faq={faq}
+  related={[...npcol2Pages, { href: '/colageno/', title: 'Qual o melhor colágeno? Tipos, doses e como escolher' }]}
+  sources={[
+    { label: 'Lugo JP et al. Undenatured type II collagen in knee osteoarthritis. Nutr J, 2016', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4731911/' },
+    { label: 'NIH Office of Dietary Supplements: Vitamin D, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/' },
+    { label: "Página oficial do Colágeno Tipo II (consultada em 23/10/2026)", url: 'https://naturesprime.ind.br/colagenotipoii60caps1/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Pode ajudar um pouco. O colágeno tipo II não desnaturado reduziu de forma modesta a dor e a rigidez da artrose no joelho em estudos de 3 a 6 meses. As vitaminas D3 e K e o magnésio ajudam os ossos de quem tem falta deles. Nenhum desses ingredientes regenera cartilagem.</p>
+  </div>
+
+  <TopCta produto="Colágeno Tipo II Nature's Prime" href={p.link} />
+
+  <h2>O que se sabe de cada ingrediente</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Ingrediente</th><th>O que os estudos mostram</th></tr></thead>
+      <tbody>
+        <tr><td>Colágeno tipo II não desnaturado, 4 mg</td><td>Redução modesta de dor e rigidez da artrose no joelho em 6 meses, em estudo com cerca de 190 pessoas</td></tr>
+        <tr><td>Vitamina D3, 2.000 UI</td><td>Importante para os ossos de quem tem deficiência, comum no Brasil. Sozinha, não trata artrose nem osteoporose</td></tr>
+        <tr><td>Vitamina K, 65 mcg</td><td>Participa da formação dos ossos; estudos de suplementação têm resultados mistos</td></tr>
+        <tr><td>Magnésio, 90 mg</td><td>Contribui para ossos e músculos; quantidade de complemento</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>O que a página promete</h2>
+  <p>A página de vendas fala em "manutenção da saúde articular", "flexibilidade e mobilidade" e "fortalece ossos e cartilagens". É um discurso mais moderado que o de outros produtos de articulação, sem prometer cura. Só "fortalece cartilagens" vai além do que os estudos mostram.</p>
+
+  <h2>Para quem pode fazer sentido</h2>
+  <p>Para quem tem desconforto articular leve ou artrose acompanhada por médico e quer experimentar um complemento por 3 a 6 meses. Para comparar com o <a href="/artic-protect/">Artic Protect</a> e o <a href="/collagen-osteo/">Collagen Osteo</a>, veja o <a href="/colageno/">guia de colágeno</a>.</p>
+
+  <BuyBox compact produto="Colágeno Tipo II Nature's Prime" href={p.link} title="Colágeno Tipo II no site oficial" text="A partir de R$ 144,90 o pote de 60 dias." cta="Ver kits e preços" />
+</Article>

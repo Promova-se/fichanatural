@@ -1,0 +1,59 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import CategoryIcon from '../../components/CategoryIcon.astro';
+import { site, catalog, categories, comparePages, ingredientGuides, guides } from '../../data/site';
+
+export function getStaticPaths() {
+  return categories.map((c) => ({ params: { slug: c.slug } }));
+}
+const cat = categories.find((c) => c.slug === Astro.params.slug)!;
+const items = cat.products.map((h) => catalog.find((c) => c.href === h)).filter(Boolean) as typeof catalog;
+const allGuides = [...comparePages, ...ingredientGuides, ...guides];
+const catGuides = cat.guides.map((h) => allGuides.find((g) => g.href === h)).filter(Boolean) as typeof allGuides;
+const url = `${site.url}/categoria/${cat.slug}/`;
+const schema = [
+  { '@context': 'https://schema.org', '@type': 'CollectionPage', name: cat.name, url, inLanguage: 'pt-BR', description: cat.desc,
+    hasPart: items.map((c) => ({ '@type': 'WebPage', name: c.name, url: `${site.url}${c.href}` })) },
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Início', item: `${site.url}/` },
+    { '@type': 'ListItem', position: 2, name: 'Categorias', item: `${site.url}/categoria/` },
+    { '@type': 'ListItem', position: 3, name: cat.name, item: url } ] },
+];
+const others = categories.filter((c) => c.slug !== cat.slug);
+---
+<Base title={`${cat.name}: fichas de suplementos`} description={cat.desc} schema={schema}>
+  <section class="cat-hero wrap" style={`--cat:${cat.color}`}>
+    <nav class="crumbs" aria-label="Você está em"><a href="/">Início</a><span aria-hidden="true">›</span><a href="/categoria/">Categorias</a><span aria-hidden="true">›</span><span>{cat.name}</span></nav>
+    <div class="cat-title">
+      <span class="cat-badge"><CategoryIcon name={cat.icon} size={28} /></span>
+      <div>
+        <h1>{cat.name}</h1>
+        <p class="small">{items.length} {items.length === 1 ? 'produto analisado' : 'produtos analisados'}{catGuides.length > 0 && ` · ${catGuides.length} ${catGuides.length === 1 ? 'guia' : 'guias'}`}</p>
+      </div>
+    </div>
+    <p class="cat-desc">{cat.desc}</p>
+  </section>
+
+  <section class="section wrap">
+    <div class="prod-grid">
+      {items.map((c) => <ProductCard name={c.name} href={c.href} pill={c.pill} summary={c.summary} pages={c.pages} />)}
+    </div>
+
+    {catGuides.length > 0 && (
+      <>
+        <h2>Guias para escolher</h2>
+        <ul class="card-list">
+          {catGuides.map((g) => <li><a class="card" href={g.href}><span>{g.title}</span><span class="arrow" aria-hidden="true">→</span></a></li>)}
+        </ul>
+      </>
+    )}
+
+    <h2>Outras categorias</h2>
+    <div class="cat-chips">
+      {others.map((c) => <a class="cat-chip" href={`/categoria/${c.slug}/`} style={`--cat:${c.color}`}><CategoryIcon name={c.icon} size={18} />{c.name}</a>)}
+      <a class="cat-chip" href="/marca/natures-prime/" style="--cat:#24513d"><CategoryIcon name="tag" size={18} />Nature's Prime</a>
+    </div>
+    <p class="small">As fichas são independentes. Os links para os sites oficiais são de afiliado: <a href="/aviso-de-afiliado/">saiba como funciona</a>.</p>
+  </section>
+</Base>

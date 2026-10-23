@@ -641,6 +641,91 @@ export const macaPages = [
   { href: '/maca-peruana-negra/e-confiavel/', title: 'Maca Peruana Negra Terra Nativa é confiável? Anvisa e Reclame Aqui', short: 'É confiável?' },
 ];
 
+// Linha Nature's Prime na Monetizze (afiliação em 23/10/2026). Fabricante: Natures Farma Indústria e Comércio Ltda (mesma da creatina e do colágeno).
+// Links oficiais do painel: app.monetizze.com.br/r/{mcr}?u=c&pl={plano}; preços lidos na API do checkout em 23/10/2026 (REF conferido no Ômega 3).
+// Tabelas nutricionais: loja.naturesprime.com.br. Parcelamento em até 12x com juros.
+const npRef = (mcr: string, plan: string) => `https://app.monetizze.com.br/r/${mcr}?u=c&pl=${plan}`;
+export const natures = {
+  name: "Nature's Prime",
+  maker: 'Natures Farma Indústria e Comércio Ltda',
+  cnpj: '28.209.818/0001-38',
+  sac: 'sac@naturesprime.ind.br',
+  phone: '(62) 9374-2145',
+};
+
+// Magnésio Dimalato: 2 cápsulas (1,2 g) = 260 mg de magnésio (62% VD); 60 cápsulas = 30 dias. A página de vendas diz "uma cápsula ao dia".
+export const npmag = {
+  name: "Magnésio Dimalato Nature's Prime",
+  link: 'https://app.monetizze.com.br/r/AZT25864144',
+  kits: [
+    { name: '1 pote', qty: '60 cápsulas · 30 dias', months: 1, total: 84.9, installments: '12x de R$ 8,52', plan: npRef('AZT25864144', 'WR303445') },
+    { name: '2 potes', qty: '120 cápsulas · 60 dias', months: 2, total: 119.9, installments: '12x de R$ 12,04', plan: npRef('AZT25864144', 'RY303446') },
+    { name: '3 potes', qty: '180 cápsulas · 90 dias', months: 3, total: 179.9, installments: '12x de R$ 18,06', plan: npRef('AZT25864144', 'JU344483') },
+  ],
+};
+export const npmagPages = [
+  { href: '/magnesio-dimalato-natures-prime/', title: "Magnésio Dimalato Nature's Prime: ficha, dose e preço", short: 'Ficha completa' },
+  { href: '/magnesio-dimalato-natures-prime/funciona/', title: "Magnésio Dimalato Nature's Prime funciona? Ansiedade, sono e cãibra", short: 'Funciona?' },
+  { href: '/magnesio-dimalato-natures-prime/como-tomar/', title: 'Como tomar magnésio dimalato: 1 ou 2 cápsulas, horário e cuidados', short: 'Como tomar' },
+  { href: '/magnesio-dimalato-natures-prime/onde-comprar/', title: "Onde comprar Magnésio Dimalato Nature's Prime: preço e kits", short: 'Onde comprar' },
+];
+
+// Colágeno Tipo II: 1 cápsula = colágeno tipo II não desnaturado 4 mg, vitamina D 50 mcg (2.000 UI, 333% VD), vitamina K 65 mcg (54%), magnésio 90 mg (21%).
+// A tabela da loja escreve "mg" para as vitaminas D e K; pelo %VD, são microgramas. 60 cápsulas = 60 dias.
+export const npcol2 = {
+  name: "Colágeno Tipo II Nature's Prime",
+  link: 'https://app.monetizze.com.br/r/APV25864145',
+  kits: [
+    { name: '1 pote', qty: '60 cápsulas · 60 dias', months: 2, total: 144.9, installments: '12x de R$ 14,55', plan: npRef('APV25864145', 'QR303427') },
+    { name: '2 potes', qty: '120 cápsulas · 120 dias', months: 4, total: 204.9, installments: '12x de R$ 20,57', plan: npRef('APV25864145', 'KT303432') },
+  ],
+};
+export const npcol2Pages = [
+  { href: '/colageno-tipo-2-natures-prime/', title: "Colágeno Tipo II Nature's Prime: ficha, dose e preço", short: 'Ficha completa' },
+  { href: '/colageno-tipo-2-natures-prime/funciona/', title: "Colágeno Tipo II Nature's Prime funciona? O que os estudos mostram", short: 'Funciona?' },
+  { href: '/colageno-tipo-2-natures-prime/como-tomar/', title: 'Como tomar colágeno tipo 2: dose, horário e cuidados', short: 'Como tomar' },
+  { href: '/colageno-tipo-2-natures-prime/onde-comprar/', title: "Onde comprar Colágeno Tipo II Nature's Prime: preço e kits", short: 'Onde comprar' },
+];
+
+// Ômega 3: 3 cápsulas (4 g) = 1.053 mg de ômega 3, sendo EPA 540 mg + DHA 360 mg. Pote de 120 = 40 dias; pote de 240 = 80 dias.
+export const npomega = {
+  name: "Ômega 3 Nature's Prime",
+  link: 'https://app.monetizze.com.br/r/AUS25864147',
+  link240: 'https://app.monetizze.com.br/r/ADK25864146',
+  kits: [
+    { name: '1 pote de 120', qty: '120 cápsulas · 40 dias', months: 40 / 30, total: 124.9, installments: '12x de R$ 12,54', plan: npRef('AUS25864147', 'WW303448') },
+    { name: '1 pote de 240', qty: '240 cápsulas · 80 dias', months: 80 / 30, total: 169.9, installments: '12x de R$ 17,06', plan: npRef('ADK25864146', 'QH303452') },
+    { name: '2 potes de 240', qty: '480 cápsulas · 160 dias', months: 160 / 30, total: 279.9, installments: '12x de R$ 28,10', plan: npRef('ADK25864146', 'AZ303878') },
+    { name: 'Compre 2, leve 3 (240)', qty: '720 cápsulas · 240 dias', months: 240 / 30, total: 359.9, installments: '12x de R$ 36,13', plan: npRef('ADK25864146', 'BB333819') },
+  ],
+  kits120: [
+    { name: '2 potes de 120', qty: '240 cápsulas · 80 dias', months: 80 / 30, total: 189.9, installments: '12x de R$ 19,07', plan: npRef('AUS25864147', 'KX303449') },
+    { name: 'Compre 2, leve 3 (120)', qty: '360 cápsulas · 120 dias', months: 120 / 30, total: 239.9, installments: '12x de R$ 24,09', plan: npRef('AUS25864147', 'SM333818') },
+  ],
+};
+export const npomegaPages = [
+  { href: '/omega-3-natures-prime/', title: "Ômega 3 Nature's Prime: ficha, EPA e DHA por dose e preço", short: 'Ficha completa' },
+  { href: '/omega-3-natures-prime/funciona/', title: "Ômega 3 Nature's Prime funciona? Coração, triglicerídeos e cérebro", short: 'Funciona?' },
+  { href: '/omega-3-natures-prime/como-tomar/', title: 'Como tomar ômega 3: dose, horário e cuidados', short: 'Como tomar' },
+  { href: '/omega-3-natures-prime/onde-comprar/', title: "Onde comprar Ômega 3 Nature's Prime: 120 ou 240 cápsulas", short: 'Onde comprar' },
+];
+
+// Coenzima Q10: 1 cápsula = 100 mg; 60 cápsulas = 60 dias.
+export const npq10 = {
+  name: "Coenzima Q10 Nature's Prime",
+  link: 'https://app.monetizze.com.br/r/APB25864148',
+  kits: [
+    { name: '1 pote', qty: '60 cápsulas · 60 dias', months: 2, total: 134.9, installments: '12x de R$ 13,54', plan: npRef('APB25864148', 'FN304947') },
+    { name: '2 potes', qty: '120 cápsulas · 120 dias', months: 4, total: 204.9, installments: '12x de R$ 20,57', plan: npRef('APB25864148', 'KP304950') },
+  ],
+};
+export const npq10Pages = [
+  { href: '/coenzima-q10-natures-prime/', title: "Coenzima Q10 Nature's Prime: ficha, dose e preço", short: 'Ficha completa' },
+  { href: '/coenzima-q10-natures-prime/funciona/', title: "Coenzima Q10 Nature's Prime funciona? Energia, coração e estatinas", short: 'Funciona?' },
+  { href: '/coenzima-q10-natures-prime/como-tomar/', title: 'Como tomar coenzima Q10: dose, horário e interações', short: 'Como tomar' },
+  { href: '/coenzima-q10-natures-prime/onde-comprar/', title: "Onde comprar Coenzima Q10 Nature's Prime: preço e kits", short: 'Onde comprar' },
+];
+
 export const catalog = [
   { name: 'OzenVitta', href: '/ozenvitta/', pill: 'Emagrecimento', summary: 'Fibras, L-carnitina, laranja moro e cromo em cápsulas.', pages: ozenvittaPages },
   { name: 'ReduPhine Caps', href: '/reduphine-caps/', pill: 'Emagrecimento', summary: 'Spirulina, psyllium, quitosana e cromo, com opção de combo com gotas.', pages: reduphinePages },
@@ -656,11 +741,51 @@ export const catalog = [
   { name: 'Lizz Anté Nutri', href: '/lizz-ante-nutri/', pill: 'Cabelo, pele e unhas', summary: 'Cápsulas da Lizz Anté com biotina, colágeno, silício, zinco e mais 5 ativos.', pages: lizznutriPages },
   { name: 'Kit S.O.S Crescimento', href: '/kit-sos-crescimento/', pill: 'Cabelo', summary: 'Shampoo, máscara e tônico da Lizz Anté para queda e crescimento capilar.', pages: kitsosPages },
   { name: 'Hot Men Caps', href: '/hot-men-caps/', pill: 'Saúde masculina', summary: 'Cápsulas vendidas para desempenho sexual masculino, sem ingredientes na página oficial.', pages: hotmenPages },
+  { name: "Magnésio Dimalato Nature's Prime", href: '/magnesio-dimalato-natures-prime/', pill: 'Minerais', summary: 'Magnésio dimalato em cápsulas, 260 mg de magnésio em 2 cápsulas.', pages: npmagPages },
+  { name: "Ômega 3 Nature's Prime", href: '/omega-3-natures-prime/', pill: 'Vitaminas e óleos', summary: 'Óleo de peixe com 540 mg de EPA e 360 mg de DHA em 3 cápsulas.', pages: npomegaPages },
+  { name: "Coenzima Q10 Nature's Prime", href: '/coenzima-q10-natures-prime/', pill: 'Energia', summary: 'Coenzima Q10 de 100 mg por cápsula, 60 cápsulas.', pages: npq10Pages },
+  { name: "Colágeno Tipo II Nature's Prime", href: '/colageno-tipo-2-natures-prime/', pill: 'Articulações', summary: 'Colágeno tipo II não desnaturado com vitamina D3, vitamina K e magnésio, 1 cápsula por dia.', pages: npcol2Pages },
   { name: 'Maca Peruana Negra', href: '/maca-peruana-negra/', pill: 'Energia', summary: 'Cápsulas de maca negra do Empório Terra Nativa, 2 g por dia. A maca não está na lista da Anvisa para suplementos.', pages: macaPages },
   { name: '6 Magnésios', href: '/6-magnesios/', pill: 'Minerais', summary: 'Cápsulas com 6 formas de magnésio, 260 mg por dose, do Empório Terra Nativa.', pages: seismagPages },
   { name: 'Collagen Osteo', href: '/collagen-osteo/', pill: 'Articulações', summary: 'Gotas da Natturabio com colágeno tipo II, curcumina, vitaminas D3 e K2 e magnésio, sem doses na página.', pages: collagenosteoPages },
   { name: 'Collagen Vitta', href: '/collagen-vitta/', pill: 'Pele', summary: 'Colágeno Verisol em pó com ácido hialurônico, biotina e vitaminas, da Natturabio, sem doses na página.', pages: collagenvittaPages },
   { name: 'Vitta Resveratrol', href: '/vitta-resveratrol/', pill: 'Pele', summary: 'Colágeno, ácido hialurônico, resveratrol e vitaminas.', pages: resveratrolPages },
+];
+
+// Categorias do menu do topo. `products` usa os href do catálogo; um produto pode estar em mais de uma.
+export const categories = [
+  { slug: 'emagrecimento', name: 'Emagrecimento', icon: 'scale', color: '#b8402a',
+    desc: 'Cápsulas e gotas vendidas para emagrecer: fibras, laranja moro, cafeína e cromo. O que cada uma tem e o que dá para esperar.',
+    products: ['/ozenvitta/', '/reduphine-caps/', '/inibe-one/', '/detox-fit-caps-black/', '/dtx-black/', '/mounjax/', '/tg30/'],
+    guides: ['/ozenvitta-ou-reduphine/', '/laranja-moro/', '/psyllium/'] },
+  { slug: 'pele-cabelo-e-unhas', name: 'Pele, cabelo e unhas', icon: 'drop', color: '#a0577a',
+    desc: 'Colágenos, fórmulas para cabelo e kits capilares. Doses, tipos de colágeno e o que os estudos mostram para pele e queda de cabelo.',
+    products: ['/colageno-natures-prime/', '/collagen-vitta/', '/vitta-resveratrol/', '/lizz-ante-nutri/', '/kit-sos-crescimento/', '/iarmonize/'],
+    guides: ['/colageno/', '/resveratrol/'] },
+  { slug: 'articulacoes-e-ossos', name: 'Articulações e ossos', icon: 'joint', color: '#3d6a8a',
+    desc: 'Colágeno tipo II, vitamina D3, vitamina K e magnésio para articulações e ossos. O que ajuda na dor e o que é exagero.',
+    products: ['/colageno-tipo-2-natures-prime/', '/artic-protect/', '/collagen-osteo/'],
+    guides: ['/colageno/'] },
+  { slug: 'vitaminas-e-minerais', name: 'Vitaminas e minerais', icon: 'capsule', color: '#24513d',
+    desc: 'Magnésio, ômega 3 e coenzima Q10: qual forma escolher, quanto tomar e quando vale a pena suplementar.',
+    products: ['/6-magnesios/', '/magnesio-dimalato-natures-prime/', '/omega-3-natures-prime/', '/coenzima-q10-natures-prime/'],
+    guides: ['/magnesio/'] },
+  { slug: 'treino-e-energia', name: 'Treino e energia', icon: 'bolt', color: '#b07a12',
+    desc: 'Creatina, maca e coenzima Q10. O que tem evidência para força e disposição, e o que é só promessa.',
+    products: ['/creatina-natures-prime/', '/coenzima-q10-natures-prime/', '/maca-peruana-negra/'],
+    guides: [] },
+  { slug: 'saude-masculina', name: 'Saúde masculina', icon: 'shield', color: '#4a4f8c',
+    desc: 'Suplementos vendidos para desempenho e libido masculina. O que eles têm e os riscos de comprar sem saber.',
+    products: ['/hot-men-caps/', '/maca-peruana-negra/'],
+    guides: [] },
+  { slug: 'saude-da-mulher', name: 'Saúde da mulher', icon: 'flower', color: '#8a4f9e',
+    desc: 'Menopausa, ossos e pele: o que ajuda de verdade nas fases da vida da mulher.',
+    products: ['/colageno-tipo-2-natures-prime/', '/collagen-vitta/', '/6-magnesios/'],
+    guides: ['/menopausa/', '/colageno/', '/magnesio/'] },
+];
+
+export const brands = [
+  { slug: 'natures-prime', name: "Nature's Prime", href: '/marca/natures-prime/', desc: 'Indústria de Anápolis (GO), com 6 produtos analisados.' },
 ];
 
 export const guideHubs = [

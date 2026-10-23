@@ -1,0 +1,57 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import TopCta from '../../../components/TopCta.astro';
+import { npomega as p, npomegaPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Ômega 3 baixa o colesterol?', a: 'Praticamente não. O ômega 3 não reduz o LDL (colesterol ruim) de forma relevante e pode até subir um pouco. O que ele reduz são os triglicerídeos, e em doses maiores que a deste produto.' },
+  { q: 'Ômega 3 previne infarto?', a: 'Em quem não tem doença cardíaca, o grande estudo VITAL, com cerca de 26 mil pessoas tomando 1 g por dia, não mostrou redução de infarto, AVC ou morte cardiovascular no total. Um remédio de EPA em dose alta reduziu eventos em pessoas de alto risco, mas é outro produto e outra dose.' },
+  { q: 'Ômega 3 faz bem para o cérebro e a memória?', a: 'O DHA é parte do cérebro e da retina, mas estudos com suplemento em adultos saudáveis não mostraram melhora de memória. Quem come pouco peixe garante, ao menos, o que a dieta não dá.' },
+];
+---
+<Article
+  ogImage="/img/omega-3-natures-prime/og-omega-3-natures-prime.jpg"
+  title="Ômega 3 Nature's Prime funciona? Coração, triglicerídeos, cérebro e articulações"
+  seoTitle="Ômega 3 Nature's Prime funciona?"
+  description="O Ômega 3 Nature's Prime funciona? O que os estudos mostram para colesterol, triglicerídeos, coração, olhos e articulações, e o que a dose de 900 mg de EPA e DHA faz."
+  kicker="Funciona?"
+  lead="Funciona para garantir EPA e DHA a quem come pouco peixe. Para baixar colesterol, prevenir infarto ou melhorar a memória, a ciência não sustenta o que a página promete."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }, { name: 'Ômega 3', href: '/omega-3-natures-prime/' }, { name: 'Funciona?', href: '/omega-3-natures-prime/funciona/' }]}
+  faq={faq}
+  related={npomegaPages}
+  sources={[
+    { label: 'NIH Office of Dietary Supplements: Omega-3 fatty acids, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/' },
+    { label: 'Manson JE et al. Marine n-3 fatty acids and prevention of cardiovascular disease and cancer (VITAL). N Engl J Med, 2019', url: 'https://www.nejm.org/doi/full/10.1056/NEJMoa1811403' },
+    { label: 'Gencer B et al. Effect of long-term marine omega-3 fatty acids supplementation on the risk of atrial fibrillation. Circulation, 2021', url: 'https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.121.055654' },
+    { label: "Páginas oficiais do Ômega 3 (consultadas em 23/10/2026)", url: 'https://naturesprime.ind.br/omega3-120caps1/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Em parte. Os 900 mg de EPA e DHA por dia cobrem bem quem come pouco peixe. Mas o ômega 3 não baixa o LDL, reduz triglicerídeos só em doses de 2 a 4 g, e o maior estudo com 1 g por dia não mostrou menos infartos em pessoas saudáveis. Doses altas aumentam um pouco o risco de fibrilação atrial.</p>
+  </div>
+
+  <TopCta produto="Ômega 3 Nature's Prime" href={p.link240} />
+
+  <h2>Promessa por promessa</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>A página promete</th><th>O que os estudos mostram</th></tr></thead>
+      <tbody>
+        <tr><td>Reduz colesterol</td><td>Não reduz o LDL de forma relevante</td></tr>
+        <tr><td>Reduz triglicerídeos</td><td>Sim, mas com 2 a 4 g de EPA e DHA por dia, o dobro ou mais desta dose, e com acompanhamento médico</td></tr>
+        <tr><td>Protege o coração</td><td>Em quem não tem doença cardíaca, 1 g por dia não reduziu infarto e AVC no total (estudo VITAL)</td></tr>
+        <tr><td>Saúde dos olhos</td><td>O DHA faz parte da retina, mas suplemento não preveniu degeneração macular nem melhorou olho seco em estudos grandes</td></tr>
+        <tr><td>Articulações</td><td>Alívio pequeno de dor e rigidez na artrite reumatoide, em doses altas; pouco efeito na artrose</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Para quem pode fazer sentido</h2>
+  <p>Para quem come peixe menos de duas vezes por semana e quer cobrir EPA e DHA. Para quem tem triglicerídeos altos ou doença cardíaca, o ômega 3 pode fazer parte do tratamento, mas na dose e com o produto que o médico indicar, não como substituto do remédio.</p>
+
+  <h2>Um efeito colateral pouco falado</h2>
+  <p>Em estudos que juntaram mais de 80 mil pessoas, quem tomou ômega 3 teve um pouco mais de fibrilação atrial (um tipo de arritmia), principalmente com mais de 1 g por dia. É um risco pequeno, mas é mais um motivo para não aumentar a dose por conta própria.</p>
+
+  <BuyBox compact produto="Ômega 3 Nature's Prime" href={p.link240} title="Ômega 3 no site oficial" text="Pote de 240 cápsulas (80 dias) a partir de R$ 169,90." cta="Ver kits e preços" />
+</Article>

@@ -1,0 +1,63 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import TopCta from '../../../components/TopCta.astro';
+import { npmag as p, npmagPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Magnésio dimalato ajuda na ansiedade?', a: 'Uma revisão sistemática de 2017 encontrou sinais de benefício em pessoas mais vulneráveis à ansiedade, mas com estudos de baixa qualidade. Não é tratamento para ansiedade, e quem tem sintomas persistentes deve procurar ajuda profissional.' },
+  { q: 'Magnésio dimalato ajuda na fibromialgia ou dor muscular?', a: 'Estudos pequenos com magnésio e ácido málico em fibromialgia tiveram resultados inconsistentes. Não há evidência suficiente para recomendar.' },
+  { q: 'Magnésio previne arritmia?', a: 'O magnésio é usado na veia, no hospital, em algumas arritmias. Isso é bem diferente de tomar uma cápsula em casa. Palpitação ou dor no peito são motivo para procurar um médico, não para tomar suplemento.' },
+];
+---
+<Article
+  ogImage="/img/magnesio-dimalato-natures-prime/og-magnesio-dimalato-natures-prime.jpg"
+  title="Magnésio Dimalato Nature's Prime funciona? Ansiedade, sono, cãibra e coração"
+  seoTitle="Magnésio Dimalato Nature's Prime funciona?"
+  description="Magnésio Dimalato Nature's Prime funciona? O que os estudos mostram sobre magnésio para ansiedade, sono, cãibra, energia e coração, e o que é exagero na página."
+  kicker="Funciona?"
+  lead="O produto entrega magnésio em dose adequada. A questão é o que o magnésio faz de verdade, e a lista da página de vendas vai muito além disso."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }, { name: 'Magnésio Dimalato', href: '/magnesio-dimalato-natures-prime/' }, { name: 'Funciona?', href: '/magnesio-dimalato-natures-prime/funciona/' }]}
+  faq={faq}
+  related={[...npmagPages, { href: '/magnesio/', title: 'Magnésio: qual o melhor tipo, para que serve e quanto tomar' }]}
+  sources={[
+    { label: "Página oficial do Magnésio Dimalato (consultada em 23/10/2026)", url: 'https://naturesprime.ind.br/magnesiodimalato1/' },
+    { label: 'NIH Office of Dietary Supplements: Magnesium, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/' },
+    { label: 'Boyle NB et al. Magnesium supplementation on subjective anxiety and stress: a systematic review. Nutrients, 2017', url: 'https://pubmed.ncbi.nlm.nih.gov/28445426/' },
+    { label: 'Garrison SR et al. Magnesium for skeletal muscle cramps. Cochrane Database Syst Rev, 2020', url: 'https://cochranelibrary.com/cdsr/doi/10.1002/14651858.CD009402.pub3/information' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Funciona para repor magnésio, e isso já ajuda quem tem falta dele. Para quem não tem, os efeitos em ansiedade, sono e cãibra são pequenos ou não comprovados. As promessas de reduzir depressão, arritmias cardíacas e dor no peito não têm base para um suplemento oral e não deveriam estar na página.</p>
+  </div>
+
+  <TopCta produto="Magnésio Dimalato Nature's Prime" href={p.link} />
+
+  <h2>O que a página promete e o que se sabe</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Promessa</th><th>O que os estudos mostram</th></tr></thead>
+      <tbody>
+        <tr><td>Reduz stress e ansiedade</td><td>Sinais de benefício em estudos de baixa qualidade, principalmente em quem já é mais ansioso</td></tr>
+        <tr><td>Reduz depressão</td><td>Poucos estudos pequenos; magnésio não substitui tratamento</td></tr>
+        <tr><td>Reduz arritmias e dor no peito</td><td>Sem base para suplemento oral. Magnésio na veia é usado no hospital, em casos específicos</td></tr>
+        <tr><td>Melhora a memória</td><td>Sem estudos sólidos em pessoas</td></tr>
+        <tr><td>Reduz a insônia</td><td>Estudos pequenos, principalmente em idosos, com efeito leve</td></tr>
+        <tr><td>Alivia dores musculares e cãibras</td><td>Para a cãibra comum de pessoas mais velhas, a revisão Cochrane concluiu que provavelmente não ajuda</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Por que dimalato?</h2>
+  <p>O ácido málico participa da produção de energia nas células, e por isso o dimalato costuma ser vendido para cansaço e fibromialgia. Os estudos com essa combinação são poucos e pequenos, com resultados inconsistentes. Na prática, o dimalato é uma forma bem absorvida de magnésio, como o citrato e o glicinato.</p>
+
+  <h2>O que o magnésio faz de verdade</h2>
+  <ul>
+    <li>Corrige a falta de magnésio, mais comum em quem come pouco feijão, castanhas e verduras, bebe muito álcool ou usa omeprazol e diuréticos por muito tempo.</li>
+    <li>Pode reduzir crises de enxaqueca, em doses maiores e com orientação médica.</li>
+    <li>Reduz um pouco a pressão arterial em alguns estudos.</li>
+  </ul>
+  <p>O <a href="/magnesio/">guia de magnésio</a> explica cada uso com mais detalhe.</p>
+
+  <BuyBox compact produto="Magnésio Dimalato Nature's Prime" href={p.link} title="Magnésio Dimalato no site oficial" text="A partir de R$ 84,90 o pote." cta="Ver kits e preços" />
+</Article>

@@ -1,0 +1,98 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import TopCta from '../../components/TopCta.astro';
+import { npomega as p, npomegaPages, natures } from '../../data/site';
+
+const faq = [
+  { q: "Quanto EPA e DHA tem o Ômega 3 Nature's Prime?", a: 'Segundo a tabela nutricional, 3 cápsulas (4 g de óleo) têm 1.053 mg de ômega 3, sendo 540 mg de EPA e 360 mg de DHA. Cada cápsula, portanto, tem cerca de 180 mg de EPA e 120 mg de DHA.' },
+  { q: 'Quantas cápsulas por dia?', a: 'O fabricante orienta 3 cápsulas por dia. Assim, o pote de 120 dura 40 dias e o de 240, 80 dias.' },
+  { q: "Quanto custa o Ômega 3 Nature's Prime?", a: 'Nos checkouts de 23/10/2026: pote de 120 cápsulas por R$ 124,90 e pote de 240 por R$ 169,90. O kit "compre 2, leve 3" de 240 sai por R$ 359,90 e é o mais barato por dia: R$ 1,50.' },
+];
+---
+<Article
+  ogImage="/img/omega-3-natures-prime/og-omega-3-natures-prime.jpg"
+  title="Ômega 3 Nature's Prime: ficha completa, EPA e DHA por dose, preço e o que esperar"
+  seoTitle="Ômega 3 Nature's Prime: EPA, DHA e preço"
+  description="Ficha do Ômega 3 Nature's Prime: quanto EPA e DHA tem em 3 cápsulas, preço dos potes de 120 e 240, custo por dia, promessas da página e o que a ciência mostra."
+  kicker="Ficha de produto"
+  lead="Óleo de peixe com 540 mg de EPA e 360 mg de DHA em 3 cápsulas, dose informada e preço competitivo nos potes grandes. As promessas sobre colesterol e coração vão além do que essa dose faz."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }, { name: 'Ômega 3', href: '/omega-3-natures-prime/' }]}
+  faq={faq}
+  related={[...npomegaPages, { href: '/marca/natures-prime/', title: "Nature's Prime é confiável? A marca e todos os produtos" }]}
+  sources={[
+    { label: "Páginas oficiais do Ômega 3 (120 e 240 cápsulas) e checkouts da Monetizze (consultados em 23/10/2026)", url: 'https://naturesprime.ind.br/omega3-240caps1/' },
+    { label: 'NIH Office of Dietary Supplements: Omega-3 fatty acids, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>3 cápsulas por dia com 1.053 mg de ômega 3 (540 mg de EPA e 360 mg de DHA). Fabricante com CNPJ e sem reclamações no Reclame Aqui. Custa de R$ 1,50 a R$ 3,12 por dia, conforme o kit. É uma dose boa para quem come pouco peixe, mas pequena para baixar triglicerídeos, e grandes estudos com 1 g por dia não mostraram menos infartos.</p>
+  </div>
+
+  <TopCta produto="Ômega 3 Nature's Prime" href={p.link240} />
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>Ômega 3 em cápsulas, potes de 120 ou 240, Nature's Prime</td></tr>
+        <tr><th>Fabricante</th><td>{natures.maker}, CNPJ {natures.cnpj}</td></tr>
+        <tr><th>Dose</th><td>3 cápsulas por dia</td></tr>
+        <tr><th>Duração</th><td>40 dias (120 cápsulas) ou 80 dias (240 cápsulas)</td></tr>
+        <tr><th>Atendimento</th><td>{natures.sac} e {natures.phone}</td></tr>
+        <tr><th>Garantia</th><td>30 dias na página de vendas; 7 dias no cadastro da Monetizze</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Composição em 3 cápsulas</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Nutriente</th><th>Quantidade</th></tr></thead>
+      <tbody>
+        <tr><td>Óleo de peixe</td><td>4 g</td></tr>
+        <tr><td>Ômega 3 total</td><td>1.053 mg</td></tr>
+        <tr><td>EPA</td><td>540 mg</td></tr>
+        <tr><td>DHA</td><td>360 mg</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>São 900 mg de EPA mais DHA por dia, uma concentração de cerca de 22% de EPA e DHA no óleo. É um óleo de peixe comum, não concentrado. Por isso a dose é de 3 cápsulas: os óleos concentrados dão o mesmo em 1 ou 2.</p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores conferidos nos checkouts em 23/10/2026. Parcelamento em até 12x com juros.</p>
+  <h3>Potes de 240 cápsulas</h3>
+  <KitCards kits={p.kits} unit="mês" produto="Ômega 3 Nature's Prime" />
+  <h3>Kits com potes de 120 cápsulas</h3>
+  <KitCards kits={p.kits120} unit="mês" produto="Ômega 3 Nature's Prime" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>EPA e DHA informados na tabela</li>
+        <li>900 mg de EPA + DHA por dia, acima do mínimo recomendado de 250 a 500 mg</li>
+        <li>Pote de 240 e kits saem a menos de R$ 2,20 por dia</li>
+        <li>Fabricante com CNPJ e sem reclamações no Reclame Aqui</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>3 cápsulas por dia, óleo não concentrado</li>
+        <li>Página promete reduzir colesterol e triglicerídeos, o que essa dose faz pouco</li>
+        <li>Não informa certificação de pureza (metais pesados) nem selo de oxidação</li>
+        <li>Garantia de 30 dias na página, 7 dias no cadastro da plataforma</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>É um óleo de peixe comum, com dose honesta e bom preço nos potes de 240. Serve para quem come pouco peixe e quer garantir EPA e DHA. Não espere baixar colesterol: o ômega 3 quase não mexe no LDL, e para triglicerídeos as doses usadas em tratamento são de 2 a 4 g de EPA e DHA, com acompanhamento médico. Quem toma anticoagulante deve falar com o médico antes.</p>
+  </div>
+
+  <BuyBox compact produto="Ômega 3 Nature's Prime" href={p.link240} title="Ômega 3 no site oficial" text="Pote de 240 cápsulas (80 dias) a partir de R$ 169,90." cta="Ver kits e preços" />
+</Article>

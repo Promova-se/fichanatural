@@ -1,0 +1,88 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import TopCta from '../../components/TopCta.astro';
+import { npmag as p, npmagPages, natures } from '../../data/site';
+
+const faq = [
+  { q: "Quanto magnésio tem o Magnésio Dimalato Nature's Prime?", a: 'Segundo a tabela nutricional, 2 cápsulas (1,2 g) têm 260 mg de magnésio, 62% do valor diário. Cada cápsula, portanto, tem cerca de 130 mg.' },
+  { q: 'É 1 ou 2 cápsulas por dia?', a: 'A página de vendas diz 1 cápsula por dia, mas a tabela nutricional usa a porção de 2 cápsulas. Com 1 cápsula você toma cerca de 130 mg e o pote dura 60 dias; com 2, toma 260 mg e o pote dura 30 dias.' },
+  { q: "Quanto custa o Magnésio Dimalato Nature's Prime?", a: 'Nos checkouts de 23/10/2026: 1 pote por R$ 84,90, 2 por R$ 119,90 e 3 por R$ 179,90.' },
+  { q: 'O que é magnésio dimalato?', a: 'É magnésio ligado ao ácido málico, o ácido das frutas como a maçã. É uma forma bem absorvida de magnésio, mas não há estudos mostrando que seja melhor que citrato ou glicinato para a maioria dos usos.' },
+];
+---
+<Article
+  ogImage="/img/magnesio-dimalato-natures-prime/og-magnesio-dimalato-natures-prime.jpg"
+  title="Magnésio Dimalato Nature's Prime: ficha completa, dose, preço e o que esperar"
+  seoTitle="Magnésio Dimalato Nature's Prime: dose e preço"
+  description="Ficha do Magnésio Dimalato Nature's Prime: quanto magnésio tem, 1 ou 2 cápsulas por dia, preço dos kits, o que a página promete e o que a ciência mostra."
+  kicker="Ficha de produto"
+  lead="Um magnésio simples, com dose informada e preço baixo para a categoria. O cuidado está nas promessas da página de vendas, que vão de ansiedade a arritmia cardíaca."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }, { name: 'Magnésio Dimalato', href: '/magnesio-dimalato-natures-prime/' }]}
+  faq={faq}
+  related={[...npmagPages, { href: '/magnesio/', title: 'Magnésio: qual o melhor tipo, para que serve e quanto tomar' }, { href: '/marca/natures-prime/', title: "Nature's Prime é confiável? A marca e todos os produtos" }]}
+  sources={[
+    { label: "Página oficial do Magnésio Dimalato e checkouts da Monetizze (consultados em 23/10/2026)", url: 'https://naturesprime.ind.br/magnesiodimalato1/' },
+    { label: "Loja oficial Nature's Prime: tabela nutricional (consultada em 23/10/2026)", url: 'https://loja.naturesprime.com.br/saude-e-bem-estar/magnesio-dimalato-60-capsulas' },
+    { label: 'NIH Office of Dietary Supplements: Magnesium, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Cápsulas de magnésio dimalato com 260 mg de magnésio em 2 cápsulas, dose informada e dentro do limite seguro. Fabricante com CNPJ e sem reclamações no Reclame Aqui. É um dos magnésios mais baratos que analisamos: de R$ 2,00 a R$ 2,83 por dia. A página de vendas promete reduzir ansiedade, depressão, arritmias e dor no peito, o que nenhum suplemento pode prometer.</p>
+  </div>
+
+  <TopCta produto="Magnésio Dimalato Nature's Prime" href={p.link} />
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>Magnésio Dimalato 60 cápsulas, Nature's Prime</td></tr>
+        <tr><th>Fabricante</th><td>{natures.maker}, CNPJ {natures.cnpj}</td></tr>
+        <tr><th>Magnésio</th><td>260 mg em 2 cápsulas (62% do valor diário)</td></tr>
+        <tr><th>Dose</th><td>A página diz 1 cápsula por dia; a tabela usa a porção de 2</td></tr>
+        <tr><th>Duração do pote</th><td>30 dias com 2 cápsulas, 60 dias com 1</td></tr>
+        <tr><th>Atendimento</th><td>{natures.sac} e {natures.phone}</td></tr>
+        <tr><th>Garantia</th><td>30 dias na página de vendas; 7 dias no cadastro da Monetizze</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Composição</h2>
+  <p>O único ativo é o dimalato de magnésio: magnésio ligado ao ácido málico. A tabela informa 260 mg de magnésio por porção de 2 cápsulas, sem outros nutrientes relevantes. É uma forma bem absorvida, e a dose fica abaixo do limite de 350 mg por dia para magnésio de suplementos.</p>
+  <p>Para entender como o dimalato se compara a citrato, glicinato e outras formas, veja o <a href="/magnesio/">guia de magnésio</a>. Se você busca um produto com várias formas de magnésio, também analisamos o <a href="/6-magnesios/">6 Magnésios</a>, que tem a mesma quantidade por dose.</p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores conferidos nos checkouts em 23/10/2026. O preço por mês considera 2 cápsulas por dia. Parcelamento em até 12x com juros.</p>
+  <KitCards kits={p.kits} unit="mês" produto="Magnésio Dimalato Nature's Prime" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Dose de magnésio informada: 260 mg em 2 cápsulas</li>
+        <li>Forma bem absorvida, sem misturas</li>
+        <li>Preço baixo por dia</li>
+        <li>Fabricante com CNPJ e sem reclamações no Reclame Aqui</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Promete reduzir ansiedade, depressão, arritmia e dor no peito</li>
+        <li>Página e tabela não concordam sobre a dose (1 ou 2 cápsulas)</li>
+        <li>Garantia de 30 dias na página, 7 dias no cadastro da plataforma</li>
+        <li>Depoimentos sem como conferir, com fotos que parecem de banco de imagens</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>Como produto, é um bom magnésio: dose clara, forma bem absorvida e preço justo. O que não vale é a promessa. Magnésio não trata ansiedade, depressão nem arritmia, e dor no peito é motivo para procurar um médico na hora, não para tomar suplemento. Se você precisa de magnésio, especialmente se come pouco feijão, castanhas e verduras, ele cumpre o papel.</p>
+  </div>
+
+  <BuyBox compact produto="Magnésio Dimalato Nature's Prime" href={p.link} title="Magnésio Dimalato no site oficial" text="A partir de R$ 84,90 o pote de 60 cápsulas." cta="Ver kits e preços" />
+</Article>

@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
-import { site, guides, comparePages, ingredientGuides } from '../data/site';
+import { site, guides, comparePages, ingredientGuides, categories } from '../data/site';
+import CategoryIcon from '../components/CategoryIcon.astro';
 
 const schema = [{
   '@context': 'https://schema.org',
@@ -27,6 +28,13 @@ const descs: Record<string, string> = {
     <span class="pill">Guias sobre produtos naturais</span>
     <h1>Antes de comprar um suplemento, leia a ficha.</h1>
     <p>Explicamos o que tem em cada produto, o que os estudos mostram de verdade, como usar e quem deve evitar. Sem promessa milagrosa.</p>
+  </section>
+
+  <section class="wrap" aria-label="Categorias">
+    <div class="cat-chips">
+      {categories.map((c) => <a class="cat-chip" href={`/categoria/${c.slug}/`} style={`--cat:${c.color}`}><CategoryIcon name={c.icon} size={18} />{c.name}</a>)}
+      <a class="cat-chip" href="/marca/natures-prime/" style="--cat:#24513d"><CategoryIcon name="tag" size={18} />Nature's Prime</a>
+    </div>
   </section>
 
   <section class="section wrap" aria-labelledby="fichas">

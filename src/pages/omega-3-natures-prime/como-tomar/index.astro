@@ -1,0 +1,58 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import TopCta from '../../../components/TopCta.astro';
+import { npomega as p, npomegaPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Qual o melhor horário para tomar ômega 3?', a: 'Junto de uma refeição com gordura, como almoço ou jantar. A absorção é melhor e diminui o gosto de peixe na boca.' },
+  { q: 'Posso tomar as 3 cápsulas de uma vez?', a: 'Pode. Se der refluxo ou gosto de peixe, divida entre almoço e jantar.' },
+  { q: 'Ômega 3 pode ser tomado com anticoagulante?', a: 'Fale com o médico antes. Em doses altas, o ômega 3 pode aumentar o risco de sangramento junto com varfarina, clopidogrel ou AAS.' },
+];
+---
+<Article
+  ogImage="/img/omega-3-natures-prime/og-omega-3-natures-prime.jpg"
+  title="Como tomar ômega 3: dose, horário, efeitos colaterais e cuidados"
+  seoTitle="Como tomar Ômega 3 Nature's Prime"
+  description="Como tomar o Ômega 3 Nature's Prime: 3 cápsulas por dia, melhor horário, como evitar o gosto de peixe, interações com anticoagulantes e quem deve evitar."
+  kicker="Modo de uso"
+  lead="Três cápsulas por dia, com uma refeição. O cuidado principal é com quem usa anticoagulante."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }, { name: 'Ômega 3', href: '/omega-3-natures-prime/' }, { name: 'Como tomar', href: '/omega-3-natures-prime/como-tomar/' }]}
+  faq={faq}
+  related={npomegaPages}
+  sources={[
+    { label: 'NIH Office of Dietary Supplements: Omega-3 fatty acids, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/' },
+    { label: "Páginas oficiais do Ômega 3 (consultadas em 23/10/2026)", url: 'https://naturesprime.ind.br/omega3-240caps1/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>3 cápsulas por dia, junto do almoço ou jantar. O pote de 120 dura 40 dias e o de 240, 80 dias. Quem toma anticoagulante, tem alergia a peixe ou vai fazer cirurgia deve falar com o médico antes.</p>
+  </div>
+
+  <TopCta produto="Ômega 3 Nature's Prime" href={p.link240} />
+
+  <h2>Dose e horário</h2>
+  <ol>
+    <li>Tome 3 cápsulas por dia, com uma refeição que tenha alguma gordura.</li>
+    <li>Se tiver refluxo ou arroto com gosto de peixe, divida as cápsulas entre duas refeições.</li>
+    <li>Guarde o pote fechado, longe do calor e da luz, para o óleo não oxidar. Cápsula com cheiro forte de ranço deve ir para o lixo.</li>
+  </ol>
+
+  <h2>Efeitos colaterais comuns</h2>
+  <ul>
+    <li>Gosto de peixe, arroto e azia.</li>
+    <li>Náusea e intestino solto, principalmente no começo.</li>
+    <li>Em doses altas, pequeno aumento do risco de fibrilação atrial.</li>
+  </ul>
+
+  <h2>Quem deve falar com o médico antes</h2>
+  <ul>
+    <li>Quem toma anticoagulante ou antiagregante (varfarina, clopidogrel, AAS).</li>
+    <li>Quem vai fazer cirurgia.</li>
+    <li>Quem tem alergia a peixe.</li>
+    <li>Quem tem arritmia, principalmente fibrilação atrial.</li>
+    <li>Gestantes e lactantes (o DHA é recomendado na gestação, mas a dose deve ser orientada).</li>
+  </ul>
+
+  <BuyBox compact produto="Ômega 3 Nature's Prime" href={p.link240} title="Ômega 3 no site oficial" text="Pote de 240 cápsulas (80 dias) a partir de R$ 169,90." cta="Ver kits e preços" />
+</Article>

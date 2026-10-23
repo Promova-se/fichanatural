@@ -1,0 +1,45 @@
+---
+import Article from '../../../layouts/Article.astro';
+import KitCards from '../../../components/KitCards.astro';
+import { npq10 as p, npq10Pages, natures } from '../../../data/site';
+
+const faq = [
+  { q: "Onde comprar Coenzima Q10 Nature's Prime original?", a: 'No site oficial do fabricante, com pagamento pela Monetizze. A marca diz que vende em farmácias selecionadas e não recomenda o Mercado Livre.' },
+  { q: 'Vale a pena o kit de 2 potes?', a: 'Se você pretende tomar por 4 meses, sim: sai a R$ 1,71 por dia, contra R$ 2,25 do pote avulso. Para testar, um pote já dá 2 meses.' },
+];
+---
+<Article
+  ogImage="/img/coenzima-q10-natures-prime/og-coenzima-q10-natures-prime.jpg"
+  title="Onde comprar Coenzima Q10 Nature's Prime: preço, kits e custo por dia"
+  seoTitle="Onde comprar Coenzima Q10 Nature's Prime"
+  description="Onde comprar a Coenzima Q10 Nature's Prime: preço de 1 e 2 potes, custo por dia, parcelamento, garantia e atendimento."
+  kicker="Compra segura"
+  lead="A Coenzima Q10 da Nature's Prime é vendida no site oficial, com pagamento pela Monetizze. Um pote dura 2 meses."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }, { name: 'Coenzima Q10', href: '/coenzima-q10-natures-prime/' }, { name: 'Onde comprar', href: '/coenzima-q10-natures-prime/onde-comprar/' }]}
+  faq={faq}
+  related={[...npq10Pages, { href: '/marca/natures-prime/', title: "Nature's Prime é confiável? A marca e todos os produtos" }]}
+  sources={[
+    { label: "Página oficial da Coenzima Q10 e checkouts da Monetizze (consultados em 23/10/2026)", url: 'https://naturesprime.ind.br/coenzimaq102/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>No site oficial: R$ 134,90 por 1 pote (60 dias) ou R$ 204,90 por 2 potes (120 dias), que dá de R$ 1,71 a R$ 2,25 por dia. Parcelamento em até 12x com juros.</p>
+  </div>
+
+  <h2>Escolha o kit</h2>
+  <KitCards kits={p.kits} unit="mês" produto="Coenzima Q10 Nature's Prime" />
+
+  <h2>Custo por dia</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Kit</th><th>Preço</th><th>Dias</th><th>Por dia</th></tr></thead>
+      <tbody>
+        <tr><td>1 pote</td><td>R$ 134,90</td><td>60</td><td>R$ 2,25</td></tr>
+        <tr><td>2 potes</td><td>R$ 204,90</td><td>120</td><td>R$ 1,71</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Garantia e atendimento</h2>
+  <p>A página de vendas oferece 30 dias para pedir o dinheiro de volta; o cadastro do produto na Monetizze indica 7 dias. Pelo Código de Defesa do Consumidor, você pode desistir em até 7 dias após receber. Atendimento: {natures.sac} e {natures.phone}.</p>
+</Article>

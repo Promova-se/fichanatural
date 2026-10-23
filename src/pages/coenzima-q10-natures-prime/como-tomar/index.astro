@@ -1,0 +1,53 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import TopCta from '../../../components/TopCta.astro';
+import { npq10 as p, npq10Pages } from '../../../data/site';
+
+const faq = [
+  { q: 'Qual o melhor horário para tomar coenzima Q10?', a: 'Com uma refeição que tenha gordura, de preferência no almoço. Há relatos de insônia quando tomada à noite em doses maiores.' },
+  { q: 'Posso tomar Q10 com estatina?', a: 'Sim, não há interação perigosa entre as duas. Mas avise o médico e não pare a estatina por conta própria.' },
+  { q: 'Coenzima Q10 interage com varfarina?', a: 'Sim. A Q10 tem estrutura parecida com a da vitamina K e pode reduzir o efeito da varfarina. Quem usa esse anticoagulante só deve tomar com acompanhamento médico.' },
+];
+---
+<Article
+  ogImage="/img/coenzima-q10-natures-prime/og-coenzima-q10-natures-prime.jpg"
+  title="Como tomar coenzima Q10: dose, horário, interações e cuidados"
+  seoTitle="Como tomar Coenzima Q10 Nature's Prime"
+  description="Como tomar a Coenzima Q10 Nature's Prime: 1 cápsula de 100 mg por dia, melhor horário, efeitos colaterais, interação com varfarina e remédios de pressão."
+  kicker="Modo de uso"
+  lead="Uma cápsula por dia, com uma refeição. A interação que importa é com a varfarina."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }, { name: 'Coenzima Q10', href: '/coenzima-q10-natures-prime/' }, { name: 'Como tomar', href: '/coenzima-q10-natures-prime/como-tomar/' }]}
+  faq={faq}
+  related={npq10Pages}
+  sources={[
+    { label: 'NCCIH (NIH): Coenzyme Q10', url: 'https://www.nccih.nih.gov/health/coenzyme-q10' },
+    { label: "Página oficial da Coenzima Q10 (consultada em 23/10/2026)", url: 'https://naturesprime.ind.br/coenzimaq102/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>1 cápsula de 100 mg por dia, junto de uma refeição com gordura. Avalie depois de 2 a 3 meses. Quem toma varfarina ou remédio para pressão, gestantes e lactantes devem falar com o médico antes.</p>
+  </div>
+
+  <TopCta produto="Coenzima Q10 Nature's Prime" href={p.link} />
+
+  <h2>Dose e horário</h2>
+  <ol>
+    <li>Tome 1 cápsula por dia, com almoço ou outra refeição que tenha gordura.</li>
+    <li>Prefira o período do dia: algumas pessoas relatam dificuldade para dormir quando tomam à noite.</li>
+    <li>Use por 2 a 3 meses antes de avaliar. Um pote dura 60 dias.</li>
+  </ol>
+
+  <h2>Efeitos colaterais</h2>
+  <p>A Q10 costuma ser bem tolerada. Os efeitos mais relatados são enjoo, desconforto no estômago, diarreia e, às vezes, insônia.</p>
+
+  <h2>Interações e quem deve falar com o médico</h2>
+  <ul>
+    <li><strong>Varfarina:</strong> a Q10 pode reduzir o efeito do anticoagulante.</li>
+    <li><strong>Remédios de pressão e insulina:</strong> a Q10 pode baixar um pouco a pressão e a glicose; vale acompanhar.</li>
+    <li><strong>Quimioterapia:</strong> antioxidantes podem interferir em alguns tratamentos; fale com o oncologista.</li>
+    <li>Gestantes, lactantes e crianças: não há estudos de segurança suficientes.</li>
+  </ul>
+
+  <BuyBox compact produto="Coenzima Q10 Nature's Prime" href={p.link} title="Coenzima Q10 no site oficial" text="Pote de 60 cápsulas para 60 dias, a partir de R$ 134,90." cta="Ver kits e preços" />
+</Article>

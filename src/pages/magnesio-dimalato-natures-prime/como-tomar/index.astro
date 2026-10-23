@@ -1,0 +1,61 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import TopCta from '../../../components/TopCta.astro';
+import { npmag as p, npmagPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Qual o melhor horário para tomar magnésio dimalato?', a: 'Não há horário comprovadamente melhor. Tomar com uma refeição reduz desconforto no estômago. Se a ideia é o sono, muita gente prefere à noite.' },
+  { q: 'Posso tomar magnésio dimalato com outros suplementos?', a: 'Sim, mas some o magnésio de todos. O limite para magnésio de suplementos é de 350 mg por dia; 2 cápsulas deste produto já têm 260 mg.' },
+  { q: 'Magnésio dimalato dá diarreia?', a: 'É menos comum que com óxido ou citrato, mas pode acontecer em doses maiores. Se acontecer, use 1 cápsula ou divida ao longo do dia.' },
+];
+---
+<Article
+  ogImage="/img/magnesio-dimalato-natures-prime/og-magnesio-dimalato-natures-prime.jpg"
+  title="Como tomar magnésio dimalato: 1 ou 2 cápsulas, horário e cuidados"
+  seoTitle="Como tomar Magnésio Dimalato Nature's Prime"
+  description="Como tomar o Magnésio Dimalato Nature's Prime: 1 ou 2 cápsulas por dia, melhor horário, intervalo com antibióticos e remédios, efeitos colaterais e quem deve evitar."
+  kicker="Modo de uso"
+  lead="A página de vendas fala em 1 cápsula por dia, e a tabela nutricional em 2. Explicamos a diferença e os cuidados com remédios."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }, { name: 'Magnésio Dimalato', href: '/magnesio-dimalato-natures-prime/' }, { name: 'Como tomar', href: '/magnesio-dimalato-natures-prime/como-tomar/' }]}
+  faq={faq}
+  related={[...npmagPages, { href: '/magnesio/', title: 'Magnésio: qual o melhor tipo, para que serve e quanto tomar' }]}
+  sources={[
+    { label: "Página oficial e tabela nutricional do Magnésio Dimalato (consultadas em 23/10/2026)", url: 'https://loja.naturesprime.com.br/saude-e-bem-estar/magnesio-dimalato-60-capsulas' },
+    { label: 'NIH Office of Dietary Supplements: Magnesium, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>1 ou 2 cápsulas por dia, com uma refeição. Com 1 cápsula você toma cerca de 130 mg de magnésio; com 2, 260 mg, a porção da tabela nutricional. Separe por pelo menos 2 horas de antibióticos e de remédios para osteoporose e tireoide. Quem tem doença nos rins só deve tomar com orientação médica.</p>
+  </div>
+
+  <TopCta produto="Magnésio Dimalato Nature's Prime" href={p.link} />
+
+  <h2>1 ou 2 cápsulas?</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Dose</th><th>Magnésio</th><th>Pote dura</th><th>Para quem</th></tr></thead>
+      <tbody>
+        <tr><td>1 cápsula</td><td>Cerca de 130 mg</td><td>60 dias</td><td>Quem já come bem e quer um complemento</td></tr>
+        <tr><td>2 cápsulas</td><td>260 mg</td><td>30 dias</td><td>Quem come pouco feijão, castanhas e verduras</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Adultos precisam de 310 a 420 mg de magnésio por dia, somando comida e suplemento.</p>
+
+  <h2>Intervalo com remédios</h2>
+  <ul>
+    <li><strong>Antibióticos</strong> (ciprofloxacino, levofloxacino, tetraciclinas): tome o antibiótico 2 horas antes ou 4 a 6 horas depois.</li>
+    <li><strong>Remédios para osteoporose</strong> (alendronato e similares): pelo menos 2 horas de diferença.</li>
+    <li><strong>Levotiroxina:</strong> pelo menos 4 horas de diferença.</li>
+  </ul>
+
+  <h2>Quem deve evitar ou falar com o médico antes</h2>
+  <ul>
+    <li>Quem tem doença nos rins.</li>
+    <li>Gestantes e lactantes (orientação do fabricante).</li>
+    <li>Quem usa remédios contínuos.</li>
+  </ul>
+
+  <BuyBox compact produto="Magnésio Dimalato Nature's Prime" href={p.link} title="Magnésio Dimalato no site oficial" text="A partir de R$ 84,90 o pote de 60 cápsulas." cta="Ver kits e preços" />
+</Article>

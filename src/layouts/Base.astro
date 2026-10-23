@@ -1,5 +1,6 @@
 ---
-import { site, catalog } from '../data/site';
+import { site, catalog, categories, brands } from '../data/site';
+import CategoryIcon from '../components/CategoryIcon.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -22,6 +23,7 @@ const org = {
 };
 const path = Astro.url.pathname;
 const isProduct = path.startsWith('/produtos') || catalog.some((c) => path.startsWith(c.href));
+const isCat = path.startsWith('/categoria') || path.startsWith('/marca');
 const isGuide = !isProduct && ['/guias', '/laranja-moro', '/psyllium', '/resveratrol', '/ozenvitta-ou-reduphine'].some((g) => path.startsWith(g));
 ---
 <!doctype html>
@@ -81,13 +83,119 @@ const isGuide = !isProduct && ['/guias', '/laranja-moro', '/psyllium', '/resvera
         <span class="logo-mark" aria-hidden="true"></span>
         <span>Ficha<strong>Natural</strong></span>
       </a>
-      <nav aria-label="Principal">
+      <nav class="nav-main" aria-label="Principal">
+        <div class="cat-menu" data-catmenu>
+          <button type="button" class="cat-toggle" aria-expanded="false" aria-controls="cat-panel" aria-current={isCat ? 'page' : undefined}>
+            Categorias
+            <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="cat-panel" id="cat-panel">
+            <div class="cat-panel-grid">
+              {categories.map((c) => (
+                <a class="cat-link" href={`/categoria/${c.slug}/`} style={`--cat:${c.color}`} aria-current={path.startsWith(`/categoria/${c.slug}/`) ? 'page' : undefined}>
+                  <span class="cat-badge"><CategoryIcon name={c.icon} size={20} /></span>
+                  <span><strong>{c.name}</strong><span class="cat-count">{c.products.length} {c.products.length === 1 ? 'produto' : 'produtos'}</span></span>
+                </a>
+              ))}
+            </div>
+            <div class="cat-panel-foot">
+              <span class="cat-foot-label">Marca</span>
+              {brands.map((b) => <a href={b.href}>{b.name}</a>)}
+              <a class="cat-all" href="/categoria/">Todas as categorias →</a>
+            </div>
+          </div>
+        </div>
         <a href="/produtos/" aria-current={isProduct ? 'page' : undefined}>Produtos</a>
         <a href="/guias/" aria-current={isGuide ? 'page' : undefined}>Guias</a>
         <a href="/sobre/" aria-current={path.startsWith('/sobre') ? 'page' : undefined}>Sobre</a>
       </nav>
+      <button type="button" class="menu-btn" aria-expanded="false" aria-controls="drawer" data-drawer-open>
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span>Menu</span>
+      </button>
     </div>
   </header>
+  <div class="drawer-overlay" data-drawer-close></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-head">
+      <span class="logo"><span class="logo-mark" aria-hidden="true"></span><span>Ficha<strong>Natural</strong></span></span>
+      <button type="button" class="drawer-close" data-drawer-close aria-label="Fechar menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <p class="drawer-label">Categorias</p>
+    <ul class="drawer-cats">
+      {categories.map((c) => (
+        <li><a href={`/categoria/${c.slug}/`} style={`--cat:${c.color}`} aria-current={path.startsWith(`/categoria/${c.slug}/`) ? 'page' : undefined}>
+          <span class="cat-badge"><CategoryIcon name={c.icon} size={18} /></span>
+          <span class="drawer-cat-name">{c.name}</span>
+          <span class="cat-count">{c.products.length}</span>
+        </a></li>
+      ))}
+    </ul>
+    <p class="drawer-label">Marcas</p>
+    <ul class="drawer-cats">
+      {brands.map((b) => (
+        <li><a href={b.href} style="--cat:#24513d"><span class="cat-badge"><CategoryIcon name="tag" size={18} /></span><span class="drawer-cat-name">{b.name}</span></a></li>
+      ))}
+    </ul>
+    <ul class="drawer-links">
+      <li><a href="/produtos/">Todas as fichas</a></li>
+      <li><a href="/guias/">Guias</a></li>
+      <li><a href="/sobre/">Sobre e política editorial</a></li>
+    </ul>
+  </aside>
+  <script is:inline>
+  (function () {
+    // Menu de categorias (desktop)
+    var menu = document.querySelector('[data-catmenu]');
+    if (menu) {
+      var btn = menu.querySelector('.cat-toggle');
+      var t;
+      var set = function (open) { menu.classList.toggle('open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); };
+      var hoverAt = 0;
+      btn.addEventListener('click', function () {
+        if (Date.now() - hoverAt < 400) return; // acabou de abrir pelo mouse; o clique não deve fechar
+        set(!menu.classList.contains('open'));
+      });
+      if (window.matchMedia('(hover: hover)').matches) {
+        menu.addEventListener('mouseenter', function () { clearTimeout(t); if (!menu.classList.contains('open')) hoverAt = Date.now(); set(true); });
+        menu.addEventListener('mouseleave', function () { t = setTimeout(function () { set(false); }, 180); });
+      }
+      document.addEventListener('click', function (e) { if (!menu.contains(e.target)) set(false); });
+      menu.addEventListener('keydown', function (e) { if (e.key === 'Escape') { set(false); btn.focus(); } });
+      menu.addEventListener('focusout', function (e) { if (!menu.contains(e.relatedTarget)) set(false); });
+    }
+    // Gaveta lateral (mobile)
+    var drawer = document.getElementById('drawer');
+    var opener = document.querySelector('[data-drawer-open]');
+    if (!drawer || !opener) return;
+    var focusables = function () { return drawer.querySelectorAll('a[href], button'); };
+    var open = function () {
+      document.documentElement.classList.add('drawer-on');
+      opener.setAttribute('aria-expanded', 'true');
+      setTimeout(function () { drawer.querySelector('.drawer-close').focus(); }, 50);
+    };
+    var close = function () {
+      if (!document.documentElement.classList.contains('drawer-on')) return;
+      document.documentElement.classList.remove('drawer-on');
+      opener.setAttribute('aria-expanded', 'false');
+      opener.focus();
+    };
+    opener.addEventListener('click', open);
+    document.querySelectorAll('[data-drawer-close]').forEach(function (el) { el.addEventListener('click', close); });
+    document.addEventListener('keydown', function (e) {
+      if (!document.documentElement.classList.contains('drawer-on')) return;
+      if (e.key === 'Escape') { close(); return; }
+      if (e.key === 'Tab') {
+        var f = focusables(); var first = f[0]; var last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+    window.matchMedia('(min-width: 721px)').addEventListener('change', function (m) { if (m.matches) close(); });
+  })();
+  </script>
   <main id="conteudo">
     <slot />
   </main>
@@ -106,7 +214,12 @@ const isGuide = !isProduct && ['/guias', '/laranja-moro', '/psyllium', '/resvera
         </ul>
       </div>
       <div>
-        <p class="footer-title">Guias</p>
+        <p class="footer-title">Categorias</p>
+        <ul>
+          {categories.map((c) => <li><a href={`/categoria/${c.slug}/`}>{c.name}</a></li>)}
+          {brands.map((b) => <li><a href={b.href}>{b.name}</a></li>)}
+        </ul>
+        <p class="footer-title footer-title-2">Guias</p>
         <ul>
           <li><a href="/ozenvitta-ou-reduphine/">OzenVitta ou ReduPhine</a></li>
           <li><a href="/laranja-moro/">Laranja moro</a></li>

@@ -1,0 +1,81 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import TopCta from '../../components/TopCta.astro';
+import { npq10 as p, npq10Pages, natures } from '../../data/site';
+
+const faq = [
+  { q: "Quanto de Q10 tem a Coenzima Q10 Nature's Prime?", a: 'Cada cápsula tem 100 mg de coenzima Q10, segundo a página e a tabela do produto. O pote tem 60 cápsulas.' },
+  { q: 'Quantas cápsulas por dia?', a: 'O fabricante orienta 1 cápsula por dia, com uma refeição. Assim, o pote dura 60 dias.' },
+  { q: "Quanto custa a Coenzima Q10 Nature's Prime?", a: 'Nos checkouts de 23/10/2026: 1 pote por R$ 134,90 e 2 potes por R$ 204,90. Dá de R$ 1,71 a R$ 2,25 por dia.' },
+];
+---
+<Article
+  ogImage="/img/coenzima-q10-natures-prime/og-coenzima-q10-natures-prime.jpg"
+  title="Coenzima Q10 Nature's Prime: ficha completa, dose, preço e o que esperar"
+  seoTitle="Coenzima Q10 Nature's Prime: dose e preço"
+  description="Ficha da Coenzima Q10 Nature's Prime: 100 mg por cápsula, preço de 1 e 2 potes, custo por dia, promessas da página e o que a ciência mostra sobre energia, coração e estatinas."
+  kicker="Ficha de produto"
+  lead="Uma cápsula de 100 mg de coenzima Q10 por dia, dose dentro do que os estudos usam e pote para 2 meses. As promessas de energia e de retardar o envelhecimento não têm boa base."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }, { name: 'Coenzima Q10', href: '/coenzima-q10-natures-prime/' }]}
+  faq={faq}
+  related={[...npq10Pages, { href: '/marca/natures-prime/', title: "Nature's Prime é confiável? A marca e todos os produtos" }]}
+  sources={[
+    { label: "Página oficial da Coenzima Q10 e checkouts da Monetizze (consultados em 23/10/2026)", url: 'https://naturesprime.ind.br/coenzimaq102/' },
+    { label: 'NCCIH (NIH): Coenzyme Q10', url: 'https://www.nccih.nih.gov/health/coenzyme-q10' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>100 mg de coenzima Q10 por cápsula, 1 por dia, pote de 60 dias. Fabricante com CNPJ e sem reclamações no Reclame Aqui. Custa de R$ 1,71 a R$ 2,25 por dia. A Q10 tem evidência modesta como complemento na insuficiência cardíaca e resultado misto para dor muscular de quem toma estatina; para energia e envelhecimento em pessoas saudáveis, não há boa evidência. Interage com varfarina.</p>
+  </div>
+
+  <TopCta produto="Coenzima Q10 Nature's Prime" href={p.link} />
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>Coenzima Q10 100 mg, 60 cápsulas, Nature's Prime</td></tr>
+        <tr><th>Fabricante</th><td>{natures.maker}, CNPJ {natures.cnpj}</td></tr>
+        <tr><th>Dose</th><td>1 cápsula (100 mg) por dia, com uma refeição</td></tr>
+        <tr><th>Duração do pote</th><td>60 dias</td></tr>
+        <tr><th>Atendimento</th><td>{natures.sac} e {natures.phone}</td></tr>
+        <tr><th>Garantia</th><td>30 dias na página de vendas; 7 dias no cadastro da Monetizze</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>A página não informa se a Q10 é na forma ubiquinona ou ubiquinol. A ubiquinona é a forma usada na maioria dos estudos e a mais comum. Ela é absorvida melhor com comida que tenha gordura.</p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores conferidos nos checkouts em 23/10/2026. Parcelamento em até 12x com juros.</p>
+  <KitCards kits={p.kits} unit="mês" produto="Coenzima Q10 Nature's Prime" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>100 mg por cápsula, dose usada em muitos estudos</li>
+        <li>1 cápsula por dia, pote para 2 meses</li>
+        <li>Fabricante com CNPJ e sem reclamações no Reclame Aqui</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Promessas de energia e de retardar o envelhecimento sem boa base</li>
+        <li>Não informa se é ubiquinona ou ubiquinol</li>
+        <li>Pode reduzir o efeito da varfarina</li>
+        <li>Garantia de 30 dias na página, 7 dias no cadastro da plataforma</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>É uma Q10 simples, com dose informada e preço na média do mercado. Faz mais sentido para quem tem insuficiência cardíaca e quer um complemento ao tratamento, sempre com o cardiologista, ou para quem toma estatina, sente dor muscular e quer testar por alguns meses, sabendo que os estudos são divididos. Para "mais energia" em quem é saudável, provavelmente você não vai sentir diferença.</p>
+  </div>
+
+  <BuyBox compact produto="Coenzima Q10 Nature's Prime" href={p.link} title="Coenzima Q10 no site oficial" text="A partir de R$ 134,90 o pote de 60 cápsulas (60 dias)." cta="Ver kits e preços" />
+</Article>

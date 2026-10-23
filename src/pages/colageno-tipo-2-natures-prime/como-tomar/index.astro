@@ -1,0 +1,58 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import TopCta from '../../../components/TopCta.astro';
+import { npcol2 as p, npcol2Pages } from '../../../data/site';
+
+const faq = [
+  { q: 'Qual o melhor horário para tomar colágeno tipo 2?', a: 'O fabricante orienta 1 cápsula com a primeira refeição. Alguns estudos usaram a cápsula antes de dormir, longe das refeições, mas não há comparação mostrando diferença.' },
+  { q: 'Posso tomar colágeno tipo 2 com colágeno hidrolisado?', a: 'Sim. São produtos diferentes: o tipo II não desnaturado é para articulações; o hidrolisado, para pele, unhas e cabelo.' },
+  { q: 'Quanto tempo leva para fazer efeito?', a: 'Nos estudos, a diferença para o placebo apareceu depois de 3 meses e ficou mais clara em 6 meses.' },
+];
+---
+<Article
+  ogImage="/img/colageno-tipo-2-natures-prime/og-colageno-tipo-2-natures-prime.jpg"
+  title="Como tomar colágeno tipo 2: dose, horário, tempo de uso e cuidados"
+  seoTitle="Como tomar Colágeno Tipo II Nature's Prime"
+  description="Como tomar o Colágeno Tipo II Nature's Prime: 1 cápsula por dia, horário, quanto tempo leva, cuidados com vitamina D e anticoagulantes."
+  kicker="Modo de uso"
+  lead="Uma cápsula por dia, com a primeira refeição. Os cuidados principais vêm das vitaminas D e K da fórmula."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }, { name: 'Colágeno Tipo II', href: '/colageno-tipo-2-natures-prime/' }, { name: 'Como tomar', href: '/colageno-tipo-2-natures-prime/como-tomar/' }]}
+  faq={faq}
+  related={[...npcol2Pages, { href: '/colageno/', title: 'Qual o melhor colágeno? Tipos, doses e como escolher' }]}
+  sources={[
+    { label: "Página oficial e tabela nutricional do Colágeno Tipo II (consultadas em 23/10/2026)", url: 'https://loja.naturesprime.com.br/ossos-e-articulacoes/colageno-tipo-ii' },
+    { label: 'NIH Office of Dietary Supplements: Vitamin D, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/' },
+    { label: 'NIH Office of Dietary Supplements: Vitamin K, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/VitaminK-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>1 cápsula por dia, com a primeira refeição. Use por pelo menos 3 meses antes de avaliar. Quem toma anticoagulante (como varfarina) deve falar com o médico antes, por causa da vitamina K, e quem já toma vitamina D precisa somar as doses: cada cápsula tem 2.000 UI.</p>
+  </div>
+
+  <TopCta produto="Colágeno Tipo II Nature's Prime" href={p.link} />
+
+  <h2>Dose e tempo de uso</h2>
+  <ol>
+    <li>Tome 1 cápsula por dia, com a primeira refeição, inteira, com água.</li>
+    <li>Não aumente a dose: o colágeno tipo II age em miligramas, e mais cápsulas só aumentam a vitamina D.</li>
+    <li>Avalie depois de 3 a 6 meses. Um pote dura 60 dias.</li>
+  </ol>
+
+  <h2>Cuidados com as vitaminas da fórmula</h2>
+  <ul>
+    <li><strong>Vitamina D (2.000 UI por cápsula):</strong> o limite para adultos é de 4.000 UI por dia somando tudo. Se você já toma vitamina D, fale com o médico.</li>
+    <li><strong>Vitamina K:</strong> pode reduzir o efeito da varfarina e de anticoagulantes parecidos.</li>
+    <li><strong>Magnésio (90 mg):</strong> conte com ele se usar outro suplemento de magnésio.</li>
+  </ul>
+
+  <h2>Quem deve falar com o médico antes</h2>
+  <ul>
+    <li>Gestantes, lactantes e quem tem doença crônica (orientação do fabricante).</li>
+    <li>Quem toma anticoagulante.</li>
+    <li>Quem tem cálcio alto no sangue, cálculo renal ou doença nos rins.</li>
+    <li>Quem tem alergia a frango ou ovo: o colágeno tipo II costuma vir de cartilagem de frango, e o rótulo não informa a origem.</li>
+  </ul>
+
+  <BuyBox compact produto="Colágeno Tipo II Nature's Prime" href={p.link} title="Colágeno Tipo II no site oficial" text="Pote de 60 cápsulas para 60 dias, a partir de R$ 144,90." cta="Ver kits e preços" />
+</Article>

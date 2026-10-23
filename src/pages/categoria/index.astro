@@ -1,0 +1,37 @@
+---
+import Base from '../../layouts/Base.astro';
+import CategoryIcon from '../../components/CategoryIcon.astro';
+import { site, categories, brands } from '../../data/site';
+
+const schema = [{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Categorias', url: `${site.url}/categoria/`, inLanguage: 'pt-BR',
+  hasPart: categories.map((c) => ({ '@type': 'WebPage', name: c.name, url: `${site.url}/categoria/${c.slug}/` })) }];
+---
+<Base title="Categorias de suplementos" description="Navegue pelas fichas do Ficha Natural por categoria: emagrecimento, pele e cabelo, articulações, vitaminas e minerais, treino, saúde masculina e da mulher." schema={schema}>
+  <section class="hero wrap">
+    <span class="pill">Categorias</span>
+    <h1>Encontre a ficha pelo que você procura</h1>
+    <p>Escolha uma categoria para ver os produtos que analisamos e os guias para comparar.</p>
+  </section>
+  <section class="section wrap">
+    <div class="cat-grid">
+      {categories.map((c) => (
+        <a class="cat-tile" href={`/categoria/${c.slug}/`} style={`--cat:${c.color}`}>
+          <span class="cat-badge"><CategoryIcon name={c.icon} /></span>
+          <strong>{c.name}</strong>
+          <span class="small">{c.products.length} {c.products.length === 1 ? 'produto' : 'produtos'}</span>
+          <p>{c.desc}</p>
+        </a>
+      ))}
+    </div>
+    <h2>Por marca</h2>
+    <div class="cat-grid">
+      {brands.map((b) => (
+        <a class="cat-tile" href={b.href} style="--cat:#24513d">
+          <span class="cat-badge"><CategoryIcon name="tag" /></span>
+          <strong>{b.name}</strong>
+          <p>{b.desc}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</Base>
