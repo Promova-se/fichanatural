@@ -455,10 +455,15 @@ export const reduphinePages = [
 // Comparações e guias de ingredientes (fora dos produtos).
 export const comparePages = [
   { href: '/ozenvitta-ou-reduphine/', title: 'OzenVitta ou ReduPhine: qual escolher? Comparação completa', short: 'OzenVitta ou ReduPhine?' },
+  { href: '/melhor-colageno-tipo-2/', title: "Melhor colágeno tipo 2: Artic Protect, Nature's Prime ou Collagen Osteo?", short: 'Melhor colágeno tipo 2' },
+  { href: '/6-magnesios-ou-magnesio-dimalato/', title: "6 Magnésios ou Magnésio Dimalato Nature's Prime: qual escolher?", short: '6 Magnésios ou Dimalato?' },
+  { href: '/collagen-vitta-ou-colageno-natures-prime/', title: "Collagen Vitta ou Colágeno Nature's Prime: qual escolher?", short: "Collagen Vitta ou Nature's Prime?" },
 ];
 export const ingredientGuides = [
   { href: '/colageno/', title: 'Qual o melhor colágeno? Tipos, doses e como escolher', short: 'Qual colágeno escolher' },
   { href: '/magnesio/', title: 'Magnésio: qual o melhor tipo, para que serve e quanto tomar', short: 'Qual magnésio escolher' },
+  { href: '/omega-3/', title: 'Ômega 3: qual o melhor, quanto tomar e para que serve de verdade', short: 'Qual ômega 3 escolher' },
+  { href: '/creatina/', title: 'Creatina: como tomar, se engorda, se faz mal e qual escolher', short: 'Creatina: guia completo' },
   { href: '/menopausa/', title: 'Suplemento para menopausa funciona? O que ajuda de verdade nos calores', short: 'Menopausa: o que ajuda' },
   { href: '/psyllium/', title: 'Psyllium emagrece? O que é, como tomar e cuidados', short: 'Psyllium emagrece?' },
   { href: '/resveratrol/', title: 'Resveratrol: o que é, para que serve e o que a ciência diz', short: 'Resveratrol: o que é' },
@@ -761,19 +766,19 @@ export const categories = [
   { slug: 'pele-cabelo-e-unhas', name: 'Pele, cabelo e unhas', icon: 'drop', color: '#a0577a',
     desc: 'Colágenos, fórmulas para cabelo e kits capilares. Doses, tipos de colágeno e o que os estudos mostram para pele e queda de cabelo.',
     products: ['/colageno-natures-prime/', '/collagen-vitta/', '/vitta-resveratrol/', '/lizz-ante-nutri/', '/kit-sos-crescimento/', '/iarmonize/'],
-    guides: ['/colageno/', '/resveratrol/'] },
+    guides: ['/colageno/', '/collagen-vitta-ou-colageno-natures-prime/', '/resveratrol/'] },
   { slug: 'articulacoes-e-ossos', name: 'Articulações e ossos', icon: 'joint', color: '#3d6a8a',
     desc: 'Colágeno tipo II, vitamina D3, vitamina K e magnésio para articulações e ossos. O que ajuda na dor e o que é exagero.',
     products: ['/colageno-tipo-2-natures-prime/', '/artic-protect/', '/collagen-osteo/'],
-    guides: ['/colageno/'] },
+    guides: ['/melhor-colageno-tipo-2/', '/colageno/'] },
   { slug: 'vitaminas-e-minerais', name: 'Vitaminas e minerais', icon: 'capsule', color: '#24513d',
     desc: 'Magnésio, ômega 3 e coenzima Q10: qual forma escolher, quanto tomar e quando vale a pena suplementar.',
     products: ['/6-magnesios/', '/magnesio-dimalato-natures-prime/', '/omega-3-natures-prime/', '/coenzima-q10-natures-prime/'],
-    guides: ['/magnesio/'] },
+    guides: ['/magnesio/', '/6-magnesios-ou-magnesio-dimalato/', '/omega-3/'] },
   { slug: 'treino-e-energia', name: 'Treino e energia', icon: 'bolt', color: '#b07a12',
     desc: 'Creatina, maca e coenzima Q10. O que tem evidência para força e disposição, e o que é só promessa.',
     products: ['/creatina-natures-prime/', '/coenzima-q10-natures-prime/', '/maca-peruana-negra/'],
-    guides: [] },
+    guides: ['/creatina/'] },
   { slug: 'saude-masculina', name: 'Saúde masculina', icon: 'shield', color: '#4a4f8c',
     desc: 'Suplementos vendidos para desempenho e libido masculina. O que eles têm e os riscos de comprar sem saber.',
     products: ['/hot-men-caps/', '/maca-peruana-negra/'],
@@ -788,8 +793,13 @@ export const brands = [
   { slug: 'natures-prime', name: "Nature's Prime", href: '/marca/natures-prime/', desc: 'Indústria de Anápolis (GO), com 6 produtos analisados.' },
 ];
 
+const allGuidePages = () => [...comparePages, ...ingredientGuides, ...guides];
+const pick = (...hrefs: string[]) => hrefs.map((h) => allGuidePages().find((g) => g.href === h)!).filter(Boolean);
+// Guias organizados por tema na página /guias/.
 export const guideHubs = [
-  { name: 'Comparações', pages: comparePages },
-  { name: 'Ingredientes', pages: ingredientGuides },
-  { name: 'Laranja moro', pages: guides },
+  { name: 'Colágeno, pele e articulações', pages: pick('/colageno/', '/melhor-colageno-tipo-2/', '/collagen-vitta-ou-colageno-natures-prime/', '/resveratrol/') },
+  { name: 'Vitaminas, minerais e óleos', pages: pick('/magnesio/', '/6-magnesios-ou-magnesio-dimalato/', '/omega-3/') },
+  { name: 'Treino e energia', pages: pick('/creatina/') },
+  { name: 'Emagrecimento', pages: pick('/ozenvitta-ou-reduphine/', '/psyllium/', ...guides.map((g) => g.href)) },
+  { name: 'Saúde da mulher', pages: pick('/menopausa/') },
 ];

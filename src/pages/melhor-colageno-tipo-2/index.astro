@@ -1,0 +1,71 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import { npcol2, comparePages } from '../../data/site';
+
+const faq = [
+  { q: 'Qual o melhor colágeno tipo 2?', a: "Entre os que analisamos, o Colágeno Tipo II Nature's Prime: informa a dose de cada ingrediente, declara o colágeno como não desnaturado, tem fabricante sem reclamações e sai mais barato por dia. O Artic Protect tem a quantidade de colágeno dos estudos, mas não diz a forma nem as outras doses. O Collagen Osteo não informa dose nenhuma." },
+  { q: 'Colágeno tipo 2 ou colágeno hidrolisado para o joelho?', a: 'São coisas diferentes. O colágeno tipo 2 não desnaturado, em miligramas, tem estudos com alívio modesto da dor de artrose. O hidrolisado, em gramas, é mais estudado para pele; para articulações, a evidência é mais fraca.' },
+  { q: 'Colágeno tipo 2 em gotas funciona?', a: 'Não há estudos com colágeno tipo 2 em gotas. Os estudos usaram cápsulas com 40 mg de UC-II por dia. Como o Collagen Osteo não informa a quantidade, não dá para saber se chega perto.' },
+  { q: 'Quanto tempo o colágeno tipo 2 leva para fazer efeito?', a: 'Nos estudos, a diferença para o placebo apareceu a partir de 3 meses e ficou mais clara em 6 meses.' },
+];
+---
+<Article
+  ogImage="/img/melhor-colageno-tipo-2/og-melhor-colageno-tipo-2.jpg"
+  title="Melhor colágeno tipo 2: Artic Protect, Nature's Prime ou Collagen Osteo?"
+  seoTitle="Melhor colágeno tipo 2: comparação de 3 produtos"
+  description="Qual o melhor colágeno tipo 2? Comparamos Artic Protect, Colágeno Tipo II Nature's Prime e Collagen Osteo: dose, forma não desnaturada, preço por dia, promessas e reputação."
+  kicker="Comparação"
+  lead="Os três são vendidos para dor nas articulações. Um informa todas as doses, outro só a do colágeno, e o terceiro nenhuma. Veja lado a lado e qual faz mais sentido."
+  crumbs={[{ name: 'Guias', href: '/guias/' }, { name: 'Melhor colágeno tipo 2', href: '/melhor-colageno-tipo-2/' }]}
+  faq={faq}
+  related={[{ href: '/colageno-tipo-2-natures-prime/', title: "Colágeno Tipo II Nature's Prime: ficha completa" }, { href: '/artic-protect/', title: 'Artic Protect: ficha completa' }, { href: '/collagen-osteo/', title: 'Collagen Osteo: ficha completa' }, { href: '/colageno/', title: 'Qual o melhor colágeno? Tipos, doses e como escolher' }, ...comparePages]}
+  sources={[
+    { label: 'Lugo JP et al. Undenatured type II collagen in knee osteoarthritis. Nutr J, 2016', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4731911/' },
+    { label: "Páginas oficiais e checkouts dos três produtos (consultados entre 17 e 23/10/2026)", url: 'https://naturesprime.ind.br/colagenotipoii60caps1/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>O Colágeno Tipo II Nature's Prime é a escolha mais segura: informa todas as doses, declara o colágeno como não desnaturado (a forma dos estudos) e custa de R$ 1,71 a R$ 2,42 por dia. O Artic Protect tem 40 mg de colágeno tipo 2, a quantidade dos estudos, mas não diz a forma nem as doses de vitamina D e magnésio, e custa de R$ 3,17 a R$ 3,97 por dia. O Collagen Osteo, em gotas, não informa dose nenhuma e promete tratar osteoporose.</p>
+  </div>
+
+  <h2>Lado a lado</h2>
+  <p class="small">No celular, deslize a tabela para o lado.</p>
+  <div class="table-scroll">
+    <table class="data compare-table">
+      <thead><tr><th></th><th>Colágeno Tipo II Nature's Prime</th><th>Artic Protect</th><th>Collagen Osteo</th></tr></thead>
+      <tbody>
+        <tr><th>Forma</th><td>Cápsula, 1 por dia</td><td>Cápsula, 1 por dia</td><td>Gotas, 1 ml por dia</td></tr>
+        <tr><th>Colágeno tipo 2</th><td>4 mg, não desnaturado</td><td>40 mg, forma não informada</td><td>Não desnaturado, dose não informada</td></tr>
+        <tr><th>Outros ingredientes</th><td>Vitamina D3 2.000 UI, vitamina K 65 mcg, magnésio 90 mg</td><td>Vitamina D3 e magnésio, sem dose</td><td>Vitaminas D3 e K2, magnésio e curcumina, sem dose</td></tr>
+        <tr><th>Tabela nutricional</th><td>Sim</td><td>Não publicada</td><td>Não publicada</td></tr>
+        <tr><th>Duração do pote</th><td>60 dias</td><td>30 dias</td><td>Não informada</td></tr>
+        <tr><th>Preço</th><td>R$ 144,90 (1 pote) ou R$ 204,90 (2)</td><td>R$ 119 (1 pote) a R$ 570 (6)</td><td>R$ 157 (2 frascos) a R$ 297 (6)</td></tr>
+        <tr><th>Por dia</th><td>R$ 1,71 a R$ 2,42</td><td>R$ 3,17 a R$ 3,97</td><td>Não dá para calcular</td></tr>
+        <tr><th>Promessas</th><td>Moderadas: saúde articular e mobilidade</td><td>"Regenerar cartilagem", exagerada</td><td>"Tratar osteoporose" e alívio "em minutos"</td></tr>
+        <tr><th>Empresa</th><td>Natures Farma, CNPJ informado, sem reclamações</td><td>Up Sports Nutrition, vendida em grandes farmácias</td><td>Natturabio, CNPJ informado, não responde reclamações</td></tr>
+        <tr><th>Garantia</th><td>30 dias na página, 7 na Monetizze</td><td>Não informada (7 dias por lei)</td><td>Aparece como 90, 30 ou 7 dias; conte com 7</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>4 mg ou 40 mg: qual dose está certa?</h2>
+  <p>Parece que o Artic Protect tem dez vezes mais colágeno, mas a comparação engana. Os estudos usaram 40 mg de um ingrediente chamado UC-II, que contém cerca de 1,2 mg de colágeno tipo 2 não desnaturado; o resto é cartilagem de frango processada. Ou seja:</p>
+  <ul>
+    <li>Os <strong>40 mg do Artic Protect</strong> batem com a quantidade do ingrediente usado nos estudos, se for a forma não desnaturada. A página não diz.</li>
+    <li>Os <strong>4 mg do Nature's Prime</strong> parecem se referir ao colágeno não desnaturado em si, o que fica acima do 1,2 mg dos estudos. O rótulo não diz a matéria-prima, então é uma leitura provável, não certa.</li>
+  </ul>
+  <p>O ponto central é que o colágeno tipo 2 age em miligramas, por uma ação no sistema imune. Mais não é melhor, e a forma (não desnaturada) importa mais que o número.</p>
+
+  <h2>O que esperar de qualquer um deles</h2>
+  <p>No principal estudo, com cerca de 190 pessoas com artrose no joelho, o colágeno tipo 2 não desnaturado reduziu dor e rigidez um pouco mais que o placebo em 6 meses. É um efeito modesto. Nenhum estudo mostrou regeneração de cartilagem, e nenhum suplemento trata osteoporose. Quem tem dor persistente precisa de avaliação médica.</p>
+
+  <h2>Qual escolher</h2>
+  <ul>
+    <li><strong>Colágeno Tipo II Nature's Prime:</strong> para a maioria. Doses claras, mais barato por dia, pote para 2 meses. Atenção à vitamina D (2.000 UI) se já tomar outro suplemento, e à vitamina K se usar anticoagulante.</li>
+    <li><strong>Artic Protect:</strong> se prefere uma marca de farmácia e quer os 40 mg dos estudos, aceitando não saber a forma.</li>
+    <li><strong>Collagen Osteo:</strong> não recomendamos como primeira opção. Sem dose informada e com promessas de tratar doença, fica difícil saber o que se está comprando.</li>
+  </ul>
+
+  <BuyBox compact produto="Colágeno Tipo II Nature's Prime" href={npcol2.link} title="Colágeno Tipo II Nature's Prime no site oficial" text="1 cápsula por dia, pote de 60 dias a partir de R$ 144,90." cta="Ver kits e preços" />
+</Article>

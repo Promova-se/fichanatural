@@ -1,0 +1,66 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import { colageno, comparePages } from '../../data/site';
+
+const faq = [
+  { q: "Collagen Vitta ou Colágeno Nature's Prime: qual é melhor?", a: "O Colágeno Nature's Prime. Os dois usam Verisol, o colágeno com mais estudos para a pele, mas só o Nature's Prime informa a dose (2,5 g, a mesma dos estudos). Ele também sai mais barato por dia e vem de uma empresa sem reclamações." },
+  { q: 'Qual tem mais ingredientes?', a: 'O Collagen Vitta lista mais: colágeno tipo II, biotina, silício, vitaminas A, C, K2 e outros. Mas, sem as doses, não dá para saber se as quantidades fazem diferença. O Nature\'s Prime tem menos ingredientes, todos com dose informada.' },
+  { q: 'Colágeno para pele funciona?', a: 'Há estudos com melhora modesta de hidratação e elasticidade da pele depois de 2 a 3 meses com 2,5 g de Verisol por dia. Nenhum colágeno acaba com rugas, celulite ou flacidez.' },
+];
+---
+<Article
+  ogImage="/img/collagen-vitta-ou-colageno-natures-prime/og-collagen-vitta-ou-colageno-natures-prime.jpg"
+  title="Collagen Vitta ou Colágeno Nature's Prime: qual escolher?"
+  seoTitle="Collagen Vitta ou Colágeno Nature's Prime?"
+  description="Collagen Vitta ou Colágeno Nature's Prime com ácido hialurônico? Comparamos Verisol e doses, ingredientes, preço por dia, promessas, garantia e reputação no Reclame Aqui."
+  kicker="Comparação"
+  lead="Dois colágenos em pó com Verisol, o colágeno mais estudado para a pele. Um informa todas as doses; o outro lista mais ingredientes, mas nenhuma quantidade."
+  crumbs={[{ name: 'Guias', href: '/guias/' }, { name: "Collagen Vitta ou Nature's Prime", href: '/collagen-vitta-ou-colageno-natures-prime/' }]}
+  faq={faq}
+  related={[{ href: '/colageno-natures-prime/', title: "Colágeno Nature's Prime: ficha completa" }, { href: '/collagen-vitta/', title: 'Collagen Vitta: ficha completa' }, { href: '/colageno/', title: 'Qual o melhor colágeno? Tipos, doses e como escolher' }, ...comparePages]}
+  sources={[
+    { label: 'Proksch E et al. Oral intake of specific bioactive collagen peptides reduces skin wrinkles and increases dermal matrix synthesis. Skin Pharmacol Physiol, 2014', url: 'https://pubmed.ncbi.nlm.nih.gov/24401291/' },
+    { label: "Páginas oficiais e checkouts do Collagen Vitta e do Colágeno Nature's Prime (consultados em 21/10/2026)", url: 'https://naturesprime.ind.br/colagenohidrolisado-acidohialuronico/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>O Colágeno Nature's Prime é a melhor escolha: 2,5 g de Verisol por dose (a quantidade dos estudos), 120 mg de ácido hialurônico, tabela completa, de R$ 3,30 por dia no pote avulso e fabricante sem reclamações. O Collagen Vitta também tem Verisol, mas não informa nenhuma dose, custa R$ 5,23 por dia no pote avulso, promete "rejuvenescer a pele em até 90%" e a empresa não responde reclamações.</p>
+  </div>
+
+  <h2>Lado a lado</h2>
+  <p class="small">No celular, deslize a tabela para o lado.</p>
+  <div class="table-scroll">
+    <table class="data compare-table">
+      <thead><tr><th></th><th>Colágeno Nature's Prime</th><th>Collagen Vitta</th></tr></thead>
+      <tbody>
+        <tr><th>Colágeno</th><td>Verisol, 2,5 g por dose</td><td>Verisol e colágeno tipo II, dose não informada</td></tr>
+        <tr><th>Outros ingredientes</th><td>Ácido hialurônico 120 mg, Q10 30 mg, vitamina C 100 mg, zinco 7 mg, selênio 34 mcg</td><td>Ácido hialurônico, biotina, ácido pantotênico, silício, vitaminas A, C e K2, sem dose</td></tr>
+        <tr><th>Tabela nutricional</th><td>Sim</td><td>Não publicada</td></tr>
+        <tr><th>Dose diária</th><td>5 g</td><td>10 g</td></tr>
+        <tr><th>Pote</th><td>250 g, 50 dias</td><td>300 g, 30 dias</td></tr>
+        <tr><th>Preço</th><td>R$ 164,90 (1 pote) a R$ 649,90 (6)</td><td>R$ 157 (1 pote) a R$ 477 (5 + 1 Collagen Osteo)</td></tr>
+        <tr><th>Por dia</th><td>R$ 3,30 (1 pote) a R$ 2,17 (6 potes)</td><td>R$ 5,23 (1 pote) a R$ 3,18 (5 potes)</td></tr>
+        <tr><th>Promessas</th><td>"Rejuvenesce a pele e reduz as rugas", exagerada</td><td>"Rejuvenescer a pele em até 90%", firmar os seios, acabar com a celulite</td></tr>
+        <tr><th>Empresa</th><td>Natures Farma, CNPJ informado, sem reclamações</td><td>Natturabio, CNPJ informado, não responde reclamações</td></tr>
+        <tr><th>Garantia</th><td>30 dias</td><td>30 dias na página, 7 dias na Braip</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">Preços dos checkouts de 21/10/2026. Os kits do Collagen Vitta a partir de 2 potes trazem um frasco de Collagen Osteo de brinde.</p>
+
+  <h2>Por que a dose informada pesa tanto</h2>
+  <p>O Verisol tem estudos com 2,5 g por dia, que mostraram melhora modesta de elasticidade e de rugas finas depois de 8 semanas. No Nature's Prime, dá para conferir que a dose está lá. No Collagen Vitta, a porção é de 10 g, mas é uma mistura de vários ingredientes e não se sabe quanto é Verisol. Pode ser mais, pode ser menos.</p>
+  <p>A lista maior do Collagen Vitta impressiona, mas biotina, silício e vitaminas só fazem diferença para quem tem falta deles, e sem as doses não dá para avaliar.</p>
+
+  <h2>Um detalhe sobre preço</h2>
+  <p>Em outubro de 2026, o mesmo pote do Colágeno Nature's Prime aparecia em farmácia online por menos que no site oficial. Vale comparar antes de comprar; detalhes em <a href="/colageno-natures-prime/onde-comprar/">onde comprar</a>.</p>
+
+  <h2>Qual escolher</h2>
+  <ul>
+    <li><strong>Colágeno Nature's Prime:</strong> para a maioria. Dose dos estudos, mais barato por dia, empresa sem problemas registrados.</li>
+    <li><strong>Collagen Vitta:</strong> só se você quer especificamente a fórmula com biotina e silício e aceita não saber as doses. Pague no cartão.</li>
+  </ul>
+
+  <BuyBox compact produto="Colágeno Nature's Prime" href={colageno.link} title="Colágeno Nature's Prime no site oficial" text="2,5 g de Verisol + 120 mg de ácido hialurônico por dose. Pote de 50 dias por R$ 164,90." cta="Ver kits e preços" />
+</Article>

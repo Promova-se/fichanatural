@@ -1,0 +1,85 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import { creatina, ingredientGuides } from '../../data/site';
+
+const faq = [
+  { q: 'Como tomar creatina?', a: '3 a 5 g por dia, todos os dias, inclusive nos dias sem treino. O horário importa pouco. A fase de carga (20 g por dia por 5 a 7 dias) só adianta o efeito; sem ela, os músculos ficam saturados em 3 a 4 semanas.' },
+  { q: 'Creatina engorda?', a: 'Não engorda de gordura. É comum ganhar de 1 a 2 kg nas primeiras semanas, mas é água dentro do músculo, não inchaço nem gordura.' },
+  { q: 'Creatina faz mal para o rim?', a: 'Em pessoas saudáveis, nas doses usuais, os estudos de longo prazo não mostraram dano aos rins. Ela pode subir a creatinina no exame de sangue sem que o rim esteja com problema, então avise o médico. Quem já tem doença renal não deve tomar sem orientação.' },
+  { q: 'Creatina dá queda de cabelo?', a: 'Não há prova. A ideia vem de um único estudo pequeno, de 2009, que mediu um hormônio ligado à calvície (DHT) e não avaliou queda de cabelo. Estudos posteriores não confirmaram o aumento do hormônio.' },
+  { q: 'Mulher pode tomar creatina?', a: 'Pode. Os benefícios de força e massa muscular aparecem em mulheres também, e há estudos promissores em mulheres na menopausa, junto com musculação.' },
+  { q: 'Precisa tomar creatina com carboidrato?', a: 'Não é necessário. Tomar com uma refeição pode melhorar um pouco a absorção, mas o que mais importa é tomar todos os dias.' },
+];
+---
+<Article
+  ogImage="/img/creatina/og-creatina.jpg"
+  title="Creatina: como tomar, se engorda, se faz mal e qual escolher"
+  seoTitle="Creatina: como tomar, engorda ou faz mal?"
+  description="Guia de creatina: como tomar (dose, horário, fase de carga), se engorda, se faz mal para o rim ou o cabelo, para quem serve e como escolher uma boa creatina sem pagar a mais."
+  kicker="Guia"
+  lead="A creatina é o suplemento esportivo com mais estudos, e um dos poucos que funciona como promete. Reunimos o que a ciência diz sobre dose, efeitos colaterais e mitos, e como escolher sem pagar caro."
+  crumbs={[{ name: 'Guias', href: '/guias/' }, { name: 'Creatina', href: '/creatina/' }]}
+  faq={faq}
+  related={[{ href: '/creatina-natures-prime/', title: "Creatina Nature's Prime: ficha completa" }, ...ingredientGuides]}
+  sources={[
+    { label: 'Kreider RB et al. International Society of Sports Nutrition position stand: creatine supplementation. J Int Soc Sports Nutr, 2017', url: 'https://jissn.biomedcentral.com/articles/10.1186/s12970-017-0173-z' },
+    { label: 'Antonio J et al. Common questions and misconceptions about creatine supplementation. J Int Soc Sports Nutr, 2021', url: 'https://jissn.biomedcentral.com/articles/10.1186/s12970-021-00412-w' },
+    { label: 'NIH Office of Dietary Supplements: Dietary supplements for exercise and athletic performance', url: 'https://ods.od.nih.gov/factsheets/ExerciseAndAthleticPerformance-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Tome 3 a 5 g de creatina monohidratada por dia, todo dia, em qualquer horário. Ela aumenta força e desempenho em exercícios intensos e ajuda a ganhar massa muscular junto com o treino. Não engorda de gordura (o ganho de 1 a 2 kg é água no músculo), não mostrou fazer mal aos rins de pessoas saudáveis e não há prova de que cause queda de cabelo. A melhor escolha é a monohidratada pura, que é também a mais barata.</p>
+  </div>
+
+  <h2>Como tomar</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Dose diária</th><td>3 a 5 g (cerca de 0,1 g por kg para quem é mais pesado)</td></tr>
+        <tr><th>Horário</th><td>Qualquer um. Antes ou depois do treino dá na mesma; o importante é não pular dias</td></tr>
+        <tr><th>Dias sem treino</th><td>Tome também, para manter os músculos saturados</td></tr>
+        <tr><th>Fase de carga</th><td>Opcional: 20 g por dia, divididos em 4 tomadas, por 5 a 7 dias. Adianta o efeito, mas dá mais desconforto no estômago</td></tr>
+        <tr><th>Com o que misturar</th><td>Água, suco, leite ou o shake. Não precisa de carboidrato</td></tr>
+        <tr><th>Ciclar ou parar?</th><td>Não há necessidade de fazer pausas</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>O que a creatina faz, segundo os estudos</h2>
+  <ul>
+    <li><strong>Força e potência:</strong> melhora o desempenho em esforços curtos e repetidos, como musculação, tiros e esportes com arrancadas. É a alegação aprovada pela Anvisa para creatina.</li>
+    <li><strong>Massa muscular:</strong> junto com treino de força, ajuda a ganhar mais massa magra do que o treino sozinho.</li>
+    <li><strong>Idosos:</strong> com musculação, ajuda a preservar músculo e força, o que importa para evitar quedas.</li>
+    <li><strong>Cérebro:</strong> há estudos interessantes sobre memória em privação de sono e em vegetarianos, mas ainda é cedo para recomendar com esse objetivo.</li>
+    <li><strong>Corrida longa e resistência:</strong> efeito pequeno ou nenhum.</li>
+  </ul>
+
+  <h2>Mitos e efeitos colaterais</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Dúvida</th><th>O que se sabe</th></tr></thead>
+      <tbody>
+        <tr><td>Engorda?</td><td>Não de gordura. Retém água dentro do músculo, 1 a 2 kg nas primeiras semanas</td></tr>
+        <tr><td>Faz mal ao rim?</td><td>Não em pessoas saudáveis nas doses usuais. Pode subir a creatinina do exame sem doença; avise o médico</td></tr>
+        <tr><td>Causa queda de cabelo?</td><td>Sem prova. Vem de um único estudo pequeno que não mediu queda de cabelo</td></tr>
+        <tr><td>Dá cãibra ou desidrata?</td><td>Estudos com atletas não mostraram mais cãibras nem desidratação</td></tr>
+        <tr><td>Efeitos comuns</td><td>Desconforto no estômago e intestino solto, mais na fase de carga ou em doses grandes de uma vez</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Quem tem doença renal, diabetes com lesão no rim, está grávida ou amamentando, ou é menor de idade, deve conversar com o médico antes.</p>
+
+  <h2>Como escolher uma creatina</h2>
+  <ol>
+    <li><strong>Monohidratada.</strong> É a forma de quase todos os estudos. Creatina "HCl", "alcalina" ou "nitrato" custa mais e não mostrou ser melhor.</li>
+    <li><strong>Pura.</strong> O rótulo deve ter só creatina. Misturas com outros ingredientes encarecem e diluem a dose.</li>
+    <li><strong>Selo de qualidade.</strong> Matérias-primas com marca (como Creapure) ou laudo de pureza são um bom sinal, mas não obrigatórios.</li>
+    <li><strong>Preço por grama.</strong> Divida o preço pelo peso. Em outubro de 2026, potes de 300 g de marcas conhecidas custavam de R$ 30 a R$ 55 em grandes lojas.</li>
+  </ol>
+
+  <h2>Produto que analisamos</h2>
+  <p>A <a href="/creatina-natures-prime/">Creatina Nature's Prime</a> é monohidratada pura, de um fabricante com CNPJ e sem reclamações, e a página de vendas é honesta. O ponto fraco é o preço: R$ 169,90 o pote de 300 g, várias vezes o de marcas conhecidas no mesmo peso. Faz sentido para quem prefere comprar dessa marca e aproveitar a garantia de 30 dias.</p>
+
+  <BuyBox compact produto="Creatina Nature's Prime" href={creatina.link} title="Creatina Nature's Prime no site oficial" text="Creatina monohidratada pura, pote de 300 g (60 doses de 5 g), com garantia de 30 dias." cta="Ver kits e preços" />
+</Article>

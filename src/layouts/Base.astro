@@ -1,5 +1,5 @@
 ---
-import { site, catalog, categories, brands } from '../data/site';
+import { site, catalog, categories, brands, guideHubs } from '../data/site';
 import CategoryIcon from '../components/CategoryIcon.astro';
 import '../styles/global.css';
 
@@ -24,7 +24,7 @@ const org = {
 const path = Astro.url.pathname;
 const isProduct = path.startsWith('/produtos') || catalog.some((c) => path.startsWith(c.href));
 const isCat = path.startsWith('/categoria') || path.startsWith('/marca');
-const isGuide = !isProduct && ['/guias', '/laranja-moro', '/psyllium', '/resveratrol', '/ozenvitta-ou-reduphine'].some((g) => path.startsWith(g));
+const isGuide = !isProduct && (path.startsWith('/guias') || guideHubs.some((h) => h.pages.some((g) => path.startsWith(g.href))));
 ---
 <!doctype html>
 <html lang="pt-BR">
@@ -221,10 +221,11 @@ const isGuide = !isProduct && ['/guias', '/laranja-moro', '/psyllium', '/resvera
         </ul>
         <p class="footer-title footer-title-2">Guias</p>
         <ul>
-          <li><a href="/ozenvitta-ou-reduphine/">OzenVitta ou ReduPhine</a></li>
-          <li><a href="/laranja-moro/">Laranja moro</a></li>
-          <li><a href="/psyllium/">Psyllium</a></li>
-          <li><a href="/resveratrol/">Resveratrol</a></li>
+          <li><a href="/colageno/">Qual colágeno escolher</a></li>
+          <li><a href="/omega-3/">Qual ômega 3 escolher</a></li>
+          <li><a href="/creatina/">Creatina</a></li>
+          <li><a href="/magnesio/">Magnésio</a></li>
+          <li><a href="/melhor-colageno-tipo-2/">Melhor colágeno tipo 2</a></li>
           <li><a href="/guias/">Todos os guias</a></li>
         </ul>
       </div>

@@ -1,0 +1,88 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import { npomega, ingredientGuides } from '../../data/site';
+
+const faq = [
+  { q: 'Qual o melhor ômega 3?', a: 'O que tem mais EPA e DHA por cápsula, informa esses valores na tabela, tem algum controle de pureza e custa menos por grama de EPA + DHA. A marca importa menos que esses números.' },
+  { q: 'Quanto ômega 3 tomar por dia?', a: 'Para quem é saudável e come pouco peixe, de 250 a 500 mg de EPA + DHA por dia já cobrem o que as diretrizes recomendam. Para baixar triglicerídeos, as doses usadas são de 2 a 4 g de EPA + DHA, com acompanhamento médico.' },
+  { q: 'O que é EPA e DHA?', a: 'São os dois tipos de ômega 3 do peixe que têm efeito no corpo. A cápsula de "1.000 mg de ômega 3" é, na verdade, 1.000 mg de óleo; dentro dele, a soma de EPA e DHA costuma ser de 300 a 600 mg.' },
+  { q: 'Ômega 3 de linhaça ou chia substitui o de peixe?', a: 'Não totalmente. O ômega 3 vegetal (ALA) vira EPA e DHA em quantidade muito pequena no corpo. Para quem não come peixe, a alternativa é o óleo de algas, que tem DHA e EPA.' },
+  { q: 'Qual o melhor horário para tomar ômega 3?', a: 'Junto de uma refeição com gordura, como almoço ou jantar. A absorção melhora e o gosto de peixe diminui.' },
+];
+---
+<Article
+  ogImage="/img/omega-3/og-omega-3.jpg"
+  title="Ômega 3: qual o melhor, quanto tomar e para que serve de verdade"
+  seoTitle="Ômega 3: qual o melhor e quanto tomar"
+  description="Como escolher um ômega 3: EPA e DHA por cápsula, óleo comum ou concentrado, selos de pureza, quanto tomar e o que a ciência mostra para coração, triglicerídeos, cérebro e articulações."
+  kicker="Guia"
+  lead="O rótulo diz 1.000 mg, mas o que importa é outra conta. Explicamos como ler a tabela, quanto tomar e para o que o ômega 3 tem evidência de verdade."
+  crumbs={[{ name: 'Guias', href: '/guias/' }, { name: 'Ômega 3', href: '/omega-3/' }]}
+  faq={faq}
+  related={[{ href: '/omega-3-natures-prime/', title: "Ômega 3 Nature's Prime: ficha completa" }, ...ingredientGuides]}
+  sources={[
+    { label: 'NIH Office of Dietary Supplements: Omega-3 fatty acids, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/' },
+    { label: 'Manson JE et al. Marine n-3 fatty acids and prevention of cardiovascular disease and cancer (VITAL). N Engl J Med, 2019', url: 'https://www.nejm.org/doi/full/10.1056/NEJMoa1811403' },
+    { label: 'Bhatt DL et al. Cardiovascular risk reduction with icosapent ethyl (REDUCE-IT). N Engl J Med, 2019', url: 'https://www.nejm.org/doi/full/10.1056/NEJMoa1812792' },
+    { label: 'Gencer B et al. Omega-3 supplementation and the risk of atrial fibrillation. Circulation, 2021', url: 'https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.121.055654' },
+    { label: 'Skulas-Ray AC et al. Omega-3 fatty acids for the management of hypertriglyceridemia. AHA Science Advisory, Circulation, 2019', url: 'https://www.ahajournals.org/doi/10.1161/CIR.0000000000000709' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>O melhor ômega 3 é o que entrega mais EPA + DHA pelo menor preço, com os valores na tabela e algum controle de pureza. Para quem come pouco peixe, 250 a 500 mg de EPA + DHA por dia bastam. O ômega 3 baixa triglicerídeos em doses altas (2 a 4 g), mas não baixa o LDL, e em pessoas saudáveis não mostrou prevenir infarto. Doses altas aumentam um pouco o risco de fibrilação atrial.</p>
+  </div>
+
+  <h2>Como ler o rótulo: a conta que importa</h2>
+  <p>Quase todo pote anuncia "1.000 mg" por cápsula. Esse número é o peso do óleo, não do ômega 3 que faz efeito. Procure na tabela nutricional duas linhas: <strong>EPA</strong> e <strong>DHA</strong>. A soma delas é o que conta.</p>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Tipo de óleo</th><th>EPA + DHA em 1 g de óleo</th><th>Cápsulas para 1 g de EPA + DHA</th></tr></thead>
+      <tbody>
+        <tr><td>Óleo de peixe comum</td><td>cerca de 300 mg</td><td>3 a 4</td></tr>
+        <tr><td>Concentrado (rótulos "TG" ou "EE", 60%+)</td><td>500 a 700 mg</td><td>1 a 2</td></tr>
+        <tr><td>Óleo de algas (vegano)</td><td>300 a 500 mg, mais DHA</td><td>2 a 3</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Faixas aproximadas; cada marca tem a sua concentração. Para comparar preços, divida o valor do pote pelo total de EPA + DHA que ele entrega, não pelo número de cápsulas.</p>
+
+  <h2>Checklist para escolher</h2>
+  <ol>
+    <li><strong>EPA e DHA na tabela.</strong> Se o rótulo só fala em "óleo de peixe" ou "ômega 3 total", fica impossível comparar.</li>
+    <li><strong>Quantas cápsulas por dia.</strong> Um óleo comum pede 3 cápsulas para chegar perto de 1 g de EPA + DHA. Concentrados resolvem com menos.</li>
+    <li><strong>Pureza.</strong> Selos de terceiros, como IFOS, ou laudo de metais pesados e oxidação são um bom sinal. A maioria das marcas brasileiras não informa.</li>
+    <li><strong>Forma TG ou EE.</strong> A diferença de absorção existe, mas é pequena quando o ômega 3 é tomado com comida. Não pague muito mais só por isso.</li>
+    <li><strong>Cheiro.</strong> Cápsula com cheiro forte de ranço está oxidada. Guarde o pote longe do calor.</li>
+  </ol>
+
+  <h2>Para que o ômega 3 serve, segundo os estudos</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Uso</th><th>O que mostram</th></tr></thead>
+      <tbody>
+        <tr><td>Triglicerídeos altos</td><td>Reduz, com 2 a 4 g de EPA + DHA por dia. É uso de tratamento, com médico</td></tr>
+        <tr><td>Colesterol LDL</td><td>Não reduz; com DHA em dose alta pode subir um pouco</td></tr>
+        <tr><td>Prevenir infarto em quem é saudável</td><td>O estudo VITAL, com cerca de 26 mil pessoas e 1 g por dia, não mostrou redução no total de infartos, AVCs e mortes cardiovasculares</td></tr>
+        <tr><td>Pessoas de alto risco cardíaco</td><td>Um remédio de EPA purificado, em 4 g por dia, reduziu eventos (estudo REDUCE-IT). Não dá para transferir o resultado para cápsulas comuns</td></tr>
+        <tr><td>Memória e cérebro</td><td>Sem benefício claro em adultos saudáveis</td></tr>
+        <tr><td>Olho seco</td><td>Um estudo grande (DREAM) não mostrou diferença para o placebo</td></tr>
+        <tr><td>Artrite reumatoide</td><td>Alívio pequeno de dor e rigidez, em doses altas</td></tr>
+        <tr><td>Gestação</td><td>DHA é recomendado; a dose deve ser orientada no pré-natal</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Riscos e quem deve falar com o médico</h2>
+  <ul>
+    <li><strong>Fibrilação atrial:</strong> estudos com mais de 80 mil pessoas mostraram risco um pouco maior com ômega 3, principalmente acima de 1 g por dia.</li>
+    <li><strong>Sangramento:</strong> atenção com varfarina, clopidogrel e AAS, e antes de cirurgias.</li>
+    <li><strong>Alergia a peixe:</strong> prefira o óleo de algas e confirme com o médico.</li>
+    <li>Efeitos comuns: gosto de peixe, arroto, azia e intestino solto.</li>
+  </ul>
+
+  <h2>Produto que analisamos</h2>
+  <p>O <a href="/omega-3-natures-prime/">Ômega 3 Nature's Prime</a> é um óleo de peixe comum com EPA e DHA informados: 540 mg de EPA e 360 mg de DHA em 3 cápsulas. O pote de 240 cápsulas dura 80 dias e sai a cerca de R$ 2,12 por dia. A página de vendas promete reduzir colesterol, o que o ômega 3 não faz.</p>
+
+  <BuyBox compact produto="Ômega 3 Nature's Prime" href={npomega.link240} title="Ômega 3 Nature's Prime no site oficial" text="900 mg de EPA + DHA em 3 cápsulas. Pote de 240 cápsulas por R$ 169,90." cta="Ver kits e preços" />
+</Article>

@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { site, guideHubs } from '../../data/site';
+import { site, guideHubs, comparePages } from '../../data/site';
 
 const schema = [{
   '@context': 'https://schema.org',
@@ -8,28 +8,31 @@ const schema = [{
   name: 'Guias e comparações',
   url: `${site.url}/guias/`,
   inLanguage: 'pt-BR',
+  hasPart: guideHubs.flatMap((h) => h.pages).map((g) => ({ '@type': 'WebPage', name: g.title, url: `${site.url}${g.href}` })),
 }];
+const isCompare = (href: string) => comparePages.some((c) => c.href === href);
+const total = new Set(guideHubs.flatMap((h) => h.pages.map((g) => g.href))).size;
 ---
 <Base
-  title="Guias de ingredientes e comparações"
-  description="Guias do Ficha Natural sobre ingredientes como laranja moro, psyllium e resveratrol, e comparações entre suplementos, com o que a ciência diz de verdade."
+  title="Guias de suplementos e comparações"
+  description="Guias do Ficha Natural para escolher suplementos: colágeno, ômega 3, creatina, magnésio, emagrecimento e menopausa, e comparações entre produtos, com o que a ciência diz de verdade."
   schema={schema}
 >
   <section class="hero wrap">
     <span class="pill">Guias</span>
     <h1>Guias e comparações</h1>
-    <p>Explicamos os ingredientes que aparecem nos suplementos e comparamos produtos parecidos, sempre com as fontes.</p>
+    <p>Como escolher cada tipo de suplemento, quanto tomar, o que a ciência mostra e quais produtos se saem melhor lado a lado. {total} guias, sempre com as fontes.</p>
   </section>
   <section class="section wrap">
-    <div class="hub-grid">
-      {guideHubs.map((h) => (
-        <div class="hub-card">
-          <h2>{h.name}</h2>
-          <ul>
-            {h.pages.map((pg) => <li><a href={pg.href}>{pg.title}</a></li>)}
-          </ul>
-        </div>
-      ))}
-    </div>
+    {guideHubs.map((h) => (
+      <div class="guide-group">
+        <h2>{h.name}</h2>
+        <ul class="card-list">
+          {h.pages.map((g) => (
+            <li><a class="card" href={g.href}><span>{isCompare(g.href) && <span class="tag-compare">Comparação</span>}{g.title}</span><span class="arrow" aria-hidden="true">→</span></a></li>
+          ))}
+        </ul>
+      </div>
+    ))}
   </section>
 </Base>

@@ -1,0 +1,66 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import { npmag, comparePages } from '../../data/site';
+
+const faq = [
+  { q: '6 Magnésios ou Magnésio Dimalato: qual é melhor?', a: "Os dois entregam 260 mg de magnésio por dose. O Magnésio Dimalato Nature's Prime sai mais barato (R$ 2,00 a R$ 2,83 por dia, contra R$ 3,15 a R$ 3,70) e vem de um fabricante sem reclamações. O 6 Magnésios só faz sentido para quem quer especificamente o bisglicinato, a primeira forma da fórmula." },
+  { q: 'Misturar vários tipos de magnésio é melhor?', a: 'Não há estudo mostrando vantagem em juntar várias formas. O que importa é a quantidade de magnésio elementar e quanto o corpo absorve. No 6 Magnésios, duas das seis formas (óxido e hidróxido) são pouco absorvidas.' },
+  { q: 'Posso tomar os dois juntos?', a: 'Não é recomendado. Somados, passariam de 500 mg de magnésio por dia, acima do limite de 350 mg para suplementos, com risco de diarreia.' },
+];
+---
+<Article
+  ogImage="/img/6-magnesios-ou-magnesio-dimalato/og-6-magnesios-ou-magnesio-dimalato.jpg"
+  title="6 Magnésios ou Magnésio Dimalato Nature's Prime: qual escolher?"
+  seoTitle="6 Magnésios ou Magnésio Dimalato: qual escolher?"
+  description="6 Magnésios (Terra Nativa) ou Magnésio Dimalato Nature's Prime? Comparamos dose de magnésio, formas, absorção, preço por dia, promessas e reputação das empresas."
+  kicker="Comparação"
+  lead="Os dois têm exatamente 260 mg de magnésio por dose. A diferença está nas formas usadas, no preço e na empresa por trás de cada um."
+  crumbs={[{ name: 'Guias', href: '/guias/' }, { name: '6 Magnésios ou Dimalato', href: '/6-magnesios-ou-magnesio-dimalato/' }]}
+  faq={faq}
+  related={[{ href: '/magnesio-dimalato-natures-prime/', title: "Magnésio Dimalato Nature's Prime: ficha completa" }, { href: '/6-magnesios/', title: '6 Magnésios: ficha completa' }, { href: '/magnesio/', title: 'Magnésio: qual o melhor tipo, para que serve e quanto tomar' }, ...comparePages]}
+  sources={[
+    { label: 'NIH Office of Dietary Supplements: Magnesium, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/' },
+    { label: 'Reclame Aqui: Empório Terra Nativa (consultado em 22/10/2026)', url: 'https://www.reclameaqui.com.br/empresa/emporio-terra-nativa-ltda/' },
+    { label: 'Reclame Aqui: Natures Farma Indústria e Comércio (consultado em 23/10/2026)', url: 'https://www.reclameaqui.com.br/empresa/natures-farma-industria-e-comercio-ltda/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Para a maioria, o Magnésio Dimalato Nature's Prime: mesma quantidade de magnésio (260 mg), forma bem absorvida, de R$ 2,00 a R$ 2,83 por dia e fabricante sem reclamações. O 6 Magnésios custa de R$ 3,15 a R$ 3,70 por dia, mistura seis formas sem vantagem comprovada (duas delas pouco absorvidas) e vem de uma empresa nova com reclamações sem resposta. Os dois exageram nas promessas.</p>
+  </div>
+
+  <h2>Lado a lado</h2>
+  <p class="small">No celular, deslize a tabela para o lado.</p>
+  <div class="table-scroll">
+    <table class="data compare-table">
+      <thead><tr><th></th><th>Magnésio Dimalato Nature's Prime</th><th>6 Magnésios (Terra Nativa)</th></tr></thead>
+      <tbody>
+        <tr><th>Magnésio por dose</th><td>260 mg em 2 cápsulas</td><td>260 mg em 3 cápsulas</td></tr>
+        <tr><th>Formas</th><td>Dimalato (magnésio + ácido málico)</td><td>Bisglicinato, malato, óxido, hidróxido, citrato malato e taurato</td></tr>
+        <tr><th>Absorção</th><td>Boa</td><td>Boa nas primeiras formas; óxido e hidróxido absorvem pouco</td></tr>
+        <tr><th>Pote</th><td>60 cápsulas, 30 dias</td><td>120 cápsulas, 40 dias</td></tr>
+        <tr><th>Preço</th><td>R$ 84,90 (1) a R$ 179,90 (3 potes)</td><td>R$ 147,90 (1) a R$ 377,90 (3 potes)</td></tr>
+        <tr><th>Por dia</th><td>R$ 2,00 a R$ 2,83</td><td>R$ 3,15 a R$ 3,70</td></tr>
+        <tr><th>Promessas</th><td>Ansiedade, depressão, arritmia e dor no peito</td><td>Sono, cãibra, estresse e coração</td></tr>
+        <tr><th>Empresa</th><td>Natures Farma, CNPJ 28.209.818/0001-38, sem reclamações</td><td>Empório Terra Nativa, CNPJ 61.285.739/0001-81, 4 reclamações e 1 resposta</td></tr>
+        <tr><th>Pagamento</th><td>Monetizze, até 12x com juros</td><td>Braip, até 3x anunciado</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">Preços dos checkouts de 22 e 23/10/2026. No Dimalato, o preço por dia considera 2 cápsulas; a página fala em 1 cápsula, mas a tabela usa a porção de 2.</p>
+
+  <h2>Seis formas valem mais que uma?</h2>
+  <p>O argumento do 6 Magnésios é que cada forma age num lugar do corpo: o taurato no coração, o bisglicinato no sono, e assim por diante. Isso não tem estudo com a mistura. O que se sabe é que formas orgânicas (bisglicinato, citrato, malato, dimalato) são bem absorvidas, e o óxido e o hidróxido são mais laxantes do que nutritivos. Como o rótulo não diz quanto vem de cada forma, não dá para saber a proporção absorvível. O guia de <a href="/magnesio/">tipos de magnésio</a> explica as diferenças.</p>
+
+  <h2>As promessas</h2>
+  <p>Nenhum dos dois deveria prometer o que promete. Magnésio corrige falta de magnésio, ajuda o intestino e pode ajudar a prevenir enxaqueca. Para ansiedade, depressão, sono e cãibra comum, a evidência é fraca, e arritmia e dor no peito pedem médico, não suplemento.</p>
+
+  <h2>Qual escolher</h2>
+  <ul>
+    <li><strong>Magnésio Dimalato Nature's Prime:</strong> para quem quer magnésio com dose clara, preço menor e empresa sem histórico de problemas. O kit de 2 potes é o melhor custo.</li>
+    <li><strong>6 Magnésios:</strong> só se você faz questão do bisglicinato e aceita pagar mais. Pague no cartão e acompanhe a entrega.</li>
+    <li><strong>Nenhum dos dois sem conversar com o médico</strong> se você tem doença nos rins ou toma antibióticos e remédios para osteoporose (o magnésio atrapalha a absorção).</li>
+  </ul>
+
+  <BuyBox compact produto="Magnésio Dimalato Nature's Prime" href={npmag.link} title="Magnésio Dimalato no site oficial" text="260 mg de magnésio em 2 cápsulas. A partir de R$ 84,90 o pote." cta="Ver kits e preços" />
+</Article>
