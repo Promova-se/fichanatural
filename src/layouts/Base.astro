@@ -20,6 +20,7 @@ const org = {
   name: site.name,
   url: site.url,
   email: site.email,
+  logo: `${site.url}/icon-512.png`,
 };
 const path = Astro.url.pathname;
 const isProduct = path.startsWith('/produtos') || catalog.some((c) => path.startsWith(c.href));
@@ -47,7 +48,12 @@ const isGuide = !isProduct && (path.startsWith('/guias') || guideHubs.some((h) =
   {ogImageUrl && <meta property="og:image:width" content="1200" />}
   {ogImageUrl && <meta property="og:image:height" content="630" />}
   <meta name="twitter:card" content={ogImageUrl ? "summary_large_image" : "summary"} />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48" />
+  <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#24513d" />
   <link rel="sitemap" href="/sitemap-index.xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
