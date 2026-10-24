@@ -1,0 +1,46 @@
+---
+import Article from '../../../layouts/Article.astro';
+import KitCards from '../../../components/KitCards.astro';
+import { azmulher as p, azmulherPages, natures } from '../../../data/site';
+
+const faq = [
+  { q: 'Onde comprar Super AZ Mulher original?', a: "No site oficial da Nature's Prime, com pagamento pela Monetizze, ou na loja online da marca. A empresa diz que vende em farmácias selecionadas e não recomenda o Mercado Livre." },
+  { q: 'Qual kit vale mais a pena?', a: 'Para experimentar, 1 pote já dura 60 dias. Se for usar por 4 meses ou mais, o kit de 2 potes sai a R$ 1,46 por dia, contra R$ 2,17 do pote avulso.' },
+];
+---
+<Article
+  ogImage="/img/super-az-mulher/og-super-az-mulher.jpg"
+  title="Onde comprar Super AZ Mulher: preço dos kits e custo por dia"
+  seoTitle="Onde comprar Super AZ Mulher"
+  description="Onde comprar o Super AZ Mulher Nature's Prime: preço de 1, 2 e 3 potes, custo por dia, parcelamento, garantia e atendimento."
+  kicker="Compra segura"
+  lead="O Super AZ Mulher é vendido no site oficial da Nature's Prime, pelos mesmos preços da versão masculina."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }, { name: 'Super AZ Mulher', href: '/super-az-mulher/' }, { name: 'Onde comprar', href: '/super-az-mulher/onde-comprar/' }]}
+  faq={faq}
+  related={[...azmulherPages, { href: '/marca/natures-prime/', title: "Nature's Prime é confiável? A marca e todos os produtos" }]}
+  sources={[
+    { label: "Página oficial do Super AZ Mulher e checkouts da Monetizze (consultados em 24/10/2026)", url: 'https://naturesprime.ind.br/superazmulher1/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>No site oficial: R$ 129,90 por 1 pote (60 dias), R$ 174,90 por 2 e R$ 229,90 por 3. Dá de R$ 1,28 a R$ 2,17 por dia. Parcelamento em até 12x com juros.</p>
+  </div>
+
+  <h2>Escolha o kit</h2>
+  <KitCards kits={p.kits} unit="mês" produto="Super AZ Mulher" />
+
+  <h2>Custo por dia</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Kit</th><th>Preço</th><th>Dias</th><th>Por dia</th></tr></thead>
+      <tbody>
+        <tr><td>1 pote</td><td>R$ 129,90</td><td>60</td><td>R$ 2,17</td></tr>
+        <tr><td>2 potes</td><td>R$ 174,90</td><td>120</td><td>R$ 1,46</td></tr>
+        <tr><td>3 potes</td><td>R$ 229,90</td><td>180</td><td>R$ 1,28</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Garantia e atendimento</h2>
+  <p>A página de vendas oferece 30 dias para pedir o dinheiro de volta. Pelo Código de Defesa do Consumidor, você pode desistir em até 7 dias após receber. Antes de comprar, se quiser conferir as doses, peça a tabela nutricional ao SAC: {natures.sac} ou (62) 3701-4638.</p>
+</Article>

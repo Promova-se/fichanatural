@@ -1,0 +1,57 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import TopCta from '../../../components/TopCta.astro';
+import { reduphinePremium as p, reduphinePremiumPages } from '../../../data/site';
+
+const faq = [
+  { q: 'ReduPhine Premium emagrece?', a: 'Pode ajudar um pouco, junto com dieta e exercício, principalmente pela saciedade das fibras e pela cafeína do guaraná. Não há estudo com o produto, e sem as doses não dá para saber se a laranja moro está na quantidade do estudo.' },
+  { q: 'ReduPhine Premium queima gordura localizada?', a: 'Não. Nenhum suplemento tira gordura de um lugar específico do corpo. Quando se perde peso, a gordura diminui no corpo todo.' },
+  { q: 'Quanto peso dá para perder?', a: 'Não há números confiáveis para o produto. Os ingredientes com melhor estudo, laranja moro e fibras, mostram efeitos de 1 a 2 kg a mais que o placebo em meses, junto com dieta.' },
+];
+---
+<Article
+  ogImage="/img/reduphine-premium/og-reduphine-premium.jpg"
+  title="ReduPhine Premium funciona? O que a fórmula pode fazer pelo peso"
+  seoTitle="ReduPhine Premium funciona?"
+  description="O ReduPhine Premium funciona? O que os estudos mostram sobre seus ingredientes, por que 'queimar gordura localizada' não existe e quanto peso dá para esperar de verdade."
+  kicker="Funciona?"
+  lead="Alguns ingredientes têm estudos com efeito pequeno no peso. Nenhum suplemento queima gordura localizada, e sem as doses não dá para saber se a fórmula chega perto dos estudos."
+  crumbs={[{ name: 'ReduPhine Premium', href: '/reduphine-premium/' }, { name: 'Funciona?', href: '/reduphine-premium/funciona/' }]}
+  faq={faq}
+  related={[...reduphinePremiumPages, { href: '/laranja-moro/emagrece/', title: 'Laranja moro emagrece mesmo? O que o estudo mostrou' }, { href: '/psyllium/', title: 'Psyllium emagrece? O que é, como tomar e cuidados' }]}
+  sources={[
+    { label: 'NIH Office of Dietary Supplements: Dietary supplements for weight loss, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/WeightLoss-HealthProfessional/' },
+    { label: "Página oficial do ReduPhine Premium (consultada em 24/10/2026)", url: 'https://reduphinepremium.com.br/monetizze/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Pode dar uma ajuda pequena, junto com dieta e exercício. As fibras dão saciedade, o guaraná tem cafeína e a laranja moro tem um estudo com perda modesta de peso. Mas a página não informa nenhuma dose, nenhum suplemento queima gordura localizada, e as promessas de emagrecer "de forma rápida e definitiva" e regular o colesterol não têm base.</p>
+  </div>
+
+  <TopCta produto="ReduPhine Premium" href={p.link} />
+
+  <h2>Promessa por promessa</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>A página promete</th><th>O que se sabe</th></tr></thead>
+      <tbody>
+        <tr><td>Queima gordura localizada</td><td>Não existe suplemento que tire gordura de um lugar específico</td></tr>
+        <tr><td>Acelera o metabolismo</td><td>A cafeína aumenta um pouco o gasto de energia, efeito pequeno</td></tr>
+        <tr><td>Controla o apetite</td><td>Fibras como psyllium e ágar-ágar dão saciedade, se tomadas com bastante água</td></tr>
+        <tr><td>Regula o colesterol</td><td>O psyllium baixa um pouco o LDL em doses de 5 a 10 g por dia, bem mais do que cabe em 2 cápsulas</td></tr>
+        <tr><td>Melhora a força muscular</td><td>Nenhum ingrediente da lista tem esse efeito</td></tr>
+        <tr><td>Emagrecer de forma rápida e definitiva</td><td>Sem base; perda de peso sustentada depende de alimentação e atividade física</td></tr>
+        <tr><td>Sem efeitos colaterais</td><td>Fibras podem dar gases e inchaço; cafeína pode dar insônia e taquicardia</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>O ingrediente com melhor estudo</h2>
+  <p>A laranja moro tem um ensaio clínico de 6 meses: com 400 mg do extrato por dia, junto com dieta e caminhada, o grupo perdeu 4,2% do peso, contra 2,2% do placebo. É o melhor resultado entre os ingredientes, mas o ReduPhine Premium não diz quanto tem. Veja o guia <a href="/laranja-moro/emagrece/">laranja moro emagrece?</a></p>
+
+  <h2>Para quem pode fazer sentido</h2>
+  <p>Para quem já está ajustando a alimentação e quer um apoio de saciedade, aceitando que o efeito será pequeno. Não serve como substituto de tratamento para obesidade. Para comparar, veja <a href="/ozenvitta-ou-reduphine/">OzenVitta ou ReduPhine</a>.</p>
+
+  <BuyBox compact produto="ReduPhine Premium" href={p.link} title="ReduPhine Premium no site oficial" text="R$ 147 o pote de 30 dias; kits a partir de R$ 187 por 3 potes." cta="Ver kits e preços" />
+</Article>

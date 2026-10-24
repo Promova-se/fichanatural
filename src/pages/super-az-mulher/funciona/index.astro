@@ -1,0 +1,58 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import TopCta from '../../../components/TopCta.astro';
+import { azmulher as p, azmulherPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Polivitamínico deixa cabelo e unhas mais fortes?', a: 'Só se a queda ou a unha fraca vierem de falta de algum nutriente, como ferro, zinco ou biotina. Em quem não tem deficiência, não há prova de benefício.' },
+  { q: 'Super AZ Mulher ajuda na menopausa?', a: 'Não há estudo com o produto, e polivitamínicos não aliviam calorões. Para o que ajuda de verdade, veja nosso guia de menopausa.' },
+  { q: 'Polivitamínico dá energia?', a: 'Para quem tem falta de ferro, B12 ou vitamina D, sim. Para quem se alimenta bem, não. O guaraná da fórmula traz cafeína, que dá um efeito real e passageiro.' },
+];
+---
+<Article
+  ogImage="/img/super-az-mulher/og-super-az-mulher.jpg"
+  title="Super AZ Mulher funciona? Energia, cabelo, pele e hormônios"
+  seoTitle="Super AZ Mulher funciona?"
+  description="O Super AZ Mulher funciona? O que os estudos mostram sobre polivitamínicos para energia, pele, cabelo, unhas, imunidade e saúde hormonal da mulher."
+  kicker="Funciona?"
+  lead="Ajuda a cobrir falhas da alimentação. Saúde hormonal, pele e cabelo melhores só acontecem se o problema for falta de algum nutriente."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }, { name: 'Super AZ Mulher', href: '/super-az-mulher/' }, { name: 'Funciona?', href: '/super-az-mulher/funciona/' }]}
+  faq={faq}
+  related={[...azmulherPages, { href: '/menopausa/', title: 'Suplemento para menopausa funciona? O que ajuda de verdade nos calores' }]}
+  sources={[
+    { label: 'US Preventive Services Task Force: Vitamin, mineral, and multivitamin supplementation to prevent cardiovascular disease and cancer, 2022', url: 'https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/vitamin-supplementation-to-prevent-cvd-and-cancer-preventive-medication' },
+    { label: 'NIH Office of Dietary Supplements: Multivitamin/mineral supplements', url: 'https://ods.od.nih.gov/factsheets/MVMS-HealthProfessional/' },
+    { label: "Página oficial do Super AZ Mulher (consultada em 24/10/2026)", url: 'https://naturesprime.ind.br/superazmulher1/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Para quem come pouca variedade ou faz dieta restritiva, um polivitamínico ajuda a fechar lacunas. Para quem se alimenta bem, os estudos não mostram mais energia, pele melhor nem proteção do coração. "Apoio à saúde hormonal" não tem base. A disposição percebida vem em boa parte da cafeína do guaraná.</p>
+  </div>
+
+  <TopCta produto="Super AZ Mulher" href={p.link} />
+
+  <h2>Promessa por promessa</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>A página promete</th><th>O que se sabe</th></tr></thead>
+      <tbody>
+        <tr><td>Energia e disposição</td><td>Ajuda quem tem deficiência; em quem não tem, o efeito vem da cafeína</td></tr>
+        <tr><td>Apoio à saúde hormonal</td><td>Sem evidência para polivitamínicos</td></tr>
+        <tr><td>Pele, unhas e cabelos</td><td>Melhora só quando há falta de ferro, zinco, biotina ou outras vitaminas</td></tr>
+        <tr><td>Saúde cardiovascular</td><td>Polivitamínicos não previnem doença cardíaca (USPSTF, 2022)</td></tr>
+        <tr><td>Imunidade</td><td>Zinco, vitaminas C e D importam para a imunidade; o benefício é para quem tem falta</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Para quem pode fazer sentido</h2>
+  <ul>
+    <li>Quem come pouca fruta, verdura e variedade.</li>
+    <li>Quem faz dieta para emagrecer com muita restrição.</li>
+    <li>Quem tem menstruação intensa e quer apoio extra, junto com exames de ferro.</li>
+  </ul>
+  <p>Queda de cabelo, cansaço e unhas fracas merecem exames de sangue (ferro, ferritina, B12, vitamina D, tireoide) antes de qualquer suplemento.</p>
+
+  <BuyBox compact produto="Super AZ Mulher" href={p.link} title="Super AZ Mulher no site oficial" text="Pote de 60 dias a partir de R$ 129,90." cta="Ver kits e preços" />
+</Article>

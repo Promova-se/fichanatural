@@ -1,0 +1,64 @@
+---
+import Article from '../../../layouts/Article.astro';
+import TopCta from '../../../components/TopCta.astro';
+import { reduphinePremium as p, reduphinePremiumPages, reduphine, reputation } from '../../../data/site';
+
+const r = reputation.vittabalance;
+const faq = [
+  { q: 'ReduPhine Premium é golpe?', a: `Não há sinal de golpe: a VittaBalance tem CNPJ (${reduphine.cnpj}) e o pagamento passa pela Monetizze. O risco está no atendimento: a empresa está como "${r.label}" no Reclame Aqui e não respondeu as reclamações do período.` },
+  { q: 'ReduPhine Premium é aprovado pela Anvisa?', a: 'Suplementos alimentares com ingredientes permitidos, em geral, não precisam de registro na Anvisa. A Anvisa não avalia se o produto emagrece, e as promessas de "queimar gordura" e "regular colesterol" não são permitidas para suplementos.' },
+  { q: 'ReduPhine Premium é recomendado por médicos?', a: 'A página diz que sim e cita um grupo com "médico e nutricionistas", mas não identifica nenhum profissional com nome e registro. Não dá para conferir.' },
+];
+---
+<Article
+  ogImage="/img/reduphine-premium/og-reduphine-premium.jpg"
+  title="ReduPhine Premium é confiável? Empresa, Reclame Aqui e garantia"
+  seoTitle="ReduPhine Premium é confiável? Reclame Aqui"
+  description="O ReduPhine Premium é confiável? Quem vende, CNPJ, reputação da VittaBalance no Reclame Aqui, a garantia de 7 dias e os sinais de alerta da página de vendas."
+  kicker="Reputação"
+  lead="A empresa é identificada e o pagamento passa por uma plataforma conhecida. Mas a reputação no Reclame Aqui, a garantia curta e as promessas da página pedem cautela."
+  crumbs={[{ name: 'ReduPhine Premium', href: '/reduphine-premium/' }, { name: 'É confiável?', href: '/reduphine-premium/e-confiavel/' }]}
+  faq={faq}
+  related={[...reduphinePremiumPages, { href: '/reduphine-caps/e-confiavel/', title: 'ReduPhine Caps é confiável?' }]}
+  sources={[
+    { label: `Reclame Aqui: VittaBalance, consultado em ${reputation.checked}`, url: r.url },
+    { label: "Página oficial do ReduPhine Premium (consultada em 24/10/2026)", url: 'https://reduphinepremium.com.br/monetizze/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Não é golpe, mas não é uma compra tranquila. A VittaBalance tem CNPJ e vende pela Monetizze. Por outro lado, está como "{r.label}" no Reclame Aqui (nota {r.score}, {r.answered} respondidas), a garantia é de 7 dias com o produto lacrado e a página faz promessas proibidas para suplementos. Se comprar, pague no cartão e comece pelo pote avulso.</p>
+  </div>
+
+  <TopCta produto="ReduPhine Premium" href={p.link} />
+
+  <h2>Quem vende</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Marca</th><td>ReduPhine Premium (marca registrada da VittaBalance)</td></tr>
+        <tr><th>CNPJ</th><td>{reduphine.cnpj} (a página mostra o número com a pontuação errada)</td></tr>
+        <tr><th>Atendimento</th><td>{reduphine.sac}</td></tr>
+        <tr><th>Pagamento</th><td>Monetizze</td></tr>
+        <tr><th>Reclame Aqui</th><td>{r.label}, nota {r.score}, {r.complaints} reclamações no período de {r.period}, {r.answered} respondidas</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Sinais de alerta na página</h2>
+  <ul>
+    <li><strong>Promessas proibidas:</strong> "queima gordura localizada", "regula os níveis de colesterol", emagrecer "de forma rápida e definitiva".</li>
+    <li><strong>"Nenhum efeito colateral":</strong> não é verdade para fibras nem para cafeína.</li>
+    <li><strong>"Recomendado por médico e nutricionistas":</strong> sem nome nem registro profissional.</li>
+    <li><strong>Garantia confusa:</strong> o rodapé fala em "garantia de 30 dias", mas as regras dizem 7 dias, lacrado, com frete do cliente.</li>
+    <li><strong>Urgência:</strong> "restam poucos frascos" com a data do dia, que muda todo dia.</li>
+  </ul>
+
+  <h2>Como se proteger se comprar</h2>
+  <ol>
+    <li>Compre só pelo site oficial e pague no cartão de crédito.</li>
+    <li>Comece pelo pote avulso, já que a garantia só vale para produto lacrado.</li>
+    <li>Guarde o número do pedido e os e-mails.</li>
+    <li>Se o pedido não chegar, escreva para {reduphine.sac}, acione o suporte da Monetizze e, se preciso, peça a contestação ao banco.</li>
+  </ol>
+  <p>Se prefere um produto parecido de empresa com atendimento melhor avaliado, compare com o <a href="/ozenvitta/">OzenVitta</a>.</p>
+</Article>

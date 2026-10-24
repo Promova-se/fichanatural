@@ -1,0 +1,50 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import TopCta from '../../../components/TopCta.astro';
+import { azmulher as p, azmulherPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Qual o melhor horário para tomar Super AZ Mulher?', a: 'Com a primeira refeição, como orienta o fabricante. Por causa do guaraná, evite tomar à tarde ou à noite.' },
+  { q: 'Grávida pode tomar Super AZ Mulher?', a: 'O fabricante pede que gestantes e lactantes consultem o médico. Na gestação, prefira o polivitamínico indicado no pré-natal, com dose conhecida de ácido fólico e ferro, e evite cafeína em excesso.' },
+  { q: 'Posso tomar com anticoncepcional?', a: 'Não há interação conhecida entre polivitamínicos comuns e anticoncepcionais. Na dúvida, confirme com o médico.' },
+];
+---
+<Article
+  ogImage="/img/super-az-mulher/og-super-az-mulher.jpg"
+  title="Como tomar Super AZ Mulher: horário, cafeína e cuidados"
+  seoTitle="Como tomar Super AZ Mulher"
+  description="Como tomar o Super AZ Mulher Nature's Prime: 1 cápsula por dia com a primeira refeição, cuidado com o guaraná, gestação e combinação com outros suplementos."
+  kicker="Modo de uso"
+  lead="Uma cápsula por dia, com a primeira refeição. Os cuidados principais são o guaraná e a gestação."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }, { name: 'Super AZ Mulher', href: '/super-az-mulher/' }, { name: 'Como tomar', href: '/super-az-mulher/como-tomar/' }]}
+  faq={faq}
+  related={azmulherPages}
+  sources={[
+    { label: "Página oficial do Super AZ Mulher (consultada em 24/10/2026)", url: 'https://naturesprime.ind.br/superazmulher1/' },
+    { label: 'NIH Office of Dietary Supplements: Multivitamin/mineral supplements', url: 'https://ods.od.nih.gov/factsheets/MVMS-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>1 cápsula por dia, inteira, com água e com a primeira refeição. Não tome à noite, por causa do guaraná. Gestantes, lactantes, quem tem pressão alta, ansiedade, insônia ou toma remédio contínuo devem falar com o médico antes.</p>
+  </div>
+
+  <TopCta produto="Super AZ Mulher" href={p.link} />
+
+  <h2>Dose e horário</h2>
+  <ol>
+    <li>Tome 1 cápsula por dia, com o café da manhã.</li>
+    <li>Não dobre a dose: mais cápsulas somam mais vitaminas A e D e mais cafeína.</li>
+    <li>Use por 2 a 3 meses e avalie, de preferência com exames.</li>
+  </ol>
+
+  <h2>Cuidados</h2>
+  <ul>
+    <li><strong>Cafeína:</strong> some com café, chá-mate e energéticos.</li>
+    <li><strong>Outros suplementos:</strong> cuidado ao somar vitamina D, vitamina A, ferro e zinco.</li>
+    <li><strong>Remédios para tireoide:</strong> tome com 4 horas de diferença, porque os minerais atrapalham a absorção.</li>
+    <li><strong>Anticoagulantes:</strong> polivitamínicos costumam ter vitamina K; avise o médico.</li>
+  </ul>
+
+  <BuyBox compact produto="Super AZ Mulher" href={p.link} title="Super AZ Mulher no site oficial" text="Pote de 60 cápsulas para 60 dias, a partir de R$ 129,90." cta="Ver kits e preços" />
+</Article>

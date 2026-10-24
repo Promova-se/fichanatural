@@ -1,0 +1,62 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import TopCta from '../../../components/TopCta.astro';
+import { azhomem as p, azhomemPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Polivitamínico dá energia?', a: 'Só para quem tem falta de alguma vitamina ou mineral, como B12 ou ferro. Para quem se alimenta bem, os estudos não mostram mais disposição. No Super AZ Homem, a sensação de energia vem sobretudo dos 75 mg de cafeína.' },
+  { q: 'Polivitamínico protege o coração?', a: 'Não. A força-tarefa de prevenção dos Estados Unidos (USPSTF) revisou os estudos em 2022 e concluiu que polivitamínicos não previnem doença cardiovascular.' },
+  { q: 'Polivitamínico melhora a imunidade?', a: 'Corrige deficiências que atrapalham a imunidade, como de zinco, vitamina C e vitamina D. Em quem não tem falta, não há prova de menos gripes ou infecções.' },
+];
+---
+<Article
+  ogImage="/img/super-az-homem/og-super-az-homem.jpg"
+  title="Super AZ Homem funciona? O que um polivitamínico faz de verdade"
+  seoTitle="Super AZ Homem funciona?"
+  description="O Super AZ Homem funciona? O que os estudos mostram sobre polivitamínicos para energia, coração, imunidade e saúde masculina, e o papel da cafeína do guaraná."
+  kicker="Funciona?"
+  lead="Funciona para cobrir falhas da alimentação. Para energia, coração e imunidade de quem já come bem, a ciência é bem menos animadora que a página de vendas."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }, { name: 'Super AZ Homem', href: '/super-az-homem/' }, { name: 'Funciona?', href: '/super-az-homem/funciona/' }]}
+  faq={faq}
+  related={azhomemPages}
+  sources={[
+    { label: 'US Preventive Services Task Force: Vitamin, mineral, and multivitamin supplementation to prevent cardiovascular disease and cancer, 2022', url: 'https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/vitamin-supplementation-to-prevent-cvd-and-cancer-preventive-medication' },
+    { label: 'Gaziano JM et al. Multivitamins in the prevention of cancer in men (Physicians\' Health Study II). JAMA, 2012', url: 'https://jamanetwork.com/journals/jama/fullarticle/1380451' },
+    { label: 'NIH Office of Dietary Supplements: Multivitamin/mineral supplements, fact sheet for health professionals', url: 'https://ods.od.nih.gov/factsheets/MVMS-HealthProfessional/' },
+    { label: "Página oficial do Super AZ Homem (consultada em 24/10/2026)", url: 'https://naturesprime.ind.br/superazhomem1/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>Para quem come mal ou tem dieta restrita, um polivitamínico como o Super AZ Homem ajuda a fechar as lacunas. Para quem se alimenta bem, os grandes estudos não mostram mais energia, menos doença cardíaca nem imunidade melhor. A disposição que se sente nos primeiros dias vem principalmente dos 75 mg de cafeína do guaraná.</p>
+  </div>
+
+  <TopCta produto="Super AZ Homem" href={p.link} />
+
+  <h2>Promessa por promessa</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>A página promete</th><th>O que os estudos mostram</th></tr></thead>
+      <tbody>
+        <tr><td>Energia e disposição</td><td>Vitaminas B ajudam o metabolismo energético, mas só fazem diferença em quem tem falta. A cafeína dá um efeito real e passageiro</td></tr>
+        <tr><td>Apoio à saúde cardiovascular</td><td>Polivitamínicos não previnem infarto nem AVC (revisão da USPSTF, 2022)</td></tr>
+        <tr><td>Fortalece a imunidade</td><td>Zinco, vitamina C e vitamina D são necessários para a imunidade; suplementar ajuda quem tem deficiência</td></tr>
+        <tr><td>Desempenho físico e mental (depoimentos)</td><td>Sem efeito comprovado em adultos bem nutridos, além do efeito da cafeína</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>O que dizem os grandes estudos</h2>
+  <p>O maior estudo com homens, o Physicians' Health Study II, acompanhou cerca de 14 mil médicos por 11 anos. Quem tomou polivitamínico teve 8% menos câncer no total, um efeito pequeno, e nenhuma diferença em doença cardíaca. Estudos mais recentes em idosos sugerem um pequeno benefício na memória, ainda em discussão. Nenhum desses estudos usou guaraná.</p>
+
+  <h2>Para quem faz sentido</h2>
+  <ul>
+    <li>Quem come pouca fruta, verdura e variedade de alimentos.</li>
+    <li>Quem faz dieta para emagrecer com muita restrição.</li>
+    <li>Vegetarianos, que podem ter falta de B12 (mas devem medir no exame).</li>
+    <li>Idosos com pouco apetite, com orientação médica.</li>
+  </ul>
+  <p>Se o objetivo é energia, vale primeiro conferir sono, alimentação e exames de sangue (ferro, B12, vitamina D, tireoide).</p>
+
+  <BuyBox compact produto="Super AZ Homem" href={p.link} title="Super AZ Homem no site oficial" text="Pote de 60 dias a partir de R$ 129,90." cta="Ver kits e preços" />
+</Article>

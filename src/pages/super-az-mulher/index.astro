@@ -1,0 +1,86 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import TopCta from '../../components/TopCta.astro';
+import { azmulher as p, azmulherPages, natures } from '../../data/site';
+
+const faq = [
+  { q: 'O que tem no Super AZ Mulher?', a: 'Segundo a página e a loja oficial, 22 vitaminas e minerais e guaraná, em 1 cápsula por dia. Diferente do Super AZ Homem, a tabela nutricional do Super AZ Mulher não está publicada, então não dá para conferir as doses antes de comprar.' },
+  { q: 'Super AZ Mulher tem cafeína?', a: 'Tem guaraná, que é fonte de cafeína. A quantidade não está publicada; na versão masculina são 75 mg por cápsula, cerca de uma xícara pequena de café.' },
+  { q: 'Super AZ Mulher ajuda nos hormônios?', a: 'Não há base para isso. Vitaminas e minerais não regulam hormônios em quem não tem deficiência. Sintomas de TPM, menopausa ou alterações hormonais pedem avaliação médica.' },
+];
+---
+<Article
+  ogImage="/img/super-az-mulher/og-super-az-mulher.jpg"
+  title="Super AZ Mulher Nature's Prime: ficha completa, composição, preço e o que esperar"
+  seoTitle="Super AZ Mulher Nature's Prime: composição e preço"
+  description="Ficha do Super AZ Mulher Nature's Prime: o que a fórmula tem, por que a tabela faz falta, preço dos kits, promessas de saúde hormonal, pele e cabelo e o que um polivitamínico faz de verdade."
+  kicker="Ficha de produto"
+  lead="Polivitamínico feminino de 1 cápsula por dia, com 22 vitaminas e minerais e guaraná. A marca é confiável, mas, desta vez, a tabela nutricional não está publicada."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }, { name: 'Super AZ Mulher', href: '/super-az-mulher/' }]}
+  faq={faq}
+  related={[...azmulherPages, { href: '/super-az-homem/', title: "Super AZ Homem Nature's Prime: ficha completa" }, { href: '/menopausa/', title: 'Suplemento para menopausa funciona? O que ajuda de verdade nos calores' }]}
+  sources={[
+    { label: "Página oficial do Super AZ Mulher e checkouts da Monetizze (consultados em 24/10/2026)", url: 'https://naturesprime.ind.br/superazmulher1/' },
+    { label: "Loja oficial Nature's Prime: Super AZ Mulher (consultada em 24/10/2026)", url: 'https://loja.naturesprime.com.br/super-az/super-az-mulher-60-capsulas' },
+    { label: 'NIH Office of Dietary Supplements: Multivitamin/mineral supplements', url: 'https://ods.od.nih.gov/factsheets/MVMS-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Polivitamínico feminino com 22 vitaminas e minerais e guaraná, 1 cápsula por dia, pote de 60 dias, de R$ 1,28 a R$ 2,17 por dia. Fabricante com CNPJ e sem reclamações. O ponto fraco é que a tabela nutricional não aparece na página nem na loja oficial, ao contrário da versão masculina. A página promete apoio à saúde hormonal, pele, cabelo e coração, o que um polivitamínico só faz em quem tem deficiência.</p>
+  </div>
+
+  <TopCta produto="Super AZ Mulher" href={p.link} />
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>Super AZ Mulher, 60 cápsulas, Nature's Prime</td></tr>
+        <tr><th>Fabricante</th><td>{natures.maker}, CNPJ {natures.cnpj}</td></tr>
+        <tr><th>Composição</th><td>22 vitaminas e minerais e guaraná; doses não publicadas</td></tr>
+        <tr><th>Dose</th><td>1 cápsula por dia, com a primeira refeição</td></tr>
+        <tr><th>Duração do pote</th><td>60 dias</td></tr>
+        <tr><th>Atendimento</th><td>{natures.sac} e (62) 3701-4638</td></tr>
+        <tr><th>Garantia</th><td>30 dias na página de vendas</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Por que a tabela faz falta</h2>
+  <p>Num polivitamínico feminino, os números que mais importam são <strong>ferro</strong> e <strong>ácido fólico</strong>: mulheres em idade fértil precisam de mais ferro que homens, e quem pode engravidar deve ter ácido fólico suficiente. Também pesa a quantidade de <strong>cafeína</strong> do guaraná. Sem a tabela, não dá para saber se a fórmula atende a essas necessidades.</p>
+  <p>A versão masculina, que publicamos na <a href="/super-az-homem/">ficha do Super AZ Homem</a>, tem tabela completa, com doses equilibradas e 75 mg de cafeína. É provável que a feminina siga um padrão parecido, mas é uma suposição. Confira o rótulo ao receber ou peça a tabela ao SAC antes de comprar.</p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores conferidos nos checkouts em 24/10/2026. Parcelamento em até 12x com juros.</p>
+  <KitCards kits={p.kits} unit="mês" produto="Super AZ Mulher" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Marca com CNPJ e sem reclamações no Reclame Aqui</li>
+        <li>1 cápsula por dia, pote para 2 meses</li>
+        <li>Garantia de 30 dias</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Tabela nutricional não publicada</li>
+        <li>Cafeína do guaraná em quantidade não informada</li>
+        <li>Promete "saúde hormonal", sem base para um polivitamínico</li>
+        <li>Depoimentos sem como conferir</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>Vem de uma marca que costuma informar tudo, o que dá alguma segurança. Mas, para um produto voltado a mulheres, a falta da tabela pesa: sem saber o ferro e o ácido fólico, fica difícil dizer para quem ele é adequado. Se estiver grávida, tentando engravidar ou amamentando, prefira um polivitamínico indicado no pré-natal.</p>
+  </div>
+
+  <BuyBox compact produto="Super AZ Mulher" href={p.link} title="Super AZ Mulher no site oficial" text="1 cápsula por dia, pote de 60 dias a partir de R$ 129,90." cta="Ver kits e preços" />
+</Article>

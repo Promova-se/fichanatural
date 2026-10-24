@@ -731,6 +731,49 @@ export const npq10Pages = [
   { href: '/coenzima-q10-natures-prime/onde-comprar/', title: "Onde comprar Coenzima Q10 Nature's Prime: preço e kits", short: 'Onde comprar' },
 ];
 
+const azRef = (mcr: string, plan: string) => `https://app.monetizze.com.br/r/${mcr}?u=c&pl=${plan}`;
+export const azhomem = { name: "Super AZ Homem Nature's Prime", link: 'https://app.monetizze.com.br/r/ANL25864149', kits: [
+  { name: '1 pote', qty: '60 cápsulas · 60 dias', months: 2, total: 129.9, installments: '12x de R$ 13,04', plan: azRef('ANL25864149', 'HH303648') },
+  { name: '2 potes', qty: '120 cápsulas · 120 dias', months: 4, total: 174.9, installments: '12x de R$ 17,56', plan: azRef('ANL25864149', 'JB303649') },
+  { name: '3 potes', qty: '180 cápsulas · 180 dias', months: 6, total: 229.9, installments: '12x de R$ 23,08', plan: azRef('ANL25864149', 'QW344461') },
+] };
+export const azhomemPages = [
+  { href: '/super-az-homem/', title: "Super AZ Homem Nature's Prime: ficha, composição e preço", short: 'Ficha completa' },
+  { href: '/super-az-homem/funciona/', title: 'Super AZ Homem funciona? O que um polivitamínico faz de verdade', short: 'Funciona?' },
+  { href: '/super-az-homem/como-tomar/', title: 'Como tomar Super AZ Homem: horário, cafeína e cuidados', short: 'Como tomar' },
+  { href: '/super-az-homem/onde-comprar/', title: 'Onde comprar Super AZ Homem: preço dos kits e custo por dia', short: 'Onde comprar' },
+];
+export const azmulher = { name: "Super AZ Mulher Nature's Prime", link: 'https://app.monetizze.com.br/r/AKA25864150', kits: [
+  { name: '1 pote', qty: '60 cápsulas · 60 dias', months: 2, total: 129.9, installments: '12x de R$ 13,04', plan: azRef('AKA25864150', 'AN303651') },
+  { name: '2 potes', qty: '120 cápsulas · 120 dias', months: 4, total: 174.9, installments: '12x de R$ 17,56', plan: azRef('AKA25864150', 'TA303652') },
+  { name: '3 potes', qty: '180 cápsulas · 180 dias', months: 6, total: 229.9, installments: '12x de R$ 23,08', plan: azRef('AKA25864150', 'YG344467') },
+] };
+export const azmulherPages = [
+  { href: '/super-az-mulher/', title: "Super AZ Mulher Nature's Prime: ficha, composição e preço", short: 'Ficha completa' },
+  { href: '/super-az-mulher/funciona/', title: 'Super AZ Mulher funciona? Energia, cabelo, pele e hormônios', short: 'Funciona?' },
+  { href: '/super-az-mulher/como-tomar/', title: 'Como tomar Super AZ Mulher: horário, cafeína e cuidados', short: 'Como tomar' },
+  { href: '/super-az-mulher/onde-comprar/', title: 'Onde comprar Super AZ Mulher: preço dos kits e custo por dia', short: 'Onde comprar' },
+];
+const rpRef = (plan: string) => `https://app.monetizze.com.br/r/AVA25864151?u=c&pl=${plan}`;
+export const reduphinePremium = {
+  name: 'ReduPhine Premium',
+  link: 'https://app.monetizze.com.br/r/AVA25864151',
+  ingredients: ['Laranja moro', 'Ágar-ágar', 'Cromo', 'Guaraná', 'Colágeno', 'Spirulina', 'Vitamina B12', 'Extrato de uva', 'Fibra de beterraba', 'Quitosana', 'Chlorella', 'Psyllium', 'Vitamina C', 'Inulina'],
+  kits: [
+    { name: '1 pote', qty: '60 cápsulas · 30 dias', months: 1, total: 147, installments: '12x de R$ 14,76', plan: rpRef('PP304082') },
+    { name: 'Leve 3, pague 2', qty: '3 potes · 90 dias', months: 3, total: 187, installments: '12x de R$ 18,78', plan: rpRef('TN304084') },
+    { name: 'Leve 5, pague 3', qty: '5 potes · 150 dias', months: 5, total: 247, installments: '12x de R$ 24,80', plan: rpRef('WT304086') },
+    { name: 'Leve 8, pague 5', qty: '8 potes · 240 dias', months: 8, total: 377, installments: '12x de R$ 37,85', plan: rpRef('KU304088') },
+  ],
+};
+export const reduphinePremiumPages = [
+  { href: '/reduphine-premium/', title: 'ReduPhine Premium: ficha, 14 ingredientes, preço e o que esperar', short: 'Ficha completa' },
+  { href: '/reduphine-premium/funciona/', title: 'ReduPhine Premium funciona? O que a fórmula pode fazer pelo peso', short: 'Funciona?' },
+  { href: '/reduphine-premium/como-tomar/', title: 'Como tomar ReduPhine Premium: horário, efeitos colaterais e cuidados', short: 'Como tomar' },
+  { href: '/reduphine-premium/onde-comprar/', title: 'Onde comprar ReduPhine Premium: kits, preço e garantia', short: 'Onde comprar' },
+  { href: '/reduphine-premium/e-confiavel/', title: 'ReduPhine Premium é confiável? Empresa, Reclame Aqui e garantia', short: 'É confiável?' },
+];
+
 export const catalog = [
   { name: 'OzenVitta', href: '/ozenvitta/', pill: 'Emagrecimento', summary: 'Fibras, L-carnitina, laranja moro e cromo em cápsulas.', pages: ozenvittaPages },
   { name: 'ReduPhine Caps', href: '/reduphine-caps/', pill: 'Emagrecimento', summary: 'Spirulina, psyllium, quitosana e cromo, com opção de combo com gotas.', pages: reduphinePages },
@@ -746,6 +789,9 @@ export const catalog = [
   { name: 'Lizz Anté Nutri', href: '/lizz-ante-nutri/', pill: 'Cabelo, pele e unhas', summary: 'Cápsulas da Lizz Anté com biotina, colágeno, silício, zinco e mais 5 ativos.', pages: lizznutriPages },
   { name: 'Kit S.O.S Crescimento', href: '/kit-sos-crescimento/', pill: 'Cabelo', summary: 'Shampoo, máscara e tônico da Lizz Anté para queda e crescimento capilar.', pages: kitsosPages },
   { name: 'Hot Men Caps', href: '/hot-men-caps/', pill: 'Saúde masculina', summary: 'Cápsulas vendidas para desempenho sexual masculino, sem ingredientes na página oficial.', pages: hotmenPages },
+  { name: "Super AZ Homem Nature's Prime", href: '/super-az-homem/', pill: 'Vitaminas e minerais', summary: 'Polivitamínico masculino com 22 vitaminas e minerais e 75 mg de cafeína do guaraná, 1 cápsula por dia.', pages: azhomemPages },
+  { name: "Super AZ Mulher Nature's Prime", href: '/super-az-mulher/', pill: 'Vitaminas e minerais', summary: 'Polivitamínico feminino com 22 vitaminas e minerais e guaraná, 1 cápsula por dia. Tabela não publicada.', pages: azmulherPages },
+  { name: 'ReduPhine Premium', href: '/reduphine-premium/', pill: 'Emagrecimento', summary: 'Versão com 14 ingredientes do ReduPhine: fibras, laranja moro, quitosana, cromo e guaraná, sem doses na página.', pages: reduphinePremiumPages },
   { name: "Magnésio Dimalato Nature's Prime", href: '/magnesio-dimalato-natures-prime/', pill: 'Minerais', summary: 'Magnésio dimalato em cápsulas, 260 mg de magnésio em 2 cápsulas.', pages: npmagPages },
   { name: "Ômega 3 Nature's Prime", href: '/omega-3-natures-prime/', pill: 'Vitaminas e óleos', summary: 'Óleo de peixe com 540 mg de EPA e 360 mg de DHA em 3 cápsulas.', pages: npomegaPages },
   { name: "Coenzima Q10 Nature's Prime", href: '/coenzima-q10-natures-prime/', pill: 'Energia', summary: 'Coenzima Q10 de 100 mg por cápsula, 60 cápsulas.', pages: npq10Pages },
@@ -761,7 +807,7 @@ export const catalog = [
 export const categories = [
   { slug: 'emagrecimento', name: 'Emagrecimento', icon: 'scale', color: '#b8402a',
     desc: 'Cápsulas e gotas vendidas para emagrecer: fibras, laranja moro, cafeína e cromo. O que cada uma tem e o que dá para esperar.',
-    products: ['/ozenvitta/', '/reduphine-caps/', '/inibe-one/', '/detox-fit-caps-black/', '/dtx-black/', '/mounjax/', '/tg30/'],
+    products: ['/ozenvitta/', '/reduphine-caps/', '/reduphine-premium/', '/inibe-one/', '/detox-fit-caps-black/', '/dtx-black/', '/mounjax/', '/tg30/'],
     guides: ['/ozenvitta-ou-reduphine/', '/laranja-moro/', '/psyllium/'] },
   { slug: 'pele-cabelo-e-unhas', name: 'Pele, cabelo e unhas', icon: 'drop', color: '#a0577a',
     desc: 'Colágenos, fórmulas para cabelo e kits capilares. Doses, tipos de colágeno e o que os estudos mostram para pele e queda de cabelo.',
@@ -772,8 +818,8 @@ export const categories = [
     products: ['/colageno-tipo-2-natures-prime/', '/artic-protect/', '/collagen-osteo/'],
     guides: ['/melhor-colageno-tipo-2/', '/colageno/'] },
   { slug: 'vitaminas-e-minerais', name: 'Vitaminas e minerais', icon: 'capsule', color: '#24513d',
-    desc: 'Magnésio, ômega 3 e coenzima Q10: qual forma escolher, quanto tomar e quando vale a pena suplementar.',
-    products: ['/6-magnesios/', '/magnesio-dimalato-natures-prime/', '/omega-3-natures-prime/', '/coenzima-q10-natures-prime/'],
+    desc: 'Polivitamínicos, magnésio, ômega 3 e coenzima Q10: qual forma escolher, quanto tomar e quando vale a pena suplementar.',
+    products: ['/super-az-homem/', '/super-az-mulher/', '/6-magnesios/', '/magnesio-dimalato-natures-prime/', '/omega-3-natures-prime/', '/coenzima-q10-natures-prime/'],
     guides: ['/magnesio/', '/6-magnesios-ou-magnesio-dimalato/', '/omega-3/'] },
   { slug: 'treino-e-energia', name: 'Treino e energia', icon: 'bolt', color: '#b07a12',
     desc: 'Creatina, maca e coenzima Q10. O que tem evidência para força e disposição, e o que é só promessa.',
@@ -781,16 +827,16 @@ export const categories = [
     guides: ['/creatina/'] },
   { slug: 'saude-masculina', name: 'Saúde masculina', icon: 'shield', color: '#4a4f8c',
     desc: 'Suplementos vendidos para desempenho e libido masculina. O que eles têm e os riscos de comprar sem saber.',
-    products: ['/hot-men-caps/', '/maca-peruana-negra/'],
+    products: ['/super-az-homem/', '/hot-men-caps/', '/maca-peruana-negra/'],
     guides: [] },
   { slug: 'saude-da-mulher', name: 'Saúde da mulher', icon: 'flower', color: '#8a4f9e',
     desc: 'Menopausa, ossos e pele: o que ajuda de verdade nas fases da vida da mulher.',
-    products: ['/colageno-tipo-2-natures-prime/', '/collagen-vitta/', '/6-magnesios/'],
+    products: ['/super-az-mulher/', '/colageno-tipo-2-natures-prime/', '/collagen-vitta/', '/6-magnesios/'],
     guides: ['/menopausa/', '/colageno/', '/magnesio/'] },
 ];
 
 export const brands = [
-  { slug: 'natures-prime', name: "Nature's Prime", href: '/marca/natures-prime/', desc: 'Indústria de Anápolis (GO), com 6 produtos analisados.' },
+  { slug: 'natures-prime', name: "Nature's Prime", href: '/marca/natures-prime/', desc: 'Indústria de Anápolis (GO), com 8 produtos analisados.' },
 ];
 
 const allGuidePages = () => [...comparePages, ...ingredientGuides, ...guides];

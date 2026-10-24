@@ -1,0 +1,101 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import TopCta from '../../components/TopCta.astro';
+import { azhomem as p, azhomemPages, natures } from '../../data/site';
+
+const faq = [
+  { q: 'O que tem no Super AZ Homem?', a: 'Segundo a tabela nutricional, cada cápsula tem 13 vitaminas, 9 minerais e 75 mg de cafeína vinda do guaraná. A maioria das vitaminas do complexo B fica em torno de 100% do valor diário; vitamina D tem 167%, zinco 64% e magnésio só 15%.' },
+  { q: 'Super AZ Homem tem cafeína?', a: 'Sim, 75 mg por cápsula, vinda do guaraná. É mais ou menos o que tem uma xícara pequena de café coado. Quem é sensível a cafeína deve tomar de manhã.' },
+  { q: 'Quanto custa o Super AZ Homem?', a: 'Nos checkouts de 24/10/2026: 1 pote por R$ 129,90, 2 por R$ 174,90 e 3 por R$ 229,90. Cada pote dura 60 dias, o que dá de R$ 1,28 a R$ 2,17 por dia.' },
+];
+const rows = [
+  ['Vitamina A', '600 mcg', '75%'], ['Vitamina D', '25 mcg (1.000 UI)', '167%'], ['Vitamina E', '10 mg', '67%'], ['Vitamina K', '65 mcg', '54%'],
+  ['Vitamina C', '45 mg', '45%'], ['Vitamina B1', '1,2 mg', '100%'], ['Vitamina B2', '1,3 mg', '108%'], ['Niacina (B3)', '16 mg', '107%'],
+  ['Ácido pantotênico (B5)', '5 mg', '100%'], ['Vitamina B6', '1,3 mg', '100%'], ['Biotina', '30 mcg', '100%'], ['Ácido fólico', '200 mcg', '50%'],
+  ['Vitamina B12', '2,4 mcg', '100%'], ['Cobre', '450 mcg', '50%'], ['Cromo', '25 mcg', '71%'], ['Ferro', '3,5 mg', '25%'],
+  ['Iodo', '33 mcg', '22%'], ['Magnésio', '63 mg', '15%'], ['Manganês', '1,6 mg', '53%'], ['Molibdênio', '23 mcg', '51%'],
+  ['Selênio', '20 mcg', '33%'], ['Zinco', '7 mg', '64%'], ['Cafeína (do guaraná)', '75 mg', '-'],
+];
+---
+<Article
+  ogImage="/img/super-az-homem/og-super-az-homem.jpg"
+  title="Super AZ Homem Nature's Prime: ficha completa, composição, preço e o que esperar"
+  seoTitle="Super AZ Homem Nature's Prime: composição e preço"
+  description="Ficha do Super AZ Homem Nature's Prime: as 22 vitaminas e minerais com dose, 75 mg de cafeína, preço dos kits, o que a página promete e o que um polivitamínico faz de verdade."
+  kicker="Ficha de produto"
+  lead="Um polivitamínico de 1 cápsula por dia, com tabela completa e cafeína do guaraná. Bem feito para o que é, mas um polivitamínico não faz o que a página sugere."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }, { name: 'Super AZ Homem', href: '/super-az-homem/' }]}
+  faq={faq}
+  related={[...azhomemPages, { href: '/super-az-mulher/', title: "Super AZ Mulher Nature's Prime: ficha completa" }, { href: '/marca/natures-prime/', title: "Nature's Prime é confiável? A marca e todos os produtos" }]}
+  sources={[
+    { label: "Página oficial do Super AZ Homem e checkouts da Monetizze (consultados em 24/10/2026)", url: 'https://naturesprime.ind.br/superazhomem1/' },
+    { label: "Loja oficial Nature's Prime: tabela nutricional do Super AZ Homem (consultada em 24/10/2026)", url: 'https://loja.naturesprime.com.br/super-az/super-az-homem' },
+    { label: 'US Preventive Services Task Force: Vitamin, mineral, and multivitamin supplementation to prevent cardiovascular disease and cancer, 2022', url: 'https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/vitamin-supplementation-to-prevent-cvd-and-cancer-preventive-medication' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Polivitamínico masculino com 22 vitaminas e minerais e 75 mg de cafeína do guaraná, 1 cápsula por dia, tabela completa e doses dentro dos limites seguros. Fabricante com CNPJ e sem reclamações. Custa de R$ 1,28 a R$ 2,17 por dia. Serve para cobrir falhas da alimentação; não aumenta energia de quem já se alimenta bem e não protege o coração, como a página dá a entender. A "energia" que se sente vem principalmente da cafeína.</p>
+  </div>
+
+  <TopCta produto="Super AZ Homem" href={p.link} />
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>Super AZ Homem, 60 cápsulas, Nature's Prime</td></tr>
+        <tr><th>Fabricante</th><td>{natures.maker}, CNPJ {natures.cnpj}</td></tr>
+        <tr><th>Dose</th><td>1 cápsula (0,5 g) por dia, com uma refeição</td></tr>
+        <tr><th>Duração do pote</th><td>60 dias</td></tr>
+        <tr><th>Atendimento</th><td>{natures.sac} e (62) 3701-4638</td></tr>
+        <tr><th>Garantia</th><td>30 dias na página de vendas</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Composição por cápsula</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Nutriente</th><th>Quantidade</th><th>% do valor diário</th></tr></thead>
+      <tbody>
+        {rows.map(([n, q, v]) => <tr><td>{n}</td><td>{q}</td><td>{v}</td></tr>)}
+      </tbody>
+    </table>
+  </div>
+  <p>A fórmula é equilibrada para um polivitamínico: vitaminas do complexo B perto de 100%, vitamina D acima (1.000 UI, ainda bem abaixo do limite de 4.000 UI) e pouco ferro, o que faz sentido para homens. O magnésio é baixo (63 mg), como em quase todo polivitamínico de uma cápsula. A tabela não diz a forma da vitamina A; em excesso e por muito tempo, a forma retinol se acumula, então não some com outro suplemento de vitamina A.</p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores conferidos nos checkouts em 24/10/2026. Parcelamento em até 12x com juros.</p>
+  <KitCards kits={p.kits} unit="mês" produto="Super AZ Homem" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Tabela completa, com dose de cada nutriente</li>
+        <li>Doses dentro dos limites seguros</li>
+        <li>1 cápsula por dia, pote para 2 meses</li>
+        <li>Fabricante com CNPJ e sem reclamações no Reclame Aqui</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>75 mg de cafeína: atrapalha o sono se tomado tarde</li>
+        <li>Promete apoio à saúde do coração, sem evidência para polivitamínicos</li>
+        <li>Depoimentos com fotos de banco de imagens</li>
+        <li>Polivitamínicos de farmácia com fórmula parecida podem sair mais baratos</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>É um polivitamínico honesto na composição, com a vantagem de mostrar a tabela inteira. Faz sentido para quem come pouca variedade, pula refeições ou tem uma dieta restrita. Quem come bem dificilmente vai notar diferença, a não ser o efeito da cafeína. Antes de comprar, vale comparar com os polivitamínicos de farmácia, que costumam custar menos por dia.</p>
+  </div>
+
+  <BuyBox compact produto="Super AZ Homem" href={p.link} title="Super AZ Homem no site oficial" text="1 cápsula por dia, pote de 60 dias a partir de R$ 129,90." cta="Ver kits e preços" />
+</Article>

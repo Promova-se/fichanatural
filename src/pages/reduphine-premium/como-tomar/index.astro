@@ -1,0 +1,55 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import TopCta from '../../../components/TopCta.astro';
+import { reduphinePremium as p, reduphinePremiumPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Qual o horário para tomar ReduPhine Premium?', a: '1 cápsula 30 minutos antes do almoço e 1 cápsula 30 minutos antes do jantar (ou do lanche da tarde), com um copo cheio de água. Por causa do guaraná, quem tem insônia deve trocar o jantar pelo lanche da tarde.' },
+  { q: 'ReduPhine Premium tem efeito colateral?', a: 'A página diz que não, mas fibras podem causar gases, inchaço e, sem água suficiente, prisão de ventre. O guaraná pode causar insônia, ansiedade e taquicardia em pessoas sensíveis.' },
+  { q: 'Quem não pode tomar ReduPhine Premium?', a: 'Alérgicos a peixes e crustáceos (por causa da quitosana e do colágeno), menores de idade, gestantes, lactantes e quem tem pressão alta, arritmia, doença intestinal ou toma remédios de uso contínuo sem orientação médica.' },
+];
+---
+<Article
+  ogImage="/img/reduphine-premium/og-reduphine-premium.jpg"
+  title="Como tomar ReduPhine Premium: horário, efeitos colaterais e cuidados"
+  seoTitle="Como tomar ReduPhine Premium"
+  description="Como tomar o ReduPhine Premium: 2 cápsulas antes do almoço e do jantar, quanto de água, efeitos colaterais, intervalo com remédios e quem não pode usar."
+  kicker="Modo de uso"
+  lead="Duas cápsulas por dia, antes das refeições, sempre com bastante água. As fibras exigem cuidado com o intervalo para remédios."
+  crumbs={[{ name: 'ReduPhine Premium', href: '/reduphine-premium/' }, { name: 'Como tomar', href: '/reduphine-premium/como-tomar/' }]}
+  faq={faq}
+  related={reduphinePremiumPages}
+  sources={[
+    { label: "Página oficial do ReduPhine Premium (consultada em 24/10/2026)", url: 'https://reduphinepremium.com.br/monetizze/' },
+    { label: 'NIH Office of Dietary Supplements: Dietary supplements for weight loss', url: 'https://ods.od.nih.gov/factsheets/WeightLoss-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>1 cápsula 30 minutos antes do almoço e 1 antes do jantar, cada uma com um copo cheio de água. Deixe 2 horas de intervalo de qualquer remédio, porque as fibras atrapalham a absorção. Alérgicos a peixes e crustáceos não podem tomar.</p>
+  </div>
+
+  <TopCta produto="ReduPhine Premium" href={p.link} />
+
+  <h2>Dose e horário</h2>
+  <ol>
+    <li>Tome 1 cápsula 30 minutos antes do almoço, com um copo cheio de água.</li>
+    <li>Tome a segunda 30 minutos antes do jantar, ou do lanche da tarde se a cafeína atrapalhar o sono.</li>
+    <li>Beba bastante água ao longo do dia: fibras sem água podem prender o intestino.</li>
+    <li>Não aumente a dose por conta própria.</li>
+  </ol>
+
+  <h2>Intervalo com remédios</h2>
+  <p>Psyllium, ágar-ágar, quitosana e inulina formam um gel no intestino que pode reduzir a absorção de remédios, como os de tireoide, diabetes, anticoncepcionais e antidepressivos. Tome os remédios pelo menos 2 horas antes ou depois das cápsulas.</p>
+
+  <h2>Quem não deve usar sem falar com o médico</h2>
+  <ul>
+    <li>Alérgicos a peixes e crustáceos (contraindicação da própria página).</li>
+    <li>Gestantes, lactantes e menores de idade.</li>
+    <li>Quem tem pressão alta, arritmia ou ansiedade (guaraná).</li>
+    <li>Quem tem doença intestinal, dificuldade para engolir ou já teve obstrução.</li>
+    <li>Quem toma remédios de uso contínuo.</li>
+  </ul>
+
+  <BuyBox compact produto="ReduPhine Premium" href={p.link} title="ReduPhine Premium no site oficial" text="R$ 147 o pote de 30 dias; kits a partir de R$ 187 por 3 potes." cta="Ver kits e preços" />
+</Article>

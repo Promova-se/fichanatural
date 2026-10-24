@@ -1,0 +1,58 @@
+---
+import Article from '../../../layouts/Article.astro';
+import BuyBox from '../../../components/BuyBox.astro';
+import TopCta from '../../../components/TopCta.astro';
+import { azhomem as p, azhomemPages } from '../../../data/site';
+
+const faq = [
+  { q: 'Qual o melhor horário para tomar Super AZ Homem?', a: 'De manhã ou no almoço, com comida. Por causa dos 75 mg de cafeína, evite tomar depois do meio da tarde.' },
+  { q: 'Posso tomar Super AZ Homem com café?', a: 'Pode, mas some a cafeína: a cápsula tem cerca de uma xícara pequena de café. Para adultos saudáveis, o limite costuma ser de 400 mg de cafeína por dia.' },
+  { q: 'Posso tomar com outros suplementos?', a: 'Confira se não está repetindo nutrientes. Vitamina D, vitamina A, zinco e ferro são os que mais pedem atenção quando se somam suplementos.' },
+];
+---
+<Article
+  ogImage="/img/super-az-homem/og-super-az-homem.jpg"
+  title="Como tomar Super AZ Homem: horário, cafeína e cuidados"
+  seoTitle="Como tomar Super AZ Homem"
+  description="Como tomar o Super AZ Homem Nature's Prime: 1 cápsula por dia, melhor horário por causa da cafeína, combinação com outros suplementos e quem deve falar com o médico."
+  kicker="Modo de uso"
+  lead="Uma cápsula por dia, com comida, de preferência de manhã. O cuidado principal é com a cafeína do guaraná."
+  crumbs={[{ name: "Nature's Prime", href: '/marca/natures-prime/' }, { name: 'Super AZ Homem', href: '/super-az-homem/' }, { name: 'Como tomar', href: '/super-az-homem/como-tomar/' }]}
+  faq={faq}
+  related={azhomemPages}
+  sources={[
+    { label: "Página oficial e tabela nutricional do Super AZ Homem (consultadas em 24/10/2026)", url: 'https://loja.naturesprime.com.br/super-az/super-az-homem' },
+    { label: 'NIH Office of Dietary Supplements: Multivitamin/mineral supplements', url: 'https://ods.od.nih.gov/factsheets/MVMS-HealthProfessional/' },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resposta rápida</strong>1 cápsula por dia, com o café da manhã ou o almoço. Não tome à noite, por causa dos 75 mg de cafeína. Quem tem pressão alta, arritmia, ansiedade, insônia ou toma anticoagulante deve falar com o médico antes.</p>
+  </div>
+
+  <TopCta produto="Super AZ Homem" href={p.link} />
+
+  <h2>Dose e horário</h2>
+  <ol>
+    <li>Tome 1 cápsula por dia, com uma refeição, inteira, com água.</li>
+    <li>Prefira a manhã: a cafeína age por várias horas.</li>
+    <li>Não dobre a dose. Mais cápsulas não dão mais energia e aumentam vitamina A, D e cafeína.</li>
+  </ol>
+
+  <h2>Cuidados</h2>
+  <ul>
+    <li><strong>Cafeína:</strong> some com café, chá-mate, energéticos e pré-treinos.</li>
+    <li><strong>Vitamina K (65 mcg):</strong> pode mexer no efeito da varfarina.</li>
+    <li><strong>Vitamina A e D:</strong> não some com outros suplementos dessas vitaminas sem orientação.</li>
+    <li><strong>Remédios para tireoide e alguns antibióticos:</strong> os minerais atrapalham a absorção; tome com 4 horas de diferença.</li>
+  </ul>
+
+  <h2>Quem deve falar com o médico antes</h2>
+  <ul>
+    <li>Quem tem pressão alta, arritmia, ansiedade ou insônia (cafeína).</li>
+    <li>Quem toma anticoagulante.</li>
+    <li>Quem tem doença nos rins ou no fígado.</li>
+    <li>Fumantes não devem tomar suplementos com altas doses de betacaroteno; a tabela não diz a forma da vitamina A.</li>
+  </ul>
+
+  <BuyBox compact produto="Super AZ Homem" href={p.link} title="Super AZ Homem no site oficial" text="Pote de 60 cápsulas para 60 dias, a partir de R$ 129,90." cta="Ver kits e preços" />
+</Article>

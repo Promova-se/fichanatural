@@ -1,0 +1,100 @@
+---
+import Article from '../../layouts/Article.astro';
+import BuyBox from '../../components/BuyBox.astro';
+import KitCards from '../../components/KitCards.astro';
+import TopCta from '../../components/TopCta.astro';
+import { reduphinePremium as p, reduphinePremiumPages, reduphine, reputation } from '../../data/site';
+
+const r = reputation.vittabalance;
+const faq = [
+  { q: 'Qual a diferença entre ReduPhine Premium e ReduPhine Caps?', a: 'O Caps tem 4 ingredientes citados (spirulina, psyllium, quitosana e cromo). O Premium tem 14: os mesmos 4 mais laranja moro, guaraná, ágar-ágar, inulina, fibra de beterraba, colágeno, chlorella, extrato de uva e vitaminas B12 e C. Os preços dos kits são quase iguais. Nenhum dos dois informa as doses.' },
+  { q: 'ReduPhine Premium tem cafeína?', a: 'Tem guaraná, que é fonte de cafeína. A quantidade não é informada.' },
+  { q: 'Quanto custa o ReduPhine Premium?', a: 'Nos checkouts de 24/10/2026: 1 pote por R$ 147, 3 potes por R$ 187, 5 por R$ 247 e 8 por R$ 377. Cada pote dura 30 dias.' },
+];
+---
+<Article
+  ogImage="/img/reduphine-premium/og-reduphine-premium.jpg"
+  title="ReduPhine Premium: ficha completa, 14 ingredientes, preço e o que esperar"
+  seoTitle="ReduPhine Premium: ingredientes e preço"
+  description="Ficha do ReduPhine Premium: os 14 ingredientes, diferença para o ReduPhine Caps, preço dos kits, garantia de 7 dias, reputação da VittaBalance e o que dá para esperar."
+  kicker="Ficha de produto"
+  lead="A versão turbinada do ReduPhine junta 14 ingredientes, incluindo laranja moro e guaraná. A lista é mais completa, mas sem nenhuma dose informada e com promessas que nenhum suplemento cumpre."
+  crumbs={[{ name: 'ReduPhine Premium', href: '/reduphine-premium/' }]}
+  faq={faq}
+  related={[...reduphinePremiumPages, { href: '/reduphine-caps/', title: 'ReduPhine Caps: ficha completa' }, { href: '/ozenvitta-ou-reduphine/', title: 'OzenVitta ou ReduPhine: qual escolher?' }]}
+  sources={[
+    { label: "Página oficial do ReduPhine Premium e checkouts da Monetizze (consultados em 24/10/2026)", url: 'https://reduphinepremium.com.br/monetizze/' },
+    { label: `Reclame Aqui: VittaBalance, consultado em ${reputation.checked}`, url: r.url },
+  ]}
+>
+  <div class="answer">
+    <p><strong>Resumo da ficha</strong>Cápsulas com 14 ingredientes: fibras (psyllium, ágar-ágar, inulina, beterraba, quitosana), laranja moro, guaraná, cromo, spirulina, chlorella, colágeno, extrato de uva e vitaminas B12 e C. Nenhuma dose é informada. Custa R$ 147 o pote de 30 dias, ou R$ 47 a R$ 62 por mês nos kits. A página promete "queimar gordura localizada" e "regular o colesterol", e diz que não há efeito colateral. A garantia real é de 7 dias com o produto lacrado, e a empresa não responde reclamações.</p>
+  </div>
+
+  <TopCta produto="ReduPhine Premium" href={p.link} />
+
+  <h2>Ficha técnica</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <tbody>
+        <tr><th>Produto</th><td>ReduPhine Premium, 60 cápsulas</td></tr>
+        <tr><th>Empresa</th><td>VittaBalance, CNPJ {reduphine.cnpj}</td></tr>
+        <tr><th>Dose</th><td>2 cápsulas por dia: 30 minutos antes do almoço e do jantar</td></tr>
+        <tr><th>Duração do pote</th><td>30 dias</td></tr>
+        <tr><th>Contraindicações (página)</th><td>Alérgicos a peixes e crustáceos, menores de 16 anos</td></tr>
+        <tr><th>Atendimento</th><td>{reduphine.sac}</td></tr>
+        <tr><th>Garantia</th><td>7 dias após o recebimento, produto lacrado, frete de devolução pago pelo cliente</td></tr>
+        <tr><th>Reclame Aqui</th><td>{r.label}, nota {r.score}, {r.answered} respondidas (consulta em {reputation.checked})</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Os 14 ingredientes</h2>
+  <div class="table-scroll">
+    <table class="data">
+      <thead><tr><th>Grupo</th><th>Ingredientes</th><th>O que se sabe</th></tr></thead>
+      <tbody>
+        <tr><td>Fibras</td><td>Psyllium, ágar-ágar, inulina, fibra de beterraba</td><td>Dão saciedade e ajudam o intestino; efeito pequeno no peso</td></tr>
+        <tr><td>Quitosana</td><td>Fibra de crustáceos</td><td>Revisões mostram efeito muito pequeno no peso</td></tr>
+        <tr><td>Laranja moro</td><td>Extrato de laranja vermelha</td><td>Um estudo com 400 mg por dia mostrou perda modesta em 6 meses; a dose aqui não é informada</td></tr>
+        <tr><td>Guaraná</td><td>Fonte de cafeína</td><td>Aumenta um pouco o gasto de energia e o estado de alerta</td></tr>
+        <tr><td>Cromo</td><td>Mineral</td><td>Efeito no peso muito pequeno ou nenhum</td></tr>
+        <tr><td>Algas e outros</td><td>Spirulina, chlorella, colágeno, extrato de uva, vitaminas B12 e C</td><td>Sem efeito comprovado para emagrecer</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>São 14 ingredientes em 2 cápsulas por dia. Com tantos itens dividindo pouco espaço, é provável que vários estejam em quantidades bem menores que as dos estudos. Sem a tabela, não dá para conferir. Os detalhes estão em <a href="/reduphine-premium/funciona/">ReduPhine Premium funciona?</a> e no guia de <a href="/laranja-moro/">laranja moro</a>.</p>
+
+  <h2>Preço e kits</h2>
+  <p>Valores conferidos nos checkouts em 24/10/2026. A página anuncia frete grátis. No cartão parcelado há juros.</p>
+  <KitCards kits={p.kits} unit="mês" produto="ReduPhine Premium" />
+
+  <h2>Prós e contras</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pontos a favor</h3>
+      <ul>
+        <li>Inclui laranja moro e fibras, que têm algum estudo</li>
+        <li>Empresa identificada, com CNPJ</li>
+        <li>Kits grandes saem por menos de R$ 50 por mês</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>Pontos de atenção</h3>
+      <ul>
+        <li>Nenhuma dose informada</li>
+        <li>Promete queimar gordura localizada e regular o colesterol</li>
+        <li>Diz que não há efeito colateral, o que não é verdade para fibras e cafeína</li>
+        <li>Garantia de 7 dias com produto lacrado</li>
+        <li>Empresa "Não recomendada" no Reclame Aqui, sem respostas</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Nossa avaliação</h2>
+  <div class="verdict">
+    <p>No papel, a fórmula é mais completa que a do ReduPhine Caps, e pelo mesmo preço. Mas o que mais pesa contra continua igual: nenhuma dose informada, promessas que nenhum suplemento cumpre e uma empresa que não responde os clientes. Se você quer um suplemento de fibras com laranja moro, o <a href="/ozenvitta/">OzenVitta</a> tem fórmula parecida e um atendimento muito melhor avaliado. Se escolher o ReduPhine Premium, comece por 1 pote e pague no cartão.</p>
+  </div>
+
+  <BuyBox compact produto="ReduPhine Premium" href={p.link} title="ReduPhine Premium no site oficial" text="R$ 147 o pote de 30 dias; kits a partir de R$ 187 por 3 potes." cta="Ver kits e preços" />
+</Article>
